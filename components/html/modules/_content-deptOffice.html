@@ -1,0 +1,17 @@
+<div class="content deptOfficeContent">
+	<div class="container">
+	    <div class="row bannerRow">
+			@@include('_content-deptOffice-hero.html')
+			@@if(type === 'tiles') {
+				@@include('_content-deptOffice-tiles.html')
+			}
+			@@if(type === 'tabs') {
+				@@include('_content-deptOffice-tabs.html')
+			}
+	    </div>
+	    <div class="row contentRow">
+			@@include('_content-deptOffice-mainContent.html')
+			@@include('_content-deptOffice-featureButtons.html')
+		</div>
+	</div>
+</div>

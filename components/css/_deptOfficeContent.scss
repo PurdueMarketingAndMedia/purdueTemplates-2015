@@ -1,0 +1,510 @@
+$mdLgBannerHeight:300;
+$xsSmBannerHeight:350;
+.deptOfficeContent{
+	.container{
+		.bannerRow{
+			overflow:hidden;
+			.bannerContainer{
+				overflow:hidden;
+				.banner{
+					position:relative;
+					display:block;
+					margin:0;
+					background-color:#ccc;
+					background-size:cover;
+					background-position:center center;
+					height:100%;
+					.caption{
+						position:absolute;
+						left:25px;
+						right:25px;
+						bottom:25px;
+						.header{
+							display:inline-block;
+							margin:0;
+							padding:10px 15px 10px 10px;
+							background-color:#000;
+							font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+							color:#fff;
+							font-size:26/16*1em;
+						}
+						.subheader{
+							display:inline-block;
+							padding:10px 15px 10px 10px;
+							background-color:$color-campusGold;
+							color:#fff;
+							line-height:18/16*1em;
+						}
+					}
+				}
+				a.banner:link{
+					font-weight:400;
+				}
+				a.banner:visited{
+					font-weight:400;
+				}
+				a.banner:hover{
+					font-weight:400;
+				}
+				a.banner:active{
+					font-weight:400;
+				}
+			}
+			.audienceTiles{
+				height:100%;
+				.tileRow{
+					.tileContainer{
+						a.tile{
+							position:relative;
+							display:block;
+							height:100%;
+							width:100%;
+							background-color:#000;
+							background-image:url('https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png');
+							font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+							line-height:24/22*1em;
+							.caption{
+								position:absolute;
+								right:20px;
+								bottom:20px;
+								left:20px;
+								.icon{
+									display:block;
+									margin-bottom:6px;
+									margin-right:10px;
+									.fa{
+										font-size:35px;
+									}
+									img{
+										height:35px;
+									}
+								}
+							}
+						}
+						a.tile:link{
+							color:#fff;
+							font-weight:400;
+							text-decoration:none;
+						}
+						a.tile:visited{
+							color:#fff;
+							font-weight:400;
+							text-decoration:none;
+						}
+						a.tile:hover{
+							color:#fff;
+							font-weight:400;
+							text-decoration:none;
+						}
+						a.tile:active{
+							color:#fff;
+							font-weight:400;
+							text-decoration:none;
+						}
+						@mixin iconDividerColor($audience,$color){
+							a.tile.#{$audience}{
+								.caption{
+									.fa{
+										color:$color;
+									}
+								}
+							}
+						}
+						@include iconDividerColor("academics",$color-campusGold);
+						@include iconDividerColor("acceptToday",$color-celeryBogGreen);
+						@include iconDividerColor("admissions",$color-campusGold);
+						@include iconDividerColor("alumni",$color-campusGold);
+						@include iconDividerColor("applyNow",$color-campusGold);
+						@include iconDividerColor("artsCulture",$color-mackeyOrange);
+						@include iconDividerColor("athletics",$color-moonDustGray);
+						@include iconDividerColor("careers",$color-ameliaSkyBlue);
+						@include iconDividerColor("corporatePartners",$color-ameliaSkyBlue);
+						@include iconDividerColor("currentStudents",$color-fountainRunTeal);
+						@include iconDividerColor("events",$color-yellowWalk);
+						@include iconDividerColor("facultyStaff",$color-springFestGreen);
+						@include iconDividerColor("giveNow",$color-yellowWalk);
+						@include iconDividerColor("inclusion",$color-campusGold);
+						@include iconDividerColor("news",$color-campusGold);
+						@include iconDividerColor("parentsFamilies",$color-rossAdeGreen);
+						@include iconDividerColor("prospectiveStudents",$color-campusGold);
+						@include iconDividerColor("research",$color-slayterSkyBlue);
+						@include iconDividerColor("visitCampus",$color-yellowWalk);
+						//misc colors
+						@include iconDividerColor("bellTowerBrick",$color-bellTowerBrick);
+						@include iconDividerColor("coalGray",$color-coalGray);
+						@include iconDividerColor("everTrueBlue",$color-everTrueBlue);
+						@include iconDividerColor("landGrantGreen",$color-landGrantGreen);
+						@include iconDividerColor("mackeyOrange",$color-mackeyOrange);
+						@include iconDividerColor("oakenBucketBrown",$color-oakenBucketBrown);
+					}
+				}
+			}
+			.tabsContainer{
+				height:100%;
+				ul.nav{
+					padding-top:0;
+					padding-bottom:0;
+					font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+					font-size:1.2em;
+					li{
+						padding:0;
+						border-left:solid 1px #fff;
+						a{
+							margin:0px;
+							padding:10px 0px;
+							letter-spacing:1px;
+							border:0px;
+							border-radius:0px;
+							text-align:center;
+							font-weight:300;
+						}
+						a:link{
+							background-color:#555;
+							color:#fff;
+							font-weight:400;
+							text-decoration:none;
+						}
+						a:visited{
+							background-color:#555;
+							color:#fff;
+							font-weight:400;
+							text-decoration:none;
+						}
+						a:hover{
+							background-color:#222;
+							color:#fff;
+							font-weight:400;
+							text-decoration:none;
+						}
+						a:active{
+							background-color:#222;
+							color:#fff;
+							font-weight:400;
+							text-decoration:none;
+						}
+					}
+					li:first-child{
+						border-left:none;
+					}
+					li.active{
+						a:link{
+							background-color:#222;
+							color:#fff;
+							font-weight:400;
+							text-decoration:none;
+						}
+						a:visited{
+							background-color:#222;
+							color:#fff;
+							font-weight:400;
+							text-decoration:none;
+						}
+						a:hover{
+							background-color:#222;
+							color:#fff;
+							font-weight:400;
+							text-decoration:none;
+						}
+						a:active{
+							background-color:#222;
+							color:#fff;
+							font-weight:400;
+							text-decoration:none;
+						}
+					}
+				}
+				@media (min-width:992px){
+					ul.nav{
+						height:47/$mdLgBannerHeight*100%;
+					}
+				}
+				@media (max-width:991px){
+					ul.nav{
+						height:47/$xsSmBannerHeight*100%;
+					}
+				}
+				.tab-content{
+					padding:15px;
+					background-color:#eee;
+					font-size:0.9em;
+					.tab-pane{
+						height:100%;
+						>h1:first-child,>h2:first-child,>h3:first-child,>h4:first-child,>h5:first-child,>h6:first-child,>ul:first-child,>p:first-child{
+							margin-top:0;
+							padding-top:0;
+						}
+						.rss-box{
+							ul{
+								margin-top:0;
+								padding-top:0;
+								padding-left:20px;
+							}
+						}
+					}
+				}
+				@media (min-width:992px){
+					.tab-content{
+						height:253/$mdLgBannerHeight*100%;
+					}
+				}
+				@media (max-width:991px){
+					.tab-content{
+						height:303/$xsSmBannerHeight*100%;
+					}
+				}
+				@media (min-width:768px){
+					.tab-content{
+						overflow-y:scroll;
+					}
+				}
+			}
+		}
+		@media (min-width:768px){
+			.bannerRow{
+				padding:30px 0 7.5px;
+				.bannerContainer{
+					height:100%;
+					padding-right:0;
+				}
+				.audienceTiles{
+					padding:0 15px 0 7.5px;
+				}
+			}
+			@media (min-width:992px){
+				.bannerRow{
+					height:$mdLgBannerHeight+37.5*1px;
+					.audienceTiles{
+						.tileRow{
+							height:50%;
+							.tileContainer{
+								height:100%;
+								padding:7.5px 7.5px 0;
+							}
+						}
+						.tileRow:first-child{
+							.tileContainer{
+								padding:0 7.5px 7.5px;
+							}
+						}
+					}
+				}
+				.audienceTiles.tiles-2{
+					.tileRow{
+						.tileContainer{
+							a.tile{
+								font-size:26/16*1em;
+							}
+						}
+					}
+				}
+				.audienceTiles.tiles-3{
+					.tileRow{
+						.tileContainer{
+							a.tile{
+								font-size:22/16*1em;
+							}
+						}
+					}
+				}
+				.audienceTiles.tiles-4{
+					.tileRow{
+						.tileContainer{
+							a.tile{
+								font-size:22/16*1em;
+							}
+						}
+					}
+				}
+			}
+			@media (min-width:768px) and (max-width:991px){
+				.bannerRow{
+					height:$xsSmBannerHeight+37.5*1px;
+					.audienceTiles{
+						height:100%;
+						margin-top:-7.5px;
+						.tileRow{
+							height:auto;
+							overflow:hidden;
+							.tileContainer{
+								padding:7.5px 0 7.5px 7.5px;
+							}
+						}
+					}
+					.audienceTiles.tiles-2{
+						.tileRow{
+							.tileContainer{
+								height:(($xsSmBannerHeight+15)/2)*1px;
+								a.tile{
+									font-size:28/16*1em;
+								}
+							}
+						}
+					}
+					.audienceTiles.tiles-3{
+						.tileRow{
+							.tileContainer{
+								height:(($xsSmBannerHeight+15)/3)*1px;
+								a.tile{
+									font-size:22/16*1em;
+								}
+							}
+						}
+					}
+					.audienceTiles.tiles-4{
+						.tileRow{
+							.tileContainer{
+								height:(($xsSmBannerHeight+15)/4)*1px;
+								a.tile{
+									font-size:22/16*1em;
+									.caption{
+										bottom:15px;
+										left:15px;
+										.icon{
+											position:absolute;
+											bottom:0;
+											left:0;
+											width:20%;
+											margin:0;
+											text-align:center;
+										}
+										.text{
+											position:absolute;
+											right:0;
+											bottom:0;
+											left:24%;
+											margin:0;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		@media (max-width:767px){
+			.bannerRow{
+				padding:15px 0 7.5px;
+				.audienceTiles{
+					.tileRow{
+						margin:0 -7.5px;
+						.tileContainer{
+							padding:15px 7.5px 0;
+						}
+					}
+				}
+				.audienceTiles.tiles-2{
+					.tileRow{
+						.tileContainer{
+							a.tile{
+								font-size:28/16*1em;
+							}
+						}
+					}
+				}
+				.audienceTiles.tiles-3{
+					.tileRow{
+						.tileContainer{
+							a.tile{
+								font-size:22/16*1em;
+							}
+						}
+					}
+				}
+				.audienceTiles.tiles-4{
+					.tileRow{
+						.tileContainer{
+							a.tile{
+								font-size:22/16*1em;
+							}
+						}
+					}
+				}
+				.tabsContainer{
+					margin-top:15px;
+				}
+			}
+		}
+		@media (min-width:481px) and (max-width:767px){
+			.bannerRow{
+				.bannerContainer{
+					height:$mdLgBannerHeight*1px;
+				}
+				.audienceTiles{
+					.tileRow{
+						.tileContainer{
+							height:$mdLgBannerHeight/2*1px;
+						}
+					}
+				}
+			}
+		}
+		@media (max-width:480px){
+			.bannerRow{
+				.bannerContainer{
+					height:$xsSmBannerHeight*1px;
+				}
+				.audienceTiles{
+					.tileRow{
+						.tileContainer{
+							height:$xsSmBannerHeight/2*1px;
+						}
+					}
+				}
+			}
+		}
+		.contentRow{
+			padding:15px 0 30px;
+			.featureButtons{
+				a{
+					display:block;
+					width:100%;
+					margin-top:20px;
+					padding:15px;
+					text-align:center;
+					line-height:1em;
+				}
+				a:first-child{
+					margin-top:0;
+				}
+				a:link{
+					background-color:#eee;
+					color:#656565;
+					font-weight:400;
+					text-decoration:none;
+				}
+				a:visited{
+					background-color:#eee;
+					color:#656565;
+					font-weight:400;
+					text-decoration:none;
+				}
+				a:hover{
+					background-color:#555;
+					color:#fff;
+					font-weight:400;
+					text-decoration:none;
+				}
+				a:active{
+					background-color:#555;
+					color:#fff;
+					font-weight:400;
+					text-decoration:none;
+				}
+			}
+			.mainContent{
+				>h1:first-child,>h2:first-child,>h3:first-child,>h4:first-child,>h5:first-child,>h6:first-child,>p:first-child{
+					margin-top:0;
+					margin-bottom:0;
+					padding-top:0;
+					padding-bottom:0;
+				}
+			}
+			@media (max-width:767px){
+				.mainContent{
+					padding:7.5px 15px 30px;
+				}
+			}
+		}
+	}
+}

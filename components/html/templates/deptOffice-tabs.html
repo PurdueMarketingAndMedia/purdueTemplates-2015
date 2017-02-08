@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		@@include('../modules/_head.html',{
+			"title":"Department/Office Home Page Template",
+			"description":"This is an example of v1.5 of the department/office home page template.",
+			"author":"Place your office here.",
+			"css":"deptOffice",
+			"version":"1.5.1"
+		})
+	</head>
+	<body>
+		@@include('../modules/_header.html',{
+			"siteName":"Organization Name Here",
+			"siteTagline":"Site Tagline Here"
+		})
+		@@include('../modules/_navigation-main.html')
+		@@include('../modules/_content-deptOffice.html',{
+			"type":"tabs"
+		})
+		@@include('../modules/_footer.html')
+	</body>
+</html>

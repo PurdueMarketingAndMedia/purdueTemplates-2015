@@ -1,0 +1,240 @@
+.blackbar{
+	min-height:initial;
+	margin-bottom:0;
+	border-radius:0px;
+	background-color:#000;
+	> ul{
+		padding-top:0;
+		padding-bottom:0;
+	}
+	@media (min-width:992px){
+		li{
+			color:#999;
+		}
+		li:hover{
+			color:#fff;
+		}
+	}
+	@media (max-width:991px){
+		li{
+			color:#fff;
+		}
+		li:hover{
+			color:$color-campusGold;
+		}
+	}
+	a{
+		width:100%;
+	}
+	a:link{
+		color:inherit !important;
+		text-decoration:none !important;
+		font-weight:400;
+		background-color:#000;
+	}
+	a:visited{
+		color:inherit !important;
+		text-decoration:none !important;
+		font-weight:400;
+		background-color:#000 !important;
+	}
+	a:hover{
+		color:inherit !important;
+		text-decoration:none !important;
+		font-weight:400;
+		background-color:#000 !important;
+	}
+	a:active{
+		color:inherit !important;
+		text-decoration:none !important;
+		font-weight:400;
+		background-color:#000 !important;
+	}
+	.navbar-header{
+		.navbar-toggle{
+			float:left;
+			border:none;
+			color:#fff;
+			.icon-bar{
+				float:left;
+				clear:left;
+				margin-right:10px;
+				background-color:#fff;
+			}
+			> .icon-bar:first-child{
+				margin-top:3px;
+			}
+		}
+		.navbar-toggle:hover,.navbar-toggle:focus{
+			color:$color-campusGold;
+			background-color:transparent;
+			.icon-bar{
+				background-color:$color-campusGold;
+			}
+		}
+	}
+	@media (min-width:992px)
+	{
+		.navbar-header{
+			display:none;
+		}
+	}
+	@media (max-width:991px)
+	{
+		.navbar-toggle{
+			display:block;
+			padding:0;
+			margin:10px 0;
+		}
+		.navbar-collapse {
+		    border-top:1px solid transparent;
+		    box-shadow:none;
+		}
+		.navbar-collapse.collapse {
+		    display: none!important;
+		}
+		.navbar-header{
+			float:none;
+			display:block;
+			.navbar-toggle{
+				display:block;
+			}
+		}
+		.navbar-nav{
+			float:none !important;
+			margin:0;
+			padding:10px 0 !important;
+			li{
+				display:block;
+				width:100%;
+				overflow:hidden;
+				a{
+					padding:0;
+					margin:10px 0;
+				}
+				.dropdown-menu{
+					position:static;
+					margin-top:-10px;
+					padding:0 0 10px 12px;
+					font-size:0.9em;
+					li{
+						a{
+							margin:5px 0 0;
+							padding:0;
+						}
+					}
+					li.dropdown-submenu{
+						.dropdown-menu{
+							margin-top:0;
+							font-size:1em;
+						}
+					}
+				}
+			}
+			li.first{
+				a{
+					margin-top:0;
+				}
+			}
+		}
+		.navbar-text {
+		    float:none;
+		    margin:15px 0;
+		}
+		.navbar-collapse.collapse.in { 
+		    display: block!important;
+		}
+		.collapsing {
+		    overflow: hidden!important;
+		}
+	}
+	@media (max-width:767px)
+	{
+		.navbar-toggle{
+			padding-left:15px;
+		}
+	}
+	.black{
+		padding-left:0;
+		max-height:none;
+		.nav{
+			padding-top:0;
+			padding-bottom:0;
+			.first{
+				a{
+					padding-left:0;
+				}
+			}
+		}
+		.dropdown-menu{
+			font-size:1em;
+			background-color:#000;
+			.dropdown-submenu{
+				position:relative;
+				> a{
+					float:left;
+				}
+				@media (max-width:991px){
+					.dropdown-menu{
+						display:block;
+						padding-left:15px;
+					}
+				}
+			}
+			@media (min-width:992px){
+				.dropdown-submenu{
+					min-height:29/16*1em;
+					.caret{
+						display:none;
+					}
+				}
+				.dropdown-submenu::after{
+					  display:block;
+					  position:absolute;
+					  right:0;
+					  top:0;
+					  content:" ";
+					  width:0;
+					  height:0;
+					  border-color:transparent;
+					  border-style:solid;
+					  border-width:4px 0 4px 4px;
+					  border-left-color:#999;
+					  margin-top:10px;
+					  margin-right:5px;
+				}
+				.dropdown-submenu:hover{
+					> .dropdown-menu{
+						display:block;
+						left:100%;
+						top:0;
+						margin-left:-1px;
+					}
+				}
+				.dropdown-submenu:hover::after{
+					border-left-color:#fff;
+				}
+			}
+		}
+	}
+	@media (max-width:767px){
+		.black{
+			padding-left:15px;
+		}
+	}
+}
+@media (min-width:992px){
+	.blackbar{
+		font-size:14/16 * 1em;
+	}
+}
+@media (min-width:767px) and (min-width:991px){
+	.blackbar{
+		font-size:1em;
+	}
+}
+@media (max-width:767px){
+	.blackbar{
+		font-size:16/18 * 1em;
+	}
+}
