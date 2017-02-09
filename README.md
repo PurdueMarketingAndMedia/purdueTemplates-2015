@@ -1,4 +1,4 @@
-# Purdue University Templates
+# Purdue University Templates - 2015
 Contained in this project are the main templates created and maintained by Purdue Marketing and Media (PMM).
 
 ## Making Suggestions
