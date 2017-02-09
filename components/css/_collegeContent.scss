@@ -94,9 +94,10 @@ $xsRowHeight:160;
 						.tile.col-#{$size}-6.row-#{$size}-1,.tile.col-#{$size}-9.row-#{$size}-1,.tile.col-#{$size}-12.row-#{$size}-1{
 							a.news{
 								background-color:$color-campusGold;
+								color:#000;
 								.caption{
 									.divider{
-										background-color:#fff;
+										background-color:#000;
 									}
 									.fa{
 										color:#74550c !important;
@@ -171,12 +172,13 @@ $xsRowHeight:160;
 						}
 						a.news{
 							background-color:$color-campusGold;
+							color:#000;
 							.caption{
 								.divider{
-									background-color:#fff;
+									background-color:#000;
 								}
 								.fa{
-									color:#74550c !important;
+									color:$color-headlineGold !important;
 								}
 							}
 						}
@@ -309,7 +311,7 @@ $xsRowHeight:160;
 					}
 					//1x3 and 1x4 tile
 					.tile.col-lg-3.row-lg-3,.tile.col-lg-3.row-lg-4{
-						a.news{
+						a.audience,a.news{
 							font-size:28/16*1em;
 							line-height:1em;
 							.caption{
