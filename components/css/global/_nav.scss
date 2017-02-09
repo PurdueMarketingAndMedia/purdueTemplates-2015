@@ -11,16 +11,16 @@
 		li{
 			color:#999;
 		}
-		li:hover{
-			color:#fff;
+		li:hover,li a:focus{
+			color:#fff !important;
 		}
 	}
 	@media (max-width:991px){
 		li{
 			color:#fff;
 		}
-		li:hover{
-			color:$color-campusGold;
+		li:hover,li a:focus{
+			color:$color-campusGold !important;
 		}
 	}
 	a{
@@ -38,7 +38,7 @@
 		font-weight:400;
 		background-color:#000 !important;
 	}
-	a:hover{
+	a:hover,a:focus{
 		color:inherit !important;
 		text-decoration:none !important;
 		font-weight:400;
@@ -187,6 +187,62 @@
 					.caret{
 						display:none;
 					}
+					> .dropdown-menu{
+						display:block;
+						left:100%;
+						top:0;
+						margin-left:-1px;
+						background:none;
+						border:none;
+						box-shadow:none;
+						> li
+						{
+							> a{
+								width:0;
+								height:0;
+								overflow:hidden;
+								background:none;
+							}
+							> a:focus{
+								width:auto;
+								height:auto;
+								background:#000;
+							}
+						}
+					}
+					&:hover{
+						> .dropdown-menu{
+							background:#000;
+							border:1px solid #000;
+							box-shadow:0 6px 12px rgba(0, 0, 0, 0.175);
+							>li{
+								> a{
+									width:auto;
+									height:auto;
+									background:#000;
+								}
+							}
+						}
+						+ .dropdown-submenu{
+							> .dropdown-menu{
+								display:none;
+							}
+						}
+					}
+					a.dropdown-toggle:focus{
+						+ ul.dropdown-menu{
+							background:#000;
+							border:1px solid #000;
+							box-shadow:0 6px 12px rgba(0, 0, 0, 0.175);
+							>li{
+								> a{
+									width:auto;
+									height:auto;
+									background:#000;
+								}
+							}
+						}
+					}
 				}
 				.dropdown-submenu::after{
 					  display:block;
@@ -203,16 +259,18 @@
 					  margin-top:10px;
 					  margin-right:5px;
 				}
-				.dropdown-submenu:hover{
-					> .dropdown-menu{
-						display:block;
-						left:100%;
-						top:0;
-						margin-left:-1px;
-					}
-				}
-				.dropdown-submenu:hover::after{
+				.dropdown-submenu:hover::after,.dropdown-submenu:focus::after{
 					border-left-color:#fff;
+				}
+			}
+		}
+		.dropdown.open{
+			.dropdown-submenu{
+				> .dropdown-menu{
+					display:block;
+					left:100%;
+					top:0;
+					margin-left:-1px;
 				}
 			}
 		}
