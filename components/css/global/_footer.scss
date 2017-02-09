@@ -51,6 +51,8 @@
 			text-align:left;
 			a{
 				display:inline-block;
+				position:relative;
+				overflow:hidden;
 				width:23px;
 				margin:2.5px 2%;
 				text-align:center;
@@ -59,6 +61,61 @@
 					display:block;
 					top:-1000px;
 					left:-1000px;
+				}
+				.fa::after{
+					position:absolute;
+					display:block;
+					overflow:hidden;
+					width:0;
+					height:0;
+				}
+				.fa-facebook::after{
+					content:"Facebook";
+				}
+				.fa-facebook-square::after{
+					content:"Facebook";
+				}
+				.fa-twitter::after{
+					content:"Twitter";
+				}
+				.fa-twitter-square::after{
+					content:"Twitter";
+				}
+				.fa-youtube::after{
+					content:"Youtube";
+				}
+				.fa-youtube-square::after{
+					content:"Youtube";
+				}
+				.fa-instagram::after{
+					content:"Instagram";
+				}
+				.fa-instagram-square::after{
+					content:"Instagram";
+				}
+				.fa-pinterest::after{
+					content:"Pinterest";
+				}
+				.fa-pinterest-square::after{
+					content:"Pinterest";
+				}
+				.fa-google-plus::after{
+					content:"Google Plus";
+				}
+				.fa-google-plus-square::after{
+					content:"Google Plus";
+				}
+				.fa-linkedin::after{
+					content:"Linked In";
+				}
+				.fa-linkedin-square::after{
+					content:"Linked In";
+				}
+				.fa-amazon::after{
+					content:"Amazon";
+				}
+				.fa-amazon-square::after{
+					content:"Amazon";
 				}
 			}
 			a:link{
