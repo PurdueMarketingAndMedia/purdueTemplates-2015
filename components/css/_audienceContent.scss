@@ -574,11 +574,9 @@
 	}
 }
 .eventsFeedContainer{
-	background-color:#000;
 	background-image:url("https://www.purdue.edu/purdue/images/templateElements/2015/audience-eventsBackground.jpg");
 }
 .newsFeedContainer{
-	background-color:#000;
 	background-image:url("https://www.purdue.edu/purdue/images/templateElements/2015/audience-newsBackground.jpg");
 }
 .eventsFeedContainer,.newsFeedContainer{
@@ -615,7 +613,6 @@
 					padding:22px;
 					background-color:$color-campusGold;
 					font-size:30/24 * 1em;
-					color:#000;
 				}
 				.month{
 					display:inline-block;
@@ -647,7 +644,7 @@
 				}
 			}
 			a.details:link{
-				color:$color-headlineGold;
+				color:$color-campusGold;
 				text-decoration:none;
 				font-weight:400;
 				.timeLocation,.description{
@@ -655,7 +652,7 @@
 				}
 			}
 			a.details:visited{
-				color:$color-headlineGold;
+				color:$color-campusGold;
 				text-decoration:none;
 				font-weight:400;
 				.timeLocation,.description{
@@ -663,7 +660,7 @@
 				}
 			}
 			a.details:hover{
-				color:$color-headlineGold;
+				color:$color-campusGold;
 				text-decoration:none;
 				font-weight:400;
 				.title{
@@ -674,7 +671,7 @@
 				}
 			}
 			a.details:active{
-				color:$color-headlineGold;
+				color:$color-campusGold;
 				text-decoration:none;
 				font-weight:400;
 				.timeLocation,.description{
@@ -713,12 +710,12 @@
 			}
 			a:link{
 				background-color:$color-campusGold;
-				color:#000;
+				color:#fff;
 				text-decoration:none;
 			}
 			a:visited{
 				background-color:$color-campusGold;
-				color:#000;
+				color:#fff;
 				text-decoration:none;
 			}
 			a:hover{
@@ -728,7 +725,7 @@
 			}
 			a:active{
 				background-color:$color-campusGold;
-				color:#000;
+				color:#fff;
 				text-decoration:none;
 			}
 			@media (min-width:992px){
@@ -862,12 +859,12 @@
 			}
 			a:link{
 				background-color:$color-campusGold;
-				color:#000;
+				color:#fff;
 				text-decoration:none;
 			}
 			a:visited{
 				background-color:$color-campusGold;
-				color:#000;
+				color:#fff;
 				text-decoration:none;
 			}
 			a:hover{
@@ -877,7 +874,7 @@
 			}
 			a:active{
 				background-color:$color-campusGold;
-				color:#000;
+				color:#fff;
 				text-decoration:none;
 			}
 		}
@@ -942,12 +939,12 @@
 		}
 		a.followButton:link{
 			background-color:$color-campusGold;
-			color:#000;
+			color:#fff;
 			text-decoration:none;
 		}
 		a.followButton:visited{
 			background-color:$color-campusGold;
-			color:#000;
+			color:#fff;
 			text-decoration:none;
 		}
 		a.followButton:hover{
@@ -956,8 +953,8 @@
 			text-decoration:none;
 		}
 		a.followButton:active{
-			background-color:$color-campusGold;
-			color:#000;
+			background-color:#000;
+			color:$color-campusGold;
 			text-decoration:none;
 		}
 		.photos{
