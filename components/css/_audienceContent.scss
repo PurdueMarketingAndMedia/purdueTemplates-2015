@@ -1,0 +1,1004 @@
+.rowContainer{
+	width:100%;
+}
+.introContainer{
+	position:relative;
+	background-color:#000;
+	background-image:url("https://purdue.edu/purdue/images/templateElements/2015/audience-introBackground.jpg");
+	background-size:cover;
+	background-position:center center;
+	background-repeat:no-repeat;
+	text-align:center;
+	overflow:hidden;
+	.shader{
+		position:absolute;
+		z-index:0;
+		top:0;
+		left:0;
+		width:100%;
+		height:1000px;
+		background-image:url("https://purdue.edu/purdue/images/templateElements/2015/shader65.png");
+		background-repeat:repeat;
+	}
+	.intro{
+		position:relative;
+		z-index:1;
+		color:#fff;
+		.icon{
+			font-size:60px;
+			padding:15px 0;
+			img{
+				height:60px;
+			}
+		}
+		h1{
+			z-index:1000;
+			padding:0 0 10px 0;
+			color:inherit;
+			font-family:'archivo_blackregular',"Helvetica Neue",Helvetica,Arial,sans-serif;
+			text-transform:uppercase;
+			span.subtitle{
+				display:block;
+				padding-bottom:0 0 10px 0;
+				font-family:'archivo_blackregular',"Helvetica Neue",Helvetica,Arial,sans-serif;
+				font-size:36/72 * 1em;
+				line-height:1em;
+				text-transform:uppercase;
+			}
+		}
+		@media (min-width:768px){
+			h1{
+				font-size:72/16 * 1em;
+				line-height:1em;
+			}
+		}
+		@media (max-width:767px){
+			h1{
+				font-size:40/18 * 1em;
+				line-height:1em;
+			}
+		}
+		.divider{
+			height:10px;
+			width:50%;
+			max-width:150px;
+			margin:5px auto 30px;
+			background-color:#fff;
+		}
+		.content{
+			width:100%;
+			max-width:600px;
+			margin:0 auto;
+			font-size:1em;
+			font-weight:700;
+			line-height:24/16 * 1em;
+		}
+		@media (min-width:768px){
+			.content{
+				padding:15px 0 30px;
+				font-size:1em;
+			}
+		}
+		@media (max-width:767px){
+			.content{
+				padding:15px;
+				font-size:16/18 * 1em;
+			}
+		}
+	}
+}
+@media (min-width:768px){
+	.introContainer{
+		min-height:480px;
+		padding-top:125px;
+	}
+}
+@media (max-width:767px){
+	.introContainer{
+		height:auto;
+		padding-top:15px;
+	}
+}
+.featureLinksContainer{
+	background-color:#fff;
+	.featureLinks{
+		padding:30px 0;
+		.featureLink{
+			font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+			font-weight:700;
+			text-align:center;
+			a{
+				display:inline-block;
+				border:none;
+				.icon{
+					display:inline-block;
+					width:100%;
+				}
+				@media (min-width:1200px){
+					.icon{
+						font-size:80px;
+						img{
+							height:80px;
+						}
+						margin:0 0 30px;
+					}
+				}
+				@media (min-width:992px) and (max-width:1199px){
+					.icon{
+						font-size:70px;
+						img{
+							height:70px;
+						}
+						margin:0 0 30px;
+					}
+				}
+				@media (min-width:768px) and (max-width:991px){
+					.icon{
+						font-size:60px;
+						img{
+							height:60px;
+						}
+						margin:0 0 30px;
+					}
+				}
+				@media (max-width:767px){
+					.icon{
+						font-size:60px;
+						img{
+							height:60px;
+						}
+						margin:0 0 10px;
+					}
+				}
+				.divider{
+					display:block;
+					width:50%;
+					max-width:50px;
+					height:7px;
+					margin:15px auto 0;
+					background-color:#000;
+				}
+			}
+			a:link{
+				color:#373737;
+				font-weight:400;
+				text-decoration:none;
+				.divider{
+					width:50%;
+				}
+			}
+			a:visited{
+				color:#373737;
+				font-weight:400;
+				text-decoration:none;
+				.divider{
+					width:50%;
+				}
+			}
+			a:hover{
+				color:#373737;
+				font-weight:400;
+				text-decoration:none;
+				.divider{
+					width:60%;
+					max-width:65px;
+				}
+			}
+			a:active{
+				color:#373737;
+				font-weight:400;
+				text-decoration:none;
+				.divider{
+					width:50%;
+				}
+			}
+			@mixin featureLinkColor($audience,$color){
+				a.#{$audience}{
+					.icon{
+						color:$color;
+					}
+					.divider{
+						background-color:$color;
+					}
+				}
+			}
+			@include featureLinkColor("acceptToday",$color-celeryBogGreen);
+			@include featureLinkColor("academics",$color-campusGold);
+			@include featureLinkColor("admissions",$color-campusGold);
+			@include featureLinkColor("alumni",$color-campusGold);
+			@include featureLinkColor("applyNow",$color-campusGold);
+			@include featureLinkColor("artsIdeas",$color-mackeyOrange);
+			@include featureLinkColor("athletics",$color-moonDustGray);
+			@include featureLinkColor("careers",$color-ameliaSkyBlue);
+			@include featureLinkColor("corporatePartners",$color-ameliaSkyBlue);
+			@include featureLinkColor("currentStudents",$color-fountainRunTeal);
+			@include featureLinkColor("events",$color-yellowWalk);
+			@include featureLinkColor("facultyStaff",$color-springFestGreen);
+			@include featureLinkColor("giveNow",$color-yellowWalk);
+			@include featureLinkColor("inclusion",$color-campusGold);
+			@include featureLinkColor("news",$color-campusGold);
+			@include featureLinkColor("parentsFamilies",$color-rossAdeGreen);
+			@include featureLinkColor("prospectiveStudents",$color-campusGold);
+			@include featureLinkColor("research",$color-slayterSkyBlue);
+			@include featureLinkColor("visitCampus",$color-yellowWalk);
+			//misc colors
+			@include featureLinkColor("bellTowerBrick",$color-bellTowerBrick);
+			@include featureLinkColor("coalGray",$color-coalGray);
+			@include featureLinkColor("everTrueBlue",$color-everTrueBlue);
+			@include featureLinkColor("landGrantGreen",$color-landGrantGreen);
+			@include featureLinkColor("mackeyOrange",$color-mackeyOrange);
+			@include featureLinkColor("oakenBucketBrown",$color-oakenBucketBrown);
+		}
+		@media (min-width:992px){
+			.featureLink{
+				padding:30px;
+				font-size:28/16 * 1em;
+				line-height:30/28 * 1em;
+			}
+		}
+		@media (min-width:768px) and (max-width:991px){
+			.featureLink{
+				padding:45px 30px;
+				font-size:28/16 * 1em;
+				line-height:30/28 * 1em;
+			}
+		}
+		@media (max-width:767px){
+			.featureLink{
+				padding:45px 30px;
+				font-size:27/18 * 1em;
+				line-height:29/27 * 1em;
+			}
+		}
+	}
+}
+.linksContainer{
+	background-color:#333;
+	.links{
+		padding:15px 0;
+		.columnContainer{
+			margin:15px 0;
+			.column{
+				width:100%;
+				padding:45px 10%;
+				background-color:#292929;
+				color:#fff;
+				text-align:center;
+				.icon{
+					margin-bottom:25px;
+					color:#676767;
+					font-size:60px;
+					img{
+						height:60px;
+					}
+				}
+				h3{
+					padding:5px 0 7px;
+					color:inherit;
+					font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+					font-size:28/16 * 1em;
+				}
+				.divider{
+					width:25%;
+					height:3px;
+					margin:0 auto 20px;
+					background-color:#b1810b;
+				}
+				ul{
+					padding:0;
+					list-style-type:none;
+					text-align:center;
+					li{
+						line-height:24/16 * 1em;
+						list-style-type:none;
+						padding:10px 0;
+						a:link{
+							color:#fff;
+							font-weight:400;
+							text-decoration:none;
+						}
+						a:visited{
+							color:#fff;
+							font-weight:400;
+							text-decoration:none;
+						}
+						a:hover{
+							color:#fff;
+							font-weight:400;
+							text-decoration:underline;
+						}
+						a:active{
+							color:#fff;
+							font-weight:400;
+							text-decoration:underline;
+						}
+					}
+				}
+			}
+		}
+	}
+	@media (min-width:992px){
+		.links.num-col-4{
+			display:-webkit-box;
+			display:-moz-box;
+			display:-ms-flexbox;
+			display:-webkit-flex;
+			display:flex;
+			.columnPair{
+				display:-webkit-box;
+				display:-moz-box;
+				display:-ms-flexbox;
+				display:-webkit-flex;
+				display:flex;
+				-webkit-box-flex:1;
+				-moz-box-flex:1;
+				-webkit-flex:1;
+				-ms-flex:1;
+				flex:1;
+				width:50%;
+				float:left;
+				.columnContainer{
+					display:-webkit-box;
+					display:-moz-box;
+					display:-ms-flexbox;
+					display:-webkit-flex;
+					display:flex;
+					-webkit-box-flex:1;
+					-moz-box-flex:1;
+					-webkit-flex:1;
+					-ms-flex:1;
+					flex:1;
+					.column{
+						-webkit-box-flex:1;
+						-moz-box-flex:1;
+						-webkit-flex:1;
+						-ms-flex:1;
+						flex:1;
+					}
+				}
+			}
+		}
+	}
+	@media (min-width:768px) and (max-width:991px){
+		.links.num-col-4{
+			display:block;
+			.columnPair{
+				display:-webkit-box;
+				display:-moz-box;
+				display:-ms-flexbox;
+				display:-webkit-flex;
+				display:flex;
+				width:100%;
+				.columnContainer{
+					display:-webkit-box;
+					display:-moz-box;
+					display:-ms-flexbox;
+					display:-webkit-flex;
+					display:flex;
+					-webkit-box-flex:1;
+					-moz-box-flex:1;
+					-webkit-flex:1;
+					-ms-flex:1;
+					flex:1;
+					.column{
+						-webkit-box-flex:1;
+						-moz-box-flex:1;
+						-webkit-flex:1;
+						-ms-flex:1;
+						flex:1;
+					}
+				}
+			}
+		}
+	}
+	@media (max-width:767px){
+		.links.num-col-4{
+			display:block;
+			.columnPair{
+				display:block;
+				width:100%;
+				.columnContainer{
+					display:block;
+				}
+			}
+		}
+	}
+	@media (min-width:768px){
+		.links.num-col-3,.links.num-col-2{
+			display:-webkit-box;
+			display:-moz-box;
+			display:-ms-flexbox;
+			display:-webkit-flex;
+			display:flex;
+			.columnContainer{
+				display:-webkit-box;
+				display:-moz-box;
+				display:-ms-flexbox;
+				display:-webkit-flex;
+				display:flex;
+				-webkit-box-flex:1;
+				-moz-box-flex:1;
+				-webkit-flex:1;
+				-ms-flex:1;
+				flex:1;
+				.column{
+					-webkit-box-flex:1;
+					-moz-box-flex:1;
+					-webkit-flex:1;
+					-ms-flex:1;
+					flex:1;
+				}
+			}
+		}
+	}
+	@media (max-width:767px){
+		.links.num-col-3,.links.num-col-2{
+			display:block;
+			.columnContainer{
+				display:block;
+			}
+		}
+	}
+}
+.no-flexbox{
+	.linksContainer{
+		.links.num-col-4,.links.num-col-3,.links.num-col-2{
+			display:block;
+			flex:none;
+			.columnPair{
+				display:block;
+				flex:none;
+				.columnContainer{
+					display:block;
+					flex:none;
+					.column{
+						background-color:none;
+					}
+				}
+			}
+		}
+	}
+}
+.largePhotoContainer{
+	background-color:#000;
+	background-image:url("https://purdue.edu/purdue/images/templateElements/2015/audience-largePhoto.jpg");
+	background-size:cover;
+	background-position:center center;
+	.largePhotoContent{
+		color:#fff;
+		font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+		font-weight:700;
+		text-shadow:0 0 30px #000;
+		text-transform:uppercase;
+		text-align:center;
+	}
+	@media (min-width:992px)
+	{
+		.largePhotoContent{
+			padding:285px 0;
+			font-size:70/16 * 1em;
+			line-height:1em;
+		}
+	}
+	@media (min-width:768px) and (max-width:991px)
+	{
+		.largePhotoContent{
+			padding:240px 0;
+			font-size:56/16 * 1em;
+			line-height:1em;
+		}
+	}
+	@media (max-width:767px)
+	{
+		.largePhotoContent{
+			padding:75px 0;
+			font-size:30/18 * 1em;
+			line-height:1em;
+		}
+	}
+}
+@media(min-width:992px){
+	.largePhotoContainer{
+		min-height:625px;
+	}
+}
+@media (min-width:768px) and (max-width:991px){
+	.largePhotoContainer{
+		min-height:530px;
+	}
+}
+@media (max-width:767px){
+	.largePhotoContainer{
+		min-height:240px;
+	}
+}
+.proofPointsContainer{
+	padding:30px 0;
+	background-color:#000;
+	.proofPoints{
+		.proofPoint{
+			padding:15px;
+			text-align:center;
+			img{
+				max-width:100%;
+				max-height:150px;
+			}
+		}
+	}
+}
+.storyContainer{
+	.story{
+		.image{
+			padding-bottom:35px;
+			img{
+				width:100%;
+			}
+		}
+		@media (max-width:767px){
+			.image{
+				/*margin:0 -15px;*/
+			}
+		}
+		.contentContainer{
+			padding-left:30px;
+			padding-right:30px;
+			h3{
+				margin-top:0;
+				padding-top:0;
+				padding-bottom:20px;
+				color:#000;
+				font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+				font-weight:bold;
+				font-size:28/16 * 1em;
+				font-weight:700;
+			}
+			.content{
+				line-height:1.5em;
+				p{
+					padding-bottom:20px;
+				}
+			}
+		}
+	}
+	@media (min-width:768px){
+		.story{
+			padding-top:75px;
+			padding-bottom:75px;
+		}
+	}
+	@media (max-width:767px){
+		.story{
+			padding-top:15px;
+			padding-bottom:15px;
+		}
+	}
+}
+.eventsFeedContainer{
+	background-color:#000;
+	background-image:url("https://www.purdue.edu/purdue/images/templateElements/2015/audience-eventsBackground.jpg");
+}
+.newsFeedContainer{
+	background-color:#000;
+	background-image:url("https://www.purdue.edu/purdue/images/templateElements/2015/audience-newsBackground.jpg");
+}
+.eventsFeedContainer,.newsFeedContainer{
+	background-position:center center;
+	background-size:cover;
+	.eventsFeed,.newsFeed{
+		padding:60px 15px;
+		h3{
+			margin-top:0;
+			padding-top:0;
+			color:#fff;
+			font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+			font-size:32/16 * 1em;
+			text-align:center;
+		}
+		.divider{
+			width:25%;
+			max-width:125px;
+			height:2px;
+			margin:15px auto 45px;
+			background-color:$color-campusGold;
+		}
+		.event,.newsItem{
+			overflow:hidden;
+			font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+			font-size:24/16 * 1em;
+			.date{
+				background-color:#000;
+				width:100%;
+				color:#fff;
+				text-transform:uppercase;
+				.day{
+					display:inline-block;
+					padding:22px;
+					background-color:$color-campusGold;
+					font-size:30/24 * 1em;
+					color:#000;
+				}
+				.month{
+					display:inline-block;
+					padding:20px;
+				}
+				.fa{
+					float:right;
+					padding:19px;
+					color:$color-yellowWalk;
+				}
+			}
+			a.details{
+				display:block;
+				width:100%;
+				padding:30px;
+				background-color:#fff;
+				line-height:1.25em;
+				.timeLocation,.description{
+					display:block;
+					clear:left;
+					width:100%;
+					padding-top:15px;
+					font-size:20/24 * 1em;
+				}
+				.timeLocation{
+					font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+					font-weight:bold;
+					text-transform:uppercase;
+				}
+			}
+			a.details:link{
+				color:$color-headlineGold;
+				text-decoration:none;
+				font-weight:400;
+				.timeLocation,.description{
+					color:#3d3d3d;
+				}
+			}
+			a.details:visited{
+				color:$color-headlineGold;
+				text-decoration:none;
+				font-weight:400;
+				.timeLocation,.description{
+					color:#3d3d3d;
+				}
+			}
+			a.details:hover{
+				color:$color-headlineGold;
+				text-decoration:none;
+				font-weight:400;
+				.title{
+					text-decoration:underline;
+				}
+				.timeLocation,.description{
+					color:#3d3d3d;
+				}
+			}
+			a.details:active{
+				color:$color-headlineGold;
+				text-decoration:none;
+				font-weight:400;
+				.timeLocation,.description{
+					color:#3d3d3d;
+				}
+			}
+		}
+		@media (min-width:992px){
+			.event.left,.newsItem.left{
+				clear:left;
+				padding:0;
+				padding-right:30px;
+			}
+			.event.right,.newsItem.right{
+				padding-left:30px;
+				padding-right:0;
+			}
+		}
+		@media (max-width:991px){
+			.event,.newsItem{
+				margin-bottom:1.5em;
+			}
+			.event:last-child,.newsItem:last-child{
+				margin-bottom:0;
+			}
+		}
+		.eventsButtonContainer,.newsButtonContainer{
+			clear:both;
+			text-align:center;
+			a{
+				display:inline-block;
+				padding:12px 20px;
+				border-radius:3px;
+				font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+				font-size:18/16 * 1em;
+			}
+			a:link{
+				background-color:$color-campusGold;
+				color:#000;
+				text-decoration:none;
+			}
+			a:visited{
+				background-color:$color-campusGold;
+				color:#000;
+				text-decoration:none;
+			}
+			a:hover{
+				background-color:#000;
+				color:$color-campusGold;
+				text-decoration:none;
+			}
+			a:active{
+				background-color:$color-campusGold;
+				color:#000;
+				text-decoration:none;
+			}
+			@media (min-width:992px){
+				a{
+					margin:30px auto 0;
+				}
+			}
+			@media (max-width:991px){
+				a{
+					margin:0 auto;
+				}
+			}
+		}
+	}
+}
+.twitterFeedContainer{
+	padding:100px 0;
+	background-color:#eee;
+	.twitterFeed{
+		.post{
+			margin-bottom:75px;
+			.username{
+				float:left;
+				padding-right:60px;
+				color:#000;
+				font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+				font-size:28/16 * 1em;
+				line-height:1.1em;
+				span{
+					font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+					font-weight:bold;
+					font-weight:700;
+				}
+			}
+			.time{
+				font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+				font-size:28/16 * 1em;
+				line-height:1.1em;
+			}
+			@media (max-width:991px){
+				.username{
+					display:inline-block;
+					float:none;
+					padding-right:0;
+					padding-bottom:10px;
+				}
+				.time{
+					display:inline;
+				}
+			}
+			.retweet{
+				clear:left;
+				padding-top:3px;
+				color:#444;
+				a:link{
+					color:#000;
+					font-weight:700;
+					text-decoration:underline;
+				}
+				a:visited{
+					color:#000;
+					font-weight:700;
+					text-decoration:underline;
+				}
+				a:hover{
+					color:#000;
+					font-weight:700;
+					text-decoration:none;
+				}
+				a:active{
+					color:#000;
+					font-weight:700;
+					text-decoration:underline;
+				}
+			}
+			.text{
+				display:block;
+				clear:left;
+				padding-top:15px;
+				color:#555;
+				font-size:20/16 * 1em;
+				a:link{
+					color:#000;
+					font-weight:700;
+					text-decoration:underline;
+				}
+				a:visited{
+					color:#000;
+					font-weight:700;
+					text-decoration:underline;
+				}
+				a:hover{
+					color:#000;
+					font-weight:700;
+					text-decoration:none;
+				}
+				a:active{
+					color:#000;
+					font-weight:700;
+					text-decoration:underline;
+				}
+				.emoji{
+					height:1em;
+				}
+			}
+		}
+		@media (min-width:992px){
+			.post.left{
+				clear:left;
+				padding-right:30px;
+			}
+			.post.right{
+				padding-left:30px;
+			}
+		}
+		@media (max-width:991px){
+			.post{
+				text-align:center;
+			}
+		}
+		.followButtonContainer{
+			clear:both;
+			text-align:center;
+			a{
+				display:inline-block;
+				margin:0 auto;
+				padding:12px 20px;
+				border-radius:3px;
+				font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+				font-size:18/16 * 1em;
+			}
+			a:link{
+				background-color:$color-campusGold;
+				color:#000;
+				text-decoration:none;
+			}
+			a:visited{
+				background-color:$color-campusGold;
+				color:#000;
+				text-decoration:none;
+			}
+			a:hover{
+				background-color:#000;
+				color:$color-campusGold;
+				text-decoration:none;
+			}
+			a:active{
+				background-color:$color-campusGold;
+				color:#000;
+				text-decoration:none;
+			}
+		}
+	}
+}
+@media (min-width:768px){
+	.twitterFeedContainer{
+		background-image:url("https://purdue.edu/purdue/images/templateElements/2015/audience-twitterBackground.png");
+	}
+}
+@media (min-width:992px){
+	.twitterFeedContainer{
+		background-size:auto 85%;
+		background-position:center center;
+		background-repeat:no-repeat;
+	}
+}
+@media (max-width:991px){
+	.twitterFeedContainer{
+		background-size:85% auto;
+		background-position:center 15px;
+		background-repeat:no-repeat;
+	}
+}
+.instagramFeedContainer{
+	background-color:#eee;
+	.instagramFeed{
+		h3{
+			margin-top:0;
+			padding-top:0;
+			float:left;
+			color:#000;
+			font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+			font-size:28/16 * 1em;
+			font-weight:bold;
+			margin-bottom:15px;
+		}
+		@media (max-width:767px){
+			h3{
+				width:100%;
+				span{
+					display:block;
+				}
+			}
+		}
+		a.followButton{
+			display:inline-block;
+			border-radius:3px;
+			padding:10px 14px;
+			font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+			text-transform:uppercase;
+		}
+		@media (min-width:768px){
+			a.followButton{
+				float:right;
+			}
+		}
+		@media (max-width:767px){
+			a.followButton{
+				float:none;
+			}
+		}
+		a.followButton:link{
+			background-color:$color-campusGold;
+			color:#000;
+			text-decoration:none;
+		}
+		a.followButton:visited{
+			background-color:$color-campusGold;
+			color:#000;
+			text-decoration:none;
+		}
+		a.followButton:hover{
+			background-color:#000;
+			color:$color-campusGold;
+			text-decoration:none;
+		}
+		a.followButton:active{
+			background-color:$color-campusGold;
+			color:#000;
+			text-decoration:none;
+		}
+		.photos{
+			margin:0 -7.5px;
+			padding:15px 0;
+			clear:both;
+			overflow:hidden;
+			.photoContainer{
+				padding:7.5px;
+				a{
+					display:block;
+				}
+				a:link{
+					border:none;
+				}
+				a:visited{
+					border:none;
+				}
+				a:hover{
+					border:none;
+				}
+				a:active{
+					border:none;
+				}
+				a{
+					img{
+						width:100%;
+					}
+				}
+			}
+		}
+	}
+	@media (min-width:992px){
+		.instagramFeed{
+			padding:75px 15px;
+		}
+	}
+	@media (max-width:991px){
+		.instagramFeed{
+			padding:50px 30px;
+			text-align:center;
+		}
+	}
+}
