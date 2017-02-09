@@ -4179,7 +4179,7 @@ tbody.collapse.in {
   margin-left: 2px;
   vertical-align: middle;
   border-top: 4px dashed;
-  border-top: 4px solid\9;
+  border-top: 4px solid \9;
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 }
@@ -7813,7 +7813,7 @@ button.close {
 
 html {
   background-color: #3b3b3b;
-  color: #fff;
+  color: #000;
   font-size: 100%;
 }
 
@@ -8956,7 +8956,7 @@ form.purdueForm fieldset legend {
   padding-top: 0;
   padding-bottom: 0.25em;
   font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
-  color: #98700d;
+  color: #c28e0e;
   font-size: 1.75em;
   line-height: 1.2em;
 }
@@ -9646,7 +9646,7 @@ form.purdueForm .robotic {
 }
 
 .dropdown-toggle:focus {
-  outline-color: -webkit-focus-ring-color;
+  outline-color: #3b99ff;
   outline-style: auto;
   outline-width: 5px;
   outline-offset: -2px;

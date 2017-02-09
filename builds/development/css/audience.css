@@ -2724,7 +2724,7 @@ table {
 
 html {
   background-color: #3b3b3b;
-  color: #fff;
+  color: #000;
   font-size: 100%;
 }
 
@@ -5460,4 +5460,11 @@ u {
   .bottom {
     font-size: 0.55556em;
   }
+}
+
+.dropdown-toggle:focus {
+  outline-color: #3b99ff;
+  outline-style: auto;
+  outline-width: 5px;
+  outline-offset: -2px;
 }
