@@ -1,20 +1,23 @@
-$color-campusGold:#98700d;
+$color-campusGold:#c28e0e;
+$color-headlineGold:#98700d;
 $color-coalGray:#4d4038;
 $color-moonDustGray:#baa892;
 $color-everTrueBlue:#5b6870;
-$color-slayterSkyBlue:#7ca6c0;
+$color-slayterSkyBlue:#6e99b4;
 $color-ameliaSkyBlue:#a3d6d7;
 $color-landGrantGreen:#085c11;
 $color-rossAdeGreen:#849e2a;
 $color-celeryBogGreen:#c3be0b;
 $color-springFestGreen:#e9e45b;
 $color-oakenBucketBrown:#6b4536;
-$color-bellTowerBrick:#c76c14;
+$color-bellTowerBrick:#b46012;
 $color-mackeyOrange:#ff9b1a;
 $color-yellowWalk:#ffd100;
-$color-fountainRunTeal:#2eaf9b;
+$color-fountainRunTeal:#29a592;
 $color-pappysPurple:#ad1f65;
 html{
+	background-color:#3b3b3b;
+	color:#000;
 	font-size:100%;
 }
 body{
@@ -38,7 +41,7 @@ h1{
 	padding-bottom:0.25em;
 	font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight:bold;
-	color:$color-campusGold;
+	color:$color-headlineGold;
     font-size:36/16 * 1em;
     line-height:1.1em;
 }
@@ -46,14 +49,14 @@ h2{
 	padding-top:1em;
 	padding-bottom:0.15em;
 	font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
-	color:$color-campusGold;
+	color:$color-headlineGold;
 	font-size:32/16 * 1em;
 	line-height:1.2em;
 }
 h3{
 	padding-top:1em;
 	font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
-	color:$color-campusGold;
+	color:$color-headlineGold;
 	font-size:28/16 * 1em;
 	line-height:1.2em;
 }
