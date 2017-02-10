@@ -2938,6 +2938,11 @@ u {
   -ms-transition-duration: .3s;
 }
 
+.nav-skipto {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
 .goldbar {
   min-height: 0 !important;
   margin: 0;
