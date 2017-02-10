@@ -3,8 +3,8 @@
 
 <head>
     <!-- general meta data Here -->
-    <title>College Home Page Template - Purdue University</title>
-    <meta content="This is an example of v1.5 of the college page template." name="description" />
+    <title>Department/Office Home Page Template - Purdue University</title>
+    <meta content="This is an example of v1.5 of the department/office home page template." name="description" />
     <meta content="Place your office here." name="author" />
     <meta charset="utf-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
@@ -12,7 +12,7 @@
     <link href="https://www.purdue.edu/purdue/images/favicon.ico" rel="shortcut icon" />
 
     <!-- specific template css -->
-    <link rel="stylesheet" text="text/css" href="../css/college/college-1.5.1.css" />
+    <link rel="stylesheet" text="text/css" href="../css/deptOffice/deptOffice-1.5.1.css" />
 
 
     <noscript>
@@ -27,7 +27,6 @@
 </head>
 
 <body>
-    <a class="nav nav-skipto" href="#main">Skip to main content</a>
     <div class="navbar goldbar" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -201,79 +200,84 @@
             </div>
         </div>
     </div>
-    <main id="main" class="content collegeContent">
+    <div class="content deptOfficeContent">
         <div class="container">
-            <div class="row grid">
-                <div class="introContainer col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="intro">
-                        <h1>College Home Page Example</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus consequat tortor, venenatis fringilla justo feugiat ut. Quisque cursus at lectus id ultrices. Suspendisse mattis fringilla mattis. Morbi tincidunt dictum dolor
-                            sit amet cursus. Nullam ultricies purus nec eleifend facilisis. Proin varius id erat a porta. Nullam pellentesque at leo eu porta.</p>
-                        <a href="#" class="featureLink">Feature Link</a>
-                        <a href="#" class="featureLink">Feature Link</a>
+            <div class="row bannerRow">
+                <div class="bannerContainer col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                    <style type="text/css">
+                        .banner{
+                        		    background-image: url("http://www.purdue.edu/pmm-templates/2015/Template-DepartmentOffice/images/deptOffice-banner.jpg");
+                        		}
+                    </style>
+                    <div class="banner">
+                        <div class="caption">
+                            <h2 class="header">Header</h2>
+                            <p class="subheader">Sub header text goes here. Blah blah blah look at all this text that I'm typing all for the sake of making a silly little test.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="tiles col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="tile icon col-lg-12 col-md-12 col-sm-12 col-xs-12 row-lg-1 row-md-1 row-sm-1 row-xs-1 left-lg-a left-md-a left-sm-a top-lg-1 top-md-1 top-sm-1">
-                            <a class="audience corporatePartners" href="#">
-                                <span class="caption">
-					<i class="icon fa fa-newspaper-o"></i>
-					<span class="divider"></span>
-                                <span class="text">
-						1x4 Audience Tile
-					</span>
-                                </span>
-                            </a>
+
+
+                <div class="tabsContainer col-lg-4 col-md-4 col-sm-5 col-xs-12">
+                    <ul class="nav nav-tabs">
+                        <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><a data-toggle="tab" href="#events">Events</a>
+                        </li>
+                        <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><a data-toggle="tab" href="#news">News</a>
+                        </li>
+                        <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4 active"><a data-toggle="tab" href="#contactHours">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade" id="events">
+
                         </div>
-                        <div class="tile icon col-lg-9 col-md-9 col-sm-9 col-xs-12 row-lg-1 row-md-1 row-sm-1 row-xs-1 left-lg-a left-md-a left-sm-a top-lg-2 top-md-2 top-sm-2">
-                            <a class="audience corporatePartners" href="#">
-                                <span class="caption">
-					<i class="icon fa fa-newspaper-o"></i>
-					<span class="divider"></span>
-                                <span class="text">
-						1x3 Audience Tile
-					</span>
-                                </span>
-                            </a>
+                        <div class="tab-pane fade" id="news">
+                            <script charset="UTF-8" language="JavaScript" src="https://www.purdue.edu/newsroom/php/feed2js-hp-news/feed2js.php?src=http://www.purdue.edu/newsroom/rss/DiversityNews.xml&amp;num=5&amp;targ=y&amp;utf=y" type="text/javascript"></script>
                         </div>
-                        <div class="tile photo col-lg-6 col-md-6 col-sm-6 col-xs-12 row-lg-2 row-md-2 row-sm-2 row-xs-2 left-lg-a left-md-a left-sm-a top-lg-3 top-md-3 top-sm-3">
-                            <a class="audience" href="#" style="background-image:url('https://www.purdue.edu/purdue/images/homepage-amazon-md.jpg')">
-                                <span class="caption">
-					<span class="divider"></span>
-                                <span class="text">
-						2x2 Audience Tile
-					</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="tile icon col-lg-3 col-md-3 col-sm-3 col-xs-6 row-lg-2 row-md-2 row-sm-2 row-xs-2 left-lg-c left-md-c left-sm-c top-lg-3 top-md-3 top-sm-3">
-                            <a class="audience corporatePartners" href="#">
-                                <span class="caption">
-					<i class="icon fa fa-newspaper-o"></i>
-					<span class="divider"></span>
-                                <span class="text">
-						1x2 Audience Tile
-					</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="tile icon col-lg-3 col-md-3 col-sm-3 col-xs-6 row-lg-3 row-md-3 row-sm-3 row-xs-2 left-lg-d left-md-d left-sm-d top-lg-2 top-md-2 top-sm-2">
-                            <a class="audience corporatePartners" href="#">
-                                <span class="caption">
-					<i class="icon fa fa-newspaper-o"></i>
-					<span class="divider"></span>
-                                <span class="text">
-						1x3 Audience Tile
-					</span>
-                                </span>
-                            </a>
+                        <div class="tab-pane fade active in" id="contactHours">
+                            <h3>Contact Information</h3>
+                            <div class="details">
+                                <p>Purdue University, Black Cultural Center
+                                    <br>1100 Third Street
+                                    <br>West Lafayette, IN 47907
+                                    <br>765-494-3092
+                                    <br><a href="mailto:rathomas@purdue.edu">rathomas@purdue.edu</a>
+                                </p>
+                            </div>
+                            <h3>Summer Hours</h3>
+                            <div class="details">
+                                <div class="noGutter col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <p><strong>Mon. - Thurs.</strong>
+                                        <br>8 am - 4 pm</p>
+                                </div>
+                                <div class="noGutter col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <p><strong>Fri.</strong>
+                                        <br>8 am - 4 pm</p>
+                                </div>
+                                <p><strong>Closed weekends</strong>
+                                </p>
+                                <p><em>*Library hours vary slightly</em>
+                                </p>
+                            </div>
                         </div>
                     </div>
+                </div>
+
+            </div>
+            <div class="row contentRow">
+                <div class="mainContent col-lg-9 col-md-9 col-sm-9 col-xs-12 right">
+                    <h1>Header 1</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum arcu tincidunt aliquam auctor. In suscipit, mauris eu venenatis facilisis, arcu eros ornare dui, eu elementum magna lorem sagittis nisi. Etiam molestie, mi vel
+                        porta mattis, urna ipsum facilisis sapien, id pellentesque sapien sapien id metus.</p>
+                </div>
+                <div class="featureButtons col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <a href="#" class="button">Feature Button 1</a>
+                    <a href="#" class="button">Feature Button 2</a>
+                    <a href="#" class="button">Feature Button 3</a>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
     <div class="footer">
         <div class="container">
             <div class="row panel-group" id="accordion">

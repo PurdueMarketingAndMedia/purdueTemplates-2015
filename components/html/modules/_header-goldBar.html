@@ -18,27 +18,25 @@
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-search fa-lg"></i></a>
 					<ul class="dropdown-menu">
 						<li>
-							<form role="search">
-								<div class="form-group">
-									<div id="cse-search-form">Loading</div>
-									<script src="https://www.google.com/jsapi" type="text/javascript"></script>
-									<script type="text/javascript">// <![CDATA[
-									google.load('search', '1', {language: 'en', style: google.loader.themes.MINIMALIST});
-									google.setOnLoadCallback(function() {
-										var customSearchOptions = {};
-										var orderByOptions = {};
-										orderByOptions['keys'] = [{label: 'Relevance', key: ''} , {label: 'Date', key: 'date'}];
-										customSearchOptions['enableOrderBy'] = true;
-										customSearchOptions['orderByOptions'] = orderByOptions;
-										var customSearchControl =   new google.search.CustomSearchControl('017690826183710227054:mjxnqnpskjk', customSearchOptions);
-										customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-										var options = new google.search.DrawOptions();
-										options.enableSearchboxOnly('https://www.purdue.edu/purdue/search.html', 'q');
-										customSearchControl.draw('cse-search-form', options);
-									}, true);
-									// ]]></script>
-								</div>
-							</form>
+							<div class="form-group">
+								<div id="cse-search-form">Loading</div>
+								<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+								<script type="text/javascript">// <![CDATA[
+								google.load('search', '1', {language: 'en', style: google.loader.themes.MINIMALIST});
+								google.setOnLoadCallback(function() {
+									var customSearchOptions = {};
+									var orderByOptions = {};
+									orderByOptions['keys'] = [{label: 'Relevance', key: ''} , {label: 'Date', key: 'date'}];
+									customSearchOptions['enableOrderBy'] = true;
+									customSearchOptions['orderByOptions'] = orderByOptions;
+									var customSearchControl =   new google.search.CustomSearchControl('017690826183710227054:mjxnqnpskjk', customSearchOptions);
+									customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+									var options = new google.search.DrawOptions();
+									options.enableSearchboxOnly('https://www.purdue.edu/purdue/search.html', 'q');
+									customSearchControl.draw('cse-search-form', options);
+								}, true);
+								// ]]></script>
+							</div>
 						</li>
 					</ul>
 				</li>

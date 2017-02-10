@@ -2724,7 +2724,7 @@ table {
 
 html {
   background-color: #3b3b3b;
-  color: #fff;
+  color: #000;
   font-size: 100%;
 }
 
@@ -2936,6 +2936,11 @@ u {
   -o-transition-duration: .3s;
   transition-duration: .3s;
   -ms-transition-duration: .3s;
+}
+
+.nav-skipto {
+  display: inline-block;
+  padding: 10px 20px;
 }
 
 .goldbar {
@@ -4782,4 +4787,11 @@ u {
   .bottom {
     font-size: 0.55556em;
   }
+}
+
+.dropdown-toggle:focus {
+  outline-color: #3b99ff;
+  outline-style: auto;
+  outline-width: 5px;
+  outline-offset: -2px;
 }
