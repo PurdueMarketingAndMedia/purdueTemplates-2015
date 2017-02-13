@@ -44,19 +44,26 @@ gulp.task('html', function(){
         .pipe(connect.reload())
 });
 
-//PostCSS task
-gulp.task('sass', function(){
+gulp.task('sassDev', function(){
     return gulp.src(scssSources)
-        .pipe(ifelse(env === 'production',
+        .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
+        .pipe(gulp.dest(outputDir+'css/'))
+        .pipe(ifelse(env === 'development',
             function(){
-                return sass({outputStyle:'compressed'}).on('error',sass.logError)
-            },
-            function(){
-                return sass({outputStyle:'expanded'}).on('error',sass.logError)
+                return connect.reload()
             }
         ))
+});
+
+gulp.task('sassProd', function(){
+    return gulp.src(scssSources)
+        .pipe(sass({outputStyle:'compressed'}).on('error',sass.logError))
         .pipe(gulp.dest(outputDir+'css/'))
-        .pipe(connect.reload())
+        .pipe(ifelse(env === 'production',
+            function(){
+                connect.reload()
+            }
+        ))
 });
 
 gulp.task('watch', function() {
@@ -75,4 +82,4 @@ gulp.task('connect', function() {
 // Default Task
 /*gulp.task('default', ['fileinclude','html','lint','css','scripts','watch']);*/
 
-gulp.task('default',['html','sass','connect','watch']);
+gulp.task('default',['html','sassDev','sassProd','connect','watch']);
