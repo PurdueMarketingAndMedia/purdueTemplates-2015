@@ -69,7 +69,8 @@ gulp.task('sassProd', function(){
 gulp.task('watch', function() {
     gulp.watch(htmlSources,['html']);
     gulp.watch(templateSources,['html']);
-    gulp.watch(scssSources,['sass']);
+    gulp.watch(scssSources,['sassDev']);
+    gulp.watch(scssSources,['sassProd']);
 });
 
 gulp.task('connect', function() {
