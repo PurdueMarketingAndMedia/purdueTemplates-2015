@@ -1,0 +1,15 @@
+@@include('_navigation-breadcrumbs.html')
+<main id="main" class="content eventsContent">
+	@@include('_content-events-header.html',{
+		"header": "@@header"
+	})
+	<div class="container eventsContainer">
+	    <div class="row">
+	    	@@include('_content-events-filter-month.html')
+	    	<div class="events col-lg-10 col-md-10 col-sm-9 col-xs-12">
+		    	@@include('_content-events-filter-category.html')
+		    	@@include('_content-events-events.html')
+		    </div>
+	    </div>
+	</div>
+</main>
