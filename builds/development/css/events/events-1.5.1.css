@@ -8972,33 +8972,33 @@ u {
     text-decoration: none;
   }
   .eventsContent .eventsContainer .monthFiltersContainer.open ul.monthFilters li a.monthFilter:hover {
-    color: #000;
+    color: #fff;
     background-color: #c28e0e;
     text-decoration: none;
   }
   .eventsContent .eventsContainer .monthFiltersContainer.open ul.monthFilters li a.monthFilter:active {
-    color: #000;
+    color: #fff;
     background-color: #c28e0e;
     text-decoration: none;
   }
   .eventsContent .eventsContainer .monthFiltersContainer.open ul.monthFilters li a.current:link {
     background-color: #c28e0e;
-    color: #000;
+    color: #fff;
     text-decoration: none;
   }
   .eventsContent .eventsContainer .monthFiltersContainer.open ul.monthFilters li a.current:visited {
     background-color: #c28e0e;
-    color: #000;
+    color: #fff;
     text-decoration: none;
   }
   .eventsContent .eventsContainer .monthFiltersContainer.open ul.monthFilters li a.current:hover {
     background-color: #c28e0e;
-    color: #000;
+    color: #fff;
     text-decoration: none;
   }
   .eventsContent .eventsContainer .monthFiltersContainer.open ul.monthFilters li a.current:active {
     background-color: #c28e0e;
-    color: #000;
+    color: #fff;
     text-decoration: none;
   }
   .eventsContent .eventsContainer .monthFiltersContainer.open ul.monthFilters li:first-child {
@@ -9052,38 +9052,38 @@ u {
 }
 
 .eventsContent .eventsContainer .events .categoryFiltersContainer ul.categoryFilters li a.categoryFilter:hover {
-  color: #000;
+  color: #fff;
   background-color: #c28e0e;
   text-decoration: none;
 }
 
 .eventsContent .eventsContainer .events .categoryFiltersContainer ul.categoryFilters li a.categoryFilter:active {
-  color: #000;
+  color: #fff;
   background-color: #c28e0e;
   text-decoration: none;
 }
 
 .eventsContent .eventsContainer .events .categoryFiltersContainer ul.categoryFilters li a.selected:link {
   background-color: #c28e0e;
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
 .eventsContent .eventsContainer .events .categoryFiltersContainer ul.categoryFilters li a.selected:visited {
   background-color: #c28e0e;
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
 .eventsContent .eventsContainer .events .categoryFiltersContainer ul.categoryFilters li a.selected:hover {
   background-color: #c28e0e;
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
 .eventsContent .eventsContainer .events .categoryFiltersContainer ul.categoryFilters li a.selected:active {
   background-color: #c28e0e;
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -9226,7 +9226,6 @@ u {
   padding: 13px;
   background-color: #c28e0e;
   font-size: 1.33333em;
-  color: #000;
 }
 
 .eventsContent .eventsContainer .events .event .date .hiddenText {
@@ -9268,7 +9267,7 @@ u {
 
 .eventsContent .eventsContainer .events .event a.details:link {
   background-color: #eee;
-  color: #98700d;
+  color: #c28e0e;
   text-decoration: none;
   font-weight: 400;
 }
@@ -9279,7 +9278,7 @@ u {
 
 .eventsContent .eventsContainer .events .event a.details:visited {
   background-color: #eee;
-  color: #98700d;
+  color: #c28e0e;
   text-decoration: none;
   font-weight: 400;
 }
@@ -9290,13 +9289,13 @@ u {
 
 .eventsContent .eventsContainer .events .event a.details:hover {
   background-color: #c28e0e;
-  color: #000;
+  color: #fff;
   text-decoration: none;
   font-weight: 400;
 }
 
 .eventsContent .eventsContainer .events .event a.details:hover .timeLocation {
-  color: #000;
+  color: #fff;
 }
 
 .eventsContent .eventsContainer .events .event a.details:hover .title {
@@ -9305,13 +9304,13 @@ u {
 
 .eventsContent .eventsContainer .events .event a.details:active {
   background-color: #c28e0e;
-  color: #000;
+  color: #fff;
   text-decoration: none;
   font-weight: 400;
 }
 
 .eventsContent .eventsContainer .events .event a.details:active .timeLocation {
-  color: #000;
+  color: #fff;
 }
 
 @media (max-width: 767px) {
