@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     htmlPrettify = require('gulp-html-prettify'),
     //css
 	sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
     //async
     async = require('async');
 
@@ -61,11 +62,13 @@ gulp.task('html', function(){
 });
 
 gulp.task('sass', function(){
-    async.series([
+    async.series([ //development build functions
         function(next)
         {
             gulp.src(scssSources)
+                .pipe(sourcemaps.init())
                 .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
+                .pipe(sourcemaps.write('./sourcemaps'))
                 .pipe(gulp.dest(devOutputDir+'css/'))
                 .on('end',next);
 
@@ -80,7 +83,7 @@ gulp.task('sass', function(){
                 ));
         }
     ]);
-    async.series([
+    async.series([ //production builds functions
         function(next)
         {
             gulp.src(scssSources)
