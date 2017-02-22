@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/PurdueMarketingAndMedia/purdueTemplates-2015#readme",
   "devDependencies": {
+    "async": "^2.1.5",
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
     "gulp-file-include": "^1.0.0",
