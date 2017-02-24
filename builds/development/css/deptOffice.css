@@ -2939,8 +2939,22 @@ u {
 }
 
 .nav-skipto {
+  position: absolute;
+  bottom: 100%;
   display: inline-block;
   padding: 10px 20px;
+  z-index: 2;
+  background-color: #000;
+  border: solid 1px #c28e0e;
+}
+
+.nav-skipto:link, .nav-skipto:visited, .nav-skipto:hover, .nav-skipto:active {
+  color: #fff;
+}
+
+.nav-skipto:focus {
+  bottom: initial;
+  top: 0;
 }
 
 .goldbar {
