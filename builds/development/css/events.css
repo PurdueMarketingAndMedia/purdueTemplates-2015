@@ -4809,3 +4809,7 @@ u {
   outline-width: 5px;
   outline-offset: -2px;
 }
+
+.navbar-toggle:focus {
+  text-decoration: underline;
+}
