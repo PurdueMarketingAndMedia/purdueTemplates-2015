@@ -158,33 +158,33 @@
 							text-decoration:none;
 						}
 						a.monthFilter:hover{
-							color:#fff;
+							color:#000;
 							background-color:$color-campusGold;
 							text-decoration:none;
 						}
 						a.monthFilter:active{
-							color:#fff;
+							color:#000;
 							background-color:$color-campusGold;
 							text-decoration:none;
 						}
 						a.current:link{
 							background-color:$color-campusGold;
-							color:#fff;
+							color:#000;
 							text-decoration:none;
 						}
 						a.current:visited{
 							background-color:$color-campusGold;
-							color:#fff;
+							color:#000;
 							text-decoration:none;
 						}
 						a.current:hover{
 							background-color:$color-campusGold;
-							color:#fff;
+							color:#000;
 							text-decoration:none;
 						}
 						a.current:active{
 							background-color:$color-campusGold;
-							color:#fff;
+							color:#000;
 							text-decoration:none;
 						}
 					}
@@ -231,33 +231,33 @@
 							text-decoration:none;
 						}
 						a.categoryFilter:hover{
-							color:#fff;
+							color:#000;
 							background-color:$color-campusGold;
 							text-decoration:none;
 						}
 						a.categoryFilter:active{
-							color:#fff;
+							color:#000;
 							background-color:$color-campusGold;
 							text-decoration:none;
 						}
 						a.selected:link{
 							background-color:$color-campusGold;
-							color:#fff;
+							color:#000;
 							text-decoration:none;
 						}
 						a.selected:visited{
 							background-color:$color-campusGold;
-							color:#fff;
+							color:#000;
 							text-decoration:none;
 						}
 						a.selected:hover{
 							background-color:$color-campusGold;
-							color:#fff;
+							color:#000;
 							text-decoration:none;
 						}
 						a.selected:active{
 							background-color:$color-campusGold;
-							color:#fff;
+							color:#000;
 							text-decoration:none;
 						}
 					}
@@ -404,6 +404,7 @@
 						padding:13px;
 						background-color:$color-campusGold;
 						font-size:24/18 * 1em;
+						color:#000;
 					}
 					.hiddenText{
 						position:absolute;
@@ -440,7 +441,7 @@
 				}
 				a.details:link{
 					background-color:#eee;
-					color:$color-campusGold;
+					color:$color-headlineGold;
 					text-decoration:none;
 					font-weight:400;
 					.timeLocation{
@@ -449,7 +450,7 @@
 				}
 				a.details:visited{
 					background-color:#eee;
-					color:$color-campusGold;
+					color:$color-headlineGold;
 					text-decoration:none;
 					font-weight:400;
 					.timeLocation{
@@ -458,11 +459,11 @@
 				}
 				a.details:hover{
 					background-color:$color-campusGold;
-					color:#fff;
+					color:#000;
 					text-decoration:none;
 					font-weight:400;
 					.timeLocation{
-						color:#fff;
+						color:#000;
 					}
 					.title{
 						text-decoration:underline;
@@ -470,11 +471,11 @@
 				}
 				a.details:active{
 					background-color:$color-campusGold;
-					color:#fff;
+					color:#000;
 					text-decoration:none;
 					font-weight:400;
 					.timeLocation{
-						color:#fff;
+						color:#000;
 					}
 				}
 			}
