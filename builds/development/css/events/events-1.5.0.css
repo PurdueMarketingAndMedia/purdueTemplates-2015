@@ -2939,8 +2939,22 @@ u {
 }
 
 .nav-skipto {
+  position: absolute;
+  bottom: 100%;
   display: inline-block;
   padding: 10px 20px;
+  z-index: 2;
+  background-color: #000;
+  border: solid 1px #c28e0e;
+}
+
+.nav-skipto:link, .nav-skipto:visited, .nav-skipto:hover, .nav-skipto:active {
+  color: #fff;
+}
+
+.nav-skipto:focus {
+  bottom: initial;
+  top: 0;
 }
 
 .goldbar {
@@ -3883,33 +3897,33 @@ u {
     text-decoration: none;
   }
   .eventsContent .eventsContainer .monthFiltersContainer.open ul.monthFilters li a.monthFilter:hover {
-    color: #fff;
+    color: #000;
     background-color: #c28e0e;
     text-decoration: none;
   }
   .eventsContent .eventsContainer .monthFiltersContainer.open ul.monthFilters li a.monthFilter:active {
-    color: #fff;
+    color: #000;
     background-color: #c28e0e;
     text-decoration: none;
   }
   .eventsContent .eventsContainer .monthFiltersContainer.open ul.monthFilters li a.current:link {
     background-color: #c28e0e;
-    color: #fff;
+    color: #000;
     text-decoration: none;
   }
   .eventsContent .eventsContainer .monthFiltersContainer.open ul.monthFilters li a.current:visited {
     background-color: #c28e0e;
-    color: #fff;
+    color: #000;
     text-decoration: none;
   }
   .eventsContent .eventsContainer .monthFiltersContainer.open ul.monthFilters li a.current:hover {
     background-color: #c28e0e;
-    color: #fff;
+    color: #000;
     text-decoration: none;
   }
   .eventsContent .eventsContainer .monthFiltersContainer.open ul.monthFilters li a.current:active {
     background-color: #c28e0e;
-    color: #fff;
+    color: #000;
     text-decoration: none;
   }
   .eventsContent .eventsContainer .monthFiltersContainer.open ul.monthFilters li:first-child {
@@ -3963,38 +3977,38 @@ u {
 }
 
 .eventsContent .eventsContainer .events .categoryFiltersContainer ul.categoryFilters li a.categoryFilter:hover {
-  color: #fff;
+  color: #000;
   background-color: #c28e0e;
   text-decoration: none;
 }
 
 .eventsContent .eventsContainer .events .categoryFiltersContainer ul.categoryFilters li a.categoryFilter:active {
-  color: #fff;
+  color: #000;
   background-color: #c28e0e;
   text-decoration: none;
 }
 
 .eventsContent .eventsContainer .events .categoryFiltersContainer ul.categoryFilters li a.selected:link {
   background-color: #c28e0e;
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
 .eventsContent .eventsContainer .events .categoryFiltersContainer ul.categoryFilters li a.selected:visited {
   background-color: #c28e0e;
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
 .eventsContent .eventsContainer .events .categoryFiltersContainer ul.categoryFilters li a.selected:hover {
   background-color: #c28e0e;
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
 .eventsContent .eventsContainer .events .categoryFiltersContainer ul.categoryFilters li a.selected:active {
   background-color: #c28e0e;
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
@@ -4137,6 +4151,7 @@ u {
   padding: 13px;
   background-color: #c28e0e;
   font-size: 1.33333em;
+  color: #000;
 }
 
 .eventsContent .eventsContainer .events .event .date .hiddenText {
@@ -4178,7 +4193,7 @@ u {
 
 .eventsContent .eventsContainer .events .event a.details:link {
   background-color: #eee;
-  color: #c28e0e;
+  color: #98700d;
   text-decoration: none;
   font-weight: 400;
 }
@@ -4189,7 +4204,7 @@ u {
 
 .eventsContent .eventsContainer .events .event a.details:visited {
   background-color: #eee;
-  color: #c28e0e;
+  color: #98700d;
   text-decoration: none;
   font-weight: 400;
 }
@@ -4200,13 +4215,13 @@ u {
 
 .eventsContent .eventsContainer .events .event a.details:hover {
   background-color: #c28e0e;
-  color: #fff;
+  color: #000;
   text-decoration: none;
   font-weight: 400;
 }
 
 .eventsContent .eventsContainer .events .event a.details:hover .timeLocation {
-  color: #fff;
+  color: #000;
 }
 
 .eventsContent .eventsContainer .events .event a.details:hover .title {
@@ -4215,13 +4230,13 @@ u {
 
 .eventsContent .eventsContainer .events .event a.details:active {
   background-color: #c28e0e;
-  color: #fff;
+  color: #000;
   text-decoration: none;
   font-weight: 400;
 }
 
 .eventsContent .eventsContainer .events .event a.details:active .timeLocation {
-  color: #fff;
+  color: #000;
 }
 
 @media (max-width: 767px) {
@@ -4793,6 +4808,10 @@ u {
   outline-style: auto;
   outline-width: 5px;
   outline-offset: -2px;
+}
+
+.navbar-toggle:focus {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=../sourcemaps/events/events-1.5.0.css.map */
