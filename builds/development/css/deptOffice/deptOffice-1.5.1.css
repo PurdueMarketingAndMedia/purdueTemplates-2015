@@ -9124,7 +9124,7 @@ u {
 
 @media (min-width: 768px) {
   .deptOfficeContent .container .bannerRow .tabsContainer .tab-content {
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 }
 
