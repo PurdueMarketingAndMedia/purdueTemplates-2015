@@ -17,10 +17,6 @@ body {
   line-height: 1;
 }
 
-ol, ul {
-  list-style: none;
-}
-
 blockquote, q {
   quotes: none;
 }
@@ -7995,10 +7991,6 @@ ul ul ul {
   list-style-type: square;
 }
 
-ol {
-  list-style-type: decimal;
-}
-
 strong, b {
   font-weight: 700;
 }
@@ -8085,6 +8077,10 @@ u {
   text-decoration: none;
 }
 
+.goldbar a:focus {
+  outline: dotted 1px #000;
+}
+
 .goldbar button {
   border: none;
 }
@@ -8127,10 +8123,14 @@ u {
   padding-bottom: 0;
 }
 
+.goldbar #search .dropdown {
+  padding-right: 16px;
+}
+
 .goldbar #search a.dropdown-toggle {
   position: relative;
   overflow: hidden;
-  padding: 4px 20px 4px 0 !important;
+  padding: 4px 4px 4px 0 !important;
 }
 
 .goldbar #search a.dropdown-toggle::after {
@@ -8273,6 +8273,9 @@ u {
   }
   .goldbar .gold .navbar-nav > li > a {
     padding: 4px 20px 4px 0 !important;
+  }
+  .goldbar .gold .navbar-nav.information .dropdown-toggle {
+    padding-right: 0 !important;
   }
 }
 
@@ -8491,7 +8494,11 @@ u {
     color: #999;
   }
   .blackbar li:hover, .blackbar li a:focus {
+    outline: none !important;
     color: #fff !important;
+  }
+  .blackbar li a:focus {
+    background-color: #373737 !important;
   }
 }
 
