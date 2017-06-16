@@ -3803,6 +3803,14 @@ u {
   padding: 3px 0;
 }
 
+.content .container .row .maincontent .imageContainer {
+  max-width: 100%;
+}
+
+.content .container .row .maincontent .videoContainer {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   .content .container .row .maincontent .imageContainer.right, .content .container .row .maincontent .videoContainer.right {
     margin-left: 25px;
@@ -3813,38 +3821,27 @@ u {
 }
 
 @media (min-width: 768px) and (min-width: 1200px) {
-  .content .container .row .maincontent .imageContainer {
+  .content .container .row .maincontent .imageContainer.right, .content .container .row .maincontent .imageContainer.left, .content .container .row .maincontent .videoContainer.right, .content .container .row .maincontent .videoContainer.left {
     max-width: 40%;
-  }
-  .content .container .row .maincontent .videoContainer {
-    width: 40%;
   }
 }
 
 @media (min-width: 768px) and (min-width: 992px) and (max-width: 1199px) {
-  .content .container .row .maincontent .imageContainer {
+  .content .container .row .maincontent .imageContainer.right, .content .container .row .maincontent .imageContainer.left, .content .container .row .maincontent .videoContainer.right, .content .container .row .maincontent .videoContainer.left {
     max-width: 45%;
-  }
-  .content .container .row .maincontent .videoContainer {
-    width: 45%;
   }
 }
 
 @media (min-width: 768px) and (min-width: 768px) and (max-width: 991px) {
-  .content .container .row .maincontent .imageContainer {
+  .content .container .row .maincontent .imageContainer.right, .content .container .row .maincontent .imageContainer.left, .content .container .row .maincontent .videoContainer.right, .content .container .row .maincontent .videoContainer.left {
     max-width: 50%;
-  }
-  .content .container .row .maincontent .videoContainer {
-    width: 50%;
   }
 }
 
 @media (max-width: 767px) {
-  .content .container .row .maincontent .imageContainer {
-    max-width: 100%;
-  }
-  .content .container .row .maincontent .videoContainer {
+  .content .container .row .maincontent .imageContainer.right, .content .container .row .maincontent .imageContainer.left, .content .container .row .maincontent .videoContainer.right, .content .container .row .maincontent .videoContainer.left {
     width: 100%;
+    max-width: 100%;
   }
 }
 
