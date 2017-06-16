@@ -3241,6 +3241,7 @@ u {
 .top {
   width: 100%;
   background-image: url("https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png");
+  background-color: #000;
   background-repeat: repeat;
 }
 
@@ -3254,6 +3255,10 @@ u {
 
 .top .logo a img {
   width: 100%;
+}
+
+.top .logo a:link, .top .logo a:visited, .top .logo a:hover, .top .logo a:active {
+  color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -4046,6 +4051,7 @@ end tile sizing and positioning
 
 .collegeContent .grid .tiles .row .tile a {
   font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: #000;
   color: #fff;
 }
 
@@ -5051,6 +5057,7 @@ end tile sizing and positioning
 
 .footer #accordion .motto {
   text-align: left;
+  color: #fff;
 }
 
 .footer #accordion .motto a {
