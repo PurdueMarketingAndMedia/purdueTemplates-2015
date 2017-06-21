@@ -1,6 +1,7 @@
 .top{
 	width:100%;
-	background-image: url('https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png');
+	background-image:url('https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png');
+	background-color:#000;
 	background-repeat:repeat;
 	.logo{
 		padding:25px 15px;
@@ -8,6 +9,9 @@
 			display:block;
 			img{
 				width:100%;
+			}
+			&:link,&:visited,&:hover,&:active{
+				color:#fff;
 			}
 		}
 		@media (min-width:768px){

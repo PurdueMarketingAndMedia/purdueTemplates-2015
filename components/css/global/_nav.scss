@@ -12,7 +12,11 @@
 			color:#999;
 		}
 		li:hover,li a:focus{
+			outline:none !important;
 			color:#fff !important;
+		}
+		li a:focus{
+			background-color:#373737 !important;
 		}
 	}
 	@media (max-width:991px){
