@@ -10099,6 +10099,10 @@ end tile sizing and positioning
   overflow: hidden;
 }
 
+.footer #accordion {
+  margin-bottom: 0;
+}
+
 .footer #accordion .panel {
   border: none;
   margin-top: 5px;
