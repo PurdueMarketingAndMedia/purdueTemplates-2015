@@ -3006,6 +3006,7 @@ u {
 }
 
 .goldbar .navbar-header button.navbar-toggle {
+  margin-right: 0;
   padding: 2px 15px;
   font-size: 1em;
 }
