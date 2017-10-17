@@ -9202,6 +9202,10 @@ form.purdueForm .robotic {
   padding: 5px;
 }
 
+.sidenav > ul li.dropdown-submenu ul.dropdown-menu li a::after {
+  bottom: 4px;
+}
+
 .sidenav > ul li.dropdown-submenu ul.dropdown-menu li a:link {
   background: none;
 }
@@ -9224,6 +9228,10 @@ form.purdueForm .robotic {
   background-color: #444;
   text-transform: uppercase;
   color: #fff;
+}
+
+.sidenav > ul > li:first-child a::after {
+  display: none;
 }
 
 .sidenav > ul > li:first-child a:link {
@@ -9256,10 +9264,6 @@ form.purdueForm .robotic {
 
 .sidenav > ul > li:first-child a:focus {
   text-decoration: underline;
-}
-
-.sidenav > ul > li:first-child a:focus::after {
-  display: none;
 }
 
 @media (max-width: 767px) {

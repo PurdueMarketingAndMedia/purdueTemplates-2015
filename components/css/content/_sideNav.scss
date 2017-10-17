@@ -80,6 +80,9 @@
 					a{
 						display:block;
 						padding:5px;
+						&::after{
+							bottom:4px;
+						}
 					}
 					a:link{
 						background:none;
@@ -102,6 +105,11 @@
 			background-color:#444;
 			text-transform:uppercase;
 			color:#fff;
+			a{
+				&::after{
+					display:none;
+				}
+			}
 			a:link{
 				padding:0;
 				background-color:#444;
@@ -128,9 +136,6 @@
 			}
 			a:focus{
 				text-decoration:underline;
-				&::after{
-					display:none;
-				}
 			}
 		}
 	}
