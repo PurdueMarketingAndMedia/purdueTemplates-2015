@@ -10,11 +10,7 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width, user-scalable=no" name="viewport" />
     <link href="https://www.purdue.edu/purdue/images/favicon.ico" rel="shortcut icon" />
-
-    <!-- specific template css -->
     <link rel="stylesheet" text="text/css" href="../css/college/college-1.5.1.css" />
-
-
     <noscript>
         <link rel="stylesheet" href="https://use.fontawesome.com/c2da24ec3a.css">
     </noscript>
@@ -27,7 +23,9 @@
 </head>
 
 <body>
-    <a class="nav nav-skipto" href="#main">Skip to main content</a>
+    <div class="container">
+        <a class="nav nav-skipto" href="#main">Skip to main content</a>
+    </div>
     <div class="navbar goldbar" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -49,25 +47,18 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="form-group">
-                                    <div id="cse-search-form">Loading</div>
-                                    <script src="https://www.google.com/jsapi" type="text/javascript"></script>
-                                    <script type="text/javascript">
-                                        // <![CDATA[
-                                        								google.load('search', '1', {language: 'en', style: google.loader.themes.MINIMALIST});
-                                        								google.setOnLoadCallback(function() {
-                                        									var customSearchOptions = {};
-                                        									var orderByOptions = {};
-                                        									orderByOptions['keys'] = [{label: 'Relevance', key: ''} , {label: 'Date', key: 'date'}];
-                                        									customSearchOptions['enableOrderBy'] = true;
-                                        									customSearchOptions['orderByOptions'] = orderByOptions;
-                                        									var customSearchControl =   new google.search.CustomSearchControl('017690826183710227054:mjxnqnpskjk', customSearchOptions);
-                                        									customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-                                        									var options = new google.search.DrawOptions();
-                                        									options.enableSearchboxOnly('https://www.purdue.edu/purdue/search.html', 'q');
-                                        									customSearchControl.draw('cse-search-form', options);
-                                        								}, true);
-                                        								// ]]>
+                                    <script>
+                                        (function() {
+                    			                        var cx = '017690826183710227054:mjxnqnpskjk';
+                    			                        var gcse = document.createElement('script');
+                    			                        gcse.type = 'text/javascript';
+                    			                        gcse.async = true;
+                    			                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                    			                        var s = document.getElementsByTagName('script')[0];
+                    			                        s.parentNode.insertBefore(gcse, s);
+                    			                      })();
                                     </script>
+                                    <gcse:searchbox-only id="cse-search-form" resultsUrl="https://www.purdue.edu/purdue/search.html" queryParameterName="q">Loading</gcse:searchbox-only>
                                 </div>
                             </li>
                         </ul>
@@ -117,6 +108,7 @@
             <!--/.nav-collapse -->
         </div>
     </div>
+
     <div class="top">
         <div class="container">
             <div class="row">
