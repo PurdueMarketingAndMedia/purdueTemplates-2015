@@ -8114,6 +8114,20 @@ u {
   background-color: #000;
 }
 
+.goldbar button.navbar-toggle {
+  position: relative;
+  overflow: hidden;
+}
+
+.goldbar button.navbar-toggle::after {
+  display: block;
+  content: "search";
+  position: absolute;
+  top: 100%;
+  width: 0;
+  height: 0;
+}
+
 .goldbar #search {
   border: none;
 }
