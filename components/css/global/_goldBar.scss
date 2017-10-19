@@ -31,6 +31,9 @@
 		font-weight:400;
 		text-decoration:none;
 	}
+	a:focus{
+		outline:dotted 1px #000;
+	}
 	button{
 		border:none;
 	}
@@ -70,10 +73,13 @@
 			padding-top:0;
 			padding-bottom:0;
 		}
+		.dropdown{
+			padding-right:16px;
+		}
 		a.dropdown-toggle{
 			position:relative;
 			overflow:hidden;
-			padding:4px 20px 4px 0!important;
+			padding:4px 4px 4px 0!important;
 		}
 		a.dropdown-toggle::after{
 			display:block;
@@ -211,6 +217,11 @@
 			.navbar-nav{
 				>li > a{
 					padding:4px 20px 4px 0!important;
+				}
+				&.information{
+					.dropdown-toggle{
+						padding-right:0 !important;
+					}
 				}
 			}
 		}

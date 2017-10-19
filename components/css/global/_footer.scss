@@ -3,6 +3,7 @@
 	background-color:#000;
 	overflow:hidden;
 	#accordion{
+		margin-bottom:0;
 		.panel{
 			border:none;
 			margin-top:5px;
@@ -49,6 +50,7 @@
 		}
 		.motto{
 			text-align:left;
+			color:#fff;
 			a{
 				display:inline-block;
 				position:relative;

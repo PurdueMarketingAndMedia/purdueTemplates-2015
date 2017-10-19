@@ -17,10 +17,6 @@ body {
   line-height: 1;
 }
 
-ol, ul {
-  list-style: none;
-}
-
 blockquote, q {
   quotes: none;
 }
@@ -7995,10 +7991,6 @@ ul ul ul {
   list-style-type: square;
 }
 
-ol {
-  list-style-type: decimal;
-}
-
 strong, b {
   font-weight: 700;
 }
@@ -8085,6 +8077,10 @@ u {
   text-decoration: none;
 }
 
+.goldbar a:focus {
+  outline: dotted 1px #000;
+}
+
 .goldbar button {
   border: none;
 }
@@ -8127,10 +8123,14 @@ u {
   padding-bottom: 0;
 }
 
+.goldbar #search .dropdown {
+  padding-right: 16px;
+}
+
 .goldbar #search a.dropdown-toggle {
   position: relative;
   overflow: hidden;
-  padding: 4px 20px 4px 0 !important;
+  padding: 4px 4px 4px 0 !important;
 }
 
 .goldbar #search a.dropdown-toggle::after {
@@ -8274,6 +8274,9 @@ u {
   .goldbar .gold .navbar-nav > li > a {
     padding: 4px 20px 4px 0 !important;
   }
+  .goldbar .gold .navbar-nav.information .dropdown-toggle {
+    padding-right: 0 !important;
+  }
 }
 
 @media (max-width: 767px) {
@@ -8327,6 +8330,7 @@ u {
 .top {
   width: 100%;
   background-image: url("https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png");
+  background-color: #000;
   background-repeat: repeat;
 }
 
@@ -8340,6 +8344,10 @@ u {
 
 .top .logo a img {
   width: 100%;
+}
+
+.top .logo a:link, .top .logo a:visited, .top .logo a:hover, .top .logo a:active {
+  color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -8491,7 +8499,11 @@ u {
     color: #999;
   }
   .blackbar li:hover, .blackbar li a:focus {
+    outline: none !important;
     color: #fff !important;
+  }
+  .blackbar li a:focus {
+    background-color: #373737 !important;
   }
 }
 
@@ -9128,6 +9140,7 @@ end tile sizing and positioning
 
 .collegeContent .grid .tiles .row .tile a {
   font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: #000;
   color: #fff;
 }
 
@@ -10086,6 +10099,10 @@ end tile sizing and positioning
   overflow: hidden;
 }
 
+.footer #accordion {
+  margin-bottom: 0;
+}
+
 .footer #accordion .panel {
   border: none;
   margin-top: 5px;
@@ -10133,6 +10150,7 @@ end tile sizing and positioning
 
 .footer #accordion .motto {
   text-align: left;
+  color: #fff;
 }
 
 .footer #accordion .motto a {
