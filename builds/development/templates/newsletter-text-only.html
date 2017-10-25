@@ -20,6 +20,7 @@
     <!-- JS needed for bootstrap -->
     <script src="https://www.purdue.edu/purdue/js/jquery-1.10.2.min.js" type="text/javascript"></script>
     <script src="https://www.purdue.edu/purdue/js/bootstrap.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6961776/7378572/css/fonts.css" />
 </head>
 
 <body>
@@ -217,58 +218,44 @@
     <main id="main" class="content">
         <div class="container">
             <div class="row">
-                <section class="intro">
-                    <article>
-                        <h1 class="intro__title">Title of Enewsletter Here</h1>
-                        <p class="intro__issue">FALL 2017</p>
+                <section class="intro" aria-labelledby="intro_title">
+                    <h1 class="intro__title" id="intro_title">Title of Enewsletter Here</h1>
+                    <p class="intro__issue">FALL 2017</p>
 
-                        <p class="intro__description">A brief introduction to the newsletter can go here if needed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae lacinia dui, ac lacinia dolor. Maecenas mattis nulla ac purus mattis, sit amet facilisis dolor luctus.
-                            Donec luctus convallis arcu.</p>
+                    <p class="intro__description">A brief introduction to the newsletter can go here if needed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae lacinia dui, ac lacinia dolor. Maecenas mattis nulla ac purus mattis, sit amet facilisis dolor luctus.
+                        Donec luctus convallis arcu.</p>
+                </section>
+
+                <section class="section section-labelled">
+                    <h2 class="section__heading">Featured Stories</h2>
+                    <article class="story story-featured">
+                        <h3 class="story__title story__title-featured">This title is for the featured story. Three lines used if necessary or needed.</h3>
+                        <p class="story__subtitle story__subtitle-featured">Subhead if needed</p>
+                        <p class="story__teaser story__teaser-featured">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae lacinia dui, ac lacinia dolor. Maecenas mattis nulla ac purus mattis, sit amet facilisis dolor luctus. Donec luctus convallis arcu. Nullam adipiscing, magna porttitor
+                            pellentesque ornare, magna tortor dignissim justo, vel fermentum massa neque sit amet urna.</p>
+
+                        <a href="#" class="button button--hover-light">Read More</a>
                     </article>
                 </section>
 
-                <section class="section">
-                    <article>
-                        <h2 class="section__heading">Featured Stories</h2>
-
-                        <section class="story">
-                            <h3 class="story__title">This title is for the featured story. Three lines used if necessary or needed.</h3>
-                            <p class="story__subtitle">Subhead if needed</p>
-                            <p class="story__teaser">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae lacinia dui, ac lacinia dolor. Maecenas mattis nulla ac purus mattis, sit amet facilisis dolor luctus. Donec luctus convallis arcu. Nullam adipiscing, magna
-                                porttitor pellentesque ornare, magna tortor dignissim justo, vel fermentum massa neque sit amet urna.</p>
-
-                            <a href="#" class="button button--hover-light">Read More</a>
-                        </section>
-                    </article>
+                <section class="section" aria-labelledby="section__heading-other">
+                    <h2 class="section__heading" id="section__heading-other">Other Stories</h2>	
+                    <ul class="section__list section__list-other">
+                        <li class="section__item section__item-other story story-other">
+                            <a href="#" class="story__link story__link-other">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                        </li>
+                        <li class="section__item section__item-other story story-other">
+                            <a href="#" class="story__link story__link-other">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                        </li>
+                        <li class="section__item section__item-other story story-other">
+                            <a href="#" class="story__link story__link-other">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                        </li>
+                    </ul>
                 </section>
 
-                <section class="section">
-                    <article>
-                        <h2 class="section__heading">Other Stories</h2>
-
-                        <ul class="list">
-                            <li class="list__listItem">
-                                <span class="fa-stack fa-2x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-newspaper-o fa-stack-1x"></i></span>
-                                <span class="title-list">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                            </li>
-
-                            <li class="list__listItem">
-                                <span class="fa-stack fa-2x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-newspaper-o fa-stack-1x"></i></span>
-                                <span class="title-list">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                            </li>
-
-                            <li class="list__listItem">
-                                <span class="fa-stack fa-2x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-newspaper-o fa-stack-1x"></i></span>
-                                <span class="title-list">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                            </li>
-                        </ul>
-                    </article>
-                </section>
-
-
-                <aside class="cta-archive">
-                    <h2 class="cta-archive__title">Want to read more?</h2>
-                    <p class="cta-archive__description">Check out our archive section</p>
+                <aside class="cta" aria-labelledby="cta__title">
+                    <h2 class="cta__title" id="cta__title">Want to read more?</h2>
+                    <p class="cta__description">Check out our archive section</p>
                     <a href="#" class="button button--hover-light btn-center">Read More</a>
                 </aside>
             </div>
