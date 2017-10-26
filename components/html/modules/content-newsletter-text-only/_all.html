@@ -1,8 +1,14 @@
 @@include('../navigation/_breadcrumbs.html')
 <main id="main" class="content">
 	<div class="container">
-	    <div class="row">
-	    	@@include('_main-1.html')
-	    </div>
+	   		@@if(example === 1){
+				@@include('_landing.html')
+	    	}
+	    	@@if(example === 2){
+				@@include('_content.html')
+	    	}
+	    	@@if(example === 3){
+				@@include('_archives.html')
+	    	}
 	</div>
 </main>

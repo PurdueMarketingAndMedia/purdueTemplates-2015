@@ -2,164 +2,164 @@ $white:#ffffff;
 $black:#000000;
 $light-gray:#aaaaaa;
 $dark-gray:#2e2e2e;
-$campusGold:#c28e0e;
 
 .intro {
-	background-color: $campusGold;
+	background-color: $color-campusGold;
 	padding: 1.5em;
 	
-		&__title {	
-			font-size:calc-toRem(32);
-			line-height: 1.3em;
-			color: $black;
-			text-align: center;
-			text-transform:uppercase;
-			padding: .5em 0;
-		}
+	&__title {
+		font-family:$font-archivo-narrow;
+		font-size:calc-toRem(32);
+		line-height: 1.3em;
+		color: $black;
+		text-align: center;
+		text-transform:uppercase;
+		//margin: 10px 0 5px 0;
+	}
 	
-		&__issue {
-			font-size: 1em;
-			line-height: 1em;
-			color: $black;
-			text-align: center;
-			padding: 0;
-		}
+	&__issue {
+		font-family:$font-archivo-narrow;
+		font-size: 1em;
+		line-height: 1.2em;
+		color: $black;
+		text-align: center;
+		margin-top: 5px;
+	}
 	
-		&__issue::after {
-			content:" ";
-			display: block;
-			width: 30%;
-			height: 3px;
-			margin: .3em auto !important;
-			background-color: $white;	
-		}
-	
-		&__description {
-			font-size: .9em;
-			line-height: 1.4em;
-			color: $black;
-			text-align: center;
-			padding-top: 1.5em;
-		}
+	&__issue::after {
+		content:" ";
+		display: block;
+		width: 120px;
+		height: 3px;
+		margin: 8px auto !important;
+		background-color: $white;	
 	}
 
+	&__description {
+		font-size: .9em;
+		line-height: 1.4em;
+		color: $black;
+		text-align: center;
+		padding-top: 15px;
+	}
+}
 
 .section {
 	background-color: $dark-gray;
 	padding: 1.5em;
 	
-		&__heading {
-			font-family:$font-champion-middle;
-			color: $white;
-			font-size: 1.5em;
-			line-height: 1.2em;
-			text-transform:uppercase;
-			padding-top: .5em;
-				&-light {
-					color: #000000;
-					}
+	&__heading {
+		font-family:$font-champion-middle;
+		color: $white;
+		font-size: 1.5em;
+		line-height: 1.2em;
+		text-transform:uppercase;
+		padding-top: .5em;
+			&-light {
+			color: $black;
 			}
-		
-		&__heading::after {
-			content:" ";
-			display: block;
-			width: 25%;
-			height: 3px;
-			background-color: $campusGold;
-			margin: .2em 0 0 0 !important;
-			}
-	
-
-		  &__list{
-			  &-other{
-				padding:0;
-				list-style-type:none;
-			  }
-		  }
-  
-		&__item {
-			&-other {
-				display:block;
-				overflow:hidden;
-			 	padding:20px 0 0;
-					  &:first-child {
-					  padding:0;
-					  }
-			}
-  		}
 	}
+		
+	&__heading::after {
+		content:" ";
+		display: block;
+		width: 120px;
+		height: 3px;
+		background-color: $color-campusGold;
+		margin: 8px 0 0 0 !important;
+		/*margin: .3em 0 0 0 !important;*/
+	}
+	
+	&__list{
+		&-other{
+		padding: 0px;
+		list-style-type:none;
+		}
+	}
+  
+	&__item {
+		&-other{
+		display:block;
+		overflow:hidden;
+		padding:20px 0 0;
+			&:first-child {
+			padding:0;
+			}
+		}
+	}
+}
 
 .story {
 	margin: 0;
-	padding: 0;
+	//padding: 0;
 	
-		&__title {
-			color: $campusGold;
-			font-size: 1.4em;
-			line-height: 1.3em;
-			padding: 1em 0 0 0;
-				&-light {
-					color: #000000;
-				}
-		}
-	
-		&__subtitle {
-			color: $light-gray;
-			font-size: 1em;
-			line-height: 1.5em;
-			padding-top: .5em;
-			padding-bottom: .8em;
-		}
-	
-		&__teaser {
-			color: $white;
-			font-size: .9em;
-			line-height: 1.5em;
-			padding-bottom: .5em;
-		}
-	
-		&--light {
-			background-color:$white;	
-		}
-	
-		&__link {
-			font-size: .9em;
-			line-height: 1.4em;
-				&-other {   
-					display:flex;
-					align-items:center;
-					margin-top: 20px;
-        
-				&:link,&:visited,&:hover,&:active{
-					color:$campusGold;
-					text-decoration:none;
-				}
-					
-				&::before{
-					content:"\f1ea";
-					font-family:FontAwesome;
-					display:flex;
-					flex-grow:0;
-					flex-shrink:0;
-					flex-basis:auto;
-					justify-content:center;
-					align-items:center;
-					float:left;
-					margin-right:10px;
-					padding:0;
-					height:2em;
-					width:2em;
-					border-radius:50%;
-					background-color:$black;
-					color: $light-gray;
-					font-size:2em;
-					line-height:1em;
-					/* other styles etc. */
-				}
-        	}
-    	}
+	&__title {
+		color: $color-campusGold;
+		font-size: 1.4em;
+		line-height: 1.3em;
+		padding: 1em 0 0 0;
+			&-light {
+			color: $black;
+			}
 	}
+	
+	&__subtitle {
+		color: $light-gray;
+		font-size: 1em;
+		line-height: 1.5em;
+		padding-top: .5em;
+		padding-bottom: .8em;
+	}
+	
+	&__teaser {
+		color: $white;
+		font-size: .9em;
+		line-height: 1.5em;
+		padding-bottom: .5em;
+	}
+	
+	&--light {
+		background-color:$white;	
+	}
+	
+	&__link {
+		font-size: .9em;
+		line-height: 1.4em;
+			&-other {   
+			display:flex;
+			align-items:top;
+			margin-top: 20px;
+			padding-top: calc-toRem(20);
 
+			&:link,&:visited,&:hover,&:active{
+			color:$color-campusGold;
+			text-decoration:none;
+			}
+
+			&::before{
+			content:"\f1ea";
+			font-family:FontAwesome;
+			display:flex;
+			flex-grow:0;
+			flex-shrink:0;
+			flex-basis:auto;
+			justify-content:center;
+			align-items:center;
+			float:left;
+			margin-right:calc-toRem(20);
+			margin-top: calc-toRem(-15);
+			padding:0;
+			height:2em;
+			width:2em;
+			border-radius:50%;
+			background-color:$black;
+			color: $light-gray;
+			font-size:2em;
+			line-height:1em;
+			}
+		}
+	}
+}
 
 .button {
 	margin-top: 1em !important;
@@ -167,29 +167,62 @@ $campusGold:#c28e0e;
 
 .cta {
 	width: 100%;
-	padding: 1em;
+	padding-top: 20px;
+	padding-bottom: 30px;
 	background: repeating-linear-gradient(60deg,#707070,#707070 6px,#777777 6px,#777777 8px);
 	
-		&__title {
-			color: $white;
-			font-size: 1.5em;
-			line-height: 1.5em;
-			text-align: center;
-			padding: 0;
-		}
+	&__title {
+		color: $white;
+		font-size: 1.5em;
+		line-height: 1.5em;
+		text-align: center;
+		padding: 0;
+	}
 
+	&__description {
+		color: $white;
+		font-size: 1em;
+		line-height: 1em;
+		text-align: center;
+		padding-top: 0;
+		padding-bottom: 30px;
+	}
+}
+
+.btn-center {
+	display: block;
+	margin: auto !important;
+	margin-bottom: 30px;
+	width: 250px;
+}
+
+// styles up here apply at all screen sizes unless overridden below
+// correlates to bootrap's size - xs
+
+// styles in this block apply if the screen size is 768px or larger
+// correlates to bootrap's size - sm
+@media (min-width: 768px) {
+	.intro {
 		&__description {
-			color: $white;
-			font-size: 1em;
-			line-height: 1em;
-			text-align: center;
-			padding-top: 0;
-			padding-bottom: 1.5em;
-		}
-
-		.btn-center {
-			margin: auto !important;
-			display: block;
-			width: 250px;
+			margin: 0 auto !important;
+			width: 75%;
 		}
 	}
+	
+	 .bgfix {
+		background-color: $dark-gray;
+	}	
+}
+	
+
+// styles in this block apply if the screen size is 992px or larger
+// correlates to bootrap's size - md
+@media (min-width: 992px) {
+
+}
+
+// styles in this block apply if the screen size is 1200px or larger
+// correlates to bootrap's size - lg
+@media (min-width: 1200px) {
+
+}
