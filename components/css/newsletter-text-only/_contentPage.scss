@@ -9,21 +9,21 @@ $dark-gray:#2e2e2e;
 	
 	&__title {
 		font-family:$font-archivo-narrow;
-		font-size:calc-toRem(32);
+		font-size:calc-toRem(36);
 		line-height: 1.3em;
 		color: $black;
 		text-align: center;
 		text-transform:uppercase;
-		//margin: 10px 0 5px 0;
+		padding: 10px 0 5px 0;
 	}
 	
 	&__issue {
 		font-family:$font-archivo-narrow;
-		font-size: 1em;
+		font-size:calc-toRem(20);
 		line-height: 1.2em;
 		color: $black;
 		text-align: center;
-		margin-top: 5px;
+		padding-top: 5px;
 	}
 	
 	&__issue::after {
@@ -36,11 +36,12 @@ $dark-gray:#2e2e2e;
 	}
 
 	&__description {
-		font-size: .9em;
-		line-height: 1.4em;
+		font-size:calc-toRem(16);
+		line-height: 1.5em;
 		color: $black;
 		text-align: center;
-		padding-top: 15px;
+		padding-top: 10px;
+		padding-bottom: 5px;
 	}
 }
 
@@ -51,7 +52,7 @@ $dark-gray:#2e2e2e;
 	&__heading {
 		font-family:$font-champion-middle;
 		color: $white;
-		font-size: 1.5em;
+		font-size:calc-toRem(28);
 		line-height: 1.2em;
 		text-transform:uppercase;
 		padding-top: .5em;
@@ -67,12 +68,12 @@ $dark-gray:#2e2e2e;
 		height: 3px;
 		background-color: $color-campusGold;
 		margin: 8px 0 0 0 !important;
-		/*margin: .3em 0 0 0 !important;*/
 	}
 	
 	&__list{
 		&-other{
 		padding: 0px;
+		margin-top: 30px;
 		list-style-type:none;
 		}
 	}
@@ -81,22 +82,36 @@ $dark-gray:#2e2e2e;
 		&-other{
 		display:block;
 		overflow:hidden;
-		padding:20px 0 0;
+		padding:0;
 			&:first-child {
 			padding:0;
 			}
+		}
+	}
+	
+	&__list{
+		&-archives{
+		padding: 0px;
+		margin-right: 0;
+		list-style-type:none;
+		}
+	}
+  
+	&__item {
+		&-archives{
+		display:block;
+		overflow:hidden;
+		padding:0;
 		}
 	}
 }
 
 .story {
 	margin: 0;
-	//padding: 0;
 	
 	&__title {
 		color: $color-campusGold;
-		font-size: 1.4em;
-		line-height: 1.3em;
+		font-size:calc-toRem(28);
 		padding: 1em 0 0 0;
 			&-light {
 			color: $black;
@@ -105,15 +120,17 @@ $dark-gray:#2e2e2e;
 	
 	&__subtitle {
 		color: $light-gray;
-		font-size: 1em;
-		line-height: 1.5em;
+		font-size:calc-toRem(18);
+		//font-size: 1em;
+		line-height: 1em;
 		padding-top: .5em;
-		padding-bottom: .8em;
+		padding-bottom: .5em;
 	}
 	
 	&__teaser {
 		color: $white;
-		font-size: .9em;
+		font-size:calc-toRem(16);
+		//font-size: .9em;
 		line-height: 1.5em;
 		padding-bottom: .5em;
 	}
@@ -123,13 +140,13 @@ $dark-gray:#2e2e2e;
 	}
 	
 	&__link {
-		font-size: .9em;
-		line-height: 1.4em;
+		font-size:calc-toRem(18);
+		line-height: 1.5em;
 			&-other {   
 			display:flex;
 			align-items:top;
-			margin-top: 20px;
-			padding-top: calc-toRem(20);
+			margin-top: 10px;
+			padding-bottom: calc-toRem(15);
 
 			&:link,&:visited,&:hover,&:active{
 			color:$color-campusGold;
@@ -147,7 +164,7 @@ $dark-gray:#2e2e2e;
 			align-items:center;
 			float:left;
 			margin-right:calc-toRem(20);
-			margin-top: calc-toRem(-15);
+			margin-top: calc-toRem(-10);
 			padding:0;
 			height:2em;
 			width:2em;
@@ -161,40 +178,75 @@ $dark-gray:#2e2e2e;
 	}
 }
 
+.list-item {
+	margin: 0;
+	padding: 0;
+	
+	&__issue {
+		font-family:$font-arial;
+		color: $light-gray;
+		font-size:calc-toRem(18);
+		line-height: 22px;
+	}
+	
+	&__link {
+		font-family:$font-archivo-narrow;
+		font-size:calc-toRem(24);
+		line-height: 30px;
+			&-archives {   
+			display:flex;
+			align-items:top;
+
+			&:link,&:visited,&:hover,&:active{
+			color:$color-campusGold;
+			text-decoration:none;
+			}
+		}
+	}
+}
+
 .button {
 	margin-top: 1em !important;
 }
 
 .cta {
 	width: 100%;
-	padding-top: 20px;
-	padding-bottom: 30px;
+	padding-top: 30px;
+	//padding-bottom: 30px;
 	background: repeating-linear-gradient(60deg,#707070,#707070 6px,#777777 6px,#777777 8px);
 	
 	&__title {
 		color: $white;
-		font-size: 1.5em;
+		font-size:calc-toRem(32);
 		line-height: 1.5em;
 		text-align: center;
+		margin: 0;
 		padding: 0;
 	}
 
 	&__description {
 		color: $white;
-		font-size: 1em;
+		font-size:calc-toRem(20);
 		line-height: 1em;
 		text-align: center;
 		padding-top: 0;
-		padding-bottom: 30px;
+		padding-bottom: 15px;
 	}
 }
 
-.btn-center {
+.block-center {
 	display: block;
-	margin: auto !important;
-	margin-bottom: 30px;
 	width: 250px;
+	margin-left: auto;
+  	margin-right: auto;
+	
 }
+
+.nopadding {
+		padding-left: 0;
+		padding-right: 0;
+}
+
 
 // styles up here apply at all screen sizes unless overridden below
 // correlates to bootrap's size - xs
@@ -203,21 +255,125 @@ $dark-gray:#2e2e2e;
 // correlates to bootrap's size - sm
 @media (min-width: 768px) {
 	.intro {
+		padding:1.5em;
+		margin-top: 0px;
 		&__description {
+			font-size:calc-toRem(18);
 			margin: 0 auto !important;
 			width: 75%;
 		}
+		
+		&__title {
+			padding: 0;
+			font-size:calc-toRem(26);
+			
+			&-left {
+				float: left;
+			}
+			
+			&-landingpg {
+				font-size:calc-toRem(36);
+				padding-top: 10px;
+			}
+			
+			&-underline::after {
+				content:" ";
+				display: block;
+				width: 120px;
+				height: 3px;
+				margin-top: 8px;
+				background-color: $white;
+			}
+		}
+		
+		&__issue{
+			&-landingpg{
+				font-size:calc-toRem(22);
+				line-height: 37px;
+				padding-top: 5px;
+			}
+			
+			&-right {
+				float: right;
+				font-size:calc-toRem(26);
+				padding-right: 20px;
+			}
+			
+			&-underline::after {
+				content:" ";
+				display: none;
+			}
+		}
 	}
 	
-	 .bgfix {
-		background-color: $dark-gray;
-	}	
-}
+	.cta {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		&-margin {
+			margin-top: 20px;
+			margin-bottom: 50px;
+		}
+		
+		&__title {
+			font-family:$font-archivo-black;
+			font-size:calc-toRem(28);
+			line-height: 20px;
+			padding-bottom: .5em;
+			&-font{
+				font-family:$font-archivo-narrow;
+				padding-bottom: .7em;
+			}
+			/*&-margin{
+				margin-right: 30px;
+				margin-top: 20px;
+				margin-bottom: 50px;
+			}*/
+		}
+		
+		&__description {
+		color: $white;
+		font-size:calc-toRem(18);
+		line-height: .5em;
+		}
+	}
 	
+	.section {
+		&__heading {
+			&-margintp{
+				margin-top: 20px;
+			}
+		}
+		
+		&__list{
+			&-archives{
+			padding: 0px;
+			margin-right: 20px;
+			list-style-type:none;
+			}
+		}
+	}
+	
+	
+	
+	.bgfix {
+		background-color: $dark-gray;
+	}
+}
 
 // styles in this block apply if the screen size is 992px or larger
 // correlates to bootrap's size - md
 @media (min-width: 992px) {
+	.cta {
+		&-margin {
+			margin-right: 20px;
+		}
+	}
+	
+	.story {
+		&__teaser {
+		padding-right: 50px;
+		}
+	}
 
 }
 
@@ -225,4 +381,4 @@ $dark-gray:#2e2e2e;
 // correlates to bootrap's size - lg
 @media (min-width: 1200px) {
 
-}
+	}
