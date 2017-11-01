@@ -1,6 +1,7 @@
 $white:#ffffff;
 $black:#000000;
 $light-gray:#aaaaaa;
+$medium-gray:#707070;
 $dark-gray:#2e2e2e;
 
 .intro {
@@ -47,7 +48,7 @@ $dark-gray:#2e2e2e;
 
 .section {
 	background-color: $dark-gray;
-	padding: 1.5em;
+	padding: 2em 2.5em 0 2.5em;
 	
 	&__heading {
 		font-family:$font-champion-middle;
@@ -55,12 +56,21 @@ $dark-gray:#2e2e2e;
 		font-size:calc-toRem(28);
 		line-height: 1.2em;
 		text-transform:uppercase;
-		padding-top: .5em;
+		margin-bottom: 0;
+		padding-bottom: 0;
+			&-marginTopLg {
+			margin-top: 20px;
+		}
+		
+			&-marginTopSM {
+			margin-top: 0;
+		}
+		
 			&-light {
 			color: $black;
-			}
+		}
 	}
-		
+	
 	&__heading::after {
 		content:" ";
 		display: block;
@@ -70,74 +80,82 @@ $dark-gray:#2e2e2e;
 		margin: 8px 0 0 0 !important;
 	}
 	
-	&__list{
-		&-other{
-		padding: 0px;
+	&__list {
+		&-other {
+		padding: 0;
 		margin-top: 30px;
+		margin-right: 0;
 		list-style-type:none;
+		}
+		
+		&-paddingBottomLG {
+			padding-bottom: 30px;	
 		}
 	}
   
 	&__item {
-		&-other{
+		&-other {
 		display:block;
 		overflow:hidden;
-		padding:0;
 			&:first-child {
-			padding:0;
+				padding:0;
+				margin: 0;
 			}
 		}
 	}
 	
-	&__list{
-		&-archives{
-		padding: 0px;
-		margin-right: 0;
+	&__list {
+		&-archives {
+		padding: 0;
 		list-style-type:none;
 		}
 	}
   
 	&__item {
-		&-archives{
+		&-archives {
 		display:block;
 		overflow:hidden;
-		padding:0;
+		padding: 0;
 		}
 	}
 }
 
 .story {
 	margin: 0;
+	padding: 0;
 	
 	&__title {
 		color: $color-campusGold;
 		font-size:calc-toRem(28);
-		padding: 1em 0 0 0;
+		line-height: 1.2em;
+		//padding: 1em 0 0 0;
 			&-light {
-			color: $black;
+				color: $color-campusGold;
 			}
 	}
 	
 	&__subtitle {
 		color: $light-gray;
-		font-size:calc-toRem(18);
-		//font-size: 1em;
+		font-size:calc-toRem(22);
+		font-family:$font-archivo-narrow;
 		line-height: 1em;
 		padding-top: .5em;
 		padding-bottom: .5em;
+			&-light {
+				color: $medium-gray;
+			}
 	}
 	
 	&__teaser {
 		color: $white;
 		font-size:calc-toRem(16);
-		//font-size: .9em;
 		line-height: 1.5em;
-		padding-bottom: .5em;
+		//padding-bottom: 15px;
+			&-light {
+				color: $black;
+		}
 	}
 	
-	&--light {
-		background-color:$white;	
-	}
 	
 	&__link {
 		font-size:calc-toRem(18);
@@ -151,6 +169,10 @@ $dark-gray:#2e2e2e;
 			&:link,&:visited,&:hover,&:active{
 			color:$color-campusGold;
 			text-decoration:none;
+			}
+				
+			&-light {
+				color: $medium-gray;
 			}
 
 			&::before{
@@ -173,29 +195,54 @@ $dark-gray:#2e2e2e;
 			color: $light-gray;
 			font-size:2em;
 			line-height:1em;
+				&-light {
+					background-color: $black;
+					color: $color-campusGold;
+				}
 			}
 		}
 	}
+	
+	&--light {
+		background-color:$white;	
+	}
+	
 }
 
-.list-item {
+.listItem {
 	margin: 0;
 	padding: 0;
 	
+	&__title {
+		font-family:$font-archivo-narrow;
+		font-size:calc-toRem(26);
+		line-height: 30px;
+		color: $color-campusGold;
+		margin-top: 0;
+		margin-bottom: 5px;
+		padding-right: 5px;
+			&-light {
+				color: $medium-gray;
+		}
+	}
+	
 	&__issue {
-		font-family:$font-arial;
+		font-family:$font-archivo-narrow;
 		color: $light-gray;
-		font-size:calc-toRem(18);
-		line-height: 22px;
+		font-size:calc-toRem(22);
+		line-height: 32px;
+		margin-top: 0;
+		padding-top: 0;
+			&-light {
+				color: $medium-gray;
+		}
 	}
 	
 	&__link {
-		font-family:$font-archivo-narrow;
-		font-size:calc-toRem(24);
-		line-height: 30px;
-			&-archives {   
+		&-archives {   
 			display:flex;
 			align-items:top;
+			margin-bottom: 0;
 
 			&:link,&:visited,&:hover,&:active{
 			color:$color-campusGold;
@@ -212,25 +259,36 @@ $dark-gray:#2e2e2e;
 .cta {
 	width: 100%;
 	padding-top: 30px;
-	//padding-bottom: 30px;
+	padding-bottom: 30px;
 	background: repeating-linear-gradient(60deg,#707070,#707070 6px,#777777 6px,#777777 8px);
+	
+	
+		&-light {
+			background: repeating-linear-gradient(60deg,#aaaaaa,#aaaaaa 6px,#aeaeae 6px,#aeaeae 8px);
+		}
 	
 	&__title {
 		color: $white;
 		font-size:calc-toRem(32);
-		line-height: 1.5em;
+		line-height: 20px;
 		text-align: center;
 		margin: 0;
-		padding: 0;
+		padding: 10px 0;
+			&-light {
+				color: $black;
+		}
 	}
 
 	&__description {
 		color: $white;
 		font-size:calc-toRem(20);
-		line-height: 1em;
+		line-height: 27px;
 		text-align: center;
 		padding-top: 0;
 		padding-bottom: 15px;
+			&-light {
+				color: $black;
+		}
 	}
 }
 
@@ -243,8 +301,8 @@ $dark-gray:#2e2e2e;
 }
 
 .nopadding {
-		padding-left: 0;
-		padding-right: 0;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 
@@ -254,109 +312,118 @@ $dark-gray:#2e2e2e;
 // styles in this block apply if the screen size is 768px or larger
 // correlates to bootrap's size - sm
 @media (min-width: 768px) {
-	.intro {
-		padding:1.5em;
-		margin-top: 0px;
-		&__description {
-			font-size:calc-toRem(18);
-			margin: 0 auto !important;
-			width: 75%;
+.intro {
+	padding:1.5em;
+	margin-top: 0px;
+		
+	&__description {
+		font-size:calc-toRem(18);
+		margin: 0 auto !important;
+		width: 75%;
+	}
+		
+	&__title {
+		&-left {
+			float: left;
+		}
+			
+		&-fontSizeLG {
+			font-size:calc-toRem(36);
+			padding-top: 10px;
 		}
 		
-		&__title {
-			padding: 0;
+		&-fontSizeMD {
 			font-size:calc-toRem(26);
+			padding: 0;
+		}
 			
-			&-left {
-				float: left;
-			}
-			
-			&-landingpg {
-				font-size:calc-toRem(36);
-				padding-top: 10px;
-			}
-			
-			&-underline::after {
-				content:" ";
-				display: block;
-				width: 120px;
-				height: 3px;
-				margin-top: 8px;
-				background-color: $white;
-			}
+		&-underline::after {
+			content:" ";
+			display: block;
+			width: 120px;
+			height: 3px;
+			margin-top: 8px;
+			background-color: $white;
+		}
+	}
+		
+	&__issue {
+		&-fontSizeLG {
+			font-size:calc-toRem(22);
+			line-height: 37px;
 		}
 		
-		&__issue{
-			&-landingpg{
-				font-size:calc-toRem(22);
-				line-height: 37px;
-				padding-top: 5px;
-			}
+		&-paddingTopMD {
+			padding-top: 5px;
+		}
 			
-			&-right {
-				float: right;
-				font-size:calc-toRem(26);
-				padding-right: 20px;
-			}
+		&-right {
+			float: right;
+			font-size:calc-toRem(26);
+			padding-right: 20px;
+		}
 			
-			&-underline::after {
-				content:" ";
-				display: none;
-			}
+		&-underline::after {
+			content:" ";
+			display: none;
+		}
+	}
+}
+	
+.section {
+	&-marginBottomLG {
+		margin-bottom: 30px;
+	}
+	
+	&-paddingBottomLG {
+		padding-bottom: 40px;
+	}
+	
+	&__heading {
+		&-marginTopLg {
+			margin-top: 20px;
 		}
 	}
 	
-	.cta {
-		padding-top: 30px;
-		padding-bottom: 30px;
-		&-margin {
-			margin-top: 20px;
-			margin-bottom: 50px;
+	&__list {
+		&-archives {
+			padding: 0px;
+			list-style-type:none;
 		}
+	}
 		
-		&__title {
-			font-family:$font-archivo-black;
-			font-size:calc-toRem(28);
-			line-height: 20px;
-			padding-bottom: .5em;
-			&-font{
+	&__item {
+		&-archives {
+			display:block;
+			overflow:hidden;
+			padding-right: 20px;
+		}
+	}
+}
+	
+.cta {
+	&__title {
+		font-family:$font-archivo-black;
+		font-size:calc-toRem(30);
+		line-height: 20px;
+		padding-top: .7em;
+		padding-bottom: .7em;
+			&-archivoNarrow{
 				font-family:$font-archivo-narrow;
+				padding-top: 0px;
 				padding-bottom: .7em;
-			}
-			/*&-margin{
-				margin-right: 30px;
-				margin-top: 20px;
-				margin-bottom: 50px;
-			}*/
 		}
+	}
 		
-		&__description {
+	&__description {
 		color: $white;
-		font-size:calc-toRem(18);
+		font-size:calc-toRem(20);
 		line-height: .5em;
 		}
 	}
 	
-	.section {
-		&__heading {
-			&-margintp{
-				margin-top: 20px;
-			}
-		}
-		
-		&__list{
-			&-archives{
-			padding: 0px;
-			margin-right: 20px;
-			list-style-type:none;
-			}
-		}
-	}
-	
-	
-	
-	.bgfix {
-		background-color: $dark-gray;
+.bgfix {
+	background-color: $dark-gray;
 	}
 }
 
@@ -364,21 +431,40 @@ $dark-gray:#2e2e2e;
 // correlates to bootrap's size - md
 @media (min-width: 992px) {
 	.cta {
-		&-margin {
-			margin-right: 20px;
+		&-width90 {
+			width: 90%;
+			margin-left: 5%;
+			margin-right: 5%;
+			margin-bottom: 15%;
+			padding-bottom: 8%;
 		}
 	}
 	
 	.story {
+		&__title {
+			padding-right: 50px;	
+		}
+		
 		&__teaser {
-		padding-right: 50px;
+			padding-right:50px;
+		}
+		
+		&__link {
+			font-size: 17px;
+			line-height: 1.5em;
 		}
 	}
-
+	
+	.listItem {
+		&__title {
+		font-size:calc-toRem(22);
+		line-height: 1.3em;
+		}
+		
+	}
 }
 
 // styles in this block apply if the screen size is 1200px or larger
 // correlates to bootrap's size - lg
 @media (min-width: 1200px) {
-
-	}
+}
