@@ -2,12 +2,12 @@
 /// @author Blake Holaday
 /// @param {String} $color1 - HEX color value (#000000)
 /// @param {String} $color2 - HEX color value (#000000)
-/// @param {String} $replace - Optional stripe style. Accepts: thin, normal (default), thick
-@mixin striped-bg($color1, $color2, $style:normal) {
+/// @param {String} $replace - Optional stripe style. Accepts: thin, medium (default), thick
+@mixin striped-bg($color1, $color2, $style:medium) {
   // initialize defaults
   $degrees:60deg;
-  $line1end:6px; // for $style:normal
-  $line2end:8px; // for $style:normal
+  $line1thickness:3px; // for $style:medium
+  $line2thickness:4px; // for $style:medium
 
   // clean user input
   $style:unquote($style); // remove any quotes passed along
@@ -15,13 +15,19 @@
 
   // only overwrite defaults for recognized style names
   @if $style == thin {
-    $line1end:2px;
-    $line2end:4px;
+    $line1thickness:1px;
+    $line2thickness:4px;
   } @else if $style == thick {
-    $line1end:6px;
-    $line2end:12px;
+    $line1thickness:6px;
+    $line2thickness:6px;
   }
 
   // output rule-set
-  background: repeating-linear-gradient($degrees, $color1, $color1 $line1end, $color2 $line1end, $color2 $line2end);
+  background: repeating-linear-gradient(
+    $degrees,
+    $color1, // 0
+    $color1 $line1thickness,
+    $color2 $line1thickness+1, // increase to get rid of jagged line
+    $color2 $line1thickness+1+$line2thickness+1, // increase to get rid of jagged line
+    $color1 $line1thickness+1+$line2thickness+2); // increase to get rid of jagged line
 }
