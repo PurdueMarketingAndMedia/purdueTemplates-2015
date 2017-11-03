@@ -4800,6 +4800,11 @@ form.purdueForm .robotic {
     padding: 1.5em;
     margin-top: 0;
   }
+  .intro-flexContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .intro__description {
     font-size: 1.125rem;
     margin: 0 auto !important;

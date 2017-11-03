@@ -7,6 +7,7 @@ $dark-gray: #2e2e2e;
 .intro {
 	background-color: $color-campusGold;
 	padding: 1.5em;
+		
 
 	&__title {
 		font-family: $font-archivo-narrow;
@@ -322,6 +323,12 @@ $dark-gray: #2e2e2e;
 	.intro {
 		padding: 1.5em;
 		margin-top: 0;
+		
+			&-flexContainer {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
 
 		&__description {
 			font-size: calc-toRem(18);
