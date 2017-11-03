@@ -4511,7 +4511,7 @@ form.purdueForm .robotic {
   color: #000000;
   text-align: center;
   text-transform: uppercase;
-  padding: 10px 0 5px 0;
+  padding: 10px 0 5px;
 }
 
 .intro__issue {
@@ -4543,7 +4543,7 @@ form.purdueForm .robotic {
 
 .section {
   background-color: #2e2e2e;
-  padding: 2em 2.5em 0 2.5em;
+  padding: 2em 2.5em 0;
 }
 
 .section__heading {
@@ -4560,11 +4560,11 @@ form.purdueForm .robotic {
   margin-top: 20px;
 }
 
-.section__heading-marginTopSM {
+.section__heading-marginTopSm {
   margin-top: 0;
 }
 
-.section__heading-light {
+.section__heading-lightTheme {
   color: #000000;
 }
 
@@ -4584,7 +4584,7 @@ form.purdueForm .robotic {
   list-style-type: none;
 }
 
-.section__list-paddingBottomLG {
+.section__list-paddingBottomLg {
   padding-bottom: 30px;
 }
 
@@ -4620,7 +4620,7 @@ form.purdueForm .robotic {
   line-height: 1.2em;
 }
 
-.story__title-light {
+.story__title-lightTheme {
   color: #c28e0e;
 }
 
@@ -4629,11 +4629,11 @@ form.purdueForm .robotic {
   font-size: 1.375rem;
   font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
   line-height: 1em;
-  padding-top: .5em;
-  padding-bottom: .5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
-.story__subtitle-light {
+.story__subtitle-lightTheme {
   color: #707070;
 }
 
@@ -4643,7 +4643,7 @@ form.purdueForm .robotic {
   line-height: 1.5em;
 }
 
-.story__teaser-light {
+.story__teaser-lightTheme {
   color: #000000;
 }
 
@@ -4659,12 +4659,12 @@ form.purdueForm .robotic {
   padding-bottom: 0.9375rem;
 }
 
-.story__link-other:link, .story__link-other:visited, .story__link-other:hover, .story__link-other:active {
+.story__link-other:active, .story__link-other:hover, .story__link-other:link, .story__link-other:visited {
   color: #c28e0e;
   text-decoration: none;
 }
 
-.story__link-other-light {
+.story__link-other-lightTheme {
   color: #707070;
 }
 
@@ -4690,12 +4690,12 @@ form.purdueForm .robotic {
   line-height: 1em;
 }
 
-.story__link-other::before-light {
+.story__link-other::before-lightTheme {
   background-color: #000000;
   color: #c28e0e;
 }
 
-.story--light {
+.story-lightTheme {
   background-color: #ffffff;
 }
 
@@ -4714,7 +4714,7 @@ form.purdueForm .robotic {
   padding-right: 5px;
 }
 
-.listItem__title-light {
+.listItem__title-lightTheme {
   color: #707070;
 }
 
@@ -4727,7 +4727,7 @@ form.purdueForm .robotic {
   padding-top: 0;
 }
 
-.listItem__issue-light {
+.listItem__issue-lightTheme {
   color: #707070;
 }
 
@@ -4737,7 +4737,7 @@ form.purdueForm .robotic {
   margin-bottom: 0;
 }
 
-.listItem__link-archives:link, .listItem__link-archives:visited, .listItem__link-archives:hover, .listItem__link-archives:active {
+.listItem__link-archives:active, .listItem__link-archives:hover, .listItem__link-archives:link, .listItem__link-archives:visited {
   color: #c28e0e;
   text-decoration: none;
 }
@@ -4753,7 +4753,7 @@ form.purdueForm .robotic {
   background: repeating-linear-gradient(60deg, #707070, #707070 6px, #777777 6px, #777777 8px);
 }
 
-.cta-light {
+.cta-lightTheme {
   background: repeating-linear-gradient(60deg, #aaaaaa, #aaaaaa 6px, #aeaeae 6px, #aeaeae 8px);
 }
 
@@ -4766,7 +4766,7 @@ form.purdueForm .robotic {
   padding: 10px 0;
 }
 
-.cta__title-light {
+.cta__title-lightTheme {
   color: #000000;
 }
 
@@ -4779,7 +4779,7 @@ form.purdueForm .robotic {
   padding-bottom: 15px;
 }
 
-.cta__description-light {
+.cta__description-lightTheme {
   color: #000000;
 }
 
@@ -4798,7 +4798,7 @@ form.purdueForm .robotic {
 @media (min-width: 768px) {
   .intro {
     padding: 1.5em;
-    margin-top: 0px;
+    margin-top: 0;
   }
   .intro__description {
     font-size: 1.125rem;
@@ -4808,11 +4808,11 @@ form.purdueForm .robotic {
   .intro__title-left {
     float: left;
   }
-  .intro__title-fontSizeLG {
+  .intro__title-fontSizeLg {
     font-size: 2.25rem;
     padding-top: 10px;
   }
-  .intro__title-fontSizeMD {
+  .intro__title-fontSizeMd {
     font-size: 1.625rem;
     padding: 0;
   }
@@ -4824,11 +4824,11 @@ form.purdueForm .robotic {
     margin-top: 8px;
     background-color: #ffffff;
   }
-  .intro__issue-fontSizeLG {
+  .intro__issue-fontSizeLg {
     font-size: 1.375rem;
     line-height: 37px;
   }
-  .intro__issue-paddingTopMD {
+  .intro__issue-paddingTopMd {
     padding-top: 5px;
   }
   .intro__issue-right {
@@ -4840,17 +4840,17 @@ form.purdueForm .robotic {
     content: " ";
     display: none;
   }
-  .section-marginBottomLG {
+  .section-marginBottomLg {
     margin-bottom: 30px;
   }
-  .section-paddingBottomLG {
+  .section-paddingBottomLg {
     padding-bottom: 40px;
   }
   .section__heading-marginTopLg {
     margin-top: 20px;
   }
   .section__list-archives {
-    padding: 0px;
+    padding: 0;
     list-style-type: none;
   }
   .section__item-archives {
@@ -4862,18 +4862,18 @@ form.purdueForm .robotic {
     font-family: "archivo_blackregular", "Arial Black", "Arial Bold", Gadget, sans-serif;
     font-size: 1.875rem;
     line-height: 20px;
-    padding-top: .7em;
-    padding-bottom: .7em;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
   }
   .cta__title-archivoNarrow {
     font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
-    padding-top: 0px;
-    padding-bottom: .7em;
+    padding-top: 0;
+    padding-bottom: 0.7em;
   }
   .cta__description {
     color: #ffffff;
     font-size: 1.25rem;
-    line-height: .5em;
+    line-height: 0.5em;
   }
   .bgfix {
     background-color: #2e2e2e;
