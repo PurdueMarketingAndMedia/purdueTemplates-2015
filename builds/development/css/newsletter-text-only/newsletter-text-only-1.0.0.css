@@ -4543,7 +4543,11 @@ form.purdueForm .robotic {
 
 .section {
   background-color: #2e2e2e;
-  padding: 2em 2.5em 0;
+  padding: 2.5em;
+}
+
+.section-topNopadding {
+  padding-top: 0;
 }
 
 .section__heading {
@@ -4552,16 +4556,18 @@ form.purdueForm .robotic {
   font-size: 1.75rem;
   line-height: 1.2em;
   text-transform: uppercase;
+  margin-top: 0;
   margin-bottom: 0;
+  padding-top: 0;
   padding-bottom: 0;
-}
-
-.section__heading-marginTopLg {
-  margin-top: 20px;
 }
 
 .section__heading-marginTopSm {
   margin-top: 0;
+}
+
+.section__heading-topNopadding {
+  padding-top: 0;
 }
 
 .section__heading-lightTheme {
@@ -4618,6 +4624,14 @@ form.purdueForm .robotic {
   color: #c28e0e;
   font-size: 1.75rem;
   line-height: 1.2em;
+}
+
+.story__title-featured {
+  padding-top: 1em;
+}
+
+.story__title-paddingTopLg {
+  padding-top: 2em;
 }
 
 .story__title-lightTheme {
@@ -4846,13 +4860,10 @@ form.purdueForm .robotic {
     display: none;
   }
   .section-marginBottomLg {
-    margin-bottom: 30px;
-  }
-  .section-paddingBottomLg {
-    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
   .section__heading-marginTopLg {
-    margin-top: 20px;
+    margin-top: 60px;
   }
   .section__list-archives {
     padding: 0;

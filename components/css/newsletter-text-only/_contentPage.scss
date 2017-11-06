@@ -49,7 +49,10 @@ $dark-gray: #2e2e2e;
 
 .section {
 	background-color: $dark-gray;
-	padding: 2em 2.5em 0;
+	padding: 2.5em;
+		&-topNopadding {
+			padding-top: 0;
+		}
 
 	&__heading {
 		font-family: $font-champion-middle;
@@ -57,15 +60,17 @@ $dark-gray: #2e2e2e;
 		font-size: calc-toRem(28);
 		line-height: 1.2em;
 		text-transform: uppercase;
+		margin-top: 0;
 		margin-bottom: 0;
+		padding-top: 0;
 		padding-bottom: 0;
-
-		&-marginTopLg {
-			margin-top: 20px;
-		}
 
 		&-marginTopSm {
 			margin-top: 0;
+		}
+		
+		&-topNopadding {
+			padding-top: 0;
 		}
 
 		&-lightTheme {
@@ -131,6 +136,14 @@ $dark-gray: #2e2e2e;
 		color: $color-campusGold;
 		font-size: calc-toRem(28);
 		line-height: 1.2em;
+		
+		&-featured {
+			padding-top: 1em;
+		}
+		
+		&-paddingTopLg {
+			padding-top: 2em;
+		}
 
 		&-lightTheme {
 			color: $color-campusGold;
@@ -386,16 +399,12 @@ $dark-gray: #2e2e2e;
 
 	.section {
 		&-marginBottomLg {
-			margin-bottom: 30px;
-		}
-
-		&-paddingBottomLg {
-			padding-bottom: 40px;
+			margin-bottom: 40px;
 		}
 
 		&__heading {
 			&-marginTopLg {
-				margin-top: 20px;
+				margin-top: 60px;
 			}
 		}
 
