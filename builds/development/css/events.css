@@ -2725,12 +2725,12 @@ html {
 }
 
 body {
-  font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-family: "Arial", "Helvetica Neue", "Helvetica", sans-serif;
 }
 
 @media (min-width: 768px) {
   body {
-    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-family: "Arial", "Helvetica Neue", "Helvetica", sans-serif;
     font-size: 1em;
     line-height: 1.5em;
   }
@@ -2746,7 +2746,7 @@ body {
 h1 {
   padding-top: 0;
   padding-bottom: 0.25em;
-  font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   font-weight: bold;
   color: #98700d;
   font-size: 2.25em;
@@ -2756,7 +2756,7 @@ h1 {
 h2 {
   padding-top: 1em;
   padding-bottom: 0.15em;
-  font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   color: #98700d;
   font-size: 2em;
   line-height: 1.2em;
@@ -2764,7 +2764,7 @@ h2 {
 
 h3 {
   padding-top: 1em;
-  font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   color: #98700d;
   font-size: 1.75em;
   line-height: 1.2em;
@@ -2772,7 +2772,7 @@ h3 {
 
 h4 {
   padding-top: 1em;
-  font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   font-weight: bold;
   font-size: 1.5em;
   line-height: 1.2em;
@@ -2780,7 +2780,7 @@ h4 {
 
 h5 {
   padding-top: 1.5em;
-  font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   font-weight: bold;
   font-size: 1.25em;
   line-height: 1.2em;
@@ -2789,7 +2789,7 @@ h5 {
 
 h6 {
   padding-top: 2em;
-  font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   font-weight: bold;
   font-size: 1em;
   line-height: 1.2em;
@@ -3276,7 +3276,7 @@ u {
 
 .top .department {
   color: #fff;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Arial", "Helvetica Neue", "Helvetica", sans-serif;
   letter-spacing: 1px;
 }
 
@@ -3819,7 +3819,7 @@ u {
     padding: 15px 10px;
     border: solid 3px #e3e3e3;
     text-align: center;
-    font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
     font-weight: bold;
     white-space: normal;
   }
@@ -3889,7 +3889,7 @@ u {
   .eventsContent .eventsContainer .monthFiltersContainer.open ul.monthFilters {
     position: static;
     display: block;
-    font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
     font-weight: bold;
   }
   .eventsContent .eventsContainer .monthFiltersContainer.open ul.monthFilters li {
@@ -3953,7 +3953,7 @@ u {
   width: 10%;
   margin: 0;
   color: #444;
-  font-family: "Arial Narrow",Arial,sans-serif;
+  font-family: "Arial Narrow", "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   font-size: 1em;
   line-height: 1em;
   text-transform: uppercase;
@@ -3965,7 +3965,7 @@ u {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   font-weight: bold;
 }
 
@@ -4145,7 +4145,7 @@ u {
 .eventsContent .eventsContainer .events .event {
   overflow: hidden;
   margin: 0 0 30px 0;
-  font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   font-size: 1.125em;
 }
 
@@ -4197,7 +4197,7 @@ u {
   clear: left;
   width: 100%;
   padding-top: 15px;
-  font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   font-weight: bold;
   font-size: 0.88889em;
   text-transform: uppercase;
@@ -4289,7 +4289,7 @@ u {
   display: block;
   float: left;
   padding-bottom: 15px;
-  font-family: 'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -4706,7 +4706,7 @@ u {
     line-height: 1em;
   }
   .footer #accordion .panel .panel-heading .panel-title {
-    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif !important;
+    font-family: "Arial", "Helvetica Neue", "Helvetica", sans-serif !important;
     padding-top: 0;
     font-size: 1em;
     font-weight: 300;
