@@ -41,7 +41,7 @@
 						list-style-type:none;
 						li{
 							a:link{
-								
+
 							}
 						}
 					}
@@ -173,7 +173,7 @@
 				}
 				img{
 					padding-bottom:10px;
-					border-bottom:solid 1px #474747; 
+					border-bottom:solid 1px #474747;
 				}
 				.horizontal{
 					display:none;
@@ -212,7 +212,7 @@
 				}
 				img{
 					padding-bottom:10px;
-					border-bottom:solid 1px #474747; 
+					border-bottom:solid 1px #474747;
 				}
 				.horizontal{
 					display:none;
@@ -295,7 +295,7 @@
 					font-size:18/14 * 1em;
 					line-height:1em;
 					.panel-title{
-						font-family:Arial,"Helvetica Neue",Helvetica,sans-serif !important;
+						font-family:$font-arial !important;
 						padding-top:0;
 						font-size:1em;
 						font-weight:300;
