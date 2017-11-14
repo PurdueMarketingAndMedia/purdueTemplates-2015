@@ -1,0 +1,33 @@
+/// Create a repeating striped background with CSS
+/// @author Blake Holaday
+/// @param {String} $color1 - HEX color value (#000000)
+/// @param {String} $color2 - HEX color value (#000000)
+/// @param {String} $replace - Optional stripe style. Accepts: thin, medium (default), thick
+@mixin striped-bg($color1, $color2, $style:medium) {
+  // initialize defaults
+  $degrees:60deg;
+  $line1thickness:3px; // for $style:medium
+  $line2thickness:4px; // for $style:medium
+
+  // clean user input
+  $style:unquote($style); // remove any quotes passed along
+  $style:to-lower-case($style); // make text lowercase
+
+  // only overwrite defaults for recognized style names
+  @if $style == thin {
+    $line1thickness:1px;
+    $line2thickness:4px;
+  } @else if $style == thick {
+    $line1thickness:6px;
+    $line2thickness:6px;
+  }
+
+  // output rule-set
+  background: repeating-linear-gradient(
+    $degrees,
+    $color1, // 0
+    $color1 $line1thickness,
+    $color2 $line1thickness+1, // increase to get rid of jagged line
+    $color2 $line1thickness+1+$line2thickness+1, // increase to get rid of jagged line
+    $color1 $line1thickness+1+$line2thickness+2); // increase to get rid of jagged line
+}

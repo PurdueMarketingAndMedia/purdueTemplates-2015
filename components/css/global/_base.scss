@@ -21,11 +21,11 @@ html{
 	font-size:100%;
 }
 body{
-	font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;
+	font-family:$font-arial;
 }
 @media (min-width:768px){
 	body{
-		font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;
+		font-family:$font-arial;
 		font-size:1em;
 		line-height:24/16*1em;
 	}
@@ -39,7 +39,7 @@ body{
 h1{
 	padding-top:0;
 	padding-bottom:0.25em;
-	font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family:$font-archivo-narrow;
 	font-weight:bold;
 	color:$color-headlineGold;
     font-size:36/16 * 1em;
@@ -48,21 +48,21 @@ h1{
 h2{
 	padding-top:1em;
 	padding-bottom:0.15em;
-	font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family:$font-archivo-narrow;
 	color:$color-headlineGold;
 	font-size:32/16 * 1em;
 	line-height:1.2em;
 }
 h3{
 	padding-top:1em;
-	font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family:$font-archivo-narrow;
 	color:$color-headlineGold;
 	font-size:28/16 * 1em;
 	line-height:1.2em;
 }
 h4{
 	padding-top:1em;
-	font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family:$font-archivo-narrow;
 	font-weight:bold;
 	font-size:24/16 * 1em;
 	line-height:1.2em;
@@ -70,7 +70,7 @@ h4{
 }
 h5{
 	padding-top:1.5em;
-	font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family:$font-archivo-narrow;
 	font-weight:bold;
 	font-size:20/16 * 1em;
 	line-height:1.2em;
@@ -78,7 +78,7 @@ h5{
 }
 h6{
 	padding-top:2em;
-	font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family:$font-archivo-narrow;
 	font-weight:bold;
 	font-size:1em;
 	line-height:1.2em;
