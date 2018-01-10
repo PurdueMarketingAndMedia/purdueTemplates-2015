@@ -24,7 +24,7 @@ $xsSmBannerHeight:350;
 							margin:0;
 							padding:10px 15px 10px 10px;
 							background-color:#000;
-							font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+							font-family:$font-archivo-narrow;
 							color:#fff;
 							font-size:26/16*1em;
 						}
@@ -61,7 +61,7 @@ $xsSmBannerHeight:350;
 							width:100%;
 							background-color:#000;
 							background-image:url('https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png');
-							font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+							font-family:$font-archivo-narrow;
 							line-height:24/22*1em;
 							.caption{
 								position:absolute;
@@ -144,7 +144,7 @@ $xsSmBannerHeight:350;
 				ul.nav{
 					padding-top:0;
 					padding-bottom:0;
-					font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+					font-family:$font-archivo-narrow;
 					font-size:1.2em;
 					li{
 						padding:0;
