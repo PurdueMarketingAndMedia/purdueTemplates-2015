@@ -8797,6 +8797,164 @@ u {
   padding: 2px 0;
 }
 
+.button {
+  display: inline-block;
+  border: solid 2px #c28e0e;
+  padding: 0.41453rem 3.10897rem;
+  background-color: #c28e0e;
+  transition: background-color 0.1s;
+  color: #000;
+  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
+  font-size: 0.93269rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button:link, .button:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+.button:hover, .button:active, .button:focus {
+  outline: none;
+  border: solid 2px #c28e0e;
+  background-color: transparent;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button-wide {
+  width: 100%;
+  min-width: auto;
+}
+
+.button-hollow {
+  background-color: transparent;
+}
+
+.button-hollow:hover, .button-hollow:active, .button-hollow:focus {
+  background-color: #c28e0e;
+}
+
+.button-hollow-light:link, .button-hollow-light:visited {
+  color: #fff;
+}
+
+.button-hollow-light:hover, .button-hollow-light:active, .button-hollow-light:focus {
+  color: #000;
+}
+
+.button-solid, .button-solid:link, .button-solid:visited {
+  border-color: #fff;
+}
+
+.button-solid:hover, .button-solid:active, .button-solid:focus {
+  border-color: #c28e0e;
+  background-color: #000;
+  color: #fff;
+}
+
+.button--color-light {
+  color: #fff;
+}
+
+.button--color-light:link, .button--color-light:visited {
+  color: #fff;
+}
+
+.button--opaque-light {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.button--opaque-dark {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.button--opaque-dark:link, .button--opaque-dark:visited {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.button-bar {
+  position: relative;
+  border: solid 2px #c28e0e;
+}
+
+.button-bar::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  display: block;
+  height: 0.25908rem;
+  background-color: #7b5a09;
+}
+
+.button-bar:hover, .button-bar:active, .button-bar:focus {
+  border: solid 2px #7b5a09;
+}
+
+.button--hover-light:hover, .button--hover-light:active, .button--hover-light:focus {
+  color: #fff;
+}
+
+@media (min-width: 1200px) {
+  .button {
+    padding: 0.5rem 3.75rem;
+    font-size: 1.125rem;
+  }
+  .button-wide-lg {
+    width: 100%;
+    min-width: auto;
+  }
+  .button-bar {
+    position: relative;
+  }
+  .button-bar::after {
+    height: 0.3125rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .button-wide-md {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .button {
+    padding: 0.5rem 4.0625rem;
+    font-size: 1.03632rem;
+  }
+  .button-wide-sm {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .button {
+    padding: 0.5rem 2.8125rem;
+    font-size: 1.125rem;
+  }
+  .button-wide-xs {
+    width: 100%;
+    min-width: auto;
+  }
+  .button-bar {
+    position: relative;
+  }
+  .button-bar::after {
+    height: 0.3125rem;
+  }
+}
+
 .captionStyle, .imageContainer.useCaption .caption, .videoContainer .caption {
   display: block;
   padding: 0 10px;
