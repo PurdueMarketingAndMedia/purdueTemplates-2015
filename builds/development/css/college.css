@@ -5274,7 +5274,7 @@ end tile sizing and positioning
     line-height: 1em;
   }
   .footer #accordion .panel .panel-heading .panel-title {
-    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif !important;
+    font-family: "Arial", "Helvetica Neue", "Helvetica", sans-serif !important;
     padding-top: 0;
     font-size: 1em;
     font-weight: 300;

@@ -9002,7 +9002,7 @@ u {
   width: 10%;
   margin: 0;
   color: #444;
-  font-family: "Arial Narrow", "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
+  font-family: "Arial Narrow", Arial, sans-serif;
   font-size: 1em;
   line-height: 1em;
   text-transform: uppercase;
@@ -9699,7 +9699,7 @@ u {
     line-height: 1em;
   }
   .footer #accordion .panel .panel-heading .panel-title {
-    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif !important;
+    font-family: "Arial", "Helvetica Neue", "Helvetica", sans-serif !important;
     padding-top: 0;
     font-size: 1em;
     font-weight: 300;
