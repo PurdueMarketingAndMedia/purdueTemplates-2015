@@ -1,6 +1,7 @@
 .button{
 	display:inline-block;
 	border:solid 2px $color-campusGold;
+	border-radius:0;
 	padding:calc-toRem(calc-ratioLgMd(8)) calc-toRem(calc-ratioLgMd(60));
 	background-color:$color-campusGold;
 	transition:background-color 0.1s;
@@ -22,53 +23,37 @@
 		text-decoration:none;
 		cursor:pointer;
 	}
-	&-wide{
-		width:100%;
-		min-width:auto;
+	@each $color,$pair in $colorPairs-accessible{
+		&-#{$color}{
+			border-color:nth($pair,1);
+			background-color:nth($pair,1);
+			color:nth($pair,2);
+			&:hover,&:active,&:focus{
+				border-color:nth($pair,1);
+				background-color:transparent;
+				color:#000;
+			}
+		}
 	}
 	&-hollow{
 		background-color:transparent;
 		&:hover,&:active,&:focus{
 			background-color:$color-campusGold;
 		}
-		&-light{
-			&:link,&:visited{
-				color:#fff;
+		@each $color,$pair in $colorPairs-accessible{
+			&-#{$color}{
+				border-color:nth($pair,1);
+				&:hover,&:active,&:focus{
+					border-color:nth($pair,1);
+					background-color:nth($pair,1);
+					color:nth($pair,2);
+				}
 			}
-			&:hover,&:active,&:focus{
-				color:#000;
-			}
 		}
-	}
-	&-solid{
-		&,&:link,&:visited{
-			border-color:#fff;
-		}
-		&:hover,&:active,&:focus{
-			border-color:$color-campusGold;
-			background-color:#000;
-			color:#fff;
-		}
-	}
-	&--color{
 		&-light{
 			color:#fff;
 			&:link,&:visited{
 				color:#fff;
-			}
-		}
-	}
-	&--opaque{
-		&-light{
-			background-color:#fff;
-			background-color:rgba(255,255,255,0.5);
-		}
-		&-dark{
-			background-color:#000;
-			background-color:rgba(0,0,0,0.5);
-			&:link,&:visited{
-				background-color:#000;
-				background-color:rgba(0,0,0,0.5);
 			}
 		}
 	}
@@ -88,13 +73,46 @@
 		&:hover,&:active,&:focus{
 			border:solid 2px darken($color-campusGold,15);
 		}
-	}
-	&--hover{
-		&-light{
-			&:hover,&:active,&:focus{
-				color:#fff;
+		@each $color,$pair in $colorPairs-accessible{
+			&-#{$color}{
+				border-color:nth($pair,1);
+				background-color:nth($pair,1);
+				color:nth($pair,2);
+				&::after{
+					background-color:darken(nth($pair,1),15);
+				}
+				&:link,&:visited{
+					color:nth($pair,2);
+				}
+				&:hover,&:active,&:focus{
+					background-color:transparent;
+					border-color:darken(nth($pair,1),15);
+				}
 			}
 		}
+	}
+	&--opaque{
+		&-light{
+			background-color:#fff;
+			background-color:rgba(255,255,255,0.5);
+		}
+		&-dark{
+			background-color:#000;
+			background-color:rgba(0,0,0,0.5);
+			&:link,&:visited{
+				background-color:#000;
+				background-color:rgba(0,0,0,0.5);
+			}
+		}
+	}
+	&-light{
+		&:hover,&:active{
+			color:#fff;
+		}
+	}
+	&-wide{
+		width:100%;
+		min-width:auto;
 	}
 	@media (min-width:1200px){
 		padding:calc-toRem(8) calc-toRem(60);
