@@ -8799,7 +8799,7 @@ u {
 
 .button {
   display: inline-block;
-  outline: solid 2px transparent;
+  outline: none;
   border: solid 2px #c28e0e;
   border-radius: 0;
   padding: 0.41453rem 3.10897rem;
@@ -8819,6 +8819,7 @@ u {
 }
 
 .button:hover, .button:active, .button:focus {
+  outline: none;
   border: solid 2px #c28e0e;
   background-color: transparent;
   color: #000;
@@ -9560,76 +9561,42 @@ u {
 }
 
 .button-opaque {
-  outline-color: rgba(0, 0, 0, 0.5);
-  border-color: transparent;
+  border-color: #000;
   background-color: #000;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
 }
 
 .button-opaque:link, .button-opaque:visited {
-  outline-color: rgba(0, 0, 0, 0.5);
-  border-color: transparent;
+  border-color: #000;
   background-color: #000;
   color: #fff;
 }
 
 .button-opaque:hover, .button-opaque:active, .button-opaque:focus {
-  outline-color: #000;
-  border-color: transparent;
+  border-color: #000;
   background-color: #000;
   color: #fff;
 }
 
 .button-opaque-light {
-  outline-color: rgba(250, 250, 250, 0.5);
-  border-color: transparent;
+  border-color: #fff;
   background-color: #000;
   background-color: rgba(250, 250, 250, 0.5);
   color: #000;
 }
 
 .button-opaque-light:link, .button-opaque-light:visited {
-  outline-color: rgba(250, 250, 250, 0.5);
+  border-color: #fff;
   background-color: #000;
   background-color: rgba(250, 250, 250, 0.5);
   color: #000;
 }
 
 .button-opaque-light:hover, .button-opaque-light:active, .button-opaque-light:focus {
-  outline-color: #fff;
+  border-color: #fff;
   background-color: #fff;
   color: #000;
-}
-
-.button-opaque-border {
-  outline-color: transparent;
-  border-color: #000;
-}
-
-.button-opaque-border:link, .button-opaque-border:visited {
-  outline-color: transparent;
-  border-color: #000;
-}
-
-.button-opaque-border:hover, .button-opaque-border:active, .button-opaque-border:focus {
-  outline-color: transparent;
-  border-color: #000;
-}
-
-.button-opaque-border-light {
-  outline-color: transparent;
-  border-color: #fff;
-}
-
-.button-opaque-border-light:link, .button-opaque-border-light:visited {
-  outline-color: transparent;
-  border-color: #fff;
-}
-
-.button-opaque-border-light:hover, .button-opaque-border-light:active, .button-opaque-border-light:focus {
-  outline-color: transparent;
-  border-color: #fff;
 }
 
 .button-light:hover, .button-light:active {
