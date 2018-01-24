@@ -1,0 +1,35 @@
+@@include('../navigation/_breadcrumbs.html')
+<main id="main" class="content">
+	<div class="container">
+	    <div class="row">
+	    	<div class="maincontent col-lg-9 col-md-9 col-sm-9 right">
+				<h1>Accordion</h1>
+				<div class="accordion">
+					<h2 class="collapsed accordion_heading" data-toggle="collapse" data-target="#list1">Category 1<br/>Line 2</h2>
+					<ul class="collapse accordion_list" id="list1" aria-expanded="false" aria-controls="collapseExample">
+						<li class="accordion_item"><a href="#">Item 1</a></li>
+						<li class="accordion_item"><a href="#">Item 2</a></li>
+						<li class="accordion_item"><a href="#">Item 3</a></li>
+						<li class="accordion_item"><a href="#">Item 4</a></li>
+					</ul>
+					<h2 class="collapsed accordion_heading" data-toggle="collapse" data-target="#list2">Category 2</h2>
+					<ul class="collapse accordion_list" id="list2" aria-expanded="false" aria-controls="collapseExample">
+						<li class="accordion_item"><a href="#">Item 1</a></li>
+						<li class="accordion_item"><a href="#">Item 2</a></li>
+						<li class="accordion_item"><a href="#">Item 3</a></li>
+						<li class="accordion_item"><a href="#">Item 4</a></li>
+					</ul>
+					<h2 class="collapsed accordion_heading" data-toggle="collapse" data-target="#list3">Category 3</h2>
+					<ul class="collapse accordion_list" id="list3" aria-expanded="false" aria-controls="collapseExample">
+						<li class="accordion_item"><a href="#">Item 1</a></li>
+						<li class="accordion_item"><a href="#">Item 2</a></li>
+						<li class="accordion_item"><a href="#">Item 3</a></li>
+						<li class="accordion_item"><a href="#">Item 4</a></li>
+					</ul>
+				</div>
+			</div>
+			@@include('../navigation/_side.html')
+			@@include('../content-content/_side.html')
+		</div>
+	</div>
+</main>

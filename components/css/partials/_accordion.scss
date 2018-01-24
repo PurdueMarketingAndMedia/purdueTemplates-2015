@@ -1,0 +1,36 @@
+.accordion{
+	display:block;
+	width:100%;
+	background-color:lighten(#000,75);
+	&_heading{
+		position:relative;
+		display:block;
+		cursor:pointer;
+		border-top:solid 1px #fff;
+		margin:0 auto;
+		padding:10px 50px 10px 20px;
+		background-color:#000;
+		font-family:$font-archivo-narrow;
+		font-size:calc-toRem(22);
+		line-height:1.1em;
+		font-weight:700;
+		text-transform:uppercase;
+		color:#fff;
+		&:first-child{
+			border-top:0;
+		}
+		&::after{
+			content:"\f146";
+			position:absolute;
+			right:20px;
+			top:50%;
+			margin-top:-0.5em;
+			font-family:$font-fontAwesome;
+		}
+		&.collapsed{
+			&::after{
+				content:"\f0fe";
+			}
+		}
+	}
+}
