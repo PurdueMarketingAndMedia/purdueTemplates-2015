@@ -9664,6 +9664,78 @@ u {
   display: block;
   width: 100%;
   background-color: #bfbfbf;
+  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  line-height: 1.4em;
+}
+
+.accordion-campusGold {
+  background-color: #f0e3c3;
+}
+
+.accordion-headlineGold {
+  background-color: #e5dbc3;
+}
+
+.accordion-coalGray {
+  background-color: #d3cfcd;
+}
+
+.accordion-moonDustGray {
+  background-color: #eee9e4;
+}
+
+.accordion-everTrueBlue {
+  background-color: #d6d9db;
+}
+
+.accordion-slayterSkyBlue {
+  background-color: #dbe6ec;
+}
+
+.accordion-ameliaSkyBlue {
+  background-color: #e8f5f5;
+}
+
+.accordion-landGrantGreen {
+  background-color: #c1d6c4;
+}
+
+.accordion-rossAdeGreen {
+  background-color: #e0e7ca;
+}
+
+.accordion-celeryBogGreen {
+  background-color: #f0efc2;
+}
+
+.accordion-springFestGreen {
+  background-color: #faf8d6;
+}
+
+.accordion-oakenBucketBrown {
+  background-color: #dad1cd;
+}
+
+.accordion-bellTowerBrick {
+  background-color: #ecd7c4;
+}
+
+.accordion-mackeyOrange {
+  background-color: #ffe6c6;
+}
+
+.accordion-yellowWalk {
+  background-color: #fff4bf;
+}
+
+.accordion-fountainRunTeal {
+  background-color: #cae9e4;
+}
+
+.accordion-pappysPurple {
+  background-color: #ebc7d9;
 }
 
 .accordion_heading {
@@ -9697,6 +9769,175 @@ u {
 
 .accordion_heading.collapsed::after {
   content: "\f0fe";
+}
+
+.accordion_heading-campusGold {
+  background-color: #c28e0e;
+  color: #000;
+}
+
+.accordion_heading-headlineGold {
+  background-color: #98700d;
+  color: #fff;
+}
+
+.accordion_heading-coalGray {
+  background-color: #4d4038;
+  color: #fff;
+}
+
+.accordion_heading-moonDustGray {
+  background-color: #baa892;
+  color: #000;
+}
+
+.accordion_heading-everTrueBlue {
+  background-color: #5b6870;
+  color: #fff;
+}
+
+.accordion_heading-slayterSkyBlue {
+  background-color: #6e99b4;
+  color: #000;
+}
+
+.accordion_heading-ameliaSkyBlue {
+  background-color: #a3d6d7;
+  color: #000;
+}
+
+.accordion_heading-landGrantGreen {
+  background-color: #085c11;
+  color: #fff;
+}
+
+.accordion_heading-rossAdeGreen {
+  background-color: #849e2a;
+  color: #000;
+}
+
+.accordion_heading-celeryBogGreen {
+  background-color: #c3be0b;
+  color: #000;
+}
+
+.accordion_heading-springFestGreen {
+  background-color: #e9e45b;
+  color: #000;
+}
+
+.accordion_heading-oakenBucketBrown {
+  background-color: #6b4536;
+  color: #fff;
+}
+
+.accordion_heading-bellTowerBrick {
+  background-color: #b46012;
+  color: #fff;
+}
+
+.accordion_heading-mackeyOrange {
+  background-color: #ff9b1a;
+  color: #000;
+}
+
+.accordion_heading-yellowWalk {
+  background-color: #ffd100;
+  color: #000;
+}
+
+.accordion_heading-fountainRunTeal {
+  background-color: #29a592;
+  color: #000;
+}
+
+.accordion_heading-pappysPurple {
+  background-color: #ad1f65;
+  color: #fff;
+}
+
+.accordion_list {
+  margin: 0;
+  padding: 0 20px;
+  list-style-type: none;
+}
+
+.accordion_item {
+  border-top: solid 1px #000;
+  margin: 0;
+  padding: 15px 0 !important;
+}
+
+.accordion_item:first-child {
+  border-top: none;
+}
+
+.accordion_item-campusGold {
+  border-top-color: #c28e0e;
+}
+
+.accordion_item-headlineGold {
+  border-top-color: #98700d;
+}
+
+.accordion_item-coalGray {
+  border-top-color: #4d4038;
+}
+
+.accordion_item-moonDustGray {
+  border-top-color: #baa892;
+}
+
+.accordion_item-everTrueBlue {
+  border-top-color: #5b6870;
+}
+
+.accordion_item-slayterSkyBlue {
+  border-top-color: #6e99b4;
+}
+
+.accordion_item-ameliaSkyBlue {
+  border-top-color: #a3d6d7;
+}
+
+.accordion_item-landGrantGreen {
+  border-top-color: #085c11;
+}
+
+.accordion_item-rossAdeGreen {
+  border-top-color: #849e2a;
+}
+
+.accordion_item-celeryBogGreen {
+  border-top-color: #c3be0b;
+}
+
+.accordion_item-springFestGreen {
+  border-top-color: #e9e45b;
+}
+
+.accordion_item-oakenBucketBrown {
+  border-top-color: #6b4536;
+}
+
+.accordion_item-bellTowerBrick {
+  border-top-color: #b46012;
+}
+
+.accordion_item-mackeyOrange {
+  border-top-color: #ff9b1a;
+}
+
+.accordion_item-yellowWalk {
+  border-top-color: #ffd100;
+}
+
+.accordion_item-fountainRunTeal {
+  border-top-color: #29a592;
+}
+
+.accordion_item-pappysPurple {
+  border-top-color: #ad1f65;
 }
 
 .captionStyle, .imageContainer.useCaption .caption, .videoContainer .caption {

@@ -1,7 +1,16 @@
 .accordion{
 	display:block;
 	width:100%;
-	background-color:lighten(#000,75);
+	background-color:mix(#fff,#000,75%);
+	font-family:$font-archivo-narrow;
+	font-weight:700;
+	font-size:calc-toRem(15);
+	line-height:1.4em;
+	@each $color,$pair in $colorPairs-accessible{
+		&-#{$color}{
+			background-color:mix(#fff,nth($pair,1),75%);
+		}
+	}
 	&_heading{
 		position:relative;
 		display:block;
@@ -30,6 +39,30 @@
 		&.collapsed{
 			&::after{
 				content:"\f0fe";
+			}
+		}
+		@each $color,$pair in $colorPairs-accessible{
+			&-#{$color}{
+				background-color:nth($pair,1);
+				color:nth($pair,2);
+			}
+		}
+	}
+	&_list{
+		margin:0;
+		padding:0 20px;
+		list-style-type:none;
+	}
+	&_item{
+		border-top:solid 1px #000;
+		margin:0;
+		padding:15px 0 !important;
+		&:first-child{
+			border-top:none;
+		}
+		@each $color,$pair in $colorPairs-accessible{
+			&-#{$color}{
+				border-top-color:nth($pair,1);
 			}
 		}
 	}
