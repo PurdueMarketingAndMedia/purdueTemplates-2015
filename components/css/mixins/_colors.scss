@@ -1,0 +1,36 @@
+$color-campusGold:#c28e0e;
+$color-headlineGold:#98700d;
+$color-coalGray:#4d4038;
+$color-moonDustGray:#baa892;
+$color-everTrueBlue:#5b6870;
+$color-slayterSkyBlue:#6e99b4;
+$color-ameliaSkyBlue:#a3d6d7;
+$color-landGrantGreen:#085c11;
+$color-rossAdeGreen:#849e2a;
+$color-celeryBogGreen:#c3be0b;
+$color-springFestGreen:#e9e45b;
+$color-oakenBucketBrown:#6b4536;
+$color-bellTowerBrick:#b46012;
+$color-mackeyOrange:#ff9b1a;
+$color-yellowWalk:#ffd100;
+$color-fountainRunTeal:#29a592;
+$color-pappysPurple:#ad1f65;
+$colorPairs-accessible:(
+	campusGold:($color-campusGold,#000),
+	headlineGold:($color-headlineGold,#fff),
+	coalGray:($color-coalGray,#fff),
+	moonDustGray:($color-moonDustGray,#000),
+	everTrueBlue:($color-everTrueBlue,#fff),
+	slayterSkyBlue:($color-slayterSkyBlue,#000),
+	ameliaSkyBlue:($color-ameliaSkyBlue,#000),
+	landGrantGreen:($color-landGrantGreen,#fff),
+	rossAdeGreen:($color-rossAdeGreen,#000),
+	celeryBogGreen:($color-celeryBogGreen,#000),
+	springFestGreen:($color-springFestGreen,#000),
+	oakenBucketBrown:($color-oakenBucketBrown,#fff),
+	bellTowerBrick:($color-bellTowerBrick,#fff),
+	mackeyOrange:($color-mackeyOrange,#000),
+	yellowWalk:($color-yellowWalk,#000),
+	fountainRunTeal:($color-fountainRunTeal,#000),
+	pappysPurple:($color-pappysPurple,#fff)
+)
