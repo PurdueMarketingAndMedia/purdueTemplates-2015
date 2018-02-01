@@ -4,7 +4,7 @@
 	background-color:#000;
 	background-repeat:repeat;
 	.logo{
-		padding:25px 15px;
+		padding:25px 10px 25px 15px;
 		a{
 			display:block;
 			img{
@@ -23,22 +23,56 @@
 			a{
 				margin:0 auto;
 				width:50%;
-			}
+			} 
 		}
+		.svgLinkContainer {
+			  display: block;
+			  position: relative;
+			  height: 1px;
+			  width: 100%;
+			  padding-bottom: 29.95839%;
+			  z-index: 2;
+			  &::after{
+				content:"";
+				display:block;
+				position:absolute;
+				top:0;
+				right:0;
+				bottom:0;
+				left:0;
+			  }
+			}
+			.svgContainer {
+			  display: block;
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			  width: 100%;
+			  z-index: -1;
+			}
+			@media (min-width:768px){
+			  .svgLinkContainer{
+				width:100%;
+			  }
+			}
+			@media (max-width:767px){
+			  .svgLinkContainer{
+				margin:0 auto;
+				width:50%;
+				padding-bottom:14.9792%;
+			  }
+		}
+		
 	}
 	.department{
 		color:#fff;
-		font-family:$font-helvetica;
-		letter-spacing:1px;
+		font-family:$font-archivo-narrow;
+		letter-spacing:0;
+		
 		> a{
 			display:inline-block;
-			padding:2px 10px;
-			line-height:1.2em;
-		}
-		@media (min-width:768px){
-			> a{
-				border-left:solid 1px $color-campusGold;
-			}
+			padding:2px 25px;
+			line-height:1.1em;
 		}
 		@media (max-width:767px){
 			> a{
@@ -47,76 +81,88 @@
 		}
 		> a:link{
 			color:inherit;
-			font-weight:100;
+			font-weight:600;
 			text-decoration:none;
 		}
 		> a:visited{
 			color:inherit;
-			font-weight:100;
+			font-weight:600;
 			text-decoration:none;
 		}
 		> a:hover{
 			color:inherit;
-			font-weight:100;
+			font-weight:600;
 			text-decoration:none;
 		}
 		> a:active{
 			color:inherit;
-			font-weight:100;
+			font-weight:600;
 			text-decoration:none;
 		}
+		
 		.tagline{
 			display:block;
 			clear:left;
 			color:inherit;
-			font-size:13/25 * 1em;
-			line-height:1.3em;
+			font-family:$font-archivo-narrow;
+			font-size:20/25 * 1em;
+			line-height:1.2em;
+			letter-spacing:.5px;
+			text-transform: uppercase;
 			a:link{
 				color:inherit;
-				font-weight:400;
+				font-weight:100;
 				text-decoration:none;
 			}
 			a:visited{
 				color:inherit;
-				font-weight:400;
+				font-weight:100;
 				text-decoration:none;
 			}
 			a:hover{
 				color:inherit;
-				font-weight:400;
+				font-weight:100;
 				text-decoration:none;
 			}
 			a:active{
 				color:inherit;
-				font-weight:400;
+				font-weight:100;
 				text-decoration:none;
 			}
 		}
 		@media (min-width:768px){
 			.tagline{
-				padding:0 10px 2px;
-				border-left:solid 1px $color-campusGold;
+				padding:0 10px 2px 25px;
+			}
+			&::before{
+				display:block;
+				position:absolute;
+				margin-top: -10px;
+				content:"";
+				width:2px;
+				height:100%;
+				background-color:#999;
 			}
 		}
 		@media (max-width:767px){
 			.tagline{
-				padding:10px 0 0;
+				padding:5px 0 0;
 				border:none;
 			}
 		}
 	}
 	@media (min-width:992px){
 		.department{
-			padding:30px 15px 15px;
-			font-size:25/16 * 1em;
-			font-weight:100;
+			padding:30px 15px 10px;
+			font-size:24/16 * 1em;
+			font-weight:400;
 		}
 	}
 	@media (min-width:768px) and (max-width:991px){
 		.department{
 			padding:30px 15px 15px;
 			font-size:20/16 * 1em;
-			font-weight:100;
+			font-weight:400;
 		}
 	}
 	@media (max-width:767px){
