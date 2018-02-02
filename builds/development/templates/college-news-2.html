@@ -51,25 +51,18 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="form-group">
-                                    <div id="cse-search-form">Loading</div>
-                                    <script src="https://www.google.com/jsapi" type="text/javascript"></script>
-                                    <script type="text/javascript">
-                                        // <![CDATA[
-                                        								google.load('search', '1', {language: 'en', style: google.loader.themes.MINIMALIST});
-                                        								google.setOnLoadCallback(function() {
-                                        									var customSearchOptions = {};
-                                        									var orderByOptions = {};
-                                        									orderByOptions['keys'] = [{label: 'Relevance', key: ''} , {label: 'Date', key: 'date'}];
-                                        									customSearchOptions['enableOrderBy'] = true;
-                                        									customSearchOptions['orderByOptions'] = orderByOptions;
-                                        									var customSearchControl =   new google.search.CustomSearchControl('017690826183710227054:mjxnqnpskjk', customSearchOptions);
-                                        									customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
-                                        									var options = new google.search.DrawOptions();
-                                        									options.enableSearchboxOnly('https://www.purdue.edu/purdue/search.html', 'q');
-                                        									customSearchControl.draw('cse-search-form', options);
-                                        								}, true);
-                                        								// ]]>
+                                    <script>
+                                        (function() {
+                    			                        var cx = '017690826183710227054:mjxnqnpskjk';
+                    			                        var gcse = document.createElement('script');
+                    			                        gcse.type = 'text/javascript';
+                    			                        gcse.async = true;
+                    			                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                    			                        var s = document.getElementsByTagName('script')[0];
+                    			                        s.parentNode.insertBefore(gcse, s);
+                    			                      })();
                                     </script>
+                                    <gcse:searchbox-only id="cse-search-form" resultsUrl="https://www.purdue.edu/purdue/search.html" queryParameterName="q">Loading</gcse:searchbox-only>
                                 </div>
                             </li>
                         </ul>
@@ -119,6 +112,7 @@
             <!--/.nav-collapse -->
         </div>
     </div>
+
     <div class="top">
         <div class="container">
             <div class="row">
@@ -194,6 +188,23 @@
                                     <li><a href="#">Place Holder Link 1</a>
                                     </li>
                                     <li><a href="#">Place Holder Link 2</a>
+                                    </li>
+                                    <li><a href="#">Place Holder Link 3</a>
+                                    </li>
+                                    <li><a href="#">Place Holder Link 4</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Submenu Example 2<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Place Holder Link 1</a>
+                                    </li>
+                                    <li><a href="#">Place Holder Link 2</a>
+                                    </li>
+                                    <li><a href="#">Place Holder Link 3</a>
+                                    </li>
+                                    <li><a href="#">Place Holder Link 4</a>
                                     </li>
                                 </ul>
                             </li>
@@ -372,17 +383,18 @@
                 <div class="motto col-lg-4 col-md-4 col-sm-4">
                     <img alt="We are Purdue. What we make moves the world forward." class="horizontal" src="https://www.purdue.edu/purdue/images/templateElements/2015/footer-mottoHorizontal.png">
                     <img alt="We are Purdue. What we make moves the world forward." class="vertical" src="https://www.purdue.edu/purdue/images/templateElements/2015/footer-mottoVertical.png">
-                    <a alt="Facebook" href="http://www.facebook.com/PurdueUniversity" target="_blank"><i class="fa fa-facebook"></i></a>
-                    <a alt="Twitter" href="http://twitter.com/LifeAtPurdue" target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a alt="YouTube" href="http://www.youtube.com/purdue" target="_blank"><i class="fa fa-youtube"></i></a>
-                    <a alt="Instagram" href="http://www.instagram.com/lifeatpurdue" target="_blank"><i class="fa fa-instagram"></i></a>
-                    <a alt="Pinterest" href="http://www.pinterest.com/lifeatpurdue/" target="_blank"><i class="fa fa-pinterest"></i></a>
-                    <a alt="Google Plus" href="http://plus.google.com/+PurdueUniversity" target="_blank"><i class="fa fa-google-plus"></i></a>
-                    <a alt="LinkedIn" href="https://www.linkedin.com/edu/purdue-university-18357" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a title="Facebook" href="http://www.facebook.com/PurdueUniversity" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a title="Twitter" href="http://twitter.com/LifeAtPurdue" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a title="YouTube" href="http://www.youtube.com/purdue" target="_blank"><i class="fa fa-youtube"></i></a>
+                    <a title="Instagram" href="http://www.instagram.com/lifeatpurdue" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a title="Pinterest" href="http://www.pinterest.com/lifeatpurdue/" target="_blank"><i class="fa fa-pinterest"></i></a>
+                    <a title="Google Plus" href="http://plus.google.com/+PurdueUniversity" target="_blank"><i class="fa fa-google-plus"></i></a>
+                    <a title="LinkedIn" href="https://www.linkedin.com/edu/purdue-university-18357" target="_blank"><i class="fa fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="bottom">
         <div class="container">
             <div class="row">
@@ -397,6 +409,7 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
