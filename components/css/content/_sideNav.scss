@@ -1,7 +1,7 @@
 .sidenav{
 	clear:left;
 	overflow:hidden;
-	font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family:$font-archivo-narrow;
 	> ul{
 		margin-bottom:25px;
 		padding:0;
@@ -54,7 +54,7 @@
 			> a{
 				position:relative;
 				padding-right:15px;
-				font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+				font-family:$font-archivo-narrow;
 				font-weight:bold;
 				> .caret{
 					position:absolute;
