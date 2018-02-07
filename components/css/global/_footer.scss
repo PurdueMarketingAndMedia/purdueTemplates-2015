@@ -156,7 +156,25 @@
 					border-bottom:solid 1px #474747;
 				}
 				.panel-heading{
-					display:none;
+					display:block;
+					background: transparent;
+					padding: 0;
+					.panel-title{
+						font-family:$font-archivo-black;
+						padding-top:0;
+						padding-bottom: 5px;
+						font-size:1.2em;
+						font-weight:700;
+						text-transform: uppercase;
+						a{
+							cursor:default;
+							color:$color-campusGold;
+							border-bottom: 0;
+						}
+						.fa{
+							display:none;
+						}
+					}
 				}
 				.panel-collapse{
 					display:block;
@@ -195,7 +213,27 @@
 					border-bottom:solid 1px #474747;
 				}
 				.panel-heading{
-					display:none;
+					display:block;
+					padding:0;
+					background-color:transparent;
+					font-size:18/14 * 1em;
+					line-height:1em;
+					.panel-title{
+						font-family:$font-archivo-black;
+						padding-top:0;
+						padding-bottom: 5px;
+						font-size:.9em;
+						font-weight:700;
+						text-transform: uppercase;
+						a{
+							cursor:default;
+							color:$color-campusGold;
+							border-bottom: 0;
+						}
+						.fa{
+							display:none;
+						}
+					}
 				}
 				.panel-collapse{
 					display:block;
@@ -238,13 +276,16 @@
 					font-size:18/14 * 1em;
 					line-height:1em;
 					.panel-title{
-						font-family:$font-arial !important;
+						font-family:$font-archivo-black;
 						padding-top:0;
-						font-size:1em;
-						font-weight:300;
+						padding-bottom: 5px;
+						font-size:.8em;
+						font-weight:700;
+						text-transform: uppercase;
 						a{
 							cursor:default;
 							color:$color-campusGold;
+							border-bottom: 0;
 						}
 						.fa{
 							display:none;
@@ -265,10 +306,11 @@
 				width:100%;
 				padding:15px 30px;
 				font-size:28/16*1em;
+				line-height: 1em;
 				text-align:center;
 				img{
 					display:block;
-					max-width:60%;
+					max-width:45%;
 					margin:0 auto 15px;
 				}
 				a{
@@ -295,10 +337,10 @@
 					font-size:18/14 * 1em;
 					line-height:1em;
 					.panel-title{
-						font-family:$font-arial !important;
+						font-family:$font-archivo-black;
 						padding-top:0;
 						font-size:1em;
-						font-weight:300;
+						font-weight:100;
 					}
 					a{
 						display:block;
@@ -349,6 +391,7 @@
 				clear:both;
 				padding:15px 15px 0;
 				font-size:30/18*1em;
+				line-height: 1em;
 				text-align:center;
 				a{
 					width:28px;
@@ -356,7 +399,7 @@
 				}
 				img{
 					display:block;
-					max-width:80%;
+					max-width:45%;
 					margin:0 auto 15px;
 				}
 				.vertical{

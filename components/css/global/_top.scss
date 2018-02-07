@@ -22,7 +22,7 @@
 		@media (max-width:767px){
 			a{
 				margin:0 auto;
-				width:50%;
+				width:100%;
 			} 
 		}
 		.svgLinkContainer {
@@ -49,8 +49,19 @@
 			  left: 0;
 			  width: 100%;
 			  z-index: -1;
+			  padding-right: 0px;
 			}
-			@media (min-width:768px){
+			@media (min-width:1200px){
+				.svgLinkContainer{
+				width:100%;
+			  }
+			}
+			@media (min-width:992px) and (max-width:1199px){
+				.svgLinkContainer{
+				width:85%;
+			  }
+			}
+			@media (min-width:768px) and (max-width:991px){
 			  .svgLinkContainer{
 				width:100%;
 			  }
@@ -58,7 +69,7 @@
 			@media (max-width:767px){
 			  .svgLinkContainer{
 				margin:0 auto;
-				width:50%;
+				width: 40%;
 				padding-bottom:14.9792%;
 			  }
 		}
@@ -73,6 +84,13 @@
 			display:inline-block;
 			padding:2px 25px;
 			line-height:1.1em;
+		}
+		@media (min-width:992px) and (max-width:1199px){
+			> a{
+			display:inline-block;
+			padding:2px 0px;
+			line-height:1.1em;
+			}
 		}
 		@media (max-width:767px){
 			> a{
@@ -140,7 +158,22 @@
 				margin-top: -10px;
 				content:"";
 				width:2px;
-				height:100%;
+				height:80%;
+				background-color:#999;
+			}
+		}
+		@media (min-width:992px) and (max-width:1199px){
+			.tagline{
+				padding:0 10px 2px 0;
+			}
+			&::before{
+				display:block;
+				position:absolute;
+				margin-top: -10px;
+				margin-left: -30px;
+				content:"";
+				width:2px;
+				height:80%;
 				background-color:#999;
 			}
 		}
@@ -154,21 +187,21 @@
 	@media (min-width:992px){
 		.department{
 			padding:30px 15px 10px;
-			font-size:24/16 * 1em;
+			font-size:30/22 * 1em;
 			font-weight:400;
 		}
 	}
 	@media (min-width:768px) and (max-width:991px){
 		.department{
 			padding:30px 15px 15px;
-			font-size:20/16 * 1em;
+			font-size:24/20 * 1em;
 			font-weight:400;
 		}
 	}
 	@media (max-width:767px){
 		.department{
 			padding:0 15px 30px;
-			font-size:24/18 * 1em;
+			font-size:30/22 * 1em;
 			font-weight:400;
 			text-align:center;
 		}
