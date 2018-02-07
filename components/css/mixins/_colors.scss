@@ -33,4 +33,10 @@ $colorPairs-accessible:(
 	yellowWalk:($color-yellowWalk,#000),
 	fountainRunTeal:($color-fountainRunTeal,#000),
 	pappysPurple:($color-pappysPurple,#fff)
-)
+);
+$colorPairs-button:(
+	campusGold:($color-campusGold,#000),
+	black:(#000,#fff),
+	coalGray:($color-coalGray,#fff),
+	white:(#fff,#000)
+);

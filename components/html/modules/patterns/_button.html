@@ -1,0 +1,73 @@
+@@if (type === 'default'){
+	@@if(light === false){
+		@@if(color === ""){
+			<button class="button">@@text</button>
+		}
+		@@if(color !== ""){
+			@@if(inverse === false){
+				<button class="button button-@@color">@@text</button>
+			}
+			@@if(inverse === true){
+				<button class="button button-@@color-inverse">@@text</button>
+			}
+		}
+	}
+	@@if(light === true){
+		@@if(color === ""){
+			<button class="button button-light">@@text</button>
+		}
+		@@if(color !== ""){
+			@@if(inverse === false){
+				<button class="button button-light button-@@color">@@text</button>
+			}
+			@@if(inverse === true){
+				<button class="button button-light button-@@color-inverse">@@text</button>
+			}
+		}
+	}
+}
+
+@@if (type === 'hollow'){
+	@@if(light === false){
+		@@if(color === ""){
+			<button class="button button-hollow">@@text</button>
+		}
+		@@if(color !== ""){
+			<button class="button button-hollow button-hollow-@@color">@@text</button>
+		}
+	}
+	@@if(light === true){
+		@@if(color === ""){
+			<button class="button button-hollow button-hollow-light">@@text</button>
+		}
+		@@if(color !== ""){
+			<button class="button button-hollow button-hollow-light button-hollow-@@color">@@text</button>
+		}
+	}
+}
+@@if (type === 'bar'){
+	@@if(light === false){
+		@@if(color === ""){
+			<button class="button button-bar">@@text</button>
+		}
+		@@if(color !== ""){
+			<button class="button button-bar button-bar-@@color">@@text</button>
+		}
+	}
+	@@if(light === true){
+		@@if(color === ""){
+			<button class="button button-light button-bar">@@text</button>
+		}
+		@@if(color !== ""){
+			<button class="button button-light button-bar button-bar-@@color">@@text</button>
+		}
+	}
+}
+@@if (type === 'opaque'){
+	@@if(light === false){
+		<button class="button button-opaque">@@text</button>
+	}
+	@@if(light === true){
+		<button class="button button-opaque button-opaque-light">@@text</button>
+	}
+}

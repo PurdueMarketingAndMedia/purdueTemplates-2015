@@ -6,129 +6,209 @@
 	    		<h1>Buttons</h1>
 	    		<h2>Solid</h2>
 	    		<h3>Default</h3>
-	    		<div class="row">
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-coalGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-moonDustGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-everTrueBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-slayterSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-ameliaSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-landGrantGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-rossAdeGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-celeryBogGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-springFestGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-oakenBucketBrown">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bellTowerBrick">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-mackeyOrange">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-yellowWalk">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-fountainRunTeal">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-pappysPurple">Button</button></p>
-	    		</div>
+	    		<p>
+    			@@loop('../patterns/_button.html',[
+				    {
+				    	"type":"default",
+				    	"inverse":false,
+				    	"light":false,
+				    	"color":"campusGold",
+				    	"text":"Button"
+				    },
+					{
+						"type":"default",
+						"inverse":false,
+						"light":false,
+						"color":"black",
+						"text":"Button"
+					},
+					{
+						"type":"default",
+						"inverse":false,
+						"light":false,
+						"color":"coalGray",
+						"text":"Button"
+					}
+				])
+				</p>
 	    		<h3>Light</h3>
-	    		<div class="row" style="background:#000">
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-coalGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-moonDustGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-everTrueBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-slayterSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-ameliaSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-landGrantGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-rossAdeGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-celeryBogGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-springFestGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-oakenBucketBrown">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bellTowerBrick">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-mackeyOrange">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-yellowWalk">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-fountainRunTeal">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-pappysPurple">Button</button></p>
-	    		</div>
+	    		<div style="background:#000;">
+	    			<p>
+		    		@@loop('../patterns/_button.html',[
+					    {
+					    	"type":"default",
+					    	"inverse":false,
+					    	"light":true,
+					    	"color":"campusGold",
+					    	"text":"Button"
+					    },
+						{
+							"type":"default",
+							"inverse":false,
+							"light":true,
+							"color":"white",
+							"text":"Button"
+						},
+						{
+							"type":"default",
+							"inverse":false,
+							"light":true,
+							"color":"coalGray",
+							"text":"Button"
+						}
+					])
+					</p>
+				</div>
+				<h3>Inverse</h3>
+	    		<p>
+    			@@loop('../patterns/_button.html',[
+				    {
+				    	"type":"default",
+				    	"inverse":true,
+				    	"light":false,
+				    	"color":"campusGold",
+				    	"text":"Button"
+				    }
+				])
+				</p>
 	    		<h2>Hollow</h2>
 	    		<h3>Default</h3>
-	    		<div class="row">
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-coalGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-moonDustGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-everTrueBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-slayterSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-ameliaSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-landGrantGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-rossAdeGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-celeryBogGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-springFestGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-oakenBucketBrown">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-bellTowerBrick">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-mackeyOrange">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-yellowWalk">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-fountainRunTeal">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-pappysPurple">Button</button></p>
-	    		</div>
+	    		<p>
+    			@@loop('../patterns/_button.html',[
+				    {
+				    	"type":"hollow",
+				    	"inverse":false,
+				    	"light":false,
+				    	"color":"campusGold",
+				    	"text":"Button"
+				    },
+					{
+						"type":"hollow",
+						"inverse":false,
+						"light":false,
+						"color":"black",
+						"text":"Button"
+					},
+					{
+						"type":"hollow",
+						"inverse":false,
+						"light":false,
+						"color":"coalGray",
+						"text":"Button"
+					}
+				])
+				</p>
 	    		<h3>Light</h3>
-	    		<div class="row" style="background:#000">
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-coalGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-moonDustGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-everTrueBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-slayterSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-ameliaSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-landGrantGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-rossAdeGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-celeryBogGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-springFestGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-oakenBucketBrown">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-bellTowerBrick">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-mackeyOrange">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-yellowWalk">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-fountainRunTeal">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-pappysPurple">Button</button></p>
+	    		<div style="background:#000">
+	    			<p>
+	    			@@loop('../patterns/_button.html',[
+					    {
+					    	"type":"hollow",
+					    	"inverse":false,
+					    	"light":true,
+					    	"color":"campusGold",
+					    	"text":"Button"
+					    },
+						{
+							"type":"hollow",
+							"inverse":false,
+							"light":true,
+							"color":"white",
+							"text":"Button"
+						},
+						{
+							"type":"hollow",
+							"inverse":false,
+							"light":true,
+							"color":"coalGray",
+							"text":"Button"
+						}
+					])
+					</p>
 	    		</div>
 	    		<h2>Bar</h2>
 	    		<h3>Default</h3>
-	    		<div class="row">
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-coalGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-moonDustGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-everTrueBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-slayterSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-ameliaSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-landGrantGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-rossAdeGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-celeryBogGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-springFestGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-oakenBucketBrown">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-bellTowerBrick">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-mackeyOrange">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-yellowWalk">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-fountainRunTeal">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-pappysPurple">Button</button></p>
-	    		</div>
+	    		<p>
+    			@@loop('../patterns/_button.html',[
+				    {
+				    	"type":"bar",
+				    	"inverse":false,
+				    	"light":false,
+				    	"color":"campusGold",
+				    	"text":"Button"
+				    },
+					{
+						"type":"bar",
+						"inverse":false,
+						"light":false,
+						"color":"black",
+						"text":"Button"
+					},
+					{
+						"type":"bar",
+						"inverse":false,
+						"light":false,
+						"color":"coalGray",
+						"text":"Button"
+					}
+				])
+				</p>
 	    		<h3>Light</h3>
-	    		<div class="row" style="background:#000">
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-coalGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-moonDustGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-everTrueBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-slayterSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-ameliaSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-landGrantGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-rossAdeGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-celeryBogGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-springFestGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-oakenBucketBrown">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-bellTowerBrick">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-mackeyOrange">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-yellowWalk">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-fountainRunTeal">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-pappysPurple">Button</button></p>
+	    		<div style="background:#000">
+	    			<p>
+	    			@@loop('../patterns/_button.html',[
+					    {
+					    	"type":"bar",
+					    	"inverse":false,
+					    	"light":true,
+					    	"color":"campusGold",
+					    	"text":"Button"
+					    },
+						{
+							"type":"bar",
+							"inverse":false,
+							"light":true,
+							"color":"white",
+							"text":"Button"
+						},
+						{
+							"type":"bar",
+							"inverse":false,
+							"light":true,
+							"color":"coalGray",
+							"text":"Button"
+						}
+					])
+					</p>
 	    		</div>
 	    		<h2>Opaque</h2>
 	    		<h3>Default</h3>
-	    		<div class="row" style="background-image:url('https://placeimg.com/767/300/nature'); background-size:cover; background-position:top center;">
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-opaque">Button</button></p>
+	    		<div style="background-image:url('https://placeimg.com/767/300/nature'); background-size:cover; background-position:top center;">
+	    			<p>
+	    			@@loop('../patterns/_button.html',[
+					    {
+					    	"type":"opaque",
+					    	"inverse":false,
+					    	"light":false,
+					    	"color":"",
+					    	"text":"Button"
+					    }
+					])
+					</p>
 	    		</div>
 	    		<h3>Light</h3>
-	    		<div class="row" style="background-image:url('https://spaceholder.cc/767x300'); background-size:cover; background-position:center center;">
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-opaque button-opaque-light">Button</button></p>
+	    		<div style="background-image:url('https://spaceholder.cc/767x300'); background-size:cover; background-position:center center;">
+	    			<p>
+	    			@@loop('../patterns/_button.html',[
+					    {
+					    	"type":"opaque",
+					    	"inverse":false,
+					    	"light":true,
+					    	"color":"",
+					    	"text":"Button"
+					    }
+					])
+					</p>
 	    		</div>
 	    	</div>
 			@@include('../navigation/_side.html')

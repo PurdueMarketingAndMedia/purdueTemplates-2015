@@ -24,7 +24,7 @@
 		text-decoration:none;
 		cursor:pointer;
 	}
-	@each $color,$pair in $colorPairs-accessible{
+	@each $color,$pair in $colorPairs-button{
 		&-#{$color}{
 			border-color:nth($pair,1);
 			background-color:nth($pair,1);
@@ -34,6 +34,16 @@
 				background-color:transparent;
 				color:#000;
 			}
+			&-inverse{
+				border-color:nth($pair,2);
+				background-color:nth($pair,2);
+				color:nth($pair,1);
+				&:hover,&:active,&:focus{
+					border-color:nth($pair,2);
+					background-color:transparent;
+					color:#000;
+				}
+			}
 		}
 	}
 	&-hollow{
@@ -41,7 +51,7 @@
 		&:hover,&:active,&:focus{
 			background-color:$color-campusGold;
 		}
-		@each $color,$pair in $colorPairs-accessible{
+		@each $color,$pair in $colorPairs-button{
 			&-#{$color}{
 				border-color:nth($pair,1);
 				&:hover,&:active,&:focus{
@@ -74,7 +84,7 @@
 		&:hover,&:active,&:focus{
 			border:solid 2px darken($color-campusGold,15);
 		}
-		@each $color,$pair in $colorPairs-accessible{
+		@each $color,$pair in $colorPairs-button{
 			&-#{$color}{
 				border-color:nth($pair,1);
 				background-color:nth($pair,1);
