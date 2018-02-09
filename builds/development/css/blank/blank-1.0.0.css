@@ -8292,10 +8292,28 @@ u {
   background-image: url("https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png");
   background-color: #000;
   background-repeat: repeat;
+  background: repeating-linear-gradient(60deg, #191919, #191919 1px, #000 2px, #000 7px, #191919 8px);
+}
+
+.top .row-eq-height {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .top .logo {
-  padding: 25px 10px 25px 15px;
+  padding: 25px;
+}
+
+.top .logo::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 70%;
+  right: 0;
+  top: 15%;
+  background-color: #999;
 }
 
 .top .logo a {
@@ -8358,12 +8376,6 @@ u {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-  .top .logo .svgLinkContainer {
-    width: 85%;
-  }
-}
-
 @media (min-width: 768px) and (max-width: 991px) {
   .top .logo .svgLinkContainer {
     width: 100%;
@@ -8382,11 +8394,12 @@ u {
   color: #fff;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   letter-spacing: 0;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .top .department > a {
   display: inline-block;
-  padding: 2px 25px;
   line-height: 1.1em;
 }
 
@@ -8463,37 +8476,6 @@ u {
   text-decoration: none;
 }
 
-@media (min-width: 768px) {
-  .top .department .tagline {
-    padding: 0 10px 2px 25px;
-  }
-  .top .department::before {
-    display: block;
-    position: absolute;
-    margin-top: -10px;
-    content: "";
-    width: 2px;
-    height: 80%;
-    background-color: #999;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  .top .department .tagline {
-    padding: 0 10px 2px 0;
-  }
-  .top .department::before {
-    display: block;
-    position: absolute;
-    margin-top: -10px;
-    margin-left: -30px;
-    content: "";
-    width: 2px;
-    height: 80%;
-    background-color: #999;
-  }
-}
-
 @media (max-width: 767px) {
   .top .department .tagline {
     padding: 5px 0 0;
@@ -8503,23 +8485,34 @@ u {
 
 @media (min-width: 992px) {
   .top .department {
-    padding: 30px 15px 10px;
     font-size: 1.36364em;
     font-weight: 400;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .top .row-eq-height {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
   .top .department {
-    padding: 30px 15px 15px;
     font-size: 1.2em;
     font-weight: 400;
   }
 }
 
+@media (min-width: 768px) {
+  .top .row-eq-height {
+    flex-direction: row;
+  }
+  .top .department {
+    padding-left: 25px;
+  }
+}
+
 @media (max-width: 767px) {
   .top .department {
-    padding: 0 15px 30px;
     font-size: 1.36364em;
     font-weight: 400;
     text-align: center;

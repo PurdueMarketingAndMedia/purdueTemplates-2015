@@ -3,9 +3,24 @@
 	background-image:url('https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png');
 	background-color:#000;
 	background-repeat:repeat;
-	@include striped-bg(#232323, #000, thin)
+	@include striped-bg(#191919, #000, thin)
+	.row-eq-height{
+		display: flex;
+		align-items: center;
+        flex-direction: column;
+	}
 	.logo{
-		padding:25px 10px 25px 15px;
+		padding:25px;
+        &::after{
+            display:block;
+            position:absolute;
+            content:"";
+            width:2px;
+            height:70%;
+            right: 0;
+            top: 15%;
+            background-color:#999;
+        }
 		a{
 			display:block;
 			img{
@@ -54,15 +69,10 @@
 			}
 			@media (min-width:1200px){
 				.svgLinkContainer{
-				width:100%;
-			  }
+					width:100%;
+			  	}
 			}
-			@media (min-width:992px) and (max-width:1199px){
-				.svgLinkContainer{
-				width:85%;
-			  }
-			}
-			@media (min-width:768px) and (max-width:991px){
+            @media (min-width:768px) and (max-width:991px){
 			  .svgLinkContainer{
 				width:100%;
 			  }
@@ -73,18 +83,18 @@
 				width: 40%;
 				padding-bottom:14.9792%;
 			  }
-		}
-
-	}
+        }
+    }
 	.department{
 		color:#fff;
 		font-family:$font-archivo-narrow;
 		letter-spacing:0;
+        padding-left: 15px;
+        padding-right: 15px;
 
 		> a{
 			display:inline-block;
-			padding:2px 25px;
-			line-height:1.1em;
+            line-height:1.1em;
 		}
 		@media (min-width:992px) and (max-width:1199px){
 			> a{
@@ -149,35 +159,6 @@
 				text-decoration:none;
 			}
 		}
-		@media (min-width:768px){
-			.tagline{
-				padding:0 10px 2px 25px;
-			}
-			&::before{
-				display:block;
-				position:absolute;
-				margin-top: -10px;
-				content:"";
-				width:2px;
-				height:80%;
-				background-color:#999;
-			}
-		}
-		@media (min-width:992px) and (max-width:1199px){
-			.tagline{
-				padding:0 10px 2px 0;
-			}
-			&::before{
-				display:block;
-				position:absolute;
-				margin-top: -10px;
-				margin-left: -30px;
-				content:"";
-				width:2px;
-				height:80%;
-				background-color:#999;
-			}
-		}
 		@media (max-width:767px){
 			.tagline{
 				padding:5px 0 0;
@@ -187,22 +168,33 @@
 	}
 	@media (min-width:992px){
 		.department{
-			padding:30px 15px 10px;
-			font-size:30/22 * 1em;
+            font-size:30/22 * 1em;
 			font-weight:400;
 		}
 	}
 	@media (min-width:768px) and (max-width:991px){
+        .row-eq-height{
+		display: flex;
+		align-items: center;
+        flex-direction: row;
+	    }
 		.department{
-			padding:30px 15px 15px;
-			font-size:24/20 * 1em;
+            font-size:24/20 * 1em;
 			font-weight:400;
 		}
 	}
+    @media (min-width:768px){
+        .row-eq-height{
+            flex-direction: row;
+	    }
+        .department{
+			padding-left:25px;
+		}
+	}
 	@media (max-width:767px){
+        
 		.department{
-			padding:0 15px 30px;
-			font-size:30/22 * 1em;
+            font-size:30/22 * 1em;
 			font-weight:400;
 			text-align:center;
 		}
