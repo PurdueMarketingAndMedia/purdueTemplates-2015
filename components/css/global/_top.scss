@@ -3,6 +3,7 @@
 	background-image:url('https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png');
 	background-color:#000;
 	background-repeat:repeat;
+	@include striped-bg(#232323, #000, thin)
 	.logo{
 		padding:25px 10px 25px 15px;
 		a{
@@ -23,7 +24,7 @@
 			a{
 				margin:0 auto;
 				width:100%;
-			} 
+			}
 		}
 		.svgLinkContainer {
 			  display: block;
@@ -73,13 +74,13 @@
 				padding-bottom:14.9792%;
 			  }
 		}
-		
+
 	}
 	.department{
 		color:#fff;
 		font-family:$font-archivo-narrow;
 		letter-spacing:0;
-		
+
 		> a{
 			display:inline-block;
 			padding:2px 25px;
@@ -117,7 +118,7 @@
 			font-weight:600;
 			text-decoration:none;
 		}
-		
+
 		.tagline{
 			display:block;
 			clear:left;
