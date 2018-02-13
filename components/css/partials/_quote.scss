@@ -1,28 +1,30 @@
-.pullQuote {
+.quote {
     margin: 1rem 0;
-    padding-left: 6rem;
+    padding-left: 2rem;
     position: relative;
 
     &::before {
         content: '';
         position: absolute;
         display: block;
-        width: 8px;
-        height: 110%;
-        left: 4rem;
-        top: -5%;
+        width: calc-toRem(8);
+        height: 100%;
+        left: 0;
+        top: 0;
         background: $color-campusGold;
     }
 
-    &-quote {
+    &-quotemark {
+        padding-left: 4rem;
+
         &::before {
             content: '“';
             color: $color-campusGold;
             font-size: calc-toRem(160);
             font-family: $font-archivo-narrow;
             background: none;
-            top: 46px;
-            left: 2rem;
+            top: calc-toRem(46);
+            left: 0;
             width: auto;
             height: auto;
         }
@@ -46,5 +48,25 @@
         font-weight: bold;
         font-size: calc-toRem(18);
         color: $color-headlineGold;
+    }
+}
+@media ( min-width: 600px ) {
+    .quote {
+        padding-left: 6rem;
+
+        &::before {
+            left: 4rem;
+            height: 110%;
+            top: -5%;
+        }
+
+        &-quotemark {
+            padding-left: 6rem;
+
+            &::before {
+                left: 2rem;
+                top: calc-toRem(46);
+            }
+        }
     }
 }
