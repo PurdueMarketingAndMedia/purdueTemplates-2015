@@ -1,0 +1,31 @@
+.highlight {
+    margin: 1em 0;
+    padding-left: 2em;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 8px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: $color-gray40;
+    }
+
+    &__title {
+        display: block;
+        padding: 0;
+        margin: 0;
+        color: inherit;
+        text-transform: uppercase;
+        font-size: calc-toRem(22);
+        font-weight: bold;
+    }
+
+    &__content {
+        display: block;
+        padding-bottom: 0;
+    }
+}
