@@ -1,0 +1,50 @@
+.pullQuote {
+    margin: 1rem 0;
+    padding-left: 6rem;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 8px;
+        height: 110%;
+        left: 4rem;
+        top: -5%;
+        background: $color-campusGold;
+    }
+
+    &-quote {
+        &::before {
+            content: '“';
+            color: $color-campusGold;
+            font-size: calc-toRem(160);
+            font-family: $font-archivo-narrow;
+            background: none;
+            top: 46px;
+            left: 2rem;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    &__content {
+        display: block;
+        padding: 0;
+        margin: 0;
+        font-family: $font-archivo-narrow;
+        font-weight: bold;
+        font-size: calc-toRem(24);
+        color: $color-gray90;
+    }
+
+    &__source {
+        display: block;
+        padding: 0;
+        padding-top: .5rem;
+        font-family: $font-archivo-narrow;
+        font-weight: bold;
+        font-size: calc-toRem(18);
+        color: $color-headlineGold;
+    }
+}
