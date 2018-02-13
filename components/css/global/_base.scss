@@ -20,52 +20,61 @@ body{
 	}
 }
 h1{
-	padding-top:0;
-	padding-bottom:0.25em;
+	// padding-top:0;
+	// padding-bottom:0.25em;
+	margin-top:0;
+	margin-bottom:0.25em;
 	font-family:$font-champion-welter;
 	color:$color-headlineGold;
-    font-size: calc-toEm(38);
-    line-height:1.1em;
+    font-size: calc-toEm(36);
+    line-height:1.2;
+	text-transform: uppercase;
 }
 h2{
-	padding-top:1em;
-	padding-bottom:0.15em;
+	//padding-top:1em;
+	//padding-bottom:0.15em;
+	margin-top:1rem;
+	margin-bottom:0.15em;
 	font-family:$font-archivo-narrow;
 	color:$color-headlineGold;
 	font-size: calc-toEm(32);
-	line-height:1.2em;
+	line-height:1.2;
 }
 h3{
-	padding-top:1em;
+	//padding-top:1em;
+	margin-top:1rem;
 	font-family:$font-archivo-narrow;
 	color:$color-gray70;
 	font-size: calc-toEm(28);
-	line-height:1.2em;
+	line-height:1.2;
 	font-weight:bold;
 }
 h4{
-	padding-top:1em;
+	//padding-top:1em;
+	margin-top:1rem;
 	font-family:$font-archivo-narrow;
 	color:$color-headlineGold;
 	font-weight:bold;
 	font-size: calc-toEm(24);
-	line-height:1.2em;
+	line-height:1.2;
 	text-transform:uppercase;
 }
 h5{
-	padding-top:1.5em;
+	//padding-top:1.5em;
+	margin-top:1rem;
 	font-family:$font-archivo-narrow;
 	font-weight:bold;
 	font-size: calc-toEm(22);
-	line-height:1.2em;
+	line-height:1.2;
 	text-transform:uppercase;
 }
 h6{
-	padding-top:2em;
+	//padding-top:2em;
+	margin-top:1rem;
 	font-family:$font-archivo-narrow;
 	font-weight:bold;
 	font-size: calc-toEm(18);
-	line-height:1.2em;
+	line-height:1.2;
 	text-transform:uppercase;
 }
 h1,h2,h3,h4,h5,h6{
@@ -74,28 +83,28 @@ h1,h2,h3,h4,h5,h6{
 		font-weight:inherit;
 	}
 }
-h1,h2,h3,h4,h5,h6{
-	margin-top:0;
-	margin-bottom:0;
-}
-h1+h3{
-	padding-top:0;
-}
-h3+h6,h4+h6{
-	padding-top:1em;
-}
-h4+h5,h5+h6{
-	padding-top:0.75em;
-}
-h2+h6,h3+h5,h3+h4{
-	padding-top:0.5em;
-}
-h1+h4,h1+h5,h1+h6,h2+h3,h2+h4,h2+h5{
-	padding-top:0.25em;
-}
-h1+h2{
-	padding-top:0.15em;
-}
+// h1,h2,h3,h4,h5,h6{
+// 	margin-top:0;
+// 	margin-bottom:0;
+// }
+// h1+h3{
+// 	padding-top:0;
+// }
+// h3+h6,h4+h6{
+// 	padding-top:1em;
+// }
+// h4+h5,h5+h6{
+// 	padding-top:0.75em;
+// }
+// h2+h6,h3+h5,h3+h4{
+// 	padding-top:0.5em;
+// }
+// h1+h4,h1+h5,h1+h6,h2+h3,h2+h4,h2+h5{
+// 	padding-top:0.25em;
+// }
+// h1+h2{
+// 	padding-top:0.15em;
+// }
 p{
 	margin:0 !important;
 	padding:7.5px 0;
