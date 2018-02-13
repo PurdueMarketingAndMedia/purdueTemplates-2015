@@ -10,22 +10,21 @@ body{
 	body{
 		font-family:$font-arial;
 		font-size:1em;
-		line-height:24/16*1em;
+		line-height:calc-toEm(24);
 	}
 }
 @media (max-width:767px){
 	body{
-		font-size:18/16*1em;
-		line-height:24/18*1em;
+		font-size:calc-toEm(18);
+		line-height:calc-toEm(24);
 	}
 }
 h1{
 	padding-top:0;
 	padding-bottom:0.25em;
-	font-family:$font-archivo-narrow;
-	font-weight:bold;
+	font-family:$font-champion-welter;
 	color:$color-headlineGold;
-    font-size:36/16 * 1em;
+    font-size: calc-toEm(38);
     line-height:1.1em;
 }
 h2{
@@ -33,29 +32,31 @@ h2{
 	padding-bottom:0.15em;
 	font-family:$font-archivo-narrow;
 	color:$color-headlineGold;
-	font-size:32/16 * 1em;
+	font-size: calc-toEm(32);
 	line-height:1.2em;
 }
 h3{
 	padding-top:1em;
 	font-family:$font-archivo-narrow;
-	color:$color-headlineGold;
-	font-size:28/16 * 1em;
+	color:$color-gray70;
+	font-size: calc-toEm(28);
 	line-height:1.2em;
+	font-weight:bold;
 }
 h4{
 	padding-top:1em;
 	font-family:$font-archivo-narrow;
+	color:$color-headlineGold;
 	font-weight:bold;
-	font-size:24/16 * 1em;
+	font-size: calc-toEm(24);
 	line-height:1.2em;
-	//text-transform:uppercase;
+	text-transform:uppercase;
 }
 h5{
 	padding-top:1.5em;
 	font-family:$font-archivo-narrow;
 	font-weight:bold;
-	font-size:20/16 * 1em;
+	font-size: calc-toEm(22);
 	line-height:1.2em;
 	text-transform:uppercase;
 }
@@ -63,24 +64,12 @@ h6{
 	padding-top:2em;
 	font-family:$font-archivo-narrow;
 	font-weight:bold;
-	font-size:1em;
+	font-size: calc-toEm(18);
 	line-height:1.2em;
 	text-transform:uppercase;
 }
 h1,h2,h3,h4,h5,h6{
-	a:link{
-		color:inherit;
-		font-weight:inherit;
-	}
-	a:visited{
-		color:inherit;
-		font-weight:inherit;
-	}
-	a:hover{
-		color:inherit;
-		font-weight:inherit;
-	}
-	a:active{
+	a:link, a:visited, a:hover, a:active {
 		color:inherit;
 		font-weight:inherit;
 	}
@@ -119,25 +108,13 @@ big{
 	font-size:1.25em;
 	line-height:1em;
 }
-a:link{
+a:link, a:visited, a:active, a:hover{
 	color:#000;
 	font-weight:700;
 	text-decoration:underline;
 }
-a:visited{
-	color:#000;
-	font-weight:700;
-	text-decoration:underline;
-}
-a:hover{
-	color:#000;
-	font-weight:700;
+a:hover {
 	text-decoration:none;
-}
-a:active{
-	color:#000;
-	font-weight:700;
-	text-decoration:underline;
 }
 ul,ol{
 	padding:10px 0 10px 35px;
