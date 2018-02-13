@@ -7788,17 +7788,16 @@ body {
 @media (max-width: 767px) {
   body {
     font-size: 1.125em;
-    line-height: 1.33333em;
+    line-height: 1.5em;
   }
 }
 
 h1 {
   padding-top: 0;
   padding-bottom: 0.25em;
-  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  font-weight: bold;
+  font-family: "Champion Welterwt A", "Champion Welterwt B", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
   color: #98700d;
-  font-size: 2.25em;
+  font-size: 2.375em;
   line-height: 1.1em;
 }
 
@@ -7814,24 +7813,27 @@ h2 {
 h3 {
   padding-top: 1em;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  color: #98700d;
+  color: #707070;
   font-size: 1.75em;
   line-height: 1.2em;
+  font-weight: bold;
 }
 
 h4 {
   padding-top: 1em;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
+  color: #98700d;
   font-weight: bold;
   font-size: 1.5em;
   line-height: 1.2em;
+  text-transform: uppercase;
 }
 
 h5 {
   padding-top: 1.5em;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   font-weight: bold;
-  font-size: 1.25em;
+  font-size: 1.375em;
   line-height: 1.2em;
   text-transform: uppercase;
 }
@@ -7840,27 +7842,12 @@ h6 {
   padding-top: 2em;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1.125em;
   line-height: 1.2em;
   text-transform: uppercase;
 }
 
-h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link {
-  color: inherit;
-  font-weight: inherit;
-}
-
-h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
-  color: inherit;
-  font-weight: inherit;
-}
-
-h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-  color: inherit;
-  font-weight: inherit;
-}
-
-h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+h1 a:link, h1 a:visited, h1 a:hover, h1 a:active, h2 a:link, h2 a:visited, h2 a:hover, h2 a:active, h3 a:link, h3 a:visited, h3 a:hover, h3 a:active, h4 a:link, h4 a:visited, h4 a:hover, h4 a:active, h5 a:link, h5 a:visited, h5 a:hover, h5 a:active, h6 a:link, h6 a:visited, h6 a:hover, h6 a:active {
   color: inherit;
   font-weight: inherit;
 }
@@ -7909,28 +7896,14 @@ big {
   line-height: 1em;
 }
 
-a:link {
-  color: #000;
-  font-weight: 700;
-  text-decoration: underline;
-}
-
-a:visited {
+a:link, a:visited, a:active, a:hover {
   color: #000;
   font-weight: 700;
   text-decoration: underline;
 }
 
 a:hover {
-  color: #000;
-  font-weight: 700;
   text-decoration: none;
-}
-
-a:active {
-  color: #000;
-  font-weight: 700;
-  text-decoration: underline;
 }
 
 ul, ol {
