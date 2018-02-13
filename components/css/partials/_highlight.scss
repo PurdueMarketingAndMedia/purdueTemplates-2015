@@ -7,7 +7,7 @@
         content: '';
         position: absolute;
         display: block;
-        width: 8px;
+        width: calc-toRem(8);
         height: 100%;
         left: 0;
         top: 0;
@@ -20,8 +20,9 @@
         margin: 0;
         color: inherit;
         text-transform: uppercase;
-        font-size: calc-toRem(22);
+        font-size: calc-toRem(18);
         font-weight: bold;
+        font-family: $font-archivo-narrow;
     }
 
     &__content {
