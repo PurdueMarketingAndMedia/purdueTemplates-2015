@@ -52,9 +52,39 @@
 					width:100%;
 					margin-bottom:20px;
 				}
-				ul{
+				ul, ol {
+					list-style-type: none;
 					li{
 						padding:3px 0;
+					}
+				}
+				ol > li, ul > li {
+					&::before {
+						width: 1em;
+						margin-left: -1em;
+						position: relative;
+						color: $color-campusGold;
+						font-size: calc-toRem(18);
+					}
+				}
+				ul > li {
+					&::before {
+						content: "•";
+						display: inline-block;
+						font-size: calc-toRem(33);
+						line-height: 0;
+						top: 5px;
+						right: -6px;
+					}
+				}
+				ol {
+					counter-reset: li;
+				}
+				ol > li {
+					&::before {
+						counter-increment: li;
+						content: counter(li)".";
+						right: .6em;
 					}
 				}
 				.imageContainer{
