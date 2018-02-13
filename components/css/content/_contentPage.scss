@@ -53,40 +53,119 @@
 					margin-bottom:20px;
 				}
 				ul, ol {
-					list-style-type: none;
 					li{
-						padding:3px 0;
+						padding: 3px 0;
 					}
 				}
-				ol > li, ul > li {
-					&::before {
-						width: 1em;
-						margin-left: -1em;
-						position: relative;
-						color: $color-campusGold;
-						font-size: calc-toRem(18);
-					}
-				}
-				ul > li {
-					&::before {
-						content: "•";
-						display: inline-block;
-						font-size: calc-toRem(33);
-						line-height: 0;
-						top: 5px;
-						right: -6px;
-					}
-				}
-				ol {
-					counter-reset: li;
+				li > ol {
+					padding-top: 0;
+					padding-bottom: 0;
 				}
 				ol > li {
 					&::before {
-						counter-increment: li;
-						content: counter(li)".";
-						right: .6em;
+						width: 1em;
+						margin-left: -1em;
 					}
 				}
+
+				// spacing for all ol li::before
+				ul > li {
+					&::before {
+						content: "";
+						width: calc-toRem(8);
+						height: calc-toRem(8);
+						display: inline-block;
+						font-size: calc-toRem(33);
+						position: relative;
+						top: calc-toRem(-2);
+						right: calc-toRem(13);
+					}
+				}
+				// define the styles for the different levels
+				ul {
+					padding-left: 22px;
+					list-style-type: none;
+
+					> li {
+						&::before {
+							background-color: $color-campusGold;
+							border-radius: 50%;
+						}
+					}
+
+					ul {
+						> li {
+							&::before {
+								background-color: #fff;
+								border-radius: 50%;
+								border: calc-toRem(2) solid $color-campusGold;
+							}
+						}
+
+						ul {
+							> li {
+								&::before {
+									border: 0;
+									border-radius: 0;
+									background-color: $color-campusGold;
+									width: calc-toRem(8);
+									height: calc-toRem(8);
+								}
+							}
+
+						}
+					}
+				}
+
+				// if the browser supports css counters, use gold bullets and numbers
+				@supports( counter-reset: li ) {
+
+					// spacing for all ol li::before
+					ol > li {
+						&::before {
+							position: relative;
+							color: $color-campusGold;
+							right: .6em;
+							margin-left: -.8em;
+						}
+					}
+
+					// define the numbering system for the different levels
+					ol {
+						list-style-type: none;
+						counter-reset: l1;
+
+						> li {
+							&::before {
+								counter-increment: l1;
+								content: counter(l1)".";
+							}
+						}
+
+						ol {
+							counter-reset: l2;
+
+							> li {
+								&::before {
+									counter-increment: l2;
+									content: counter(l2, lower-alpha)".";
+								}
+							}
+
+							ol {
+								counter-reset: l3;
+
+								> li {
+									&::before {
+										counter-increment: l3;
+										content: counter(l3, lower-roman)".";
+									}
+								}
+							}
+						}
+					}
+				}
+
 				.imageContainer{
 					max-width:100%;
 				}
