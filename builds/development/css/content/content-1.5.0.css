@@ -3254,6 +3254,7 @@ u {
 
 .top .logo {
   padding: 25px;
+  align-items: center;
 }
 
 .top .logo::after {
@@ -3286,8 +3287,7 @@ u {
 }
 
 @media (max-width: 767px) {
-  .top .logo a {
-    margin: 0 auto;
+  .top .logo a img {
     width: 100%;
   }
 }
@@ -3321,22 +3321,10 @@ u {
   padding-right: 0px;
 }
 
-@media (min-width: 1200px) {
-  .top .logo .svgLinkContainer {
-    width: 100%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .top .logo .svgLinkContainer {
-    width: 100%;
-  }
-}
-
 @media (max-width: 767px) {
   .top .logo .svgLinkContainer {
     margin: 0 auto;
-    width: 40%;
+    width: 50%;
     padding-bottom: 14.9792%;
   }
 }
@@ -3352,6 +3340,8 @@ u {
 .top .department > a {
   display: inline-block;
   line-height: 1.1em;
+  border: none;
+  padding: 0;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -3362,31 +3352,7 @@ u {
   }
 }
 
-@media (max-width: 767px) {
-  .top .department > a {
-    border: none;
-  }
-}
-
-.top .department > a:link {
-  color: inherit;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.top .department > a:visited {
-  color: inherit;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.top .department > a:hover {
-  color: inherit;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.top .department > a:active {
+.top .department > a:link, .top .department a:visited, .top .department a:hover, .top .department a:active {
   color: inherit;
   font-weight: 600;
   text-decoration: none;
@@ -3403,41 +3369,15 @@ u {
   text-transform: uppercase;
 }
 
-.top .department .tagline a:link {
+.top .department .tagline a:link, .top .department .tagline a:visited, .top .department .tagline a:hover, .top .department .tagline a:active {
   color: inherit;
   font-weight: 100;
   text-decoration: none;
-}
-
-.top .department .tagline a:visited {
-  color: inherit;
-  font-weight: 100;
-  text-decoration: none;
-}
-
-.top .department .tagline a:hover {
-  color: inherit;
-  font-weight: 100;
-  text-decoration: none;
-}
-
-.top .department .tagline a:active {
-  color: inherit;
-  font-weight: 100;
-  text-decoration: none;
-}
-
-@media (max-width: 767px) {
-  .top .department .tagline {
-    padding: 5px 0 0;
-    border: none;
-  }
 }
 
 @media (min-width: 992px) {
   .top .department {
     font-size: 1.36364em;
-    font-weight: 400;
   }
 }
 
@@ -3449,7 +3389,6 @@ u {
   }
   .top .department {
     font-size: 1.2em;
-    font-weight: 400;
   }
 }
 
@@ -3465,8 +3404,11 @@ u {
 @media (max-width: 767px) {
   .top .department {
     font-size: 1.36364em;
-    font-weight: 400;
     text-align: center;
+  }
+  .top .tagline {
+    padding: 5px 0 0;
+    border: none;
   }
 }
 
