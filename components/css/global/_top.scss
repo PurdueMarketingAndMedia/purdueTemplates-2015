@@ -7,10 +7,11 @@
 	.row-eq-height{
 		display: flex;
 		align-items: center;
-        flex-direction: column;
+		flex-direction: column;
 	}
 	.logo{
 		padding:25px;
+		align-items: center;
         &::after{
             display:block;
             position:absolute;
@@ -37,8 +38,9 @@
 		}
 		@media (max-width:767px){
 			a{
-				margin:0 auto;
-				width:100%;
+				img{
+					width:100%;
+				}
 			}
 		}
 		.svgLinkContainer {
@@ -49,14 +51,14 @@
 			  padding-bottom: 29.95839%;
 			  z-index: 2;
 			  &::after{
-				content:"";
-				display:block;
-				position:absolute;
-				top:0;
-				right:0;
-				bottom:0;
-				left:0;
-			  }
+					content:"";
+					display:block;
+					position:absolute;
+					top:0;
+					right:0;
+					bottom:0;
+					left:0;
+				  }
 			}
 			.svgContainer {
 			  display: block;
@@ -67,34 +69,25 @@
 			  z-index: -1;
 			  padding-right: 0px;
 			}
-			@media (min-width:1200px){
-				.svgLinkContainer{
-					width:100%;
-			  	}
-			}
-            @media (min-width:768px) and (max-width:991px){
-			  .svgLinkContainer{
-				width:100%;
-			  }
-			}
 			@media (max-width:767px){
 			  .svgLinkContainer{
-				margin:0 auto;
-				width: 40%;
-				padding-bottom:14.9792%;
-			  }
+					margin:0 auto;
+					width: 50%;
+					padding-bottom:14.9792%;
+			  	}
         }
     }
 	.department{
 		color:#fff;
 		font-family:$font-archivo-narrow;
 		letter-spacing:0;
-        padding-left: 15px;
-        padding-right: 15px;
-
+		padding-left: 15px;
+		padding-right: 15px;
 		> a{
 			display:inline-block;
-            line-height:1.1em;
+			line-height:1.1em;
+			border:none;
+			padding:0;
 		}
 		@media (min-width:992px) and (max-width:1199px){
 			> a{
@@ -103,32 +96,11 @@
 			line-height:1.1em;
 			}
 		}
-		@media (max-width:767px){
-			> a{
-				border:none;
-			}
-		}
-		> a:link{
+		> a:link, a:visited, a:hover, a:active{
 			color:inherit;
 			font-weight:600;
 			text-decoration:none;
 		}
-		> a:visited{
-			color:inherit;
-			font-weight:600;
-			text-decoration:none;
-		}
-		> a:hover{
-			color:inherit;
-			font-weight:600;
-			text-decoration:none;
-		}
-		> a:active{
-			color:inherit;
-			font-weight:600;
-			text-decoration:none;
-		}
-
 		.tagline{
 			display:block;
 			clear:left;
@@ -138,65 +110,44 @@
 			line-height:1.2em;
 			letter-spacing:.5px;
 			text-transform: uppercase;
-			a:link{
-				color:inherit;
-				font-weight:100;
-				text-decoration:none;
-			}
-			a:visited{
-				color:inherit;
-				font-weight:100;
-				text-decoration:none;
-			}
-			a:hover{
-				color:inherit;
-				font-weight:100;
-				text-decoration:none;
-			}
-			a:active{
+			a:link, a:visited, a:hover, a:active{
 				color:inherit;
 				font-weight:100;
 				text-decoration:none;
 			}
 		}
-		@media (max-width:767px){
+	}
+	@media (min-width:992px){
+			.department{
+				font-size:30/22 * 1em;
+			}
+		}
+	@media (min-width:768px) and (max-width:991px){
+			.row-eq-height{
+					display: flex;
+					align-items: center;
+	        flex-direction: row;
+		    }
+			.department{
+					font-size:24/20 * 1em;
+			}
+		}
+	@media (min-width:768px){
+        .row-eq-height{
+            flex-direction: row;
+	    	}
+        .department{
+						padding-left:25px;
+				}
+		}
+	@media (max-width:767px){
+    	.department{
+	  		font-size:30/22 * 1em;
+				text-align:center;
+			}
 			.tagline{
 				padding:5px 0 0;
 				border:none;
 			}
 		}
 	}
-	@media (min-width:992px){
-		.department{
-            font-size:30/22 * 1em;
-			font-weight:400;
-		}
-	}
-	@media (min-width:768px) and (max-width:991px){
-        .row-eq-height{
-		display: flex;
-		align-items: center;
-        flex-direction: row;
-	    }
-		.department{
-            font-size:24/20 * 1em;
-			font-weight:400;
-		}
-	}
-    @media (min-width:768px){
-        .row-eq-height{
-            flex-direction: row;
-	    }
-        .department{
-			padding-left:25px;
-		}
-	}
-	@media (max-width:767px){
-        
-		.department{
-            font-size:30/22 * 1em;
-			font-weight:400;
-			text-align:center;
-		}
-	}
-}
