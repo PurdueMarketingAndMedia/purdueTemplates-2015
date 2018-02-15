@@ -88,7 +88,7 @@
 
 					> li {
 						&::before {
-							background-color: $color-campusGold;
+							background-color: $color-headlineGold;
 							border-radius: 50%;
 						}
 					}
@@ -98,7 +98,7 @@
 							&::before {
 								background-color: #fff;
 								border-radius: 50%;
-								border: calc-toRem(2) solid $color-campusGold;
+								border: calc-toRem(2) solid $color-headlineGold;
 							}
 						}
 
@@ -107,7 +107,7 @@
 								&::before {
 									border: 0;
 									border-radius: 0;
-									background-color: $color-campusGold;
+									background-color: $color-headlineGold;
 									width: calc-toRem(8);
 									height: calc-toRem(8);
 								}
@@ -124,9 +124,10 @@
 					ol > li {
 						&::before {
 							position: relative;
-							color: $color-campusGold;
+							color: $color-headlineGold;
 							right: .6em;
 							margin-left: -.8em;
+							font-weight: 700;
 						}
 					}
 
