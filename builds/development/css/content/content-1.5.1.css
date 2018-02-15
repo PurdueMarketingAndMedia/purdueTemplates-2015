@@ -9605,8 +9605,8 @@ u {
 }
 
 .highlight {
-  margin: 1em 0;
-  padding-left: 2em;
+  margin: 1rem 0;
+  padding-left: 2rem;
   position: relative;
 }
 
@@ -9614,7 +9614,7 @@ u {
   content: '';
   position: absolute;
   display: block;
-  width: 0.5em;
+  width: 0.5rem;
   height: 100%;
   left: 0;
   top: 0;
@@ -9641,8 +9641,8 @@ u {
 }
 
 .quote {
-  margin: 1em 0;
-  padding-left: 2em;
+  margin: 1rem 0;
+  padding-left: 2rem;
   position: relative;
 }
 
@@ -9650,7 +9650,7 @@ u {
   content: '';
   position: absolute;
   display: block;
-  width: 0.5em;
+  width: 0.5rem;
   height: 100%;
   left: 0;
   top: 0;
@@ -9658,16 +9658,16 @@ u {
 }
 
 .quote-mark {
-  padding-left: 4em;
+  padding-left: 4rem;
 }
 
 .quote-mark::before {
   content: '“';
   color: #c28e0e;
-  font-size: 10em;
+  font-size: 10rem;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   background: none;
-  top: .28em;
+  top: 2.6875rem;
   left: 0;
   width: auto;
   height: auto;
@@ -9679,35 +9679,35 @@ u {
   margin: 0;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: #2e2e2e;
 }
 
 .quote__source {
   display: block;
   padding: 0;
-  padding-top: .5em;
+  padding-top: .5rem;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   font-weight: bold;
-  font-size: 1.125em;
+  font-size: 1.125rem;
   color: #98700d;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .quote {
-    padding-left: 6em;
+    padding-left: 6rem;
   }
   .quote::before {
-    left: 4em;
+    left: 4rem;
     height: 110%;
     top: -5%;
   }
   .quote-mark {
-    padding-left: 6em;
+    padding-left: 6rem;
   }
   .quote-mark::before {
-    left: .22em;
-    top: .28em;
+    left: 2rem;
+    top: 2.6875rem;
   }
 }
 
