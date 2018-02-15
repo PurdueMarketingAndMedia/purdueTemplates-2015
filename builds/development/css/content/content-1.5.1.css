@@ -1,5 +1,5 @@
 @charset "UTF-8";
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, .highlight__title, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -1511,7 +1511,7 @@ hr {
   cursor: pointer;
 }
 
-h1, h2, h3, h4, h5, h6,
+h1, h2, h3, h4, h5, .highlight__title, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 500;
@@ -1523,8 +1523,8 @@ h1 small,
 h1 .small, h2 small,
 h2 .small, h3 small,
 h3 .small, h4 small,
-h4 .small, h5 small,
-h5 .small, h6 small,
+h4 .small, h5 small, .highlight__title small,
+h5 .small, .highlight__title .small, h6 small,
 h6 .small,
 .h1 small,
 .h1 .small, .h2 small,
@@ -1558,7 +1558,8 @@ h3 .small, .h3 small,
 }
 
 h4, .h4,
-h5, .h5,
+h5,
+.highlight__title, .h5,
 h6, .h6 {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -1567,8 +1568,8 @@ h6, .h6 {
 h4 small,
 h4 .small, .h4 small,
 .h4 .small,
-h5 small,
-h5 .small, .h5 small,
+h5 small, .highlight__title small,
+h5 .small, .highlight__title .small, .h5 small,
 .h5 .small,
 h6 small,
 h6 .small, .h6 small,
@@ -1592,7 +1593,7 @@ h4, .h4 {
   font-size: 18px;
 }
 
-h5, .h5 {
+h5, .highlight__title, .h5 {
   font-size: 14px;
 }
 
@@ -7779,7 +7780,6 @@ body {
 
 @media (min-width: 768px) {
   body {
-    font-family: "Arial", "Helvetica Neue", "Helvetica", sans-serif;
     font-size: 1em;
     line-height: 1.5em;
   }
@@ -7793,69 +7793,69 @@ body {
 }
 
 h1 {
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-transform: uppercase;
   margin-top: 0;
-  margin-bottom: 0.25em;
   font-family: "Champion Welterwt A", "Champion Welterwt B", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
   color: #98700d;
   font-size: 2.25em;
-  line-height: 1.2;
-  text-transform: uppercase;
+  font-weight: 400;
 }
 
 h2 {
-  margin-top: 1rem;
-  margin-bottom: 0.15em;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
+  margin-bottom: 1rem;
+  line-height: 1.2;
   color: #98700d;
   font-size: 2em;
-  line-height: 1.2;
+  font-weight: 400;
 }
 
 h3 {
-  margin-top: 1rem;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  font-weight: 700;
   color: #707070;
   font-size: 1.75em;
-  line-height: 1.2;
-  font-weight: bold;
 }
 
 h4 {
-  margin-top: 1rem;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  color: #98700d;
-  font-weight: bold;
-  font-size: 1.5em;
+  margin-bottom: 1rem;
   line-height: 1.2;
   text-transform: uppercase;
+  font-weight: 700;
+  color: #98700d;
+  font-size: 1.5em;
 }
 
-h5 {
-  margin-top: 1rem;
+h5, .highlight__title {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  font-weight: bold;
-  font-size: 1.375em;
+  margin-bottom: 1rem;
   line-height: 1.2;
   text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.375em;
 }
 
 h6 {
-  margin-top: 1rem;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  font-weight: bold;
-  font-size: 1.125em;
+  margin-bottom: 1rem;
   line-height: 1.2;
   text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.125em;
 }
 
-h1 a:link, h1 a:visited, h1 a:hover, h1 a:active, h2 a:link, h2 a:visited, h2 a:hover, h2 a:active, h3 a:link, h3 a:visited, h3 a:hover, h3 a:active, h4 a:link, h4 a:visited, h4 a:hover, h4 a:active, h5 a:link, h5 a:visited, h5 a:hover, h5 a:active, h6 a:link, h6 a:visited, h6 a:hover, h6 a:active {
+h1 a:active, h1 a:hover, h1 a:link, h1 a:visited, h2 a:active, h2 a:hover, h2 a:link, h2 a:visited, h3 a:active, h3 a:hover, h3 a:link, h3 a:visited, h4 a:active, h4 a:hover, h4 a:link, h4 a:visited, h5 a:active, .highlight__title a:active, h5 a:hover, .highlight__title a:hover, h5 a:link, .highlight__title a:link, h5 a:visited, .highlight__title a:visited, h6 a:active, h6 a:hover, h6 a:link, h6 a:visited {
   color: inherit;
   font-weight: inherit;
 }
 
 p {
-  margin: 0 !important;
-  padding: 7.5px 0;
+  margin-bottom: 1em;
 }
 
 small {
@@ -7868,7 +7868,7 @@ big {
   line-height: 1em;
 }
 
-a:link, a:visited, a:active, a:hover {
+a:active, a:hover, a:link, a:visited {
   color: #000;
   font-weight: 700;
   text-decoration: underline;
@@ -7878,7 +7878,7 @@ a:hover {
   text-decoration: none;
 }
 
-ul, ol {
+ol, ul {
   padding: 10px 0 10px 35px;
 }
 
@@ -7896,11 +7896,11 @@ ul ul ul {
   list-style-type: square;
 }
 
-strong, b {
+b, strong {
   font-weight: 700;
 }
 
-i, em {
+em, i {
   font-style: italic;
 }
 
@@ -7917,11 +7917,11 @@ u {
 }
 
 .transition {
-  -webkit-transition-duration: .3s;
-  -moz-transition-duration: .3s;
-  -o-transition-duration: .3s;
-  transition-duration: .3s;
-  -ms-transition-duration: .3s;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
 }
 
 .nav-skipto {
@@ -9615,7 +9615,7 @@ u {
   content: '';
   position: absolute;
   display: block;
-  width: 0.5rem;
+  width: 0.5em;
   height: 100%;
   left: 0;
   top: 0;
@@ -9627,10 +9627,7 @@ u {
   padding: 0;
   margin: 0;
   color: inherit;
-  text-transform: uppercase;
-  font-size: 1.125rem;
-  font-weight: bold;
-  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
+  line-height: normal;
 }
 
 .highlight__content {
@@ -9639,8 +9636,8 @@ u {
 }
 
 .quote {
-  margin: 1rem 0;
-  padding-left: 2rem;
+  margin: 1em 0;
+  padding-left: 2em;
   position: relative;
 }
 
@@ -9648,24 +9645,24 @@ u {
   content: '';
   position: absolute;
   display: block;
-  width: 0.5rem;
+  width: 0.5em;
   height: 100%;
   left: 0;
   top: 0;
   background: #c28e0e;
 }
 
-.quote-quotemark {
-  padding-left: 4rem;
+.quote-mark {
+  padding-left: 4em;
 }
 
-.quote-quotemark::before {
+.quote-mark::before {
   content: '“';
   color: #c28e0e;
-  font-size: 10rem;
+  font-size: 10em;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   background: none;
-  top: 2.875rem;
+  top: .28em;
   left: 0;
   width: auto;
   height: auto;
@@ -9677,35 +9674,35 @@ u {
   margin: 0;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   color: #2e2e2e;
 }
 
 .quote__source {
   display: block;
   padding: 0;
-  padding-top: .5rem;
+  padding-top: .5em;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   font-weight: bold;
-  font-size: 1.125rem;
+  font-size: 1.125em;
   color: #98700d;
 }
 
 @media (min-width: 600px) {
   .quote {
-    padding-left: 6rem;
+    padding-left: 6em;
   }
   .quote::before {
-    left: 4rem;
+    left: 4em;
     height: 110%;
     top: -5%;
   }
-  .quote-quotemark {
-    padding-left: 6rem;
+  .quote-mark {
+    padding-left: 6em;
   }
-  .quote-quotemark::before {
-    left: 2rem;
-    top: 2.875rem;
+  .quote-mark::before {
+    left: .22em;
+    top: .28em;
   }
 }
 
@@ -9796,20 +9793,20 @@ u {
 }
 
 .content .container .row .maincontent ul > li::before {
-  background-color: #c28e0e;
+  background-color: #98700d;
   border-radius: 50%;
 }
 
 .content .container .row .maincontent ul ul > li::before {
   background-color: #fff;
   border-radius: 50%;
-  border: 0.125rem solid #c28e0e;
+  border: 0.125rem solid #98700d;
 }
 
 .content .container .row .maincontent ul ul ul > li::before {
   border: 0;
   border-radius: 0;
-  background-color: #c28e0e;
+  background-color: #98700d;
   width: 0.5rem;
   height: 0.5rem;
 }
@@ -9817,9 +9814,10 @@ u {
 @supports (counter-reset: li) {
   .content .container .row .maincontent ol > li::before {
     position: relative;
-    color: #c28e0e;
+    color: #98700d;
     right: .6em;
     margin-left: -.8em;
+    font-weight: 700;
   }
   .content .container .row .maincontent ol {
     list-style-type: none;
