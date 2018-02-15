@@ -1,0 +1,22 @@
+//not currently being used/imported
+
+.heading {
+    &-1 {
+        @extend h1;
+    }
+    &-2 {
+        @extend h2;
+    }
+    &-3 {
+        @extend h3;
+    }
+    &-4 {
+        @extend h4;
+    }
+    &-5 {
+        @extend h5;
+    }
+    &-6 {
+        @extend h6;
+    }
+}
