@@ -15,7 +15,7 @@
     }
 
     &__title {
-        @extend h5;
+        @include h5;
         display: block;
         padding: 0;
         margin: 0;

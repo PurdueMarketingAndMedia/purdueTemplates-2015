@@ -22,60 +22,27 @@ body {
 }
 
 h1 {
-	margin-bottom: 1rem;
-	line-height: 1.2;
-	text-transform: uppercase;
-	margin-top: 0;
-	font-family: $font-champion-welter;
-	color: $color-headlineGold;
-	font-size: calc-toEm(36);
-	font-weight: 400;
+	@include h1;
 }
 
 h2 {
-	font-family: $font-archivo-narrow;
-	margin-bottom: 1rem;
-	line-height: 1.2;
-	color: $color-headlineGold;
-	font-size: calc-toEm(32);
-	font-weight: 400;
+	@include h2;
 }
 
 h3 {
-	font-family: $font-archivo-narrow;
-	margin-bottom: 1rem;
-	line-height: 1.2;
-	font-weight: 700;
-	color: $color-gray70;
-	font-size: calc-toEm(28);
+	@include h3;
 }
 
 h4 {
-	font-family: $font-archivo-narrow;
-	margin-bottom: 1rem;
-	line-height: 1.2;
-	text-transform: uppercase;
-	font-weight: 700;
-	color: $color-headlineGold;
-	font-size: calc-toEm(24);
+	@include h4;
 }
 
 h5 {
-	font-family: $font-archivo-narrow;
-	margin-bottom: 1rem;
-	line-height: 1.2;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: calc-toEm(22);
+	@include h5;
 }
 
 h6 {
-	font-family: $font-archivo-narrow;
-	margin-bottom: 1rem;
-	line-height: 1.2;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: calc-toEm(18);
+	@include h6;
 }
 
 
