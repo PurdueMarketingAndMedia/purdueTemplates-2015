@@ -1,29 +1,29 @@
 .quote {
-    margin: 1rem 0;
-    padding-left: 2rem;
+    margin: 1em 0;
+    padding-left: 2em;
     position: relative;
 
     &::before {
         content: '';
         position: absolute;
         display: block;
-        width: calc-toRem(8);
+        width: calc-toEm(8);
         height: 100%;
         left: 0;
         top: 0;
         background: $color-campusGold;
     }
 
-    &-quotemark {
-        padding-left: 4rem;
+    &-mark {
+        padding-left: 4em;
 
         &::before {
             content: '“';
             color: $color-campusGold;
-            font-size: calc-toRem(160);
+            font-size: calc-toEm(160);
             font-family: $font-archivo-narrow;
             background: none;
-            top: calc-toRem(46);
+            top: .28em;
             left: 0;
             width: auto;
             height: auto;
@@ -36,36 +36,36 @@
         margin: 0;
         font-family: $font-archivo-narrow;
         font-weight: bold;
-        font-size: calc-toRem(24);
+        font-size: calc-toEm(24);
         color: $color-gray90;
     }
 
     &__source {
         display: block;
         padding: 0;
-        padding-top: .5rem;
+        padding-top: .5em;
         font-family: $font-archivo-narrow;
         font-weight: bold;
-        font-size: calc-toRem(18);
+        font-size: calc-toEm(18);
         color: $color-headlineGold;
     }
 }
 @media ( min-width: 600px ) {
     .quote {
-        padding-left: 6rem;
+        padding-left: 6em;
 
         &::before {
-            left: 4rem;
+            left: 4em;
             height: 110%;
             top: -5%;
         }
 
-        &-quotemark {
-            padding-left: 6rem;
+        &-mark {
+            padding-left: 6em;
 
             &::before {
-                left: 2rem;
-                top: calc-toRem(46);
+                left: .22em;
+                top: .28em;
             }
         }
     }
