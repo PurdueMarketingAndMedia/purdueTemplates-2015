@@ -1,13 +1,13 @@
 .quote {
-    margin: 1em 0;
-    padding-left: 2em;
+    margin: 1rem 0;
+    padding-left: 2rem;
     position: relative;
 
     &::before {
         content: '';
         position: absolute;
         display: block;
-        width: calc-toEm(8);
+        width: calc-toRem(8);
         height: 100%;
         left: 0;
         top: 0;
@@ -15,15 +15,15 @@
     }
 
     &-mark {
-        padding-left: 4em;
+        padding-left: 4rem;
 
         &::before {
             content: '“';
             color: $color-campusGold;
-            font-size: calc-toEm(160);
+            font-size: calc-toRem(160);
             font-family: $font-archivo-narrow;
             background: none;
-            top: .28em;
+            top: calc-toRem(43);
             left: 0;
             width: auto;
             height: auto;
@@ -36,36 +36,36 @@
         margin: 0;
         font-family: $font-archivo-narrow;
         font-weight: bold;
-        font-size: calc-toEm(24);
+        font-size: calc-toRem(24);
         color: $color-gray90;
     }
 
     &__source {
         display: block;
         padding: 0;
-        padding-top: .5em;
+        padding-top: .5rem;
         font-family: $font-archivo-narrow;
         font-weight: bold;
-        font-size: calc-toEm(18);
+        font-size: calc-toRem(18);
         color: $color-headlineGold;
     }
 }
-@media ( min-width: 600px ) {
+@media ( min-width: 37.5em ) {
     .quote {
-        padding-left: 6em;
+        padding-left: 6rem;
 
         &::before {
-            left: 4em;
+            left: 4rem;
             height: 110%;
             top: -5%;
         }
 
         &-mark {
-            padding-left: 6em;
+            padding-left: 6rem;
 
             &::before {
-                left: .22em;
-                top: .28em;
+                left: calc-toRem(32);
+                top: calc-toRem(43);
             }
         }
     }

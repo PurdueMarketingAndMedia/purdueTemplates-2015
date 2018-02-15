@@ -1,13 +1,13 @@
 .highlight {
-    margin: 1em 0;
-    padding-left: 2em;
+    margin: 1rem 0;
+    padding-left: 2rem;
     position: relative;
 
     &::before {
         content: '';
         position: absolute;
         display: block;
-        width: calc-toEm(8);
+        width: calc-toRem(8);
         height: 100%;
         left: 0;
         top: 0;
