@@ -1,4 +1,7 @@
 .quote {
+    padding: 0;
+    border: 0;
+    font-size: unset;
     margin: 1rem 0;
     padding-left: 2rem;
     position: relative;
@@ -18,15 +21,14 @@
         padding-left: 4rem;
 
         &::before {
-            content: '“';
-            color: $color-campusGold;
-            font-size: calc-toRem(160);
-            font-family: $font-archivo-narrow;
-            background: none;
-            top: calc-toRem(43);
-            left: 0;
             width: auto;
             height: auto;
+            background: none;
+            display:block;
+            width:3rem;
+            height:3rem;
+            background-image:url("data:image/svg+xml;charset=UTF-8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 50 50' xml:space='preserve'><path style='fill:"+$color-campusGold+";stroke:rgba(0,0,0,0);' d='M14.8604,26.5957h7.6001v20.5205h-19V28.3057l9.1201-25.27h9.8799L14.8604,26.5957z M38.9912,26.5957h7.6006v20.5205h-19.001V28.3057l9.1201-25.27h9.8809L38.9912,26.5957z'/></svg>");
+            background-size:cover;
         }
     }
 
@@ -38,6 +40,7 @@
         font-weight: bold;
         font-size: calc-toRem(24);
         color: $color-gray90;
+        line-height: 1.25;
     }
 
     &__source {
@@ -55,17 +58,17 @@
         padding-left: 6rem;
 
         &::before {
-            left: 4rem;
             height: 110%;
+            left: 4rem;
             top: -5%;
         }
 
         &-mark {
-            padding-left: 6rem;
 
             &::before {
-                left: calc-toRem(32);
-                top: calc-toRem(43);
+                height: 3rem;
+                left: 2rem;
+                top: 0;
             }
         }
     }
