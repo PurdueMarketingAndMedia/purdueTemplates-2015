@@ -7792,7 +7792,7 @@ body {
 }
 
 h1 {
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
   line-height: 1.2;
   text-transform: uppercase;
   margin-top: 0;
@@ -7804,7 +7804,7 @@ h1 {
 
 h2 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
   line-height: 1.2;
   color: #98700d;
   font-size: 2em;
@@ -7813,7 +7813,7 @@ h2 {
 
 h3 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
   line-height: 1.2;
   font-weight: 700;
   color: #707070;
@@ -7822,7 +7822,7 @@ h3 {
 
 h4 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
@@ -7832,7 +7832,7 @@ h4 {
 
 h5 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
@@ -7841,14 +7841,14 @@ h5 {
 
 h6 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.125em;
 }
 
-h1 a:active, h1 a:hover, h1 a:link, h1 a:visited, h2 a:active, h2 a:hover, h2 a:link, h2 a:visited, h3 a:active, h3 a:hover, h3 a:link, h3 a:visited, h4 a:active, h4 a:hover, h4 a:link, h4 a:visited, h5 a:active, h5 a:hover, h5 a:link, h5 a:visited, h6 a:active, h6 a:hover, h6 a:link, h6 a:visited {
+h1 a:link, h1 a:visited, h1 a:hover, h1 a:active, h2 a:link, h2 a:visited, h2 a:hover, h2 a:active, h3 a:link, h3 a:visited, h3 a:hover, h3 a:active, h4 a:link, h4 a:visited, h4 a:hover, h4 a:active, h5 a:link, h5 a:visited, h5 a:hover, h5 a:active, h6 a:link, h6 a:visited, h6 a:hover, h6 a:active {
   color: inherit;
   font-weight: inherit;
 }
@@ -7867,7 +7867,7 @@ big {
   line-height: 1em;
 }
 
-a:active, a:hover, a:link, a:visited {
+a:link, a:visited, a:hover, a:active {
   color: #000;
   font-weight: 700;
   text-decoration: underline;
@@ -9623,7 +9623,7 @@ u {
 
 .highlight__title {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
@@ -9641,6 +9641,9 @@ u {
 }
 
 .quote {
+  padding: 0;
+  border: 0;
+  font-size: unset;
   margin: 1rem 0;
   padding-left: 2rem;
   position: relative;
@@ -9662,15 +9665,14 @@ u {
 }
 
 .quote-mark::before {
-  content: '“';
-  color: #c28e0e;
-  font-size: 10rem;
-  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  background: none;
-  top: 2.6875rem;
-  left: 0;
   width: auto;
   height: auto;
+  background: none;
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 50 50' xml:space='preserve'><path style='fill:#c28e0e;stroke:rgba(0,0,0,0);' d='M14.8604,26.5957h7.6001v20.5205h-19V28.3057l9.1201-25.27h9.8799L14.8604,26.5957z M38.9912,26.5957h7.6006v20.5205h-19.001V28.3057l9.1201-25.27h9.8809L38.9912,26.5957z'/></svg>");
+  background-size: cover;
 }
 
 .quote__content {
@@ -9681,6 +9683,7 @@ u {
   font-weight: bold;
   font-size: 1.5rem;
   color: #2e2e2e;
+  line-height: 1.25;
 }
 
 .quote__source {
@@ -9698,16 +9701,14 @@ u {
     padding-left: 6rem;
   }
   .quote::before {
-    left: 4rem;
     height: 110%;
+    left: 4rem;
     top: -5%;
   }
-  .quote-mark {
-    padding-left: 6rem;
-  }
   .quote-mark::before {
+    height: 3rem;
     left: 2rem;
-    top: 2.6875rem;
+    top: 0;
   }
 }
 
