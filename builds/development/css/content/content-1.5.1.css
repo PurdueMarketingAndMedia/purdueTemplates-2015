@@ -9640,7 +9640,7 @@ u {
   padding-bottom: 0;
 }
 
-.quote {
+blockquote, .quote {
   padding: 0;
   border: 0;
   font-size: unset;
@@ -9649,7 +9649,7 @@ u {
   position: relative;
 }
 
-.quote::before {
+blockquote::before, .quote::before {
   content: '';
   position: absolute;
   display: block;
@@ -9697,10 +9697,10 @@ u {
 }
 
 @media (min-width: 37.5em) {
-  .quote {
+  blockquote, .quote {
     padding-left: 6rem;
   }
-  .quote::before {
+  blockquote::before, .quote::before {
     height: 110%;
     left: 4rem;
     top: -5%;
