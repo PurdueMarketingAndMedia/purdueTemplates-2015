@@ -35,5 +35,18 @@ This project was setup to use [Gulp.js](http://gulpjs.com/), which runs on [Node
    npm install
    ```
 
-##Development
+## Development
+
 *The following instructions only apply to those using Gulp.js for workflow management.*
+
+### Commands
+
+```
+gulp
+```
+build html and **expanded** css to `/builds/development/*`, start live reload, and watch for changes
+
+```
+NODE_ENV=production gulp
+```
+build html and **compressed** css to `/builds/production/*`, start live reload, and watch for changes
