@@ -3,7 +3,7 @@
 	background-image:url('https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png');
 	background-color:#000;
 	background-repeat:repeat;
-	@include striped-bg(#191919, #000, thin)
+	// @include striped-bg(#191919, #000, thin)
 	.row-eq-height{
 		display: flex;
 		align-items: center;
@@ -12,12 +12,13 @@
 	.logo{
 		padding:25px;
 		align-items: center;
-        &::after{
+        &:after{
             display:block;
             position:absolute;
             content:"";
             width:2px;
-            height:70%;
+            // height:70%;
+						height:60%;
             right: 0;
             top: 15%;
             background-color:#999;
@@ -43,6 +44,13 @@
 				}
 			}
 		}
+		@media (min-width:992px) and (max-width:1199px){
+			a{
+				img{
+					width:100%;
+				}
+			}
+		}
 		.svgLinkContainer {
 			  display: block;
 			  position: relative;
@@ -50,7 +58,7 @@
 			  width: 100%;
 			  padding-bottom: 29.95839%;
 			  z-index: 2;
-			  &::after{
+			  &:after{
 					content:"";
 					display:block;
 					position:absolute;
@@ -69,6 +77,13 @@
 			  z-index: -1;
 			  padding-right: 0px;
 			}
+			@media (min-width:992px) and (max-width:2000px){
+				.svgLinkContainer{
+					margin:0;
+					width: 75%;
+					padding-bottom: 26.5%;
+					}
+				}
 			@media (max-width:767px){
 			  .svgLinkContainer{
 					margin:0 auto;
@@ -76,7 +91,7 @@
 					padding-bottom:14.9792%;
 			  	}
         }
-    }
+		}
 	.department{
 		color:#fff;
 		font-family:$font-archivo-narrow;
@@ -85,7 +100,7 @@
 		padding-right: 15px;
 		> a{
 			display:inline-block;
-			line-height:1.1em;
+			line-height:1.2em;
 			border:none;
 			padding:0;
 		}
@@ -93,7 +108,7 @@
 			> a{
 			display:inline-block;
 			padding:2px 0px;
-			line-height:1.1em;
+			line-height:1.2em;
 			}
 		}
 		> a:link, a:visited, a:hover, a:active{
@@ -107,7 +122,6 @@
 			color:inherit;
 			font-family:$font-archivo-narrow;
 			font-size:20/25 * 1em;
-			line-height:1.2em;
 			letter-spacing:.5px;
 			text-transform: uppercase;
 			a:link, a:visited, a:hover, a:active{
@@ -146,8 +160,27 @@
 				text-align:center;
 			}
 			.tagline{
-				padding:5px 0 0;
 				border:none;
+				line-height:1.3em;
 			}
 		}
+
+		@media (min-width:992px) and (max-width:2000px){
+			.logo{
+				// padding:25px;
+				align-items: center;
+						&:after{
+								display:block;
+								position:absolute;
+								content:"";
+								width:2px;
+								// height:70%;
+								height:60%;
+								right: 0;
+								top: 15%;
+								left: 80%;
+								background-color:#999;
+						}
+					}
+				}
 	}
