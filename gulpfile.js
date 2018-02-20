@@ -1,4 +1,4 @@
-// Include gulp and gulp 
+// Include gulp and gulp
 var gulp = require('gulp'),
     //general
     ifelse = require('gulp-if-else'),
@@ -9,6 +9,8 @@ var gulp = require('gulp'),
     //css
 	sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
+    postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer'),
     //async
     async = require('async');
 
@@ -27,11 +29,11 @@ var devOutputDir = 'builds/development/',
 //set the output directory based on enviroment variable
 if(env==='development')
 { //node environment variable  set to development
-	outputDir = 'builds/development/'; //set ouput directory to development
+	devDir = 'builds/development/'; //set ouput directory to development
 }
 else
 { //node environment variable is not set to development
-	outputDir = 'builds/production/'; //set output directory to production
+	prodDir = 'builds/production/'; //set output directory to production
 }
 
 componentSources = ['components/**/*'];
@@ -50,7 +52,7 @@ gulp.task('html', function(){
                   basepath: '@file'
                 }))
                 .pipe(htmlPrettify({indent_char:' ',indent_size:4}))
-                .pipe(gulp.dest(outputDir+'templates/'))
+                .pipe(gulp.dest(devOutputDir+'templates/'))
                 .on('end',next);
         },
         function(next)
@@ -68,6 +70,7 @@ gulp.task('sass', function(){
             gulp.src(scssSources)
                 .pipe(sourcemaps.init())
                 .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
+                .pipe(postcss([ autoprefixer() ]))
                 .pipe(sourcemaps.write('./sourcemaps'))
                 .pipe(gulp.dest(devOutputDir+'css/'))
                 .on('end',next);
@@ -88,19 +91,9 @@ gulp.task('sass', function(){
         {
             gulp.src(scssSources)
                 .pipe(sass({outputStyle:'compressed'}).on('error',sass.logError))
+                .pipe(postcss([ autoprefixer() ]))
                 .pipe(gulp.dest(prodOutputDir+'css/'))
                 .on('end',next);
-
-        },
-        function(next)
-        {
-            gulp.src(componentSources)
-                .pipe(ifelse(env === 'production',
-                    function(){
-                        console.log('reload');
-                        return connect.reload()
-                    }
-                ));
         }
     ]);
 });
@@ -113,7 +106,7 @@ gulp.task('watch', function() {
 
 gulp.task('connect', function() {
     connect.server({
-        root: outputDir,
+        root: devOutputDir,
         livereload: true
     });
 });
