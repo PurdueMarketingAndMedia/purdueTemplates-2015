@@ -10,17 +10,16 @@
 		flex-direction: column;
 	}
 	.logo{
-		padding:25px;
+		padding: 25px 25px 25px 15px;
 		align-items: center;
-        &:after{
+        &::after{
             display:block;
             position:absolute;
             content:"";
             width:2px;
-            // height:70%;
-						height:60%;
+            height:60%;
             right: 0;
-            top: 15%;
+            top: 20%;
             background-color:#999;
         }
 		a{
@@ -44,13 +43,6 @@
 				}
 			}
 		}
-		@media (min-width:992px) and (max-width:1199px){
-			a{
-				img{
-					width:100%;
-				}
-			}
-		}
 		.svgLinkContainer {
 			  display: block;
 			  position: relative;
@@ -58,7 +50,7 @@
 			  width: 100%;
 			  padding-bottom: 29.95839%;
 			  z-index: 2;
-			  &:after{
+			  &::after{
 					content:"";
 					display:block;
 					position:absolute;
@@ -77,21 +69,16 @@
 			  z-index: -1;
 			  padding-right: 0px;
 			}
-			@media (min-width:992px) and (max-width:2000px){
-				.svgLinkContainer{
-					margin:0;
-					width: 75%;
-					padding-bottom: 26.5%;
-					}
-				}
 			@media (max-width:767px){
 			  .svgLinkContainer{
 					margin:0 auto;
-					width: 50%;
-					padding-bottom:14.9792%;
+					// width: 50%;
+					// padding-bottom:14.9792%;
+					width: 40%;
+					padding-bottom:12.9792%;
 			  	}
         }
-		}
+    }
 	.department{
 		color:#fff;
 		font-family:$font-archivo-narrow;
@@ -108,7 +95,7 @@
 			> a{
 			display:inline-block;
 			padding:2px 0px;
-			line-height:1.2em;
+			line-height:1.1em;
 			}
 		}
 		> a:link, a:visited, a:hover, a:active{
@@ -122,6 +109,7 @@
 			color:inherit;
 			font-family:$font-archivo-narrow;
 			font-size:20/25 * 1em;
+			line-height:1.2em;
 			letter-spacing:.5px;
 			text-transform: uppercase;
 			a:link, a:visited, a:hover, a:active{
@@ -155,32 +143,21 @@
 				}
 		}
 	@media (max-width:767px){
-    	.department{
+		.logo{
+			padding:25px;
+	        &::after{
+	            display:none;
+	        }
+				}
+			.department{
 	  		font-size:30/22 * 1em;
 				text-align:center;
 			}
 			.tagline{
+				// padding:2px 0 0;
+				padding: 0px 0px 10px 0px;
+				line-height: 1.2em;
 				border:none;
-				line-height:1.3em;
 			}
 		}
-
-		@media (min-width:992px) and (max-width:2000px){
-			.logo{
-				// padding:25px;
-				align-items: center;
-						&:after{
-								display:block;
-								position:absolute;
-								content:"";
-								width:2px;
-								// height:70%;
-								height:60%;
-								right: 0;
-								top: 15%;
-								left: 80%;
-								background-color:#999;
-						}
-					}
-				}
 	}
