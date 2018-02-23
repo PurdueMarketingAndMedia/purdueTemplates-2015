@@ -1,99 +1,87 @@
 // Include gulp and gulp
 var gulp = require('gulp'),
-    //general
-    ifelse = require('gulp-if-else'),
+    // enable live reload
     connect = require('gulp-connect'),
-    //html
+
+    // html
     fileinclude = require('gulp-file-include'),
     htmlPrettify = require('gulp-html-prettify'),
-    //css
+
+    // css/sass
 	sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
+    pseudoelements = require('postcss-pseudoelements'), // change double :: to single :
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
+
     //async
     async = require('async');
 
-//initiate variables
-var env,
-	htmlSources,
-	scssSources,
-	outputDir;
-
-//retrieve environment variable. 'development' by default
-env = process.env.NODE_ENV || 'development';
-
+// output directories
 var devOutputDir = 'builds/development/',
     prodOutputDir = 'builds/production/';
 
-//set the output directory based on enviroment variable
-if(env==='development')
-{ //node environment variable  set to development
-	devDir = 'builds/development/'; //set ouput directory to development
-}
-else
-{ //node environment variable is not set to development
-	prodDir = 'builds/production/'; //set output directory to production
-}
+// component sources
+var componentSources = ['components/**/*'],
+    htmlSources = ['components/html/templates/**/*.html'],
+    templateSources = ['components/html/modules/**/*.html'],
+    scssSources = ['components/css/**/*.scss'];
 
-componentSources = ['components/**/*'];
-htmlSources = ['components/html/templates/**/*.html'];
-templateSources = ['components/html/modules/**/*.html'];
-scssSources = ['components/css/**/*.scss'];
-
-//HTML task
+// HTML task
 gulp.task('html', function(){
     async.series([
         function(next)
         {
             gulp.src(htmlSources)
+                // include module files
                 .pipe(fileinclude({
                   prefix: '@@',
                   basepath: '@file'
                 }))
+                // clean up html
                 .pipe(htmlPrettify({indent_char:' ',indent_size:4}))
+                // save into dev and prod
                 .pipe(gulp.dest(devOutputDir+'templates/'))
+                .pipe(gulp.dest(prodOutputDir+'templates/'))
                 .on('end',next);
         },
         function(next)
         {
+            // reload on any change in components
             gulp.src(componentSources)
                 .pipe(connect.reload());
         }
-    ])
+    ]);
 });
 
+// SASS task
 gulp.task('sass', function(){
     async.series([ //development build functions
         function(next)
-        {
+        {  // dev builds
             gulp.src(scssSources)
                 .pipe(sourcemaps.init())
                 .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
-                .pipe(postcss([ autoprefixer() ]))
+                .pipe(postcss([ autoprefixer, pseudoelements ]))
                 .pipe(sourcemaps.write('./sourcemaps'))
+                // save in dev
                 .pipe(gulp.dest(devOutputDir+'css/'))
                 .on('end',next);
-
+        },
+        function(next)
+        {  // prod builds
+            gulp.src(scssSources)
+                .pipe(sass({outputStyle:'compressed'}).on('error',sass.logError))
+                .pipe(postcss([ autoprefixer, pseudoelements ]))
+                // save in prod
+                .pipe(gulp.dest(prodOutputDir+'css/'))
+                .on('end',next);
         },
         function(next)
         {
+            // reload on any change in components
             gulp.src(componentSources)
-                .pipe(ifelse(env === 'development',
-                    function(){
-                        return connect.reload()
-                    }
-                ));
-        }
-    ]);
-    async.series([ //production builds functions
-        function(next)
-        {
-            gulp.src(scssSources)
-                .pipe(sass({outputStyle:'compressed'}).on('error',sass.logError))
-                .pipe(postcss([ autoprefixer() ]))
-                .pipe(gulp.dest(prodOutputDir+'css/'))
-                .on('end',next);
+                .pipe(connect.reload());
         }
     ]);
 });
@@ -110,8 +98,5 @@ gulp.task('connect', function() {
         livereload: true
     });
 });
-
-// Default Task
-/*gulp.task('default', ['fileinclude','html','lint','css','scripts','watch']);*/
 
 gulp.task('default',['html','sass','connect','watch']);
