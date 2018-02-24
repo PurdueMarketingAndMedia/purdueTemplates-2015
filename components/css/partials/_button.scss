@@ -1,4 +1,5 @@
-.button{
+$block:button;
+.#{$block}{
 	display:inline-block;
 	outline:none;
 	border:solid 2px $color-campusGold;
@@ -30,17 +31,17 @@
 			background-color:nth($pair,1);
 			color:nth($pair,2);
 			&:hover,&:active,&:focus{
-				border-color:nth($pair,1);
+				@if length($pair) > 2{
+					border-color:nth($pair,3);
+				}
+				@else{
+					border-color:nth($pair,1);
+				}
 				background-color:transparent;
-				color:#000;
-			}
-			&-inverse{
-				border-color:nth($pair,2);
-				background-color:nth($pair,2);
-				color:nth($pair,1);
-				&:hover,&:active,&:focus{
-					border-color:nth($pair,2);
-					background-color:transparent;
+				@if length($pair) > 3{
+					color:nth($pair,4);
+				}
+				@else{
 					color:#000;
 				}
 			}
@@ -53,18 +54,24 @@
 		}
 		@each $color,$pair in $colorPairs-button{
 			&-#{$color}{
-				border-color:nth($pair,1);
+				@if length($pair) > 2{
+					border-color:nth($pair,3);
+				}
+				@else{
+					border-color:nth($pair,1);
+				}
+				background-color:transparent;
+				@if length($pair) > 3{
+					color:nth($pair,4);
+				}
+				@else{
+					color:#000;
+				}
 				&:hover,&:active,&:focus{
 					border-color:nth($pair,1);
 					background-color:nth($pair,1);
 					color:nth($pair,2);
 				}
-			}
-		}
-		&-light{
-			color:#fff;
-			&:link,&:visited{
-				color:#fff;
 			}
 		}
 	}
@@ -117,7 +124,45 @@
 			background-color:#000;
 			color:#fff;
 		}
-		&-light{
+	}
+	&-light{
+		&:not(.#{$block}-hollow){
+			//don't make the hover text white on hover & active states of hollow buttons
+			&:hover,&:active{
+				color:#fff;
+			}
+		}
+		@each $color,$pair in $colorPairs-button{
+			@if (nth($pair,1) != #000 and nth($pair,1) != #000000){
+				//don't create a light version of a button that is already black
+				&.#{$block}-#{$color}{
+					&:hover,&:active,&:focus{
+						color:#fff;
+					}
+				}
+			}
+		}
+		&.#{$block}-hollow{
+			color:#fff;
+			&:link,&:visited{
+				color:#fff;
+			}
+			@each $color,$pair in $colorPairs-button{
+				@if ((length($pair) > 2 and (nth($pair,3) != #000 and nth($pair,3) != #000000)) or (length($pair) == 2 and (nth($pair,1) != #000 and nth($pair,1) != #000000))){
+					//don't create a light version of a hollow button that has a black border
+					&-#{$color}{
+						color:#fff;
+						&:link,&:visited{
+							color:#fff;
+						}
+						&:hover,&:active,&:focus{
+							color:nth($pair,2);
+						}
+					}
+				}
+			}
+		}
+		&.#{$block}-opaque{
 			border-color:#fff;
 			background-color:#000;
 			background-color:rgba(250,250,250,0.5);
@@ -133,11 +178,6 @@
 				background-color:#fff;
 				color:#000;
 			}
-		}
-	}
-	&-light{
-		&:hover,&:active{
-			color:#fff;
 		}
 	}
 	&-wide{

@@ -15,6 +15,10 @@ $color-mackeyOrange:#ff9b1a;
 $color-yellowWalk:#ffd100;
 $color-fountainRunTeal:#29a592;
 $color-pappysPurple:#ad1f65;
+$color-gray90:#2e2e2e;
+$color-gray70:#707070;
+$color-gray40:#aaaaaa;
+$color-gray15:#dedede;
 $colorPairs-accessible:(
 	campusGold:($color-campusGold,#000),
 	headlineGold:($color-headlineGold,#fff),
@@ -36,7 +40,7 @@ $colorPairs-accessible:(
 );
 $colorPairs-button:(
 	campusGold:($color-campusGold,#000),
-	black:(#000,#fff),
-	coalGray:($color-coalGray,#fff),
-	white:(#fff,#000)
+	campusGold-inverse:(#000,$color-campusGold,#000,$color-headlineGold),
+	black:(#000,#fff,#000,$color-headlineGold),
+	gray70:($color-gray70,#fff)
 );

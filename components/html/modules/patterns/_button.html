@@ -1,15 +1,11 @@
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 @@if (type === 'default'){
 	@@if(light === false){
 		@@if(color === ""){
 			<button class="button">@@text</button>
 		}
 		@@if(color !== ""){
-			@@if(inverse === false){
-				<button class="button button-@@color">@@text</button>
-			}
-			@@if(inverse === true){
-				<button class="button button-@@color-inverse">@@text</button>
-			}
+			<button class="button button-@@color">@@text</button>
 		}
 	}
 	@@if(light === true){
@@ -17,12 +13,7 @@
 			<button class="button button-light">@@text</button>
 		}
 		@@if(color !== ""){
-			@@if(inverse === false){
-				<button class="button button-light button-@@color">@@text</button>
-			}
-			@@if(inverse === true){
-				<button class="button button-light button-@@color-inverse">@@text</button>
-			}
+			<button class="button button-@@color button-light">@@text</button>
 		}
 	}
 }
@@ -38,10 +29,10 @@
 	}
 	@@if(light === true){
 		@@if(color === ""){
-			<button class="button button-hollow button-hollow-light">@@text</button>
+			<button class="button button-hollow button-light">@@text</button>
 		}
 		@@if(color !== ""){
-			<button class="button button-hollow button-hollow-light button-hollow-@@color">@@text</button>
+			<button class="button button-hollow button-hollow-@@color button-light">@@text</button>
 		}
 	}
 }
@@ -56,10 +47,10 @@
 	}
 	@@if(light === true){
 		@@if(color === ""){
-			<button class="button button-light button-bar">@@text</button>
+			<button class="button button-bar button-light">@@text</button>
 		}
 		@@if(color !== ""){
-			<button class="button button-light button-bar button-bar-@@color">@@text</button>
+			<button class="button button-bar button-bar-@@color button-light">@@text</button>
 		}
 	}
 }
@@ -68,6 +59,7 @@
 		<button class="button button-opaque">@@text</button>
 	}
 	@@if(light === true){
-		<button class="button button-opaque button-opaque-light">@@text</button>
+		<button class="button button-opaque button-light">@@text</button>
 	}
 }
+</div>
