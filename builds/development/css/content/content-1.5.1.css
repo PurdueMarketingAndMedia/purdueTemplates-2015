@@ -8799,12 +8799,17 @@ u {
 
 .button {
   display: inline-block;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
   max-width: 100%;
   border: none;
   border-radius: 0;
   outline: solid 2px #c28e0e;
   outline-offset: -2px;
-  padding: 0.51816rem 3.21261rem;
+  padding: 0.51816rem 2px;
   background-color: #c28e0e;
   transition: background-color 0.1s, outline-color 0.1s, color 0.1s;
   color: #000;
@@ -8813,6 +8818,15 @@ u {
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
+}
+
+.button::before, .button::after {
+  content: '';
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 3.21261rem;
+  width: 3.21261rem;
 }
 
 .button:link, .button:visited {
@@ -9124,7 +9138,7 @@ u {
 
 @media (min-width: 1200px) {
   .button {
-    padding: 0.625rem 3.875rem;
+    padding: 0.625rem 2px;
     font-size: 1.125rem;
   }
   .button-wide-lg {
@@ -9148,7 +9162,7 @@ u {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .button {
-    padding: 0.625rem 4.1875rem;
+    padding: 0.625rem 2px;
     font-size: 1.03632rem;
   }
   .button-wide-sm {
@@ -9159,7 +9173,7 @@ u {
 
 @media (max-width: 767px) {
   .button {
-    padding: 0.625rem 2.9375rem;
+    padding: 0.625rem 2px;
     font-size: 1.125rem;
   }
   .button-wide-xs {
