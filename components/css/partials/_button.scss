@@ -1,12 +1,14 @@
 $block:button;
 .#{$block}{
 	display:inline-block;
-	outline:none;
-	border:solid 2px $color-campusGold;
+	max-width:100%;
+	border:none;
 	border-radius:0;
-	padding:calc-toRem(calc-ratioLgMd(8)) calc-toRem(calc-ratioLgMd(60));
+	outline:solid 2px $color-campusGold;
+	outline-offset:-2px;
+	padding:calc-toRem(calc-ratioLgMd(10)) calc-toRem(calc-ratioLgMd(62));
 	background-color:$color-campusGold;
-	transition:background-color 0.1s, border-color 0.1s, outline-color 0.1s, color 0.1s;
+	transition:background-color 0.1s, outline-color 0.1s, color 0.1s;
 	color:#000;
 	font-family:$font-archivo-narrow;
 	font-size:calc-toRem(calc-ratioLgMd(18));
@@ -18,8 +20,6 @@ $block:button;
 		text-decoration:none;
 	}
 	&:hover,&:active,&:focus{
-		outline:none;
-		border:solid 2px $color-campusGold;
 		background-color:transparent;
 		color:#000;
 		text-decoration:none;
@@ -27,15 +27,15 @@ $block:button;
 	}
 	@each $color,$pair in $colorPairs-button{
 		&-#{$color}{
-			border-color:nth($pair,1);
+			outline-color:nth($pair,1);
 			background-color:nth($pair,1);
 			color:nth($pair,2);
 			&:hover,&:active,&:focus{
 				@if length($pair) > 2{
-					border-color:nth($pair,3);
+					outline-color:nth($pair,3);
 				}
 				@else{
-					border-color:nth($pair,1);
+					outline-color:nth($pair,1);
 				}
 				background-color:transparent;
 				@if length($pair) > 3{
@@ -55,10 +55,10 @@ $block:button;
 		@each $color,$pair in $colorPairs-button{
 			&-#{$color}{
 				@if length($pair) > 2{
-					border-color:nth($pair,3);
+					outline-color:nth($pair,3);
 				}
 				@else{
-					border-color:nth($pair,1);
+					outline-color:nth($pair,1);
 				}
 				background-color:transparent;
 				@if length($pair) > 3{
@@ -68,7 +68,7 @@ $block:button;
 					color:#000;
 				}
 				&:hover,&:active,&:focus{
-					border-color:nth($pair,1);
+					outline-color:nth($pair,1);
 					background-color:nth($pair,1);
 					color:nth($pair,2);
 				}
@@ -77,50 +77,39 @@ $block:button;
 	}
 	&-bar{
 		position:relative;
-		border:solid 2px $color-campusGold;
-		&::after{
-			content:'';
-			position:absolute;
-			bottom:-2px;
-			left:-2px;
-			right:-2px;
-			display:block;
-			height:calc-toRem(calc-ratioLgMd(5));
-			background-color:darken($color-campusGold,15);
-		}
+		outline-style:none;
+		outline-color:darken($color-campusGold,15);
+		border-bottom:solid 5px darken($color-campusGold,15);
 		&:hover,&:active,&:focus{
-			border:solid 2px darken($color-campusGold,15);
+			outline-style:solid;
 		}
 		@each $color,$pair in $colorPairs-button{
 			&-#{$color}{
-				border-color:nth($pair,1);
+				border-bottom-color:darken(nth($pair,1),15);
 				background-color:nth($pair,1);
 				color:nth($pair,2);
-				&::after{
-					background-color:darken(nth($pair,1),15);
-				}
 				&:link,&:visited{
 					color:nth($pair,2);
 				}
 				&:hover,&:active,&:focus{
 					background-color:transparent;
-					border-color:darken(nth($pair,1),15);
+					outline-color:darken(nth($pair,1),15);
 				}
 			}
 		}
 	}
 	&-opaque{
-		border-color:#000;
+		outline-color:#000;
 		background-color:#000;
 		background-color:rgba(0,0,0,0.5);
 		color:#fff;
 		&:link,&:visited{
-			border-color:#000;
+			outline-color:#000;
 			background-color:#000;
 			color:#fff;
 		}
 		&:hover,&:active,&:focus{
-			border-color:#000;
+			outline-color:#000;
 			background-color:#000;
 			color:#fff;
 		}
@@ -128,17 +117,14 @@ $block:button;
 	&-light{
 		&:not(.#{$block}-hollow){
 			//don't make the hover text white on hover & active states of hollow buttons
-			&:hover,&:active{
+			&:hover,&:active,&:focus{
 				color:#fff;
 			}
 		}
 		@each $color,$pair in $colorPairs-button{
-			@if (nth($pair,1) != #000 and nth($pair,1) != #000000){
-				//don't create a light version of a button that is already black
-				&.#{$block}-#{$color}{
-					&:hover,&:active,&:focus{
-						color:#fff;
-					}
+			&.#{$block}-#{$color}{
+				&:hover,&:active,&:focus{
+					color:#fff;
 				}
 			}
 		}
@@ -148,33 +134,30 @@ $block:button;
 				color:#fff;
 			}
 			@each $color,$pair in $colorPairs-button{
-				@if ((length($pair) > 2 and (nth($pair,3) != #000 and nth($pair,3) != #000000)) or (length($pair) == 2 and (nth($pair,1) != #000 and nth($pair,1) != #000000))){
-					//don't create a light version of a hollow button that has a black border
-					&-#{$color}{
+				&-#{$color}{
+					color:#fff;
+					&:link,&:visited{
 						color:#fff;
-						&:link,&:visited{
-							color:#fff;
-						}
-						&:hover,&:active,&:focus{
-							color:nth($pair,2);
-						}
+					}
+					&:hover,&:active,&:focus{
+						color:nth($pair,2);
 					}
 				}
 			}
 		}
 		&.#{$block}-opaque{
-			border-color:#fff;
+			outline-color:#fff;
 			background-color:#000;
 			background-color:rgba(250,250,250,0.5);
 			color:#000;
 			&:link,&:visited{
-				border-color:#fff;
+				outline-color:#fff;
 				background-color:#000;
 				background-color:rgba(250,250,250,0.5);
 				color:#000;
 			}
 			&:hover,&:active,&:focus{
-				border-color:#fff;
+				outline-color:#fff;
 				background-color:#fff;
 				color:#000;
 			}
@@ -185,7 +168,7 @@ $block:button;
 		min-width:auto;
 	}
 	@media (min-width:1200px){
-		padding:calc-toRem(8) calc-toRem(60);
+		padding:calc-toRem(10) calc-toRem(62);
 		font-size:calc-toRem(18);
 		&-wide{
 			&-lg{
@@ -209,7 +192,7 @@ $block:button;
 		}
 	}
 	@media (min-width:768px) and (max-width:991px){
-		padding:calc-toRem(8) calc-toRem(65);
+		padding:calc-toRem(10) calc-toRem(67);
 		font-size:calc-toRem(calc-ratioLgMd(20));
 		&-wide{
 			&-sm{
@@ -219,7 +202,7 @@ $block:button;
 		}
 	}
 	@media (max-width:767px){
-		padding:calc-toRem(8) calc-toRem(45);
+		padding:calc-toRem(10) calc-toRem(47);
 		font-size:calc-toRem(18);
 		&-wide{
 			&-xs{

@@ -1,11 +1,11 @@
 @@include('../navigation/_breadcrumbs.html')
 <main id="main" class="content">
 	<div class="container">
-	    <div class="row">
+	    <div style="overflow:hidden;padding:30px 0;">
 	    	<div class="maincontent col-lg-9 col-md-9 col-sm-9 col-xs-12 right">
 	    		<h1>Buttons</h1>
 	    		<h2>Solid</h2>
-	    		<div class="row">
+	    		<div style="overflow:hidden;padding:30px 0;">
     			@@loop('../patterns/_button.html',[
 				    {
 				    	"type":"default",
@@ -34,7 +34,7 @@
 				])
 				</div>
 	    		<h2>Hollow</h2>
-	    		<div class="row">
+	    		<div style="overflow:hidden;padding:30px 0;">
     			@@loop('../patterns/_button.html',[
 				    {
 				    	"type":"hollow",
@@ -63,7 +63,7 @@
 				])
 				</div>
 	    		<h2>Bar</h2>
-	    		<div class="row">
+	    		<div style="overflow:hidden;padding:30px 0;">
     			@@loop('../patterns/_button.html',[
 				    {
 				    	"type":"bar",
@@ -94,7 +94,7 @@
 	    		<h2>Opaque</h2>
 	    		<h3>Default</h3>
 	    		<div style="background-image:url('https://placeimg.com/767/300/nature'); background-size:cover; background-position:top center;">
-	    			<div class="row">
+	    			<div style="overflow:hidden;padding:30px 0;">
 	    			@@loop('../patterns/_button.html',[
 					    {
 					    	"type":"opaque",
@@ -108,13 +108,25 @@
 	    		<h2>Light</h2>
 	    		<p>Modifying the button with "light" will ensure that the chosen button works on a black or darker background, if applicable.</p>
 	    		<h3>Light, Solid Buttons</h3>
-	    		<div style="background:#000;">
-	    			<div class="row">
+	    		<div style="background:#444;">
+	    			<div style="overflow:hidden;padding:30px 0;">
 		    		@@loop('../patterns/_button.html',[
 					    {
 					    	"type":"default",
 					    	"light":true,
 					    	"color":"campusGold",
+					    	"text":"Button"
+					    },
+					    {
+					    	"type":"default",
+					    	"light":true,
+					    	"color":"campusGold-inverse",
+					    	"text":"Button"
+					    },
+					    {
+					    	"type":"default",
+					    	"light":true,
+					    	"color":"black",
 					    	"text":"Button"
 					    },
 						{
@@ -127,13 +139,25 @@
 					</div>
 				</div>
 				<h3>Light, Hollow Buttons</h3>
-	    		<div style="background:#000;">
-	    			<div class="row">
+	    		<div style="background:#444;">
+	    			<div style="overflow:hidden;padding:30px 0;">
 	    			@@loop('../patterns/_button.html',[
 						{
 					    	"type":"hollow",
 					    	"light":true,
 					    	"color":"campusGold",
+					    	"text":"Button"
+					    },
+					    {
+					    	"type":"hollow",
+					    	"light":true,
+					    	"color":"campusGold-inverse",
+					    	"text":"Button"
+					    },
+					    {
+					    	"type":"hollow",
+					    	"light":true,
+					    	"color":"black",
 					    	"text":"Button"
 					    },
 						{
@@ -146,13 +170,25 @@
 					</div>
 				</div>
 				<h3>Light, Bar Buttons</h3>
-	    		<div style="background:#000;">
-					<div class="row">
+	    		<div style="background:#444;">
+					<div style="overflow:hidden;padding:30px 0;">
 		    		@@loop('../patterns/_button.html',[
 						{
 					    	"type":"bar",
 					    	"light":true,
 					    	"color":"campusGold",
+					    	"text":"Button"
+					    },
+					    {
+					    	"type":"bar",
+					    	"light":true,
+					    	"color":"campusGold-inverse",
+					    	"text":"Button"
+					    },
+					    {
+					    	"type":"bar",
+					    	"light":true,
+					    	"color":"black",
 					    	"text":"Button"
 					    },
 						{
@@ -166,7 +202,7 @@
 				</div>
 				<h3>Light, Opaque Button</h3>
 	    		<div style="background-image:url('https://spaceholder.cc/767x300'); background-size:cover; background-position:center center;">
-	    			<div class="row">
+	    			<div style="overflow:hidden;padding:30px 0;">
 	    			@@loop('../patterns/_button.html',[
 					    {
 					    	"type":"opaque",
