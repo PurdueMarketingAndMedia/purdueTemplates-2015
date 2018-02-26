@@ -1,0 +1,224 @@
+@@if (wide === false){
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="background:@@background;padding-top:30px;padding-bottom:30px;">	
+}
+@@if (wide === true){
+<div class="col-lg-12" style="background:@@background;">	
+}
+@@if (type === 'default'){
+	@@if(light === false){
+		@@if(color === ""){
+			@@if(wide === false){
+				@@include('_button.html', {
+					"class":"button",
+					"text":"@@text"
+				})
+			}
+			@@if(wide === true){
+				@@include('_button.html', {
+					"class":"button button-wide",
+					"text":"@@text"
+				})
+			}
+		}
+		@@if(color !== ""){
+			@@if(wide === false){
+				@@include('_button.html', {
+					"class":"button button-@@color",
+					"text":"@@text"
+				})
+			}
+			@@if(wide === true){
+				@@include('_button.html', {
+					"class":"button button-@@color button-wide",
+					"text":"@@text"
+				})
+			}
+		}
+	}
+	@@if(light === true){
+		@@if(color === ""){
+			@@if(wide === false){
+				@@include('_button.html', {
+					"class":"button button-light",
+					"text":"@@text"
+				})
+			}
+			@@if(wide === true){
+				@@include('_button.html', {
+					"class":"button button-light button-wide",
+					"text":"@@text"
+				})
+			}
+		}
+		@@if(color !== ""){
+			@@if(wide === false){
+				@@include('_button.html', {
+					"class":"button button-@@color button-light",
+					"text":"@@text"
+				})
+			}
+			@@if(wide === true){
+				@@include('_button.html', {
+					"class":"button button-@@color button-light button-wide",
+					"text":"@@text"
+				})
+			}
+		}
+	}
+}
+
+@@if (type === 'hollow'){
+	@@if(light === false){
+		@@if(color === ""){
+			@@if(wide === false){
+				@@include('_button.html', {
+					"class":"button button-hollow",
+					"text":"@@text"
+				})
+			}
+			@@if(wide === true){
+				@@include('_button.html', {
+					"class":"button button-hollow button-wide",
+					"text":"@@text"
+				})
+			}
+		}
+		@@if(color !== ""){
+			@@if(wide === false){
+				@@include('_button.html', {
+					"class":"button button-hollow button-hollow-@@color",
+					"text":"@@text"
+				})
+			}
+			@@if(wide === true){
+				@@include('_button.html', {
+					"class":"button button-hollow button-hollow-@@color button-wide",
+					"text":"@@text"
+				})
+			}
+		}
+	}
+	@@if(light === true){
+		@@if(color === ""){
+			@@if(wide === false){
+				@@include('_button.html', {
+					"class":"button button-hollow button-light",
+					"text":"@@text"
+				})
+			}
+			@@if(wide === true){
+				@@include('_button.html', {
+					"class":"button button-hollow button-light button-wide",
+					"text":"@@text"
+				})
+			}
+		}
+		@@if(color !== ""){
+			@@if(wide === false){
+				@@include('_button.html', {
+					"class":"button button-hollow button-hollow-@@color button-light",
+					"text":"@@text"
+				})
+			}
+			@@if(wide === true){
+				@@include('_button.html', {
+					"class":"button button-hollow button-hollow-@@color button-light button-wide",
+					"text":"@@text"
+				})
+			}
+		}
+	}
+}
+@@if (type === 'bar'){
+	@@if(light === false){
+		@@if(color === ""){
+			@@if(wide === false){
+				@@include('_button.html', {
+					"class":"button button-bar",
+					"text":"@@text"
+				})
+			}
+			@@if(wide === true){
+				@@include('_button.html', {
+					"class":"button button-bar button-wide",
+					"text":"@@text"
+				})
+			}
+		}
+		@@if(color !== ""){
+			@@if(wide === false){
+				@@include('_button.html', {
+					"class":"button button-bar button-bar-@@color",
+					"text":"@@text"
+				})
+			}
+			@@if(wide === true){
+				@@include('_button.html', {
+					"class":"button button-bar button-bar-@@color button-wide",
+					"text":"@@text"
+				})
+			}
+		}
+	}
+	@@if(light === true){
+		@@if(color === ""){
+			@@if(wide === false){
+				@@include('_button.html', {
+					"class":"button button-bar button-light",
+					"text":"@@text"
+				})
+			}
+			@@if(wide === true){
+				@@include('_button.html', {
+					"class":"button button-bar button-light button-wide",
+					"text":"@@text"
+				})
+			}
+		}
+		@@if(color !== ""){
+			@@if(wide === false){
+				@@include('_button.html', {
+					"class":"button button-bar button-bar-@@color button-light",
+					"text":"@@text"
+				})
+			}
+			@@if(wide === true){
+				@@include('_button.html', {
+					"class":"button button-bar button-bar-@@color button-light button-wide",
+					"text":"@@text"
+				})
+			}
+		}
+	}
+}
+@@if (type === 'opaque'){
+	@@if(light === false){
+		@@if(wide === false){
+			@@include('_button.html', {
+				"class":"button button-opaque",
+				"text":"@@text"
+			})
+		}
+		@@if(wide === true){
+			@@include('_button.html', {
+				"class":"button button-opaque button-wide",
+				"text":"@@text"
+			})
+		}
+	}
+	@@if(light === true){
+		@@if(wide === false){
+			@@include('_button.html', {
+				"class":"button button-opaque button-light",
+				"text":"@@text"
+			})
+		}
+		@@if(wide === true){
+			@@include('_button.html', {
+				"class":"button button-opaque button-light button-wide",
+				"text":"@@text"
+			})
+		}
+	}
+}
+</div>

@@ -6,7 +6,7 @@
 	    		<h1>Buttons</h1>
 	    		<h2>Solid</h2>
 	    		<div style="overflow:hidden;">
-    			@@loop('../patterns/_button.html',[
+    			@@loop('../patterns/_container-button.html',[
 				    {
 				    	"type":"default",
 				    	"light":false,
@@ -43,7 +43,7 @@
 				</div>
 	    		<h2>Hollow</h2>
 	    		<div style="overflow:hidden;">
-    			@@loop('../patterns/_button.html',[
+    			@@loop('../patterns/_container-button.html',[
 				    {
 				    	"type":"hollow",
 				    	"light":false,
@@ -80,7 +80,7 @@
 				</div>
 	    		<h2>Bar</h2>
 	    		<div style="overflow:hidden;">
-    			@@loop('../patterns/_button.html',[
+    			@@loop('../patterns/_container-button.html',[
 				    {
 				    	"type":"bar",
 				    	"light":false,
@@ -118,7 +118,7 @@
 	    		<h2>Opaque</h2>
 	    		<div style="background-image:url('https://placeimg.com/767/300/nature'); background-size:cover; background-position:top center;">
 	    			<div style="overflow:hidden;">
-	    			@@loop('../patterns/_button.html',[
+	    			@@loop('../patterns/_container-button.html',[
 					    {
 					    	"type":"opaque",
 					    	"light":false,
@@ -134,7 +134,7 @@
 	    		<p>Modifying the button with "light" will ensure that the chosen button works on a black or darker-colored background, if applicable.</p>
 	    		<h3>Light, Solid Buttons</h3>
     			<div style="overflow:hidden;">
-	    		@@loop('../patterns/_button.html',[
+	    		@@loop('../patterns/_container-button.html',[
 				    {
 				    	"type":"default",
 				    	"light":true,
@@ -172,7 +172,7 @@
 				<h3>Light, Hollow Buttons</h3>
 	    		<div style="background:#444;">
 	    			<div style="overflow:hidden;">
-	    			@@loop('../patterns/_button.html',[
+	    			@@loop('../patterns/_container-button.html',[
 						{
 					    	"type":"hollow",
 					    	"light":true,
@@ -211,7 +211,7 @@
 				<h3>Light, Bar Buttons</h3>
 	    		<div style="background:#444;">
 					<div style="overflow:hidden;">
-		    		@@loop('../patterns/_button.html',[
+		    		@@loop('../patterns/_container-button.html',[
 						{
 					    	"type":"bar",
 					    	"light":true,
@@ -250,7 +250,7 @@
 				<h3>Light, Opaque Button</h3>
 	    		<div style="background-image:url('https://spaceholder.cc/767x300'); background-size:cover; background-position:center center;">
 	    			<div style="overflow:hidden;">
-	    			@@loop('../patterns/_button.html',[
+	    			@@loop('../patterns/_container-button.html',[
 					    {
 					    	"type":"opaque",
 					    	"light":true,
@@ -275,9 +275,16 @@
 	    		<p>You can also implement the "wide" modifier to ensure that the button uses the full width of it's container.</p>
 	    		<p><em>Resize the width of the container below to view how a wide button acts with different container sizes.</em></p>
 	    		<div style="display:block;resize:horizontal;border:solid 1px #000;min-width:100px;max-width:100%;overflow:auto;padding:15px 0;">
-	    			<div class="col-lg-12">
-	    				<button class="button button-wide">Button Text Here</button>
-	    			</div>
+	    			@@loop('../patterns/_container-button.html',[
+					    {
+					    	"type":"default",
+					    	"light":false,
+					    	"color":"",
+					    	"text":"Button Text Here",
+					    	"wide":true,
+					    	"background":"none"
+					    }
+					])
 	    		</div>
 	    	</div>
 			@@include('../navigation/_side.html')
