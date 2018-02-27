@@ -30,6 +30,10 @@
 			&:link,&:visited,&:hover,&:active{
 				color:#fff;
 			}
+			&:focus{
+				outline:1px dotted #dedede;
+				outline-offset:5px;
+			}
 		}
 		@media (min-width:768px){
 			a{
@@ -50,7 +54,7 @@
 			  width: 100%;
 			  padding-bottom: 29.95839%;
 			  z-index: 2;
-			  &::after{
+				&::after{
 					content:"";
 					display:block;
 					position:absolute;
@@ -90,6 +94,10 @@
 			line-height:1.2em;
 			border:none;
 			padding:0;
+			&:focus{
+	    outline:1px dotted #dedede;
+	    outline-offset:1px;
+			}
 		}
 		@media (min-width:992px) and (max-width:1199px){
 			> a{
@@ -116,6 +124,10 @@
 				color:inherit;
 				font-weight:100;
 				text-decoration:none;
+				&:focus{
+		    outline:1px dotted #dedede;
+		    outline-offset:1px;
+				}
 			}
 		}
 	}
@@ -154,7 +166,6 @@
 				text-align:center;
 			}
 			.tagline{
-				// padding:2px 0 0;
 				padding: 0px 0px 10px 0px;
 				line-height: 1.2em;
 				border:none;
