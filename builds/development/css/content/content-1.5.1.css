@@ -9769,6 +9769,49 @@ blockquote::before, .quote::before {
   font-size: 1.125em;
 }
 
+.content .container .row .maincontent .list-romanUpper {
+  list-style-type: upper-roman;
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent .list-romanUpper {
+    counter-reset: l1;
+    list-style-type: none;
+  }
+  .content .container .row .maincontent .list-romanUpper > li::before {
+    counter-increment: l1;
+    content: counter(l1, upper-roman) ".";
+  }
+  .content .container .row .maincontent .list-romanUpper ol {
+    counter-reset: l2;
+  }
+  .content .container .row .maincontent .list-romanUpper ol > li::before {
+    counter-increment: l2;
+    content: counter(l2, upper-alpha) ".";
+  }
+  .content .container .row .maincontent .list-romanUpper ol ol {
+    counter-reset: l3;
+  }
+  .content .container .row .maincontent .list-romanUpper ol ol > li::before {
+    counter-increment: l3;
+    content: counter(l3) ".";
+  }
+  .content .container .row .maincontent .list-romanUpper ol ol ol {
+    counter-reset: l4;
+  }
+  .content .container .row .maincontent .list-romanUpper ol ol ol > li::before {
+    counter-increment: l4;
+    content: counter(l4, lower-alpha) ".";
+  }
+  .content .container .row .maincontent .list-romanUpper ol ol ol ol {
+    counter-reset: l5;
+  }
+  .content .container .row .maincontent .list-romanUpper ol ol ol ol > li::before {
+    counter-increment: l5;
+    content: counter(l5, lower-roman) ".";
+  }
+}
+
 .captionStyle, .imageContainer.useCaption .caption, .videoContainer .caption {
   display: block;
   padding: 0 10px;
@@ -9835,7 +9878,6 @@ blockquote::before, .quote::before {
 }
 
 .content .container .row .maincontent ol > li::before {
-  width: 1em;
   margin-left: -1em;
 }
 
@@ -9875,10 +9917,15 @@ blockquote::before, .quote::before {
 }
 
 @supports (counter-reset: li) {
-  .content .container .row .maincontent ol > li::before {
+  .content .container .row .maincontent ol > li {
     position: relative;
+    padding-left: .6em;
+  }
+  .content .container .row .maincontent ol > li::before {
+    text-align: right;
+    position: absolute;
     color: #98700d;
-    right: .6em;
+    right: 100%;
     margin-left: -.8em;
     font-weight: 700;
   }

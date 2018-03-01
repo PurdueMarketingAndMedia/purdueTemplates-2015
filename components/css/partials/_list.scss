@@ -1,0 +1,61 @@
+.content .container .row .maincontent{ //we'll remove this once we properly start BEMing
+	.list{
+		&-romanUpper{
+			list-style-type:upper-roman;
+			@supports( counter-reset: li )
+			{
+				counter-reset: l1;
+				list-style-type: none;
+				> li {
+					&::before {
+						counter-increment: l1;
+						content: counter(l1, upper-roman)".";
+					}
+				}
+				ol {
+					counter-reset: l2;
+
+					> li {
+						&::before {
+							counter-increment: l2;
+							content: counter(l2, upper-alpha)".";
+						}
+					}
+
+					ol {
+						counter-reset: l3;
+
+						> li {
+							&::before {
+								counter-increment: l3;
+								content: counter(l3)".";
+							}
+						}
+
+						ol {
+							counter-reset: l4;
+
+							> li {
+								&::before {
+									counter-increment: l4;
+									content: counter(l4,lower-alpha)".";
+								}
+							}
+
+							ol {
+								counter-reset: l5;
+
+								> li {
+									&::before {
+										counter-increment: l5;
+										content: counter(l5,lower-roman)".";
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -63,7 +63,7 @@
 				}
 				ol > li {
 					&::before {
-						width: 1em;
+						//width: 1em;
 						margin-left: -1em;
 					}
 				}
@@ -122,10 +122,13 @@
 
 					// spacing for all ol li::before
 					ol > li {
+						position:relative;
+						padding-left:.6em;
 						&::before {
-							position: relative;
+							text-align:right;
+							position: absolute;
 							color: $color-headlineGold;
-							right: .6em;
+							right: 100%;
 							margin-left: -.8em;
 							font-weight: 700;
 						}
