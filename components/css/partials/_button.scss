@@ -23,99 +23,39 @@ $block:button;
 	max-width:100%;
 	border:none;
 	border-radius:0;
-	outline:solid 2px $color-campusGold;
+	outline-style:solid;
+	outline-width:2px;
 	outline-offset:-2px;
-	//padding:calc-toRem(calc-ratioLgMd(10)) calc-toRem(calc-ratioLgMd(62));
 	padding:calc-toRem(calc-ratioLgMd(10)) 2px;
-	background-color:$color-campusGold;
-	transition:background-color 0.1s, outline-color 0.1s, color 0.1s;
-	color:#000;
+	transition:background-color, outline-color, outline-style, color 0.1s;
 	font-family:$font-archivo-narrow;
 	font-size:calc-toRem(calc-ratioLgMd(18));
 	font-weight:700;
 	text-align:center;
 	text-transform:uppercase;
 	&:link,&:visited{
-		color:#000;
 		text-decoration:none;
+		outline-style:solid;
+		outline-width:2px;
+		outline-offset:-2px;
 	}
 	&:hover,&:active,&:focus{
-		background-color:transparent;
-		color:#000;
+		outline-style:solid;
+		outline-width:2px;
+		outline-offset:-2px;
 		text-decoration:none;
 		cursor:pointer;
-	}
-	@each $color,$pair in $colorPairs-button{
-		&-#{$color}{
-			outline-color:nth($pair,1);
-			background-color:nth($pair,1);
-			color:nth($pair,2);
-			&:hover,&:active,&:focus{
-				@if length($pair) > 2{
-					outline-color:nth($pair,3);
-				}
-				@else{
-					outline-color:nth($pair,1);
-				}
-				background-color:transparent;
-				@if length($pair) > 3{
-					color:nth($pair,4);
-				}
-				@else{
-					color:#000;
-				}
-			}
-		}
-	}
-	&-hollow{
-		background-color:transparent;
-		&:hover,&:active,&:focus{
-			background-color:$color-campusGold;
-		}
-		@each $color,$pair in $colorPairs-button{
-			&-#{$color}{
-				@if length($pair) > 2{
-					outline-color:nth($pair,3);
-				}
-				@else{
-					outline-color:nth($pair,1);
-				}
-				background-color:transparent;
-				@if length($pair) > 3{
-					color:nth($pair,4);
-				}
-				@else{
-					color:#000;
-				}
-				&:hover,&:active,&:focus{
-					outline-color:nth($pair,1);
-					background-color:nth($pair,1);
-					color:nth($pair,2);
-				}
-			}
-		}
 	}
 	&-bar{
 		position:relative;
 		outline-style:none;
-		outline-color:darken($color-campusGold,15);
-		border-bottom:solid 5px darken($color-campusGold,15);
+		border-bottom-style:solid;
+		border-bottom-width:5px;
+		&:link,&:visited{
+			outline-style:none;
+		}
 		&:hover,&:active,&:focus{
 			outline-style:solid;
-		}
-		@each $color,$pair in $colorPairs-button{
-			&-#{$color}{
-				border-bottom-color:darken(nth($pair,1),15);
-				background-color:nth($pair,1);
-				color:nth($pair,2);
-				&:link,&:visited{
-					color:nth($pair,2);
-				}
-				&:hover,&:active,&:focus{
-					background-color:transparent;
-					outline-color:darken(nth($pair,1),15);
-				}
-			}
 		}
 	}
 	&-icon{
@@ -125,83 +65,184 @@ $block:button;
 			flex-basis:calc-toRem(calc-ratioLgMd(38));
 			width:calc-toRem(calc-ratioLgMd(38));
 		}
-		& .#{$block}__icon{
-			background-color:#000;
-			color:#fff;
-		}
 		&:link,&:visited{
-			background-color:#000;
-			color:#fff;
+			outline-style:none;
 		}
 		&:hover,&:active,&:focus{
-			background-color:$color-campusGold;
-			color:#000;
+			outline-style:none;
 			& .#{$block}__icon{
-				background-color:#000;
-				color:$color-campusGold;
 				& > *, &.fa::before{
 					transform:scale(1.1);
 				}
 			}
 		}
-		&-black{
-			background-color:#000;
-			color:#fff;
-			& .#{$block}__icon{
-				background-color:$color-campusGold;
-				color:#000;
-			}
+	}
+	$i: 0;
+	@each $color,$pair in $colorPairs-button
+	{
+		$i: $i + 1;
+		@if $i == 1{
+			//default colors for a regular button
+			outline-color:nth($pair,1);
+			background-color:nth($pair,1);
+			color:nth($pair,2);
 			&:link,&:visited{
-				background-color:#000;
-				color:#fff;
+				outline-color:nth($pair,1);
+				background-color:nth($pair,1);
+				color:nth($pair,2);
 			}
 			&:hover,&:active,&:focus{
-				background-color:#000;
-				color:#fff;
+				background-color:transparent;
+				color:nth($pair,4);
+			}
+			&-hollow{
+				background-color:transparent;
+				color:nth($pair,2);
+				&:link,&:visited{
+					background-color:transparent;
+					color:nth($pair,2);
+				}
+				&:hover,&:active,&:focus{
+					background-color:nth($pair,1);
+					color:nth($pair,2);
+				}
+			}
+			&-bar{
+				$color-button-bar:lighten(nth($pair,1),15);
+				@if (lightness(nth($pair,1)) <= 15)
+				{
+					$color-button-bar:lighten(nth($pair,1),45);
+				}
+				@if (lightness(nth($pair,1)) > 15)
+				{
+					$color-button-bar:darken(nth($pair,1),15);
+				}
+				border-bottom-color:$color-button-bar;
+				&:hover,&:active,&:focus{
+					outline-color:$color-button-bar;
+				}
+			}
+			&-icon{
 				& .#{$block}__icon{
-					background-color:$color-campusGold;
+					background-color:nth($pair,5);
+					color:nth($pair,6);
+				}
+				&:hover,&:active,&:focus{
+					background-color:nth($pair,1);
+					color:nth($pair,2);
+					& .#{$block}__icon{
+						color:nth($pair,7);
+					}
+				}
+			}
+			&-opaque{
+				outline-color:#000;
+				background-color:#000;
+				background-color:rgba(0,0,0,0.5);
+				color:#fff;
+				&:link,&:visited{
+					outline-color:#000;
+					background-color:#000;
+					background-color:rgba(0,0,0,0.5);
+					color:#fff;
+				}
+				&:hover,&:active,&:focus{
+					outline-color:#000;
+					background-color:#000;
 					color:#fff;
 				}
 			}
 		}
-	}
-	&-opaque{
-		outline-color:#000;
-		background-color:#000;
-		background-color:rgba(0,0,0,0.5);
-		color:#fff;
-		&:link,&:visited{
-			outline-color:#000;
-			background-color:#000;
-			color:#fff;
-		}
-		&:hover,&:active,&:focus{
-			outline-color:#000;
-			background-color:#000;
-			color:#fff;
+		&-#{$color}{
+			outline-color:nth($pair,1);
+			background-color:nth($pair,1);
+			color:nth($pair,2);
+			&:link,&:visited{
+				outline-color:nth($pair,1);
+				background-color:nth($pair,1);
+				color:nth($pair,2);
+			}
+			&:hover,&:active,&:focus{
+				outline-color:nth($pair,3);
+				background-color:transparent;
+				color:nth($pair,4);
+			}
+			&.#{$block}-hollow{
+				outline-color:nth($pair,3);
+				background-color:transparent;
+				color:nth($pair,4);
+				&:link,&:visited{
+					outline-color:nth($pair,3);
+					background-color:transparent;
+					color:nth($pair,4);
+				}
+				&:hover,&:active,&:focus{
+					outline-color:nth($pair,1);
+					background-color:nth($pair,1);
+					color:nth($pair,2);
+				}
+			}
+			&.#{$block}-bar{
+				$color-button-bar:darken(nth($pair,1),15);
+				@if (lightness(nth($pair,1)) <= 15)
+				{
+					$color-button-bar:lighten(nth($pair,1),45);
+				}
+				@if (lightness(nth($pair,1)) > 15)
+				{
+					$color-button-bar:darken(nth($pair,1),15);
+				}
+				border-bottom-color:$color-button-bar;
+				&:link,&:visited{
+					border-bottom-color:$color-button-bar;
+					color:nth($pair,2);
+				}
+				&:hover,&:active,&:focus{
+					background-color:transparent;
+					outline-color:$color-button-bar;
+					color:nth($pair,4);
+				}
+			}
+			@if length($pair) == 7{
+				&.#{$block}-icon{
+					& .#{$block}__icon{
+						background-color:nth($pair,5);
+						color:nth($pair,6);
+					}
+					&:hover,&:active,&:focus{
+						background-color:nth($pair,1);
+						color:nth($pair,2);
+						& .#{$block}__icon{
+							color:nth($pair,7);
+						}
+					}
+				}
+			}
 		}
 	}
 	&-light{
-		&:not(.#{$block}-hollow){
-			//don't make the hover text white on hover & active states of hollow buttons
+		&:hover,&:active,&:focus{
+			color:#fff;
+		}
+		&.#{$block}-bar{
 			&:hover,&:active,&:focus{
 				color:#fff;
 			}
 		}
-		@each $color,$pair in $colorPairs-button{
-			&.#{$block}-#{$color}{
-				&:hover,&:active,&:focus{
-					color:#fff;
-				}
-			}
-		}
 		&.#{$block}-hollow{
-			color:#fff;
-			&:link,&:visited{
-				color:#fff;
-			}
+			$i: 0;
 			@each $color,$pair in $colorPairs-button{
-				&-#{$color}{
+				$i: $i + 1;
+				@if $i == 1{
+					color:#fff;
+					&:link,&:visited{
+						color:#fff;
+					}
+					&:hover,&:active,&:focus{
+						color:nth($pair,2);
+					}
+				}
+				&.#{$block}-#{$color}{
 					color:#fff;
 					&:link,&:visited{
 						color:#fff;

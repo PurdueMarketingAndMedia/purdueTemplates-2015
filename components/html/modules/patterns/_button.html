@@ -1,6 +1,16 @@
+@@if(element === "button"){
 <button class="@@class">
 	@@text
 	@@if(icon !== ""){
 		<span class="button__icon @@icon"></span>
 	}
 </button>
+}
+@@if(element === "anchor"){
+<a href="#" class="@@class">
+	@@text
+	@@if(icon !== ""){
+		<span class="button__icon @@icon"></span>
+	}
+</a>
+}
