@@ -1,0 +1,32 @@
+@@if(color == ""){
+	<div class="accordion">
+		@@for (var i = 1; i < numHeadings + 1; i++){
+			@@include('_accordion-header.html',{
+				"id":"@@id",
+				"index":`+i+`,
+				"color":""
+			})
+			@@include('_accordion-list.html',{
+				"id":"@@id",
+				"index":`+i+`,
+				"color":"@@color"
+			})
+		}
+	</div>
+}
+@@if(color !== ""){
+	<div class="accordion accordion-@@color">
+		@@for (var i = 1; i < numHeadings + 1; i++){
+			@@include('_accordion-header.html',{
+				"id":"@@id",
+				"index":`+i+`,
+				"color":"@@color"
+			})
+			@@include('_accordion-list.html',{
+				"id":"@@id",
+				"index":`+i+`,
+				"color":"@@color"
+			})
+		}
+	</div>
+}

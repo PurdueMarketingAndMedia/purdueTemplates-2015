@@ -6,12 +6,17 @@
 	font-weight:700;
 	font-size:calc-toRem(15);
 	line-height:1.4em;
-	@each $color,$pair in $colorPairs-accessible{
+	$i: 0;
+	@each $color,$pair in $colorPairs-accordion{
+		$i: $i + 1;
+		@if $i == 1{
+			background-color:mix(#fff,nth($pair,1),75%);
+		}
 		&-#{$color}{
 			background-color:mix(#fff,nth($pair,1),75%);
 		}
 	}
-	&_heading{
+	&__heading{
 		position:relative;
 		display:block;
 		cursor:pointer;
@@ -41,29 +46,44 @@
 				content:"\f0fe";
 			}
 		}
-		@each $color,$pair in $colorPairs-accessible{
+		$i: 0;
+		@each $color,$pair in $colorPairs-accordion{
+			$i: $i + 1;
+			@if $i == 1{
+				background-color:nth($pair,1);
+				color:nth($pair,2);
+			}
 			&-#{$color}{
 				background-color:nth($pair,1);
 				color:nth($pair,2);
 			}
 		}
 	}
-	&_list{
+	&__list{
 		margin:0;
 		padding:0 20px;
 		list-style-type:none;
 	}
-	&_item{
+	&__item{
 		border-top:solid 1px #000;
 		margin:0;
 		padding:15px 0 !important;
 		&:first-child{
 			border-top:none;
 		}
-		@each $color,$pair in $colorPairs-accessible{
+		$i: 0;
+		@each $color,$pair in $colorPairs-accordion{
+			$i: $i + 1;
+			@if $i == 1{
+				border-top-color:nth($pair,1);
+			}
 			&-#{$color}{
 				border-top-color:nth($pair,1);
 			}
 		}
 	}
 }
+// @if (lightness(nth($pair,1)) <= 15)
+// {
+// 	$color-button-bar:lighten(nth($pair,1),45);
+// }

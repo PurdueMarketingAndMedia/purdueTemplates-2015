@@ -15,6 +15,10 @@ $color-mackeyOrange:#ff9b1a;
 $color-yellowWalk:#ffd100;
 $color-fountainRunTeal:#29a592;
 $color-pappysPurple:#ad1f65;
+$color-gray90:#2e2e2e;
+$color-gray70:#707070;
+$color-gray40:#aaaaaa;
+$color-gray15:#dedede;
 $colorPairs-accessible:(
 	campusGold:($color-campusGold,#000),
 	headlineGold:($color-headlineGold,#fff),
@@ -33,4 +37,11 @@ $colorPairs-accessible:(
 	yellowWalk:($color-yellowWalk,#000),
 	fountainRunTeal:($color-fountainRunTeal,#000),
 	pappysPurple:($color-pappysPurple,#fff)
-)
+);
+$colorPairs-accordion:(
+	campusGold:($color-campusGold,#000),
+	black:(#000,#fff),
+	everTrueBlue:($color-everTrueBlue,#fff),
+	gray40:($color-gray40,#000),
+	gray70:($color-gray70,#fff)
+);
