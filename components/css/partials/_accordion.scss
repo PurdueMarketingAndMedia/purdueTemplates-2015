@@ -1,4 +1,5 @@
-.accordion{
+$block:accordion;
+.#{$block}{
 	display:block;
 	width:100%;
 	background-color:mix(#fff,#000,75%);
@@ -11,9 +12,47 @@
 		$i: $i + 1;
 		@if $i == 1{
 			background-color:mix(#fff,nth($pair,1),75%);
+			&-striped{
+				& .#{$block}__heading{
+					&:nth-of-type(even){
+						$color-lightness: lightness(nth($pair,1));
+						@if ($color-lightness <= 50){
+							$color-change:max((50 - $color-lightness)/1.5,10);
+							$color-stripe:lighten(nth($pair,1),$color-change);
+							background-color:$color-stripe;
+							color:color-get-blackOrWhite($color-stripe);
+						}
+						@else{
+							$color-change:max((100 - $color-lightness)/1.5,10);
+							$color-stripe:darken(nth($pair,1),$color-change);
+							background-color:$color-stripe;
+							color:color-get-blackOrWhite($color-stripe);
+						}
+					}
+				}
+			}
 		}
 		&-#{$color}{
 			background-color:mix(#fff,nth($pair,1),75%);
+			&.#{$block}-striped{
+				& .#{$block}__heading-#{$color}{
+					&:nth-of-type(even){
+						$color-lightness: lightness(nth($pair,1));
+						@if ($color-lightness <= 50){
+							$color-change:max((50 - $color-lightness)/1.5,10);
+							$color-stripe:lighten(nth($pair,1),$color-change);
+							background-color:$color-stripe;
+							color:color-get-blackOrWhite($color-stripe);
+						}
+						@else{
+							$color-change:max((100 - $color-lightness)/1.5,10);
+							$color-stripe:darken(nth($pair,1),15);
+							background-color:$color-stripe;
+							color:color-get-blackOrWhite($color-stripe);
+						}
+					}
+				}
+			}
 		}
 	}
 	&__heading{
@@ -83,7 +122,3 @@
 		}
 	}
 }
-// @if (lightness(nth($pair,1)) <= 15)
-// {
-// 	$color-button-bar:lighten(nth($pair,1),45);
-// }

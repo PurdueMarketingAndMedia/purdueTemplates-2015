@@ -1,26 +1,38 @@
 @@if(color == ""){
-	<div class="accordion">
-		@@for (var i = 1; i < numHeadings + 1; i++){
-			@@include('_accordion-header.html',{
-				"id":"@@id",
-				"index":`+i+`,
-				"color":""
-			})
-			@@include('_accordion-list.html',{
-				"id":"@@id",
-				"index":`+i+`,
-				"color":"@@color"
-			})
-		}
-	</div>
+	@@if(striped == false){
+		<div class="accordion">
+	}
+	@@if(striped == true){
+		<div class="accordion accordion-striped">
+	}
+			@@for (var i = 1; i < numHeadings + 1; i++){
+				@@include('_accordion-header.html',{
+					"id":"@@id",
+					"index":`+i+`,
+					"color":"",
+					"striped":@@striped
+				})
+				@@include('_accordion-list.html',{
+					"id":"@@id",
+					"index":`+i+`,
+					"color":"@@color"
+				})
+			}
+		</div>
 }
 @@if(color !== ""){
-	<div class="accordion accordion-@@color">
+	@@if(striped == false){
+		<div class="accordion accordion-@@color">
+	}
+	@@if(striped == true){
+		<div class="accordion accordion-@@color accordion-striped">
+	}
 		@@for (var i = 1; i < numHeadings + 1; i++){
 			@@include('_accordion-header.html',{
 				"id":"@@id",
 				"index":`+i+`,
-				"color":"@@color"
+				"color":"@@color",
+				"striped":@@striped
 			})
 			@@include('_accordion-list.html',{
 				"id":"@@id",

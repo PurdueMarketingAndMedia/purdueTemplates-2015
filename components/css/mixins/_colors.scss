@@ -19,6 +19,7 @@ $color-gray90:#2e2e2e;
 $color-gray70:#707070;
 $color-gray40:#aaaaaa;
 $color-gray15:#dedede;
+
 $colorPairs-accessible:(
 	campusGold:($color-campusGold,#000),
 	headlineGold:($color-headlineGold,#fff),
@@ -38,6 +39,7 @@ $colorPairs-accessible:(
 	fountainRunTeal:($color-fountainRunTeal,#000),
 	pappysPurple:($color-pappysPurple,#fff)
 );
+
 $colorPairs-accordion:(
 	campusGold:($color-campusGold,#000),
 	black:(#000,#fff),
@@ -45,3 +47,40 @@ $colorPairs-accordion:(
 	gray40:($color-gray40,#000),
 	gray70:($color-gray70,#fff)
 );
+
+//functions defined by WCAG: https://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+@function color-get-normalized($value){
+	$sRGB: $value/255;
+	@if($value/255 <= 0.03928){
+		@return ($sRGB/12.92);
+	}
+	@else{
+		@return (math-pow(($sRGB+0.055)/1.055,2.4));
+	}
+}
+@function color-get-relativeLuminace($color){
+	@return (0.2126 * color-get-normalized(red($color)) + 0.7152 * color-get-normalized(green($color)) + 0.0722 * color-get-normalized(blue($color)));
+}
+//function defined by WCAG: https://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+@function color-get-contrast($color1,$color2){
+	$luminance-color1: color-get-relativeLuminace($color1);
+	$luminance-color2: color-get-relativeLuminace($color2);
+	@if(lightness($color1) > lightness($color2)){
+		@return (($luminance-color1 + 0.05) / ($luminance-color2 + 0.05));
+	}
+	@else{
+		@return (($luminance-color2 + 0.05) / ($luminance-color1 + 0.05));
+	}
+}
+@function color-get-blackOrWhite($color){
+	$color-contrast-white: color-get-contrast(#fff,$color);
+	$color-contrast-black: color-get-contrast(#000,$color);
+	@if($color-contrast-white > $color-contrast-black)
+	{
+		@return(#fff);
+	}
+	@else
+	{
+		@return(#000);
+	}
+}

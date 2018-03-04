@@ -1,6 +1,16 @@
 @@if(color == ""){
-	<h2 class="collapsed accordion__heading" data-toggle="collapse" data-target="#list-@@id-@@index">Category @@index</h2>
+	@@if(striped == false){
+		<h2 class="collapsed accordion__heading" data-toggle="collapse" data-target="#list-@@id-@@index">Category @@index</h2>
+	}
+	@@if(striped == true){
+		<h2 class="collapsed accordion__heading accordion__heading-striped" data-toggle="collapse" data-target="#list-@@id-@@index">Category @@index</h2>
+	}
 }
 @@if(color != ""){
-	<h2 class="collapsed accordion__heading accordion__heading-@@color" data-toggle="collapse" data-target="#list-@@id-@@index">Category @@index</h2>
+	@@if(striped == false){
+		<h2 class="collapsed accordion__heading accordion__heading-@@color" data-toggle="collapse" data-target="#list-@@id-@@index">Category @@index</h2>
+	}
+	@@if(striped == true){
+		<h2 class="collapsed accordion__heading accordion__heading-striped accordion__heading-@@color" data-toggle="collapse" data-target="#list-@@id-@@index">Category @@index</h2>
+	}
 }
