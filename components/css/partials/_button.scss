@@ -21,6 +21,8 @@ $block:button;
 		order:2;
 	}
 	max-width:100%;
+	margin-top:calc-toRem(15);
+	margin-bottom:calc-toRem(15);
 	border:none;
 	border-radius:0;
 	outline-style:solid;
@@ -68,13 +70,8 @@ $block:button;
 		&:link,&:visited{
 			outline-style:none;
 		}
-		&:hover,&:active,&:focus{
-			outline-style:none;
-			& .#{$block}__icon{
-				& > *, &.fa::before{
-					transform:scale(1.1);
-				}
-			}
+		&:hover,&:visited,&:focus{
+			outline-style:solid;
 		}
 	}
 	$i: 0;
@@ -128,6 +125,7 @@ $block:button;
 					color:nth($pair,6);
 				}
 				&:hover,&:active,&:focus{
+					outline-color:nth($pair,5);
 					background-color:nth($pair,1);
 					color:nth($pair,2);
 					& .#{$block}__icon{
@@ -210,6 +208,7 @@ $block:button;
 						color:nth($pair,6);
 					}
 					&:hover,&:active,&:focus{
+						outline-color:nth($pair,5);
 						background-color:nth($pair,1);
 						color:nth($pair,2);
 						& .#{$block}__icon{
@@ -272,10 +271,36 @@ $block:button;
 		}
 	}
 	&-wide{
-		width:100%;
-		min-width:auto;
-		&::before,&::after{
-			flex-grow:1;
+		@mixin button-wide{
+			display:block;
+			display:flex;
+			width:100%;
+			min-width:auto;
+			&::before,&::after{
+				flex-grow:1;
+				flex-basis:calc-toRem(15);
+			}
+		}
+		@include button-wide;
+		@media (min-width:1200px){
+			&-lg{
+				@include button-wide;
+			}
+		}
+		@media (min-width:992px) and (max-width:1199px){
+			&-md{
+				@include button-wide;
+			}
+		}
+		@media (min-width:768px) and (max-width:991px){
+			&-sm{
+				@include button-wide;
+			}
+		}
+		@media (max-width:767px){
+			&-xs{
+				@include button-wide;
+			}
 		}
 	}
 	&__icon{
@@ -304,12 +329,6 @@ $block:button;
 			flex-basis:calc-toRem(62);
 			width:calc-toRem(62);
 		}
-		&-wide{
-			&-lg{
-				width:100%;
-				min-width:auto;
-			}
-		}
 		&-bar{
 			position:relative;
 			&::after{
@@ -328,14 +347,6 @@ $block:button;
 			padding:0 calc-toRem(10);
 		}
 	}
-	@media (min-width:992px) and (max-width:1199px){
-		&-wide{
-			&-md{
-				width:100%;
-				min-width:auto;
-			}
-		}
-	}
 	@media (min-width:768px) and (max-width:991px){
 		//padding:calc-toRem(10) calc-toRem(67);
 		padding:calc-toRem(10) 2px;
@@ -343,12 +354,6 @@ $block:button;
 		&::before,&::after{
 			flex-basis:calc-toRem(65);
 			width:calc-toRem(65);
-		}
-		&-wide{
-			&-sm{
-				width:100%;
-				min-width:auto;
-			}
 		}
 		&-icon{
 			padding-right:0;
@@ -369,12 +374,6 @@ $block:button;
 		&::before,&::after{
 			flex-basis:calc-toRem(60);
 			width:calc-toRem(60);
-		}
-		&-wide{
-			&-xs{
-				width:100%;
-				min-width:auto;
-			}
 		}
 		&-bar{
 			position:relative;
