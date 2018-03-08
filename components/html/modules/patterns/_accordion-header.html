@@ -1,16 +1,68 @@
 @@if(color == ""){
 	@@if(striped == false){
-		<h2 class="collapsed accordion__heading" data-toggle="collapse" data-target="#list-@@id-@@index">Category @@index</h2>
+		<h2 class="collapsed accordion__heading" data-toggle="collapse" data-target="#list-@@id-@@index">
+			@@if(index == 4){
+				Multiple groups of content
+			}
+			@@if(index == 3){
+				Single group of content
+			}
+			@@if(index == 2){
+				Ordered list
+			}
+			@@if(index == 1 || index > 4){
+				Unordered list
+			}
+		</h2>
 	}
 	@@if(striped == true){
-		<h2 class="collapsed accordion__heading accordion__heading-striped" data-toggle="collapse" data-target="#list-@@id-@@index">Category @@index</h2>
+		<h2 class="collapsed accordion__heading accordion__heading-striped" data-toggle="collapse" data-target="#list-@@id-@@index">
+			@@if(index == 4){
+				Multiple groups of content
+			}
+			@@if(index == 3){
+				Single group of content
+			}
+			@@if(index == 2){
+				Ordered list
+			}
+			@@if(index == 1 || index > 4){
+				Unordered list
+			}
+		</h2>
 	}
 }
 @@if(color != ""){
 	@@if(striped == false){
-		<h2 class="collapsed accordion__heading accordion__heading-@@color" data-toggle="collapse" data-target="#list-@@id-@@index">Category @@index</h2>
+		<h2 class="collapsed accordion__heading accordion__heading-@@color" data-toggle="collapse" data-target="#list-@@id-@@index">
+			@@if(index == 4){
+				Multiple groups of content
+			}
+			@@if(index == 3){
+				Single group of content
+			}
+			@@if(index == 2){
+				Ordered list
+			}
+			@@if(index == 1 || index > 4){
+				Unordered list
+			}
+		</h2>
 	}
 	@@if(striped == true){
-		<h2 class="collapsed accordion__heading accordion__heading-striped accordion__heading-@@color" data-toggle="collapse" data-target="#list-@@id-@@index">Category @@index</h2>
+		<h2 class="collapsed accordion__heading accordion__heading-striped accordion__heading-@@color" data-toggle="collapse" data-target="#list-@@id-@@index">
+			@@if(index == 4){
+				Multiple groups of content
+			}
+			@@if(index == 3){
+				Single group of content
+			}
+			@@if(index == 2){
+				Ordered list
+			}
+			@@if(index == 1 || index > 4){
+				Unordered list
+			}
+		</h2>
 	}
 }

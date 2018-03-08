@@ -11,7 +11,8 @@ $block:accordion;
 	@each $color,$pair in $colorPairs-accordion{
 		$i: $i + 1;
 		@if $i == 1{
-			background-color:mix(#fff,nth($pair,1),75%);
+			//background-color:mix(#fff,nth($pair,1),75%);
+			background-color:$color-gray15;
 			&-striped{
 				& .#{$block}__heading{
 					&:nth-of-type(even){
@@ -33,7 +34,8 @@ $block:accordion;
 			}
 		}
 		&-#{$color}{
-			background-color:mix(#fff,nth($pair,1),75%);
+			//background-color:mix(#fff,nth($pair,1),75%);
+			background-color:$color-gray15;
 			&.#{$block}-striped{
 				& .#{$block}__heading-#{$color}{
 					&:nth-of-type(even){
@@ -61,10 +63,10 @@ $block:accordion;
 		cursor:pointer;
 		border-top:solid 1px #fff;
 		margin:0 auto;
-		padding:10px 50px 10px 20px;
+		padding:calc-ratioLgMd(12px) calc-toRem(calc-ratioLgMd(50)) calc-ratioLgMd(12px) calc-ratioLgMd(20px);
 		background-color:#000;
 		font-family:$font-archivo-narrow;
-		font-size:calc-toRem(22);
+		font-size:calc-toRem(calc-ratioLgMd(22));
 		line-height:1.1em;
 		font-weight:700;
 		text-transform:uppercase;
@@ -98,15 +100,21 @@ $block:accordion;
 			}
 		}
 	}
-	&__list{
+	&__content{
 		margin:0;
-		padding:0 20px;
+		padding:0 calc-ratioLgMd(20px);
+		font-size:calc-toRem(calc-ratioLgMd(18));
 		list-style-type:none;
+		@at-root ol#{&}{
+			list-style-type:decimal;
+			padding:0 calc-ratioLgMd(35px);
+		}
 	}
 	&__item{
+		width:auto;
 		border-top:solid 1px #000;
-		margin:0;
-		padding:15px 0 !important;
+		padding-top:calc-ratioLgMd(15px) !important;
+		padding-bottom:calc-ratioLgMd(15px) !important;
 		&:first-child{
 			border-top:none;
 		}
@@ -114,11 +122,46 @@ $block:accordion;
 		@each $color,$pair in $colorPairs-accordion{
 			$i: $i + 1;
 			@if $i == 1{
-				border-top-color:nth($pair,1);
+				//border-top-color:nth($pair,1);
 			}
 			&-#{$color}{
-				border-top-color:nth($pair,1);
+				//border-top-color:nth($pair,1);
 			}
+		}
+	}
+	@media (min-width:1200px)
+	{
+		&__heading{
+			font-size:calc-toRem(22);
+			padding:12px calc-toRem(50) 12px 20px;
+		}
+		&__content{
+			padding:0 20px;
+			font-size:calc-toRem(18);
+			@at-root ol#{&}{
+				padding:0 35px;
+			}
+		}
+		&__item{
+			padding-top:15px !important;
+			padding-bottom:15px !important;
+		}
+	}
+	@media (max-width:767px)
+	{
+		&__heading{
+			font-size:calc-toRem(22);
+			padding:12px calc-toRem(50) 12px 20px;
+		}
+		&__content{
+			font-size:calc-toRem(18);
+			@at-root ol#{&}{
+				padding:0 35px;
+			}
+		}
+		&__item{
+			padding-top:15px !important;
+			padding-bottom:15px !important;
 		}
 	}
 }

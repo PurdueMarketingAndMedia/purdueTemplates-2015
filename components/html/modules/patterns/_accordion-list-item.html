@@ -1,6 +1,78 @@
-@@if(color == ""){
-	<li class="accordion__item"><a href="#">Item</a></li>
+@@if(accordionIndex == 4){
+	@@if(index == 1 || index > 3){
+		@@if(color == ""){
+			<p class="accordion__item">Sed ornare lorem arcu. In in justo <a href="#">vel nulla</a> ultrices cursus. Morbi convallis nibh condimentum dignissim sagittis. Nulla ut porttitor quam, ac consectetur felis.</p>
+		}
+		@@if(color != ""){
+			<p class="accordion__item accordion__item-@@color">Sed ornare lorem arcu. In in justo <a href="#">vel nulla</a> ultrices cursus. Morbi convallis nibh condimentum dignissim sagittis. Nulla ut porttitor quam, ac consectetur felis.</p>
+		}
+	}
+	@@if(index == 2){
+		@@if(color == ""){
+			<div class="accordion__item">
+				<p>Integer molestie, est at porta pulvinar, lectus quam facilisis neque, at blandit ipsum dolor ut ex. In hac habitasse platea dictumst. Donec mauris elit, auctor vel tincidunt sed, sollicitudin a orci.</p>
+				<ul>
+					<li>Phasellus pellentesque, nibh sed semper pretium.</li>
+					<li>Justo lorem facilisis nibh, sit amet accumsan.</li>
+					<li>Ligula turpis quis quam.</li>
+					<li>Pellentesque suscipit, justo eu porttitor hendrerit, est turpis.</li>
+				</ul>
+			</div>
+		}
+		@@if(color != ""){
+			<div class="accordion__item">
+				<p>Integer molestie, est at porta pulvinar, lectus quam facilisis neque, at blandit ipsum dolor ut ex. In hac habitasse platea dictumst. Donec mauris elit, auctor vel tincidunt sed, sollicitudin a orci.</p>
+				<ul>
+					<li>Phasellus pellentesque, nibh sed semper pretium.</li>
+					<li>Justo lorem facilisis nibh, sit amet accumsan.</li>
+					<li>Ligula turpis quis quam.</li>
+					<li>Pellentesque suscipit, justo eu porttitor hendrerit, est turpis.</li>
+				</ul>
+			</div>
+		}
+	}
+	@@if(index == 3){
+		@@if(color == ""){
+			<ol class="accordion__item accordion__item-@@color">
+				<li>Phasellus pellentesque, nibh sed semper pretium.</li>
+				<li>Justo lorem facilisis nibh, sit amet accumsan.</li>
+				<li>Ligula turpis quis quam.</li>
+				<li>Pellentesque suscipit, justo eu porttitor hendrerit, est turpis.</li>
+			</ol>
+		}
+		@@if(color != ""){
+			<ol class="accordion__item accordion__item-@@color">
+				<li>Phasellus pellentesque, nibh sed semper pretium.</li>
+				<li>Justo lorem facilisis nibh, sit amet accumsan.</li>
+				<li>Ligula turpis quis quam.</li>
+				<li>Pellentesque suscipit, justo eu porttitor hendrerit, est turpis.</li>
+			</ol>
+		}
+	}
 }
-@@if(color != ""){
-	<li class="accordion__item accordion__item-@@color"><a href="#">Item</a></li>
+@@if(accordionIndex == 3){
+	<div class="accordion__item">
+		<p>Sed ornare lorem arcu. In in justo <a href="#">vel nulla</a> ultrices cursus. Morbi convallis nibh condimentum dignissim sagittis. Nulla ut porttitor quam, ac consectetur felis.</p>
+		<ul>
+			<li>Phasellus pellentesque, nibh sed semper pretium.</li>
+			<li>Justo lorem facilisis nibh, sit amet accumsan.</li>
+			<li>Ligula turpis quis quam.</li>
+			<li>Pellentesque suscipit, justo eu porttitor hendrerit, est turpis.</li>
+		</ul>
+		<p>Integer molestie, est at porta pulvinar, lectus quam facilisis neque, at blandit ipsum dolor ut ex. In hac habitasse platea dictumst. Donec mauris elit, auctor vel tincidunt sed, sollicitudin a orci.</p>
+		<ol>
+			<li>Phasellus pellentesque, nibh sed semper pretium.</li>
+			<li>Justo lorem facilisis nibh, sit amet accumsan.</li>
+			<li>Ligula turpis quis quam.</li>
+			<li>Pellentesque suscipit, justo eu porttitor hendrerit, est turpis.</li>
+		</ol>
+	</div>
+}
+@@if(accordionIndex == 1 || accordionIndex == 2 || accordionIndex > 4){
+	@@if(color == ""){
+		<li class="accordion__item"><a href="#">Accordion Link @@index</a></li>
+	}
+	@@if(color != ""){
+		<li class="accordion__item accordion__item-@@color"><a href="#">Accordion Link @@index</a></li>
+	}
 }
