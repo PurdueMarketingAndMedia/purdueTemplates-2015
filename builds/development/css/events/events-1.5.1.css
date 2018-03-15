@@ -8232,10 +8232,11 @@ u {
     font-size: 0.875em;
   }
   .goldbar .gold .navbar-nav > li > a {
-    padding: 4px 20px 4px 0 !important;
+    padding: 4px 10px !important;
   }
   .goldbar .gold .navbar-nav.information .dropdown-toggle {
     padding-right: 0 !important;
+    padding-left: 0 !important;
   }
 }
 
