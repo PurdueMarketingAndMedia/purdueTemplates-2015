@@ -9782,6 +9782,7 @@ u {
 }
 
 .accordion__content {
+  overflow: hidden;
   margin: 0;
   padding: 0 16.5812px;
   font-size: 0.93269rem;

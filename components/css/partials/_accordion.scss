@@ -101,6 +101,7 @@ $block:accordion;
 		}
 	}
 	&__content{
+		overflow:hidden;
 		margin:0;
 		padding:0 calc-ratioLgMd(20px);
 		font-size:calc-toRem(calc-ratioLgMd(18));
