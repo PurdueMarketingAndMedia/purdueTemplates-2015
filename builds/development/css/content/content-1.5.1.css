@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/*
+	Source: https://css-tricks.com/snippets/sass/power-function/
+	Author: Hugo Giraudel (https://css-tricks.com/author/hugogiraudel/)
+*/
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -9663,12 +9667,11 @@ u {
 .accordion {
   display: block;
   width: 100%;
-  background-color: #bfbfbf;
+  background-color: #dedede;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.4em;
-  background-color: #dedede;
 }
 
 .accordion-striped .accordion__heading:nth-of-type(even) {
@@ -9676,49 +9679,29 @@ u {
   color: #000;
 }
 
-.accordion-campusGold {
-  background-color: #dedede;
-}
-
-.accordion-campusGold.accordion-striped .accordion__heading-campusGold:nth-of-type(even) {
+.accordion.accordion-striped .accordion__heading-campusGold:nth-of-type(even) {
   background-color: #eeaf15;
   color: #000;
 }
 
-.accordion-black {
-  background-color: #dedede;
-}
-
-.accordion-black.accordion-striped .accordion__heading-black:nth-of-type(even) {
+.accordion.accordion-striped .accordion__heading-black:nth-of-type(even) {
   background-color: #555555;
   color: #fff;
 }
 
-.accordion-everTrueBlue {
-  background-color: #dedede;
-}
-
-.accordion-everTrueBlue.accordion-striped .accordion__heading-everTrueBlue:nth-of-type(even) {
+.accordion.accordion-striped .accordion__heading-everTrueBlue:nth-of-type(even) {
   background-color: #72828c;
-  color: #fff;
+  color: #000;
 }
 
-.accordion-gray40 {
-  background-color: #dedede;
-}
-
-.accordion-gray40.accordion-striped .accordion__heading-gray40:nth-of-type(even) {
+.accordion.accordion-striped .accordion__heading-gray40:nth-of-type(even) {
   background-color: #848484;
-  color: #fff;
+  color: #000;
 }
 
-.accordion-gray70 {
-  background-color: #dedede;
-}
-
-.accordion-gray70.accordion-striped .accordion__heading-gray70:nth-of-type(even) {
+.accordion.accordion-striped .accordion__heading-gray70:nth-of-type(even) {
   background-color: #8a8a8a;
-  color: #fff;
+  color: #000;
 }
 
 .accordion__heading {

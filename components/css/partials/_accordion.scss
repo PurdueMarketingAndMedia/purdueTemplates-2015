@@ -2,7 +2,7 @@ $block:accordion;
 .#{$block}{
 	display:block;
 	width:100%;
-	background-color:mix(#fff,#000,75%);
+	background-color:$color-gray15;
 	font-family:$font-archivo-narrow;
 	font-weight:700;
 	font-size:calc-toRem(15);
@@ -11,7 +11,6 @@ $block:accordion;
 	@each $color,$pair in $colorPairs-accordion{
 		$i: $i + 1;
 		@if $i == 1{
-			background-color:$color-gray15;
 			&-striped{
 				& .#{$block}__heading{
 					&:nth-of-type(even){
@@ -32,24 +31,21 @@ $block:accordion;
 				}
 			}
 		}
-		&-#{$color}{
-			background-color:$color-gray15;
-			&.#{$block}-striped{
-				& .#{$block}__heading-#{$color}{
-					&:nth-of-type(even){
-						$color-lightness: lightness(nth($pair,1));
-						@if ($color-lightness <= 50){
-							$color-change:max((50 - $color-lightness)/1.5,10);
-							$color-stripe:lighten(nth($pair,1),$color-change);
-							background-color:$color-stripe;
-							color:color-get-blackOrWhite($color-stripe);
-						}
-						@else{
-							$color-change:max((100 - $color-lightness)/1.5,10);
-							$color-stripe:darken(nth($pair,1),15);
-							background-color:$color-stripe;
-							color:color-get-blackOrWhite($color-stripe);
-						}
+		&.#{$block}-striped{
+			& .#{$block}__heading-#{$color}{
+				&:nth-of-type(even){
+					$color-lightness: lightness(nth($pair,1));
+					@if ($color-lightness <= 50){
+						$color-change:max((50 - $color-lightness)/1.5,10);
+						$color-stripe:lighten(nth($pair,1),$color-change);
+						background-color:$color-stripe;
+						color:color-get-blackOrWhite($color-stripe);
+					}
+					@else{
+						$color-change:max((100 - $color-lightness)/1.5,10);
+						$color-stripe:darken(nth($pair,1),15);
+						background-color:$color-stripe;
+						color:color-get-blackOrWhite($color-stripe);
 					}
 				}
 			}
