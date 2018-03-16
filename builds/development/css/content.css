@@ -4799,7 +4799,7 @@ blockquote::before, .quote::before {
 }
 
 .content .container .row .maincontent .list-romanUpper {
-  list-style-type: lower-upper;
+  list-style-type: upper-roman;
 }
 
 @supports (counter-reset: li) {
