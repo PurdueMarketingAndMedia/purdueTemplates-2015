@@ -9769,43 +9769,161 @@ blockquote::before, .quote::before {
   font-size: 1.125em;
 }
 
-.content .container .row .maincontent .list-romanUpper {
-  list-style-type: upper-roman;
+.content .container .row .maincontent .list {
+  list-style-type: decimal;
 }
 
 @supports (counter-reset: li) {
-  .content .container .row .maincontent .list-romanUpper {
-    counter-reset: l1;
+  .content .container .row .maincontent .list {
     list-style-type: none;
+    counter-reset: l1;
   }
+}
+
+.content .container .row .maincontent .list > li {
+  position: relative;
+  padding-left: .6em;
+}
+
+.content .container .row .maincontent .list > li::before {
+  margin-left: -1em;
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent .list > li {
+    position: relative;
+    padding-left: .6em;
+  }
+  .content .container .row .maincontent .list > li::before {
+    text-align: right;
+    position: absolute;
+    color: #98700d;
+    right: 100%;
+    margin-left: -.8em;
+    font-weight: 700;
+  }
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent .list > li::before {
+    counter-increment: l1;
+    content: counter(l1) ".";
+  }
+}
+
+.content .container .row .maincontent .list > li ol {
+  list-style-type: lower-alpha;
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent .list > li ol {
+    list-style-type: none;
+    counter-reset: l2;
+  }
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent .list > li ol > li::before {
+    counter-increment: l2;
+    content: counter(l2, lower-alpha) ".";
+  }
+}
+
+.content .container .row .maincontent .list > li ol > li ol {
+  list-style-type: lower-roman;
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent .list > li ol > li ol {
+    list-style-type: none;
+    counter-reset: l3;
+  }
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent .list > li ol > li ol > li::before {
+    counter-increment: l3;
+    content: counter(l3, lower-roman) ".";
+  }
+}
+
+.content .container .row .maincontent .list-romanUpper {
+  list-style-type: lower-upper;
+}
+
+@supports (counter-reset: li) {
   .content .container .row .maincontent .list-romanUpper > li::before {
     counter-increment: l1;
     content: counter(l1, upper-roman) ".";
   }
+}
+
+.content .container .row .maincontent .list-romanUpper ol {
+  list-style-type: upper-alpha;
+}
+
+@supports (counter-reset: li) {
   .content .container .row .maincontent .list-romanUpper ol {
+    list-style-type: none;
     counter-reset: l2;
   }
+}
+
+@supports (counter-reset: li) {
   .content .container .row .maincontent .list-romanUpper ol > li::before {
     counter-increment: l2;
     content: counter(l2, upper-alpha) ".";
   }
+}
+
+.content .container .row .maincontent .list-romanUpper ol ol {
+  list-style-type: decimal;
+}
+
+@supports (counter-reset: li) {
   .content .container .row .maincontent .list-romanUpper ol ol {
+    list-style-type: none;
     counter-reset: l3;
   }
+}
+
+@supports (counter-reset: li) {
   .content .container .row .maincontent .list-romanUpper ol ol > li::before {
     counter-increment: l3;
     content: counter(l3) ".";
   }
+}
+
+.content .container .row .maincontent .list-romanUpper ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+@supports (counter-reset: li) {
   .content .container .row .maincontent .list-romanUpper ol ol ol {
+    list-style-type: none;
     counter-reset: l4;
   }
+}
+
+@supports (counter-reset: li) {
   .content .container .row .maincontent .list-romanUpper ol ol ol > li::before {
     counter-increment: l4;
     content: counter(l4, lower-alpha) ".";
   }
+}
+
+.content .container .row .maincontent .list-romanUpper ol ol ol ol {
+  list-style-type: lower-roman;
+}
+
+@supports (counter-reset: li) {
   .content .container .row .maincontent .list-romanUpper ol ol ol ol {
+    list-style-type: none;
     counter-reset: l5;
   }
+}
+
+@supports (counter-reset: li) {
   .content .container .row .maincontent .list-romanUpper ol ol ol ol > li::before {
     counter-increment: l5;
     content: counter(l5, lower-roman) ".";
@@ -9877,8 +9995,28 @@ blockquote::before, .quote::before {
   padding-bottom: 0;
 }
 
+.content .container .row .maincontent ol > li {
+  position: relative;
+  padding-left: .6em;
+}
+
 .content .container .row .maincontent ol > li::before {
   margin-left: -1em;
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent ol > li {
+    position: relative;
+    padding-left: .6em;
+  }
+  .content .container .row .maincontent ol > li::before {
+    text-align: right;
+    position: absolute;
+    color: #98700d;
+    right: 100%;
+    margin-left: -.8em;
+    font-weight: 700;
+  }
 }
 
 .content .container .row .maincontent ul > li::before {
@@ -9916,6 +10054,26 @@ blockquote::before, .quote::before {
   height: 0.5rem;
 }
 
+.content .container .row .maincontent ol {
+  list-style-type: decimal;
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent ol {
+    list-style-type: none;
+    counter-reset: l1;
+  }
+}
+
+.content .container .row .maincontent ol > li {
+  position: relative;
+  padding-left: .6em;
+}
+
+.content .container .row .maincontent ol > li::before {
+  margin-left: -1em;
+}
+
 @supports (counter-reset: li) {
   .content .container .row .maincontent ol > li {
     position: relative;
@@ -9929,25 +10087,46 @@ blockquote::before, .quote::before {
     margin-left: -.8em;
     font-weight: 700;
   }
-  .content .container .row .maincontent ol {
-    list-style-type: none;
-    counter-reset: l1;
-  }
+}
+
+@supports (counter-reset: li) {
   .content .container .row .maincontent ol > li::before {
     counter-increment: l1;
     content: counter(l1) ".";
   }
-  .content .container .row .maincontent ol ol {
+}
+
+.content .container .row .maincontent ol > li ol {
+  list-style-type: lower-alpha;
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent ol > li ol {
+    list-style-type: none;
     counter-reset: l2;
   }
-  .content .container .row .maincontent ol ol > li::before {
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent ol > li ol > li::before {
     counter-increment: l2;
     content: counter(l2, lower-alpha) ".";
   }
-  .content .container .row .maincontent ol ol ol {
+}
+
+.content .container .row .maincontent ol > li ol > li ol {
+  list-style-type: lower-roman;
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent ol > li ol > li ol {
+    list-style-type: none;
     counter-reset: l3;
   }
-  .content .container .row .maincontent ol ol ol > li::before {
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent ol > li ol > li ol > li::before {
     counter-increment: l3;
     content: counter(l3, lower-roman) ".";
   }
