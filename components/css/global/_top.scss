@@ -86,7 +86,7 @@
 	.department{
 		color:#fff;
 		font-family:$font-archivo-narrow;
-		letter-spacing:0;
+		letter-spacing:0.015em;
 		padding-left: 15px;
 		padding-right: 15px;
 		> a{
@@ -95,8 +95,8 @@
 			border:none;
 			padding:0;
 			&:focus{
-	    outline:1px dotted #dedede;
-	    outline-offset:1px;
+			    outline:1px dotted #dedede;
+			    outline-offset:1px;
 			}
 		}
 		@media (min-width:992px) and (max-width:1199px){

@@ -7720,7 +7720,7 @@ h1 {
 
 h2 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 0 0 1rem;
+  margin: 2rem 0 1rem;
   line-height: 1.2;
   color: #98700d;
   font-size: 2em;
@@ -7729,7 +7729,7 @@ h2 {
 
 h3 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 0 0 1rem;
+  margin: 1.75rem 0 1rem;
   line-height: 1.2;
   font-weight: 700;
   color: #707070;
@@ -7738,7 +7738,7 @@ h3 {
 
 h4 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 0 0 1rem;
+  margin: 1.5rem 0 1rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
@@ -7748,7 +7748,7 @@ h4 {
 
 h5 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 0 0 1rem;
+  margin: 1.5rem 0 1rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
@@ -7757,7 +7757,7 @@ h5 {
 
 h6 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 0 0 1rem;
+  margin: 1.5rem 0 1rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
@@ -8240,7 +8240,7 @@ u {
 .top .department {
   color: #fff;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  letter-spacing: 0;
+  letter-spacing: 0.015em;
   padding-left: 15px;
   padding-right: 15px;
 }

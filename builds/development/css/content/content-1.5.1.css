@@ -7720,7 +7720,7 @@ h1 {
 
 h2 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 0 0 1rem;
+  margin: 2rem 0 1rem;
   line-height: 1.2;
   color: #98700d;
   font-size: 2em;
@@ -7729,7 +7729,7 @@ h2 {
 
 h3 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 0 0 1rem;
+  margin: 1.75rem 0 1rem;
   line-height: 1.2;
   font-weight: 700;
   color: #707070;
@@ -7738,7 +7738,7 @@ h3 {
 
 h4 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 0 0 1rem;
+  margin: 1.5rem 0 1rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
@@ -7748,7 +7748,7 @@ h4 {
 
 h5 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 0 0 1rem;
+  margin: 1.5rem 0 1rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
@@ -7757,7 +7757,7 @@ h5 {
 
 h6 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 0 0 1rem;
+  margin: 1.5rem 0 1rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
@@ -8240,7 +8240,7 @@ u {
 .top .department {
   color: #fff;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  letter-spacing: 0;
+  letter-spacing: 0.015em;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -9642,7 +9642,7 @@ ol.accordion__content {
 
 .highlight__title {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 0 0 1rem;
+  margin: 1.5rem 0 1rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
@@ -9744,7 +9744,7 @@ blockquote:before, .quote:before {
 
 .heading-2 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 0 0 1rem;
+  margin: 2rem 0 1rem;
   line-height: 1.2;
   color: #98700d;
   font-size: 2em;
@@ -9753,7 +9753,7 @@ blockquote:before, .quote:before {
 
 .heading-3 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 0 0 1rem;
+  margin: 1.75rem 0 1rem;
   line-height: 1.2;
   font-weight: 700;
   color: #707070;
@@ -9762,7 +9762,7 @@ blockquote:before, .quote:before {
 
 .heading-4 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 0 0 1rem;
+  margin: 1.5rem 0 1rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
@@ -9772,7 +9772,7 @@ blockquote:before, .quote:before {
 
 .heading-5 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 0 0 1rem;
+  margin: 1.5rem 0 1rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
@@ -9781,7 +9781,7 @@ blockquote:before, .quote:before {
 
 .heading-6 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 0 0 1rem;
+  margin: 1.5rem 0 1rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
@@ -9796,6 +9796,12 @@ blockquote:before, .quote:before {
   .content .container .row .maincontent .list {
     list-style-type: none;
     counter-reset: l1;
+  }
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent .list {
+    list-style-type: none;
   }
 }
 
@@ -9837,6 +9843,12 @@ blockquote:before, .quote:before {
 @supports (counter-reset: li) {
   .content .container .row .maincontent .list > li ol {
     list-style-type: none;
+  }
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent .list > li ol {
+    list-style-type: none;
     counter-reset: l2;
   }
 }
@@ -9850,6 +9862,12 @@ blockquote:before, .quote:before {
 
 .content .container .row .maincontent .list > li ol > li ol {
   list-style-type: lower-roman;
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent .list > li ol > li ol {
+    list-style-type: none;
+  }
 }
 
 @supports (counter-reset: li) {
@@ -9871,6 +9889,12 @@ blockquote:before, .quote:before {
 }
 
 @supports (counter-reset: li) {
+  .content .container .row .maincontent .list-romanUpper {
+    list-style-type: none;
+  }
+}
+
+@supports (counter-reset: li) {
   .content .container .row .maincontent .list-romanUpper > li:before {
     counter-increment: l1;
     content: counter(l1, upper-roman) ".";
@@ -9885,6 +9909,12 @@ blockquote:before, .quote:before {
   .content .container .row .maincontent .list-romanUpper ol {
     list-style-type: none;
     counter-reset: l2;
+  }
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent .list-romanUpper ol {
+    list-style-type: none;
   }
 }
 
@@ -9907,6 +9937,12 @@ blockquote:before, .quote:before {
 }
 
 @supports (counter-reset: li) {
+  .content .container .row .maincontent .list-romanUpper ol ol {
+    list-style-type: none;
+  }
+}
+
+@supports (counter-reset: li) {
   .content .container .row .maincontent .list-romanUpper ol ol > li:before {
     counter-increment: l3;
     content: counter(l3) ".";
@@ -9925,6 +9961,12 @@ blockquote:before, .quote:before {
 }
 
 @supports (counter-reset: li) {
+  .content .container .row .maincontent .list-romanUpper ol ol ol {
+    list-style-type: none;
+  }
+}
+
+@supports (counter-reset: li) {
   .content .container .row .maincontent .list-romanUpper ol ol ol > li:before {
     counter-increment: l4;
     content: counter(l4, lower-alpha) ".";
@@ -9939,6 +9981,12 @@ blockquote:before, .quote:before {
   .content .container .row .maincontent .list-romanUpper ol ol ol ol {
     list-style-type: none;
     counter-reset: l5;
+  }
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent .list-romanUpper ol ol ol ol {
+    list-style-type: none;
   }
 }
 
@@ -10080,6 +10128,12 @@ blockquote:before, .quote:before {
 @supports (counter-reset: li) {
   .content .container .row .maincontent ol {
     list-style-type: none;
+  }
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent ol {
+    list-style-type: none;
     counter-reset: l1;
   }
 }
@@ -10122,6 +10176,12 @@ blockquote:before, .quote:before {
 @supports (counter-reset: li) {
   .content .container .row .maincontent ol > li ol {
     list-style-type: none;
+  }
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent ol > li ol {
+    list-style-type: none;
     counter-reset: l2;
   }
 }
@@ -10135,6 +10195,12 @@ blockquote:before, .quote:before {
 
 .content .container .row .maincontent ol > li ol > li ol {
   list-style-type: lower-roman;
+}
+
+@supports (counter-reset: li) {
+  .content .container .row .maincontent ol > li ol > li ol {
+    list-style-type: none;
+  }
 }
 
 @supports (counter-reset: li) {
