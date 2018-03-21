@@ -1,177 +1,123 @@
-html{
-	background-color:#3b3b3b;
-	color:#000;
-	font-size:100%;
+html {
+	background-color: #3b3b3b;
+	color: #000;
+	font-size: 100%;
 }
-body{
-	font-family:$font-arial;
+
+body {
+	font-family: $font-arial;
 }
-@media (min-width:768px){
-	body{
-		font-family:$font-arial;
-		font-size:1em;
-		line-height:24/16*1em;
+
+@media (min-width:768px) {
+	body {
+		font-size: 1em;
+		line-height: calc-toEm(24);
 	}
 }
-@media (max-width:767px){
-	body{
-		font-size:18/16*1em;
-		line-height:24/18*1em;
+@media (max-width:767px) {
+	body {
+		font-size: calc-toEm(18);
+		line-height: calc-toEm(24);
 	}
 }
-h1{
-	padding-top:0;
-	padding-bottom:0.25em;
-	font-family:$font-archivo-narrow;
-	font-weight:bold;
-	color:$color-headlineGold;
-    font-size:36/16 * 1em;
-    line-height:1.1em;
+
+h1 {
+	@include h1;
 }
-h2{
-	padding-top:1em;
-	padding-bottom:0.15em;
-	font-family:$font-archivo-narrow;
-	color:$color-headlineGold;
-	font-size:32/16 * 1em;
-	line-height:1.2em;
+
+h2 {
+	@include h2;
 }
-h3{
-	padding-top:1em;
-	font-family:$font-archivo-narrow;
-	color:$color-headlineGold;
-	font-size:28/16 * 1em;
-	line-height:1.2em;
+
+h3 {
+	@include h3;
 }
-h4{
-	padding-top:1em;
-	font-family:$font-archivo-narrow;
-	font-weight:bold;
-	font-size:24/16 * 1em;
-	line-height:1.2em;
-	//text-transform:uppercase;
+
+h4 {
+	@include h4;
 }
-h5{
-	padding-top:1.5em;
-	font-family:$font-archivo-narrow;
-	font-weight:bold;
-	font-size:20/16 * 1em;
-	line-height:1.2em;
-	text-transform:uppercase;
+
+h5 {
+	@include h5;
 }
-h6{
-	padding-top:2em;
-	font-family:$font-archivo-narrow;
-	font-weight:bold;
-	font-size:1em;
-	line-height:1.2em;
-	text-transform:uppercase;
+
+h6 {
+	@include h6;
 }
-h1,h2,h3,h4,h5,h6{
-	a:link{
-		color:inherit;
-		font-weight:inherit;
-	}
-	a:visited{
-		color:inherit;
-		font-weight:inherit;
-	}
-	a:hover{
-		color:inherit;
-		font-weight:inherit;
-	}
-	a:active{
-		color:inherit;
-		font-weight:inherit;
+
+h1, h2, h3, h4, h5, h6 {
+	a:link, a:visited, a:hover, a:active {
+		color: inherit;
+		font-weight: inherit;
 	}
 }
-h1,h2,h3,h4,h5,h6{
-	margin-top:0;
-	margin-bottom:0;
+
+p {
+	margin-bottom: 1em;
 }
-h1+h3{
-	padding-top:0;
+
+small {
+	font-size: 0.75em;
+	line-height: 1em;
 }
-h3+h6,h4+h6{
-	padding-top:1em;
+
+big {
+	font-size: 1.25em;
+	line-height: 1em;
 }
-h4+h5,h5+h6{
-	padding-top:0.75em;
+
+a:link, a:visited, a:hover, a:active {
+	color: #000;
+	font-weight: 700;
+	text-decoration: underline;
 }
-h2+h6,h3+h5,h3+h4{
-	padding-top:0.5em;
+
+a:hover {
+	text-decoration: none;
 }
-h1+h4,h1+h5,h1+h6,h2+h3,h2+h4,h2+h5{
-	padding-top:0.25em;
+
+ol, ul {
+	padding: 10px 0 10px 35px;
 }
-h1+h2{
-	padding-top:0.15em;
+
+ul {
+	list-style-type: disc;
 }
-p{
-	margin:0 !important;
-	padding:7.5px 0;
+
+ul ul {
+	padding-top: 0;
+	padding-bottom: 0;
+	list-style-type: circle;
 }
-small{
-	font-size:0.75em;
-	line-height:1em;
+
+ul ul ul {
+	list-style-type: square;
 }
-big{
-	font-size:1.25em;
-	line-height:1em;
+
+b, strong {
+	font-weight: 700;
 }
-a:link{
-	color:#000;
-	font-weight:700;
-	text-decoration:underline;
+
+em, i {
+	font-style: italic;
 }
-a:visited{
-	color:#000;
-	font-weight:700;
-	text-decoration:underline;
+
+u {
+	text-decoration: underline;
 }
-a:hover{
-	color:#000;
-	font-weight:700;
-	text-decoration:none;
-}
-a:active{
-	color:#000;
-	font-weight:700;
-	text-decoration:underline;
-}
-ul,ol{
-	padding:10px 0 10px 35px;
-}
-ul{
-	list-style-type:disc;
-}
-ul ul{
-	padding-top:0;
-	padding-bottom:0;
-	list-style-type:circle;
-}
-ul ul ul{
-	list-style-type:square;
-}
-strong,b{
-	font-weight:700;
-}
-i,em{
-	font-style:italic;
-}
-u{
-	text-decoration:underline;
-}
+
 .right {
-	float:right;
+	float: right;
 }
+
 .left {
-	float:left;
+	float: left;
 }
+
 .transition {
-	-webkit-transition-duration: .3s;
-	-moz-transition-duration: .3s;
-	-o-transition-duration: .3s;
-	transition-duration: .3s;
-	-ms-transition-duration: .3s;
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-ms-transition-duration: 0.3s;
 }

@@ -1,0 +1,30 @@
+.highlight {
+    margin: 1rem 0;
+    padding-left: 2rem;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: calc-toRem(8);
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: $color-gray40;
+    }
+
+    &__title {
+        @include h5;
+        display: block;
+        padding: 0;
+        margin: 0;
+        color: inherit;
+        line-height: normal;
+    }
+
+    &__content {
+        display: block;
+        padding-bottom: 0;
+    }
+}
