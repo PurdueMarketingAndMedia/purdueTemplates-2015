@@ -10,6 +10,9 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width, user-scalable=no" name="viewport" />
     <link href="https://www.purdue.edu/purdue/images/favicon.ico" rel="shortcut icon" />
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/0c5298d156.js"></script>
+
     <link rel="stylesheet" text="text/css" href="../../css/content/content-1.5.1.css" />
 
 
@@ -19,8 +22,6 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/c2da24ec3a.css">
     </noscript>
 
-    <!-- Font Awesome -->
-    <script src="https://use.fontawesome.com/0c5298d156.js"></script>
     <!-- JS needed for bootstrap -->
     <script src="https://www.purdue.edu/purdue/js/jquery-1.10.2.min.js" type="text/javascript"></script>
     <script src="https://www.purdue.edu/purdue/js/bootstrap.min.js" type="text/javascript"></script>
@@ -122,10 +123,12 @@
     </div>
     <div class="top">
         <div class="container">
-            <div class="row">
+            <div class="row row-eq-height">
                 <div class="logo col-lg-2 col-md-3 col-sm-3 col-xs-12">
-                    <a href="https://www.purdue.edu">
-                        <img alt="Purdue University" src="https://www.purdue.edu/purdue/images/logo.png" />
+                    <a class="svgLinkContainer" href="https://www.purdue.edu">
+                        <object class="svgContainer" type="image/svg+xml" data="https://www.purdue.edu/purdue/images/logo.svg" tabindex="-1">
+                            <img alt="Purdue University" src="https://www.purdue.edu/purdue/images/logo.png" />
+                        </object>
                     </a>
                 </div>
                 <div class="department col-lg-10 col-md-9 col-sm-9 col-xs-12">
@@ -135,6 +138,7 @@
             </div>
         </div>
     </div>
+
     <div class="navbar navbar-inverse blackbar" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -301,6 +305,43 @@
                         <li>Arial Regular</li>
                         <li>Arial Regular</li>
                     </ol>
+                    <p>Here is an ordered upper-roman list.</p>
+                    <ol class="list-romanUpper">
+                        <li>Arial Regular</li>
+                        <li>Arial Regular</li>
+                        <li>Arial Regular</li>
+                        <li>Nested
+                            <ol>
+                                <li>Arial Regular</li>
+                                <li>Arial Regular</li>
+                                <li>Arial Regular</li>
+                                <li>Nested
+                                    <ol>
+                                        <li>Arial Regular</li>
+                                        <li>Arial Regular</li>
+                                        <li>Arial Regular
+                                            <ol>
+                                                <li>Arial Regular</li>
+                                                <li>Arial Regular</li>
+                                                <li>Arial Regular
+                                                    <ol>
+                                                        <li>Arial Regular</li>
+                                                        <li>Arial Regular</li>
+                                                        <li>Arial Regular</li>
+                                                    </ol>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>Arial Regular</li>
+                                <li>Arial Regular</li>
+                                <li>Arial Regular</li>
+                            </ol>
+                        </li>
+                        <li>Arial Regular</li>
+                        <li>Arial Regular</li>
+                    </ol>
                     <hr>
                     <h1>H1 Champion Welterweight 2.25em #98700d</h1>
                     <h2>H2 Archivo Narrow 2em #98700d</h2>
@@ -432,17 +473,18 @@
                 <div class="motto col-lg-4 col-md-4 col-sm-4">
                     <img alt="We are Purdue. What we make moves the world forward." class="horizontal" src="https://www.purdue.edu/purdue/images/templateElements/2015/footer-mottoHorizontal.png">
                     <img alt="We are Purdue. What we make moves the world forward." class="vertical" src="https://www.purdue.edu/purdue/images/templateElements/2015/footer-mottoVertical.png">
-                    <a alt="Facebook" href="http://www.facebook.com/PurdueUniversity" target="_blank"><i class="fa fa-facebook"></i></a>
-                    <a alt="Twitter" href="http://twitter.com/LifeAtPurdue" target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a alt="YouTube" href="http://www.youtube.com/purdue" target="_blank"><i class="fa fa-youtube"></i></a>
-                    <a alt="Instagram" href="http://www.instagram.com/lifeatpurdue" target="_blank"><i class="fa fa-instagram"></i></a>
-                    <a alt="Pinterest" href="http://www.pinterest.com/lifeatpurdue/" target="_blank"><i class="fa fa-pinterest"></i></a>
-                    <a alt="Google Plus" href="http://plus.google.com/+PurdueUniversity" target="_blank"><i class="fa fa-google-plus"></i></a>
-                    <a alt="LinkedIn" href="https://www.linkedin.com/edu/purdue-university-18357" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a title="Facebook" href="http://www.facebook.com/PurdueUniversity" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a title="Twitter" href="http://twitter.com/LifeAtPurdue" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a title="YouTube" href="http://www.youtube.com/purdue" target="_blank"><i class="fa fa-youtube"></i></a>
+                    <a title="Instagram" href="http://www.instagram.com/lifeatpurdue" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a title="Pinterest" href="http://www.pinterest.com/lifeatpurdue/" target="_blank"><i class="fa fa-pinterest"></i></a>
+                    <a title="Google Plus" href="http://plus.google.com/+PurdueUniversity" target="_blank"><i class="fa fa-google-plus"></i></a>
+                    <a title="LinkedIn" href="https://www.linkedin.com/edu/purdue-university-18357" target="_blank"><i class="fa fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="bottom">
         <div class="container">
             <div class="row">
