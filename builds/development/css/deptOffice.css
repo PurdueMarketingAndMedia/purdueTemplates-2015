@@ -4208,47 +4208,6 @@ u {
   padding: 15px 0 30px;
 }
 
-.deptOfficeContent .container .contentRow .featureButtons a {
-  display: block;
-  width: 100%;
-  margin-top: 20px;
-  padding: 15px;
-  text-align: center;
-  line-height: 1em;
-}
-
-.deptOfficeContent .container .contentRow .featureButtons a:first-child {
-  margin-top: 0;
-}
-
-.deptOfficeContent .container .contentRow .featureButtons a:link {
-  background-color: #eee;
-  color: #656565;
-  font-weight: 400;
-  text-decoration: none;
-}
-
-.deptOfficeContent .container .contentRow .featureButtons a:visited {
-  background-color: #eee;
-  color: #656565;
-  font-weight: 400;
-  text-decoration: none;
-}
-
-.deptOfficeContent .container .contentRow .featureButtons a:hover {
-  background-color: #555;
-  color: #fff;
-  font-weight: 400;
-  text-decoration: none;
-}
-
-.deptOfficeContent .container .contentRow .featureButtons a:active {
-  background-color: #555;
-  color: #fff;
-  font-weight: 400;
-  text-decoration: none;
-}
-
 .deptOfficeContent .container .contentRow .mainContent > h1:first-child, .deptOfficeContent .container .contentRow .mainContent > h2:first-child, .deptOfficeContent .container .contentRow .mainContent > h3:first-child, .deptOfficeContent .container .contentRow .mainContent > h4:first-child, .deptOfficeContent .container .contentRow .mainContent > h5:first-child, .deptOfficeContent .container .contentRow .mainContent > h6:first-child, .deptOfficeContent .container .contentRow .mainContent > p:first-child {
   margin-top: 0;
   margin-bottom: 0;
@@ -4260,6 +4219,10 @@ u {
   .deptOfficeContent .container .contentRow .mainContent {
     padding: 7.5px 15px 30px;
   }
+}
+
+.featureButtons {
+  margin-top: -15px;
 }
 
 .footer {

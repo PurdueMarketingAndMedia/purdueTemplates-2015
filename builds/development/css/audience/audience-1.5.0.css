@@ -4730,52 +4730,9 @@ u {
 }
 
 .eventsFeedContainer .eventsFeed .eventsButtonContainer, .eventsFeedContainer .eventsFeed .newsButtonContainer, .eventsFeedContainer .newsFeed .eventsButtonContainer, .eventsFeedContainer .newsFeed .newsButtonContainer, .newsFeedContainer .eventsFeed .eventsButtonContainer, .newsFeedContainer .eventsFeed .newsButtonContainer, .newsFeedContainer .newsFeed .eventsButtonContainer, .newsFeedContainer .newsFeed .newsButtonContainer {
+  overflow: hidden;
   clear: both;
   text-align: center;
-}
-
-.eventsFeedContainer .eventsFeed .eventsButtonContainer a, .eventsFeedContainer .eventsFeed .newsButtonContainer a, .eventsFeedContainer .newsFeed .eventsButtonContainer a, .eventsFeedContainer .newsFeed .newsButtonContainer a, .newsFeedContainer .eventsFeed .eventsButtonContainer a, .newsFeedContainer .eventsFeed .newsButtonContainer a, .newsFeedContainer .newsFeed .eventsButtonContainer a, .newsFeedContainer .newsFeed .newsButtonContainer a {
-  display: inline-block;
-  padding: 12px 20px;
-  border-radius: 3px;
-  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  font-size: 1.125em;
-}
-
-.eventsFeedContainer .eventsFeed .eventsButtonContainer a:link, .eventsFeedContainer .eventsFeed .newsButtonContainer a:link, .eventsFeedContainer .newsFeed .eventsButtonContainer a:link, .eventsFeedContainer .newsFeed .newsButtonContainer a:link, .newsFeedContainer .eventsFeed .eventsButtonContainer a:link, .newsFeedContainer .eventsFeed .newsButtonContainer a:link, .newsFeedContainer .newsFeed .eventsButtonContainer a:link, .newsFeedContainer .newsFeed .newsButtonContainer a:link {
-  background-color: #c28e0e;
-  color: #000;
-  text-decoration: none;
-}
-
-.eventsFeedContainer .eventsFeed .eventsButtonContainer a:visited, .eventsFeedContainer .eventsFeed .newsButtonContainer a:visited, .eventsFeedContainer .newsFeed .eventsButtonContainer a:visited, .eventsFeedContainer .newsFeed .newsButtonContainer a:visited, .newsFeedContainer .eventsFeed .eventsButtonContainer a:visited, .newsFeedContainer .eventsFeed .newsButtonContainer a:visited, .newsFeedContainer .newsFeed .eventsButtonContainer a:visited, .newsFeedContainer .newsFeed .newsButtonContainer a:visited {
-  background-color: #c28e0e;
-  color: #000;
-  text-decoration: none;
-}
-
-.eventsFeedContainer .eventsFeed .eventsButtonContainer a:hover, .eventsFeedContainer .eventsFeed .newsButtonContainer a:hover, .eventsFeedContainer .newsFeed .eventsButtonContainer a:hover, .eventsFeedContainer .newsFeed .newsButtonContainer a:hover, .newsFeedContainer .eventsFeed .eventsButtonContainer a:hover, .newsFeedContainer .eventsFeed .newsButtonContainer a:hover, .newsFeedContainer .newsFeed .eventsButtonContainer a:hover, .newsFeedContainer .newsFeed .newsButtonContainer a:hover {
-  background-color: #000;
-  color: #c28e0e;
-  text-decoration: none;
-}
-
-.eventsFeedContainer .eventsFeed .eventsButtonContainer a:active, .eventsFeedContainer .eventsFeed .newsButtonContainer a:active, .eventsFeedContainer .newsFeed .eventsButtonContainer a:active, .eventsFeedContainer .newsFeed .newsButtonContainer a:active, .newsFeedContainer .eventsFeed .eventsButtonContainer a:active, .newsFeedContainer .eventsFeed .newsButtonContainer a:active, .newsFeedContainer .newsFeed .eventsButtonContainer a:active, .newsFeedContainer .newsFeed .newsButtonContainer a:active {
-  background-color: #c28e0e;
-  color: #000;
-  text-decoration: none;
-}
-
-@media (min-width: 992px) {
-  .eventsFeedContainer .eventsFeed .eventsButtonContainer a, .eventsFeedContainer .eventsFeed .newsButtonContainer a, .eventsFeedContainer .newsFeed .eventsButtonContainer a, .eventsFeedContainer .newsFeed .newsButtonContainer a, .newsFeedContainer .eventsFeed .eventsButtonContainer a, .newsFeedContainer .eventsFeed .newsButtonContainer a, .newsFeedContainer .newsFeed .eventsButtonContainer a, .newsFeedContainer .newsFeed .newsButtonContainer a {
-    margin: 30px auto 0;
-  }
-}
-
-@media (max-width: 991px) {
-  .eventsFeedContainer .eventsFeed .eventsButtonContainer a, .eventsFeedContainer .eventsFeed .newsButtonContainer a, .eventsFeedContainer .newsFeed .eventsButtonContainer a, .eventsFeedContainer .newsFeed .newsButtonContainer a, .newsFeedContainer .eventsFeed .eventsButtonContainer a, .newsFeedContainer .eventsFeed .newsButtonContainer a, .newsFeedContainer .newsFeed .eventsButtonContainer a, .newsFeedContainer .newsFeed .newsButtonContainer a {
-    margin: 0 auto;
-  }
 }
 
 .twitterFeedContainer {
@@ -4907,39 +4864,6 @@ u {
   text-align: center;
 }
 
-.twitterFeedContainer .twitterFeed .followButtonContainer a {
-  display: inline-block;
-  margin: 0 auto;
-  padding: 12px 20px;
-  border-radius: 3px;
-  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  font-size: 1.125em;
-}
-
-.twitterFeedContainer .twitterFeed .followButtonContainer a:link {
-  background-color: #c28e0e;
-  color: #000;
-  text-decoration: none;
-}
-
-.twitterFeedContainer .twitterFeed .followButtonContainer a:visited {
-  background-color: #c28e0e;
-  color: #000;
-  text-decoration: none;
-}
-
-.twitterFeedContainer .twitterFeed .followButtonContainer a:hover {
-  background-color: #000;
-  color: #c28e0e;
-  text-decoration: none;
-}
-
-.twitterFeedContainer .twitterFeed .followButtonContainer a:active {
-  background-color: #c28e0e;
-  color: #000;
-  text-decoration: none;
-}
-
 @media (min-width: 768px) {
   .twitterFeedContainer {
     background-image: url("https://purdue.edu/purdue/images/templateElements/2015/audience-twitterBackground.png");
@@ -4986,48 +4910,15 @@ u {
   }
 }
 
-.instagramFeedContainer .instagramFeed a.followButton {
-  display: inline-block;
-  border-radius: 3px;
-  padding: 10px 14px;
-  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  text-transform: uppercase;
-}
-
-@media (min-width: 768px) {
-  .instagramFeedContainer .instagramFeed a.followButton {
-    float: right;
-  }
+.instagramFeedContainer .instagramFeed .instagram-button {
+  float: right;
+  margin-top: 0;
 }
 
 @media (max-width: 767px) {
-  .instagramFeedContainer .instagramFeed a.followButton {
+  .instagramFeedContainer .instagramFeed .instagram-button {
     float: none;
   }
-}
-
-.instagramFeedContainer .instagramFeed a.followButton:link {
-  background-color: #c28e0e;
-  color: #000;
-  text-decoration: none;
-}
-
-.instagramFeedContainer .instagramFeed a.followButton:visited {
-  background-color: #c28e0e;
-  color: #000;
-  text-decoration: none;
-}
-
-.instagramFeedContainer .instagramFeed a.followButton:hover {
-  background-color: #000;
-  color: #c28e0e;
-  text-decoration: none;
-}
-
-.instagramFeedContainer .instagramFeed a.followButton:active {
-  background-color: #c28e0e;
-  color: #000;
-  text-decoration: none;
 }
 
 .instagramFeedContainer .instagramFeed .photos {
