@@ -3247,10 +3247,29 @@ u {
   background-image: url("https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png");
   background-color: #000;
   background-repeat: repeat;
+  background: repeating-linear-gradient(60deg, #191919, #191919 1px, #000 2px, #000 7px, #191919 8px);
+}
+
+.top .row-eq-height {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .top .logo {
-  padding: 25px 15px;
+  padding: 25px;
+  align-items: center;
+}
+
+.top .logo::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 70%;
+  right: 0;
+  top: 15%;
+  background-color: #999;
 }
 
 .top .logo a {
@@ -3272,57 +3291,74 @@ u {
 }
 
 @media (max-width: 767px) {
-  .top .logo a {
+  .top .logo a img {
+    width: 100%;
+  }
+}
+
+.top .logo .svgLinkContainer {
+  display: block;
+  position: relative;
+  height: 1px;
+  width: 100%;
+  padding-bottom: 29.95839%;
+  z-index: 2;
+}
+
+.top .logo .svgLinkContainer::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.top .logo .svgContainer {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  padding-right: 0px;
+}
+
+@media (max-width: 767px) {
+  .top .logo .svgLinkContainer {
     margin: 0 auto;
     width: 50%;
+    padding-bottom: 14.9792%;
   }
 }
 
 .top .department {
   color: #fff;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  letter-spacing: 1px;
+  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
+  letter-spacing: 0;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .top .department > a {
   display: inline-block;
-  padding: 2px 10px;
-  line-height: 1.2em;
+  line-height: 1.1em;
+  border: none;
+  padding: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .top .department > a {
-    border-left: solid 1px #c28e0e;
+    display: inline-block;
+    padding: 2px 0px;
+    line-height: 1.1em;
   }
 }
 
-@media (max-width: 767px) {
-  .top .department > a {
-    border: none;
-  }
-}
-
-.top .department > a:link {
+.top .department > a:link, .top .department a:visited, .top .department a:hover, .top .department a:active {
   color: inherit;
-  font-weight: 100;
-  text-decoration: none;
-}
-
-.top .department > a:visited {
-  color: inherit;
-  font-weight: 100;
-  text-decoration: none;
-}
-
-.top .department > a:hover {
-  color: inherit;
-  font-weight: 100;
-  text-decoration: none;
-}
-
-.top .department > a:active {
-  color: inherit;
-  font-weight: 100;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -3330,70 +3366,53 @@ u {
   display: block;
   clear: left;
   color: inherit;
-  font-size: 0.52em;
-  line-height: 1.3em;
+  font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
+  font-size: 0.8em;
+  line-height: 1.2em;
+  letter-spacing: .5px;
+  text-transform: uppercase;
 }
 
-.top .department .tagline a:link {
+.top .department .tagline a:link, .top .department .tagline a:visited, .top .department .tagline a:hover, .top .department .tagline a:active {
   color: inherit;
-  font-weight: 400;
+  font-weight: 100;
   text-decoration: none;
-}
-
-.top .department .tagline a:visited {
-  color: inherit;
-  font-weight: 400;
-  text-decoration: none;
-}
-
-.top .department .tagline a:hover {
-  color: inherit;
-  font-weight: 400;
-  text-decoration: none;
-}
-
-.top .department .tagline a:active {
-  color: inherit;
-  font-weight: 400;
-  text-decoration: none;
-}
-
-@media (min-width: 768px) {
-  .top .department .tagline {
-    padding: 0 10px 2px;
-    border-left: solid 1px #c28e0e;
-  }
-}
-
-@media (max-width: 767px) {
-  .top .department .tagline {
-    padding: 10px 0 0;
-    border: none;
-  }
 }
 
 @media (min-width: 992px) {
   .top .department {
-    padding: 30px 15px 15px;
-    font-size: 1.5625em;
-    font-weight: 100;
+    font-size: 1.36364em;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .top .row-eq-height {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
   .top .department {
-    padding: 30px 15px 15px;
-    font-size: 1.25em;
-    font-weight: 100;
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 768px) {
+  .top .row-eq-height {
+    flex-direction: row;
+  }
+  .top .department {
+    padding-left: 25px;
   }
 }
 
 @media (max-width: 767px) {
   .top .department {
-    padding: 0 15px 30px;
-    font-size: 1.33333em;
-    font-weight: 400;
+    font-size: 1.36364em;
     text-align: center;
+  }
+  .top .tagline {
+    padding: 5px 0 0;
+    border: none;
   }
 }
 
@@ -4571,6 +4590,24 @@ u {
     border-bottom: solid 1px #474747;
   }
   .footer #accordion .panel .panel-heading {
+    display: block;
+    background: transparent;
+    padding: 0;
+  }
+  .footer #accordion .panel .panel-heading .panel-title {
+    font-family: "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
+    padding-top: 0;
+    padding-bottom: 5px;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .footer #accordion .panel .panel-heading .panel-title a {
+    cursor: default;
+    color: #c28e0e;
+    border-bottom: 0;
+  }
+  .footer #accordion .panel .panel-heading .panel-title .fa {
     display: none;
   }
   .footer #accordion .panel .panel-collapse {
@@ -4609,6 +4646,26 @@ u {
     border-bottom: solid 1px #474747;
   }
   .footer #accordion .panel .panel-heading {
+    display: block;
+    padding: 0;
+    background-color: transparent;
+    font-size: 1.28571em;
+    line-height: 1em;
+  }
+  .footer #accordion .panel .panel-heading .panel-title {
+    font-family: "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
+    padding-top: 0;
+    padding-bottom: 5px;
+    font-size: .9em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .footer #accordion .panel .panel-heading .panel-title a {
+    cursor: default;
+    color: #c28e0e;
+    border-bottom: 0;
+  }
+  .footer #accordion .panel .panel-heading .panel-title .fa {
     display: none;
   }
   .footer #accordion .panel .panel-collapse {
@@ -4654,14 +4711,17 @@ u {
     line-height: 1em;
   }
   .footer #accordion .panel .panel-heading .panel-title {
-    font-family: "Arial", "Helvetica Neue", "Helvetica", sans-serif !important;
+    font-family: "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
     padding-top: 0;
-    font-size: 1em;
-    font-weight: 300;
+    padding-bottom: 5px;
+    font-size: .8em;
+    font-weight: 700;
+    text-transform: uppercase;
   }
   .footer #accordion .panel .panel-heading .panel-title a {
     cursor: default;
     color: #c28e0e;
+    border-bottom: 0;
   }
   .footer #accordion .panel .panel-heading .panel-title .fa {
     display: none;
@@ -4679,11 +4739,12 @@ u {
     width: 100%;
     padding: 15px 30px;
     font-size: 1.75em;
+    line-height: 1em;
     text-align: center;
   }
   .footer #accordion .motto img {
     display: block;
-    max-width: 60%;
+    max-width: 45%;
     margin: 0 auto 15px;
   }
   .footer #accordion .motto a {
@@ -4710,10 +4771,10 @@ u {
     line-height: 1em;
   }
   .footer #accordion .panel .panel-heading .panel-title {
-    font-family: "Arial", "Helvetica Neue", "Helvetica", sans-serif !important;
+    font-family: "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
     padding-top: 0;
     font-size: 1em;
-    font-weight: 300;
+    font-weight: 100;
   }
   .footer #accordion .panel .panel-heading a {
     display: block;
@@ -4760,6 +4821,7 @@ u {
     clear: both;
     padding: 15px 15px 0;
     font-size: 1.66667em;
+    line-height: 1em;
     text-align: center;
   }
   .footer #accordion .motto a {
@@ -4768,7 +4830,7 @@ u {
   }
   .footer #accordion .motto img {
     display: block;
-    max-width: 80%;
+    max-width: 45%;
     margin: 0 auto 15px;
   }
   .footer #accordion .motto .vertical {
