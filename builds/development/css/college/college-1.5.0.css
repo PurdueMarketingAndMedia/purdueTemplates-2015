@@ -3290,7 +3290,7 @@ u {
   clear: left;
   color: inherit;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  font-size: 0.8em;
+  font-size: 0.6087em;
   line-height: 1.2em;
   letter-spacing: .5px;
   text-transform: uppercase;
@@ -3309,7 +3309,7 @@ u {
 
 @media (min-width: 992px) {
   .top .department {
-    font-size: 1.36364em;
+    font-size: 1.4375em;
   }
 }
 
@@ -3320,7 +3320,7 @@ u {
     flex-direction: row;
   }
   .top .department {
-    font-size: 1.2em;
+    font-size: 1.25em;
   }
 }
 
@@ -3341,7 +3341,7 @@ u {
     display: none;
   }
   .top .department {
-    font-size: 1.36364em;
+    font-size: 1.38889em;
     text-align: center;
   }
   .top .tagline {
