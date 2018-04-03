@@ -2734,7 +2734,7 @@ h1 {
 
 h2 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 2rem 0 1rem;
+  margin: 2rem 0 0.75rem;
   line-height: 1.2;
   color: #98700d;
   font-size: 2em;
@@ -2743,7 +2743,7 @@ h2 {
 
 h3 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 1.75rem 0 1rem;
+  margin: 1.75rem 0 0.7rem;
   line-height: 1.2;
   font-weight: 700;
   color: #707070;
@@ -2752,7 +2752,7 @@ h3 {
 
 h4 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 1.5rem 0 1rem;
+  margin: 1.5rem 0 0.65rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
@@ -2762,7 +2762,7 @@ h4 {
 
 h5 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 1.5rem 0 1rem;
+  margin: 1.5rem 0 0.6rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
@@ -2771,7 +2771,7 @@ h5 {
 
 h6 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 1.5rem 0 1rem;
+  margin: 1.5rem 0 0.5rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
@@ -4497,7 +4497,7 @@ u {
 
 .highlight__title {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 1.5rem 0 1rem;
+  margin: 1.5rem 0 0.6rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
@@ -4599,7 +4599,7 @@ blockquote:before, .quote:before {
 
 .heading-2 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 2rem 0 1rem;
+  margin: 2rem 0 0.75rem;
   line-height: 1.2;
   color: #98700d;
   font-size: 2em;
@@ -4608,7 +4608,7 @@ blockquote:before, .quote:before {
 
 .heading-3 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 1.75rem 0 1rem;
+  margin: 1.75rem 0 0.7rem;
   line-height: 1.2;
   font-weight: 700;
   color: #707070;
@@ -4617,7 +4617,7 @@ blockquote:before, .quote:before {
 
 .heading-4 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 1.5rem 0 1rem;
+  margin: 1.5rem 0 0.65rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
@@ -4627,7 +4627,7 @@ blockquote:before, .quote:before {
 
 .heading-5 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 1.5rem 0 1rem;
+  margin: 1.5rem 0 0.6rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
@@ -4636,7 +4636,7 @@ blockquote:before, .quote:before {
 
 .heading-6 {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
-  margin: 1.5rem 0 1rem;
+  margin: 1.5rem 0 0.5rem;
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
