@@ -18,7 +18,7 @@
 	</div>
 }
 @@if(index == 2){
-	<ol class="collapse accordion__content" id="list-@@id-@@index" aria-expanded="false" aria-controls="collapseExample">
+	<ol class="collapse accordion__content" id="list-@@id-@@index">
 		@@for (var i = 0; i < 6; i++){
 			@@include('_accordion-list-item.html',{
 				"accordionIndex":@@index,
@@ -29,7 +29,7 @@
 	</ol>
 }
 @@if(index == 1 || index > 3){
-	<ul class="collapse accordion__content" id="list-@@id-@@index" aria-expanded="false" aria-controls="collapseExample">
+	<ul class="collapse accordion__content" id="list-@@id-@@index">
 		@@for (var i = 0; i < 6; i++){
 			@@include('_accordion-list-item.html',{
 				"accordionIndex":@@index,

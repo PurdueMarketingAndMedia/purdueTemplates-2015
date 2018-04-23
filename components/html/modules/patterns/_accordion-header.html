@@ -1,6 +1,6 @@
 @@if(color == ""){
 	@@if(striped == false){
-		<button class="collapsed accordion__heading" data-toggle="collapse" data-target="#list-@@id-@@index">
+		<button class="collapsed accordion__heading" data-toggle="collapse" data-target="#list-@@id-@@index" aria-controls="list-@@id-@@index" aria-expanded="false">
 			@@if(index == 4){
 				Multiple groups of content
 			}
@@ -16,7 +16,7 @@
 		</button>
 	}
 	@@if(striped == true){
-		<button class="collapsed accordion__heading accordion__heading-striped" data-toggle="collapse" data-target="#list-@@id-@@index">
+		<button class="collapsed accordion__heading accordion__heading-striped" data-toggle="collapse" data-target="#list-@@id-@@index" aria-controls="list-@@id-@@index" aria-expanded="false">
 			@@if(index == 4){
 				Multiple groups of content
 			}
@@ -34,7 +34,7 @@
 }
 @@if(color != ""){
 	@@if(striped == false){
-		<button class="collapsed accordion__heading accordion__heading-@@color" data-toggle="collapse" data-target="#list-@@id-@@index">
+		<button class="collapsed accordion__heading accordion__heading-@@color" data-toggle="collapse" data-target="#list-@@id-@@index" aria-controls="list-@@id-@@index" aria-expanded="false">
 			@@if(index == 4){
 				Multiple groups of content
 			}
@@ -50,7 +50,7 @@
 		</button>
 	}
 	@@if(striped == true){
-		<button class="collapsed accordion__heading accordion__heading-striped accordion__heading-@@color" data-toggle="collapse" data-target="#list-@@id-@@index">
+		<button class="collapsed accordion__heading accordion__heading-striped accordion__heading-@@color" data-toggle="collapse" data-target="#list-@@id-@@index" aria-controls="list-@@id-@@index" aria-expanded="false">
 			@@if(index == 4){
 				Multiple groups of content
 			}
