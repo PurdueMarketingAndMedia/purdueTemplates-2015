@@ -18,14 +18,28 @@ $block:accordion;
 						@if ($color-lightness <= 50){
 							$color-change:max((50 - $color-lightness)/1.5,10);
 							$color-stripe:lighten(nth($pair,1),$color-change);
+							$color-font:color-get-blackOrWhite($color-stripe);
+							@if $color-font == #fff {
+								outline-color:$color-gray15;
+							}
+							@else{
+								outline-color:$color-font;
+							}
 							background-color:$color-stripe;
-							color:color-get-blackOrWhite($color-stripe);
+							color:$color-font;
 						}
 						@else{
 							$color-change:max((100 - $color-lightness)/1.5,10);
 							$color-stripe:darken(nth($pair,1),$color-change);
+							$color-font:color-get-blackOrWhite($color-stripe);
+							@if $color-font == #fff {
+								outline-color:$color-gray15;
+							}
+							@else{
+								outline-color:$color-font;
+							}
 							background-color:$color-stripe;
-							color:color-get-blackOrWhite($color-stripe);
+							color:$color-font;
 						}
 					}
 				}
@@ -38,14 +52,28 @@ $block:accordion;
 					@if ($color-lightness <= 50){
 						$color-change:max((50 - $color-lightness)/1.5,10);
 						$color-stripe:lighten(nth($pair,1),$color-change);
+						$color-font:color-get-blackOrWhite($color-stripe);
+						@if $color-font == #fff {
+							outline-color:$color-gray15;
+						}
+						@else{
+							outline-color:$color-font;
+						}
 						background-color:$color-stripe;
-						color:color-get-blackOrWhite($color-stripe);
+						color:$color-font;
 					}
 					@else{
 						$color-change:max((100 - $color-lightness)/1.5,10);
 						$color-stripe:darken(nth($pair,1),15);
+						$color-font:color-get-blackOrWhite($color-stripe);
+						@if $color-font == #fff {
+							outline-color:$color-gray15;
+						}
+						@else{
+							outline-color:$color-font;
+						}
 						background-color:$color-stripe;
-						color:color-get-blackOrWhite($color-stripe);
+						color:$color-font;
 					}
 				}
 			}
@@ -54,7 +82,7 @@ $block:accordion;
 	&__heading{
 		position:relative;
 		display:block;
-		cursor:pointer;
+		width:100%;
 		border-top:solid 1px #fff;
 		margin:0 auto;
 		padding:calc-ratioLgMd(12px) calc-toRem(calc-ratioLgMd(50)) calc-ratioLgMd(12px) calc-ratioLgMd(20px);
@@ -65,6 +93,7 @@ $block:accordion;
 		font-weight:700;
 		text-transform:uppercase;
 		color:#fff;
+		cursor:pointer;
 		&:first-child{
 			border-top:0;
 		}
@@ -76,6 +105,11 @@ $block:accordion;
 			margin-top:-0.5em;
 			font-family:$font-fontAwesome;
 		}
+		&:focus{
+			outline-style:solid;
+			outline-width:3px;
+			outline-offset:-3px;
+		}
 		&.collapsed{
 			&::after{
 				content:"\f0fe";
@@ -85,10 +119,17 @@ $block:accordion;
 		@each $color,$pair in $colorPairs-accordion{
 			$i: $i + 1;
 			@if $i == 1{
+				outline-color:nth($pair,2);
 				background-color:nth($pair,1);
 				color:nth($pair,2);
 			}
 			&-#{$color}{
+				@if nth($pair,2) == #fff {
+					outline-color:$color-gray15;
+				}
+				@else{
+					outline-color:nth($pair,2);
+				}
 				background-color:nth($pair,1);
 				color:nth($pair,2);
 			}

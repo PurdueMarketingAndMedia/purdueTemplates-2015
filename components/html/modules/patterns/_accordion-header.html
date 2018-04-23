@@ -1,6 +1,6 @@
 @@if(color == ""){
 	@@if(striped == false){
-		<h2 class="collapsed accordion__heading" data-toggle="collapse" data-target="#list-@@id-@@index">
+		<button class="collapsed accordion__heading" data-toggle="collapse" data-target="#list-@@id-@@index">
 			@@if(index == 4){
 				Multiple groups of content
 			}
@@ -13,10 +13,10 @@
 			@@if(index == 1 || index > 4){
 				Unordered list
 			}
-		</h2>
+		</button>
 	}
 	@@if(striped == true){
-		<h2 class="collapsed accordion__heading accordion__heading-striped" data-toggle="collapse" data-target="#list-@@id-@@index">
+		<button class="collapsed accordion__heading accordion__heading-striped" data-toggle="collapse" data-target="#list-@@id-@@index">
 			@@if(index == 4){
 				Multiple groups of content
 			}
@@ -29,12 +29,12 @@
 			@@if(index == 1 || index > 4){
 				Unordered list
 			}
-		</h2>
+		</button>
 	}
 }
 @@if(color != ""){
 	@@if(striped == false){
-		<h2 class="collapsed accordion__heading accordion__heading-@@color" data-toggle="collapse" data-target="#list-@@id-@@index">
+		<button class="collapsed accordion__heading accordion__heading-@@color" data-toggle="collapse" data-target="#list-@@id-@@index">
 			@@if(index == 4){
 				Multiple groups of content
 			}
@@ -47,10 +47,10 @@
 			@@if(index == 1 || index > 4){
 				Unordered list
 			}
-		</h2>
+		</button>
 	}
 	@@if(striped == true){
-		<h2 class="collapsed accordion__heading accordion__heading-striped accordion__heading-@@color" data-toggle="collapse" data-target="#list-@@id-@@index">
+		<button class="collapsed accordion__heading accordion__heading-striped accordion__heading-@@color" data-toggle="collapse" data-target="#list-@@id-@@index">
 			@@if(index == 4){
 				Multiple groups of content
 			}
@@ -63,6 +63,6 @@
 			@@if(index == 1 || index > 4){
 				Unordered list
 			}
-		</h2>
+		</button>
 	}
 }
