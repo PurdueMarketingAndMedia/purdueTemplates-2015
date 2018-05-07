@@ -10962,6 +10962,25 @@ blockquote:before, .quote:before {
     border-bottom: solid 1px #474747;
   }
   .footer #accordion .panel .panel-heading {
+    display: block;
+    padding: 0;
+    background-color: transparent;
+    font-size: 1.28571em;
+    line-height: 1em;
+  }
+  .footer #accordion .panel .panel-heading .panel-title {
+    font-family: "Champion Welterwt A", "Champion Welterwt B", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif !important;
+    padding-top: 0;
+    padding-bottom: 5px;
+    font-size: 1em;
+    font-weight: 300;
+  }
+  .footer #accordion .panel .panel-heading .panel-title a {
+    cursor: default;
+    color: #c28e0e;
+    border-bottom: none;
+  }
+  .footer #accordion .panel .panel-heading .panel-title .fa {
     display: none;
   }
   .footer #accordion .panel .panel-collapse {
@@ -10974,15 +10993,27 @@ blockquote:before, .quote:before {
     padding: 15px;
     font-size: 1.25em;
   }
-  .footer #accordion .motto a {
+  .footer #accordion .motto .taglineContainer {
+    display: block;
+    position: absolute;
+    width: 80%;
+    padding: 0px;
+    margin: 0 auto;
+  }
+  .footer #accordion .motto .taglineContainer .tagline {
+    display: block;
+    max-width: 100%;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    text-align: center !important;
+  }
+  .footer #accordion .motto .social {
+    display: block;
+    border-top: solid 1px #474747;
+    margin-top: 70px;
+  }
+  .footer #accordion .motto .social a {
     float: left;
-  }
-  .footer #accordion .motto img {
-    padding-bottom: 10px;
-    border-bottom: solid 1px #474747;
-  }
-  .footer #accordion .motto .horizontal {
-    display: none;
   }
 }
 
@@ -11000,6 +11031,25 @@ blockquote:before, .quote:before {
     border-bottom: solid 1px #474747;
   }
   .footer #accordion .panel .panel-heading {
+    display: block;
+    padding: 0;
+    background-color: transparent;
+    font-size: 1.28571em;
+    line-height: 1em;
+  }
+  .footer #accordion .panel .panel-heading .panel-title {
+    font-family: "Champion Welterwt A", "Champion Welterwt B", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif !important;
+    padding-top: 0;
+    padding-bottom: 5px;
+    font-size: 1em;
+    font-weight: 300;
+  }
+  .footer #accordion .panel .panel-heading .panel-title a {
+    cursor: default;
+    color: #c28e0e;
+    border-bottom: none;
+  }
+  .footer #accordion .panel .panel-heading .panel-title .fa {
     display: none;
   }
   .footer #accordion .panel .panel-collapse {
@@ -11012,15 +11062,27 @@ blockquote:before, .quote:before {
     padding: 15px;
     font-size: 1.25em;
   }
-  .footer #accordion .motto a {
+  .footer #accordion .motto .taglineContainer {
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding: 0px;
+    margin: 0 auto;
+  }
+  .footer #accordion .motto .taglineContainer .tagline {
+    display: block;
+    width: 100%;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    text-align: center !important;
+  }
+  .footer #accordion .motto .social {
+    display: block;
+    border-top: solid 1px #474747;
+    margin-top: 70px;
+  }
+  .footer #accordion .motto .social a {
     float: left;
-  }
-  .footer #accordion .motto img {
-    padding-bottom: 10px;
-    border-bottom: solid 1px #474747;
-  }
-  .footer #accordion .motto .horizontal {
-    display: none;
   }
 }
 
@@ -11045,14 +11107,16 @@ blockquote:before, .quote:before {
     line-height: 1em;
   }
   .footer #accordion .panel .panel-heading .panel-title {
-    font-family: "Arial", "Helvetica Neue", "Helvetica", sans-serif !important;
+    font-family: "Champion Welterwt A", "Champion Welterwt B", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif !important;
     padding-top: 0;
+    padding-bottom: 5px;
     font-size: 1em;
     font-weight: 300;
   }
   .footer #accordion .panel .panel-heading .panel-title a {
     cursor: default;
     color: #c28e0e;
+    border-bottom: none;
   }
   .footer #accordion .panel .panel-heading .panel-title .fa {
     display: none;
@@ -11067,21 +11131,31 @@ blockquote:before, .quote:before {
   }
   .footer #accordion .motto {
     float: left;
-    width: 100%;
-    padding: 15px 30px;
-    font-size: 1.75em;
-    text-align: center;
+    width: 20%;
+    padding: 15px;
+    font-size: 1.25em;
   }
-  .footer #accordion .motto img {
+  .footer #accordion .motto .taglineContainer {
     display: block;
-    max-width: 60%;
-    margin: 0 auto 15px;
+    position: absolute;
+    width: 80%;
+    padding: 0px;
+    margin: 0 auto;
   }
-  .footer #accordion .motto a {
-    margin: 1px 5px;
+  .footer #accordion .motto .taglineContainer .tagline {
+    display: block;
+    width: 100%;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    text-align: center !important;
   }
-  .footer #accordion .motto .vertical {
-    display: none;
+  .footer #accordion .motto .social {
+    display: block;
+    border-top: solid 1px #474747;
+    margin-top: 70px;
+  }
+  .footer #accordion .motto .social a {
+    float: left;
   }
 }
 
@@ -11153,22 +11227,26 @@ blockquote:before, .quote:before {
     font-size: 1.66667em;
     text-align: center;
   }
-  .footer #accordion .motto a {
-    width: 28px;
-    margin: 9px 2%;
-  }
-  .footer #accordion .motto img {
+  .footer #accordion .motto .taglineContainer {
     display: block;
-    max-width: 80%;
-    margin: 0 auto 15px;
+    width: 50%;
+    margin: 0 auto;
   }
-  .footer #accordion .motto .vertical {
-    display: none;
+  .footer #accordion .motto .taglineContainer .tagline {
+    display: block;
+    width: 100%;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    text-align: center !important;
+  }
+  .footer #accordion .motto .social {
+    display: block;
+    width: 100%;
   }
 }
 
 @media (min-width: 992px) {
-  .footer {
+  .footer .footer {
     padding: 20px 0;
   }
 }
