@@ -51,7 +51,7 @@
       .motto{
 			text-align:left;
 			color:#fff;
-            a{
+        a{
 				display:inline-block;
 				position:relative;
 				overflow:hidden;
@@ -260,10 +260,11 @@
 				width:20%;
 				padding:15px;
 				font-size:20/16*1em;
+
 				.taglineContainer{
 					display: block;
 					position: absolute;
-					width: 80%;
+					width: 100%;
 					padding:0px;
 					margin: 0 auto;
 					.tagline{
