@@ -28,5 +28,8 @@
         "gulp-sourcemaps": "^2.4.0",
         "postcss-pseudoelements": "^5.0.0"
     },
-    "browserslist": "> 5% in my stats"
+    "browserslist": "> 5% in my stats",
+    "dependencies": {
+        "npm": "^6.0.1"
+    }
 }
