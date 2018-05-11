@@ -77,8 +77,8 @@ table {
 }
 
 /*!
- *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
- *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ *  Font Awesome 4.4.0 by @davegandy - https://fontawesome.io - @fontawesome
+ *  License - https://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
@@ -2945,6 +2945,20 @@ u {
   background-color: #000;
 }
 
+.goldbar button.navbar-toggle {
+  position: relative;
+  overflow: hidden;
+}
+
+.goldbar button.navbar-toggle:after {
+  display: block;
+  content: "search";
+  position: absolute;
+  top: 100%;
+  width: 0;
+  height: 0;
+}
+
 .goldbar #search {
   border: none;
 }
@@ -3490,8 +3504,9 @@ u {
     font-size: 0.9em;
   }
   .blackbar .navbar-nav li .dropdown-menu li a {
-    margin: 5px 0 0;
+    margin: 10px 0 0;
     padding: 0;
+    white-space: normal;
   }
   .blackbar .navbar-nav li .dropdown-menu li.dropdown-submenu .dropdown-menu {
     margin-top: 0;
@@ -3560,13 +3575,19 @@ u {
     display: none;
   }
   .blackbar .black .dropdown-menu .dropdown-submenu > .dropdown-menu {
+    overflow: hidden;
     display: block;
+    width: 0;
+    min-width: 0;
+    height: 0;
+    min-height: 0;
     left: 100%;
     top: 0;
     margin-left: -1px;
     background: none;
     border: none;
     box-shadow: none;
+    padding: 0;
   }
   .blackbar .black .dropdown-menu .dropdown-submenu > .dropdown-menu > li > a {
     width: 0;
@@ -3580,9 +3601,15 @@ u {
     background: #000;
   }
   .blackbar .black .dropdown-menu .dropdown-submenu:hover > .dropdown-menu {
+    overflow: visible;
+    width: auto;
+    min-width: 160px;
+    height: auto;
+    min-height: none;
     background: #000;
     border: 1px solid #000;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    padding: 0 5px;
   }
   .blackbar .black .dropdown-menu .dropdown-submenu:hover > .dropdown-menu > li > a {
     width: auto;
@@ -5222,8 +5249,21 @@ form.purdueForm .robotic {
 }
 
 .sidenav > ul a {
+  position: relative;
   display: block;
   padding: 12px 0;
+}
+
+.sidenav > ul a:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 10px;
+  display: block;
+  width: 0;
+  transition: width 0.15s ease-in;
+  height: 2px;
+  background-color: #c28e0e;
 }
 
 .sidenav > ul a:link {
@@ -5236,7 +5276,7 @@ form.purdueForm .robotic {
   text-decoration: none;
 }
 
-.sidenav > ul a:hover {
+.sidenav > ul a:hover, .sidenav > ul a:focus {
   color: #000;
   text-decoration: underline;
 }
@@ -5244,6 +5284,15 @@ form.purdueForm .robotic {
 .sidenav > ul a:active {
   color: #000;
   text-decoration: underline;
+}
+
+.sidenav > ul a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+.sidenav > ul a:focus:after {
+  width: 50%;
 }
 
 .sidenav > ul li {
@@ -5287,6 +5336,11 @@ form.purdueForm .robotic {
 .sidenav > ul li.dropdown-submenu ul.dropdown-menu li a {
   display: block;
   padding: 5px;
+  white-space: normal;
+}
+
+.sidenav > ul li.dropdown-submenu ul.dropdown-menu li a:after {
+  bottom: 4px;
 }
 
 .sidenav > ul li.dropdown-submenu ul.dropdown-menu li a:link {
@@ -5311,6 +5365,10 @@ form.purdueForm .robotic {
   background-color: #444;
   text-transform: uppercase;
   color: #fff;
+}
+
+.sidenav > ul > li:first-child a:after {
+  display: none;
 }
 
 .sidenav > ul > li:first-child a:link {
@@ -5339,6 +5397,10 @@ form.purdueForm .robotic {
   background-color: #444;
   color: inherit;
   border-left: none;
+}
+
+.sidenav > ul > li:first-child a:focus {
+  text-decoration: underline;
 }
 
 @media (max-width: 767px) {
