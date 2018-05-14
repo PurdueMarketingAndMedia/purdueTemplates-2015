@@ -4168,6 +4168,7 @@ u {
   width: 100%;
   background-color: #000;
   overflow: hidden;
+  padding-bottom: 15px;
 }
 
 .footer #accordion {
@@ -4180,7 +4181,7 @@ u {
   margin-top: 0;
   padding: 15px;
   border-bottom: solid 1px #333;
-  font-size: 0.75em;
+  font-size: 0.875em;
   line-height: 2.3125em;
 }
 
@@ -4239,12 +4240,8 @@ u {
 }
 
 .footer #accordion .motto .taglineContainer {
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
-}
-
-.footer #accordion .motto .taglineContainer .tagline {
-  border-bottom: solid 1px #474747;
 }
 
 .footer #accordion .motto .taglineContainer .tagline .vertical {
@@ -4260,8 +4257,6 @@ u {
 .footer #accordion .motto a {
   display: inline-block;
   position: relative;
-  overflow: hidden;
-  width: 23px;
   margin: 2.5px 2%;
   text-align: center;
 }
@@ -4376,15 +4371,18 @@ u {
   .footer #accordion .panel .panel-collapse {
     padding-left: 15px;
   }
-  .footer #accordion .panel .panel-collapse a {
-    padding: 0;
+  .footer #accordion .motto .taglineContainer {
+    width: 80%;
   }
 }
 
 @media (min-width: 768px) {
+  .footer {
+    padding: 20px 0;
+  }
   .footer #accordion {
     margin: 0 -30px;
-    padding: 15px 0 0;
+    padding: 0 15px 0;
   }
   .footer #accordion .panel {
     float: left;
@@ -4427,12 +4425,12 @@ u {
   .footer #accordion .motto {
     clear: none;
     padding: 15px 30px;
-    font-size: 1.25em;
+    font-size: 1.85em;
     text-align: center;
   }
   .footer #accordion .motto .taglineContainer {
     display: block;
-    width: 80%;
+    width: 70%;
   }
   .footer #accordion .motto .taglineContainer .tagline .vertical {
     display: none;
@@ -4440,135 +4438,32 @@ u {
 }
 
 @media (min-width: 992px) {
-  .footer {
-    padding: 20px 0;
-  }
   .footer #accordion .panel {
-    float: left;
     width: 20%;
     padding: 0 15px;
-    border: none;
-    font-size: 0.875em;
-    line-height: 1.6875em;
-  }
-  .footer #accordion .panel a {
-    padding: 8px 0 2px;
-    border-bottom: solid 1px #474747;
-  }
-  .footer #accordion .panel .panel-heading {
-    display: block;
-    padding: 0;
-    background-color: transparent;
-    font-size: 1.3125em;
-    line-height: 1em;
-  }
-  .footer #accordion .panel .panel-heading .panel-title {
-    font-family: "Champion Welterwt A", "Champion Welterwt B", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif !important;
-    padding-top: 0;
-    padding-bottom: 5px;
-    font-size: 1em;
-    font-weight: 300;
-  }
-  .footer #accordion .panel .panel-heading .panel-title a {
-    cursor: default;
-    color: #c28e0e;
-    border-bottom: none;
-  }
-  .footer #accordion .panel .panel-heading .panel-title .fa {
-    display: none;
-  }
-  .footer #accordion .panel .panel-collapse {
-    display: block;
-    height: auto !important;
   }
   .footer #accordion .motto {
     float: left;
     width: 20%;
-    padding: 15px;
-    font-size: 1.25em;
+    padding: 40px 15px 15px;
+    font-size: 1.35em;
   }
   .footer #accordion .motto .taglineContainer {
     width: auto;
   }
-  .footer #accordion .motto .taglineContainer .tagline .horizontal {
-    display: none;
+  .footer #accordion .motto .taglineContainer .tagline {
+    padding-bottom: 10px;
+    border-bottom: solid 1px #474747;
   }
   .footer #accordion .motto .taglineContainer .tagline .vertical {
     display: block;
   }
-  .footer #accordion .motto .social a {
-    float: left;
-  }
-}
-
-@media (min-width: 1200px) {
-  .footer #accordion .panel {
-    float: left;
-    width: 20%;
-    padding: 0 15px;
-    border: none;
-    font-size: 0.875em;
-    line-height: 1.4375em;
-  }
-  .footer #accordion .panel a {
-    padding: 8px 0 2px;
-    border-bottom: solid 1px #474747;
-  }
-  .footer #accordion .panel .panel-heading {
-    display: block;
-    padding: 0;
-    background-color: transparent;
-    font-size: 1.3125em;
-    line-height: 1em;
-  }
-  .footer #accordion .panel .panel-heading .panel-title {
-    font-family: "Champion Welterwt A", "Champion Welterwt B", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif !important;
-    padding-top: 0;
-    padding-bottom: 5px;
-    font-size: 1em;
-    font-weight: 300;
-  }
-  .footer #accordion .panel .panel-heading .panel-title a {
-    cursor: default;
-    color: #c28e0e;
-    border-bottom: none;
-  }
-  .footer #accordion .panel .panel-heading .panel-title .fa {
-    display: none;
-  }
-  .footer #accordion .panel .panel-collapse {
-    display: block;
-    height: auto !important;
-  }
-  .footer #accordion .motto {
-    float: left;
-    width: 20%;
-    padding: 15px;
-    font-size: 1.25em;
-  }
-  .footer #accordion .motto .taglineContainer {
-    display: block;
-    position: absolute;
-    width: 80%;
-    padding: 0;
-    margin: 0 auto;
-  }
-  .footer #accordion .motto .taglineContainer .tagline {
-    display: block;
-    max-width: 100%;
-    margin-right: auto !important;
-    margin-left: auto !important;
-    text-align: center !important;
-  }
   .footer #accordion .motto .taglineContainer .tagline .horizontal {
     display: none;
   }
-  .footer #accordion .motto .social {
-    display: block;
-    margin-top: 70px;
-  }
   .footer #accordion .motto .social a {
     float: left;
+    margin: 4px 2.7%;
   }
 }
 
