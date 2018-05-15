@@ -1,0 +1,167 @@
+//default styling for lists
+@mixin list{
+
+}
+
+//default styling for lists nested in lists
+@mixin list-nested{
+	padding-top:0;
+	padding-bottom:0;
+}
+
+//default styling for unordered lists
+@mixin list-unordered{
+	padding-left:22px;
+	list-style-type:none;
+}
+
+@mixin list-ordered($level){
+	@supports( counter-reset: li ){
+		list-style-type:none;
+		counter-reset:l#{$level};
+	}
+}
+
+@mixin list-ordered-decimal{
+	list-style-type:decimal;
+}
+
+@mixin list-ordered-alpha-lower{
+	list-style-type:lower-alpha;
+}
+
+@mixin list-ordered-alpha-upper{
+	list-style-type:upper-alpha;
+}
+
+@mixin list-ordered-roman-lower{
+	list-style-type:lower-roman;
+}
+
+@mixin list-ordered-roman-upper{
+	list-style-type:upper-roman;
+}
+
+//default styling for list items
+@mixin list__item{
+	padding: 3px 0;
+}
+
+//default styling for list items found in ordered lists
+@mixin list__item-ordered{
+	position:relative;
+	padding-left:.6em;
+	&::before{
+		margin-left: -1em;
+	}
+	@supports( counter-reset: li ) {
+		position:relative;
+		padding-left:.6em;
+		&::before {
+			text-align:right;
+			position: absolute;
+			color: $color-headlineGold;
+			right: 100%;
+			margin-left: -.8em;
+			font-weight: 700;
+		}
+	}			
+}
+
+@mixin list__item-decimal($level){
+	@supports( counter-reset: li ){
+		&::before{
+			counter-increment:l#{$level};
+			content:counter(l#{$level})".";
+		}
+	}
+}
+
+@mixin list__item-alpha-lower($level){
+	@supports( counter-reset: li ){
+		&::before{
+			counter-increment:l#{$level};
+			content:counter(l#{$level},lower-alpha)".";
+		}
+	}
+}
+
+@mixin list__item-alpha-upper($level){
+	@supports( counter-reset: li ){
+		&::before{
+			counter-increment:l#{$level};
+			content:counter(l#{$level},upper-alpha)".";
+		}
+	}
+}
+
+@mixin list__item-roman-lower($level){
+	@supports( counter-reset: li ){
+		&::before{
+			counter-increment:l#{$level};
+			content:counter(l#{$level},lower-roman)".";
+		}
+	}
+}
+
+@mixin list__item-roman-upper($level){
+	@supports( counter-reset: li ){
+		&::before{
+			counter-increment:l#{$level};
+			content:counter(l#{$level},upper-roman)".";
+		}
+	}
+}
+
+//default styling for list items found in unordered lists
+@mixin list__item-unordered{
+	&::before {
+		content:"";
+		width:calc-toRem(8);
+		height:calc-toRem(8);
+		display:inline-block;
+		font-size:calc-toRem(33);
+		position:relative;
+		top:calc-toRem(-2);
+		right:calc-toRem(13);
+	}
+}
+
+//default styling for list items found in unested, unordered lists
+@mixin list__item-bullet{
+	&::before {
+		background-color:$color-headlineGold;
+		border-radius:50%;
+	}
+}
+
+//default styling for list items found in second-level, nested, unordered lists
+@mixin list__item-bullet-hollow{
+	&::before{
+		background-color:#fff;
+		border-radius:50%;
+		border:calc-toRem(2) solid $color-headlineGold;
+	}
+}
+
+//default styling for list items found in second-level, nested, unordered lists
+@mixin list__item-bullet-square{
+	&::before{
+		border:0;
+		border-radius:0;
+		background-color:$color-headlineGold;
+		width:calc-toRem(8);
+		height:calc-toRem(8);
+	}
+}
+
+//default styling for list items found in second-level, nested, unordered lists
+@mixin list__item-bullet-square{
+	&::before{
+		border:0;
+		border-radius:0;
+		background-color:$color-headlineGold;
+		width:calc-toRem(8);
+		height:calc-toRem(8);
+	}
+}

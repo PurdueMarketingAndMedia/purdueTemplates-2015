@@ -54,112 +54,58 @@
 				}
 				ul, ol {
 					li{
-						padding: 3px 0;
+						@include list__item;
 					}
 				}
 				li > ol {
-					padding-top: 0;
-					padding-bottom: 0;
+					@include list-nested;
 				}
 				ol > li {
-					&::before {
-						width: 1em;
-						margin-left: -1em;
-					}
+					@include list__item-ordered;
 				}
 
 				// spacing for all ol li::before
 				ul > li {
-					&::before {
-						content: "";
-						width: calc-toRem(8);
-						height: calc-toRem(8);
-						display: inline-block;
-						font-size: calc-toRem(33);
-						position: relative;
-						top: calc-toRem(-2);
-						right: calc-toRem(13);
-					}
+					@include list__item-unordered;
 				}
 				// define the styles for the different levels
 				ul {
-					padding-left: 22px;
-					list-style-type: none;
+					@include list-unordered;
 
 					> li {
-						&::before {
-							background-color: $color-headlineGold;
-							border-radius: 50%;
-						}
+						@include list__item-bullet;
 					}
 
 					ul {
 						> li {
-							&::before {
-								background-color: #fff;
-								border-radius: 50%;
-								border: calc-toRem(2) solid $color-headlineGold;
-							}
+							@include list__item-bullet-hollow;
 						}
 
 						ul {
 							> li {
-								&::before {
-									border: 0;
-									border-radius: 0;
-									background-color: $color-headlineGold;
-									width: calc-toRem(8);
-									height: calc-toRem(8);
-								}
+								@include list__item-bullet-square;
 							}
 
 						}
 					}
 				}
-
-				// if the browser supports css counters, use gold bullets and numbers
-				@supports( counter-reset: li ) {
-
-					// spacing for all ol li::before
-					ol > li {
-						&::before {
-							position: relative;
-							color: $color-headlineGold;
-							right: .6em;
-							margin-left: -.8em;
-							font-weight: 700;
-						}
-					}
-
-					// define the numbering system for the different levels
-					ol {
-						list-style-type: none;
-						counter-reset: l1;
-
-						> li {
-							&::before {
-								counter-increment: l1;
-								content: counter(l1)".";
-							}
-						}
-
-						ol {
-							counter-reset: l2;
-
-							> li {
-								&::before {
-									counter-increment: l2;
-									content: counter(l2, lower-alpha)".";
-								}
-							}
-
-							ol {
-								counter-reset: l3;
-
-								> li {
-									&::before {
-										counter-increment: l3;
-										content: counter(l3, lower-roman)".";
+				ol
+				{
+					@include list-ordered-decimal;
+					@include list-ordered(1);
+					> li{
+						@include list__item-ordered;
+						@include list__item-decimal(1);
+						ol{
+							@include list-ordered-alpha-lower;
+							@include list-ordered(2);
+							> li{
+								@include list__item-alpha-lower(2);
+								ol{
+									@include list-ordered-roman-lower;
+									@include list-ordered(3);
+									> li{
+										@include list__item-roman-lower(3);
 									}
 								}
 							}
