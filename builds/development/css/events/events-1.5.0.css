@@ -2697,34 +2697,6 @@ table {
   content: "";
 }
 
-@font-face {
-  font-family: 'Champion Welterweight';
-  src: url("https://www.purdue.edu/purdue/fonts/E4DB780C093CE14E3.woff2") format("woff2"), url("https://www.purdue.edu/purdue/fonts/E4DB780C093CE14E3.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Champion-HTF-Welterweight';
-  src: url("https://www.purdue.edu/purdue/fonts/E4DB780C093CE14E3.woff2") format("woff2"), url("https://www.purdue.edu/purdue/fonts/E4DB780C093CE14E3.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Champion Heavyweight';
-  src: url("https://www.purdue.edu/purdue/fonts/513DCFF5E1F802522.woff2") format("woff2"), url("https://www.purdue.edu/purdue/fonts/513DCFF5E1F802522.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Champion-HTF-Heavyweight';
-  src: url("https://www.purdue.edu/purdue/fonts/513DCFF5E1F802522.woff2") format("woff2"), url("https://www.purdue.edu/purdue/fonts/513DCFF5E1F802522.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
 html {
   background-color: #3b3b3b;
   color: #000;
@@ -2754,7 +2726,7 @@ h1 {
   line-height: 1.2;
   text-transform: uppercase;
   margin-top: 0;
-  font-family: "Champion Welterweight", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
+  font-family: "Champion Welterwt A", "Champion Welterwt B", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
   color: #98700d;
   font-size: 2.25em;
   font-weight: 400;
@@ -2978,7 +2950,7 @@ u {
   overflow: hidden;
 }
 
-.goldbar button.navbar-toggle:after {
+.goldbar button.navbar-toggle::after {
   display: block;
   content: "search";
   position: absolute;
