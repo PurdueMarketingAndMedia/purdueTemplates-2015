@@ -1,134 +1,1133 @@
 @@include('../navigation/_breadcrumbs.html')
 <main id="main" class="content">
 	<div class="container">
-	    <div class="row">
+	    <div style="overflow:hidden;padding:30px 0;">
 	    	<div class="maincontent col-lg-9 col-md-9 col-sm-9 col-xs-12 right">
 	    		<h1>Buttons</h1>
 	    		<h2>Solid</h2>
-	    		<h3>Default</h3>
-	    		<div class="row">
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-coalGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-moonDustGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-everTrueBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-slayterSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-ameliaSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-landGrantGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-rossAdeGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-celeryBogGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-springFestGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-oakenBucketBrown">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bellTowerBrick">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-mackeyOrange">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-yellowWalk">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-fountainRunTeal">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-pappysPurple">Button</button></p>
-	    		</div>
-	    		<h3>Light</h3>
-	    		<div class="row" style="background:#000">
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-coalGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-moonDustGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-everTrueBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-slayterSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-ameliaSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-landGrantGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-rossAdeGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-celeryBogGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-springFestGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-oakenBucketBrown">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bellTowerBrick">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-mackeyOrange">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-yellowWalk">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-fountainRunTeal">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-pappysPurple">Button</button></p>
-	    		</div>
+	    		<h3>Button Elements</h3>
+	    		<div style="overflow:hidden;">
+    			@@loop('../patterns/_container-button.html',[
+				    {
+				    	"element":"button",
+				    	"type":"default",
+				    	"icon":"",
+				    	"light":false,
+				    	"color":"",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"none"
+				    },
+				    {
+				    	"element":"button",
+				    	"type":"default",
+				    	"icon":"",
+				    	"light":false,
+				    	"color":"campusGold",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"none"
+				    },
+					{
+						"element":"button",
+						"type":"default",
+						"icon":"",
+						"light":false,
+						"color":"campusGold-inverse",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"button",
+						"type":"default",
+						"icon":"",
+						"light":false,
+						"color":"black",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"button",
+						"type":"default",
+						"icon":"",
+						"light":false,
+						"color":"gray70",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"button",
+						"type":"default",
+						"icon":"",
+						"light":false,
+						"color":"gray40",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"button",
+						"type":"default",
+						"icon":"",
+						"light":false,
+						"color":"gray15",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					}
+				])
+				</div>
+
+	    		<h3>Anchor Elements</h3>
+	    		<div style="overflow:hidden;">
+    			@@loop('../patterns/_container-button.html',[
+				    {
+				    	"element":"anchor",
+				    	"type":"default",
+				    	"icon":"",
+				    	"light":false,
+				    	"color":"",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"none"
+				    },
+				    {
+				    	"element":"anchor",
+				    	"type":"default",
+				    	"icon":"",
+				    	"light":false,
+				    	"color":"campusGold",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"none"
+				    },
+					{
+						"element":"anchor",
+						"type":"default",
+						"icon":"",
+						"light":false,
+						"color":"campusGold-inverse",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"anchor",
+						"type":"default",
+						"icon":"",
+						"light":false,
+						"color":"black",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"anchor",
+						"type":"default",
+						"icon":"",
+						"light":false,
+						"color":"gray70",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"anchor",
+						"type":"default",
+						"icon":"",
+						"light":false,
+						"color":"gray40",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"anchor",
+						"type":"default",
+						"icon":"",
+						"light":false,
+						"color":"gray15",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					}
+				])
+				</div>
 	    		<h2>Hollow</h2>
-	    		<h3>Default</h3>
-	    		<div class="row">
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-coalGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-moonDustGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-everTrueBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-slayterSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-ameliaSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-landGrantGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-rossAdeGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-celeryBogGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-springFestGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-oakenBucketBrown">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-bellTowerBrick">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-mackeyOrange">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-yellowWalk">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-fountainRunTeal">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-pappysPurple">Button</button></p>
-	    		</div>
-	    		<h3>Light</h3>
-	    		<div class="row" style="background:#000">
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-coalGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-moonDustGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-everTrueBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-slayterSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-ameliaSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-landGrantGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-rossAdeGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-celeryBogGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-springFestGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-oakenBucketBrown">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-bellTowerBrick">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-mackeyOrange">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-yellowWalk">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-fountainRunTeal">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-hollow button-hollow-light button-hollow-pappysPurple">Button</button></p>
-	    		</div>
+	    		<h3>Button Elements</h3>
+	    		<div style="overflow:hidden;">
+    			@@loop('../patterns/_container-button.html',[
+				   	{
+				    	"element":"button",
+				    	"type":"hollow",
+				    	"icon":"",
+				    	"light":false,
+				    	"color":"",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"none"
+				    },
+					{
+				    	"element":"button",
+				    	"type":"hollow",
+				    	"icon":"",
+				    	"light":false,
+				    	"color":"campusGold",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"none"
+				    },
+					{
+						"element":"button",
+						"type":"hollow",
+						"icon":"",
+						"light":false,
+						"color":"campusGold-inverse",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"button",
+						"type":"hollow",
+						"icon":"",
+						"light":false,
+						"color":"black",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"button",
+						"type":"hollow",
+						"icon":"",
+						"light":false,
+						"color":"gray70",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"button",
+						"type":"hollow",
+						"icon":"",
+						"light":false,
+						"color":"gray40",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"button",
+						"type":"hollow",
+						"icon":"",
+						"light":false,
+						"color":"gray15",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					}
+				])
+				</div>
+				<h3>Anchor Elements</h3>
+	    		<div style="overflow:hidden;">
+    			@@loop('../patterns/_container-button.html',[
+				   	{
+				    	"element":"anchor",
+				    	"type":"hollow",
+				    	"icon":"",
+				    	"light":false,
+				    	"color":"",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"none"
+				    },
+					{
+				    	"element":"anchor",
+				    	"type":"hollow",
+				    	"icon":"",
+				    	"light":false,
+				    	"color":"campusGold",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"none"
+				    },
+					{
+						"element":"anchor",
+						"type":"hollow",
+						"icon":"",
+						"light":false,
+						"color":"campusGold-inverse",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"anchor",
+						"type":"hollow",
+						"icon":"",
+						"light":false,
+						"color":"black",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"anchor",
+						"type":"hollow",
+						"icon":"",
+						"light":false,
+						"color":"gray70",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"anchor",
+						"type":"hollow",
+						"icon":"",
+						"light":false,
+						"color":"gray40",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"anchor",
+						"type":"hollow",
+						"icon":"",
+						"light":false,
+						"color":"gray15",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					}
+				])
+				</div>
 	    		<h2>Bar</h2>
-	    		<h3>Default</h3>
-	    		<div class="row">
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-coalGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-moonDustGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-everTrueBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-slayterSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-ameliaSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-landGrantGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-rossAdeGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-celeryBogGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-springFestGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-oakenBucketBrown">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-bellTowerBrick">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-mackeyOrange">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-yellowWalk">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-fountainRunTeal">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-bar button-bar-pappysPurple">Button</button></p>
-	    		</div>
-	    		<h3>Light</h3>
-	    		<div class="row" style="background:#000">
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-coalGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-moonDustGray">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-everTrueBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-slayterSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-ameliaSkyBlue">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-landGrantGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-rossAdeGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-celeryBogGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-springFestGreen">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-oakenBucketBrown">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-bellTowerBrick">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-mackeyOrange">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-yellowWalk">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-fountainRunTeal">Button</button></p>
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-light button-bar button-bar-pappysPurple">Button</button></p>
-	    		</div>
+	    		<h3>Button Elements</h3>
+	    		<div style="overflow:hidden;">
+    			@@loop('../patterns/_container-button.html',[
+				    {
+				    	"element":"button",
+				    	"type":"bar",
+				    	"icon":"",
+				    	"light":false,
+				    	"color":"",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"none"
+				    },
+				    {
+				    	"element":"button",
+				    	"type":"bar",
+				    	"icon":"",
+				    	"light":false,
+				    	"color":"campusGold",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"none"
+				    },
+					{
+						"element":"button",
+						"type":"bar",
+						"icon":"",
+						"light":false,
+						"color":"campusGold-inverse",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"button",
+						"type":"bar",
+						"icon":"",
+						"light":false,
+						"color":"black",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"button",
+						"type":"bar",
+						"icon":"",
+						"light":false,
+						"color":"gray70",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"button",
+						"type":"bar",
+						"icon":"",
+						"light":false,
+						"color":"gray40",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"button",
+						"type":"bar",
+						"icon":"",
+						"light":false,
+						"color":"gray15",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					}
+				])
+				</div>
+				<h3>Anchor Elements</h3>
+	    		<div style="overflow:hidden;">
+    			@@loop('../patterns/_container-button.html',[
+				    {
+				    	"element":"anchor",
+				    	"type":"bar",
+				    	"icon":"",
+				    	"light":false,
+				    	"color":"",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"none"
+				    },
+				    {
+				    	"element":"anchor",
+				    	"type":"bar",
+				    	"icon":"",
+				    	"light":false,
+				    	"color":"campusGold",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"none"
+				    },
+					{
+						"element":"anchor",
+						"type":"bar",
+						"icon":"",
+						"light":false,
+						"color":"campusGold-inverse",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"anchor",
+						"type":"bar",
+						"icon":"",
+						"light":false,
+						"color":"black",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"anchor",
+						"type":"bar",
+						"icon":"",
+						"light":false,
+						"color":"gray70",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"anchor",
+						"type":"bar",
+						"icon":"",
+						"light":false,
+						"color":"gray40",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					},
+					{
+						"element":"anchor",
+						"type":"bar",
+						"icon":"",
+						"light":false,
+						"color":"gray15",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					}
+				])
+				</div>
+				<h2>Icon</h2>
+				<h3>Button Elements</h3>
+	    		<div style="overflow:hidden;">
+    			@@loop('../patterns/_container-button.html',[
+				    {
+				    	"element":"button",
+				    	"type":"icon",
+					    "icon":"fa fa-calendar-check-o",
+				    	"light":false,
+				    	"color":"",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"none"
+				    },
+				    {
+				    	"element":"button",
+				    	"type":"icon",
+					    "icon":"fa fa-calendar-check-o",
+				    	"light":false,
+				    	"color":"campusGold",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"none"
+				    },
+					{
+						"element":"button",
+						"type":"icon",
+					    "icon":"fa fa-calendar-check-o",
+						"light":false,
+						"color":"black",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					}
+				])
+				</div>
+				<h3>Anchor Elements</h3>
+	    		<div style="overflow:hidden;">
+    			@@loop('../patterns/_container-button.html',[
+				    {
+				    	"element":"anchor",
+				    	"type":"icon",
+					    "icon":"fa fa-calendar-check-o",
+				    	"light":false,
+				    	"color":"",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"none"
+				    },
+				    {
+				    	"element":"anchor",
+				    	"type":"icon",
+					    "icon":"fa fa-calendar-check-o",
+				    	"light":false,
+				    	"color":"campusGold",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"none"
+				    },
+					{
+						"element":"anchor",
+						"type":"icon",
+					    "icon":"fa fa-calendar-check-o",
+						"light":false,
+						"color":"black",
+						"text":"Button",
+						"wide":false,
+						"background":"none"
+					}
+				])
+				</div>
 	    		<h2>Opaque</h2>
-	    		<h3>Default</h3>
-	    		<div class="row" style="background-image:url('https://placeimg.com/767/300/nature'); background-size:cover; background-position:top center;">
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-opaque">Button</button></p>
+	    		<h3>Button Element</h3>
+	    		<div style="background-image:url('https://placeimg.com/767/300/nature'); background-size:cover; background-position:top center;">
+	    			<div style="overflow:hidden;">
+	    			@@loop('../patterns/_container-button.html',[
+					    {
+					    	"element":"button",
+					    	"type":"opaque",
+					    	"icon":"",
+					    	"light":false,
+					    	"color":"",
+					    	"text":"Button",
+					    	"wide":false,
+					    	"background":"none"
+					    }
+					])
+					</div>
 	    		</div>
-	    		<h3>Light</h3>
-	    		<div class="row" style="background-image:url('https://spaceholder.cc/767x300'); background-size:cover; background-position:center center;">
-	    			<p class="col-lg-4 col-md-4 col-sm-6"><button class="button button-opaque button-opaque-light">Button</button></p>
+	    		<h3>Anchor Element</h3>
+	    		<div style="background-image:url('https://placeimg.com/767/300/nature'); background-size:cover; background-position:top center;">
+	    			<div style="overflow:hidden;">
+	    			@@loop('../patterns/_container-button.html',[
+					    {
+					    	"element":"anchor",
+					    	"type":"opaque",
+					    	"icon":"",
+					    	"light":false,
+					    	"color":"",
+					    	"text":"Button",
+					    	"wide":false,
+					    	"background":"none"
+					    }
+					])
+					</div>
+	    		</div>
+	    		<h2>Light</h2>
+	    		<p>Modifying the button with "light" will ensure that the chosen button works on a black or darker-colored background, if applicable.</p>
+	    		<h3>Light, Solid</h3>
+	    		<h4>Button Elements</h4>
+    			<div style="overflow:hidden;">
+	    		@@loop('../patterns/_container-button.html',[
+				    {
+				    	"element":"button",
+				    	"type":"default",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#000"
+				    },
+				    {
+				    	"element":"button",
+				    	"type":"default",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"campusGold",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#000"
+				    },
+				    {
+				    	"element":"button",
+				    	"type":"default",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"campusGold-inverse",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#767676"
+				    },
+				    {
+				    	"element":"button",
+				    	"type":"default",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"black",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#767676"
+				    },
+					{
+						"element":"button",
+						"type":"default",
+						"icon":"",
+						"light":true,
+						"color":"gray70",
+						"text":"Button",
+						"wide":false,
+						"background":"#000"
+					},
+					{
+						"element":"button",
+						"type":"default",
+						"icon":"",
+						"light":true,
+						"color":"gray40",
+						"text":"Button",
+						"wide":false,
+						"background":"#000"
+					},
+					{
+						"element":"button",
+						"type":"default",
+						"icon":"",
+						"light":true,
+						"color":"gray15",
+						"text":"Button",
+						"wide":false,
+						"background":"#000"
+					}
+				])
+				</div>
+				<h4>Anchor Elements</h4>
+    			<div style="overflow:hidden;">
+	    		@@loop('../patterns/_container-button.html',[
+				    {
+				    	"element":"anchor",
+				    	"type":"default",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#000"
+				    },
+				    {
+				    	"element":"anchor",
+				    	"type":"default",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"campusGold",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#000"
+				    },
+				    {
+				    	"element":"anchor",
+				    	"type":"default",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"campusGold-inverse",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#767676"
+				    },
+				    {
+				    	"element":"anchor",
+				    	"type":"default",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"black",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#767676"
+				    },
+					{
+				    	"element":"anchor",
+						"type":"default",
+						"icon":"",
+						"light":true,
+						"color":"gray70",
+						"text":"Button",
+						"wide":false,
+						"background":"#000"
+					},
+					{
+				    	"element":"anchor",
+						"type":"default",
+						"icon":"",
+						"light":true,
+						"color":"gray40",
+						"text":"Button",
+						"wide":false,
+						"background":"#000"
+					},
+					{
+				    	"element":"anchor",
+						"type":"default",
+						"icon":"",
+						"light":true,
+						"color":"gray15",
+						"text":"Button",
+						"wide":false,
+						"background":"#000"
+					}
+				])
+				</div>
+				<h3>Light, Hollow</h3>
+				<h4>Button Elements</h4>
+    			<div style="overflow:hidden;">
+    			@@loop('../patterns/_container-button.html',[
+    				{
+				    	"element":"button",
+				    	"type":"hollow",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"",
+				    	"text":"Button",
+				    	"wide":false,
+			    		"background":"#000"
+				    },
+					{
+				    	"element":"button",
+				    	"type":"hollow",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"campusGold",
+				    	"text":"Button",
+				    	"wide":false,
+			    		"background":"#000"
+				    },
+				    {
+				    	"element":"button",
+				    	"type":"hollow",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"campusGold-inverse",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#767676"
+				    },
+				    {
+				    	"element":"button",
+				    	"type":"hollow",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"black",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#767676"
+				    },
+					{
+						"element":"button",
+						"type":"hollow",
+						"icon":"",
+						"light":true,
+						"color":"gray70",
+						"text":"Button",
+						"wide":false,
+			    		"background":"#000"
+					},
+					{
+				    	"element":"button",
+						"type":"hollow",
+						"icon":"",
+						"light":true,
+						"color":"gray40",
+						"text":"Button",
+						"wide":false,
+						"background":"#000"
+					},
+					{
+				    	"element":"button",
+						"type":"hollow",
+						"icon":"",
+						"light":true,
+						"color":"gray15",
+						"text":"Button",
+						"wide":false,
+						"background":"#000"
+					}
+				])
+				</div>
+				<h4>Anchor Elements</h4>
+    			<div style="overflow:hidden;">
+    			@@loop('../patterns/_container-button.html',[
+    				{
+				    	"element":"anchor",
+				    	"type":"hollow",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"",
+				    	"text":"Button",
+				    	"wide":false,
+			    		"background":"#000"
+				    },
+					{
+				    	"element":"anchor",
+				    	"type":"hollow",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"campusGold",
+				    	"text":"Button",
+				    	"wide":false,
+			    		"background":"#000"
+				    },
+				    {
+				    	"element":"anchor",
+				    	"type":"hollow",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"campusGold-inverse",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#767676"
+				    },
+				    {
+				    	"element":"anchor",
+				    	"type":"hollow",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"black",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#767676"
+				    },
+					{
+				    	"element":"anchor",
+						"type":"hollow",
+						"icon":"",
+						"light":true,
+						"color":"gray70",
+						"text":"Button",
+						"wide":false,
+			    		"background":"#000"
+					},
+					{
+				    	"element":"anchor",
+						"type":"hollow",
+						"icon":"",
+						"light":true,
+						"color":"gray40",
+						"text":"Button",
+						"wide":false,
+			    		"background":"#000"
+					},
+					{
+				    	"element":"anchor",
+						"type":"hollow",
+						"icon":"",
+						"light":true,
+						"color":"gray15",
+						"text":"Button",
+						"wide":false,
+			    		"background":"#000"
+					}
+				])
+				</div>
+				<h3>Light, Bar</h3>
+				<h4>Button Elements</h4>
+				<div style="overflow:hidden;">
+	    		@@loop('../patterns/_container-button.html',[
+	    			{
+				    	"element":"button",
+				    	"type":"bar",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#000"
+				    },
+					{
+				    	"element":"button",
+				    	"type":"bar",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"campusGold",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#000"
+				    },
+				    {
+				    	"element":"button",
+				    	"type":"bar",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"campusGold-inverse",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#555"
+				    },
+				    {
+				    	"element":"button",
+				    	"type":"bar",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"black",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#555"
+				    },
+					{
+						"element":"button",
+						"type":"bar",
+						"icon":"",
+						"light":true,
+						"color":"gray70",
+						"text":"Button",
+						"wide":false,
+				    	"background":"#000"
+					},
+					{
+						"element":"button",
+						"type":"bar",
+						"icon":"",
+						"light":true,
+						"color":"gray40",
+						"text":"Button",
+						"wide":false,
+				    	"background":"#000"
+					},
+					{
+						"element":"button",
+						"type":"bar",
+						"icon":"",
+						"light":true,
+						"color":"gray15",
+						"text":"Button",
+						"wide":false,
+				    	"background":"#000"
+					}
+				])
+				</div>
+				<h4>Anchor Elements</h4>
+				<div style="overflow:hidden;">
+	    		@@loop('../patterns/_container-button.html',[
+	    			{
+				    	"element":"anchor",
+				    	"type":"bar",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#000"
+				    },
+					{
+				    	"element":"anchor",
+				    	"type":"bar",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"campusGold",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#000"
+				    },
+				    {
+				    	"element":"anchor",
+				    	"type":"bar",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"campusGold-inverse",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#555"
+				    },
+				    {
+				    	"element":"anchor",
+				    	"type":"bar",
+				    	"icon":"",
+				    	"light":true,
+				    	"color":"black",
+				    	"text":"Button",
+				    	"wide":false,
+				    	"background":"#555"
+				    },
+					{
+						"element":"anchor",
+						"type":"bar",
+						"icon":"",
+						"light":true,
+						"color":"gray70",
+						"text":"Button",
+						"wide":false,
+				    	"background":"#000"
+					},
+					{
+						"element":"anchor",
+						"type":"bar",
+						"icon":"",
+						"light":true,
+						"color":"gray40",
+						"text":"Button",
+						"wide":false,
+				    	"background":"#000"
+					},
+					{
+						"element":"anchor",
+						"type":"bar",
+						"icon":"",
+						"light":true,
+						"color":"gray15",
+						"text":"Button",
+						"wide":false,
+				    	"background":"#000"
+					}
+				])
+				</div>
+				<h3>Light, Opaque</h3>
+				<h4>Button Element</h4>
+	    		<div style="background-image:url('https://spaceholder.cc/767x300'); background-size:cover; background-position:center center;">
+	    			<div style="overflow:hidden;">
+	    			@@loop('../patterns/_container-button.html',[
+					    {
+					    	"element":"button",
+					    	"type":"opaque",
+					    	"icon":"",
+					    	"light":true,
+					    	"color":"",
+					    	"text":"Button",
+					    	"wide":false,
+					    	"background":"none"
+					    }
+					])
+					</div>
+	    		</div>
+				<h4>Anchor Element</h4>
+	    		<div style="background-image:url('https://spaceholder.cc/767x300'); background-size:cover; background-position:center center;">
+	    			<div style="overflow:hidden;">
+	    			@@loop('../patterns/_container-button.html',[
+					    {
+					    	"element":"anchor",
+					    	"type":"opaque",
+					    	"icon":"",
+					    	"light":true,
+					    	"color":"",
+					    	"text":"Button",
+					    	"wide":false,
+					    	"background":"none"
+					    }
+					])
+					</div>
+	    		</div>
+	    		<h2>Layout Options</h2>
+	    		<h3>Default</h3>
+	    		<p>By default, a button's width is based on its content, with its maximum with being the width of its container.</p>
+	    		<p><em>Resize the width of the container below to view how a button acts with different container sizes.</em></p>
+	    		<h4>Button Element</h4>
+	    		<div style="display:block;resize:horizontal;border:solid 1px #000;min-width:160px;max-width:100%;overflow:auto;padding:15px 0;">
+	    			<div class="col-lg-12">
+	    				<p><button class="button">Button Text Here</button></p>
+	    			</div>
+	    			<div class="col-lg-12">
+	    				<p><button class="button button-icon">Button Text Here<span class="button__icon fa fa-calendar-check-o" aria-hidden="true"></span></button></p>
+	    			</div>
+	    		</div>
+	    		<h4>Anchor Element</h4>
+	    		<div style="display:block;resize:horizontal;border:solid 1px #000;min-width:160px;max-width:100%;overflow:auto;padding:15px 0;">
+	    			<div class="col-lg-12">
+	    				<p><a href="#" class="button">Button Text Here</a></p>
+	    			</div>
+	    			<div class="col-lg-12">
+	    				<p><a href="#" class="button button-icon">Button Text Here<span class="button__icon fa fa-calendar-check-o" aria-hidden="true"></span></a></p>
+	    			</div>
+	    		</div>
+	    		<h3>Wide</h3>
+	    		<p>You can also implement the "wide" modifier to ensure that the button uses the full width of it's container.</p>
+	    		<p><em>Resize the width of the container below to view how a wide button acts with different container sizes.</em></p>
+	    		<h4>Button Element</h4>
+	    		<div style="display:block;resize:horizontal;border:solid 1px #000;min-width:160px;max-width:100%;overflow:auto;padding:15px 0;">
+	    			@@loop('../patterns/_container-button.html',[
+					    {
+					    	"element":"button",
+					    	"type":"default",
+					    	"icon":"",
+					    	"light":false,
+					    	"color":"",
+					    	"text":"Button Text Here",
+					    	"wide":true,
+					    	"background":"none"
+					    },
+					    {
+					    	"element":"button",
+					    	"type":"icon",
+					    	"icon":"fa fa-calendar-check-o",
+					    	"light":false,
+					    	"color":"",
+					    	"text":"Button Text Here",
+					    	"wide":true,
+					    	"background":"none"
+					    }
+					])
+	    		</div>
+	    		<h4>Anchor Element</h4>
+	    		<div style="display:block;resize:horizontal;border:solid 1px #000;min-width:160px;max-width:100%;overflow:auto;padding:15px 0;">
+	    			@@loop('../patterns/_container-button.html',[
+					    {
+					    	"element":"anchor",
+					    	"type":"default",
+					    	"icon":"",
+					    	"light":false,
+					    	"color":"",
+					    	"text":"Button Text Here",
+					    	"wide":true,
+					    	"background":"none"
+					    },
+					    {
+					    	"element":"anchor",
+					    	"type":"icon",
+					    	"icon":"fa fa-calendar-check-o",
+					    	"light":false,
+					    	"color":"",
+					    	"text":"Button Text Here",
+					    	"wide":true,
+					    	"background":"none"
+					    }
+					])
 	    		</div>
 	    	</div>
 			@@include('../navigation/_side.html')

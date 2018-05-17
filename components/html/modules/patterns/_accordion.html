@@ -1,0 +1,20 @@
+@@if(striped == false){
+<div class="accordion">
+}
+@@if(striped == true){
+<div class="accordion accordion-striped">
+}
+	@@for (var i = 1; i < numHeadings + 1; i++){
+		@@include('_accordion-header.html',{
+			"id":"@@id",
+			"index":`+i+`,
+			"color":"@@color",
+			"striped":@@striped
+		})
+		@@include('_accordion-content.html',{
+			"id":"@@id",
+			"index":`+i+`,
+			"color":"@@color"
+		})
+	}
+</div>

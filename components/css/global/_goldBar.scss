@@ -63,9 +63,21 @@
 		}
 		@media (max-width:767px){
 			.navbar-header{
-				
+
 			}
 		}
+	}
+	button.navbar-toggle{
+		position:relative;
+		overflow:hidden;
+	}
+	button.navbar-toggle::after{
+		display:block;
+		content:"search";
+		position:absolute;
+		top:100%;
+		width:0;
+		height:0;
 	}
 	#search{
 		border:none;
@@ -216,11 +228,12 @@
 		.gold{
 			.navbar-nav{
 				>li > a{
-					padding:4px 20px 4px 0!important;
+					padding:4px 10px !important;
 				}
 				&.information{
 					.dropdown-toggle{
 						padding-right:0 !important;
+						padding-left: 0 !important;
 					}
 				}
 			}
