@@ -10558,6 +10558,7 @@ form.purdueForm .robotic {
   width: 100%;
   background-color: #000;
   overflow: hidden;
+  padding-bottom: 15px;
 }
 
 .footer #accordion {
@@ -10566,8 +10567,12 @@ form.purdueForm .robotic {
 
 .footer #accordion .panel {
   border: none;
-  margin-top: 5px;
   background-color: transparent;
+  margin-top: 0;
+  padding: 15px;
+  border-bottom: solid 1px #333;
+  font-size: 0.875em;
+  line-height: 2.3125em;
 }
 
 .footer #accordion .panel a {
@@ -10575,27 +10580,35 @@ form.purdueForm .robotic {
   width: 100%;
 }
 
-.footer #accordion .panel a:link {
+.footer #accordion .panel a:link, .footer #accordion .panel a:visited {
   color: #adadad;
   font-weight: 400;
   text-decoration: none;
 }
 
-.footer #accordion .panel a:visited {
-  color: #adadad;
-  font-weight: 400;
-  text-decoration: none;
-}
-
-.footer #accordion .panel a:hover {
+.footer #accordion .panel a:hover, .footer #accordion .panel a:active {
   color: #fff;
   font-weight: 400;
   text-decoration: none;
 }
 
-.footer #accordion .panel a:active {
-  color: #fff;
-  font-weight: 400;
+.footer #accordion .panel .panel-heading {
+  padding: 0;
+  background-color: transparent;
+  font-size: 1.3125em;
+}
+
+.footer #accordion .panel .panel-heading .panel-title {
+  font-family: "Champion Welterwt A", "Champion Welterwt B", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
+  font-size: 1em;
+}
+
+.footer #accordion .panel .panel-heading a {
+  display: block;
+}
+
+.footer #accordion .panel .panel-heading a:link, .footer #accordion .panel .panel-heading a:visited, .footer #accordion .panel .panel-heading a:hover, .footer #accordion .panel .panel-heading a:active {
+  color: #c28e0e;
   text-decoration: none;
 }
 
@@ -10610,15 +10623,43 @@ form.purdueForm .robotic {
 }
 
 .footer #accordion .motto {
-  text-align: left;
-  color: #fff;
+  clear: both;
+  padding: 15px 15px 0;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.footer #accordion .motto .taglineContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footer #accordion .motto .taglineContainer .tagline {
+  position: relative;
+  padding-bottom: 13.95349%;
+}
+
+.footer #accordion .motto .taglineContainer .tagline .horizontal, .footer #accordion .motto .taglineContainer .tagline .vertical {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.footer #accordion .motto .taglineContainer .tagline .vertical {
+  display: none;
+}
+
+.footer #accordion .motto .social {
+  display: block;
+  width: 100%;
+  padding-top: 5px;
 }
 
 .footer #accordion .motto a {
   display: inline-block;
   position: relative;
-  overflow: hidden;
-  width: 23px;
   margin: 2.5px 2%;
   text-align: center;
 }
@@ -10702,22 +10743,12 @@ form.purdueForm .robotic {
   content: "Amazon";
 }
 
-.footer #accordion .motto a:link {
+.footer #accordion .motto a:link, .footer #accordion .motto a:visited {
   color: #999;
   text-decoration: none;
 }
 
-.footer #accordion .motto a:visited {
-  color: #999;
-  text-decoration: none;
-}
-
-.footer #accordion .motto a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer #accordion .motto a:active {
+.footer #accordion .motto a:hover, .footer #accordion .motto a:active {
   color: #fff;
   text-decoration: none;
 }
@@ -10727,86 +10758,34 @@ form.purdueForm .robotic {
   margin-bottom: 5px;
 }
 
-@media (min-width: 1200px) {
-  .footer #accordion .panel {
-    float: left;
-    width: 20%;
-    padding: 0 15px;
-    border: none;
-    font-size: 0.875em;
-    line-height: 1.42857em;
+@media (max-width: 767px) {
+  .footer #accordion .panel .panel-heading a .fa-plus {
+    display: none;
   }
-  .footer #accordion .panel a {
-    padding: 8px 0 2px;
-    border-bottom: solid 1px #474747;
+  .footer #accordion .panel .panel-heading a .fa-minus {
+    display: block;
   }
-  .footer #accordion .panel .panel-heading {
+  .footer #accordion .panel .panel-heading a.collapsed .fa-plus {
+    display: block;
+  }
+  .footer #accordion .panel .panel-heading a.collapsed .fa-minus {
     display: none;
   }
   .footer #accordion .panel .panel-collapse {
-    display: block;
-    height: auto !important;
+    padding-left: 15px;
   }
-  .footer #accordion .motto {
-    float: left;
-    width: 20%;
-    padding: 15px;
-    font-size: 1.25em;
-  }
-  .footer #accordion .motto a {
-    float: left;
-  }
-  .footer #accordion .motto img {
-    padding-bottom: 10px;
-    border-bottom: solid 1px #474747;
-  }
-  .footer #accordion .motto .horizontal {
-    display: none;
+  .footer #accordion .motto .taglineContainer {
+    width: 80%;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-  .footer #accordion .panel {
-    float: left;
-    width: 20%;
-    padding: 0 15px;
-    border: none;
-    font-size: 0.875em;
-    line-height: 1.66667em;
+@media (min-width: 768px) {
+  .footer {
+    padding: 20px 0;
   }
-  .footer #accordion .panel a {
-    padding: 8px 0 2px;
-    border-bottom: solid 1px #474747;
-  }
-  .footer #accordion .panel .panel-heading {
-    display: none;
-  }
-  .footer #accordion .panel .panel-collapse {
-    display: block;
-    height: auto !important;
-  }
-  .footer #accordion .motto {
-    float: left;
-    width: 20%;
-    padding: 15px;
-    font-size: 1.25em;
-  }
-  .footer #accordion .motto a {
-    float: left;
-  }
-  .footer #accordion .motto img {
-    padding-bottom: 10px;
-    border-bottom: solid 1px #474747;
-  }
-  .footer #accordion .motto .horizontal {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
   .footer #accordion {
     margin: 0 -30px;
-    padding: 15px 0 0;
+    padding: 0 15px 0;
   }
   .footer #accordion .panel {
     float: left;
@@ -10814,24 +10793,26 @@ form.purdueForm .robotic {
     padding: 0 30px 15px;
     border: none;
     font-size: 0.875em;
-    line-height: 1.66667em;
+    line-height: 1.6875em;
   }
   .footer #accordion .panel .panel-heading {
     display: block;
     padding: 0;
     background-color: transparent;
-    font-size: 1.28571em;
+    font-size: 1.3125em;
     line-height: 1em;
   }
   .footer #accordion .panel .panel-heading .panel-title {
-    font-family: "Arial", "Helvetica Neue", "Helvetica", sans-serif !important;
+    font-family: "Champion Welterwt A", "Champion Welterwt B", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
     padding-top: 0;
+    padding-bottom: 5px;
     font-size: 1em;
     font-weight: 300;
   }
   .footer #accordion .panel .panel-heading .panel-title a {
     cursor: default;
     color: #c28e0e;
+    border-bottom: none;
   }
   .footer #accordion .panel .panel-heading .panel-title .fa {
     display: none;
@@ -10845,110 +10826,48 @@ form.purdueForm .robotic {
     height: auto !important;
   }
   .footer #accordion .motto {
-    float: left;
-    width: 100%;
+    clear: none;
     padding: 15px 30px;
-    font-size: 1.75em;
+    font-size: 1.85em;
     text-align: center;
   }
-  .footer #accordion .motto img {
+  .footer #accordion .motto .taglineContainer {
     display: block;
-    max-width: 60%;
-    margin: 0 auto 15px;
+    width: 70%;
   }
-  .footer #accordion .motto a {
-    margin: 1px 5px;
-  }
-  .footer #accordion .motto .vertical {
-    display: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .footer #accordion .panel {
-    margin-top: 0;
-    padding: 15px;
-    border-bottom: solid 1px #333;
-    font-size: 0.77778em;
-    line-height: 2.28571em;
-  }
-  .footer #accordion .panel .panel-heading {
-    display: block;
-    padding: 0;
-    background-color: transparent;
-    font-size: 1.28571em;
-    line-height: 1em;
-  }
-  .footer #accordion .panel .panel-heading .panel-title {
-    font-family: "Arial", "Helvetica Neue", "Helvetica", sans-serif !important;
-    padding-top: 0;
-    font-size: 1em;
-    font-weight: 300;
-  }
-  .footer #accordion .panel .panel-heading a {
-    display: block;
-    width: 100%;
-  }
-  .footer #accordion .panel .panel-heading a .fa-plus {
-    display: none;
-  }
-  .footer #accordion .panel .panel-heading a .fa-minus {
-    display: block;
-  }
-  .footer #accordion .panel .panel-heading a.collapsed .fa-plus {
-    display: block;
-  }
-  .footer #accordion .panel .panel-heading a.collapsed .fa-minus {
-    display: none;
-  }
-  .footer #accordion .panel .panel-heading a:link {
-    color: #c28e0e;
-    text-decoration: none;
-  }
-  .footer #accordion .panel .panel-heading a:visited {
-    color: #c28e0e;
-    text-decoration: none;
-  }
-  .footer #accordion .panel .panel-heading a:hover {
-    color: #c28e0e;
-    text-decoration: none;
-  }
-  .footer #accordion .panel .panel-heading a:active {
-    color: #c28e0e;
-    text-decoration: none;
-  }
-  .footer #accordion .panel .panel-collapse {
-    padding-left: 15px;
-  }
-  .footer #accordion .panel .panel-collapse a {
-    padding: 0;
-  }
-  .footer #accordion .panel:first-child {
-    border-top: solid 1px #474747;
-  }
-  .footer #accordion .motto {
-    clear: both;
-    padding: 15px 15px 0;
-    font-size: 1.66667em;
-    text-align: center;
-  }
-  .footer #accordion .motto a {
-    width: 28px;
-    margin: 9px 2%;
-  }
-  .footer #accordion .motto img {
-    display: block;
-    max-width: 80%;
-    margin: 0 auto 15px;
-  }
-  .footer #accordion .motto .vertical {
+  .footer #accordion .motto .taglineContainer .tagline .vertical {
     display: none;
   }
 }
 
 @media (min-width: 992px) {
-  .footer {
-    padding: 20px 0;
+  .footer #accordion .panel {
+    width: 20%;
+    padding: 0 15px;
+  }
+  .footer #accordion .motto {
+    float: left;
+    width: 20%;
+    padding: 40px 15px 15px;
+    font-size: 1.35em;
+  }
+  .footer #accordion .motto .taglineContainer {
+    width: auto;
+  }
+  .footer #accordion .motto .taglineContainer .tagline {
+    margin-bottom: 10px;
+    padding-bottom: 35.14851%;
+    border-bottom: solid 1px #474747;
+  }
+  .footer #accordion .motto .taglineContainer .tagline .vertical {
+    display: block;
+  }
+  .footer #accordion .motto .taglineContainer .tagline .horizontal {
+    display: none;
+  }
+  .footer #accordion .motto .social a {
+    float: left;
+    margin: 4px 2.7%;
   }
 }
 
