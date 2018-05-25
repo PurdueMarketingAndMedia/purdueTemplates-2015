@@ -10341,6 +10341,19 @@ blockquote:before, .quote:before {
   margin: 0 auto;
 }
 
+.footer #accordion .motto .taglineContainer .tagline {
+  position: relative;
+  padding-bottom: 13.95349%;
+}
+
+.footer #accordion .motto .taglineContainer .tagline .horizontal, .footer #accordion .motto .taglineContainer .tagline .vertical {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 .footer #accordion .motto .taglineContainer .tagline .vertical {
   display: none;
 }
@@ -10549,7 +10562,8 @@ blockquote:before, .quote:before {
     width: auto;
   }
   .footer #accordion .motto .taglineContainer .tagline {
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 35.14851%;
     border-bottom: solid 1px #474747;
   }
   .footer #accordion .motto .taglineContainer .tagline .vertical {

@@ -97,7 +97,15 @@
                     // margin-right: auto !important;
                     // margin-left: auto !important;
                     // text-align: center !important;
-
+                    position:relative;
+                    padding-bottom:60/430*100%;
+                    .horizontal,.vertical{
+                        position:absolute;
+                        top:0;
+                        right:0;
+                        bottom:0;
+                        left:0;
+                    }
                     .vertical {
                         display: none;
                     }
@@ -483,7 +491,8 @@
                     // margin: 0 auto;
 
                     .tagline {
-                        padding-bottom: 10px;
+                        margin-bottom:10px;
+                        padding-bottom:71/202*100%;
                         border-bottom: solid 1px #474747;
                         // display: block;
                         // width: 100%;
