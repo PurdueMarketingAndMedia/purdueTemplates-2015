@@ -1,5 +1,6 @@
-// Include gulp and gulp
+// require packages
 var gulp = require('gulp'),
+
     // enable live reload
     connect = require('gulp-connect'),
 
@@ -17,17 +18,32 @@ var gulp = require('gulp'),
     //async
     async = require('async');
 
-// output directories
-var devOutputDir = 'builds/development/',
-    prodOutputDir = 'builds/production/';
+// set variables
+var env,
+    componentSources,
+    htmlSources,
+    templateSources,
+    scssSources,
+    outputDir,
+    sassStyle;
 
-// component sources
-var componentSources = ['components/**/*'],
-    htmlSources = ['components/html/templates/**/*.html'],
-    templateSources = ['components/html/modules/**/*.html'],
-    scssSources = ['components/css/**/*.scss'];
+// set env
+env = process.env.NODE_ENV || 'development';
 
-// HTML task
+// set output directories based on env
+if (env === 'development') {
+    outputDir = 'builds/development/';
+} else {
+    outputDir = 'builds/production/';
+}
+
+// define component sources paths
+componentSources = ['components/**/*'],
+htmlSources = ['components/html/templates/**/*.html'],
+templateSources = ['components/html/modules/**/*.html'],
+scssSources = ['components/css/**/*.scss'];
+
+// html task
 gulp.task('html', function(){
     async.series([
         function(next)
@@ -39,10 +55,12 @@ gulp.task('html', function(){
                   basepath: '@file'
                 }))
                 // clean up html
-                .pipe(htmlPrettify({indent_char:' ',indent_size:4}))
-                // save into dev and prod
-                .pipe(gulp.dest(devOutputDir+'templates/'))
-                .pipe(gulp.dest(prodOutputDir+'templates/'))
+                .pipe(htmlPrettify({
+                    indent_char:' ',
+                    indent_size:4
+                }))
+                // save into builds
+                .pipe(gulp.dest(outputDir+'templates/'))
                 .on('end',next);
         },
         function(next)
@@ -54,31 +72,27 @@ gulp.task('html', function(){
     ]);
 });
 
-// SASS task
+// sass task
 gulp.task('sass', function(){
-    async.series([ //development build functions
-        function(next)
-        {  // dev builds
-            gulp.src(scssSources)
-                .pipe(sourcemaps.init())
-                .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
-                .pipe(postcss([ autoprefixer, pseudoelements ]))
-                .pipe(sourcemaps.write('./sourcemaps'))
-                // save in dev
-                .pipe(gulp.dest(devOutputDir+'css/'))
-                .on('end',next);
+    async.series([
+        function(next) {
+            if (env === 'development') {
+                gulp.src(scssSources)
+                    .pipe(sourcemaps.init())
+                    .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
+                    .pipe(sourcemaps.write('./sourcemaps'))
+                    .pipe(gulp.dest(outputDir+'css/'))
+                    .on('end',next);
+            } else { // env === production
+                gulp.src(scssSources)
+                    .pipe(sass({outputStyle:'compressed'}).on('error',sass.logError))
+                    .pipe(postcss([ autoprefixer, pseudoelements ]))
+                    .pipe(gulp.dest(outputDir+'css/'))
+                    .on('end',next);
+            }
+
         },
-        function(next)
-        {  // prod builds
-            gulp.src(scssSources)
-                .pipe(sass({outputStyle:'compressed'}).on('error',sass.logError))
-                .pipe(postcss([ autoprefixer, pseudoelements ]))
-                // save in prod
-                .pipe(gulp.dest(prodOutputDir+'css/'))
-                .on('end',next);
-        },
-        function(next)
-        {
+        function(next) {
             // reload on any change in components
             gulp.src(componentSources)
                 .pipe(connect.reload());
@@ -86,17 +100,20 @@ gulp.task('sass', function(){
     ]);
 });
 
+// watch for changes
 gulp.task('watch', function() {
     gulp.watch(htmlSources,['html']);
     gulp.watch(templateSources,['html']);
     gulp.watch(scssSources,['sass']);
 });
 
+// local server with live reload
 gulp.task('connect', function() {
     connect.server({
-        root: devOutputDir,
+        root: outputDir,
         livereload: true
     });
 });
 
+// default task when 'gulp' is run
 gulp.task('default',['html','sass','connect','watch']);
