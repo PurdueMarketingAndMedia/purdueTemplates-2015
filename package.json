@@ -20,6 +20,7 @@
     "devDependencies": {
         "async": "^2.1.5",
         "autoprefixer": "^8.0.0",
+        "ghooks": "^2.0.4",
         "gulp": "^3.9.1",
         "gulp-connect": "^5.0.0",
         "gulp-file-include": "^1.0.0",
@@ -33,5 +34,10 @@
     "browserslist": "> 5% in my stats",
     "dependencies": {
         "npm": "^6.0.1"
+    },
+    "config": {
+        "ghooks": {
+            "post-checkout": "npm run setup"
+        }
     }
 }
