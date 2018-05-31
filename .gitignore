@@ -1,3 +1,7 @@
+# This file is dynamically generated. To edit the list of ignored items, edit post-checkout.js, save, and rerun `npm run setup`.
+
 .DS_Store
 node_modules
 .tmp
+.gitignore
+builds/

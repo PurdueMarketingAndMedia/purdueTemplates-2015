@@ -5,7 +5,7 @@
     "main": "gulpfile.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "setup": "cat ./post-checkout.sh > ./.git/hooks/post-checkout"
+        "setup": "node post-checkout.js"
     },
     "repository": {
         "type": "git",
@@ -27,7 +27,8 @@
         "gulp-postcss": "^7.0.1",
         "gulp-sass": "^3.1.0",
         "gulp-sourcemaps": "^2.4.0",
-        "postcss-pseudoelements": "^5.0.0"
+        "postcss-pseudoelements": "^5.0.0",
+        "shelljs": "^0.8.2"
     },
     "browserslist": "> 5% in my stats",
     "dependencies": {
