@@ -8,6 +8,7 @@ printf "" > .gitignore
 echo ".DS_Store" >> .gitignore
 echo "node_modules" >> .gitignore
 echo ".tmp" >> .gitignore
+echo ".gitignore" >> .gitignore
 
 # if the branch is not named master append the "not-master" text
 if [[ "$branch" != "master" ]]; then
