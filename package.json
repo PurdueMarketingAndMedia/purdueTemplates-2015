@@ -4,7 +4,8 @@
     "description": "The Purdue University templates created in 2015 by Purdue Marketing and Media.",
     "main": "gulpfile.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "setup": "cat ./post-checkout.sh > ./.git/hooks/post-checkout"
     },
     "repository": {
         "type": "git",
