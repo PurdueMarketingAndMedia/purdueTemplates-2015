@@ -77,8 +77,8 @@ table {
 }
 
 /*!
- *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
- *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ *  Font Awesome 4.4.0 by @davegandy - https://fontawesome.io - @fontawesome
+ *  License - https://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
@@ -2697,6 +2697,48 @@ table {
   content: "";
 }
 
+@font-face {
+  font-family: 'Champion Welterweight';
+  src: url("https://www.purdue.edu/purdue/fonts/E4DB780C093CE14E3.woff2") format("woff2"), url("https://www.purdue.edu/purdue/fonts/E4DB780C093CE14E3.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Champion-HTF-Welterweight';
+  src: url("https://www.purdue.edu/purdue/fonts/E4DB780C093CE14E3.woff2") format("woff2"), url("https://www.purdue.edu/purdue/fonts/E4DB780C093CE14E3.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Champion Heavyweight';
+  src: url("https://www.purdue.edu/purdue/fonts/513DCFF5E1F802522.woff2") format("woff2"), url("https://www.purdue.edu/purdue/fonts/513DCFF5E1F802522.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Champion-HTF-Heavyweight';
+  src: url("https://www.purdue.edu/purdue/fonts/513DCFF5E1F802522.woff2") format("woff2"), url("https://www.purdue.edu/purdue/fonts/513DCFF5E1F802522.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Champion Lightweight';
+  src: url("https://www.purdue.edu/purdue/fonts/BA614B8650880A570.woff2") format("woff2"), url("https://www.purdue.edu/purdue/fonts/BA614B8650880A570.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Champion-HTF-Lightweight';
+  src: url("https://www.purdue.edu/purdue/fonts/BA614B8650880A570.woff2") format("woff2"), url("https://www.purdue.edu/purdue/fonts/BA614B8650880A570.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 html {
   background-color: #3b3b3b;
   color: #000;
@@ -2726,7 +2768,7 @@ h1 {
   line-height: 1.2;
   text-transform: uppercase;
   margin-top: 0;
-  font-family: "Champion Welterwt A", "Champion Welterwt B", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
+  font-family: "Champion Welterweight", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
   color: #98700d;
   font-size: 2.25em;
   font-weight: 400;
@@ -2943,6 +2985,20 @@ u {
 
 .goldbar .navbar-header button.navbar-toggle:hover .icon-bar {
   background-color: #000;
+}
+
+.goldbar button.navbar-toggle {
+  position: relative;
+  overflow: hidden;
+}
+
+.goldbar button.navbar-toggle:after {
+  display: block;
+  content: "search";
+  position: absolute;
+  top: 100%;
+  width: 0;
+  height: 0;
 }
 
 .goldbar #search {
@@ -3480,7 +3536,8 @@ u {
     overflow: hidden;
   }
   .blackbar .navbar-nav li a {
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     margin: 10px 0;
   }
   .blackbar .navbar-nav li .dropdown-menu {
@@ -3490,8 +3547,9 @@ u {
     font-size: 0.9em;
   }
   .blackbar .navbar-nav li .dropdown-menu li a {
-    margin: 5px 0 0;
+    margin: 10px 0 0;
     padding: 0;
+    white-space: normal;
   }
   .blackbar .navbar-nav li .dropdown-menu li.dropdown-submenu .dropdown-menu {
     margin-top: 0;
@@ -3526,10 +3584,14 @@ u {
 .blackbar .black .nav {
   padding-top: 0;
   padding-bottom: 0;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
-.blackbar .black .nav .first a {
-  padding-left: 0;
+@media (max-width: 767px) {
+  .blackbar .black .nav {
+    margin-right: 0;
+  }
 }
 
 .blackbar .black .dropdown-menu {
@@ -3560,13 +3622,19 @@ u {
     display: none;
   }
   .blackbar .black .dropdown-menu .dropdown-submenu > .dropdown-menu {
+    overflow: hidden;
     display: block;
+    width: 0;
+    min-width: 0;
+    height: 0;
+    min-height: 0;
     left: 100%;
     top: 0;
     margin-left: -1px;
     background: none;
     border: none;
     box-shadow: none;
+    padding: 0;
   }
   .blackbar .black .dropdown-menu .dropdown-submenu > .dropdown-menu > li > a {
     width: 0;
@@ -3580,9 +3648,15 @@ u {
     background: #000;
   }
   .blackbar .black .dropdown-menu .dropdown-submenu:hover > .dropdown-menu {
+    overflow: visible;
+    width: auto;
+    min-width: 160px;
+    height: auto;
+    min-height: none;
     background: #000;
     border: 1px solid #000;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    padding: 0 5px;
   }
   .blackbar .black .dropdown-menu .dropdown-submenu:hover > .dropdown-menu > li > a {
     width: auto;
@@ -4536,7 +4610,7 @@ end tile sizing and positioning
     bottom: 0;
     left: 0;
     padding: 20px;
-    background-image: url("http://purdue.edu/purdue/images/templateElements/2015/shader65.png");
+    background-image: url("https://purdue.edu/purdue/images/templateElements/2015/shader65.png");
     background-repeat: repeat;
   }
   .collegeContent .grid .tiles .row .tile.col-lg-6.row-lg-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-lg-6.row-lg-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-lg-6.row-lg-4 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-lg-9.row-lg-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-lg-9.row-lg-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-lg-9.row-lg-4 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-lg-12.row-lg-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-lg-12.row-lg-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-lg-12.row-lg-4 a.news .caption .icon {
@@ -4680,7 +4754,7 @@ end tile sizing and positioning
     bottom: 0;
     left: 0;
     padding: 20px;
-    background-image: url("http://purdue.edu/purdue/images/templateElements/2015/shader65.png");
+    background-image: url("https://purdue.edu/purdue/images/templateElements/2015/shader65.png");
     background-repeat: repeat;
   }
   .collegeContent .grid .tiles .row .tile.col-md-6.row-md-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-md-6.row-md-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-md-6.row-md-4 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-md-9.row-md-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-md-9.row-md-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-md-9.row-md-4 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-md-12.row-md-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-md-12.row-md-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-md-12.row-md-4 a.news .caption .icon {
@@ -4823,7 +4897,7 @@ end tile sizing and positioning
     bottom: 0;
     left: 0;
     padding: 20px;
-    background-image: url("http://purdue.edu/purdue/images/templateElements/2015/shader65.png");
+    background-image: url("https://purdue.edu/purdue/images/templateElements/2015/shader65.png");
     background-repeat: repeat;
   }
   .collegeContent .grid .tiles .row .tile.col-sm-6.row-sm-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-sm-6.row-sm-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-sm-6.row-sm-4 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-sm-9.row-sm-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-sm-9.row-sm-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-sm-9.row-sm-4 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-sm-12.row-sm-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-sm-12.row-sm-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-sm-12.row-sm-4 a.news .caption .icon {
@@ -4951,7 +5025,7 @@ end tile sizing and positioning
     bottom: 0;
     left: 0;
     padding: 20px;
-    background-image: url("http://purdue.edu/purdue/images/templateElements/2015/shader65.png");
+    background-image: url("https://purdue.edu/purdue/images/templateElements/2015/shader65.png");
     background-repeat: repeat;
   }
   .collegeContent .grid .tiles .row .tile.col-xs-12.row-xs-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-xs-12.row-xs-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-xs-12.row-xs-4 a.news .caption .icon {
@@ -4966,6 +5040,7 @@ end tile sizing and positioning
   width: 100%;
   background-color: #000;
   overflow: hidden;
+  padding-bottom: 15px;
 }
 
 .footer #accordion {
@@ -4974,8 +5049,12 @@ end tile sizing and positioning
 
 .footer #accordion .panel {
   border: none;
-  margin-top: 5px;
   background-color: transparent;
+  margin-top: 0;
+  padding: 15px;
+  border-bottom: solid 1px #333;
+  font-size: 0.875em;
+  line-height: 2.3125em;
 }
 
 .footer #accordion .panel a {
@@ -4983,27 +5062,35 @@ end tile sizing and positioning
   width: 100%;
 }
 
-.footer #accordion .panel a:link {
+.footer #accordion .panel a:link, .footer #accordion .panel a:visited {
   color: #adadad;
   font-weight: 400;
   text-decoration: none;
 }
 
-.footer #accordion .panel a:visited {
-  color: #adadad;
-  font-weight: 400;
-  text-decoration: none;
-}
-
-.footer #accordion .panel a:hover {
+.footer #accordion .panel a:hover, .footer #accordion .panel a:active {
   color: #fff;
   font-weight: 400;
   text-decoration: none;
 }
 
-.footer #accordion .panel a:active {
-  color: #fff;
-  font-weight: 400;
+.footer #accordion .panel .panel-heading {
+  padding: 0;
+  background-color: transparent;
+  font-size: 1.3125em;
+}
+
+.footer #accordion .panel .panel-heading .panel-title {
+  font-family: "Champion Welterweight", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
+  font-size: 1em;
+}
+
+.footer #accordion .panel .panel-heading a {
+  display: block;
+}
+
+.footer #accordion .panel .panel-heading a:link, .footer #accordion .panel .panel-heading a:visited, .footer #accordion .panel .panel-heading a:hover, .footer #accordion .panel .panel-heading a:active {
+  color: #c28e0e;
   text-decoration: none;
 }
 
@@ -5018,15 +5105,43 @@ end tile sizing and positioning
 }
 
 .footer #accordion .motto {
-  text-align: left;
-  color: #fff;
+  clear: both;
+  padding: 15px 15px 0;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.footer #accordion .motto .taglineContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footer #accordion .motto .taglineContainer .tagline {
+  position: relative;
+  padding-bottom: 13.95349%;
+}
+
+.footer #accordion .motto .taglineContainer .tagline .horizontal, .footer #accordion .motto .taglineContainer .tagline .vertical {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.footer #accordion .motto .taglineContainer .tagline .vertical {
+  display: none;
+}
+
+.footer #accordion .motto .social {
+  display: block;
+  width: 100%;
+  padding-top: 5px;
 }
 
 .footer #accordion .motto a {
   display: inline-block;
   position: relative;
-  overflow: hidden;
-  width: 23px;
   margin: 2.5px 2%;
   text-align: center;
 }
@@ -5110,22 +5225,12 @@ end tile sizing and positioning
   content: "Amazon";
 }
 
-.footer #accordion .motto a:link {
+.footer #accordion .motto a:link, .footer #accordion .motto a:visited {
   color: #999;
   text-decoration: none;
 }
 
-.footer #accordion .motto a:visited {
-  color: #999;
-  text-decoration: none;
-}
-
-.footer #accordion .motto a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer #accordion .motto a:active {
+.footer #accordion .motto a:hover, .footer #accordion .motto a:active {
   color: #fff;
   text-decoration: none;
 }
@@ -5135,86 +5240,34 @@ end tile sizing and positioning
   margin-bottom: 5px;
 }
 
-@media (min-width: 1200px) {
-  .footer #accordion .panel {
-    float: left;
-    width: 20%;
-    padding: 0 15px;
-    border: none;
-    font-size: 0.875em;
-    line-height: 1.42857em;
+@media (max-width: 767px) {
+  .footer #accordion .panel .panel-heading a .fa-plus {
+    display: none;
   }
-  .footer #accordion .panel a {
-    padding: 8px 0 2px;
-    border-bottom: solid 1px #474747;
+  .footer #accordion .panel .panel-heading a .fa-minus {
+    display: block;
   }
-  .footer #accordion .panel .panel-heading {
+  .footer #accordion .panel .panel-heading a.collapsed .fa-plus {
+    display: block;
+  }
+  .footer #accordion .panel .panel-heading a.collapsed .fa-minus {
     display: none;
   }
   .footer #accordion .panel .panel-collapse {
-    display: block;
-    height: auto !important;
+    padding-left: 15px;
   }
-  .footer #accordion .motto {
-    float: left;
-    width: 20%;
-    padding: 15px;
-    font-size: 1.25em;
-  }
-  .footer #accordion .motto a {
-    float: left;
-  }
-  .footer #accordion .motto img {
-    padding-bottom: 10px;
-    border-bottom: solid 1px #474747;
-  }
-  .footer #accordion .motto .horizontal {
-    display: none;
+  .footer #accordion .motto .taglineContainer {
+    width: 80%;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-  .footer #accordion .panel {
-    float: left;
-    width: 20%;
-    padding: 0 15px;
-    border: none;
-    font-size: 0.875em;
-    line-height: 1.66667em;
+@media (min-width: 768px) {
+  .footer {
+    padding: 20px 0;
   }
-  .footer #accordion .panel a {
-    padding: 8px 0 2px;
-    border-bottom: solid 1px #474747;
-  }
-  .footer #accordion .panel .panel-heading {
-    display: none;
-  }
-  .footer #accordion .panel .panel-collapse {
-    display: block;
-    height: auto !important;
-  }
-  .footer #accordion .motto {
-    float: left;
-    width: 20%;
-    padding: 15px;
-    font-size: 1.25em;
-  }
-  .footer #accordion .motto a {
-    float: left;
-  }
-  .footer #accordion .motto img {
-    padding-bottom: 10px;
-    border-bottom: solid 1px #474747;
-  }
-  .footer #accordion .motto .horizontal {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
   .footer #accordion {
     margin: 0 -30px;
-    padding: 15px 0 0;
+    padding: 0 15px 0;
   }
   .footer #accordion .panel {
     float: left;
@@ -5222,24 +5275,26 @@ end tile sizing and positioning
     padding: 0 30px 15px;
     border: none;
     font-size: 0.875em;
-    line-height: 1.66667em;
+    line-height: 1.6875em;
   }
   .footer #accordion .panel .panel-heading {
     display: block;
     padding: 0;
     background-color: transparent;
-    font-size: 1.28571em;
+    font-size: 1.3125em;
     line-height: 1em;
   }
   .footer #accordion .panel .panel-heading .panel-title {
-    font-family: "Arial", "Helvetica Neue", "Helvetica", sans-serif !important;
+    font-family: "Champion Welterweight", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
     padding-top: 0;
+    padding-bottom: 5px;
     font-size: 1em;
     font-weight: 300;
   }
   .footer #accordion .panel .panel-heading .panel-title a {
     cursor: default;
     color: #c28e0e;
+    border-bottom: none;
   }
   .footer #accordion .panel .panel-heading .panel-title .fa {
     display: none;
@@ -5253,110 +5308,48 @@ end tile sizing and positioning
     height: auto !important;
   }
   .footer #accordion .motto {
-    float: left;
-    width: 100%;
+    clear: none;
     padding: 15px 30px;
-    font-size: 1.75em;
+    font-size: 1.85em;
     text-align: center;
   }
-  .footer #accordion .motto img {
+  .footer #accordion .motto .taglineContainer {
     display: block;
-    max-width: 60%;
-    margin: 0 auto 15px;
+    width: 70%;
   }
-  .footer #accordion .motto a {
-    margin: 1px 5px;
-  }
-  .footer #accordion .motto .vertical {
-    display: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .footer #accordion .panel {
-    margin-top: 0;
-    padding: 15px;
-    border-bottom: solid 1px #333;
-    font-size: 0.77778em;
-    line-height: 2.28571em;
-  }
-  .footer #accordion .panel .panel-heading {
-    display: block;
-    padding: 0;
-    background-color: transparent;
-    font-size: 1.28571em;
-    line-height: 1em;
-  }
-  .footer #accordion .panel .panel-heading .panel-title {
-    font-family: "Arial", "Helvetica Neue", "Helvetica", sans-serif !important;
-    padding-top: 0;
-    font-size: 1em;
-    font-weight: 300;
-  }
-  .footer #accordion .panel .panel-heading a {
-    display: block;
-    width: 100%;
-  }
-  .footer #accordion .panel .panel-heading a .fa-plus {
-    display: none;
-  }
-  .footer #accordion .panel .panel-heading a .fa-minus {
-    display: block;
-  }
-  .footer #accordion .panel .panel-heading a.collapsed .fa-plus {
-    display: block;
-  }
-  .footer #accordion .panel .panel-heading a.collapsed .fa-minus {
-    display: none;
-  }
-  .footer #accordion .panel .panel-heading a:link {
-    color: #c28e0e;
-    text-decoration: none;
-  }
-  .footer #accordion .panel .panel-heading a:visited {
-    color: #c28e0e;
-    text-decoration: none;
-  }
-  .footer #accordion .panel .panel-heading a:hover {
-    color: #c28e0e;
-    text-decoration: none;
-  }
-  .footer #accordion .panel .panel-heading a:active {
-    color: #c28e0e;
-    text-decoration: none;
-  }
-  .footer #accordion .panel .panel-collapse {
-    padding-left: 15px;
-  }
-  .footer #accordion .panel .panel-collapse a {
-    padding: 0;
-  }
-  .footer #accordion .panel:first-child {
-    border-top: solid 1px #474747;
-  }
-  .footer #accordion .motto {
-    clear: both;
-    padding: 15px 15px 0;
-    font-size: 1.66667em;
-    text-align: center;
-  }
-  .footer #accordion .motto a {
-    width: 28px;
-    margin: 9px 2%;
-  }
-  .footer #accordion .motto img {
-    display: block;
-    max-width: 80%;
-    margin: 0 auto 15px;
-  }
-  .footer #accordion .motto .vertical {
+  .footer #accordion .motto .taglineContainer .tagline .vertical {
     display: none;
   }
 }
 
 @media (min-width: 992px) {
-  .footer {
-    padding: 20px 0;
+  .footer #accordion .panel {
+    width: 20%;
+    padding: 0 15px;
+  }
+  .footer #accordion .motto {
+    float: left;
+    width: 20%;
+    padding: 40px 15px 15px;
+    font-size: 1.35em;
+  }
+  .footer #accordion .motto .taglineContainer {
+    width: auto;
+  }
+  .footer #accordion .motto .taglineContainer .tagline {
+    margin-bottom: 10px;
+    padding-bottom: 35.14851%;
+    border-bottom: solid 1px #474747;
+  }
+  .footer #accordion .motto .taglineContainer .tagline .vertical {
+    display: block;
+  }
+  .footer #accordion .motto .taglineContainer .tagline .horizontal {
+    display: none;
+  }
+  .footer #accordion .motto .social a {
+    float: left;
+    margin: 4px 2.7%;
   }
 }
 
