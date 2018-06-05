@@ -36,7 +36,7 @@ table {
 }
 
 /*!
- * Bootstrap v3.3.5 (https://getbootstrap.com)
+ * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
@@ -7683,34 +7683,6 @@ button.close {
   }
 }
 
-@font-face {
-  font-family: 'Champion Welterweight';
-  src: url("https://www.purdue.edu/purdue/fonts/E4DB780C093CE14E3.woff2") format("woff2"), url("https://www.purdue.edu/purdue/fonts/E4DB780C093CE14E3.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Champion-HTF-Welterweight';
-  src: url("https://www.purdue.edu/purdue/fonts/E4DB780C093CE14E3.woff2") format("woff2"), url("https://www.purdue.edu/purdue/fonts/E4DB780C093CE14E3.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Champion Heavyweight';
-  src: url("https://www.purdue.edu/purdue/fonts/513DCFF5E1F802522.woff2") format("woff2"), url("https://www.purdue.edu/purdue/fonts/513DCFF5E1F802522.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Champion-HTF-Heavyweight';
-  src: url("https://www.purdue.edu/purdue/fonts/513DCFF5E1F802522.woff2") format("woff2"), url("https://www.purdue.edu/purdue/fonts/513DCFF5E1F802522.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
 html {
   background-color: #3b3b3b;
   color: #000;
@@ -7740,7 +7712,7 @@ h1 {
   line-height: 1.2;
   text-transform: uppercase;
   margin-top: 0;
-  font-family: "Champion Welterweight", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
+  font-family: "Champion Welterwt A", "Champion Welterwt B", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
   color: #98700d;
   font-size: 2.25em;
   font-weight: 400;
@@ -7957,20 +7929,6 @@ u {
 
 .goldbar .navbar-header button.navbar-toggle:hover .icon-bar {
   background-color: #000;
-}
-
-.goldbar button.navbar-toggle {
-  position: relative;
-  overflow: hidden;
-}
-
-.goldbar button.navbar-toggle:after {
-  display: block;
-  content: "search";
-  position: absolute;
-  top: 100%;
-  width: 0;
-  height: 0;
 }
 
 .goldbar #search {
@@ -8518,9 +8476,8 @@ u {
     font-size: 0.9em;
   }
   .blackbar .navbar-nav li .dropdown-menu li a {
-    margin: 10px 0 0;
+    margin: 5px 0 0;
     padding: 0;
-    white-space: normal;
   }
   .blackbar .navbar-nav li .dropdown-menu li.dropdown-submenu .dropdown-menu {
     margin-top: 0;
@@ -8589,19 +8546,13 @@ u {
     display: none;
   }
   .blackbar .black .dropdown-menu .dropdown-submenu > .dropdown-menu {
-    overflow: hidden;
     display: block;
-    width: 0;
-    min-width: 0;
-    height: 0;
-    min-height: 0;
     left: 100%;
     top: 0;
     margin-left: -1px;
     background: none;
     border: none;
     box-shadow: none;
-    padding: 0;
   }
   .blackbar .black .dropdown-menu .dropdown-submenu > .dropdown-menu > li > a {
     width: 0;
@@ -8615,15 +8566,9 @@ u {
     background: #000;
   }
   .blackbar .black .dropdown-menu .dropdown-submenu:hover > .dropdown-menu {
-    overflow: visible;
-    width: auto;
-    min-width: 160px;
-    height: auto;
-    min-height: none;
     background: #000;
     border: 1px solid #000;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-    padding: 0 5px;
   }
   .blackbar .black .dropdown-menu .dropdown-submenu:hover > .dropdown-menu > li > a {
     width: auto;
@@ -9632,7 +9577,7 @@ blockquote:before, .quote:before {
   line-height: 1.2;
   text-transform: uppercase;
   margin-top: 0;
-  font-family: "Champion Welterweight", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
+  font-family: "Champion Welterwt A", "Champion Welterwt B", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
   color: #98700d;
   font-size: 2.25em;
   font-weight: 400;
@@ -10514,7 +10459,7 @@ end tile sizing and positioning
     bottom: 0;
     left: 0;
     padding: 20px;
-    background-image: url("https://purdue.edu/purdue/images/templateElements/2015/shader65.png");
+    background-image: url("http://purdue.edu/purdue/images/templateElements/2015/shader65.png");
     background-repeat: repeat;
   }
   .collegeContent .grid .tiles .row .tile.col-lg-6.row-lg-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-lg-6.row-lg-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-lg-6.row-lg-4 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-lg-9.row-lg-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-lg-9.row-lg-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-lg-9.row-lg-4 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-lg-12.row-lg-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-lg-12.row-lg-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-lg-12.row-lg-4 a.news .caption .icon {
@@ -10658,7 +10603,7 @@ end tile sizing and positioning
     bottom: 0;
     left: 0;
     padding: 20px;
-    background-image: url("https://purdue.edu/purdue/images/templateElements/2015/shader65.png");
+    background-image: url("http://purdue.edu/purdue/images/templateElements/2015/shader65.png");
     background-repeat: repeat;
   }
   .collegeContent .grid .tiles .row .tile.col-md-6.row-md-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-md-6.row-md-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-md-6.row-md-4 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-md-9.row-md-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-md-9.row-md-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-md-9.row-md-4 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-md-12.row-md-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-md-12.row-md-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-md-12.row-md-4 a.news .caption .icon {
@@ -10801,7 +10746,7 @@ end tile sizing and positioning
     bottom: 0;
     left: 0;
     padding: 20px;
-    background-image: url("https://purdue.edu/purdue/images/templateElements/2015/shader65.png");
+    background-image: url("http://purdue.edu/purdue/images/templateElements/2015/shader65.png");
     background-repeat: repeat;
   }
   .collegeContent .grid .tiles .row .tile.col-sm-6.row-sm-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-sm-6.row-sm-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-sm-6.row-sm-4 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-sm-9.row-sm-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-sm-9.row-sm-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-sm-9.row-sm-4 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-sm-12.row-sm-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-sm-12.row-sm-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-sm-12.row-sm-4 a.news .caption .icon {
@@ -10929,7 +10874,7 @@ end tile sizing and positioning
     bottom: 0;
     left: 0;
     padding: 20px;
-    background-image: url("https://purdue.edu/purdue/images/templateElements/2015/shader65.png");
+    background-image: url("http://purdue.edu/purdue/images/templateElements/2015/shader65.png");
     background-repeat: repeat;
   }
   .collegeContent .grid .tiles .row .tile.col-xs-12.row-xs-2 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-xs-12.row-xs-3 a.news .caption .icon, .collegeContent .grid .tiles .row .tile.col-xs-12.row-xs-4 a.news .caption .icon {

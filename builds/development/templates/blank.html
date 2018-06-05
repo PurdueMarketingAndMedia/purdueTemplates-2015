@@ -55,18 +55,25 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="form-group">
-                                    <script>
-                                        (function() {
-                    			                        var cx = '017690826183710227054:mjxnqnpskjk';
-                    			                        var gcse = document.createElement('script');
-                    			                        gcse.type = 'text/javascript';
-                    			                        gcse.async = true;
-                    			                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                    			                        var s = document.getElementsByTagName('script')[0];
-                    			                        s.parentNode.insertBefore(gcse, s);
-                    			                      })();
+                                    <div id="cse-search-form">Loading</div>
+                                    <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+                                    <script type="text/javascript">
+                                        // <![CDATA[
+                                        								google.load('search', '1', {language: 'en', style: google.loader.themes.MINIMALIST});
+                                        								google.setOnLoadCallback(function() {
+                                        									var customSearchOptions = {};
+                                        									var orderByOptions = {};
+                                        									orderByOptions['keys'] = [{label: 'Relevance', key: ''} , {label: 'Date', key: 'date'}];
+                                        									customSearchOptions['enableOrderBy'] = true;
+                                        									customSearchOptions['orderByOptions'] = orderByOptions;
+                                        									var customSearchControl =   new google.search.CustomSearchControl('017690826183710227054:mjxnqnpskjk', customSearchOptions);
+                                        									customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+                                        									var options = new google.search.DrawOptions();
+                                        									options.enableSearchboxOnly('https://www.purdue.edu/purdue/search.html', 'q');
+                                        									customSearchControl.draw('cse-search-form', options);
+                                        								}, true);
+                                        								// ]]>
                                     </script>
-                                    <gcse:searchbox-only id="cse-search-form" resultsUrl="https://www.purdue.edu/purdue/search.html" queryParameterName="q">Loading</gcse:searchbox-only>
                                 </div>
                             </li>
                         </ul>
@@ -78,45 +85,44 @@
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Find Info For <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <p class="hide">Find Info For</p>
-                            <li><a href="https://www.purdue.edu/purdue/current_students/index.html">Current Students</a>
+                            <li><a href="http://www.purdue.edu/purdue/current_students/index.html">Current Students</a>
                             </li>
-                            <li><a href="https://www.purdue.edu/purdue/prospective_students/index.html">Prospective Students</a>
+                            <li><a href="http://www.purdue.edu/purdue/prospective_students/index.html">Prospective Students</a>
                             </li>
-                            <li><a href="https://www.purdue.edu/purdue/alumni/index.html">Alumni and Friends</a>
+                            <li><a href="http://www.purdue.edu/purdue/alumni/index.html">Alumni and Friends</a>
                             </li>
-                            <li><a href="https://www.purdue.edu/purdue/engage/index.html">Engage with Purdue</a>
+                            <li><a href="http://www.purdue.edu/purdue/engage/index.html">Engage with Purdue</a>
                             </li>
-                            <li><a href="https://www.purdue.edu/purdue/careers/index.html">Careers</a>
+                            <li><a href="http://www.purdue.edu/purdue/careers/index.html">Careers</a>
                             </li>
-                            <li><a href="https://www.purdue.edu/purdue/commercialization/index.html">Entrepreneurship and Commercialization</a>
+                            <li><a href="http://www.purdue.edu/purdue/commercialization/index.html">Entrepreneurship and Commercialization</a>
                             </li>
-                            <li><a href="https://www.purdue.edu/purdue/research/index.html">Research and Innovation</a>
+                            <li><a href="http://www.purdue.edu/purdue/research/index.html">Research and Innovation</a>
                             </li>
                         </ul>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav right quicklinks">
                     <p class="hide">Quick Links</p>
-                    <li><a href="https://www.purdue.edu/purdue/admissions/index.html">Apply</a>
+                    <li><a href="http://www.purdue.edu/purdue/admissions/index.html">Apply</a>
                     </li>
-                    <li><a href="https://www.purdue.edu/newsroom/">News</a>
+                    <li><a href="http://www.purdue.edu/newsroom/">News</a>
                     </li>
-                    <li><a href="https://www.purdue.edu/president/">President</a>
+                    <li><a href="http://www.purdue.edu/president/">President</a>
                     </li>
-                    <li><a href="https://www.purdueofficialstore.com/">Shop</a>
+                    <li><a href="http://www.purdueofficialstore.com/">Shop</a>
                     </li>
-                    <li><a href="https://www.purdue.edu/visit/">Visit</a>
+                    <li><a href="http://www.purdue.edu/visit/">Visit</a>
                     </li>
                     <li><a href="https://securelb.imodules.com/s/1461/research/hybrid/index.aspx?sid=1461&amp;gid=1010&amp;pgid=1754&amp;cid=4045">Give</a>
                     </li>
-                    <li><a href="https://www.purdue.edu/ea">Emergency</a>
+                    <li><a href="http://www.purdue.edu/ea">Emergency</a>
                     </li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
         </div>
     </div>
-
     <div class="top">
         <div class="container">
             <div class="row row-eq-height">
@@ -181,7 +187,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a href="audience.html">Audience</a>
+                    <li class="dropdown current"><a href="audience.html">Audience</a>
                     </li>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="../content/content1.html">Content<span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -196,28 +202,9 @@
                                     </li>
                                     <li><a href="#">Place Holder Link 2</a>
                                     </li>
-                                    <li><a href="#">Place Holder Link 3</a>
-                                    </li>
-                                    <li><a href="#">Place Holder Link 4</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Submenu Example 2<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Place Holder Link 1</a>
-                                    </li>
-                                    <li><a href="#">Place Holder Link 2</a>
-                                    </li>
-                                    <li><a href="#">Place Holder Link 3</a>
-                                    </li>
-                                    <li><a href="#">Place Holder Link 4</a>
-                                    </li>
                                 </ul>
                             </li>
                         </ul>
-                    </li>
-                    <li class="dropdown"><a href="blank.html">Blank</a>
                     </li>
                 </ul>
             </div>
@@ -241,9 +228,9 @@
                             <ul>
                                 <li><a href="https://one.purdue.edu/">OneCampus Portal</a>
                                 </li>
-                                <li><a href="https://www.itap.purdue.edu/learning/tools/blackboard/">Blackboard</a>
+                                <li><a href="http://www.itap.purdue.edu/learning/tools/blackboard/">Blackboard</a>
                                 </li>
-                                <li><a href="https://www.purdue.edu/newsroom/purduetoday/">Purdue Today</a>
+                                <li><a href="https://www.itap.purdue.edu/directory/">Directory</a>
                                 </li>
                                 <li><a href="http://portal.office.com/">Office 365</a>
                                 </li>
@@ -263,9 +250,9 @@
                     <div class="panel-collapse collapse" id="footertwo">
                         <div class="panel-body">
                             <ul>
-                                <li><a href="https://www.purdue.edu/purdue/information_for/for_faculty_staff_re.html">Faculty and Staff</a>
+                                <li><a href="http://www.purdue.edu/purdue/information_for/for_faculty_staff_re.html">Faculty and Staff</a>
                                 </li>
-                                <li><a href="https://www.purdue.edu/ais/">AIS</a>
+                                <li><a href="https://www.purdue.edu/hr/">Human Resources</a>
                                 </li>
                                 <li><a href="http://www.purdue.edu/purdue/careers/index.php">Careers</a>
                                 </li>
@@ -287,9 +274,9 @@
                     <div class="panel-collapse collapse" id="footerthree">
                         <div class="panel-body">
                             <ul>
-                                <li><a href="https://www.itap.purdue.edu/learning/tools/blackboard/">Blackboard</a>
+                                <li><a href="http://www.purdue.edu/newsroom/purduetoday/">Purdue Today</a>
                                 </li>
-                                <li><a href="https://www.purdue.edu/ehps/">Environmental Health &amp; Public Safety</a>
+                                <li><a href="https://calendar.purdue.edu/">Calendar</a>
                                 </li>
                                 <li><a href="https://www.lib.purdue.edu/">Libraries</a>
                                 </li>
@@ -311,15 +298,17 @@
                     <div class="panel-collapse collapse" id="footerfour">
                         <div class="panel-body">
                             <ul>
-                                <li><a href="https://www.purdueofficialstore.com/">Shop</a>
-                                </li>
-                                <li><a href="https://www.purdue.edu/ethics/clery.html">Clery Reporting Act</a>
+                                <li><a href="http://www.purdue.edu/hotline/">Speak Up</a>
                                 </li>
                                 <li><a href="http://www.purdue.edu/diversity-inclusion/">Diversity and Inclusion</a>
                                 </li>
                                 <li><a href="https://www.purdue.edu/ethics/">Ethics &amp; Compliance</a>
                                 </li>
-                                <li><a href="https://www.purdue.edu/hotline/">Speak Up</a>
+                                <li><a href="https://www.purdue.edu/boilerconnect/">BoilerConnect</a>
+                                </li>
+                                <li><a href="http://www.purdue.edu/ehps/">Annual Security Report</a>
+                                </li>
+                                <li><a href="https://www.purdue.edu/hr/CHL/index.html">Center for Healthy Living</a>
                                 </li>
                             </ul>
                         </div>
@@ -427,16 +416,15 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <p>Purdue University, 610 Purdue Mall, West Lafayette, IN 47907, (765) 494-4600</p>
-                    <p><a href="https://www.purdue.edu/purdue/disclaimer.html"> © 2015 Purdue University</a> | <a href="https://www.purdue.edu/purdue/ea_eou_statement.html">An equal access/equal opportunity university</a> | <a href="https://www.purdue.edu/securepurdue/DMCAAgent.cfm">Copyright Complaints</a> |
+                    <p><a href="http://www.purdue.edu/purdue/disclaimer.html"> © 2015 Purdue University</a> | <a href="http://www.purdue.edu/purdue/ea_eou_statement.html">An equal access/equal opportunity university</a> | <a href="http://www.purdue.edu/securepurdue/DMCAAgent.cfm">Copyright Complaints</a> |
                         <a
-                        href="https://www.purdue.edu/marketing" target="_blank">Maintained by ORGANIZATION NAME HERE</a>
+                        href="http://www.purdue.edu/marketing" target="_blank">Maintained by ORGANIZATION NAME HERE</a>
                     </p>
-                    <p>Trouble with this page? Disability-related <a href="https://www.purdue.edu/disabilityresources/">accessibility</a> issue? Please contact&nbsp;us at <a href="mailto:online@purdue.edu">organization-email@purdue.edu</a>.</p>
+                    <p>Trouble with this page? Disability-related <a href="http://www.purdue.edu/disabilityresources/">accessibility</a> issue? Please contact&nbsp;us at <a href="mailto:online@purdue.edu">organization-email@purdue.edu</a>.</p>
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
