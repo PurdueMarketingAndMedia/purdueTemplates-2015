@@ -3522,7 +3522,8 @@ u {
     overflow: hidden;
   }
   .blackbar .navbar-nav li a {
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     margin: 10px 0;
   }
   .blackbar .navbar-nav li .dropdown-menu {
