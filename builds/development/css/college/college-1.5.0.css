@@ -2697,6 +2697,34 @@ table {
   content: "";
 }
 
+@font-face {
+  font-family: 'Champion Welterweight';
+  src: url("https://www.purdue.edu/purdue/fonts/E4DB780C093CE14E3.woff2") format("woff2"), url("https://www.purdue.edu/purdue/fonts/E4DB780C093CE14E3.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Champion-HTF-Welterweight';
+  src: url("https://www.purdue.edu/purdue/fonts/E4DB780C093CE14E3.woff2") format("woff2"), url("https://www.purdue.edu/purdue/fonts/E4DB780C093CE14E3.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Champion Heavyweight';
+  src: url("https://www.purdue.edu/purdue/fonts/513DCFF5E1F802522.woff2") format("woff2"), url("https://www.purdue.edu/purdue/fonts/513DCFF5E1F802522.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Champion-HTF-Heavyweight';
+  src: url("https://www.purdue.edu/purdue/fonts/513DCFF5E1F802522.woff2") format("woff2"), url("https://www.purdue.edu/purdue/fonts/513DCFF5E1F802522.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 html {
   background-color: #3b3b3b;
   color: #000;
@@ -2726,7 +2754,7 @@ h1 {
   line-height: 1.2;
   text-transform: uppercase;
   margin-top: 0;
-  font-family: "Champion Welterwt A", "Champion Welterwt B", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
+  font-family: "Champion Welterweight", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
   color: #98700d;
   font-size: 2.25em;
   font-weight: 400;
@@ -3541,10 +3569,8 @@ u {
 .blackbar .black .nav {
   padding-top: 0;
   padding-bottom: 0;
-}
-
-.blackbar .black .nav .first a {
-  padding-left: 0;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .blackbar .black .dropdown-menu {
@@ -5034,7 +5060,7 @@ end tile sizing and positioning
 }
 
 .footer #accordion .panel .panel-heading .panel-title {
-  font-family: "Champion Welterwt A", "Champion Welterwt B", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
+  font-family: "Champion Welterweight", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
   font-size: 1em;
 }
 
@@ -5238,7 +5264,7 @@ end tile sizing and positioning
     line-height: 1em;
   }
   .footer #accordion .panel .panel-heading .panel-title {
-    font-family: "Champion Welterwt A", "Champion Welterwt B", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
+    font-family: "Champion Welterweight", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
     padding-top: 0;
     padding-bottom: 5px;
     font-size: 1em;
