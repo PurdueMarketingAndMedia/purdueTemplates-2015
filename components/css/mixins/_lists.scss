@@ -24,22 +24,37 @@
 
 @mixin list-ordered-decimal{
 	list-style-type:decimal;
+	@supports( counter-reset: li ){
+		list-style-type:none;
+	}
 }
 
 @mixin list-ordered-alpha-lower{
 	list-style-type:lower-alpha;
+	@supports( counter-reset: li ){
+		list-style-type:none;
+	}
 }
 
 @mixin list-ordered-alpha-upper{
 	list-style-type:upper-alpha;
+	@supports( counter-reset: li ){
+		list-style-type:none;
+	}
 }
 
 @mixin list-ordered-roman-lower{
 	list-style-type:lower-roman;
+	@supports( counter-reset: li ){
+		list-style-type:none;
+	}
 }
 
 @mixin list-ordered-roman-upper{
 	list-style-type:upper-roman;
+	@supports( counter-reset: li ){
+		list-style-type:none;
+	}
 }
 
 //default styling for list items
