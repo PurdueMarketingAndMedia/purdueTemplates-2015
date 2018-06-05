@@ -3546,6 +3546,12 @@ u {
   margin-right: -15px;
 }
 
+@media (max-width: 767px) {
+  .blackbar .black .nav {
+    margin-right: 0;
+  }
+}
+
 .blackbar .black .dropdown-menu {
   font-size: 1em;
   background-color: #000;
