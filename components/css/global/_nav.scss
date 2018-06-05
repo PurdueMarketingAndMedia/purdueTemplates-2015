@@ -147,7 +147,7 @@
 		    float:none;
 		    margin:15px 0;
 		}
-		.navbar-collapse.collapse.in { 
+		.navbar-collapse.collapse.in {
 		    display: block!important;
 		}
 		.collapsing {
@@ -169,6 +169,11 @@
 			margin-left: -15px;
 			margin-right: -15px;
 		}
+        @media (max-width:767px) {
+            .nav {
+                margin-right: 0;
+            }
+        }
 		.dropdown-menu{
 			font-size:1em;
 			background-color:#000;
