@@ -77,8 +77,8 @@ table {
 }
 
 /*!
- *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
- *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ *  Font Awesome 4.4.0 by @davegandy - https://fontawesome.io - @fontawesome
+ *  License - https://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
@@ -2726,7 +2726,7 @@ h1 {
   line-height: 1.2;
   text-transform: uppercase;
   margin-top: 0;
-  font-family: "Champion Welterwt A", "Champion Welterwt B", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
+  font-family: "Champion Welterweight", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
   color: #98700d;
   font-size: 2.25em;
   font-weight: 400;
@@ -2943,6 +2943,20 @@ u {
 
 .goldbar .navbar-header button.navbar-toggle:hover .icon-bar {
   background-color: #000;
+}
+
+.goldbar button.navbar-toggle {
+  position: relative;
+  overflow: hidden;
+}
+
+.goldbar button.navbar-toggle:after {
+  display: block;
+  content: "search";
+  position: absolute;
+  top: 100%;
+  width: 0;
+  height: 0;
 }
 
 .goldbar #search {
@@ -3480,7 +3494,8 @@ u {
     overflow: hidden;
   }
   .blackbar .navbar-nav li a {
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     margin: 10px 0;
   }
   .blackbar .navbar-nav li .dropdown-menu {
@@ -3490,8 +3505,9 @@ u {
     font-size: 0.9em;
   }
   .blackbar .navbar-nav li .dropdown-menu li a {
-    margin: 5px 0 0;
+    margin: 10px 0 0;
     padding: 0;
+    white-space: normal;
   }
   .blackbar .navbar-nav li .dropdown-menu li.dropdown-submenu .dropdown-menu {
     margin-top: 0;
@@ -3526,10 +3542,14 @@ u {
 .blackbar .black .nav {
   padding-top: 0;
   padding-bottom: 0;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
-.blackbar .black .nav .first a {
-  padding-left: 0;
+@media (max-width: 767px) {
+  .blackbar .black .nav {
+    margin-right: 0;
+  }
 }
 
 .blackbar .black .dropdown-menu {
@@ -3560,13 +3580,19 @@ u {
     display: none;
   }
   .blackbar .black .dropdown-menu .dropdown-submenu > .dropdown-menu {
+    overflow: hidden;
     display: block;
+    width: 0;
+    min-width: 0;
+    height: 0;
+    min-height: 0;
     left: 100%;
     top: 0;
     margin-left: -1px;
     background: none;
     border: none;
     box-shadow: none;
+    padding: 0;
   }
   .blackbar .black .dropdown-menu .dropdown-submenu > .dropdown-menu > li > a {
     width: 0;
@@ -3580,9 +3606,15 @@ u {
     background: #000;
   }
   .blackbar .black .dropdown-menu .dropdown-submenu:hover > .dropdown-menu {
+    overflow: visible;
+    width: auto;
+    min-width: 160px;
+    height: auto;
+    min-height: none;
     background: #000;
     border: 1px solid #000;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    padding: 0 5px;
   }
   .blackbar .black .dropdown-menu .dropdown-submenu:hover > .dropdown-menu > li > a {
     width: auto;
@@ -4383,7 +4415,7 @@ u {
 }
 
 .footer #accordion .panel .panel-heading .panel-title {
-  font-family: "Champion Welterwt A", "Champion Welterwt B", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
+  font-family: "Champion Welterweight", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
   font-size: 1em;
 }
 
@@ -4587,7 +4619,7 @@ u {
     line-height: 1em;
   }
   .footer #accordion .panel .panel-heading .panel-title {
-    font-family: "Champion Welterwt A", "Champion Welterwt B", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
+    font-family: "Champion Welterweight", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
     padding-top: 0;
     padding-bottom: 5px;
     font-size: 1em;
