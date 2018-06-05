@@ -9,7 +9,7 @@ If you wish to contribute to development, please [open an issue](https://github.
 
 Feel free to fork this repository and make any changes. Once you have completed your changes, make a pull request so that we can consider merging them.
 
-**Please keep in mind that PMM is under no obligation to accept pull requests.** 
+**Please keep in mind that PMM is under no obligation to accept pull requests.**
 
 ## Getting Started
 ### Download
@@ -37,3 +37,28 @@ This project was setup to use [Gulp.js](http://gulpjs.com/), which runs on [Node
 
 ##Development
 *The following instructions only apply to those using Gulp.js for workflow management.*
+
+### Commands
+
+```
+gulp
+```
+or
+```
+npm run builds:dev
+```
+build html and **expanded** css to `/builds/development/*`, start live reload, and watch for changes
+
+```
+NODE_ENV=production gulp
+```
+or
+```
+npm run builds:prod
+```
+build html and **compressed** css to `/builds/production/*`, start live reload, and watch for changes
+
+```
+npm run builds
+```
+build both dev and production with the above outcomes

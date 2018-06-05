@@ -4,7 +4,10 @@
     "description": "The Purdue University templates created in 2015 by Purdue Marketing and Media.",
     "main": "gulpfile.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build:dev": "gulp",
+        "build:prod": "cross-env NODE_ENV=production gulp",
+        "build": "npm run build:dev && npm run build:prod"
     },
     "repository": {
         "type": "git",
@@ -19,6 +22,7 @@
     "devDependencies": {
         "async": "^2.1.5",
         "autoprefixer": "^8.0.0",
+        "crossenv": "0.0.2-security",
         "gulp": "^3.9.1",
         "gulp-connect": "^5.0.0",
         "gulp-file-include": "^1.0.0",
