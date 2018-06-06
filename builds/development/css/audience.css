@@ -3508,6 +3508,7 @@ u {
     margin: 10px 0 0;
     padding: 0;
     white-space: normal;
+    padding-left: 15px;
   }
   .blackbar .navbar-nav li .dropdown-menu li.dropdown-submenu .dropdown-menu {
     margin-top: 0;
@@ -4469,10 +4470,6 @@ u {
 
 .storyContainer .story .contentContainer .content {
   line-height: 1.5em;
-}
-
-.storyContainer .story .contentContainer .content p {
-  padding-bottom: 20px;
 }
 
 @media (min-width: 768px) {

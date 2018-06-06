@@ -3508,6 +3508,7 @@ u {
     margin: 10px 0 0;
     padding: 0;
     white-space: normal;
+    padding-left: 15px;
   }
   .blackbar .navbar-nav li .dropdown-menu li.dropdown-submenu .dropdown-menu {
     margin-top: 0;
@@ -4886,7 +4887,7 @@ blockquote:before, .quote:before {
 
 .captionStyle, .imageContainer.useCaption .caption, .videoContainer .caption {
   display: block;
-  padding: 0 10px;
+  padding: 10px 0;
   color: #595959;
   font-size: 0.875em;
   font-style: italic;
