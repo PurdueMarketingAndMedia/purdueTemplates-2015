@@ -455,43 +455,6 @@ $xsSmBannerHeight:350;
 		}
 		.contentRow{
 			padding:15px 0 30px;
-			.featureButtons{
-				a{
-					display:block;
-					width:100%;
-					margin-top:20px;
-					padding:15px;
-					text-align:center;
-					line-height:1em;
-				}
-				a:first-child{
-					margin-top:0;
-				}
-				a:link{
-					background-color:#eee;
-					color:#656565;
-					font-weight:400;
-					text-decoration:none;
-				}
-				a:visited{
-					background-color:#eee;
-					color:#656565;
-					font-weight:400;
-					text-decoration:none;
-				}
-				a:hover{
-					background-color:#555;
-					color:#fff;
-					font-weight:400;
-					text-decoration:none;
-				}
-				a:active{
-					background-color:#555;
-					color:#fff;
-					font-weight:400;
-					text-decoration:none;
-				}
-			}
 			.mainContent{
 				>h1:first-child,>h2:first-child,>h3:first-child,>h4:first-child,>h5:first-child,>h6:first-child,>p:first-child{
 					margin-top:0;
@@ -507,4 +470,7 @@ $xsSmBannerHeight:350;
 			}
 		}
 	}
+}
+.featureButtons{
+	margin-top:-15px;
 }

@@ -555,9 +555,6 @@
 			}
 			.content{
 				line-height:1.5em;
-				p{
-					padding-bottom:20px;
-				}
 			}
 		}
 	}
@@ -703,45 +700,9 @@
 			}
 		}
 		.eventsButtonContainer,.newsButtonContainer{
+			overflow:hidden;
 			clear:both;
 			text-align:center;
-			a{
-				display:inline-block;
-				padding:12px 20px;
-				border-radius:3px;
-				font-family:$font-archivo-narrow;
-				font-size:18/16 * 1em;
-			}
-			a:link{
-				background-color:$color-campusGold;
-				color:#000;
-				text-decoration:none;
-			}
-			a:visited{
-				background-color:$color-campusGold;
-				color:#000;
-				text-decoration:none;
-			}
-			a:hover{
-				background-color:#000;
-				color:$color-campusGold;
-				text-decoration:none;
-			}
-			a:active{
-				background-color:$color-campusGold;
-				color:#000;
-				text-decoration:none;
-			}
-			@media (min-width:992px){
-				a{
-					margin:30px auto 0;
-				}
-			}
-			@media (max-width:991px){
-				a{
-					margin:0 auto;
-				}
-			}
 		}
 	}
 }
@@ -853,34 +814,6 @@
 		.followButtonContainer{
 			clear:both;
 			text-align:center;
-			a{
-				display:inline-block;
-				margin:0 auto;
-				padding:12px 20px;
-				border-radius:3px;
-				font-family:$font-archivo-narrow;
-				font-size:18/16 * 1em;
-			}
-			a:link{
-				background-color:$color-campusGold;
-				color:#000;
-				text-decoration:none;
-			}
-			a:visited{
-				background-color:$color-campusGold;
-				color:#000;
-				text-decoration:none;
-			}
-			a:hover{
-				background-color:#000;
-				color:$color-campusGold;
-				text-decoration:none;
-			}
-			a:active{
-				background-color:$color-campusGold;
-				color:#000;
-				text-decoration:none;
-			}
 		}
 	}
 }
@@ -924,42 +857,14 @@
 				}
 			}
 		}
-		a.followButton{
-			display:inline-block;
-			border-radius:3px;
-			padding:10px 14px;
-			font-family:$font-archivo-narrow;
-			text-transform:uppercase;
-		}
-		@media (min-width:768px){
-			a.followButton{
-				float:right;
-			}
+		.instagram-button{
+			float:right;
+			margin-top:0;
 		}
 		@media (max-width:767px){
-			a.followButton{
+			.instagram-button{
 				float:none;
 			}
-		}
-		a.followButton:link{
-			background-color:$color-campusGold;
-			color:#000;
-			text-decoration:none;
-		}
-		a.followButton:visited{
-			background-color:$color-campusGold;
-			color:#000;
-			text-decoration:none;
-		}
-		a.followButton:hover{
-			background-color:#000;
-			color:$color-campusGold;
-			text-decoration:none;
-		}
-		a.followButton:active{
-			background-color:$color-campusGold;
-			color:#000;
-			text-decoration:none;
 		}
 		.photos{
 			margin:0 -7.5px;

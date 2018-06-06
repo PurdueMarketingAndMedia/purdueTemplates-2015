@@ -1,0 +1,58 @@
+.content .container .row .maincontent{ //we'll remove this once we properly start BEMing
+	.list{
+		@include list-ordered(1);
+		@include list-ordered-decimal;
+		> li{
+			@include list__item-ordered;
+			@include list__item-decimal(1);
+			ol{
+				@include list-ordered-alpha-lower;
+				@include list-ordered(2);
+				> li{
+					@include list__item-alpha-lower(2);
+					ol{
+						@include list-ordered-roman-lower;
+						@include list-ordered(3);
+						> li{
+							@include list__item-roman-lower(3);
+						}
+					}
+				}
+			}
+		}
+		&-romanUpper{
+			@include list-ordered-roman-upper;
+			> li {
+				@include list__item-roman-upper(1);
+			}
+			ol{
+				@include list-ordered(2);
+				@include list-ordered-alpha-upper;
+				> li{
+					@include list__item-alpha-upper(2);
+				}
+				ol{
+					@include list-ordered(3);
+					@include list-ordered-decimal;
+					> li{
+						@include list__item-decimal(3);
+					}
+					ol{
+						@include list-ordered(4);
+						@include list-ordered-alpha-lower;
+						> li{
+							@include list__item-alpha-lower(4);
+						}
+						ol{
+							@include list-ordered(5);
+							@include list-ordered-roman-lower;
+							> li{
+								@include list__item-roman-lower(5);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

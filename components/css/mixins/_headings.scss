@@ -1,0 +1,56 @@
+@mixin h1 {
+	margin: 0 0 1rem;
+	line-height: 1.2;
+	text-transform: uppercase;
+	margin-top: 0;
+	font-family: $font-champion-welter;
+	color: $color-headlineGold;
+	font-size: calc-toEm(36);
+	font-weight: 400;
+}
+
+@mixin h2 {
+	font-family: $font-archivo-narrow;
+	margin: 2rem 0 0.75rem;
+	line-height: 1.2;
+	color: $color-headlineGold;
+	font-size: calc-toEm(32);
+	font-weight: 400;
+}
+
+@mixin h3 {
+	font-family: $font-archivo-narrow;
+	margin: 1.75rem 0 0.7rem;
+	line-height: 1.2;
+	font-weight: 700;
+	color: $color-gray70;
+	font-size: calc-toEm(28);
+}
+
+@mixin h4 {
+	font-family: $font-archivo-narrow;
+	margin: 1.5rem 0 0.65rem;
+	line-height: 1.2;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: $color-headlineGold;
+	font-size: calc-toEm(24);
+}
+
+@mixin h5 {
+	font-family: $font-archivo-narrow;
+	margin: 1.5rem 0 0.6rem;
+	line-height: 1.2;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: calc-toEm(22);
+}
+
+@mixin h6 {
+	font-family: $font-archivo-narrow;
+	margin: 1.5rem 0 0.5rem;
+	line-height: 1.2;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: calc-toEm(18);
+}
