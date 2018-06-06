@@ -1,573 +1,606 @@
 <!DOCTYPE html>
 <html lang="en">
+    
+    <head>
+        <!-- general meta data Here -->
+        <title>Department/Office Home Page Template - Purdue University</title>
+        <meta
+        content="This is an example of v1.5 of the department/office home page template."
+        name="description" />
+        <meta content="Place your office here." name="author" />
+        <meta charset="utf-8" />
+        <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+        <meta content="width=device-width, user-scalable=no" name="viewport" />
+        <link href="https://www.purdue.edu/purdue/images/favicon.ico" rel="shortcut icon"
+        />
+        <!-- Font Awesome -->
+        <script src="https://use.fontawesome.com/0c5298d156.js"></script>
+        <link rel="stylesheet" text="text/css" href="../css/deptOffice/deptOffice-1.5.1.css"
+        />
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700"
+        rel="stylesheet" />
+        <noscript>
+            <link rel="stylesheet" href="https://use.fontawesome.com/c2da24ec3a.css">
+        </noscript>
+        <!-- JS needed for bootstrap -->
+        <script src="https://www.purdue.edu/purdue/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+        <script src="https://www.purdue.edu/purdue/js/bootstrap.min.js"
+        type="text/javascript"></script>
+    </head>
+    
+    <body>
+        <div class="container">	<a class="nav nav-skipto" href="#main">Skip to main content</a>
 
-<head>
-    <!-- general meta data Here -->
-    <title>Department/Office Home Page Template - Purdue University</title>
-    <meta content="This is an example of v1.5 of the department/office home page template." name="description" />
-    <meta content="Place your office here." name="author" />
-    <meta charset="utf-8" />
-    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-    <meta content="width=device-width, user-scalable=no" name="viewport" />
-    <link href="https://www.purdue.edu/purdue/images/favicon.ico" rel="shortcut icon" />
-    <!-- Font Awesome -->
-    <script src="https://use.fontawesome.com/0c5298d156.js"></script>
-
-    <link rel="stylesheet" text="text/css" href="../css/deptOffice/deptOffice-1.5.1.css" />
-
-
-    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700" rel="stylesheet" />
-
-    <noscript>
-        <link rel="stylesheet" href="https://use.fontawesome.com/c2da24ec3a.css">
-    </noscript>
-
-
-    <!-- JS needed for bootstrap -->
-    <script src="https://www.purdue.edu/purdue/js/jquery-1.10.2.min.js" type="text/javascript"></script>
-    <script src="https://www.purdue.edu/purdue/js/bootstrap.min.js" type="text/javascript"></script>
-</head>
-
-<body>
-    <div class="container">
-        <a class="nav nav-skipto" href="#main">Skip to main content</a>
-    </div>
-    <div class="navbar goldbar" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="left navbar-toggle" data-target=".gold" data-toggle="collapse" type="button">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    Quick Links
-                </button>
-                <!--<p class="quickLinkLabel">Quick Links</p>-->
-                <button class="navbar-toggle search" data-target="#search" data-toggle="collapse" style="float:right;" type="button">
-                    <i class="fa fa-search fa-lg"></i>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse right search" id="search">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-search fa-lg"></i></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <div class="form-group">
-                                    <script>
-                                        (function() {
-                    			                        var cx = '017690826183710227054:mjxnqnpskjk';
-                    			                        var gcse = document.createElement('script');
-                    			                        gcse.type = 'text/javascript';
-                    			                        gcse.async = true;
-                    			                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                    			                        var s = document.getElementsByTagName('script')[0];
-                    			                        s.parentNode.insertBefore(gcse, s);
-                    			                      })();
-                                    </script>
-                                    <gcse:searchbox-only id="cse-search-form" resultsUrl="https://www.purdue.edu/purdue/search.html" queryParameterName="q">Loading</gcse:searchbox-only>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="collapse navbar-collapse gold">
-                <ul class="nav navbar-nav information">
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Find Info For <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <p class="hide">Find Info For</p>
-                            <li><a href="https://www.purdue.edu/purdue/current_students/index.html">Current Students</a>
-                            </li>
-                            <li><a href="https://www.purdue.edu/purdue/prospective_students/index.html">Prospective Students</a>
-                            </li>
-                            <li><a href="https://www.purdue.edu/purdue/alumni/index.html">Alumni and Friends</a>
-                            </li>
-                            <li><a href="https://www.purdue.edu/purdue/engage/index.html">Engage with Purdue</a>
-                            </li>
-                            <li><a href="https://www.purdue.edu/purdue/careers/index.html">Careers</a>
-                            </li>
-                            <li><a href="https://www.purdue.edu/purdue/commercialization/index.html">Entrepreneurship and Commercialization</a>
-                            </li>
-                            <li><a href="https://www.purdue.edu/purdue/research/index.html">Research and Innovation</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav right quicklinks">
-                    <p class="hide">Quick Links</p>
-                    <li><a href="https://www.purdue.edu/purdue/admissions/index.html">Apply</a>
-                    </li>
-                    <li><a href="https://www.purdue.edu/newsroom/">News</a>
-                    </li>
-                    <li><a href="https://www.purdue.edu/president/">President</a>
-                    </li>
-                    <li><a href="https://www.purdueofficialstore.com/">Shop</a>
-                    </li>
-                    <li><a href="https://www.purdue.edu/visit/">Visit</a>
-                    </li>
-                    <li><a href="https://securelb.imodules.com/s/1461/research/hybrid/index.aspx?sid=1461&amp;gid=1010&amp;pgid=1754&amp;cid=4045">Give</a>
-                    </li>
-                    <li><a href="https://www.purdue.edu/ea">Emergency</a>
-                    </li>
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
         </div>
-    </div>
+        <div class="navbar goldbar" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="left navbar-toggle" data-target=".gold" data-toggle="collapse"
+                    type="button">	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+Quick
+                        Links</button>
+                    <!--<p class="quickLinkLabel">Quick Links</p>-->
+                    <button class="navbar-toggle search" data-target="#search" data-toggle="collapse"
+                    style="float:right;" type="button">	<i class="fa fa-search fa-lg"></i>
 
-    <div class="top">
-        <div class="container">
-            <div class="row row-eq-height">
-                <div class="logo col-lg-2 col-md-3 col-sm-3 col-xs-12">
-                    <a class="svgLinkContainer" href="https://www.purdue.edu">
-                        <object class="svgContainer" type="image/svg+xml" data="https://www.purdue.edu/purdue/images/logo.svg" tabindex="-1">
-                            <img alt="Purdue University" src="https://www.purdue.edu/purdue/images/logo.png" />
-                        </object>
-                    </a>
+                    </button>
                 </div>
-                <div class="department col-lg-10 col-md-9 col-sm-9 col-xs-12">
-                    <a href="index.html">Organization Name Here</a>
-                    <span class="tagline"><a href="#">Secondary Name College, School or Unit</a></span>
+                <div class="collapse navbar-collapse right search" id="search">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">	<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-search fa-lg"></i></a>
+
+                            <ul
+                            class="dropdown-menu">
+                                <li>
+                                    <div class="form-group">
+                                        <script>
+                                            (function() {
+                        			                        var cx = '017690826183710227054:mjxnqnpskjk';
+                        			                        var gcse = document.createElement('script');
+                        			                        gcse.type = 'text/javascript';
+                        			                        gcse.async = true;
+                        			                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                        			                        var s = document.getElementsByTagName('script')[0];
+                        			                        s.parentNode.insertBefore(gcse, s);
+                        			                      })();
+                                        </script>
+                                        <gcse:searchbox-only id="cse-search-form" resultsUrl="https://www.purdue.edu/purdue/search.html"
+                                        queryParameterName="q">Loading</gcse:searchbox-only>
+                                    </div>
+                                </li>
+                    </ul>
+                    </li>
+                    </ul>
                 </div>
+                <div class="collapse navbar-collapse gold">
+                    <ul class="nav navbar-nav information">
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Find Info For <b class="caret"></b></a>
+
+                            <ul
+                            class="dropdown-menu">
+                                <p class="hide">Find Info For</p>
+                                <li><a href="https://www.purdue.edu/purdue/current_students/index.html">Current Students</a>
+                                </li>
+                                <li><a href="https://www.purdue.edu/purdue/prospective_students/index.html">Prospective Students</a>
+                                </li>
+                                <li><a href="https://www.purdue.edu/purdue/alumni/index.html">Alumni and Friends</a>
+                                </li>
+                                <li><a href="https://www.purdue.edu/purdue/engage/index.html">Engage with Purdue</a>
+                                </li>
+                                <li><a href="https://www.purdue.edu/purdue/careers/index.html">Careers</a>
+                                </li>
+                                <li><a href="https://www.purdue.edu/purdue/commercialization/index.html">Entrepreneurship and Commercialization</a>
+                                </li>
+                                <li><a href="https://www.purdue.edu/purdue/research/index.html">Research and Innovation</a>
+                                </li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <ul class="nav navbar-nav right quicklinks">
+                        <p class="hide">Quick Links</p>
+                        <li><a href="https://www.purdue.edu/purdue/admissions/index.html">Apply</a>
+                        </li>
+                        <li><a href="https://www.purdue.edu/newsroom/">News</a>
+                        </li>
+                        <li><a href="https://www.purdue.edu/president/">President</a>
+                        </li>
+                        <li><a href="https://www.purdueofficialstore.com/">Shop</a>
+                        </li>
+                        <li><a href="https://www.purdue.edu/visit/">Visit</a>
+                        </li>
+                        <li><a href="https://securelb.imodules.com/s/1461/research/hybrid/index.aspx?sid=1461&amp;gid=1010&amp;pgid=1754&amp;cid=4045">Give</a>
+                        </li>
+                        <li><a href="https://www.purdue.edu/ea">Emergency</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
             </div>
         </div>
-    </div>
+        <div class="top">
+            <div class="container">
+                <div class="row row-eq-height">
+                    <div class="logo col-lg-2 col-md-3 col-sm-3 col-xs-12">	<a class="svgLinkContainer" href="https://www.purdue.edu">
+					<object class="svgContainer" type="image/svg+xml" data="https://www.purdue.edu/purdue/images/logo.svg" tabindex="-1">
+					<img alt="Purdue University" src="https://www.purdue.edu/purdue/images/logo.png"/>
+					</object>
+				</a>
 
-    <div class="navbar navbar-inverse blackbar" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle" data-target=".black" data-toggle="collapse" type="button">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    Menu
-                </button>
+                    </div>
+                    <div class="department col-lg-10 col-md-9 col-sm-9 col-xs-12">	<a href="index.html">Organization Name Here</a>
+	<span class="tagline"><a href="#">Secondary Name College, School or Unit</a></span>
+
+                    </div>
+                </div>
             </div>
-            <div class="collapse navbar-collapse black">
-                <ul class="nav navbar-nav">
-                    <li class="first"><a href="#">Home</a>
+        </div>
+        <div class="navbar navbar-inverse blackbar" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-target=".black" data-toggle="collapse"
+                    type="button">	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+Menu</button>
+                </div>
+                <div class="collapse navbar-collapse black">
+                    <ul class="nav navbar-nav">
+                        <li class="first"><a href="#">Home</a>
+                        </li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/templates/homepages/department1.html">College<span class="caret"></span></a>
+
+                            <ul
+                            class="dropdown-menu">
+                                <li><a href="/templates/college.html">Mixed Tiles Example</a>
+                                </li>
+                                <li class="dropdown-submenu">	<a class="dropdown-toggle" data-toggle="dropdown" href="/templates/college-audience-1.html">Audience Tiles<span class="caret"></span></a>
+
+                                    <ul
+                                    class="dropdown-menu">
+                                        <li><a href="/templates/college-audience-1.html">Audience Tiles Example 1</a>
+                                        </li>
+                                        <li><a href="/templates/college-audience-2.html">Audience Tiles Example 2</a>
+                                        </li>
+                    </ul>
                     </li>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/templates/homepages/department1.html">College<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/templates/college.html">Mixed Tiles Example</a>
+                    <li class="dropdown-submenu">	<a class="dropdown-toggle" data-toggle="dropdown" href="/templates/college-news-1.html">News Tiles<span class="caret"></span></a>
+
+                        <ul
+                        class="dropdown-menu">
+                            <li><a href="/templates/college-news-1.html">News Tiles Example 1</a>
                             </li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="/templates/college-audience-1.html">Audience Tiles<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="/templates/college-audience-1.html">Audience Tiles Example 1</a>
-                                    </li>
-                                    <li><a href="/templates/college-audience-2.html">Audience Tiles Example 2</a>
-                                    </li>
-                                </ul>
+                            <li><a href="/templates/college-news-2.html">News Tiles Example 2</a>
                             </li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="/templates/college-news-1.html">News Tiles<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="/templates/college-news-1.html">News Tiles Example 1</a>
-                                    </li>
-                                    <li><a href="/templates/college-news-2.html">News Tiles Example 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+                            </ul>
+                    </li>
+                    </ul>
                     </li>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/templates/homepages/department1.html">Department/Office<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
+
+                        <ul
+                        class="dropdown-menu">
                             <li><a href="/templates/deptOffice-tiles.html">Tiles</a>
                             </li>
                             <li><a href="/templates/deptOffice-tabs.html">Tabs</a>
                             </li>
-                        </ul>
+                            </ul>
                     </li>
-                    <<<<<<< HEAD <li class="dropdown"><a href="audience.html">Audience</a>
-                        </li>
-                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="../content/content1.html">Content<span class="caret"></span></a>
-                            =======
-                            <li class="dropdown current"><a href="/templates/audience.html">Audience</a>
+                    <li class="dropdown current"><a href="/templates/audience.html">Audience</a>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/templates/content/content1.html">Content<span class="caret"></span></a>
+
+                        <ul
+                        class="dropdown-menu">
+                            <li><a href="/templates/content-1.html">Content Example 1</a>
                             </li>
-                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/templates/content/content1.html">Content<span class="caret"></span></a>
-                                >>>>>>> release/1.6.0
-                                <ul class="dropdown-menu">
-                                    <li><a href="/templates/content-1.html">Content Example 1</a>
+                            <li><a href="/templates/content-2.html">Content Example 2</a>
+                            </li>
+                            <li class="dropdown-submenu">	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Submenu Example<span class="caret"></span></a>
+
+                                <ul
+                                class="dropdown-menu">
+                                    <li><a href="#">Place Holder Link 1</a>
                                     </li>
-                                    <li><a href="/templates/content-2.html">Content Example 2</a>
+                                    <li><a href="#">Place Holder Link 2</a>
                                     </li>
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Submenu Example<span class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">Place Holder Link 1</a>
-                                            </li>
-                                            <li><a href="#">Place Holder Link 2</a>
-                                            </li>
-                                            <li><a href="#">Place Holder Link 3</a>
-                                            </li>
-                                            <li><a href="#">Place Holder Link 4</a>
-                                            </li>
-                                        </ul>
+                                    <li><a href="#">Place Holder Link 3</a>
                                     </li>
-                                    <li class="dropdown-submenu">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Submenu Example 2<span class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">Place Holder Link 1</a>
-                                            </li>
-                                            <li><a href="#">Place Holder Link 2</a>
-                                            </li>
-                                            <li><a href="#">Place Holder Link 3</a>
-                                            </li>
-                                            <li><a href="#">Place Holder Link 4</a>
-                                            </li>
-                                        </ul>
+                                    <li><a href="#">Place Holder Link 4</a>
+                                    </li>
+                                    </ul>
+                            </li>
+                            <li class="dropdown-submenu">	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Submenu Example 2<span class="caret"></span></a>
+
+                                <ul
+                                class="dropdown-menu">
+                                    <li><a href="#">Place Holder Link 1</a>
+                                    </li>
+                                    <li><a href="#">Place Holder Link 2</a>
+                                    </li>
+                                    <li><a href="#">Place Holder Link 3</a>
+                                    </li>
+                                    <li><a href="#">Place Holder Link 4</a>
+                                    </li>
+                                    </ul>
+                            </li>
+                            </ul>
+                    </li>
+                    <li class="dropdown"><a href="blank.html">Blank</a>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Patterns<span class="caret"></span></a>
+
+                        <ul
+                        class="dropdown-menu">
+                            <li><a href="/templates/patterns/accordion.html">Accordion</a>
+                            </li>
+                            <li><a href="/templates/patterns/button.html">Button</a>
+                            </li>
+                            <li><a href="/templates/patterns/typography.html">Typography</a>
+                            </li>
+                            </ul>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <main id="main" class="content deptOfficeContent">
+            <div class="container">
+                <div class="row bannerRow">
+                    <div class="bannerContainer col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                        <style type="text/css">
+                            .banner{
+                            		    background-image: url("https://www.purdue.edu/pmm-templates/2015/Template-DepartmentOffice/images/deptOffice-banner.jpg");
+                            		}
+                        </style>
+                        <div class="banner">
+                            <div class="caption">
+                                	<h2 class="header">Header</h2>
+
+                                <p class="subheader">Sub header text goes here. Blah blah blah look at all this text that I'm
+                                    typing all for the sake of making a silly little test.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabsContainer col-lg-4 col-md-4 col-sm-5 col-xs-12">
+                        <ul class="nav nav-tabs">
+                            <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><a data-toggle="tab" href="#events">Events</a>
+                            </li>
+                            <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><a data-toggle="tab" href="#news">News</a>
+                            </li>
+                            <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4 active"><a data-toggle="tab" href="#contactHours">Contact</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade" id="events"></div>
+                            <div class="tab-pane fade" id="news">
+                                <script charset="UTF-8" language="JavaScript" src="https://www.purdue.edu/newsroom/php/feed2js-hp-news/feed2js.php?src=https://www.purdue.edu/newsroom/rss/DiversityNews.xml&amp;num=5&amp;targ=y&amp;utf=y"
+                                type="text/javascript"></script>
+                            </div>
+                            <div class="tab-pane fade active in" id="contactHours">
+                                	<h3>Contact Information</h3>
+
+                                <div class="details">
+                                    <p>Purdue University, Black Cultural Center
+                                        <br>1100 Third Street
+                                        <br>West Lafayette, IN 47907
+                                        <br>765-494-3092
+                                        <br><a href="mailto:rathomas@purdue.edu">rathomas@purdue.edu</a>
+                                    </p>
+                                </div>
+                                	<h3>Summer Hours</h3>
+
+                                <div class="details">
+                                    <div class="noGutter col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <p><strong>Mon. - Thurs.</strong>
+                                            <br>8 am - 4 pm</p>
+                                    </div>
+                                    <div class="noGutter col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <p><strong>Fri.</strong>
+                                            <br>8 am - 4 pm</p>
+                                    </div>
+                                    <p><strong>Closed weekends</strong>
+                                    </p>
+                                    <p><em>*Library hours vary slightly</em>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row contentRow">
+                    <div class="mainContent col-lg-9 col-md-9 col-sm-9 col-xs-12 right">
+                        	<h1>Header 1</h1>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum
+                            arcu tincidunt aliquam auctor. In suscipit, mauris eu venenatis facilisis,
+                            arcu eros ornare dui, eu elementum magna lorem sagittis nisi. Etiam molestie,
+                            mi vel porta mattis, urna ipsum facilisis sapien, id pellentesque sapien
+                            sapien id metus.</p>
+                    </div>
+                    <div class="featureButtons col-lg-3 col-md-3 col-sm-3 col-xs-12">	<a href="#" class="button button-gray15 button-wide">Button</a>
+	<a href="#"
+                        class="button button-gray15 button-wide">Button Here</a>
+	<a href="#" class="button button-gray15 button-wide">Button Stuff</a>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="footer">
+            <div class="container">
+                <div class="row panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                             <h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footerone">Information <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
+
+                        </div>
+                        <div class="panel-collapse collapse" id="footerone">
+                            <div class="panel-body">
+                                <ul>
+                                    <li><a href="https://one.purdue.edu/">OneCampus Portal</a>
+                                    </li>
+                                    <li><a href="http://www.itap.purdue.edu/learning/tools/blackboard/">Blackboard</a>
+                                    </li>
+                                    <li><a href="https://www.itap.purdue.edu/directory/">Directory</a>
+                                    </li>
+                                    <li><a href="http://portal.office.com/">Office 365</a>
+                                    </li>
+                                    <li><a href="https://exchange.purdue.edu">Outlook</a>
+                                    </li>
+                                    <li><a href="https://wl.mypurdue.purdue.edu">myPurdue</a>
                                     </li>
                                 </ul>
-                            </li>
-                            <<<<<<< HEAD <li class="dropdown"><a href="blank.html">Blank</a>
-                        </li>
-                        =======
-                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Patterns<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/templates/patterns/accordion.html">Accordion</a>
-                                </li>
-                                <li><a href="/templates/patterns/button.html">Button</a>
-                                </li>
-                                <li><a href="/templates/patterns/typography.html">Typography</a>
-                                </li>
-                            </ul>
-                        </li>
-                        >>>>>>> release/1.6.0
-                </ul>
-            </div>
-        </div>
-    </div>
-    <main id="main" class="content deptOfficeContent">
-        <div class="container">
-            <div class="row bannerRow">
-                <div class="bannerContainer col-lg-8 col-md-8 col-sm-7 col-xs-12">
-                    <style type="text/css">
-                        .banner{
-                        		    background-image: url("https://www.purdue.edu/pmm-templates/2015/Template-DepartmentOffice/images/deptOffice-banner.jpg");
-                        		}
-                    </style>
-                    <div class="banner">
-                        <div class="caption">
-                            <h2 class="header">Header</h2>
-                            <p class="subheader">Sub header text goes here. Blah blah blah look at all this text that I'm typing all for the sake of making a silly little test.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="tabsContainer col-lg-4 col-md-4 col-sm-5 col-xs-12">
-                    <ul class="nav nav-tabs">
-                        <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><a data-toggle="tab" href="#events">Events</a>
-                        </li>
-                        <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><a data-toggle="tab" href="#news">News</a>
-                        </li>
-                        <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4 active"><a data-toggle="tab" href="#contactHours">Contact</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane fade" id="events">
-
-                        </div>
-                        <div class="tab-pane fade" id="news">
-                            <script charset="UTF-8" language="JavaScript" src="https://www.purdue.edu/newsroom/php/feed2js-hp-news/feed2js.php?src=https://www.purdue.edu/newsroom/rss/DiversityNews.xml&amp;num=5&amp;targ=y&amp;utf=y" type="text/javascript"></script>
-                        </div>
-                        <div class="tab-pane fade active in" id="contactHours">
-                            <h3>Contact Information</h3>
-                            <div class="details">
-                                <p>Purdue University, Black Cultural Center
-                                    <br>1100 Third Street
-                                    <br>West Lafayette, IN 47907
-                                    <br>765-494-3092
-                                    <br><a href="mailto:rathomas@purdue.edu">rathomas@purdue.edu</a>
-                                </p>
-                            </div>
-                            <h3>Summer Hours</h3>
-                            <div class="details">
-                                <div class="noGutter col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <p><strong>Mon. - Thurs.</strong>
-                                        <br>8 am - 4 pm</p>
-                                </div>
-                                <div class="noGutter col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <p><strong>Fri.</strong>
-                                        <br>8 am - 4 pm</p>
-                                </div>
-                                <p><strong>Closed weekends</strong>
-                                </p>
-                                <p><em>*Library hours vary slightly</em>
-                                </p>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                             <h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footertwo">Campus <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
 
-            </div>
-            <div class="row contentRow">
-                <div class="mainContent col-lg-9 col-md-9 col-sm-9 col-xs-12 right">
-                    <h1>Header 1</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum arcu tincidunt aliquam auctor. In suscipit, mauris eu venenatis facilisis, arcu eros ornare dui, eu elementum magna lorem sagittis nisi. Etiam molestie, mi vel
-                        porta mattis, urna ipsum facilisis sapien, id pellentesque sapien sapien id metus.</p>
-                </div>
-                <div class="featureButtons col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                    <a href="#" class="button button-gray15 button-wide">Button</a>
-                    <a href="#" class="button button-gray15 button-wide">Button Here</a>
-                    <a href="#" class="button button-gray15 button-wide">Button Stuff</a>
-                </div>
-            </div>
-        </div>
-    </main>
-    <div class="footer">
-        <div class="container">
-            <div class="row panel-group" id="accordion">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footerone">Information <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
-                    </div>
-                    <div class="panel-collapse collapse" id="footerone">
-                        <div class="panel-body">
-                            <ul>
-                                <li><a href="https://one.purdue.edu/">OneCampus Portal</a>
-                                </li>
-                                <li><a href="http://www.itap.purdue.edu/learning/tools/blackboard/">Blackboard</a>
-                                </li>
-                                <li><a href="https://www.itap.purdue.edu/directory/">Directory</a>
-                                </li>
-                                <li><a href="http://portal.office.com/">Office 365</a>
-                                </li>
-                                <li><a href="https://exchange.purdue.edu">Outlook</a>
-                                </li>
-                                <li><a href="https://wl.mypurdue.purdue.edu">myPurdue</a>
-                                </li>
-                            </ul>
+                        </div>
+                        <div class="panel-collapse collapse" id="footertwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li><a href="http://www.purdue.edu/purdue/information_for/for_faculty_staff_re.html">Faculty and Staff</a>
+                                    </li>
+                                    <li><a href="https://www.purdue.edu/hr/">Human Resources</a>
+                                    </li>
+                                    <li><a href="http://www.purdue.edu/purdue/careers/index.php">Careers</a>
+                                    </li>
+                                    <li><a href="https://www.purdue.edu/purdue/about/colleges_schools.html">Colleges and Schools</a>
+                                    </li>
+                                    <li><a href="https://www.itap.purdue.edu/">Information Technology</a>
+                                    </li>
+                                    <li><a href="https://www.purdue.edu/campus_map/">Campus Map</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footertwo">Campus <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
-                    </div>
-                    <div class="panel-collapse collapse" id="footertwo">
-                        <div class="panel-body">
-                            <ul>
-                                <li><a href="http://www.purdue.edu/purdue/information_for/for_faculty_staff_re.html">Faculty and Staff</a>
-                                </li>
-                                <li><a href="https://www.purdue.edu/hr/">Human Resources</a>
-                                </li>
-                                <li><a href="http://www.purdue.edu/purdue/careers/index.php">Careers</a>
-                                </li>
-                                <li><a href="https://www.purdue.edu/purdue/about/colleges_schools.html">Colleges and Schools</a>
-                                </li>
-                                <li><a href="https://www.itap.purdue.edu/">Information Technology</a>
-                                </li>
-                                <li><a href="https://www.purdue.edu/campus_map/">Campus Map</a>
-                                </li>
-                            </ul>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                             <h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footerthree">Communication <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
+
+                        </div>
+                        <div class="panel-collapse collapse" id="footerthree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li><a href="http://www.purdue.edu/newsroom/purduetoday/">Purdue Today</a>
+                                    </li>
+                                    <li><a href="https://calendar.purdue.edu/">Calendar</a>
+                                    </li>
+                                    <li><a href="https://www.lib.purdue.edu/">Libraries</a>
+                                    </li>
+                                    <li><a href="https://www.purdue.edu/physicalfacilities/constructionmap/index.html">Construction</a>
+                                    </li>
+                                    <li><a href="https://www.purdue.edu/bursar/tuition/calculator/">Tuition Calculator</a>
+                                    </li>
+                                    <li><a href="http://www.purdue.edu/timely-warnings/">Timely Warnings</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footerthree">Communication <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
-                    </div>
-                    <div class="panel-collapse collapse" id="footerthree">
-                        <div class="panel-body">
-                            <ul>
-                                <li><a href="http://www.purdue.edu/newsroom/purduetoday/">Purdue Today</a>
-                                </li>
-                                <li><a href="https://calendar.purdue.edu/">Calendar</a>
-                                </li>
-                                <li><a href="https://www.lib.purdue.edu/">Libraries</a>
-                                </li>
-                                <li><a href="https://www.purdue.edu/physicalfacilities/constructionmap/index.html">Construction</a>
-                                </li>
-                                <li><a href="https://www.purdue.edu/bursar/tuition/calculator/">Tuition Calculator</a>
-                                </li>
-                                <li><a href="http://www.purdue.edu/timely-warnings/">Timely Warnings</a>
-                                </li>
-                            </ul>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                             <h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footerfour">People <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
+
+                        </div>
+                        <div class="panel-collapse collapse" id="footerfour">
+                            <div class="panel-body">
+                                <ul>
+                                    <li><a href="http://www.purdue.edu/hotline/">Speak Up</a>
+                                    </li>
+                                    <li><a href="http://www.purdue.edu/diversity-inclusion/">Diversity and Inclusion</a>
+                                    </li>
+                                    <li><a href="https://www.purdue.edu/ethics/">Ethics &amp; Compliance</a>
+                                    </li>
+                                    <li><a href="https://www.purdue.edu/boilerconnect/">BoilerConnect</a>
+                                    </li>
+                                    <li><a href="http://www.purdue.edu/ehps/">Annual Security Report</a>
+                                    </li>
+                                    <li><a href="https://www.purdue.edu/hr/CHL/index.html">Center for Healthy Living</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footerfour">People <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
-                    </div>
-                    <div class="panel-collapse collapse" id="footerfour">
-                        <div class="panel-body">
-                            <ul>
-                                <li><a href="http://www.purdue.edu/hotline/">Speak Up</a>
-                                </li>
-                                <li><a href="http://www.purdue.edu/diversity-inclusion/">Diversity and Inclusion</a>
-                                </li>
-                                <li><a href="https://www.purdue.edu/ethics/">Ethics &amp; Compliance</a>
-                                </li>
-                                <li><a href="https://www.purdue.edu/boilerconnect/">BoilerConnect</a>
-                                </li>
-                                <li><a href="http://www.purdue.edu/ehps/">Annual Security Report</a>
-                                </li>
-                                <li><a href="https://www.purdue.edu/hr/CHL/index.html">Center for Healthy Living</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="motto col-lg-4 col-md-4 col-sm-12">
-                    <div class="taglineContainer">
-                        <div class="tagline">
-                            <svg class="horizontal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 60">
-                                <defs>
-                                    <style>
-                                        .e5e7aadc-5f16-4a1f-9bee-7ac7cc0548a9 {
-                                            font-size: 34px;
-                                            fill: #c28e0e;
-                                            font-family: Champion-HTF-Heavyweight, Champion;
-                                          }
-                                    
-                                          .\35 e6c45fa-0108-43f7-b548-1e1a96814671 {
-                                            letter-spacing: -0.07202em;
-                                          }
-                                    
-                                          .\39 e71bbf6-0e21-4a7d-a0cc-e6ad30fa66f9 {
-                                            font-size: 25px;
-                                            fill: #fff;
-                                            font-family: Champion-HTF-Welterweight, Champion;
-                                          }
-                                    
-                                          .\31 8f2663d-8282-4464-b5ac-99e7316c5f65 {
-                                            letter-spacing: -0.03297em;
-                                          }
-                                    
-                                          .c6f163a6-5569-448b-add2-d65afd4a376a {
-                                            letter-spacing: 0.00002em;
-                                          }
-                                    
-                                          .c9ed177b-9c81-40c0-b065-b432c2c1a09b {
-                                            letter-spacing: -0.01609em;
-                                          }
-                                    
-                                          .ba048e35-0725-48ae-a9a0-57c5ffd9a8ab {
-                                            opacity: 0.5;
-                                            font-size: 4px;
-                                            fill: #aaa;
-                                            font-family: Arial-BoldMT, Arial;
-                                            font-weight: 700;
-                                          }
-                                    </style>
-                                </defs>
-                                <title>WE ARE PURDUE. WHAT WE MAKE MOVES THE WORLD FORWARD</title>
-                                <g id="8b8de98f-bf04-4a6f-909f-a428337b108f" data-name="Mobile - tagline">
-                                    <text class="e5e7aadc-5f16-4a1f-9bee-7ac7cc0548a9" transform="translate(41.31299 30.69971)">WE
-                                        <tspan class="5e6c45fa-0108-43f7-b548-1e1a96814671" x="71.33154" y="0"></tspan>
-                                        <tspan x="78.23242" y="0">ARE PURDUE</tspan>
-                                    </text>
-                                    <text class="9e71bbf6-0e21-4a7d-a0cc-e6ad30fa66f9" transform="translate(4.47949 56.49951)">WHAT WE MAKE MOVES THE WORLD FORWARD</text>
-                                    <text class="ba048e35-0725-48ae-a9a0-57c5ffd9a8ab" transform="translate(425.52637 57.36377)">®</text>
-                                    <image alt="We are Purdue. What we make moves the world forward." class="vertical" src="/purdue/images/templateElements/2015/footer-mottoHorizontal.png" xlink:href="">
-                                </g>
-                            </svg>
-                            <svg class="vertical" id="a0741d99-434b-4e0a-9090-214634df7ff7" data-name="Desktop - tagline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 202 70">
-                                <defs>
-                                    <style>
-                                        .\35 8893acf-2edf-4cb9-8a57-2685b8b94fb6 {
-                                            font-size: 27.5px;
-                                            fill: #c28e0e;
-                                            font-family: Champion-HTF-Welterweight, Champion;
-                                            letter-spacing: 0.00501em;
-                                          }
-                                    
-                                          .b151f682-5d4b-4328-a487-3fb104e72a97 {
-                                            font-size: 19.4px;
-                                            font-family: Champion-HTF-Heavyweight, Champion;
-                                            letter-spacing: 0.00501em;
-                                          }
-                                    
-                                          .b151f682-5d4b-4328-a487-3fb104e72a97, .e95930c7-e89b-470b-891b-ada43b0ad02d {
-                                            fill: #fff;
-                                          }
-                                    
-                                          .\34 58bc1a9-13f0-4bf2-848b-bf8e2c030393 {
-                                            letter-spacing: -0.10704em;
-                                          }
-                                    
-                                          .f039571e-80e4-4d20-ac8b-b9d62a790eac {
-                                            letter-spacing: -0.08288em;
-                                          }
-                                    
-                                          .b9c1f429-083d-4618-91db-d2af71cd5131 {
-                                            letter-spacing: -0.05507em;
-                                          }
-                                    
-                                          .e95930c7-e89b-470b-891b-ada43b0ad02d {
-                                            font-size: 20.4px;
-                                            font-family: Champion-HTF-Lightweight, Champion;
-                                            letter-spacing: 0.005em;
-                                          }
-                                    
-                                          .\30 310ebae-60bf-4d24-8ae7-a8b1d2269eff {
-                                            letter-spacing: -0.00594em;
-                                          }
-                                    
-                                          .a55d38de-e848-45d9-8256-f9300bd2fed9 {
-                                            letter-spacing: -0.03313em;
-                                          }
-                                    
-                                          .\34 a444501-02c1-4b63-bb55-9eb071761353 {
-                                            letter-spacing: 0.00498em;
-                                          }
-                                    
-                                          .acad75df-e36a-4ac1-81d1-8868c497200b {
-                                            opacity: 0.5;
-                                            font-size: 3px;
-                                            fill: #aaa;
-                                            font-family: Arial-BoldMT, Arial;
-                                            font-weight: 700;
-                                          }
-                                    </style>
-                                </defs>
-                                <title>WE ARE PURDUE. WHAT WE MAKE MOVES THE WORLD FORWARD</title>
-                                <text class="58893acf-2edf-4cb9-8a57-2685b8b94fb6" transform="translate(1.25 24.99951)">WE ARE PURDUE
-                                    <tspan class="b151f682-5d4b-4328-a487-3fb104e72a97">
-                                        <tspan x="0" y="21">WHAT WE MAKE</tspan>
-                                        <tspan class="e95930c7-e89b-470b-891b-ada43b0ad02d">
-                                            <tspan x="0" y="42.5">MOVES THE WORLD FORWARD</tspan>
+                    <div class="motto col-lg-4 col-md-4 col-sm-12">
+                        <div class="taglineContainer">
+                            <div class="tagline">
+                                <svg class="horizontal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 60">
+                                    <defs>
+                                        <style>
+                                            .e5e7aadc-5f16-4a1f-9bee-7ac7cc0548a9 {
+                                                font-size: 34px;
+                                                fill: #c28e0e;
+                                                font-family: Champion-HTF-Heavyweight, Champion;
+                                              }
+                                        
+                                              .\35 e6c45fa-0108-43f7-b548-1e1a96814671 {
+                                                letter-spacing: -0.07202em;
+                                              }
+                                        
+                                              .\39 e71bbf6-0e21-4a7d-a0cc-e6ad30fa66f9 {
+                                                font-size: 25px;
+                                                fill: #fff;
+                                                font-family: Champion-HTF-Welterweight, Champion;
+                                              }
+                                        
+                                              .\31 8f2663d-8282-4464-b5ac-99e7316c5f65 {
+                                                letter-spacing: -0.03297em;
+                                              }
+                                        
+                                              .c6f163a6-5569-448b-add2-d65afd4a376a {
+                                                letter-spacing: 0.00002em;
+                                              }
+                                        
+                                              .c9ed177b-9c81-40c0-b065-b432c2c1a09b {
+                                                letter-spacing: -0.01609em;
+                                              }
+                                        
+                                              .ba048e35-0725-48ae-a9a0-57c5ffd9a8ab {
+                                                opacity: 0.5;
+                                                font-size: 4px;
+                                                fill: #aaa;
+                                                font-family: Arial-BoldMT, Arial;
+                                                font-weight: 700;
+                                              }
+                                        </style>
+                                    </defs>
+                                    <title>WE ARE PURDUE. WHAT WE MAKE MOVES THE WORLD FORWARD</title>
+                                    <g id="8b8de98f-bf04-4a6f-909f-a428337b108f"
+                                    data-name="Mobile - tagline">
+                                        <text class="e5e7aadc-5f16-4a1f-9bee-7ac7cc0548a9" transform="translate(41.31299 30.69971)">WE
+                                            <tspan class="5e6c45fa-0108-43f7-b548-1e1a96814671" x="71.33154" y="0"></tspan>
+                                            <tspan x="78.23242" y="0">ARE PURDUE</tspan>
+                                        </text>
+                                        <text class="9e71bbf6-0e21-4a7d-a0cc-e6ad30fa66f9" transform="translate(4.47949 56.49951)">WHAT WE MAKE MOVES THE WORLD FORWARD</text>
+                                        <text class="ba048e35-0725-48ae-a9a0-57c5ffd9a8ab"
+                                        transform="translate(425.52637 57.36377)">®</text>
+                                        <image alt="We are Purdue. What we make moves the world forward."
+                                        class="vertical" src="/purdue/images/templateElements/2015/footer-mottoHorizontal.png"
+                                        xlink:href="">
+                                    </g>
+                                </svg>
+                                <svg class="vertical" id="a0741d99-434b-4e0a-9090-214634df7ff7" data-name="Desktop - tagline"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 202 70">
+                                    <defs>
+                                        <style>
+                                            .\35 8893acf-2edf-4cb9-8a57-2685b8b94fb6 {
+                                                font-size: 27.5px;
+                                                fill: #c28e0e;
+                                                font-family: Champion-HTF-Welterweight, Champion;
+                                                letter-spacing: 0.00501em;
+                                              }
+                                        
+                                              .b151f682-5d4b-4328-a487-3fb104e72a97 {
+                                                font-size: 19.4px;
+                                                font-family: Champion-HTF-Heavyweight, Champion;
+                                                letter-spacing: 0.00501em;
+                                              }
+                                        
+                                              .b151f682-5d4b-4328-a487-3fb104e72a97, .e95930c7-e89b-470b-891b-ada43b0ad02d {
+                                                fill: #fff;
+                                              }
+                                        
+                                              .\34 58bc1a9-13f0-4bf2-848b-bf8e2c030393 {
+                                                letter-spacing: -0.10704em;
+                                              }
+                                        
+                                              .f039571e-80e4-4d20-ac8b-b9d62a790eac {
+                                                letter-spacing: -0.08288em;
+                                              }
+                                        
+                                              .b9c1f429-083d-4618-91db-d2af71cd5131 {
+                                                letter-spacing: -0.05507em;
+                                              }
+                                        
+                                              .e95930c7-e89b-470b-891b-ada43b0ad02d {
+                                                font-size: 20.4px;
+                                                font-family: Champion-HTF-Lightweight, Champion;
+                                                letter-spacing: 0.005em;
+                                              }
+                                        
+                                              .\30 310ebae-60bf-4d24-8ae7-a8b1d2269eff {
+                                                letter-spacing: -0.00594em;
+                                              }
+                                        
+                                              .a55d38de-e848-45d9-8256-f9300bd2fed9 {
+                                                letter-spacing: -0.03313em;
+                                              }
+                                        
+                                              .\34 a444501-02c1-4b63-bb55-9eb071761353 {
+                                                letter-spacing: 0.00498em;
+                                              }
+                                        
+                                              .acad75df-e36a-4ac1-81d1-8868c497200b {
+                                                opacity: 0.5;
+                                                font-size: 3px;
+                                                fill: #aaa;
+                                                font-family: Arial-BoldMT, Arial;
+                                                font-weight: 700;
+                                              }
+                                        </style>
+                                    </defs>
+                                    <title>WE ARE PURDUE. WHAT WE MAKE MOVES THE WORLD FORWARD</title>
+                                    <text class="58893acf-2edf-4cb9-8a57-2685b8b94fb6"
+                                    transform="translate(1.25 24.99951)">WE ARE PURDUE
+                                        <tspan class="b151f682-5d4b-4328-a487-3fb104e72a97">
+                                            <tspan x="0" y="21">WHAT WE MAKE</tspan>
+                                            <tspan class="e95930c7-e89b-470b-891b-ada43b0ad02d">
+                                                <tspan x="0" y="42.5">MOVES THE WORLD FORWARD</tspan>
+                                            </tspan>
                                         </tspan>
-                                    </tspan>
-                                </text>
-                                <text class="acad75df-e36a-4ac1-81d1-8868c497200b" transform="translate(198.39453 67.14795)">®</text>
-                                <image alt="We are Purdue. What we make moves the world forward." class="vertical" src="/purdue/images/templateElements/2015/footer-mottoVertical.png" xlink:href="">
-                            </svg>
+                                    </text>
+                                    <text class="acad75df-e36a-4ac1-81d1-8868c497200b" transform="translate(198.39453 67.14795)">®</text>
+                                    <image alt="We are Purdue. What we make moves the world forward."
+                                    class="vertical" src="/purdue/images/templateElements/2015/footer-mottoVertical.png"
+                                    xlink:href="">
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="social"> <a title="Facebook" href="http://www.facebook.com/PurdueUniversity" target="_blank"><i class="fa fa-facebook"></i></a>
+
+                            <a
+                            title="Twitter" href="http://twitter.com/LifeAtPurdue" target="_blank"><i class="fa fa-twitter"></i>
+                                </a> <a title="YouTube" href="http://www.youtube.com/purdue" target="_blank"><i class="fa fa-youtube"></i></a>
+
+                                <a
+                                title="Instagram" href="http://www.instagram.com/lifeatpurdue" target="_blank"><i class="fa fa-instagram"></i>
+                                    </a> <a title="Pinterest" href="http://www.pinterest.com/lifeatpurdue/" target="_blank"><i class="fa fa-pinterest"></i></a>
+
+                                    <a
+                                    title="Snapchat" href="https://www.snapchat.com/add/lifeatpurdue" target="_blank"><i class="fa fa-snapchat-ghost"></i>
+                                        </a> <a title="LinkedIn" href="https://www.linkedin.com/edu/purdue-university-18357"
+                                        target="_blank"><i class="fa fa-linkedin"></i></a>
+ <a title="Amazon" href="https://purdue.amazon.com/"
+                                        target="_blank"><i class="fa fa-amazon"></i></a>
+
                         </div>
                     </div>
-                    <div class="social">
-                        <a title="Facebook" href="http://www.facebook.com/PurdueUniversity" target="_blank"><i class="fa fa-facebook"></i></a>
-                        <a title="Twitter" href="http://twitter.com/LifeAtPurdue" target="_blank"><i class="fa fa-twitter"></i></a>
-                        <a title="YouTube" href="http://www.youtube.com/purdue" target="_blank"><i class="fa fa-youtube"></i></a>
-                        <a title="Instagram" href="http://www.instagram.com/lifeatpurdue" target="_blank"><i class="fa fa-instagram"></i></a>
-                        <a title="Pinterest" href="http://www.pinterest.com/lifeatpurdue/" target="_blank"><i class="fa fa-pinterest"></i></a>
-                        <a title="Snapchat" href="https://www.snapchat.com/add/lifeatpurdue" target="_blank"><i class="fa fa-snapchat-ghost"></i></a>
-                        <a title="LinkedIn" href="https://www.linkedin.com/edu/purdue-university-18357" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a title="Amazon" href="https://purdue.amazon.com/" target="_blank"><i class="fa fa-amazon"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <p>Purdue University, 610 Purdue Mall, West Lafayette, IN 47907, (765) 494-4600</p>
+                        <p><a href="https://www.purdue.edu/purdue/disclaimer.html"> © 2015 Purdue University</a> |
+                            <a
+                            href="https://www.purdue.edu/purdue/ea_eou_statement.html">An equal access/equal opportunity university</a>| <a href="https://www.purdue.edu/securepurdue/DMCAAgent.cfm">Copyright Complaints</a> |
+                                <a
+                                href="https://www.purdue.edu/marketing" target="_blank">Maintained by ORGANIZATION NAME HERE</a>
+                        </p>
+                        <p>Trouble with this page? Disability-related <a href="https://www.purdue.edu/disabilityresources/">accessibility</a> issue?
+                            Please contact&nbsp;us at <a href="mailto:online@purdue.edu">organization-email@purdue.edu</a>.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <p>Purdue University, 610 Purdue Mall, West Lafayette, IN 47907, (765) 494-4600</p>
-                    <p><a href="https://www.purdue.edu/purdue/disclaimer.html"> © 2015 Purdue University</a> | <a href="https://www.purdue.edu/purdue/ea_eou_statement.html">An equal access/equal opportunity university</a> | <a href="https://www.purdue.edu/securepurdue/DMCAAgent.cfm">Copyright Complaints</a> |
-                        <a
-                        href="https://www.purdue.edu/marketing" target="_blank">Maintained by ORGANIZATION NAME HERE</a>
-                    </p>
-                    <p>Trouble with this page? Disability-related <a href="https://www.purdue.edu/disabilityresources/">accessibility</a> issue? Please contact&nbsp;us at <a href="mailto:online@purdue.edu">organization-email@purdue.edu</a>.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</body>
+    </body>
 
 </html>
