@@ -9017,13 +9017,15 @@ u {
   .footer #accordion .motto .taglineContainer .tagline {
     margin-bottom: 10px;
     padding-bottom: 35.14851%;
-    border-bottom: solid 1px #474747;
   }
   .footer #accordion .motto .taglineContainer .tagline .vertical {
     display: block;
   }
   .footer #accordion .motto .taglineContainer .tagline .horizontal {
     display: none;
+  }
+  .footer #accordion .motto .social {
+    border-top: solid 1px #474747;
   }
   .footer #accordion .motto .social a {
     float: left;

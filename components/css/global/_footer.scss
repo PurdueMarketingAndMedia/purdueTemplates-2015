@@ -11,13 +11,10 @@
 
         .panel {
             border: none;
-            //margin-top: 5px;
             background-color: transparent;
             margin-top: 0;
             padding: 15px;
             border-bottom: solid 1px #333;
-            // font-size: 14/18 * 1em;
-            // line-height: 32/14 * 1em;
             font-size: calc-toEm(14);
             line-height: calc-toEm(37);
 
@@ -39,18 +36,13 @@
             }
 
             .panel-heading {
-                //display: block;
                 padding: 0;
                 background-color: transparent;
-                //font-size: 18/14 * 1em;
                 font-size: calc-toEm(21);
-                // line-height: 1em;
 
                 .panel-title {
                     font-family: $font-champion-welter;
-                    // padding-top: 0;
                     font-size: calc-toEm(16);
-                    // font-weight: 400;
                 }
 
                 a {
@@ -78,27 +70,19 @@
         }
 
         .motto {
-            // text-align: left;
-            // color: #fff;
             clear: both;
             padding: 15px 15px 0;
-            // font-size: 30/18*1em;
             font-size: calc-toEm(20);
             text-align: center;
 
             .taglineContainer {
-                // display: block;
                 width: 90%;
                 margin: 0 auto;
 
                 .tagline {
-                    // display: block;
-                    // width: 100%;
-                    // margin-right: auto !important;
-                    // margin-left: auto !important;
-                    // text-align: center !important;
                     position:relative;
                     padding-bottom:60/430*100%;
+
                     .horizontal,.vertical{
                         position:absolute;
                         top:0;
@@ -122,8 +106,6 @@
             a {
                 display: inline-block;
                 position: relative;
-                // overflow: hidden;
-                // width: 23px;
                 margin: 2.5px 2%;
                 text-align: center;
 
@@ -229,24 +211,7 @@
         #accordion {
             .panel {
                 .panel-heading {
-                    // display: block;
-                    // padding: 0;
-                    // background-color: transparent;
-                    // //font-size: 18/14 * 1em;
-                    // font-size: calc-toEm(21);
-                    // line-height: 1em;
-
-                    // .panel-title {
-                    //     font-family: $font-arial !important;
-                    //     padding-top: 0;
-                    //     font-size: 1em;
-                    //     font-weight: 300;
-                    // }
-
                     a {
-                        // display: block;
-                        // width: 100%;
-
                         .fa-plus {
                             display: none;
                         }
@@ -265,54 +230,16 @@
                             display: none;
                         }
                     }
-
-                    // a:link, a:visited, a:hover, a:active {
-                    //     color: $color-campusGold;
-                    //     text-decoration: none;
-                    // }
                 }
 
                 .panel-collapse {
                     padding-left: 15px;
-
-                    // a {
-                    //     padding: 0;
-                    // }
                 }
             }
 
-            // .panel:first-child {
-            //     border-top: solid 1px #474747;
-            // }
-
             .motto {
-            //     clear: both;
-            //     padding: 15px 15px 0;
-            //     // font-size: 30/18*1em;
-            //     font-size: calc-toEm(20);
-            //     text-align: center;
-            //
                 .taglineContainer {
-            //         // display: block;
                     width: 80%;
-            //         margin: 0 auto;
-            //
-                    // .tagline {
-                    //     // display: block;
-                    //     width: 100%;
-                    //     // margin-right: auto !important;
-                    //     // margin-left: auto !important;
-                    //     // text-align: center !important;
-                    //
-                    //     // .vertical {
-                    //     //     display: none;
-                    //     // }
-                    // }
-            //     }
-            //
-            //     .social {
-            //         display: block;
-            //         width: 100%;
                 }
             }
         }
@@ -332,8 +259,6 @@
                 width: 50%;
                 padding: 0 30px 15px;
                 border: none;
-                // font-size: 14/16 * 1em;
-                // line-height: 20/12 * 1em;
                 font-size: calc-toEm(14);
                 line-height: calc-toEm(27);
 
@@ -341,7 +266,6 @@
                     display: block;
                     padding: 0;
                     background-color: transparent;
-                    // font-size: 18/14 * 1em;
                     font-size: calc-toEm(21);
                     line-height: 1em;
 
@@ -377,50 +301,23 @@
 
             .motto {
                 clear: none;
-                // float: left;
-                // width: 100%;
                 padding: 15px 30px;
-                // font-size: 20/16*1em;
-                font-size: calc-toEm(29.6); //1.85em
+                font-size: calc-toEm(29.6);
                 text-align: center;
 
                 .taglineContainer {
                     display: block;
-                    //position: absolute;
                     width: 70%;
-                    // padding: 0;
-                    // margin: 0 auto;
 
                     .tagline {
-                        // display: block;
-                        // width: 100%;
-                        // margin-right: auto !important;
-                        // margin-left: auto !important;
-                        // text-align: center !important;
-                        // border-bottom: solid 1px #474747;
-
                         .vertical {
                             display: none;
                         }
                     }
                 }
-
-                // .social {
-                //     display: block;
-                //     // border-top: solid 1px #474747;
-                //     //margin-top: 70px;
-                //
-                //     // a {
-                //     //     float: left;
-                //     // }
-                // }
             }
         }
     }
-    // @media (min-width:992px) {
-    //     // .footer
-    //     padding: 20px 0;
-    // }
 
     // footer is 5 columns, first four contain footer links, 5th column is
     // the vertical tagline and social icons underneath
@@ -429,76 +326,22 @@
 
         #accordion {
             .panel {
-                // float: left;
                 width: 20%;
                 padding: 0 15px;
-                // border: none;
-                // font-size: 14/16 * 1em;
-                // line-height: 20/12 * 1em;
-                // font-size: calc-toEm(14);
-                // line-height: calc-toEm(27);
-
-                // a {
-                //     padding: 8px 0 2px;
-                //     border-bottom: solid 1px #474747;
-                // }
-
-                // .panel-heading {
-                //     // display: block;
-                //     // padding: 0;
-                //     // background-color: transparent;
-                //     // // font-size: 18/14 * 1em;
-                //     // font-size: calc-toEm(21);
-                //     // line-height: 1em;
-                //
-                //     .panel-title {
-                //         // font-family: $font-champion-welter !important;
-                //         // padding-top: 0;
-                //         // padding-bottom: 5px;
-                //         // font-size: 1em;
-                //         // font-weight: 300;
-                //
-                //         // a {
-                //         //     cursor: default;
-                //         //     color: $color-campusGold;
-                //         //     border-bottom: none;
-                //         // }
-                //
-                //         // .fa {
-                //         //     display: none;
-                //         // }
-                //     }
-                // }
-                //
-                // .panel-collapse {
-                //     // display: block;
-                //     // height: auto !important;
-                // }
             }
 
             .motto {
                 float: left;
                 width: 20%;
                 padding: 40px 15px 15px;
-                // font-size: 20/16*1em;
                 font-size: calc-toEm(21.6);
 
                 .taglineContainer {
-                    // display: block;
-                    // position: absolute;
                     width: auto;
-                    // padding: 0;
-                    // margin: 0 auto;
 
                     .tagline {
                         margin-bottom:10px;
                         padding-bottom:71/202*100%;
-                        border-bottom: solid 1px #474747;
-                        // display: block;
-                        // width: 100%;
-                        // margin-right: auto !important;
-                        // margin-left: auto !important;
-                        // text-align: center !important;
 
                         .vertical {
                             display: block;
@@ -511,104 +354,13 @@
                 }
 
                 .social {
-                    //display: block;
-                    // border-top: solid 1px #474747;
-                    //margin-top: 70px;
-
+                    border-top: solid 1px #474747;
+                    
                     a {
                         float: left;
                         margin: 4px 2.7%;
                     }
                 }
-            }
-        }
-    }
-    @media (min-width:1200px) {
-        #accordion {
-            .panel {
-                // float: left;
-                // width: 20%;
-                // padding: 0 15px;
-                // border: none;
-                //font-size: 14/16 * 1em;
-                //line-height: 20/14 * 1em;
-                // font-size: calc-toEm(14);
-                // line-height: calc-toEm(23);
-
-            //     // a {
-            //     //     // padding: 8px 0 2px;
-            //     //     // border-bottom: solid 1px #474747;
-            //     // }
-            //
-            //     // .panel-heading {
-            //     //     // display: block;
-            //     //     // padding: 0;
-            //     //     // background-color: transparent;
-            //     //     // // font-size: 18/14 * 1em;
-            //     //     // font-size: calc-toEm(21);
-            //     //     // line-height: 1em;
-            //     //
-            //     //     .panel-title {
-            //     //         // font-family: $font-champion-welter !important;
-            //     //         // padding-top: 0;
-            //     //         // padding-bottom: 5px;
-            //     //         // font-size: 1em;
-            //     //         // font-weight: 300;
-            //     //
-            //     //         // a {
-            //     //         //     // cursor: default;
-            //     //         //     // color: $color-campusGold;
-            //     //         //     // border-bottom: none;
-            //     //         // }
-            //     //
-            //     //         // .fa {
-            //     //         //     display: none;
-            //     //         // }
-            //     //     }
-            //     // }
-            //
-            //     // .panel-collapse {
-            //     //     display: block;
-            //     //     height: auto !important;
-            //     // }
-            // }
-            //
-            // .motto {
-            //     // float: left;
-            //     // width: 20%;
-            //     // padding: 15px;
-            //     // // font-size: 20/16*1em;
-            //     // font-size: calc-toEm(20);
-            //
-            //     .taglineContainer {
-            //         // display: block;
-            //         // position: absolute;
-            //         // width: 80%;
-            //         // padding: 0;
-            //         // margin: 0 auto;
-            //
-            //         .tagline {
-            //             // display: block;
-            //             // max-width: 100%;
-            //             // margin-right: auto !important;
-            //             // margin-left: auto !important;
-            //             // text-align: center !important;
-            //
-            //             // .horizontal {
-            //             //     display: none;
-            //             // }
-            //         }
-            //     }
-            //
-            //     .social {
-            //         // display: block;
-            //         // border-top: solid 1px #474747;
-            //         // margin-top: 70px;
-            //
-            //         a {
-            //             float: left;
-            //         }
-            //     }
             }
         }
     }
