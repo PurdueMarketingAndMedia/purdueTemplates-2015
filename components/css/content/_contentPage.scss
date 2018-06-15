@@ -52,66 +52,6 @@
 					width:100%;
 					margin-bottom:20px;
 				}
-				ul, ol {
-					li{
-						@include list__item;
-					}
-				}
-				li > ol {
-					@include list-nested;
-				}
-				ol > li {
-					@include list__item-ordered;
-				}
-
-				// spacing for all ol li::before
-				ul > li {
-					@include list__item-unordered;
-				}
-				// define the styles for the different levels
-				ul {
-					@include list-unordered;
-
-					> li {
-						@include list__item-bullet;
-					}
-
-					ul {
-						> li {
-							@include list__item-bullet-hollow;
-						}
-
-						ul {
-							> li {
-								@include list__item-bullet-square;
-							}
-
-						}
-					}
-				}
-				ol
-				{
-					@include list-ordered-decimal;
-					@include list-ordered(1);
-					> li{
-						@include list__item-ordered;
-						@include list__item-decimal(1);
-						ol{
-							@include list-ordered-alpha-lower;
-							@include list-ordered(2);
-							> li{
-								@include list__item-alpha-lower(2);
-								ol{
-									@include list-ordered-roman-lower;
-									@include list-ordered(3);
-									> li{
-										@include list__item-roman-lower(3);
-									}
-								}
-							}
-						}
-					}
-				}
 
 				.imageContainer{
 					max-width:100%;
