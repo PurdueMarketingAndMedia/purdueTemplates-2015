@@ -4,7 +4,7 @@
 	background-color:#000;
 	background-repeat:repeat;
 	// @include striped-bg(#191919, #000, thin)
-	.row-eq-height{
+	.row{
 		display: flex;
 		align-items: center;
 		flex-direction: column;
@@ -137,7 +137,7 @@
 			}
 		}
 	@media (min-width:768px) and (max-width:991px){
-			.row-eq-height{
+			.row{
 					display: flex;
 					align-items: center;
 	        flex-direction: row;
@@ -147,7 +147,7 @@
 			}
 		}
 	@media (min-width:768px){
-        .row-eq-height{
+        .row{
             flex-direction: row;
 	    	}
         .department{

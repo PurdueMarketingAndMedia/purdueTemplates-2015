@@ -8205,7 +8205,7 @@ u {
   background-repeat: repeat;
 }
 
-.top .row-eq-height {
+.top .row {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -8356,7 +8356,7 @@ u {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .top .row-eq-height {
+  .top .row {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -8367,7 +8367,7 @@ u {
 }
 
 @media (min-width: 768px) {
-  .top .row-eq-height {
+  .top .row {
     flex-direction: row;
   }
   .top .department {
