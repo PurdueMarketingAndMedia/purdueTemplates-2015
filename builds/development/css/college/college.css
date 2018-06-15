@@ -11163,7 +11163,7 @@ end tile sizing and positioning
   display: block;
   float: none;
   max-width: 100%;
-  margin-bottom: 0 auto 5px;
+  margin: 0 auto 5px;
 }
 
 @media (max-width: 767px) {
