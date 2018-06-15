@@ -335,18 +335,17 @@
 
                 .taglineContainer {
                     width: auto;
+                }
+                .tagline {
+                    margin-bottom:10px;
+                    padding-bottom:71/202*100%;
 
-                    .tagline {
-                        margin-bottom:10px;
-                        padding-bottom:71/202*100%;
+                    .vertical {
+                        display: block;
+                    }
 
-                        .vertical {
-                            display: block;
-                        }
-
-                        .horizontal {
-                            display: none;
-                        }
+                    .horizontal {
+                        display: none;
                     }
                 }
 

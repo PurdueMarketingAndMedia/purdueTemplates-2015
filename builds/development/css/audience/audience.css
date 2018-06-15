@@ -11146,14 +11146,14 @@ blockquote:before, .quote:before {
   .footer #accordion .motto .taglineContainer {
     width: auto;
   }
-  .footer #accordion .motto .taglineContainer .tagline {
+  .footer #accordion .motto .tagline {
     margin-bottom: 10px;
     padding-bottom: 35.14851%;
   }
-  .footer #accordion .motto .taglineContainer .tagline .vertical {
+  .footer #accordion .motto .tagline .vertical {
     display: block;
   }
-  .footer #accordion .motto .taglineContainer .tagline .horizontal {
+  .footer #accordion .motto .tagline .horizontal {
     display: none;
   }
   .footer #accordion .motto .social {
