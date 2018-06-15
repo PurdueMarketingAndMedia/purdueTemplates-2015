@@ -8799,7 +8799,7 @@ u {
   padding-bottom: 13.95349%;
 }
 
-.footer #accordion .motto .tagline .horizontal, .footer #accordion .motto .tagline .vertical {
+.footer #accordion .motto .horizontal, .footer #accordion .motto .vertical {
   position: absolute;
   top: 0;
   right: 0;
@@ -8807,7 +8807,7 @@ u {
   left: 0;
 }
 
-.footer #accordion .motto .tagline .vertical {
+.footer #accordion .motto .vertical {
   display: none;
 }
 
@@ -8995,7 +8995,7 @@ u {
     display: block;
     width: 70%;
   }
-  .footer #accordion .motto .tagline .vertical {
+  .footer #accordion .motto .vertical {
     display: none;
   }
 }
@@ -9014,14 +9014,14 @@ u {
   .footer #accordion .motto .taglineContainer {
     width: auto;
   }
-  .footer #accordion .motto .tagline {
+  .footer #accordion .motto .taglineContainer .tagline {
     margin-bottom: 10px;
     padding-bottom: 35.14851%;
   }
-  .footer #accordion .motto .tagline .vertical {
+  .footer #accordion .motto .vertical {
     display: block;
   }
-  .footer #accordion .motto .tagline .horizontal {
+  .footer #accordion .motto .horizontal {
     display: none;
   }
   .footer #accordion .motto .social {
