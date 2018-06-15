@@ -10514,6 +10514,7 @@ form.purdueForm .robotic {
 }
 
 .footer #accordion .motto img {
+  display: block;
   float: none;
   max-width: 100%;
   margin-bottom: 0 auto 5px;
