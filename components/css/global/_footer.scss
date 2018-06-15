@@ -78,21 +78,19 @@
             .taglineContainer {
                 width: 90%;
                 margin: 0 auto;
-
-                .tagline {
-                    position:relative;
-                    padding-bottom:60/430*100%;
-
-                    .horizontal,.vertical{
-                        position:absolute;
-                        top:0;
-                        right:0;
-                        bottom:0;
-                        left:0;
-                    }
-                    .vertical {
-                        display: none;
-                    }
+            }
+            .tagline {
+                position:relative;
+                padding-bottom:60/430*100%;
+                .horizontal,.vertical{
+                    position:absolute;
+                    top:0;
+                    right:0;
+                    bottom:0;
+                    left:0;
+                }
+                .vertical {
+                    display: none;
                 }
             }
 
@@ -308,11 +306,10 @@
                 .taglineContainer {
                     display: block;
                     width: 70%;
-
-                    .tagline {
-                        .vertical {
-                            display: none;
-                        }
+                }
+                .tagline {
+                    .vertical {
+                        display: none;
                     }
                 }
             }
