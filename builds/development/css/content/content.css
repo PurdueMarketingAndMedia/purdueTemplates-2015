@@ -8205,7 +8205,7 @@ u {
   background-repeat: repeat;
 }
 
-.top .row-eq-height {
+.top .row {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -8356,7 +8356,7 @@ u {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .top .row-eq-height {
+  .top .row {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -8367,7 +8367,7 @@ u {
 }
 
 @media (min-width: 768px) {
-  .top .row-eq-height {
+  .top .row {
     flex-direction: row;
   }
   .top .department {
@@ -10394,12 +10394,12 @@ form.purdueForm .robotic {
   margin: 0 auto;
 }
 
-.footer #accordion .motto .taglineContainer .tagline {
+.footer #accordion .motto .tagline {
   position: relative;
   padding-bottom: 13.95349%;
 }
 
-.footer #accordion .motto .taglineContainer .tagline .horizontal, .footer #accordion .motto .taglineContainer .tagline .vertical {
+.footer #accordion .motto .tagline .horizontal, .footer #accordion .motto .tagline .vertical {
   position: absolute;
   top: 0;
   right: 0;
@@ -10407,7 +10407,7 @@ form.purdueForm .robotic {
   left: 0;
 }
 
-.footer #accordion .motto .taglineContainer .tagline .vertical {
+.footer #accordion .motto .vertical {
   display: none;
 }
 
@@ -10514,8 +10514,10 @@ form.purdueForm .robotic {
 }
 
 .footer #accordion .motto img {
-  width: 100%;
-  margin-bottom: 5px;
+  display: block;
+  float: none;
+  max-width: 100%;
+  margin: 0 auto 5px;
 }
 
 @media (max-width: 767px) {
@@ -10595,7 +10597,7 @@ form.purdueForm .robotic {
     display: block;
     width: 70%;
   }
-  .footer #accordion .motto .taglineContainer .tagline .vertical {
+  .footer #accordion .motto .vertical {
     display: none;
   }
 }
@@ -10618,10 +10620,10 @@ form.purdueForm .robotic {
     margin-bottom: 10px;
     padding-bottom: 35.14851%;
   }
-  .footer #accordion .motto .taglineContainer .tagline .vertical {
+  .footer #accordion .motto .vertical {
     display: block;
   }
-  .footer #accordion .motto .taglineContainer .tagline .horizontal {
+  .footer #accordion .motto .horizontal {
     display: none;
   }
   .footer #accordion .motto .social {

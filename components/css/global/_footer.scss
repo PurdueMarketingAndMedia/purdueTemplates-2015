@@ -78,22 +78,20 @@
             .taglineContainer {
                 width: 90%;
                 margin: 0 auto;
-
-                .tagline {
-                    position:relative;
-                    padding-bottom:60/430*100%;
-
-                    .horizontal,.vertical{
-                        position:absolute;
-                        top:0;
-                        right:0;
-                        bottom:0;
-                        left:0;
-                    }
-                    .vertical {
-                        display: none;
-                    }
+            }
+            .tagline {
+                position:relative;
+                padding-bottom:60/430*100%;
+                .horizontal,.vertical{
+                    position:absolute;
+                    top:0;
+                    right:0;
+                    bottom:0;
+                    left:0;
                 }
+            }
+            .vertical {
+                display: none;
             }
 
             .social {
@@ -200,8 +198,10 @@
             }
 
             img {
-                width: 100%;
-                margin-bottom: 5px;
+                display:block;
+                float:none;
+                max-width: 100%;
+                margin:0 auto 5px;
             }
         }
     }
@@ -308,12 +308,9 @@
                 .taglineContainer {
                     display: block;
                     width: 70%;
-
-                    .tagline {
-                        .vertical {
-                            display: none;
-                        }
-                    }
+                }
+                .vertical {
+                    display: none;
                 }
             }
         }
@@ -338,19 +335,18 @@
 
                 .taglineContainer {
                     width: auto;
-
                     .tagline {
                         margin-bottom:10px;
                         padding-bottom:71/202*100%;
-
-                        .vertical {
-                            display: block;
-                        }
-
-                        .horizontal {
-                            display: none;
-                        }
                     }
+                }
+
+                .vertical {
+                    display: block;
+                }
+
+                .horizontal {
+                    display: none;
                 }
 
                 .social {
