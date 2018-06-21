@@ -9947,6 +9947,7 @@ end tile sizing and positioning
 }
 
 .collegeContent .grid .introContainer .intro {
+  overflow-y: auto;
   width: 100%;
   margin: -10px 0;
   padding: 30px;
