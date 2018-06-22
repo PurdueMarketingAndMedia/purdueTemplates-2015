@@ -8746,16 +8746,18 @@ u {
   display: block;
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: 0;
+  flex-basis: 10px;
   width: 3.21261rem;
 }
 
 .button:before {
   order: 0;
+  float: left;
 }
 
 .button:after {
   order: 2;
+  float: right;
 }
 
 .button:link, .button:visited {
