@@ -74,11 +74,10 @@ gulp.task('html', function(){
 
 // sass task
 gulp.task('sass', function(){
-
-    if (env === 'development') {
-        sassBuild(false);
-    } else { // env === production
+    if (env === 'production') {
         sassBuild(true);
+    } else { // assume it's the dev environment
+        sassBuild(false);
     }
 });
 
