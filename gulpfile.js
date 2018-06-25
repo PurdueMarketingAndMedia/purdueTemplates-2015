@@ -74,23 +74,33 @@ gulp.task('html', function(){
 
 // sass task
 gulp.task('sass', function(){
+
+    if (env === 'development') {
+        sassBuild(false);
+    } else { // env === production
+        sassBuild(true);
+    }
+});
+
+function sassBuild(production = false){
     async.series([
         function(next) {
-            if (env === 'development') {
-                gulp.src(scssSources)
-                    .pipe(sourcemaps.init())
-                    .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
-                    .pipe(sourcemaps.write('./sourcemaps'))
-                    .pipe(gulp.dest(outputDir+'css/'))
-                    .on('end',next);
-            } else { // env === production
+            if(production)
+            {
                 gulp.src(scssSources)
                     .pipe(sass({outputStyle:'compressed'}).on('error',sass.logError))
                     .pipe(postcss([ autoprefixer, pseudoelements ]))
                     .pipe(gulp.dest(outputDir+'css/'))
                     .on('end',next);
             }
-
+            else{
+                gulp.src(scssSources)
+                    .pipe(sourcemaps.init())
+                    .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
+                    .pipe(sourcemaps.write('./sourcemaps'))
+                    .pipe(gulp.dest(outputDir+'css/'))
+                    .on('end',next);
+            }
         },
         function(next) {
             // reload on any change in components
@@ -98,6 +108,11 @@ gulp.task('sass', function(){
                 .pipe(connect.reload());
         }
     ]);
+    return true;
+}
+
+gulp.task('zip',function(){
+
 });
 
 // watch for changes
