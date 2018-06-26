@@ -9,7 +9,7 @@ If you wish to contribute to development, please [open an issue](https://github.
 
 Feel free to fork this repository and make any changes. Once you have completed your changes, make a pull request so that we can consider merging them.
 
-**Please keep in mind that PMM is under no obligation to accept pull requests.** 
+**Please keep in mind that PMM is under no obligation to accept pull requests.**
 
 ## Getting Started
 ### Download
@@ -35,5 +35,29 @@ This project was setup to use [Gulp.js](http://gulpjs.com/), which runs on [Node
    npm install
    ```
 
-##Development
+## Development
 *The following instructions only apply to those using Gulp.js for workflow management.*
+
+### Commands
+```
+gulp
+```
+1. deletes everything the `/builds/development/` directory
+2. builds HTML and **expanded** CSS with sourcemaps to `/builds/development/*`
+3. starts a local server, using `/builds/development/` as the base directory
+4. initiates a live reload, that refreshes pages upon a change to the HTML or CSS (SASS)
+
+```
+NODE_ENV=production gulp
+```
+1. deletes everything in the `/builds/production/` directory
+2. builds HTML and **compressed** CSS to `/builds/production/*`
+3. starts a local server, using `/builds/production/` as the base directory
+4. initiates a live reload, that refreshes pages upon a change to the HTML or CSS (SASS)
+
+```
+gulp zip
+```
+1. deletes everything in the `/builds/production/` directory
+2. builds HTML and **compressed** CSS to `/builds/production/*`
+3. places a zipped version of the `/builds/production/` directory in `/builds/` named `vX.X.X` to be renamed based on the version of the build

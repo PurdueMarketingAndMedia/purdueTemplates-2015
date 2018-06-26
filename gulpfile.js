@@ -1,5 +1,6 @@
-// Include gulp and gulp
+// require packages
 var gulp = require('gulp'),
+
     // enable live reload
     connect = require('gulp-connect'),
 
@@ -15,88 +16,251 @@ var gulp = require('gulp'),
     autoprefixer = require('autoprefixer'),
 
     //async
-    async = require('async');
+    async = require('async'),
 
-// output directories
-var devOutputDir = 'builds/development/',
-    prodOutputDir = 'builds/production/';
+    //zip
+    gulpZip = require('gulp-zip')
 
-// component sources
-var componentSources = ['components/**/*'],
-    htmlSources = ['components/html/templates/**/*.html'],
-    templateSources = ['components/html/modules/**/*.html'],
-    scssSources = ['components/css/**/*.scss'];
+    // del
+    var del = require('del');
 
-// HTML task
+// set variables
+var env,
+    componentSources,
+    htmlSources,
+    templateSources,
+    scssSources,
+    sassStyle;
+
+// set env
+env = process.env.NODE_ENV || 'development';
+
+// set output directories based on env
+devOutputDir = 'builds/development';
+prodOutputDir = 'builds/production';
+
+// define component sources paths
+componentSources = ['components/**/*'],
+htmlSources = ['components/html/templates/**/*.html'],
+templateSources = ['components/html/modules/**/*.html'],
+scssSources = ['components/css/**/*.scss'];
+
+function cleanHtml(production = false){
+    return new Promise((resolve, reject) => {
+        let dir = 'builds/development/templates/**/*';
+        production ? dir = 'builds/production/templates/**/*' : null;
+        async.series([
+            function(next)
+            {
+                del([
+                    dir
+                ]);
+                next();
+            },
+            function(next)
+            {
+                //resolve the promise
+                resolve(true);
+            }
+        ]);
+    });
+}
+
+function cleanCss(production = false){
+    return new Promise((resolve, reject) => {
+        let dir = 'builds/development/css/**/*';
+        production ? dir = 'builds/production/css/**/*' : null;
+        async.series([
+            function(next)
+            {
+                del([
+                    dir
+                ]);
+                next();
+            },
+            function(next)
+            {
+                //resolve the promise
+                resolve(true);
+            }
+        ]);
+    });
+}
+
+// html task
 gulp.task('html', function(){
-    async.series([
-        function(next)
-        {
-            gulp.src(htmlSources)
-                // include module files
-                .pipe(fileinclude({
-                  prefix: '@@',
-                  basepath: '@file'
-                }))
-                // clean up html
-                .pipe(htmlPrettify({indent_char:' ',indent_size:4}))
-                // save into dev and prod
-                .pipe(gulp.dest(devOutputDir+'templates/'))
-                .pipe(gulp.dest(prodOutputDir+'templates/'))
-                .on('end',next);
-        },
-        function(next)
-        {
-            // reload on any change in components
-            gulp.src(componentSources)
-                .pipe(connect.reload());
-        }
-    ]);
+    if (env === 'production') {
+        return htmlBuild(true);
+    } else { // assume it's the dev environment
+        return htmlBuild(false);
+    }
 });
 
-// SASS task
+function htmlBuild(production = false,zip = false){
+    //return a promise that resolves when the HTML finishes compiling
+    return new Promise((resolve, reject) => {
+        async.series([
+            function(next)
+            {
+                let deleteHtml = cleanHtml(true);
+                let outputDir = production ? prodOutputDir : devOutputDir;
+                deleteHtml.then(
+                    () => {
+                        //successfully cleaned HTML
+                        gulp.src(htmlSources)
+                        // include module files
+                        .pipe(fileinclude({
+                          prefix: '@@',
+                          basepath: '@file'
+                        }))
+                        // clean up html
+                        .pipe(htmlPrettify({
+                            indent_char:' ',
+                            indent_size:4
+                        }))
+                        // save into respective builds folder
+                        .pipe(gulp.dest(outputDir+'/templates/'))
+                        .on('end',next);
+                    }
+                ).catch(
+                    () => {
+                        //failed to clean HTML
+                });
+            },
+            function(next)
+            {
+                // reload the page if this was not called by the "zip" task
+                !zip ? gulp.src(componentSources).pipe(connect.reload()): null;
+                //resolve the promise
+                resolve(true);
+            }
+        ]);
+    });
+}
+
+// sass task
 gulp.task('sass', function(){
-    async.series([ //development build functions
-        function(next)
-        {  // dev builds
-            gulp.src(scssSources)
-                .pipe(sourcemaps.init())
-                .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
-                .pipe(postcss([ autoprefixer, pseudoelements ]))
-                .pipe(sourcemaps.write('./sourcemaps'))
-                // save in dev
-                .pipe(gulp.dest(devOutputDir+'css/'))
-                .on('end',next);
-        },
-        function(next)
-        {  // prod builds
-            gulp.src(scssSources)
-                .pipe(sass({outputStyle:'compressed'}).on('error',sass.logError))
-                .pipe(postcss([ autoprefixer, pseudoelements ]))
-                // save in prod
-                .pipe(gulp.dest(prodOutputDir+'css/'))
-                .on('end',next);
-        },
-        function(next)
-        {
-            // reload on any change in components
-            gulp.src(componentSources)
-                .pipe(connect.reload());
-        }
-    ]);
+    if (env === 'production') {
+        return sassBuild(true);
+    } else { // assume it's the dev environment
+        return sassBuild(false);
+    }
 });
 
+function sassBuild(production = false,zip = false){
+    return new Promise((resolve, reject) => {
+        async.series([
+            function(next) {
+                let deleteCss = cleanCss(production);
+                deleteCss.then(
+                    () => {
+                        //successfully cleaned CSS
+                        if(production)
+                        { //compile the production CSS
+                            gulp.src(scssSources)
+                                .pipe(sass({outputStyle:'compressed'}).on('error',sass.logError))
+                                .pipe(postcss([ autoprefixer, pseudoelements ]))
+                                .pipe(gulp.dest(prodOutputDir+'/css/'))
+                                .on('end',next);
+                        }
+                        else
+                        { //compile the development CSS
+                            gulp.src(scssSources)
+                                .pipe(sourcemaps.init())
+                                .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
+                                .pipe(sourcemaps.write('./sourcemaps'))
+                                .pipe(gulp.dest(devOutputDir+'/css/'))
+                                .on('end',next);
+                        }
+                    }
+                ).catch(
+                    () => {
+                        //failed to clean CSS
+                    }
+                );
+            },
+            function(next) {
+                // reload the page if this was not called by the "zip" task
+                !zip ? gulp.src(componentSources).pipe(connect.reload()) : null;
+                //resolve the promise
+                resolve(true);
+            }
+        ]);
+    });
+}
+
+gulp.task('zip',function(){
+    return new Promise((resolve, reject) => {
+        let compileHtml = htmlBuild(true,true);
+        compileHtml.then(
+            () => {
+                //successfully compiled HTML
+                let compileSass = sassBuild(true,true);
+                compileSass.then(
+                    () => {
+                        //successfully compiled SASS
+                        let zipFiles = zipBuild();
+                        zipFiles.then(
+                            () => {
+                                //successfully zipped production files
+                                resolve(true);
+                            }
+                        ).catch(
+                            () => {
+                                //failed to zip production files
+
+                            }
+                        );
+                    }
+                ).catch(
+                    ( )=>{
+                        //failed to compile SASS
+                    }
+                );
+            }
+        ).catch(
+            ()=>{
+                //failed to compile HTML
+            }
+        );
+    });
+});
+
+function zipBuild(){
+    return new Promise((resolve,reject) => {
+        async.series([
+            function(next) {
+                gulp.src('builds/production/**/*')
+                    .pipe(gulpZip('vX.X.X.zip'))
+                    .pipe(gulp.dest('builds'))
+                    .on('end',next);
+            },
+            function(next) {
+                //resolve the promise
+                resolve(true);
+            }
+        ]);
+    });
+}
+
+// watch for changes
 gulp.task('watch', function() {
     gulp.watch(htmlSources,['html']);
     gulp.watch(templateSources,['html']);
     gulp.watch(scssSources,['sass']);
 });
 
+// local server with live reload
 gulp.task('connect', function() {
+    let outputDir = `${devOutputDir}/`;
+    if (env === 'production') {
+        outputDir = `${prodOutputDir}/`;
+    }
     connect.server({
-        root: devOutputDir,
+        root: outputDir,
         livereload: true
     });
 });
 
+// default task when 'gulp' is run
 gulp.task('default',['html','sass','connect','watch']);
