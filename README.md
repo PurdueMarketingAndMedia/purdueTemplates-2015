@@ -51,7 +51,7 @@ gulp
 NODE_ENV=production gulp
 ```
 1. deletes everything in the `/builds/production/` directory
-2. builds HTML and **compressed** CSS with to `/builds/production/*`
+2. builds HTML and **compressed** CSS to `/builds/production/*`
 3. starts a local server, using `/builds/production/` as the base directory
 4. initiates a live reload, that refreshes pages upon a change to the HTML or CSS (SASS)
 
@@ -59,5 +59,5 @@ NODE_ENV=production gulp
 gulp zip
 ```
 1. deletes everything in the `/builds/production/` directory
-2. builds HTML and **compressed** CSS with to `/builds/production/*`
+2. builds HTML and **compressed** CSS to `/builds/production/*`
 3. places a zipped version of the `/builds/production/` directory in `/builds/` named `vX.X.X` to be renamed based on the version of the build
