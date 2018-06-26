@@ -19,6 +19,7 @@
     "devDependencies": {
         "async": "^2.1.5",
         "autoprefixer": "^8.0.0",
+        "del": "^3.0.0",
         "gulp": "^3.9.1",
         "gulp-connect": "^5.0.0",
         "gulp-file-include": "^1.0.0",
