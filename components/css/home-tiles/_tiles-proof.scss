@@ -1,0 +1,200 @@
+.content{
+	.boxes{
+		.row{
+			.tile{
+				.proofPoint{
+					width:100%;
+					height:100%;
+					background-size:cover;
+					background-position:center center;
+					background-repeat:no-repeat;
+					color:#fff;
+					font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+					text-transform:uppercase;
+					text-align:center;
+					q{
+						display:block;
+						font-weight:700;
+					}
+					em{
+						display:block;
+						font-style:normal;
+					}
+				}
+				@mixin proofPointBackgroundColor($audience,$color){
+					.proofPoint.#{$audience}{
+						background-color:$color;
+					}
+				}
+				@include proofPointBackgroundColor("acceptToday",$color-celeryBogGreen);
+				@include proofPointBackgroundColor("alumni",$color-campusGold);
+				@include proofPointBackgroundColor("applyNow",$color-campusGold);
+				@include proofPointBackgroundColor("artsCulture",$color-mackeyOrange);
+				@include proofPointBackgroundColor("corporatePartners",$color-ameliaSkyBlue);
+				@include proofPointBackgroundColor("currentStudents",$color-fountainRunTeal);
+				@include proofPointBackgroundColor("events",$color-yellowWalk);
+				@include proofPointBackgroundColor("facultyStaff",$color-springFestGreen);
+				@include proofPointBackgroundColor("giveNow",$color-yellowWalk);
+				@include proofPointBackgroundColor("news",$color-campusGold);
+				@include proofPointBackgroundColor("parentsFamilies",$color-rossAdeGreen);
+				@include proofPointBackgroundColor("prospectiveStudents",$color-campusGold);
+				@include proofPointBackgroundColor("research",$color-slayterSkyBlue);
+				@include proofPointBackgroundColor("visitCampus",$color-yellowWalk);
+				@media (min-width:1200px){
+					.proofPoint{
+						background-image:url('https://www.purdue.edu/purdue/images/homepage-burst2-lg.png');
+					}
+				}
+				@media (min-width:992px) and (max-width:1199px){
+					.proofPoint{
+						background-image:url('https://www.purdue.edu/purdue/images/homepage-burst2-md.png');
+					}
+				}
+				@media (min-width:768px) and (max-width:991px){
+					.proofPoint{
+						background-image:url('https://www.purdue.edu/purdue/images/homepage-burst2-sm.png');
+					}
+				}
+				@media (min-width:481px) and (max-width:767px){
+					.proofPoint{
+						background-image:url('https://www.purdue.edu/purdue/images/homepage-burst2-xs.png');
+					}
+				}
+				@media (max-width:480px){
+					.proofPoint{
+						background-image:url('https://www.purdue.edu/purdue/images/homepage-burst2-mo.png');
+					}
+				}
+			}
+		}
+	}
+}
+
+/*--------------------------------
+links styling based on tile size
+--------------------------------*/
+.boxes{
+
+	//large (lg) screen size
+	@media (min-width:1200px){
+
+		//3x1 tile
+		.tile.col-lg-6.row-lg-1{
+			.proofPoint{
+				padding:25px;
+				font-size:14/16*1em;
+				line-height:16/14*1em;
+				q{
+					margin-bottom:12px;
+					font-size:20/14*1em;
+					line-height:22/20*1em;
+				}
+				em{
+					margin-bottom:4px;
+					font-size:38/20*1em;
+					line-height:40/38*1em;
+				}
+			} //end audience tile
+		} //end 3x1 tile
+
+	} //end @media (min-width:1200px)
+	
+	//medium (md) screen size
+	@media (min-width:992px) and (max-width:1199px){
+
+		//3x1 tile
+		.tile.col-md-6.row-md-1{
+			.proofPoint{
+				padding:21px 20px;
+				font-size:12/16*1em;
+				line-height:13/12*1em;
+				q{
+					margin-bottom:10px;
+					font-size:17/12*1em;
+					line-height:18/17*1em;
+				}
+				em{
+					margin-bottom:3px;
+					font-size:31/17*1em;
+					line-height:33/31*1em;
+				}
+			} //end audience tile
+		} //end 3x1 tile
+
+	} //end @media (min-width:992px) and (max-width:1199px)
+
+	//small (sm) screen size
+	@media (min-width:768px) and (max-width:991px){
+
+		//3x1 tile
+		.tile.col-sm-12.row-sm-1{
+			.proofPoint{
+				padding:20px;
+				font-size:14/16*1em;
+				line-height:16/14*1em;
+				q{
+					margin-bottom:6px;
+					font-size:24/14*1em;
+					line-height:26/24*1em;
+				}
+				em{
+					margin-bottom:2px;
+					font-size:45/24*1em;
+					line-height:47/45*1em;
+				}
+			} //end audience tile
+		} //end 3x1 tile
+
+	} //end @media (min-width:768px) and (max-width:991px)
+	@media (min-width:480px) and (max-width:767px){
+		
+		//2x2 tile
+		.proofPointContainer{
+			height:auto !important;
+		}
+		.tile.col-xs-12.row-xs-2{
+			.proofPoint{
+				padding:52px 20px;
+				font-size:14/18*1em;
+				line-height:16/14*1em;
+				q{
+					margin-bottom:6px;
+					font-size:24/14*1em;
+					line-height:26/24*1em;
+				}
+				em{
+					margin-bottom:2px;
+					font-size:50/24*1em;
+					line-height:52/50*1em;
+				}
+			} //end audience tile
+		} //end 2x2 tile
+
+	} //end @media (min-width:480px) and (max-width:767px)
+
+	@media (max-width:479px){
+
+		//2x2 tile
+		.proofPointContainer{
+			height:auto !important;
+		}
+		.tile.col-xs-12.row-xs-2{
+			.proofPoint{
+				padding:42px 15px;
+				font-size:14/18*1em;
+				line-height:16/14*1em;
+				q{
+					margin-bottom:6px;
+					font-size:22/14*1em;
+					line-height:24/22*1em;
+				}
+				em{
+					margin-bottom:2px;
+					font-size:30/22*1em;
+					line-height:32/30*1em;
+				}
+			} //end audience tile
+		} //end 2x2 tile
+
+	} //end @media (max-width:479px)
+}

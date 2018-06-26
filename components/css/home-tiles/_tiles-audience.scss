@@ -1,0 +1,674 @@
+.content{
+	.boxes{
+		.row{
+			.tile{
+				a.audience{
+					.caption{
+						line-height:1.1em;
+						.divider{
+							background-color:#fff;
+						}
+						.fa{
+							color:#fff;
+						}
+					}
+				}
+				a.audience:link{
+					color:#fff;
+					font-weight:400;
+					text-decoration:none;
+				}
+				a.audience:visited{
+					color:#fff;
+					font-weight:400;
+					text-decoration:none;
+				}
+				a.audience:hover{
+					color:#fff;
+					font-weight:400;
+					text-decoration:none;
+				}
+				a.audience:active{
+					color:#fff;
+					font-weight:400;
+					text-decoration:none;
+				}
+			}
+			.tile.icon{
+				@mixin iconDividerColor($audience,$color){
+					a.audience.#{$audience}{
+						.caption{
+							.divider{
+								background-color:$color;
+							}
+							.fa{
+								color:$color;
+							}
+						}
+					}
+				}
+				@include iconDividerColor("acceptToday",$color-celeryBogGreen);
+				@include iconDividerColor("alumni",$color-campusGold);
+				@include iconDividerColor("applyNow",$color-campusGold);
+				@include iconDividerColor("artsCulture",$color-mackeyOrange);
+				@include iconDividerColor("careers",$color-ameliaSkyBlue);
+				@include iconDividerColor("corporatePartners",$color-ameliaSkyBlue);
+				@include iconDividerColor("currentStudents",$color-fountainRunTeal);
+				@include iconDividerColor("events",$color-yellowWalk);
+				@include iconDividerColor("facultyStaff",$color-springFestGreen);
+				@include iconDividerColor("giveNow",$color-yellowWalk);
+				@include iconDividerColor("news",$color-campusGold);
+				@include iconDividerColor("inclusion",$color-campusGold);
+				@include iconDividerColor("parentsFamilies",$color-rossAdeGreen);
+				@include iconDividerColor("prospectiveStudents",$color-campusGold);
+				@include iconDividerColor("research",$color-slayterSkyBlue);
+				@include iconDividerColor("visitCampus",$color-yellowWalk);
+			}
+		}
+	}
+}
+
+/*--------------------------------
+links styling based on tile size
+--------------------------------*/
+.boxes{
+	.tile.icon{
+		a.audience{
+			background-image:url('https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png');
+			background-repeat:repeat;
+		}
+	}
+
+	//large (lg) screen size
+	@media (min-width:1200px){
+		.tile{
+			a.audience{
+				.divider{
+					width:60px;
+					height:8px;
+					margin:10px 0;
+				}
+			}
+		}
+		//1x1 tile
+		.tile.col-lg-2.row-lg-1{
+			//audience tile
+			a.audience{
+				font-size:22/16*1em;
+				.fa{
+					font-size:40px;
+				}
+				.icon{
+					height:40px;
+				}
+				.divider{
+					display:none;
+				}
+				.text{
+					display:block;
+				}
+			} //end audience tile
+		} //end 1x1 tile
+
+		//1x2 tile
+		.tile.col-lg-2.row-lg-2{
+			//audience tile
+			a.audience{
+				font-size:28/16*1em;
+				.fa{
+					font-size:50px;
+				}
+				img.icon{
+					height:50px;
+				}
+				.divider{
+					display:block;
+				}
+			} //end audience tile
+		} //end 1x2 tile
+
+		//1x3 tile
+		.tile.col-lg-2.row-lg-3{
+			//audience tile
+			a.audience{
+				font-size:28/16*1em;
+				.fa{
+					font-size:50px;
+				}
+				img.icon{
+					height:50px;
+				}
+				.divider{
+					display:block;
+				}
+			} //end audience tile
+		} //end 1x3 tile
+
+		//2x1 tile
+		.tile.col-lg-4.row-lg-1{
+			//audience tile
+			a.audience{
+				font-size:28/16*1em;
+				.fa{
+					display:none;
+				}
+				img.icon{
+					display:none;
+				}
+				.divider{
+					display:block;
+				}
+			} //end audience tile
+		} //end 2x1 tile
+
+		//3x1 tile
+		.tile.col-lg-6.row-lg-1{
+			//audience tile
+			a.audience{
+				font-size:28/16*1em;
+				.fa{
+					position:absolute;
+					right:0;
+					bottom:0;
+					font-size:60px;
+					display:block;
+				}
+				img.icon{
+					position:absolute;
+					right:0;
+					bottom:0;
+					height:60px;
+					display:block;
+				}
+				.divider{
+					display:block;
+				}
+				.text{
+					display:block;
+					max-width:400px;
+				}
+			} //end audience tile
+		} //end 3x1 tile
+
+		//2x2,2x3, & 3x3 tile
+		.tile.col-lg-6.row-lg-2,.tile.col-lg-4.row-lg-2,.tile.col-lg-4.row-lg-3,.tile.col-lg-6.row-lg-3{
+			//audience tile
+			a.audience{
+				font-size:38/16*1em;
+				text-shadow:#000 1px 1px 5px;
+				.fa{
+					display:none;
+				}
+				img.icon{
+					display:none;
+				}
+				.divider{
+					display:block;
+					box-shadow:#000 1px 1px 5px;
+				}
+			} //end audience tile
+		} //end 3x3 tile
+
+	} //end @media (min-width:1200px)
+	
+	//medium (md) screen size
+	@media (min-width:992px) and (max-width:1199px){
+		.tile{
+			a.audience{
+				.divider{
+					width:55px;
+					height:6px;
+					margin-top:8px;
+					margin-bottom:10px;
+				}
+			}
+		}
+		//1x1 tile
+		.tile.col-md-2.row-md-1{
+			//audience tile
+			a.audience{
+				font-size:20/16*1em;
+				.fa{
+					font-size:30px;
+				}
+				img.icon{
+					height:30px;
+				}
+				.divider{
+					display:none;
+				}
+				.text{
+					display:block;
+				}
+			} //end audience tile
+		} //end 1x1 tile
+
+		//1x2 tile
+		.tile.col-md-2.row-md-2{
+			//audience tile
+			a.audience{
+				font-size:24/16*1em;
+				.fa{
+					font-size:45px;
+				}
+				img.icon{
+					height:45px;
+				}
+				.divider{
+					display:block;
+				}
+			} //end audience tile
+		} //end 1x2 tile
+
+		//1x2 tile
+		.tile.col-md-2.row-md-3{
+			//audience tile
+			a.audience{
+				font-size:24/16*1em;
+				.fa{
+					font-size:45px;
+				}
+				img.icon{
+					height:45px;
+				}
+				.divider{
+					display:block;
+				}
+			} //end audience tile
+		} //end 1x2 tile
+
+		//2x1 tile
+		.tile.col-md-4.row-md-1{
+			//audience tile
+			a.audience{
+				font-size:24/16*1em;
+				.fa{
+					display:none;
+				}
+				img.icon{
+					display:none;
+				}
+				.divider{
+					display:block;
+				}
+			} //end audience tile
+		} //end 2x1 tile
+
+		//3x1 tile
+		.tile.col-md-6.row-md-1{
+			//audience tile
+			a.audience{
+				font-size:24/16*1em;
+				.fa{
+					position:absolute;
+					right:0;
+					bottom:0;
+					font-size:50px;
+					display:block;
+				}
+				img.icon{
+					position:absolute;
+					right:0;
+					bottom:0;
+					height:50px;
+					display:block;
+				}
+				.divider{
+					display:block;
+				}
+				.text{
+					display:block;
+					max-width:325px;
+				}
+			} //end audience tile
+		} //end 3x1 tile
+
+		//2x2
+		.tile.col-md-4.row-md-2{
+			//audience tile
+			a.audience{
+				font-size:32/16*1em;
+				text-shadow:#000 1px 1px 5px;
+				.fa{
+					display:none;
+				}
+				img.icon{
+					display:none;
+				}
+				.divider{
+					display:block;
+					box-shadow:#000 1px 1px 5px;
+				}
+			} //end audience tile
+		}
+
+		//2x3, & 3x3 tile
+		.tile.col-md-6.row-md-2,.tile.col-md-4.row-md-3,.tile.col-md-6.row-md-3{
+			//audience tile
+			a.audience{
+				font-size:38/16*1em;
+				text-shadow:#000 1px 1px 5px;
+				.fa{
+					display:none;
+				}
+				img.icon{
+					display:none;
+				}
+				.divider{
+					display:block;
+					background-color:#fff;
+					margin-top:10px;
+					margin-bottom:10px;
+					box-shadow:#000 1px 1px 5px;
+				}
+			} //end audience tile
+		} //end 3x3 tile
+
+	} //end @media (min-width:992px) and (max-width:1199px)
+
+	//small (sm) screen size
+	@media (min-width:768px) and (max-width:991px){
+		.tile{
+			a.audience{
+				.divider{
+					width:60px;
+					height:8px;
+					margin-top:10px;
+					margin-bottom:10px;
+				}
+			}
+		}
+
+		//1x1 tile
+		.tile.col-sm-4.row-sm-1{
+			//audience tile
+			a.audience{
+				font-size:24/16*1em;
+				.fa{
+					font-size:40px;
+				}
+				img.icon{
+					height:40px;
+				}
+				.divider{
+					display:none;
+				}
+				.text{
+					display:block;
+				}
+			} //end audience tile
+		} //end 1x1 tile
+
+		//1x2 and 1x3 tile
+		.tile.col-sm-4.row-sm-2,.tile.col-sm-4.row-sm-3{
+			//audience tile
+			a.audience{
+				font-size:28/16*1em;
+				.fa{
+					font-size:50px;
+				}
+				img.icon{
+					height:50px;
+				}
+				.divider{
+					display:block;
+				}
+			} //end audience tile
+		} //end 1x2 tile
+
+		//2x1 and 3x1 tile
+		.tile.col-sm-8.row-sm-1,.tile.col-sm-12.row-sm-1{
+			//audience tile
+			a.audience{
+				font-size:28/16*1em;
+				.fa{
+					position:absolute;
+					right:0;
+					bottom:0;
+					font-size:70px;
+				}
+				img.icon{
+					position:absolute;
+					right:0;
+					bottom:0;
+					height:70px;
+				}
+				.divider{
+					display:block;
+				}
+				.text{
+					display:inline-block;
+					max-width:75%;
+				}
+			} //end audience tile
+		} //end 1x2 tile
+
+		//2x2, 2x3 and 3x2 tile
+		.tile.col-sm-8.row-sm-2,.tile.col-sm-8.row-sm-3,.tile.col-sm-12.row-sm-2{
+			//audience tile
+			a.audience{
+				font-size:38/16*1em;
+				text-shadow:#000 1px 1px 5px;
+				.fa{
+					display:none;
+				}
+				img.icon{
+					display:none;
+				}
+				.divider{
+					display:block;
+					box-shadow:#000 1px 1px 5px;
+				}
+			} //end audience tile
+		} //end 3x3 tile
+
+	} //end @media (min-width:768px) and (max-width:991px)
+	@media (min-width:480px) and (max-width:767px){
+		.tile{
+			a.audience{
+				.divider{
+					width:55px;
+					height:6px;
+					margin-top:10px;
+					margin-bottom:10px;
+				}
+			}
+		}
+		//1x1 tile
+		.tile.col-xs-6.row-xs-1{
+			//audience tile
+			a.audience{
+				font-size:24/18*1em;
+				.fa{
+					position:absolute;
+					bottom:0;
+					right:0;					
+					margin-bottom:0px;
+					font-size:38px;
+				}
+				img.icon{
+					position:absolute;
+					bottom:0;
+					right:0;					
+					margin-bottom:0px;
+					height:38px;
+				}
+				.divider{
+					display:none;
+				}
+				.text{
+					position:absolute;
+					display:block;
+					bottom:0;
+					left:0;
+					width:65%;
+				}
+			} //end audience tile
+		} //end 1x1 tile
+
+		//1x2 tile
+		.tile.col-xs-6.row-xs-2{
+			//audience tile
+			a.audience{
+				font-size:28/18*1em;
+				.fa{
+					font-size:50px;
+				}
+				img.icon{
+					height:50px;
+				}
+				.divider{
+					display:block;
+				}
+			} //end audience tile
+		} //end 1x2 tile
+
+		//2x1 tile
+		.tile.col-xs-12.row-xs-1{
+			//audience tile
+			a.audience{
+				font-size:24/18*1em;
+				.fa{
+					position:absolute;
+					right:0;
+					bottom:0;
+					font-size:60px;
+				}
+				img.icon{
+					position:absolute;
+					right:0;
+					bottom:0;
+					height:60px;
+				}
+				.divider{
+					display:block;
+				}
+				.text{
+					display:inline-block;
+					max-width:72%;
+				}
+			} //end audience tile
+		} //end 1x2 tile
+
+		//2x2 & 2x3 tile
+		.tile.col-xs-12.row-xs-2,.tile.col-xs-12.row-xs-3{
+			//audience tile
+			a.audience{
+				font-size:38/18*1em;
+				text-shadow:#000 1px 1px 5px;
+				.fa{
+					display:none;
+				}
+				img.icon{
+					display:none;
+				}
+				.divider{
+					display:block;
+					box-shadow:#000 1px 1px 5px;
+				}
+			} //end audience tile
+		} //end 2x3 tile
+
+	} //end @media (min-width:480px) and (max-width:767px)
+
+	@media (max-width:479px){
+		.tile{
+			a.audience{
+				.divider{
+					width:55px;
+					height:6px;
+					margin-top:10px;
+					margin-bottom:10px;
+				}
+			}
+		}
+		//1x1 tile
+		.tile.col-xs-6.row-xs-1{
+			//audience tile
+			a.audience{
+				font-size:20/18*1em;
+				line-height:1em;
+				.fa{
+					display:block;
+					font-size:28px;
+				}
+				img.icon{
+					display:block;
+					height:28px;
+					margin-bottom:3px;
+				}
+				.divider{
+					display:none;
+				}
+				.text{
+					display:block;
+					width:100%;
+				}
+			} //end audience tile
+		} //end 1x1 tile
+
+		//1x2 tile
+		.tile.col-xs-6.row-xs-2{
+			//audience tile
+			a.audience{
+				font-size:24/18*1em;
+				.fa{
+					font-size:45px;
+				}
+				img.icon{
+					height:45px;
+				}
+				.divider{
+					display:block;
+				}
+			}
+		} //end 1x2 tile
+
+		//2x1 tile
+		.tile.col-xs-12.row-xs-1{
+			//audience tile
+			a.audience{
+				font-size:22/18*1em;
+				.fa{
+					position:absolute;
+					right:0;
+					bottom:0;
+					font-size:50px;
+				}
+				img.icon{
+					position:absolute;
+					right:0;
+					bottom:0;
+					height:50px;
+				}
+				.divider{
+					display:block;
+				}
+				.text{
+					display:inline-block;
+					max-width:70%;
+				}
+			} //end audience tile
+		} //end 1x2 tile
+
+		//2x2 & 2x3 tile
+		.tile.col-xs-12.row-xs-2,.tile.col-xs-12.row-xs-3{
+			//audience tile
+			a.audience{
+				font-size:38/18*1em;
+				text-shadow:#000 1px 1px 5px;
+				.fa{
+					display:none;
+				}
+				img.icon{
+					display:none;
+				}
+				.divider{
+					display:block;
+					box-shadow:#000 1px 1px 5px;
+				}
+			} //end audience tile
+		} //end 2x3 tile
+
+	} //end @media (max-width:479px)
+}
