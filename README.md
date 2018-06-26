@@ -42,9 +42,22 @@ This project was setup to use [Gulp.js](http://gulpjs.com/), which runs on [Node
 ```
 gulp
 ```
-build html and **expanded** css to `/builds/development/*`, start live reload, and watch for changes
+1. deletes everything the `/builds/development/` directory
+2. builds HTML and **expanded** CSS with sourcemaps to `/builds/development/*`
+3. starts a local server, using `/builds/development/` as the base directory
+4. initiates a live reload, that refreshes pages upon a change to the HTML or CSS (SASS)
 
 ```
 NODE_ENV=production gulp
 ```
-build html and **compressed** css to `/builds/production/*`, start live reload, and watch for changes
+1. deletes everything in the `/builds/production/` directory
+2. builds HTML and **compressed** CSS with to `/builds/production/*`
+3. starts a local server, using `/builds/production/` as the base directory
+4. initiates a live reload, that refreshes pages upon a change to the HTML or CSS (SASS)
+
+```
+gulp zip
+```
+1. deletes everything in the `/builds/production/` directory
+2. builds HTML and **compressed** CSS with to `/builds/production/*`
+3. places a zipped version of the `/builds/production/` directory in `/builds/` named `vX.X.X` to be renamed based on the version of the build
