@@ -9,16 +9,18 @@ $block:button;
 	&::before,&::after{
 		content:'';
 		display:block;
-		flex-grow:0;
+		flex-grow:1;
 		flex-shrink:1;
-		flex-basis:calc-toRem(calc-ratioLgMd(62));
+		flex-basis:10px;
 		width:calc-toRem(calc-ratioLgMd(62));
 	}
 	&::before{
 		order:0;
+		float:left;
 	}
 	&::after{
 		order:2;
+		float:right;
 	}
 	max-width:100%;
 	margin-top:calc-toRem(15);
@@ -64,7 +66,6 @@ $block:button;
 		padding-right:0;
 		outline-style:none;
 		&::before,&::after{
-			flex-basis:calc-toRem(calc-ratioLgMd(38));
 			width:calc-toRem(calc-ratioLgMd(38));
 		}
 		&:link,&:visited{
@@ -72,6 +73,29 @@ $block:button;
 		}
 		&:hover,&:visited,&:focus{
 			outline-style:solid;
+		}
+	}
+	@mixin button-slim{
+		display:inline-flex;
+		font-weight:400;
+		text-transform:none;
+		font-size:calc-toRem(16);
+		&:link,&:visited,&:hover,&:active{
+			font-weight:400;
+		}
+	}
+	&-slim{
+		@include button-slim;
+		&-slim{
+			&::before,&::after{
+				width:calc-toRem(calc-ratioLgMd(18));
+			}
+			&-md{
+				@include button-slim;
+				&::before,&::after{
+					width:calc-toRem(calc-ratioLgMd(18));
+				}
+			}
 		}
 	}
 	$i: 0;
@@ -270,38 +294,17 @@ $block:button;
 			}
 		}
 	}
+	@mixin button-wide{
+		display:block;
+		display:flex;
+		width:100%;
+		min-width:auto;
+		&::before,&::after{
+			width:auto;
+		}
+	}
 	&-wide{
-		@mixin button-wide{
-			display:block;
-			display:flex;
-			width:100%;
-			min-width:auto;
-			&::before,&::after{
-				flex-grow:1;
-				flex-basis:calc-toRem(15);
-			}
-		}
 		@include button-wide;
-		@media (min-width:1200px){
-			&-lg{
-				@include button-wide;
-			}
-		}
-		@media (min-width:992px) and (max-width:1199px){
-			&-md{
-				@include button-wide;
-			}
-		}
-		@media (min-width:768px) and (max-width:991px){
-			&-sm{
-				@include button-wide;
-			}
-		}
-		@media (max-width:767px){
-			&-xs{
-				@include button-wide;
-			}
-		}
 	}
 	&__icon{
 		transition:color, transform 0.1s;
@@ -326,7 +329,6 @@ $block:button;
 		padding:calc-toRem(10) 2px;
 		font-size:calc-toRem(18);
 		&::before,&::after{
-			flex-basis:calc-toRem(62);
 			width:calc-toRem(62);
 		}
 		&-bar{
@@ -338,8 +340,29 @@ $block:button;
 		&-icon{
 			padding-right:0;
 			&::before,&::after{
-				flex-basis:calc-toRem(40);
 				width:calc-toRem(40);
+			}
+		}
+		&-wide{
+			&::before,&::after{
+				width:auto;
+			}
+			&-lg{
+				@include button-wide;
+				&::before,&::after{
+					width:auto;
+				}
+			}
+		}
+		&-slim{
+			&::before,&::after{
+				width:calc-toRem(20);
+			}
+			&-lg{
+				@include button-slim;
+				&::before,&::after{
+					width:calc-toRem(20);
+				}
 			}
 		}
 		&__icon{
@@ -348,18 +371,39 @@ $block:button;
 		}
 	}
 	@media (min-width:768px) and (max-width:991px){
-		//padding:calc-toRem(10) calc-toRem(67);
 		padding:calc-toRem(10) 2px;
 		font-size:calc-toRem(calc-ratioLgMd(20));
 		&::before,&::after{
-			flex-basis:calc-toRem(65);
 			width:calc-toRem(65);
 		}
 		&-icon{
 			padding-right:0;
 			&::before,&::after{
-				flex-basis:calc-toRem(43);
 				width:calc-toRem(43);
+			}
+		}
+		&-wide{
+			&::before,&::after{
+				width:auto;
+			}
+			&-sm{
+				@include button-wide;
+				&::before,&::after{
+					width:auto;
+				}
+			}
+		}
+		&-slim{
+			&::before,&::after{
+				width:calc-toRem(calc-ratioLgMd(20));
+				flex-basis:auto;
+			}
+			&-sm{
+				@include button-slim;
+				&::before,&::after{
+					width:calc-toRem(calc-ratioLgMd(20));
+					flex-basis:auto;
+				}
 			}
 		}
 		&__icon{
@@ -368,11 +412,9 @@ $block:button;
 		}
 	}
 	@media (max-width:767px){
-		//padding:calc-toRem(10) calc-toRem(47);
 		padding:calc-toRem(10) 2px;
 		font-size:calc-toRem(18);
 		&::before,&::after{
-			flex-basis:calc-toRem(60);
 			width:calc-toRem(60);
 		}
 		&-bar{
@@ -384,8 +426,31 @@ $block:button;
 		&-icon{
 			padding-right:0;
 			&::before,&::after{
-				flex-basis:calc-toRem(38);
 				width:calc-toRem(38);
+			}
+		}
+		&-wide{
+			&::before,&::after{
+				width:auto;
+			}
+			&-xs{
+				@include button-wide;
+				&::before,&::after{
+					width:auto;
+				}
+			}
+		}
+		&-slim{
+			&::before,&::after{
+				width:calc-toRem(calc-ratioLgMd(20));
+				flex-basis:auto;
+			}
+			&-xs{
+				@include button-slim;
+				&::before,&::after{
+					width:calc-toRem(calc-ratioLgMd(20));
+					flex-basis:auto;
+				}
 			}
 		}
 		&__icon{
