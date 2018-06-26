@@ -35,10 +35,10 @@ This project was setup to use [Gulp.js](http://gulpjs.com/), which runs on [Node
    npm install
    ```
 
-##Development
+## Development
 *The following instructions only apply to those using Gulp.js for workflow management.*
 
-###Commands
+### Commands
 ```
 gulp
 ```
