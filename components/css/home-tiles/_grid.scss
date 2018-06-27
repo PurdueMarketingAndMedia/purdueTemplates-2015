@@ -3,7 +3,7 @@ $lgRowHeight:140+20;
 $mdRowHeight:((140/1160)*960)+20; //Keep same proportion of tile height between large and medium. (1160 = full lg width | 960 = full md width)
 $smRowHeight:140+20;
 $xsRowHeight:135+20;
-$smNumRows:7;
+$smNumRows:8;
 
 /*--------------------------------
 tile sizing and positioning
@@ -93,7 +93,7 @@ tile sizing and positioning
 					width:100%;
 					height:100%;
 					padding:20px;
-					font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif;
+					font-family:$font-archivo-narrow;
 					font-weight:bold;
 					.caption{
 						position:absolute;

@@ -3,7 +3,7 @@
 		.row{
 			.tile{
 				a.news{
-					font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+					font-family:$font-archivo-narrow !important;
 					.caption{
 						.divider{
 							background-color:$color-campusGold;
@@ -21,7 +21,7 @@
 					width:auto;
 					height:auto;
 					padding:0;
-					font-family:'archivoNarrow',"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+					font-family:$font-archivo-narrow !important;
 					.fa{
 						display:inline-block;
 						margin:0 0 0 10px;
