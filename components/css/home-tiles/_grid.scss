@@ -10,7 +10,7 @@ tile sizing and positioning
 --------------------------------*/
 
 .content{
-    background-image:url('/purdue/images/home/background-spring.jpg');
+    //background-image:url('/purdue/images/home/background-spring.jpg');
     background-size:cover;
     background-position:center center;
     .alert{
@@ -51,7 +51,8 @@ tile sizing and positioning
         }
     }
     .boxes{
-        background-image:url('https://purdue.edu/purdue/images/templateElements/2015/lighter50.png');
+        //background-image:url('https://purdue.edu/purdue/images/templateElements/2015/lighter50.png');
+        background-color: rgba(255,255,255,0.5);
         background-repeat:repeat;
         padding:10px 20px;
         .row{
