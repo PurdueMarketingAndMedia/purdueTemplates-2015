@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		@@include('../modules/head/_all.html',{
+			"title":"Home Page with Audience Tiles Template",
+			"description":"This is an example of the home page audience tiles template.",
+			"author":"Place your office here.",
+			"css":"../css/home-tiles/home-tiles",
+			"includeArchivoBlack":false
+		})
+	</head>
+	<body>
+		@@include('../modules/header/_all.html',{
+			"siteName":"Organization Name Here",
+			"siteTagline":"Secondary Name College, School or Unit"
+		})
+		@@include('../modules/navigation/_main.html')
+		<main id="main" class="content">
+			<div class="container boxes transition">
+				<div class="row tiles">
+					@@include('../modules/content-home/tiles/_audience.html')
+				</div>
+			</div>
+		</main>
+		@@include('../modules/footer/_all.html')
+	</body>
+</html>
