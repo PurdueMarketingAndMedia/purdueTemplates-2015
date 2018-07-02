@@ -10,51 +10,14 @@ tile sizing and positioning
 --------------------------------*/
 
 .content{
-    background-image:url('/purdue/images/home/background-spring.jpg');
     background-size:cover;
     background-position:center center;
-    .alert{
-        margin:0 -15px !important;
-        padding:0;
-        .emergency{
-            margin:10px 0;
-            >a{
-                display:block;
-                width:100%;
-                padding:20px;
-                font-size:1.5em;
-            }
-            >a:link{
-                background-color:#f00;
-                color:#fff;
-                font-weight:400;
-                text-decoration:none;
-            }
-            >a:visited{
-                background-color:#f00;
-                color:#fff;
-                font-weight:400;
-                text-decoration:none;
-            }
-            >a:hover{
-                background-color:#f00;
-                color:#fff;
-                font-weight:400;
-                text-decoration:none;
-            }
-            >a:active{
-                background-color:#f00;
-                color:#fff;
-                font-weight:400;
-                text-decoration:none;
-            }
-        }
-    }
     .boxes{
         background-image:url('https://purdue.edu/purdue/images/templateElements/2015/lighter50.png');
         background-repeat:repeat;
         padding:10px 20px;
         .row{
+        		list-style-type:none;
             position: static;
             margin:0 -15px;
             .tile{
