@@ -13,17 +13,21 @@ tile sizing and positioning
     background-size:cover;
     background-position:center center;
     .boxes{
-        background-image:url('https://purdue.edu/purdue/images/templateElements/2015/lighter50.png');
+        //background-image:url('https://purdue.edu/purdue/images/templateElements/2015/lighter50.png');
+        background-color: rgba(255,255,255,0.5);
         background-repeat:repeat;
         padding:10px 20px;
+
         .row{
         		list-style-type:none;
             position: static;
             margin:0 -15px;
+
             .tile{
                 position:relative;
                 padding:10px;
-                a,.proof{
+
+                a, .proof{
                     position:relative;
                     display:block;
                     width:100%;
@@ -31,12 +35,14 @@ tile sizing and positioning
                     padding:20px;
                     font-family:$font-archivo-narrow;
                     font-weight:bold;
+
                     .caption{
                         position:absolute;
                         left:20px;
                         right:20px;
                         bottom:20px;
-                        .fa,.icon{
+
+                        .fa, .icon{
                             display:block;
                             margin-bottom:5px;
                         }
@@ -44,10 +50,13 @@ tile sizing and positioning
                 }
             }
             .tile.photo{
-                a,.proof{
+
+                a, .proof{
                     background-size:cover;
                     background-position:center center;
+
                     .caption{
+
                         .divider{
                             background-color:#fff;
                         }
@@ -58,29 +67,36 @@ tile sizing and positioning
     }
 }
 
+// mobile/tablet only
 @media (max-width:767px){
     .content{
         background-image:none;
         background-color:#fff;
+
         .boxes{
-            .row-xs-1{
-                height:((($xsRowHeight - 30)*1)/18)*1em;
+            @for $i from 1 through 6 {
+                .row-xs-#{$i} {
+                    height:((($xsRowHeight - 30)*$i)/18)*1em;
+                }
             }
-            .row-xs-2{
-                height:((($xsRowHeight - 30)*2)/18)*1em;
-            }
-            .row-xs-3{
-                height:((($xsRowHeight - 30)*3)/18)*1em;
-            }
-            .row-xs-4{
-                height:((($xsRowHeight - 30)*4)/18)*1em;
-            }
-            .row-xs-5{
-                height:((($xsRowHeight - 30)*5)/18)*1em;
-            }
-            .row-xs-6{
-                height:((($xsRowHeight - 30)*6)/18)*1em;
-            }
+            // .row-xs-1{
+            //     height:((($xsRowHeight - 30)*1)/18)*1em;
+            // }
+            // .row-xs-2{
+            //     height:((($xsRowHeight - 30)*2)/18)*1em;
+            // }
+            // .row-xs-3{
+            //     height:((($xsRowHeight - 30)*3)/18)*1em;
+            // }
+            // .row-xs-4{
+            //     height:((($xsRowHeight - 30)*4)/18)*1em;
+            // }
+            // .row-xs-5{
+            //     height:((($xsRowHeight - 30)*5)/18)*1em;
+            // }
+            // .row-xs-6{
+            //     height:((($xsRowHeight - 30)*6)/18)*1em;
+            // }
         }
     }
 }
@@ -105,21 +121,27 @@ tile sizing and positioning
         .boxes{
             .row.tiles{
                 height:(($smRowHeight*$smNumRows)/16)*1em; //5 total rows (px added to make the height in px)
-                .row-sm-1{
-                    height:(1/$smNumRows)*100%;
+
+                @for $i from 1 through 5 {
+                    .row-sm-#{$i} {
+                        height:($i/$smNumRows)*100%;
+                    }
                 }
-                .row-sm-2{
-                    height:(2/$smNumRows)*100%;
-                }
-                .row-sm-3{
-                    height:(3/$smNumRows)*100%;
-                }
-                .row-sm-4{
-                    height:(4/$smNumRows)*100%;
-                }
-                .row-sm-5{
-                    height:(5/$smNumRows)*100%;
-                }
+                // .row-sm-1{
+                //     height:(1/$smNumRows)*100%;
+                // }
+                // .row-sm-2{
+                //     height:(2/$smNumRows)*100%;
+                // }
+                // .row-sm-3{
+                //     height:(3/$smNumRows)*100%;
+                // }
+                // .row-sm-4{
+                //     height:(4/$smNumRows)*100%;
+                // }
+                // .row-sm-5{
+                //     height:(5/$smNumRows)*100%;
+                // }
                 .row-sm-6{
                     height:100%;
                 }
@@ -135,33 +157,38 @@ tile sizing and positioning
                 .top-sm-1{
                     top:0%;
                 }
-                .top-sm-2{
-                    top:(1/$smNumRows)*100%;
+                @for $i from 2 through 10 {
+                    .top-sm-#{$i} {
+                        top:($i - 1)/$smNumRows*100%;
+                    }
                 }
-                .top-sm-3{
-                    top:(2/$smNumRows)*100%;
-                }
-                .top-sm-4{
-                    top:(3/$smNumRows)*100%;
-                }
-                .top-sm-5{
-                    top:(4/$smNumRows)*100%;
-                }
-                .top-sm-6{
-                    top:(5/$smNumRows)*100%;
-                }
-                .top-sm-7{
-                    top:(6/$smNumRows)*100%;
-                }
-                .top-sm-8{
-                    top:(7/$smNumRows)*100%;
-                }
-                .top-sm-9{
-                    top:(8/$smNumRows)*100%;
-                }
-                .top-sm-10{
-                    top:(9/$smNumRows)*100%;
-                }
+                // .top-sm-2{
+                //     top:(1/$smNumRows)*100%;
+                // }
+                // .top-sm-3{
+                //     top:(2/$smNumRows)*100%;
+                // }
+                // .top-sm-4{
+                //     top:(3/$smNumRows)*100%;
+                // }
+                // .top-sm-5{
+                //     top:(4/$smNumRows)*100%;
+                // }
+                // .top-sm-6{
+                //     top:(5/$smNumRows)*100%;
+                // }
+                // .top-sm-7{
+                //     top:(6/$smNumRows)*100%;
+                // }
+                // .top-sm-8{
+                //     top:(7/$smNumRows)*100%;
+                // }
+                // .top-sm-9{
+                //     top:(8/$smNumRows)*100%;
+                // }
+                // .top-sm-10{
+                //     top:(9/$smNumRows)*100%;
+                // }
             }
         }
     }
