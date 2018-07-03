@@ -20,13 +20,14 @@
 					bottom:30px;
 					width:auto;
 					height:auto;
+					background:none;
 					padding:0;
 					font-family:$font-archivo-narrow !important;
 					.fa{
 						display:inline-block;
 						margin:0 0 0 10px;
 						color:$color-campusGold;
-						font-size:1.25em;
+						font-size:1em;
 					}
 				}
 				a.news:link{
@@ -242,7 +243,7 @@ links styling based on tile size
 			a.newsroom + a.news{
 				z-index:0;
 				.caption{
-					padding:20px 20px 53/26*1em;
+					padding:20px 20px 40/26*1em;
 				}
 			}
 		}
@@ -279,7 +280,7 @@ links styling based on tile size
 			a.newsroom + a.news{
 				z-index:0;
 				.caption{
-					padding:20px 20px 55/38*1em;
+					padding:20px 20px 56/38*1em;
 				}
 			}
 		} //end 3x3 tile
@@ -444,7 +445,7 @@ links styling based on tile size
 			a.newsroom + a.news{
 				z-index:0;
 				.caption{
-					padding:20px 20px 52/22*1em;
+					padding:20px 20px 40/22*1em;
 				}
 			}
 		}
@@ -481,7 +482,7 @@ links styling based on tile size
 			a.newsroom + a.news{
 				z-index:0;
 				.caption{
-					padding:20px 20px 55/34*1em;
+					padding:20px 20px 65/34*1em;
 				}
 			}
 		} //end 3x3 tile
@@ -639,6 +640,9 @@ links styling based on tile size
 
 	} //end @media (min-width:768px) and (max-width:991px)
 	@media (min-width:480px) and (max-width:767px){
+		.tiles{
+			padding-left:0;
+		}
 		.tile{
 			a.news{
 				.divider{
@@ -755,7 +759,7 @@ links styling based on tile size
 			a.newsroom + a.news{
 				z-index:0;
 				.caption{
-					padding:20px 20px 60/34*1em !important;
+					padding:20px 20px 65/34*1em !important;
 				}
 			}
 			/*a.news{
@@ -813,7 +817,7 @@ links styling based on tile size
 			a.newsroom + a.news{
 				z-index:0;
 				.caption{
-					padding:20px 20px 60/34*1em !important;
+					padding:20px 20px 50/34*1em !important;
 				}
 			}
 		} //end 2x3 tile
@@ -821,6 +825,9 @@ links styling based on tile size
 	} //end @media (min-width:480px) and (max-width:767px)
 
 	@media (max-width:479px){
+		.tiles{
+			padding-left:0;
+		}
 		.tile{
 			a.news{
 				.divider{
