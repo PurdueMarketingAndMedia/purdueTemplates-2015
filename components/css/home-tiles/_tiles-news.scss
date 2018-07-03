@@ -641,7 +641,7 @@ links styling based on tile size
 	} //end @media (min-width:768px) and (max-width:991px)
 	@media (min-width:480px) and (max-width:767px){
 		.tiles{
-			padding-left:0;
+			padding:0;
 		}
 		.tile{
 			a.news{
@@ -826,7 +826,7 @@ links styling based on tile size
 
 	@media (max-width:479px){
 		.tiles{
-			padding-left:0;
+			padding:0;
 		}
 		.tile{
 			a.news{
