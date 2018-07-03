@@ -165,7 +165,10 @@ links styling based on tile size
 				}
 				.divider{
 					display:block;
-					background-color:#fff !important;
+					background-color:#000 !important;
+				}
+				&:link,&:visited,&:hover,&:active{
+					color:#000;
 				}
 			} //end audience tile
 		} //end 2x1 tile
@@ -195,11 +198,14 @@ links styling based on tile size
 				}
 				.divider{
 					display:block;
-					background-color:#fff !important;
+					background-color:#000 !important;
 				}
 				.text{
 					display:block;
 					max-width:400px;
+				}
+				&:link,&:visited,&:hover,&:active{
+					color:#000;
 				}
 			} //end audience tile
 		} //end 3x1 tile
@@ -360,8 +366,11 @@ links styling based on tile size
 					display:none;
 				}
 				.divider{
-					background-color:#fff !important;
+					background-color:#000 !important;
 					display:block;
+				}
+				&:link,&:visited,&:hover,&:active{
+					color:#000;
 				}
 			} //end audience tile
 		} //end 2x1 tile
@@ -391,11 +400,14 @@ links styling based on tile size
 				}
 				.divider{
 					display:block;
-					background-color:#fff !important;
+					background-color:#000 !important;
 				}
 				.text{
 					display:block;
 					max-width:325px;
+				}
+				&:link,&:visited,&:hover,&:active{
+					color:#000;
 				}
 			} //end audience tile
 		} //end 3x1 tile
@@ -542,10 +554,13 @@ links styling based on tile size
 				}
 				.divider{
 					display:block;
-					background-color:#fff !important;
+					background-color:#000 !important;
 				}
 				.text{
 					display:inline-block;
+				}
+				&:link,&:visited,&:hover,&:active{
+					color:#000;
 				}
 			} //end audience tile
 		} //end 1x2 tile
@@ -573,11 +588,14 @@ links styling based on tile size
 				}
 				.divider{
 					display:block;
-					background-color:#fff !important;
+					background-color:#000 !important;
 				}
 				.text{
 					display:inline-block;
 					max-width:75%;
+				}
+				&:link,&:visited,&:hover,&:active{
+					color:#000;
 				}
 			} //end audience tile
 		} //end 1x2 tile
@@ -695,10 +713,13 @@ links styling based on tile size
 				}
 				.divider{
 					display:block;
-					background-color:#fff !important;
+					background-color:#000 !important;
 				}
 				.text{
 					display:inline-block;
+				}
+				&:link,&:visited,&:hover,&:active{
+					color:#000;
 				}
 			} //end audience tile
 		} //end 1x2 tile
@@ -866,10 +887,13 @@ links styling based on tile size
 				}
 				.divider{
 					display:block;
-					background-color:#fff !important;
+					background-color:#000 !important;
 				}
 				.text{
 					display:inline-block;
+				}
+				&:link,&:visited,&:hover,&:active{
+					color:#000;
 				}
 			} //end audience tile
 		} //end 1x2 tile
