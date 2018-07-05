@@ -1,5 +1,6 @@
 // require packages
 var gulp = require('gulp'),
+    concat = require('gulp-concat'),
 
     // enable live reload
     connect = require('gulp-connect'),
@@ -9,26 +10,32 @@ var gulp = require('gulp'),
     htmlPrettify = require('gulp-html-prettify'),
 
     // css/sass
-	sass = require('gulp-sass'),
+    sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     pseudoelements = require('postcss-pseudoelements'), // change double :: to single :
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
 
+    // js
+    browserify = require('browserify'),
+    watchify = require('watchify'),
+    babel = require('gulp-babel'),
+
     //async
     async = require('async'),
 
     //zip
-    gulpZip = require('gulp-zip')
+    gulpZip = require('gulp-zip'),
 
     // del
-    var del = require('del');
+    del = require('del');
 
 // set variables
 var env,
     componentSources,
     htmlSources,
     templateSources,
+    jsSources,
     scssSources,
     sassStyle;
 
@@ -43,6 +50,7 @@ prodOutputDir = 'builds/production';
 componentSources = ['components/**/*'],
 htmlSources = ['components/html/templates/**/*.html'],
 templateSources = ['components/html/modules/**/*.html'],
+jsSources = ['src/js/**/*.js'],
 scssSources = ['components/css/**/*.scss'];
 
 function cleanHtml(production = false){
@@ -189,6 +197,18 @@ function sassBuild(production = false,zip = false){
     });
 }
 
+// js transpiling and bundling
+gulp.task('js',function(){
+  gulp.src(jsSources)
+    .pipe(sourcemaps.init())
+    .pipe(babel({
+      presets: ['env']
+    }))
+    .pipe(concat('all.js'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(devOutputDir+'/js/'));
+});
+
 gulp.task('zip',function(){
     return new Promise((resolve, reject) => {
         let compileHtml = htmlBuild(true,true);
@@ -263,4 +283,4 @@ gulp.task('connect', function() {
 });
 
 // default task when 'gulp' is run
-gulp.task('default',['html','sass','connect','watch']);
+gulp.task('default',['html','js','sass','connect','watch']);

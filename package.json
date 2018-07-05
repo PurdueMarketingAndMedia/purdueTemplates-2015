@@ -19,8 +19,13 @@
     "devDependencies": {
         "async": "^2.1.5",
         "autoprefixer": "^8.0.0",
+        "babel-core": "^6.26.3",
+        "babel-preset-env": "^1.7.0",
         "del": "^3.0.0",
         "gulp": "^3.9.1",
+        "gulp-babel": "^7.0.1",
+        "gulp-browserify": "^0.5.1",
+        "gulp-concat": "^2.6.1",
         "gulp-connect": "^5.0.0",
         "gulp-file-include": "^1.0.0",
         "gulp-html-prettify": "0.0.1",
@@ -28,7 +33,9 @@
         "gulp-sass": "^3.1.0",
         "gulp-sourcemaps": "^2.4.0",
         "gulp-zip": "^4.1.0",
-        "postcss-pseudoelements": "^5.0.0"
+        "postcss-pseudoelements": "^5.0.0",
+        "watchify": "^3.11.0"
     },
-    "browserslist": "> 5% in my stats"
+    "browserslist": "> 5% in my stats",
+    "dependencies": {}
 }
