@@ -20,13 +20,13 @@ var gulp = require('gulp'),
     // js
     watchify = require('watchify'),
     browserify = require('browserify'),
+    babelify = require('babelify'),
     source = require('vinyl-source-stream'),
     buffer = require('vinyl-buffer'),
     gutil = require('gulp-util'),
     glob = require('glob'),
     es = require('event-stream'),
     uglify = require('gulp-uglify'),
-    babelify = require('babelify'),
 
     //async
     async = require('async'),
