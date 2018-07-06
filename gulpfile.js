@@ -1,6 +1,7 @@
 // require packages
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
+    ifelse = require('gulp-if-else'),
 
     // enable live reload
     connect = require('gulp-connect'),
@@ -17,9 +18,15 @@ var gulp = require('gulp'),
     autoprefixer = require('autoprefixer'),
 
     // js
-    browserify = require('browserify'),
     watchify = require('watchify'),
-    babel = require('gulp-babel'),
+    browserify = require('browserify'),
+    source = require('vinyl-source-stream'),
+    buffer = require('vinyl-buffer'),
+    gutil = require('gulp-util'),
+    glob = require('glob'),
+    es = require('event-stream'),
+    uglify = require('gulp-uglify'),
+    babelify = require('babelify'),
 
     //async
     async = require('async'),
@@ -36,6 +43,7 @@ var env,
     htmlSources,
     templateSources,
     jsSources,
+    jsSourcesAll,
     scssSources,
     sassStyle;
 
@@ -47,10 +55,11 @@ devOutputDir = 'builds/development';
 prodOutputDir = 'builds/production';
 
 // define component sources paths
-componentSources = ['components/**/*'],
-htmlSources = ['components/html/templates/**/*.html'],
-templateSources = ['components/html/modules/**/*.html'],
-jsSources = ['src/js/**/*.js'],
+componentSources = ['components/**/*'];
+htmlSources = ['components/html/templates/**/*.html'];
+templateSources = ['components/html/modules/**/*.html'];
+jsSources = 'components/js/**/+(index)*.js';
+jsSourcesAll = 'components/js/**/*.js';
 scssSources = ['components/css/**/*.scss'];
 
 function cleanHtml(production = false){
@@ -198,16 +207,88 @@ function sassBuild(production = false,zip = false){
 }
 
 // js transpiling and bundling
-gulp.task('js',function(){
-  gulp.src(jsSources)
-    .pipe(sourcemaps.init())
-    .pipe(babel({
-      presets: ['env']
-    }))
-    .pipe(concat('all.js'))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(devOutputDir+'/js/'));
+gulp.task('js', function() {
+    glob(jsSources,function (er, files){
+        var streams = files.map(function(fileName) {
+            // Here we instead create a callback to pass to watchify for its
+            // update event.
+            var bundler = watchify(browserify(fileName,
+            {debug: true})),
+            devWatchFn = getWatchifyHandler(bundler,fileName,devOutputDir,false),
+            prodWatchFn = getWatchifyHandler(bundler,fileName,prodOutputDir,false);
+            bundler.on('update', function(i){
+                return es.merge(
+                    getWatchifyHandler(bundler,fileName,devOutputDir,false),
+                    getWatchifyHandler(bundler,fileName,prodOutputDir,false)
+                );
+            });
+            bundler.on('log', gutil.log); // watchify doesn't log by itself
+            //return watchfn(); // run the actual build for the first time
+            return es.merge(devWatchFn,prodWatchFn);
+        });
+        return es.merge(streams);
+    });
 });
+// Create a function that bundles the code and gives it
+// the appropriate file name.
+function getWatchifyHandler(bundler,fileName,output,minify) {
+    var folders = fileName.split("/"),
+        outputJsDirectory = output,
+        reload = (!minify && env == "development") || (minify && env == "production");
+
+    for (let i = 1; i < folders.length; i++) {
+        outputJsDirectory += "/" + folders[i];
+
+        //ignore the name of the file (last item in array)
+        if (i == folders.length - 2) {
+            break;
+        }
+    }
+
+    return bundler.bundle()
+        // log errors if they happen
+        .on('error', gutil.log.bind(gutil,'Browserify Error'))
+        .pipe(source(folders[folders.length - 1]))
+        // optional, remove if you don't need to buffer file contents
+        .pipe(buffer())
+        .pipe(ifelse(minify,
+            function(){
+                return uglify();
+            }
+        ))
+        // optional, remove if you dont want sourcemaps
+        .pipe(ifelse(!minify,
+            function(){
+                return sourcemaps.init({loadMaps: true});
+            }
+        ))
+        .pipe(ifelse(!minify,
+            function(){
+                return sourcemaps.write('./sourcemaps/');
+            }
+        ))
+        .pipe(gulp.dest(outputJsDirectory))
+        .pipe(ifelse(reload,
+            function(){
+                return connect.reload();
+            }
+        ));
+}
+
+function bundle(b) {
+    return b.bundle()
+        // log errors if they happen
+        .on('error', gutil.log.bind(gutil,'Browserify Error'))
+        .pipe(source('index.js'))
+        // optional, remove if you don't need to buffer file contents
+        .pipe(buffer())
+        // optional, remove if you dont want sourcemaps
+        .pipe(sourcemaps.init({loadMaps: true})) // loads map from browserify file
+           // Add transformation tasks to the pipeline here.
+        .transform("babelify", {presets: ["@babel/preset-env"]})
+        .pipe(sourcemaps.write('./sourcemaps/')) // writes .map file
+        .pipe(gulp.dest(devOutputDir+'./js/'));
+}
 
 gulp.task('zip',function(){
     return new Promise((resolve, reject) => {
