@@ -10992,9 +10992,32 @@ blockquote:before, .quote:before {
   margin: 0 auto;
 }
 
+.footer #accordion .motto .taglineContainer--150 {
+  width: 70%;
+}
+
 .footer #accordion .motto .tagline {
   position: relative;
+  display: block;
   padding-bottom: 13.95349%;
+}
+
+.footer #accordion .motto .tagline--150 {
+  padding-bottom: 13.52942%;
+  transition: filter 0.25s ease-in;
+}
+
+.footer #accordion .motto .tagline--150:link, .footer #accordion .motto .tagline--150:visited {
+  filter: brightness(1);
+}
+
+.footer #accordion .motto .tagline--150:hover, .footer #accordion .motto .tagline--150:active, .footer #accordion .motto .tagline--150:focus {
+  filter: brightness(1.1);
+}
+
+.footer #accordion .motto .tagline--150:focus {
+  outline-offset: 4px;
+  outline: dotted 1px #fff;
 }
 
 .footer #accordion .motto .tagline .horizontal, .footer #accordion .motto .tagline .vertical {
@@ -11010,6 +11033,7 @@ blockquote:before, .quote:before {
 }
 
 .footer #accordion .motto .social {
+  clear: both;
   display: block;
   width: 100%;
   padding-top: 5px;
@@ -11137,6 +11161,9 @@ blockquote:before, .quote:before {
   .footer #accordion .motto .taglineContainer {
     width: 80%;
   }
+  .footer #accordion .motto .taglineContainer--150 {
+    width: 58%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -11214,9 +11241,16 @@ blockquote:before, .quote:before {
   .footer #accordion .motto .taglineContainer {
     width: auto;
   }
+  .footer #accordion .motto .taglineContainer--150 {
+    float: left;
+    width: 70%;
+  }
   .footer #accordion .motto .taglineContainer .tagline {
     margin-bottom: 10px;
     padding-bottom: 35.14851%;
+  }
+  .footer #accordion .motto .taglineContainer .tagline--150 {
+    padding-bottom: 60.0794%;
   }
   .footer #accordion .motto .vertical {
     display: block;
