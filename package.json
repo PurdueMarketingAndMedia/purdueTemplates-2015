@@ -1,6 +1,6 @@
 {
     "name": "purduetemplates2015",
-    "version": "1.0.0",
+    "version": "1.6.7",
     "description": "The Purdue University templates created in 2015 by Purdue Marketing and Media.",
     "main": "gulpfile.js",
     "scripts": {
