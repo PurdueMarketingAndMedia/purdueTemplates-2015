@@ -10255,7 +10255,8 @@ blockquote:before, .quote:before {
   height: 60px;
 }
 
-.linksContainer .links .columnContainer .column h3 {
+.linksContainer .links .columnContainer .column h2, .linksContainer .links .columnContainer .column h3 {
+  margin: 0;
   padding: 5px 0 7px;
   color: inherit;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
