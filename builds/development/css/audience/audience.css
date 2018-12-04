@@ -10489,8 +10489,8 @@ blockquote:before, .quote:before {
   padding-right: 30px;
 }
 
-.storyContainer .story .contentContainer h3 {
-  margin-top: 0;
+.storyContainer .story .contentContainer h2, .storyContainer .story .contentContainer h3 {
+  margin: 0;
   padding-top: 0;
   padding-bottom: 20px;
   color: #000;
