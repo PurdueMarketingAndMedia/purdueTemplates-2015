@@ -8227,6 +8227,10 @@ u {
   background-color: #999;
 }
 
+.top .logo-noBorder:after {
+  display: none;
+}
+
 .top .logo a {
   display: block;
 }
