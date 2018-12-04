@@ -10537,11 +10537,12 @@ blockquote:before, .quote:before {
   padding: 60px 15px;
 }
 
-.eventsFeedContainer .eventsFeed h3, .eventsFeedContainer .newsFeed h3, .newsFeedContainer .eventsFeed h3, .newsFeedContainer .newsFeed h3 {
+.eventsFeedContainer .eventsFeed h2, .eventsFeedContainer .eventsFeed h3, .eventsFeedContainer .newsFeed h2, .eventsFeedContainer .newsFeed h3, .newsFeedContainer .eventsFeed h2, .newsFeedContainer .eventsFeed h3, .newsFeedContainer .newsFeed h2, .newsFeedContainer .newsFeed h3 {
   margin-top: 0;
   padding-top: 0;
   color: #fff;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
+  font-weight: 700;
   font-size: 2em;
   text-align: center;
 }

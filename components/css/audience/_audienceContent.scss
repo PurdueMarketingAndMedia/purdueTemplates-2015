@@ -585,11 +585,12 @@
 	background-size:cover;
 	.eventsFeed,.newsFeed{
 		padding:60px 15px;
-		h3{
+		h2,h3{
 			margin-top:0;
 			padding-top:0;
 			color:#fff;
 			font-family:$font-archivo-narrow;
+			font-weight:700;
 			font-size:32/16 * 1em;
 			text-align:center;
 		}
