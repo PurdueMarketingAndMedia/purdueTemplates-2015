@@ -10427,6 +10427,8 @@ form.purdueForm .robotic {
 .footer #accordion .panel .panel-heading .panel-title {
   font-family: "Champion Welterweight", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
   font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .footer #accordion .panel .panel-heading a {
