@@ -10603,6 +10603,10 @@ blockquote:before, .quote:before {
   font-size: 0.83333em;
 }
 
+.eventsFeedContainer .eventsFeed .event a.details .timeLocation img, .eventsFeedContainer .eventsFeed .event a.details .description img, .eventsFeedContainer .eventsFeed .newsItem a.details .timeLocation img, .eventsFeedContainer .eventsFeed .newsItem a.details .description img, .eventsFeedContainer .newsFeed .event a.details .timeLocation img, .eventsFeedContainer .newsFeed .event a.details .description img, .eventsFeedContainer .newsFeed .newsItem a.details .timeLocation img, .eventsFeedContainer .newsFeed .newsItem a.details .description img, .newsFeedContainer .eventsFeed .event a.details .timeLocation img, .newsFeedContainer .eventsFeed .event a.details .description img, .newsFeedContainer .eventsFeed .newsItem a.details .timeLocation img, .newsFeedContainer .eventsFeed .newsItem a.details .description img, .newsFeedContainer .newsFeed .event a.details .timeLocation img, .newsFeedContainer .newsFeed .event a.details .description img, .newsFeedContainer .newsFeed .newsItem a.details .timeLocation img, .newsFeedContainer .newsFeed .newsItem a.details .description img {
+  display: none;
+}
+
 .eventsFeedContainer .eventsFeed .event a.details .timeLocation, .eventsFeedContainer .eventsFeed .newsItem a.details .timeLocation, .eventsFeedContainer .newsFeed .event a.details .timeLocation, .eventsFeedContainer .newsFeed .newsItem a.details .timeLocation, .newsFeedContainer .eventsFeed .event a.details .timeLocation, .newsFeedContainer .eventsFeed .newsItem a.details .timeLocation, .newsFeedContainer .newsFeed .event a.details .timeLocation, .newsFeedContainer .newsFeed .newsItem a.details .timeLocation {
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
   font-weight: bold;
