@@ -10835,7 +10835,7 @@ blockquote:before, .quote:before {
   background-color: #eee;
 }
 
-.instagramFeedContainer .instagramFeed h3 {
+.instagramFeedContainer .instagramFeed h2, .instagramFeedContainer .instagramFeed h3 {
   margin-top: 0;
   padding-top: 0;
   float: left;
@@ -10847,10 +10847,10 @@ blockquote:before, .quote:before {
 }
 
 @media (max-width: 767px) {
-  .instagramFeedContainer .instagramFeed h3 {
+  .instagramFeedContainer .instagramFeed h2, .instagramFeedContainer .instagramFeed h3 {
     width: 100%;
   }
-  .instagramFeedContainer .instagramFeed h3 span {
+  .instagramFeedContainer .instagramFeed h2 span, .instagramFeedContainer .instagramFeed h3 span {
     display: block;
   }
 }
