@@ -8023,6 +8023,7 @@ u {
   border: none;
   box-shadow: none;
   background-color: #c28e0e;
+  min-width: 200px;
   padding: 5px;
 }
 
