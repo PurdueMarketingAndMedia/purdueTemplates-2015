@@ -9759,6 +9759,7 @@ blockquote:before, .quote:before {
 
 .deptOfficeContent .container .bannerRow .bannerContainer .banner .caption .subheader {
   display: inline-block;
+  margin: 0;
   padding: 10px 15px 10px 10px;
   background-color: #c28e0e;
   color: #000;
