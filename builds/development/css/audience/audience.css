@@ -8023,6 +8023,7 @@ u {
   border: none;
   box-shadow: none;
   background-color: #c28e0e;
+  min-width: 200px;
   padding: 5px;
 }
 
@@ -8225,6 +8226,10 @@ u {
   right: 0;
   top: 20%;
   background-color: #999;
+}
+
+.top .logo-noBorder:after {
+  display: none;
 }
 
 .top .logo a {
@@ -10255,7 +10260,8 @@ blockquote:before, .quote:before {
   height: 60px;
 }
 
-.linksContainer .links .columnContainer .column h3 {
+.linksContainer .links .columnContainer .column h2, .linksContainer .links .columnContainer .column h3 {
+  margin: 0;
   padding: 5px 0 7px;
   color: inherit;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
@@ -10488,8 +10494,8 @@ blockquote:before, .quote:before {
   padding-right: 30px;
 }
 
-.storyContainer .story .contentContainer h3 {
-  margin-top: 0;
+.storyContainer .story .contentContainer h2, .storyContainer .story .contentContainer h3 {
+  margin: 0;
   padding-top: 0;
   padding-bottom: 20px;
   color: #000;
@@ -10536,11 +10542,12 @@ blockquote:before, .quote:before {
   padding: 60px 15px;
 }
 
-.eventsFeedContainer .eventsFeed h3, .eventsFeedContainer .newsFeed h3, .newsFeedContainer .eventsFeed h3, .newsFeedContainer .newsFeed h3 {
+.eventsFeedContainer .eventsFeed h2, .eventsFeedContainer .eventsFeed h3, .eventsFeedContainer .newsFeed h2, .eventsFeedContainer .newsFeed h3, .newsFeedContainer .eventsFeed h2, .newsFeedContainer .eventsFeed h3, .newsFeedContainer .newsFeed h2, .newsFeedContainer .newsFeed h3 {
   margin-top: 0;
   padding-top: 0;
   color: #fff;
   font-family: "Archivo Narrow", "Arial Narrow", "Arial", sans-serif;
+  font-weight: 700;
   font-size: 2em;
   text-align: center;
 }
@@ -10599,6 +10606,10 @@ blockquote:before, .quote:before {
   width: 100%;
   padding-top: 15px;
   font-size: 0.83333em;
+}
+
+.eventsFeedContainer .eventsFeed .event a.details .timeLocation img, .eventsFeedContainer .eventsFeed .event a.details .description img, .eventsFeedContainer .eventsFeed .newsItem a.details .timeLocation img, .eventsFeedContainer .eventsFeed .newsItem a.details .description img, .eventsFeedContainer .newsFeed .event a.details .timeLocation img, .eventsFeedContainer .newsFeed .event a.details .description img, .eventsFeedContainer .newsFeed .newsItem a.details .timeLocation img, .eventsFeedContainer .newsFeed .newsItem a.details .description img, .newsFeedContainer .eventsFeed .event a.details .timeLocation img, .newsFeedContainer .eventsFeed .event a.details .description img, .newsFeedContainer .eventsFeed .newsItem a.details .timeLocation img, .newsFeedContainer .eventsFeed .newsItem a.details .description img, .newsFeedContainer .newsFeed .event a.details .timeLocation img, .newsFeedContainer .newsFeed .event a.details .description img, .newsFeedContainer .newsFeed .newsItem a.details .timeLocation img, .newsFeedContainer .newsFeed .newsItem a.details .description img {
+  display: none;
 }
 
 .eventsFeedContainer .eventsFeed .event a.details .timeLocation, .eventsFeedContainer .eventsFeed .newsItem a.details .timeLocation, .eventsFeedContainer .newsFeed .event a.details .timeLocation, .eventsFeedContainer .newsFeed .newsItem a.details .timeLocation, .newsFeedContainer .eventsFeed .event a.details .timeLocation, .newsFeedContainer .eventsFeed .newsItem a.details .timeLocation, .newsFeedContainer .newsFeed .event a.details .timeLocation, .newsFeedContainer .newsFeed .newsItem a.details .timeLocation {
@@ -10833,7 +10844,7 @@ blockquote:before, .quote:before {
   background-color: #eee;
 }
 
-.instagramFeedContainer .instagramFeed h3 {
+.instagramFeedContainer .instagramFeed h2, .instagramFeedContainer .instagramFeed h3 {
   margin-top: 0;
   padding-top: 0;
   float: left;
@@ -10845,10 +10856,10 @@ blockquote:before, .quote:before {
 }
 
 @media (max-width: 767px) {
-  .instagramFeedContainer .instagramFeed h3 {
+  .instagramFeedContainer .instagramFeed h2, .instagramFeedContainer .instagramFeed h3 {
     width: 100%;
   }
-  .instagramFeedContainer .instagramFeed h3 span {
+  .instagramFeedContainer .instagramFeed h2 span, .instagramFeedContainer .instagramFeed h3 span {
     display: block;
   }
 }
@@ -10959,6 +10970,8 @@ blockquote:before, .quote:before {
 .footer #accordion .panel .panel-heading .panel-title {
   font-family: "Champion Welterweight", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
   font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .footer #accordion .panel .panel-heading a {

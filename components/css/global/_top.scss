@@ -12,16 +12,21 @@
 	.logo{
 		padding: 25px 25px 25px 15px;
 		align-items: center;
-        &::after{
-            display:block;
-            position:absolute;
-            content:"";
-            width:2px;
-            height:60%;
-            right: 0;
-            top: 20%;
-            background-color:#999;
-        }
+    &::after{
+        display:block;
+        position:absolute;
+        content:"";
+        width:2px;
+        height:60%;
+        right: 0;
+        top: 20%;
+        background-color:#999;
+    }
+    &-noBorder{
+    	&::after{
+    		display:none;
+    	}
+    }
 		a{
 			display:block;
 			img{

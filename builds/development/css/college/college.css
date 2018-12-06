@@ -8023,6 +8023,7 @@ u {
   border: none;
   box-shadow: none;
   background-color: #c28e0e;
+  min-width: 200px;
   padding: 5px;
 }
 
@@ -8225,6 +8226,10 @@ u {
   right: 0;
   top: 20%;
   background-color: #999;
+}
+
+.top .logo-noBorder:after {
+  display: none;
 }
 
 .top .logo a {
@@ -11074,6 +11079,8 @@ end tile sizing and positioning
 .footer #accordion .panel .panel-heading .panel-title {
   font-family: "Champion Welterweight", "Archivo Black", "Arial Black", "Arial Bold", "Gadget", sans-serif;
   font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .footer #accordion .panel .panel-heading a {

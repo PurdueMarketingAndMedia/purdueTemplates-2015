@@ -8,7 +8,7 @@
     <meta content="Place your office here." name="author" />
     <meta charset="utf-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-    <meta content="width=device-width, user-scalable=no" name="viewport" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="https://www.purdue.edu/purdue/images/favicon.ico" rel="shortcut icon" />
     <!-- Font Awesome -->
     <script src="https://use.fontawesome.com/0c5298d156.js"></script>
@@ -43,13 +43,17 @@
                 </button>
                 <!--<p class="quickLinkLabel">Quick Links</p>-->
                 <button class="navbar-toggle search" data-target="#search" data-toggle="collapse" style="float:right;" type="button">
-                    <i class="fa fa-search fa-lg"></i>
+                    <span class="sr-only">Search</span>
+                    <i class="fa fa-search fa-lg" aria-hidden="true"></i>
                 </button>
             </div>
             <div class="collapse navbar-collapse right search" id="search">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-search fa-lg"></i></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <span class="sr-only">Search</span>
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                        </a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="form-group">
@@ -269,7 +273,7 @@
                             </a>
                         </div>
                         <div class="tile photo col-lg-6 col-md-6 col-sm-6 col-xs-12 row-lg-2 row-md-2 row-sm-2 row-xs-2 left-lg-a left-md-a left-sm-a top-lg-3 top-md-3 top-sm-3">
-                            <a class="audience" href="#" style="background-image:url('https://www.purdue.edu/purdue/images/homepage-amazon-md.jpg')">
+                            <a class="audience" href="#" style="background-image:url('https://www.purdue.edu/brand/images/web-templates/placeholders/college_tile-audience-2x2.jpg')">
                                 <span class="caption">
 					<span class="divider"></span>
                                 <span class="text">
@@ -307,10 +311,11 @@
     </main>
     <div class="footer">
         <div class="container">
+            <h2 class="sr-only">Resources</h2>
             <div class="row panel-group" id="accordion">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footerone">Information <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
+                        <h3 class="panel-title"><a class="collapsed" role="button" data-parent="#accordion" data-toggle="collapse" href="#footerone">Information <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h3>
                     </div>
                     <div class="panel-collapse collapse" id="footerone">
                         <div class="panel-body">
@@ -333,7 +338,7 @@
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footertwo">Campus <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
+                        <h4 class="panel-title"><a class="collapsed" role="button" data-parent="#accordion" data-toggle="collapse" href="#footertwo">Campus <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
                     </div>
                     <div class="panel-collapse collapse" id="footertwo">
                         <div class="panel-body">
@@ -356,7 +361,7 @@
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footerthree">Communication <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
+                        <h4 class="panel-title"><a class="collapsed" role="button" data-parent="#accordion" data-toggle="collapse" href="#footerthree">Communication <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
                     </div>
                     <div class="panel-collapse collapse" id="footerthree">
                         <div class="panel-body">
@@ -379,7 +384,7 @@
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footerfour">People <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
+                        <h4 class="panel-title"><a class="collapsed" role="button" data-parent="#accordion" data-toggle="collapse" href="#footerfour">People <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
                     </div>
                     <div class="panel-collapse collapse" id="footerfour">
                         <div class="panel-body">
@@ -528,14 +533,38 @@
                         </div>
                     </div>
                     <div class="social">
-                        <a title="Facebook" href="http://www.facebook.com/PurdueUniversity" target="_blank"><i class="fa fa-facebook"></i></a>
-                        <a title="Twitter" href="http://twitter.com/LifeAtPurdue" target="_blank"><i class="fa fa-twitter"></i></a>
-                        <a title="YouTube" href="http://www.youtube.com/purdue" target="_blank"><i class="fa fa-youtube"></i></a>
-                        <a title="Instagram" href="http://www.instagram.com/lifeatpurdue" target="_blank"><i class="fa fa-instagram"></i></a>
-                        <a title="Pinterest" href="http://www.pinterest.com/lifeatpurdue/" target="_blank"><i class="fa fa-pinterest"></i></a>
-                        <a title="Snapchat" href="https://www.snapchat.com/add/lifeatpurdue" target="_blank"><i class="fa fa-snapchat-ghost"></i></a>
-                        <a title="LinkedIn" href="https://www.linkedin.com/edu/purdue-university-18357" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a title="Amazon" href="https://purdue.amazon.com/" target="_blank"><i class="fa fa-amazon"></i></a>
+                        <a href="https://www.facebook.com/PurdueUniversity" target="_blank" rel="noopener">
+                            <span class="sr-only">Purdue on Facebook</span>
+                            <i aria-hidden="true" class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/LifeAtPurdue" target="_blank" rel="noopener">
+                            <span class="sr-only">Purdue on Twitter</span>
+                            <i aria-hidden="true" class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.youtube.com/purdue" target="_blank" rel="noopener">
+                            <span class="sr-only">Purdue on YouTube</span>
+                            <i aria-hidden="true" class="fa fa-youtube"></i>
+                        </a>
+                        <a href="https://www.instagram.com/lifeatpurdue/" target="_blank" rel="noopener">
+                            <span class="sr-only">Purdue on Instagram</span>
+                            <i aria-hidden="true" class="fa fa-instagram"></i>
+                        </a>
+                        <a href="https://www.pinterest.com/lifeatpurdue/" target="_blank" rel="noopener">
+                            <span class="sr-only">Purdue on Pinterest</span>
+                            <i aria-hidden="true" class="fa fa-pinterest"></i>
+                        </a>
+                        <a href="https://www.snapchat.com/add/lifeatpurdue" target="_blank" rel="noopener">
+                            <span class="sr-only">Purdue on Snapchat</span>
+                            <i aria-hidden="true" class="fa fa-snapchat-ghost"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/edu/purdue-university-18357" target="_blank" rel="noopener">
+                            <span class="sr-only">Purdue on LinkedIn</span>
+                            <i aria-hidden="true" class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="https://purdue.amazon.com/" target="_blank" rel="noopener">
+                            <span class="sr-only">Amazon pickup locations at Purdue</span>
+                            <i aria-hidden="true" class="fa fa-amazon"></i>
+                        </a>
                     </div>
                 </div>
             </div>

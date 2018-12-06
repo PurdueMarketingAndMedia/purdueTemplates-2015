@@ -8,7 +8,7 @@
     <meta content="Place your office here." name="author" />
     <meta charset="utf-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-    <meta content="width=device-width, user-scalable=no" name="viewport" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="https://www.purdue.edu/purdue/images/favicon.ico" rel="shortcut icon" />
     <!-- Font Awesome -->
     <script src="https://use.fontawesome.com/0c5298d156.js"></script>
@@ -43,13 +43,17 @@
                 </button>
                 <!--<p class="quickLinkLabel">Quick Links</p>-->
                 <button class="navbar-toggle search" data-target="#search" data-toggle="collapse" style="float:right;" type="button">
-                    <i class="fa fa-search fa-lg"></i>
+                    <span class="sr-only">Search</span>
+                    <i class="fa fa-search fa-lg" aria-hidden="true"></i>
                 </button>
             </div>
             <div class="collapse navbar-collapse right search" id="search">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-search fa-lg"></i></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <span class="sr-only">Search</span>
+                            <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                        </a>
                         <ul class="dropdown-menu">
                             <li>
                                 <div class="form-group">
@@ -253,17 +257,17 @@
 
                 <div class="maincontent col-lg-9 col-md-9 col-sm-9 col-xs-12 right">
                     <picture class="banner">
-                        <source media="(min-width: 1200px)" srcset="https://www.purdue.edu/pmm-templates/2015/Template-CollegeSchool/images/content-banner.jpg">
-                            <source media="(min-width: 992)" srcset="https://www.purdue.edu/pmm-templates/2015/Template-CollegeSchool/images/content-banner.jpg">
-                                <source media="(min-width: 767)" srcset="https://www.purdue.edu/pmm-templates/2015/Template-CollegeSchool/images/content-banner.jpg">
-                                    <source media="(min-width: 481)" srcset="https://www.purdue.edu/pmm-templates/2015/Template-CollegeSchool/images/content-banner.jpg">
-                                        <source srcset="../images/content-banner.jpg">
+                        <source media="(min-width: 1200px)" srcset="https://www.purdue.edu/brand/images/web-templates/placeholders/content_banner-lg.jpg">
+                            <source media="(min-width: 992px)" srcset="https://www.purdue.edu/brand/images/web-templates/placeholders/content_banner-md.jpg">
+                                <source media="(min-width: 767px)" srcset="https://www.purdue.edu/brand/images/web-templates/placeholders/content_banner-sm.jpg">
+                                    <source media="(min-width: 481px)" srcset="https://www.purdue.edu/brand/images/web-templates/placeholders/content_banner-lg.jpg">
+                                        <source srcset="https://www.purdue.edu/brand/images/web-templates/placeholders/content_banner-xs.jpg">
                                             <img class="banner" src="https://www.purdue.edu/pmm-templates/2015/Template-CollegeSchool/images/content-banner.jpg">
                     </picture>
-                    <h1>Header 1</h1>
+                    <h1>Heading 1</h1>
                     <div class="imageContainer right useCaption">
-                        <img src="https://www.purdue.edu/pmm-templates/2015/Template-CollegeSchool/images/proofPoint4.jpg">
-                        <span class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet congue enim eget faucibus. Cras rhoncus placerat sodales. In in dignissim dui. Maecenas ornare pulvinar leo eu hendrerit.</span>
+                        <img src="https://www.purdue.edu/brand/images/web-templates/placeholders/content_main-01.jpg">
+                        <span class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet congue enim eget faucibus.</span>
                     </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet congue enim eget faucibus. Cras rhoncus placerat sodales. In in dignissim dui.</p>
                     <p>Maecenas ornare pulvinar leo eu hendrerit. Nam ac risus eget enim porta mattis. Duis facilisis arcu ac convallis dapibus. Cras ex elit, vehicula at finibus faucibus, tristique sit amet lorem.</p>
@@ -282,7 +286,7 @@
                         <h3>Heading 3</h3>
                     </div>
                     <div class="imageContainer left ">
-                        <img alt="This text is used by screen readers to describe the image." src="https://www.purdue.edu/pmm-templates/2015/Template-CollegeSchool/images/storyImage.jpg">
+                        <img alt="This text is used by screen readers to describe the image." src="https://www.purdue.edu/brand/images/web-templates/placeholders/content_main-02.jpg">
                     </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id nisi non dui maximus imperdiet. Ut consectetur congue diam porttitor tempor. Maecenas velit diam, malesuada et erat id, molestie luctus nisi. Aliquam eleifend urna
                         auctor tortor rhoncus congue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam vestibulum est nec augue placerat venenatis ut vitae lorem. Donec mi velit, luctus nec ullamcorper tristique,
@@ -329,18 +333,19 @@
                             <iframe title="YouTube Video title" allowfullscreen="" frameborder="0" height="240" src="https://www.youtube.com/embed/OE02yf5WHF4?rel=0"></iframe>
                         </div>
                     </div>
-                    <h4>Identifer text</h4>
-                    <p>First sentence of the side content.</p>
+                    <h2 class="heading-4">Dolor Sit</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, possimus.</p>
                 </div>
             </div>
         </div>
     </main>
     <div class="footer">
         <div class="container">
+            <h2 class="sr-only">Resources</h2>
             <div class="row panel-group" id="accordion">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footerone">Information <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
+                        <h3 class="panel-title"><a class="collapsed" role="button" data-parent="#accordion" data-toggle="collapse" href="#footerone">Information <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h3>
                     </div>
                     <div class="panel-collapse collapse" id="footerone">
                         <div class="panel-body">
@@ -363,7 +368,7 @@
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footertwo">Campus <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
+                        <h4 class="panel-title"><a class="collapsed" role="button" data-parent="#accordion" data-toggle="collapse" href="#footertwo">Campus <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
                     </div>
                     <div class="panel-collapse collapse" id="footertwo">
                         <div class="panel-body">
@@ -386,7 +391,7 @@
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footerthree">Communication <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
+                        <h4 class="panel-title"><a class="collapsed" role="button" data-parent="#accordion" data-toggle="collapse" href="#footerthree">Communication <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
                     </div>
                     <div class="panel-collapse collapse" id="footerthree">
                         <div class="panel-body">
@@ -409,7 +414,7 @@
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4 class="panel-title"><a class="collapsed" data-parent="#accordion" data-toggle="collapse" href="#footerfour">People <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
+                        <h4 class="panel-title"><a class="collapsed" role="button" data-parent="#accordion" data-toggle="collapse" href="#footerfour">People <i class="fa fa-plus right"></i><i class="fa fa-minus right"></i></a></h4>
                     </div>
                     <div class="panel-collapse collapse" id="footerfour">
                         <div class="panel-body">
@@ -558,14 +563,38 @@
                         </div>
                     </div>
                     <div class="social">
-                        <a title="Facebook" href="http://www.facebook.com/PurdueUniversity" target="_blank"><i class="fa fa-facebook"></i></a>
-                        <a title="Twitter" href="http://twitter.com/LifeAtPurdue" target="_blank"><i class="fa fa-twitter"></i></a>
-                        <a title="YouTube" href="http://www.youtube.com/purdue" target="_blank"><i class="fa fa-youtube"></i></a>
-                        <a title="Instagram" href="http://www.instagram.com/lifeatpurdue" target="_blank"><i class="fa fa-instagram"></i></a>
-                        <a title="Pinterest" href="http://www.pinterest.com/lifeatpurdue/" target="_blank"><i class="fa fa-pinterest"></i></a>
-                        <a title="Snapchat" href="https://www.snapchat.com/add/lifeatpurdue" target="_blank"><i class="fa fa-snapchat-ghost"></i></a>
-                        <a title="LinkedIn" href="https://www.linkedin.com/edu/purdue-university-18357" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        <a title="Amazon" href="https://purdue.amazon.com/" target="_blank"><i class="fa fa-amazon"></i></a>
+                        <a href="https://www.facebook.com/PurdueUniversity" target="_blank" rel="noopener">
+                            <span class="sr-only">Purdue on Facebook</span>
+                            <i aria-hidden="true" class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/LifeAtPurdue" target="_blank" rel="noopener">
+                            <span class="sr-only">Purdue on Twitter</span>
+                            <i aria-hidden="true" class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.youtube.com/purdue" target="_blank" rel="noopener">
+                            <span class="sr-only">Purdue on YouTube</span>
+                            <i aria-hidden="true" class="fa fa-youtube"></i>
+                        </a>
+                        <a href="https://www.instagram.com/lifeatpurdue/" target="_blank" rel="noopener">
+                            <span class="sr-only">Purdue on Instagram</span>
+                            <i aria-hidden="true" class="fa fa-instagram"></i>
+                        </a>
+                        <a href="https://www.pinterest.com/lifeatpurdue/" target="_blank" rel="noopener">
+                            <span class="sr-only">Purdue on Pinterest</span>
+                            <i aria-hidden="true" class="fa fa-pinterest"></i>
+                        </a>
+                        <a href="https://www.snapchat.com/add/lifeatpurdue" target="_blank" rel="noopener">
+                            <span class="sr-only">Purdue on Snapchat</span>
+                            <i aria-hidden="true" class="fa fa-snapchat-ghost"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/edu/purdue-university-18357" target="_blank" rel="noopener">
+                            <span class="sr-only">Purdue on LinkedIn</span>
+                            <i aria-hidden="true" class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="https://purdue.amazon.com/" target="_blank" rel="noopener">
+                            <span class="sr-only">Amazon pickup locations at Purdue</span>
+                            <i aria-hidden="true" class="fa fa-amazon"></i>
+                        </a>
                     </div>
                 </div>
             </div>
