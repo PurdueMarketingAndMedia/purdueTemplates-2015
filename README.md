@@ -71,7 +71,7 @@ gulp
 		- **/templates** : the final HTML files generated from the `/components/html/templates`
 		- **/css** : the minified CSS files
 
-- the source files used to generate the final HTML and CSS. _This is where you would make all your edits._
+-  **/components** : the source files used to generate the final HTML and CSS. _This is where you would make all your edits._
 
 	- **/css** : the SCSS and CSS files used to compile the final CSS files in `/builds`
 
