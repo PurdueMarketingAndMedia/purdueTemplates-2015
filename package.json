@@ -46,5 +46,7 @@
         "watchify": "^3.11.0"
     },
     "browserslist": "> 5% in my stats",
-    "dependencies": {}
+    "dependencies": {
+        "bootstrap-sass": "^3.4.0"
+    }
 }
