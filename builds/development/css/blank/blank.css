@@ -7793,6 +7793,7 @@ h5 {
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
+  color: #333;
   font-size: 1.375em;
 }
 
@@ -7802,6 +7803,7 @@ h6 {
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
+  color: #333;
   font-size: 1.125em;
 }
 

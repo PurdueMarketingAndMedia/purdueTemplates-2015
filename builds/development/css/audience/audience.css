@@ -7793,6 +7793,7 @@ h5 {
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
+  color: #333;
   font-size: 1.375em;
 }
 
@@ -7802,6 +7803,7 @@ h6 {
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
+  color: #333;
   font-size: 1.125em;
 }
 
@@ -9633,6 +9635,7 @@ u {
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
+  color: #333;
   font-size: 1.375em;
   display: block;
   padding: 0;
@@ -9707,9 +9710,10 @@ blockquote:before, .quote:before {
     padding-left: 6rem;
   }
   blockquote:before, .quote:before {
-    height: 110%;
+    height: auto;
     left: 4rem;
-    top: -5%;
+    top: -0.1875rem;
+    bottom: -0.1875rem;
   }
   .quote-mark:before {
     height: 3rem;
@@ -9763,6 +9767,7 @@ blockquote:before, .quote:before {
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
+  color: #333;
   font-size: 1.375em;
 }
 
@@ -9772,6 +9777,7 @@ blockquote:before, .quote:before {
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 700;
+  color: #333;
   font-size: 1.125em;
 }
 
