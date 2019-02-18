@@ -1,6 +1,6 @@
 {
     "name": "purduetemplates2015",
-    "version": "1.0.0",
+    "version": "1.6.7",
     "description": "The Purdue University templates created in 2015 by Purdue Marketing and Media.",
     "main": "gulpfile.js",
     "scripts": {
@@ -18,14 +18,14 @@
     "homepage": "https://github.com/PurdueMarketingAndMedia/purdueTemplates-2015#readme",
     "devDependencies": {
         "async": "^2.1.5",
-        "autoprefixer": "^8.0.0",
+        "autoprefixer": "^9.4.7",
         "del": "^3.0.0",
         "gulp": "^3.9.1",
-        "gulp-connect": "^5.0.0",
-        "gulp-file-include": "^1.0.0",
+        "gulp-connect": "^5.7.0",
+        "gulp-file-include": "^2.0.1",
         "gulp-html-prettify": "0.0.1",
         "gulp-postcss": "^7.0.1",
-        "gulp-sass": "^3.1.0",
+        "gulp-sass": "^4.0.2",
         "gulp-sourcemaps": "^2.4.0",
         "gulp-zip": "^4.1.0",
         "postcss-pseudoelements": "^5.0.0"

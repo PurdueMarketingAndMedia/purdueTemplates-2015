@@ -272,7 +272,8 @@
 						height:60px;
 					}
 				}
-				h3{
+				h2,h3{
+					margin:0;
 					padding:5px 0 7px;
 					color:inherit;
 					font-family:$font-archivo-narrow;
@@ -543,8 +544,8 @@
 		.contentContainer{
 			padding-left:30px;
 			padding-right:30px;
-			h3{
-				margin-top:0;
+			h2,h3{
+				margin:0;
 				padding-top:0;
 				padding-bottom:20px;
 				color:#000;
@@ -584,11 +585,12 @@
 	background-size:cover;
 	.eventsFeed,.newsFeed{
 		padding:60px 15px;
-		h3{
+		h2,h3{
 			margin-top:0;
 			padding-top:0;
 			color:#fff;
 			font-family:$font-archivo-narrow;
+			font-weight:700;
 			font-size:32/16 * 1em;
 			text-align:center;
 		}
@@ -637,6 +639,9 @@
 					width:100%;
 					padding-top:15px;
 					font-size:20/24 * 1em;
+					img{
+						display:none;
+					}
 				}
 				.timeLocation{
 					font-family:$font-archivo-narrow;
@@ -839,7 +844,7 @@
 .instagramFeedContainer{
 	background-color:#eee;
 	.instagramFeed{
-		h3{
+		h2,h3{
 			margin-top:0;
 			padding-top:0;
 			float:left;
@@ -850,7 +855,7 @@
 			margin-bottom:15px;
 		}
 		@media (max-width:767px){
-			h3{
+			h2,h3{
 				width:100%;
 				span{
 					display:block;

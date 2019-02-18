@@ -60,9 +60,10 @@ blockquote, .quote {
         padding-left: 6rem;
 
         &::before {
-            height: 110%;
+            height: auto;
             left: 4rem;
-            top: -5%;
+            top: -0.1875rem;
+            bottom: -0.1875rem;
         }
     }
 

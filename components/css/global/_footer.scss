@@ -43,6 +43,8 @@
                 .panel-title {
                     font-family: $font-champion-welter;
                     font-size: calc-toEm(16);
+                    font-weight: 400;
+                    text-transform: uppercase;
                 }
 
                 a {
@@ -78,10 +80,28 @@
             .taglineContainer {
                 width: 90%;
                 margin: 0 auto;
+                &--150{
+                    width:70%;
+                }
             }
             .tagline {
                 position:relative;
+                display:block;
                 padding-bottom:60/430*100%;
+                &--150{
+                    padding-bottom:30.76396/227.38567*100%;
+                    transition: filter 0.25s ease-in;
+                    &:link,&:visited{
+                        filter:brightness(1);
+                    }
+                    &:hover,&:active,&:focus{
+                        filter:brightness(1.1);
+                    }
+                    &:focus{
+                        outline-offset:4px;
+                        outline:dotted 1px #fff;
+                    }
+                }
                 .horizontal,.vertical{
                     position:absolute;
                     top:0;
@@ -95,6 +115,7 @@
             }
 
             .social {
+                clear:both;
                 display: block;
                 width: 100%;
                 padding-top: 5px;
@@ -240,6 +261,9 @@
             .motto {
                 .taglineContainer {
                     width: 80%;
+                    &--150{
+                        width:58%;
+                    }
                 }
             }
         }
@@ -335,9 +359,16 @@
 
                 .taglineContainer {
                     width: auto;
+                    &--150{
+                        float:left;
+                        width:70%;
+                    }
                     .tagline {
                         margin-bottom:10px;
                         padding-bottom:71/202*100%;
+                        &--150{
+                            padding-bottom:73.0189/121.53733*100%;
+                        }
                     }
                 }
 
