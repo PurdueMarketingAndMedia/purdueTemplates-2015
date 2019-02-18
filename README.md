@@ -49,7 +49,6 @@ If you're unsure, contact the team by creating an [issue](https://github.com/Pur
 
 *The following instructions only apply to those using Gulp.js for workflow management.*
 
-### Commands
 ```
 gulp
 ```
