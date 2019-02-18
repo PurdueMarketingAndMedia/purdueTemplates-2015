@@ -122,4 +122,3 @@ gulp zip
 		- **/templates** : HTML files that import files from the `/components/html/modules` folder to create a final page in the `/builds` folder.
 
 			- **/patterns** : templates used to contain our pattern examples
->>>>>>> master
