@@ -5,7 +5,7 @@ Contained in this project are the main templates created and maintained by Purdu
 PMM is open to any suggestions. If you wish to make a suggestion, feel free to [open an issue](https://github.com/PurdueMarketingAndMedia/purdueTemplates-2015/issues/new) or email us at [online@purdue.edu](mailto:online@purdue.edu) to let us know.
 
 ## Contributing
-If you wish to contribute to development, please [open an issue](https://github.com/PurdueMarketingAndMedia/purdueTemplates/issues/new) or email us at [online@purdue.edu](mailto:online@purdue.edu) to let us know what you intend to change.
+If you wish to contribute to development, please [open an issue](https://github.com/PurdueMarketingAndMedia/purdueTemplates-2015/issues/new) or email us at [online@purdue.edu](mailto:online@purdue.edu) to let us know what you intend to change.
 
 Feel free to fork this repository and make any changes. Once you have completed your changes, make a pull request so that we can consider merging them.
 
