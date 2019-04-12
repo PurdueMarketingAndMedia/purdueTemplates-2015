@@ -4,7 +4,8 @@
     "description": "The Purdue University templates created in 2015 by Purdue Marketing and Media.",
     "main": "gulpfile.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "html": "node html-render.js",
+        "dev": "browser-sync new_builds --directory -w -b Firefox"
     },
     "repository": {
         "type": "git",
@@ -19,6 +20,7 @@
     "devDependencies": {
         "async": "^2.1.5",
         "autoprefixer": "^9.4.7",
+        "browser-sync": "^2.26.3",
         "del": "^3.0.0",
         "gulp": "^3.9.1",
         "gulp-connect": "^5.7.0",
@@ -28,7 +30,12 @@
         "gulp-sass": "^4.0.2",
         "gulp-sourcemaps": "^2.4.0",
         "gulp-zip": "^4.1.0",
+        "npm-run-all": "^4.1.5",
         "postcss-pseudoelements": "^5.0.0"
     },
-    "browserslist": "> 5% in my stats"
+    "browserslist": "> 5% in my stats",
+    "dependencies": {
+        "handlebars": "^4.1.1",
+        "pretty": "^2.0.0"
+    }
 }

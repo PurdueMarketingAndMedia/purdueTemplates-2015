@@ -1,4 +1,6 @@
 .DS_Store
+.vscode
 node_modules
 .tmp
 builds
+new_builds
