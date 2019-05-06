@@ -1,0 +1,11 @@
+{
+  "head": {
+    "title": "test page",
+    "description": "a test page",
+    "css": "../../../styles/mm/blank/content-blank.css",
+    "main-js": "../../../js/mm/templates/main.js"
+  },
+  "blank-template": {
+    "test": "<p class='test'>Hello World!</p>"
+  }
+}
