@@ -4,7 +4,18 @@
     "description": "The Purdue University templates created in 2015 by Purdue Marketing and Media.",
     "main": "gulpfile.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "html": "NODE_ENV=development node html-render.js",
+        "scss:dev": "NODE_ENV=development node styles-render.js",
+        "js:dev": "run-p js:dev:*",
+        "js:dev:templates": "rm -rf new_builds/js/mm/templates && mkdir -p new_builds/js/mm/templates && webpack src/js/mm/templates/test.js -o new_builds/js/mm/templates/main.js && browser-sync reload",
+        "serve": "browser-sync new_builds --directory -w -b Firefox",
+        "watch": "run-p watch:*",
+        "watch:scss": "onchange -i 'src/**/*.scss' -- npm run scss:dev",
+        "watch:js": "onchange -i 'src/**/*.js' -- npm run js:dev",
+        "watch:json": "onchange -i 'src/**/*.json' -- npm run html",
+        "watch:handlebars": "onchange -i 'src/**/*.handlebars' -- npm run html",
+        "dev": "run-p serve watch",
+        "prod": ""
     },
     "repository": {
         "type": "git",
@@ -17,8 +28,13 @@
     },
     "homepage": "https://github.com/PurdueMarketingAndMedia/purdueTemplates-2015#readme",
     "devDependencies": {
+        "@babel/core": "^7.4.3",
+        "@babel/preset-env": "^7.4.3",
         "async": "^2.1.5",
         "autoprefixer": "^9.4.7",
+        "babel-loader": "^8.0.5",
+        "browser-sync": "^2.26.3",
+        "del": "^3.0.0",
         "gulp": "^3.9.1",
         "gulp-connect": "^5.7.0",
         "gulp-file-include": "^2.0.1",
@@ -26,7 +42,36 @@
         "gulp-postcss": "^7.0.1",
         "gulp-sass": "^4.0.2",
         "gulp-sourcemaps": "^2.4.0",
-        "postcss-pseudoelements": "^5.0.0"
+        "gulp-zip": "^4.1.0",
+        "npm-run-all": "^4.1.5",
+        "onchange": "^5.2.0",
+        "postcss": "^7.0.14",
+        "postcss-pseudoelements": "^5.0.0",
+        "webpack": "^4.30.0",
+        "webpack-cli": "^3.3.0"
     },
-    "browserslist": "> 5% in my stats"
+    "browserslist": [
+        "last 2 versions",
+        "> 5% in my stats"
+    ],
+    "babel": {
+        "presets": [
+            [
+                "@babel/preset-env",
+                {
+                    "targets": {
+                        "browsers": [
+                            "last 2 versions",
+                            "> 1%"
+                        ]
+                    }
+                }
+            ]
+        ]
+    },
+    "dependencies": {
+        "handlebars": "^4.1.1",
+        "node-sass": "^4.11.0",
+        "pretty": "^2.0.0"
+    }
 }
