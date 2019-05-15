@@ -134,12 +134,12 @@ window.addEventListener('resize', () => {
 //toggle function
 const toggleNew = (e) => {
     let clicked = e.currentTarget
-    const className = (term) => {
+    const checkClassName = (term) => {
         return clicked.classList.contains(term);
     }
     console.log(clicked)
     switch (true) {
-        case className('accordion__heading'):
+        case checkClassName('accordion__heading'):
             const expanded = clicked.getAttribute('aria-expanded') === "false" ? true : false;
             clicked.setAttribute('aria-expanded', expanded);
             const contentId = clicked.getAttribute('aria-controls');
