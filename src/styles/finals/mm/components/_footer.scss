@@ -1,0 +1,185 @@
+@import "../settings/font";
+@import "../tools/breakpoints";
+.footer{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    font-family: $font-arial;
+    font-size:0.9em;
+    line-height:23.625px;
+
+    &__info-links{
+        background-color:#000000;
+        display:flex;
+        flex:1 1 auto;
+        justify-content: center;
+        &__columns{
+            display:flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            max-width:1200px;
+            flex:1 1 auto;
+            @include medium {
+                max-width:750px;
+            }
+        }
+        &--column{
+            box-sizing:border-box;
+            width:20%;
+            padding: 15px;
+            white-space:nowrap;
+
+            h3{
+                padding: 0px;
+                margin:0;
+                .accordion__heading--footer{
+                  width:100%;
+                  font-family: $font-champion-welter; 
+                  font-size: 0.875em;
+                  font-weight: 300;
+                  color:#c28e0e;
+                  padding:0;
+                  margin:0;
+                  border:0;
+                  background-color:#000000;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items:baseline;                                   
+                  svg.fa-plus,svg.fa-minus{
+                      display:none;
+                  }                    
+                  @include small {
+                    &:hover{
+                        cursor:pointer;
+                    }
+                    svg.fa-plus{
+                        display:block;
+                    }
+                    svg.fa-minus{
+                        display:none;
+                    }
+                }
+                }
+
+            }
+            .accordion__content--footer{
+                height:auto;
+                overflow:hidden;
+                margin:0;
+                padding:0;
+                li{
+                    a{
+                        color:#ccc;
+                        text-decoration:none;
+                        display: inline-block;
+                        width:100%;
+                        height: inherit;
+                        padding: 8px 0 2px;
+                        border-bottom: solid 1px #474747;
+                        font-size: 1em;
+                        font-weight:400;
+                        color:rgb(173,173,173);
+                        @include small {
+                            border:0;
+                            padding: 0px 0 10px;
+                        }
+                    }
+                    a:hover{
+                        color:#ffffff;
+                    }
+                    
+                }
+                @include small {
+                    display:none;
+                    height:0;
+                  -webkit-transition: height 2s ease; /* For Safari 3.1 to 6.0 */
+                    transition: height 2s ease;
+                }
+            }
+            .vertical{
+                margin-top:25px;
+                display:block;
+            }
+            .horizontal{
+                margin-top:25px;
+                display:none;
+            }
+            @include medium {
+                .vertical{
+                    display:none;
+                }
+                .horizontal{
+                    display:block;
+                    max-width:600px;
+                    margin: 0 auto;
+                }
+            }
+            div{
+                margin-top:10px;
+                padding-top:5px;
+                border-top: solid 1px #474747;
+                display:flex;
+                flex-direction:row;
+                flex-wrap: wrap;
+                justify-content: start;
+                font-size:21.6px;
+
+                a{
+                    margin: 4px 2.7%;
+                    color: #999;
+                    font-weight: 700;
+                    text-decoration: none;
+                }
+                a:hover{
+                    color:#ffffff;
+                }
+                @include medium {
+                    font-size:29.6px;
+                    justify-content: center;
+                    border:none;
+                }
+                @include small {
+                    font-size:22.5px;
+                }
+            }
+            @include medium {
+                width:50%;
+                padding: 15px;
+                flex:1 0 auto;
+            }
+            @include small {
+                width:100%;
+                padding: 15px;
+                border-bottom: solid 1px #474747;
+                &:nth-child(5){         
+                    border: none;
+                }
+            }
+        }
+    }
+    &__contact{
+        background-color:#3b3b3b;
+        color:#ccc;
+        text-align:center;
+        font-size:10px;
+        padding:10px 15px;
+        line-height:1.4;
+
+        &--list{
+            max-width:1200px;
+            margin:0 auto;
+
+            a{
+                color:#ccc; 
+            }
+            a:hover{
+                text-decoration:none;
+            }
+        }
+    }
+    @include small {
+        line-height:30px;
+  }
+}

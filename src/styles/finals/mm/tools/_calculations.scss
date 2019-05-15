@@ -1,0 +1,9 @@
+@function calc-toRem($n){
+	@return $n/16*1rem;
+}
+@function calc-toEm($n){
+	@return $n/16*1em;
+}
+@function calc-ratioLgMd($n){
+	@return (($n/1170)*970);
+}
