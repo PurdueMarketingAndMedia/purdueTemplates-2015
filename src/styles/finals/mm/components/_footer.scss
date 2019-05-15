@@ -20,7 +20,7 @@
             justify-content: center;
             max-width:1200px;
             flex:1 1 auto;
-            @include medium {
+            @include display-md {
                 max-width:750px;
             }
         }
@@ -50,7 +50,7 @@
                   svg.fa-plus,svg.fa-minus{
                       display:none;
                   }                    
-                  @include small {
+                  @include display-sm {
                     &:hover{
                         cursor:pointer;
                     }
@@ -81,7 +81,7 @@
                         font-size: 1em;
                         font-weight:400;
                         color:rgb(173,173,173);
-                        @include small {
+                        @include display-sm {
                             border:0;
                             padding: 0px 0 10px;
                         }
@@ -91,11 +91,10 @@
                     }
                     
                 }
-                @include small {
+                @include display-sm {
                     display:none;
                     height:0;
-                  -webkit-transition: height 2s ease; /* For Safari 3.1 to 6.0 */
-                    transition: height 2s ease;
+                    transition: height 0.5s ease;
                 }
             }
             .vertical{
@@ -106,7 +105,7 @@
                 margin-top:25px;
                 display:none;
             }
-            @include medium {
+            @include display-md {
                 .vertical{
                     display:none;
                 }
@@ -135,21 +134,21 @@
                 a:hover{
                     color:#ffffff;
                 }
-                @include medium {
+                @include display-md {
                     font-size:29.6px;
                     justify-content: center;
                     border:none;
                 }
-                @include small {
+                @include display-sm {
                     font-size:22.5px;
                 }
             }
-            @include medium {
+            @include display-md {
                 width:50%;
                 padding: 15px;
                 flex:1 0 auto;
             }
-            @include small {
+            @include display-sm {
                 width:100%;
                 padding: 15px;
                 border-bottom: solid 1px #474747;
@@ -179,7 +178,7 @@
             }
         }
     }
-    @include small {
+    @include display-sm {
         line-height:30px;
   }
 }

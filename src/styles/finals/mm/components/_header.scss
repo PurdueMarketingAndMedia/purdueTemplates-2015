@@ -19,13 +19,13 @@
       height: 100%;
       width: 1140px;
       box-sizing: border-box; 
-      @include large {
+      @include display-lg {
         width: 940px;
       }
-      @include medium {
+      @include display-md {
         width: 720px;
       }
-      @include small {
+      @include display-sm {
         width: 100%;
         padding: 1rem;
         align-items: start;
@@ -50,7 +50,7 @@
         &:hover {
           cursor: pointer;
         }
-        @include small {
+        @include display-sm {
           display: flex;
           order: 1;
           margin-bottom: 1.5rem;
@@ -63,7 +63,7 @@
       display: flex;
       align-items: baseline;
       background: #c28e0e;
-      @include small {
+      @include display-sm {
         position: relative;
         left: 0;
         width: 100%;
@@ -88,13 +88,13 @@
           cursor: pointer;
           text-decoration: underline;
         }
-        @include small {
+        @include display-sm {
           display: none;
         }
       }
       &>span {
         display: none;
-        @include small {
+        @include display-sm {
           display: block;
           margin-bottom: 1.5rem;
         }
@@ -131,20 +131,20 @@
               cursor: pointer;
               text-decoration: underline;
             }
-            @include small {
+            @include display-sm {
               white-space: normal;
             }
           }
         }
         
-        @include small {
+        @include display-sm {
           position: relative;
           flex-direction: column;
           display: flex;
           padding: 0;
         }
       }
-      @include small {
+      @include display-sm {
         flex-direction: column;
         flex: 1 1 55%;
         margin-right: 1rem;
@@ -154,7 +154,7 @@
       margin-left: auto;
       span {
         display: none;
-        @include small {
+        @include display-sm {
           display: block;
           margin-bottom: 1.5rem;
         }
@@ -180,7 +180,7 @@
               text-decoration: underline;
             }
           }
-          @include small {
+          @include display-sm {
             width: 100%;
             display: flex;
             align-items: stretch;
@@ -189,13 +189,13 @@
             }
           }
         }
-        @include small {
+        @include display-sm {
           position: relative;
           flex-direction: column;
           display: flex;
         }
       }
-      @include small {
+      @include display-sm {
         flex-direction: column;
         margin: 0;
         flex: 1 1 30%;
@@ -205,7 +205,7 @@
       &:hover {
         cursor: pointer;
       }
-      @include small {
+      @include display-sm {
         order: 2;
       }
     }
@@ -236,7 +236,7 @@
       &:hover {
         cursor: pointer;
       }
-      @include small {
+      @include display-sm {
         display: block;
         order: 1;
         padding: 0.75rem 0.95rem;
@@ -248,13 +248,13 @@
       list-style: none;
       width: 1140px;
       overflow: hidden;
-      @include large {
+      @include display-lg {
         width: 940px;
       }
-      @include medium {
+      @include display-md {
         width: 720px;
       }
-      @include small {
+      @include display-sm {
         width: 100%;
         height: auto;
         max-height: 0px;
@@ -272,7 +272,7 @@
         align-items: center;
         height: 100%;
         position: relative;
-        @include small {
+        @include display-sm {
           flex-direction: column;
           align-items: flex-start;
         }
@@ -289,11 +289,11 @@
             font-size: 0.5rem;
             color: rgb(153, 153, 153);
             margin-left: 0.35rem;
-            @include small {
+            @include display-sm {
               color: white;
             }
           }
-          @include small {
+          @include display-sm {
             color: white;
           }
         }
@@ -301,29 +301,29 @@
           background: #373737;
           a {
             color: white;
-            @include small {
+            @include display-sm {
               color: #c28e0e;
             }
             &>span {
               color: white;
-              @include small {
+              @include display-sm {
                 color: #c28e0e;
               }
             }
           }
-          @include small {
+          @include display-sm {
             background: black;
           }
         }
         &:hover {
           &>a {
             color: white;
-            @include small {
+            @include display-sm {
               color: #c28e0e;
             }
             &>span {
               color: white;
-              @include small {
+              @include display-sm {
                 color: #c28e0e;
               }
             }
@@ -331,7 +331,7 @@
         }
         &:first-child {
           margin-left: -0.95rem;
-          @include small {
+          @include display-sm {
             margin-left: 0;
           }
         }
@@ -353,17 +353,17 @@
           justify-content: space-between;
           &>span {
             font-size: 0.85rem;
-            @include small {
+            @include display-sm {
               padding-left: 0.5rem;
             }
           }
         }
-        @include small {
+        @include display-sm {
           flex-direction: column;
           align-items: flex-start;
         }
       }
-      @include small {
+      @include display-sm {
         position: relative;
         top: 0;
         padding-left: 1rem;
@@ -376,14 +376,14 @@
       top: 0;
       background: black;
       flex-direction: column;
-      @include small {
+      @include display-sm {
         position: relative;
         top: 0;
         left: 0;
         padding-left: 1.5rem;
       }
     }
-    @include small {
+    @include display-sm {
       justify-content: flex-start;
     }
   }

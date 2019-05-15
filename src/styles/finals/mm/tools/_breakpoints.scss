@@ -1,22 +1,22 @@
-@mixin mobile {
+@mixin display-mo {
     @media (max-width: 374px) {
       @content;
     }
 }
 
-@mixin small {
-@media (max-width: 768px) {
-    @content;
-}
+@mixin display-sm {
+    @media (max-width: 768px) {
+        @content;
+    }
 }
 
-@mixin medium {
-@media (max-width: 991px) {
-    @content;
+@mixin display-md {
+    @media (max-width: 991px) {
+        @content;
+    }
 }
-}
-@mixin large {
-@media (max-width: 1200px) {
-    @content;
-}
+@mixin display-lg {
+    @media (max-width: 1200px) {
+        @content;
+    }
 }
