@@ -69,6 +69,7 @@
                 overflow:hidden;
                 margin:0;
                 padding:0;
+                display: flex;
                 li{
                     a{
                         color:#ccc;
@@ -83,19 +84,26 @@
                         color:rgb(173,173,173);
                         @include display-sm {
                             border:0;
-                            padding: 0px 0 10px;
+                            padding: 0;
                         }
                     }
                     a:hover{
                         color:#ffffff;
+                    }
+                    &:first-child {
+                        @include display-sm {
+                            margin-top: 0.5rem;
+                        }
+                    }
+                    @include display-sm {
+                        padding: 0 1rem 0.5rem;
                     }
                     
                 }
                 @include display-sm {
                     display:none;
                     height:0;
-                    transition: height 0.3s ease;
-                    padding: 0.5rem 1rem;
+                    transition: height 0.2s ease;
                 }
             }
             .vertical{

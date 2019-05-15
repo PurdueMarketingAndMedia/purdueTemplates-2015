@@ -157,7 +157,7 @@ const toggleNew = (e) => {
                 setTimeout(() => {
                     hide(content)
                     content.removeAttribute('state-animating')
-                }, 300)
+                }, 200)
             } else if(content.getAttribute('state-animating') === null) {
                 icons.forEach((icon) => {
                     swapIcon(icon)
@@ -166,7 +166,7 @@ const toggleNew = (e) => {
                 content.setAttribute('state-animating', 'true')
                 setTimeout(() => {
                     content.removeAttribute('state-animating')
-                }, 300)
+                }, 200)
                 content.style.height = content.scrollHeight+"px";
             }
             break
