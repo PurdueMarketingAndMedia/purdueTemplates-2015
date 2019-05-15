@@ -134,26 +134,39 @@ window.addEventListener('resize', () => {
 //toggle function
 const toggleNew = (e) => {
     let clicked = e.currentTarget
-    const checkClassName = (term) => {
-        return clicked.classList.contains(term);
+    const checkClassName = (el, term) => {
+        return el.classList.contains(term);
     }
     switch (true) {
-        case checkClassName('accordion__heading'):
+        case checkClassName(clicked, 'accordion__heading'):
             const expanded = clicked.getAttribute('aria-expanded') === "false" ? true : false;
             clicked.setAttribute('aria-expanded', expanded);
             const contentId = clicked.getAttribute('aria-controls');
 
+            
             let icons = clicked.querySelectorAll('svg');
-            icons.forEach((icon) => {
-                swapIcon(icon)
-            })
             let content = document.querySelector('#' + contentId);
+            console.log(content.getAttribute('state-animating'))
             const currAttr = window.getComputedStyle(content).getPropertyValue('display');
-            if (currAttr && currAttr === 'block') {
+            if (currAttr && currAttr === 'block' && content.getAttribute('state-animating') === null) {
+                icons.forEach((icon) => {
+                    swapIcon(icon)
+                })
                 content.style.height = 0;
-                setTimeout(() => {hide(content)}, 500)
-            } else {
+                content.setAttribute('state-animating', 'true')
+                setTimeout(() => {
+                    hide(content)
+                    content.removeAttribute('state-animating')
+                }, 300)
+            } else if(content.getAttribute('state-animating') === null) {
+                icons.forEach((icon) => {
+                    swapIcon(icon)
+                })
                 show(content);
+                content.setAttribute('state-animating', 'true')
+                setTimeout(() => {
+                    content.removeAttribute('state-animating')
+                }, 300)
                 content.style.height = content.scrollHeight+"px";
             }
             break
