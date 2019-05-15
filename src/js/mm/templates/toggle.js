@@ -144,16 +144,15 @@ const toggleNew = (e) => {
             clicked.setAttribute('aria-expanded', expanded);
             const contentId = clicked.getAttribute('aria-controls');
 
-            let els = clicked.querySelectorAll('svg');
-            els.forEach((el) => {
-                elDisplay(el);
-                console.log(el)
+            let icons = clicked.querySelectorAll('svg');
+            icons.forEach((icon) => {
+                swapIcon(icon)
             })
             let content = document.querySelector('#' + contentId);
             const currAttr = window.getComputedStyle(content).getPropertyValue('display');
             if (currAttr && currAttr === 'block') {
                 content.style.height = 0;
-                hide(content);
+                setTimeout(() => {hide(content)}, 500)
             } else {
                 show(content);
                 content.style.height = content.scrollHeight+"px";
@@ -174,17 +173,11 @@ var show = function (elem) {
 };
 //Reset visibility
 var removeStyle = function (elem) {
-    if (elem.classList.contains('hide')) {
-        elem.classList.remove('hide');
-    }
-    if (elem.classList.contains('show')) {
-        elem.classList.remove('show');
-    }
-    if (elem.getAttribute('style'))
-        elem.removeAttribute('style');
+    elem.classList.remove('hide', 'show');
+    elem.removeAttribute('style');
 };
 //Change element display
-const elDisplay = (el) => {
+const swapIcon = (el) => {
     const currAttr = window.getComputedStyle(el).getPropertyValue('display');
     if (currAttr && currAttr === 'block') {
         hide(el);
