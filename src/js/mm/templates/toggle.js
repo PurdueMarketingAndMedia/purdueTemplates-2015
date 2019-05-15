@@ -137,7 +137,6 @@ const toggleNew = (e) => {
     const checkClassName = (term) => {
         return clicked.classList.contains(term);
     }
-    console.log(clicked)
     switch (true) {
         case checkClassName('accordion__heading'):
             const expanded = clicked.getAttribute('aria-expanded') === "false" ? true : false;
@@ -181,10 +180,8 @@ const swapIcon = (el) => {
     const currAttr = window.getComputedStyle(el).getPropertyValue('display');
     if (currAttr && currAttr === 'block') {
         hide(el);
-        el.setAttribute('aria-hidden', true);
     } else {
         show(el);
-        el.setAttribute('aria-hidden', false);
     }
 }
 //Collapse footer  and show icon at the beginning on small screen
