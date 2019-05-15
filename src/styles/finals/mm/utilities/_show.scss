@@ -1,3 +1,6 @@
 .show{
     display:block !important;
+    &.accordion__content--footer{
+        display: flex !important;
+    }
 }

@@ -148,7 +148,7 @@ const toggleNew = (e) => {
             let content = document.querySelector('#' + contentId);
             console.log(content.getAttribute('state-animating'))
             const currAttr = window.getComputedStyle(content).getPropertyValue('display');
-            if (currAttr && currAttr === 'block' && content.getAttribute('state-animating') === null) {
+            if (currAttr && currAttr === 'flex' && content.getAttribute('state-animating') === null) {
                 icons.forEach((icon) => {
                     swapIcon(icon)
                 })
