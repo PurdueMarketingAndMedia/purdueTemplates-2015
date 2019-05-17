@@ -18,7 +18,7 @@
             flex-wrap: wrap;
             flex-direction: row;
             justify-content: center;
-            max-width:1200px;
+            max-width:1140px;
             flex:1 1 auto;
             @include display-md {
                 max-width:750px;
@@ -29,7 +29,12 @@
             width:20%;
             padding: 15px;
             white-space:nowrap;
-
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-of-type {
+                padding-right: 0;
+            }
             h3{
                 padding: 0px;
                 margin:0;
