@@ -8,6 +8,7 @@
         "scss:dev": "NODE_ENV=development node styles-render.js",
         "js:dev": "run-p js:dev:*",
         "js:dev:templates": "rm -rf new_builds/js/mm/templates && mkdir -p new_builds/js/mm/templates && webpack src/js/mm/main.js -o new_builds/js/mm/templates/main.js && browser-sync reload",
+        "js:prod:templates": "rm -rf new_builds/js/mm/templates && mkdir -p new_builds/js/mm/templates && webpack -p src/js/mm/main.js -o new_builds/js/mm/templates/main.js && browser-sync reload",
         "serve": "browser-sync new_builds --directory -w -b Firefox",
         "preserve": "run-p html scss:dev js:dev",
         "watch": "run-p watch:*",
@@ -34,6 +35,7 @@
         "async": "^2.1.5",
         "autoprefixer": "^9.4.7",
         "babel-loader": "^8.0.5",
+        "babel-preset-minify": "^0.5.0",
         "browser-sync": "^2.26.3",
         "del": "^3.0.0",
         "gulp": "^3.9.1",
@@ -55,21 +57,6 @@
         "last 2 versions",
         "> 5% in my stats"
     ],
-    "babel": {
-        "presets": [
-            [
-                "@babel/preset-env",
-                {
-                    "targets": {
-                        "browsers": [
-                            "last 2 versions",
-                            "> 1%"
-                        ]
-                    }
-                }
-            ]
-        ]
-    },
     "dependencies": {
         "handlebars": "^4.1.1",
         "node-sass": "^4.11.0",
