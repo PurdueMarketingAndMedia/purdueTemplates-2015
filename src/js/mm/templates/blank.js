@@ -1,1 +1,1 @@
-import "./toggle.js";
+import "../global/toggle.js";

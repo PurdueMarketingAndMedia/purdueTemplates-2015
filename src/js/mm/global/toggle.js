@@ -209,9 +209,12 @@ var show = function (elem) {
     elem.classList.remove('hide');
 };
 //Reset visibility
-var removeStyle = function (elem) {
-    elem.classList.remove('hide', 'show');
-    elem.removeAttribute('style');
+var resetStyles = function (elems) {
+    for (const elem of elems) {
+        console.log(elem)
+        elem.classList.remove('hide', 'show');
+        elem.removeAttribute('style');
+    }
 };
 //Change element display
 const swapIcon = (el) => {
@@ -257,22 +260,27 @@ document.querySelectorAll('.footer__info-links--column>h3>button').forEach((acco
 //Reset
 window.addEventListener('resize', () => {
     var width = document.body.clientWidth;
-    document.querySelectorAll('.footer__info-links--column>h3>button>svg').forEach((el) => {
-        if (width >= 768) {
-            removeStyle(el);
-            el.setAttribute('aria-hidden', true);
-        }
 
-    });
-    document.querySelectorAll('.accordion__content--footer').forEach((el) => {
-        if (width >= 768) {
-            removeStyle(el);
-        }
-    });
+    const elemsToReset = [...document.querySelectorAll('.footer__info-links--column>h3>button>svg'), ...document.querySelectorAll('.accordion__content--footer'), document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner')]
+
+    if( width >= 768) {
+        resetStyles(elemsToReset)
+    }
+    // document.querySelectorAll('.footer__info-links--column>h3>button>svg').forEach((el) => {
+    //     if (width >= 768) {
+    //         resetStyles(el);
+    //         el.setAttribute('aria-hidden', true);
+    //     }
+
+    // });
+    // document.querySelectorAll('.accordion__content--footer').forEach((el) => {
+    //     if (width >= 768) {
+    //         resetStyles(el);
+    //     }
+    // });
     document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
         let content = document.querySelector('#' + el.getAttribute('aria-controls'));
         const currAttr = window.getComputedStyle(content).getPropertyValue('display');
-        console.log(currAttr)
         if (width >= 768) {
            el.setAttribute('aria-expanded', true);
         }else if(currAttr === "block"){
@@ -282,6 +290,15 @@ window.addEventListener('resize', () => {
         }
     });
 
+    // const goldBarContent = document.querySelector('.header__goldBar--menus')
+    // const goldBarContainer = document.querySelector('.header__goldBar--inner')
+
+    // resetStyles
+    // document.querySelectorAll('.accordion__content--footer').forEach((el) => {
+    //     if (width >= 768) {
+    //         resetStyles(el);
+    //     }
+    // });
 });
 
 
