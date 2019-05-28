@@ -18,10 +18,13 @@
             flex-wrap: wrap;
             flex-direction: row;
             justify-content: center;
-            max-width:1140px;
+            max-width: 1140px;
             flex:1 1 auto;
+            @include display-lg {
+                max-width: 940px;
+            }
             @include display-md {
-                max-width:750px;
+                max-width: 750px;
             }
         }
         &--column{
@@ -31,7 +34,7 @@
             white-space:nowrap;
             &:first-child {
                 padding-left: 0;
-                @include display-sm {
+                @include display-md {
                     padding-left: 1rem;
                 }
             }
