@@ -103,7 +103,7 @@
 // document.querySelector('#mainNavMo').addEventListener('click', (e) => { toggle(e) })
 
 // const reset = (oldWidth) => {
-//     const footerHeadings = document.querySelectorAll(".footer__info-links--column>h3>button.accordion__heading--footer");
+//     const footerHeadings = document.querySelectorAll(".footer__resources--column>h3>button.accordion__heading--footer");
 //     const width = document.body.clientWidth;
 //     const goldBarDisplay = document.querySelector(".header__goldBar--menus")
 //     const goldBarHeight = document.querySelector(".header__goldBar--inner")
@@ -249,7 +249,7 @@ document.querySelectorAll('.accordion__heading--footer>svg.fa-minus').forEach((e
     }
 });
 //Toggle footer accordion
-document.querySelectorAll('.footer__info-links--column>h3>button').forEach((accordion) => {
+document.querySelectorAll('.footer__resources--column>h3>button').forEach((accordion) => {
     accordion.addEventListener('click', (e) => {
         let width = document.body.clientWidth;
         if (width < 768) {
@@ -261,12 +261,12 @@ document.querySelectorAll('.footer__info-links--column>h3>button').forEach((acco
 window.addEventListener('resize', () => {
     var width = document.body.clientWidth;
 
-    const elemsToReset = [...document.querySelectorAll('.footer__info-links--column>h3>button>svg'), ...document.querySelectorAll('.accordion__content--footer'), document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner')]
+    const elemsToReset = [...document.querySelectorAll('.footer__resources--column>h3>button>svg'), ...document.querySelectorAll('.accordion__content--footer'), document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner')]
 
     if( width >= 768) {
         resetStyles(elemsToReset)
     }
-    // document.querySelectorAll('.footer__info-links--column>h3>button>svg').forEach((el) => {
+    // document.querySelectorAll('.footer__resources--column>h3>button>svg').forEach((el) => {
     //     if (width >= 768) {
     //         resetStyles(el);
     //         el.setAttribute('aria-hidden', true);
