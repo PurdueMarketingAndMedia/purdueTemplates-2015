@@ -258,7 +258,6 @@
       display: flex;
       list-style: none;
       width: 1140px;
-      overflow: hidden;
       padding: 0;
       @include display-lg {
         width: 940px;
@@ -277,6 +276,7 @@
         transition: max-height 0.5s linear;
         flex-direction: column;
         box-sizing: border-box;
+        // overflow: hidden;
         // display: none;
       }
       li {
@@ -350,8 +350,9 @@
         }
       }
     }
-    &--dropdown1 {
+    &--dropdownOuter {
       display: none;
+      padding: 0.25rem 0;
       position: absolute;
       background: black;
       width: auto;
@@ -361,9 +362,12 @@
       li {
         margin: 0 !important;
         &>a {
-          padding-left: 1.3rem;
-          padding-right: 1.3rem;
-          justify-content: space-between;
+          padding: 0.25rem 1.3rem;
+          @include display-sm {
+            padding-left: 1.3rem;
+            padding-right: 1.3rem;
+            justify-content: space-between;
+          }
           &>span {
             font-size: 0.85rem;
             @include display-sm {
@@ -382,13 +386,14 @@
         padding-left: 1rem;
       }
     }
-    &--dropdown2 {
+    &--dropdownInner {
       display: none;
       position: absolute;
       left: 100%;
       top: 0;
       background: black;
       flex-direction: column;
+      padding: 0.25rem 0;
       @include display-sm {
         position: relative;
         top: 0;

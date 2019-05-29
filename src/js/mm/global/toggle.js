@@ -37,17 +37,17 @@
 //     switch (true) {
 //         case className('dropdown-button'):
 //             const dropTarget = clicked.parentNode.children[1]
-//             if (dropTarget.classList[0] !== 'header__mainNav--dropdown2') {
-//                 const outerDropdowns = document.querySelectorAll('.header__mainNav--dropdown1')
-//                 const innerDropdowns = document.querySelectorAll('.header__mainNav--dropdown2')
+//             if (dropTarget.classList[0] !== 'header__mainNav--dropdownInner') {
+//                 const outerDropdowns = document.querySelectorAll('.header__mainNav--dropdownOuter')
+//                 const innerDropdowns = document.querySelectorAll('.header__mainNav--dropdownInner')
 //                 const dropdowns = [...outerDropdowns, ...innerDropdowns]
 //                 for (const dropdown of dropdowns) {
 //                     if (dropdown !== dropTarget) {
 //                         dropdown.removeAttribute('style')
 //                     }
 //                 }
-//             } else if (dropTarget.classList[0] === 'header__mainNav--dropdown2') {
-//                 const innerDropdowns = document.querySelectorAll('.header__mainNav--dropdown2')
+//             } else if (dropTarget.classList[0] === 'header__mainNav--dropdownInner') {
+//                 const innerDropdowns = document.querySelectorAll('.header__mainNav--dropdownInner')
 //                 for (const dropdown of innerDropdowns) {
 //                     if (dropdown !== dropTarget) {
 //                         dropdown.removeAttribute('style')
@@ -91,8 +91,8 @@
 
 // document.addEventListener('click', (e) => {
 //     if (e.target.tagName !== "A" && e.target.tagName !== "BUTTON") {
-//         const outerDropdowns = document.querySelectorAll('.header__mainNav--dropdown1')
-//         const innerDropdowns = document.querySelectorAll('.header__mainNav--dropdown2')
+//         const outerDropdowns = document.querySelectorAll('.header__mainNav--dropdownOuter')
+//         const innerDropdowns = document.querySelectorAll('.header__mainNav--dropdownInner')
 //         const dropdowns = [...outerDropdowns, ...innerDropdowns]
 //         for (const dropTarget of dropdowns) {
 //             dropTarget.removeAttribute('style')
@@ -133,13 +133,18 @@
 
 //toggle function
 const toggleNew = (e) => {
-    let clicked = e.currentTarget
-    console.log(clicked)
+    let clicked = e
     const checkClassName = (el, term) => {
-        return el.classList.contains(term);
+        return el.classList && el.classList.contains(term);
+    }
+    const checkElement = (el, selector) => {
+        return el === document.querySelector(selector)
+    }
+    const getCurrDisplay = (el) => {
+        return window.getComputedStyle(el).getPropertyValue('display')
     }
     switch (true) {
-        case checkClassName(clicked, 'accordion__heading'): // footer accordion
+        case checkClassName(clicked, 'accordion__heading'): // specifically footer accordion
             const expanded = clicked.getAttribute('aria-expanded') === "false" ? true : false;
             clicked.setAttribute('aria-expanded', expanded);
             const contentId = clicked.getAttribute('aria-controls');
@@ -147,7 +152,7 @@ const toggleNew = (e) => {
             
             let icons = clicked.querySelectorAll('svg');
             const content = document.querySelector('#' + contentId);
-            const currAttr = window.getComputedStyle(content).getPropertyValue('display');
+            const currAttr = getCurrDisplay(content)
             if (currAttr && currAttr === 'flex' && content.getAttribute('state-animating') === null) {
                 icons.forEach((icon) => {
                     swapIcon(icon)
@@ -170,10 +175,10 @@ const toggleNew = (e) => {
                 content.style.height = content.scrollHeight+"px";
             }
             break
-        case  checkClassName(clicked, 'header__goldBar--moButton'): // gold bar mobile menu
+        case  checkClassName(clicked, 'header__goldBar--moButton'): // specifically gold bar mobile menu
             const goldBarContent = document.querySelector('.header__goldBar--menus')
             const goldBarContainer = document.querySelector('.header__goldBar--inner')
-            const currGoldBarAttr = window.getComputedStyle(goldBarContent).getPropertyValue('display');
+            const currGoldBarAttr = getCurrDisplay(goldBarContent)
 
             if (currGoldBarAttr && currGoldBarAttr === 'flex' && goldBarContent.getAttribute('state-animating') === null) {
                 goldBarContainer.style.height = 0;
@@ -195,23 +200,62 @@ const toggleNew = (e) => {
             }
 
             break
+        case checkElement(clicked, '.header__goldBar__findInfoFor button'): // specifically find info for button
+            const menu = document.querySelector('#findInfoFor')
+            const currDisplayVal = getCurrDisplay(menu)
+            if (currDisplayVal !== 'none') {
+                hide(menu)
+            } else {
+                show(menu)
+            }
+            break
+        case checkClassName(clicked, 'dropdown-button'):
+            const dropdown = clicked.nextElementSibling
+            if(checkClassName(dropdown, 'header__mainNav--dropdownInner')) {
+                const allInnerDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownInner')]
+                allInnerDropdowns.map((innerDropdown) => {
+                    if (innerDropdown !== dropdown) {
+                        hide(innerDropdown)
+                    }
+                })
+            } else {
+                const allDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownOuter'), ...document.querySelectorAll('.header__mainNav--dropdownInner')]
+                allDropdowns.map((checkDropdown) => {
+                    if (checkDropdown !== dropdown) {
+                        hide(checkDropdown)
+                    }
+                })
+            }
+            const dropdownDisplayVal = getCurrDisplay(dropdown)
+            if (dropdownDisplayVal !== 'none') {
+                hide(dropdown)
+            } else {
+                show(dropdown)
+            }
+            break
+        default:
+        console.log('ran default')
+            const allDropdownsDefault = [...document.querySelectorAll('.header__mainNav--dropdownInner'), ...document.querySelectorAll('.header__mainNav--dropdownOuter'), document.querySelector('#findInfoFor')]
+            allDropdownsDefault.map((dropdown) => {
+                hide(dropdown)
+            })
 
+            break
     }
 }
 // Hide an element
-var hide = function (elem) {
+const hide = function (elem) {
     elem.classList.add('hide');
     elem.classList.remove('show');
 };
 // show an element
-var show = function (elem) {
+const show = function (elem) {
     elem.classList.add('show');
     elem.classList.remove('hide');
 };
 //Reset visibility
-var resetStyles = function (elems) {
+const resetStyles = function (elems) {
     for (const elem of elems) {
-        console.log(elem)
         elem.classList.remove('hide', 'show');
         elem.removeAttribute('style');
     }
@@ -226,7 +270,7 @@ const swapIcon = (el) => {
     }
 }
 //Collapse footer  and show icon at the beginning on small screen
-var width = document.body.clientWidth;
+const width = document.body.clientWidth;
 document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
     if (width < 768) {
        el.setAttribute('aria-expanded', false);
@@ -248,36 +292,21 @@ document.querySelectorAll('.accordion__heading--footer>svg.fa-minus').forEach((e
         hide(el)
     }
 });
-//Toggle footer accordion
-document.querySelectorAll('.footer__resources--column>h3>button').forEach((accordion) => {
-    accordion.addEventListener('click', (e) => {
-        let width = document.body.clientWidth;
-        if (width < 768) {
-            toggleNew(e);
-        }
-    })
-})
+
 //Reset
 window.addEventListener('resize', () => {
     var width = document.body.clientWidth;
 
-    const elemsToReset = [...document.querySelectorAll('.footer__resources--column>h3>button>svg'), ...document.querySelectorAll('.accordion__content--footer'), document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner')]
+    const resetLg = [...document.querySelectorAll('.footer__resources--column>h3>button>svg'), ...document.querySelectorAll('.accordion__content--footer'), document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner'), document.querySelector('#findInfoFor')]
+
+    const resetSm = [document.querySelector('#findInfoFor')]
 
     if( width >= 768) {
-        resetStyles(elemsToReset)
+        resetStyles(resetLg)
+    } else if (width < 768) {
+        resetStyles(resetSm)
     }
-    // document.querySelectorAll('.footer__resources--column>h3>button>svg').forEach((el) => {
-    //     if (width >= 768) {
-    //         resetStyles(el);
-    //         el.setAttribute('aria-hidden', true);
-    //     }
 
-    // });
-    // document.querySelectorAll('.accordion__content--footer').forEach((el) => {
-    //     if (width >= 768) {
-    //         resetStyles(el);
-    //     }
-    // });
     document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
         let content = document.querySelector('#' + el.getAttribute('aria-controls'));
         const currAttr = window.getComputedStyle(content).getPropertyValue('display');
@@ -289,19 +318,39 @@ window.addEventListener('resize', () => {
             el.setAttribute('aria-expanded', false);
         }
     });
-
-    // const goldBarContent = document.querySelector('.header__goldBar--menus')
-    // const goldBarContainer = document.querySelector('.header__goldBar--inner')
-
-    // resetStyles
-    // document.querySelectorAll('.accordion__content--footer').forEach((el) => {
-    //     if (width >= 768) {
-    //         resetStyles(el);
-    //     }
-    // });
 });
 
 
-document.querySelector('.header__goldBar--moButton').addEventListener('click', (e) => {
-    toggleNew(e)
-})
+// document.querySelector('.header__goldBar--moButton').addEventListener('click', (e) => {
+//     toggleNew(e)
+// })
+
+// document.querySelector('.header__goldBar__findInfoFor button').addEventListener('click', (e) => {
+//     toggleNew(e)
+// })
+
+const assignListeners = () => {
+    document.addEventListener('click', (e) => {
+        e = e.target
+        if (e.classList && e.classList.contains('accordion__heading')) {
+            let width = document.body.clientWidth;
+            if (width < 768) {
+                toggleNew(e);
+            }
+        } else if (
+            e.classList && (
+                (
+                    e.classList.contains('header__goldBar--moButton') || 
+                    e.classList.contains('dropdown-button')
+                ) || 
+                e === document.querySelector('.header__goldBar__findInfoFor button')
+            )
+        ) {
+            toggleNew(e)
+        } else {
+            toggleNew(e)
+        }
+    })
+}
+
+assignListeners()
