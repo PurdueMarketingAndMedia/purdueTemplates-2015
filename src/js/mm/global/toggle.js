@@ -203,6 +203,12 @@ const toggleNew = (e) => {
         case checkElement(clicked, '.header__goldBar__findInfoFor button'): // specifically find info for button
             const menu = document.querySelector('#findInfoFor')
             const currDisplayVal = getCurrDisplay(menu)
+            const allDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownOuter'), ...document.querySelectorAll('.header__mainNav--dropdownInner')]
+            allDropdowns.map((checkDropdown) => {
+                if (checkDropdown !== dropdown) {
+                    hide(checkDropdown)
+                }
+            })
             if (currDisplayVal !== 'none') {
                 hide(menu)
             } else {
@@ -319,15 +325,6 @@ window.addEventListener('resize', () => {
         }
     });
 });
-
-
-// document.querySelector('.header__goldBar--moButton').addEventListener('click', (e) => {
-//     toggleNew(e)
-// })
-
-// document.querySelector('.header__goldBar__findInfoFor button').addEventListener('click', (e) => {
-//     toggleNew(e)
-// })
 
 const assignListeners = () => {
     document.addEventListener('click', (e) => {
