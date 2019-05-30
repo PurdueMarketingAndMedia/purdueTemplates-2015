@@ -217,6 +217,8 @@ const toggleNew = (e) => {
             break
         case checkClassName(clicked, 'dropdown-button'):
             const dropdown = clicked.nextElementSibling
+            const findInfoForMenu = document.querySelector('#findInfoFor')
+            hide(findInfoForMenu)
             if(checkClassName(dropdown, 'header__mainNav--dropdownInner')) {
                 const allInnerDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownInner')]
                 allInnerDropdowns.map((innerDropdown) => {
@@ -240,7 +242,7 @@ const toggleNew = (e) => {
             }
             break
         default:
-        console.log('ran default')
+            console.log('ran default')
             const allDropdownsDefault = [...document.querySelectorAll('.header__mainNav--dropdownInner'), ...document.querySelectorAll('.header__mainNav--dropdownOuter'), document.querySelector('#findInfoFor')]
             allDropdownsDefault.map((dropdown) => {
                 hide(dropdown)
