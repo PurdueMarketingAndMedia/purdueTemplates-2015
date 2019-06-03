@@ -9,6 +9,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    &--moButton {
+      display: none;
+      align-items: flex-start;
+      box-sizing: border-box;
+      background: none;
+      border: none;
+      font-size: 1rem;
+      &:hover {
+        cursor: pointer;
+      }
+      @include display-sm {
+        display: flex;
+        order: 1;
+      }
+    }
     &--inner {
       position: relative;
       padding: 0.3rem 0;
@@ -27,34 +42,13 @@
       }
       @include display-sm {
         width: 100%;
-        padding: 1rem;
+        padding: 0.75rem 1rem;
         flex-wrap: wrap;
-        min-height: 3rem;
-        height: 3rem;
-        transition: all 0.2s linear;
-        transition-delay: 0;
+        transition: height 0.2s linear;
         overflow: hidden;
         box-sizing: border-box;
-        align-items: flex-start;
-      }
-      
-      &>button {
-        display: none;
-        align-items: baseline;
-        box-sizing: border-box;
-        background: none;
-        border: none;
-        font-size: .875rem;
-        span {
-          font-size: .675rem;
-        }
-        &:hover {
-          cursor: pointer;
-        }
-        @include display-sm {
-          display: flex;
-          order: 1;
-        }
+        align-items: center;
+        flex: 1 1 auto;
       }
     }
     &--menus {
@@ -69,8 +63,8 @@
         width: 100%;
         justify-content: stretch;
         padding: 0.5rem 1rem 0;
-        order: 3;
-        transition: max-height 1s ease-in;
+        order: 4;
+        transition: height 0.2s linear;
         display: none;
         height: 0;
       }
@@ -206,15 +200,57 @@
       }
     }
     &__search {
-      font-size: 1.1rem;
-
+      svg {
+        pointer-events: none;
+      }
+      &--container {
+        display: flex;
+        width: 100%;
+      }
+      &--dropdown {
+        position: absolute;
+        right: 0;
+        background: #c28e0e;
+        top: 100%;
+        padding: 0.35rem 0.5rem;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        min-width: 15rem;
+        border-bottom-left-radius: 0.2rem;
+        border-bottom-right-radius: 0.2rem;
+        & .gsc-search-button {
+          display: none;
+        }
+        & .form-group {
+          width: 100% !important;
+        }
+        & .gsc-input {
+          padding: 0 !important;
+          margin: 0;
+        }
+        & input {
+          font-size: 0.8rem !important;
+        }
+        @include display-sm {
+          min-width: 0;
+          width: 100%;
+          position: static;
+          order: 3;
+          transition: height 0.1s linear;
+          height: 0;
+          padding-right: 0;
+          padding-left: 0;
+          justify-content: stretch;
+          overflow: hidden;
+          flex: 1 1 auto;
+        }
+      }
       &:hover {
         cursor: pointer;
       }
       @include display-sm {
         order: 2;
-        margin-top: -0.3rem;
-        height: auto;
       }
     }
     @include display-sm {

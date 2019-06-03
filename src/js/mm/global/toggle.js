@@ -134,8 +134,10 @@
 //toggle function
 const toggleNew = (e) => {
     let clicked = e
+    const width = document.body.clientWidth;
     const checkClassName = (el, term) => {
-        return el.classList && el.classList.contains(term);
+        console.log(el.classList)
+        return el.classList && [...el.classList].includes(term);
     }
     const checkElement = (el, selector) => {
         return el === document.querySelector(selector)
@@ -143,6 +145,7 @@ const toggleNew = (e) => {
     const getCurrDisplay = (el) => {
         return window.getComputedStyle(el).getPropertyValue('display')
     }
+
     switch (true) {
         case checkClassName(clicked, 'accordion__heading'): // specifically footer accordion
             const expanded = clicked.getAttribute('aria-expanded') === "false" ? true : false;
@@ -177,33 +180,28 @@ const toggleNew = (e) => {
             break
         case  checkClassName(clicked, 'header__goldBar--moButton'): // specifically gold bar mobile menu
             const goldBarContent = document.querySelector('.header__goldBar--menus')
-            const goldBarContainer = document.querySelector('.header__goldBar--inner')
             const currGoldBarAttr = getCurrDisplay(goldBarContent)
 
             if (currGoldBarAttr && currGoldBarAttr === 'flex' && goldBarContent.getAttribute('state-animating') === null) {
-                goldBarContainer.style.height = 0;
+                goldBarContent.style.height = 0;
                 goldBarContent.setAttribute('state-animating', 'true')
                 setTimeout(() => {
                     hide(goldBarContent)
                     goldBarContent.removeAttribute('state-animating')
-                    goldBarContent.style.height = 0;
                 }, 200)
             } else if(goldBarContent.getAttribute('state-animating') === null) {
-                const goldBarHeight = parseInt(goldBarContainer.scrollHeight)
                 show(goldBarContent);
-                goldBarContent.style.height = `${goldBarContent.scrollHeight}px`
-                goldBarContainer.style.height = `${(parseInt(goldBarContent.style.height) + goldBarHeight + 6).toString()}px`
                 goldBarContent.setAttribute('state-animating', 'true')
                 setTimeout(() => {
                     goldBarContent.removeAttribute('state-animating')
                 }, 200)
+                goldBarContent.style.height = `${goldBarContent.scrollHeight}px`
             }
-
             break
         case checkElement(clicked, '.header__goldBar__findInfoFor button'): // specifically find info for button
             const menu = document.querySelector('#findInfoFor')
             const currDisplayVal = getCurrDisplay(menu)
-            const allDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownOuter'), ...document.querySelectorAll('.header__mainNav--dropdownInner')]
+            const allDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownOuter'), ...document.querySelectorAll('.header__mainNav--dropdownInner'), document.querySelector('#searchDropdown')]
             allDropdowns.map((checkDropdown) => {
                 if (checkDropdown !== dropdown) {
                     hide(checkDropdown)
@@ -227,7 +225,7 @@ const toggleNew = (e) => {
                     }
                 })
             } else {
-                const allDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownOuter'), ...document.querySelectorAll('.header__mainNav--dropdownInner')]
+                const allDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownOuter'), ...document.querySelectorAll('.header__mainNav--dropdownInner'), document.querySelector('#searchDropdown')]
                 allDropdowns.map((checkDropdown) => {
                     if (checkDropdown !== dropdown) {
                         hide(checkDropdown)
@@ -241,12 +239,47 @@ const toggleNew = (e) => {
                 show(dropdown)
             }
             break
+        case checkClassName(clicked, 'header__goldBar__search'): // search bar
+            const searchDropdown = document.querySelector('#searchDropdown')
+            const searchDisplayVal = getCurrDisplay(searchDropdown)
+            if( width >=768 ) {
+                const otherDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownOuter'), ...document.querySelectorAll('.header__mainNav--dropdownInner'), document.querySelector('#findInfoFor')]
+                otherDropdowns.map((checkDropdown) => {
+                    if (checkDropdown !== dropdown) {
+                        hide(checkDropdown)
+                    }
+                })
+                if (searchDisplayVal !== 'none') {
+                    hide(searchDropdown)
+                } else {
+                    show(searchDropdown)
+                }
+            } else if( width < 768 ) {
+                if (searchDisplayVal && searchDisplayVal === 'flex' && searchDropdown.getAttribute('state-animating') === null) {
+                    searchDropdown.style.height = 0;
+                    searchDropdown.setAttribute('state-animating', 'true')
+                    setTimeout(() => {
+                        hide(searchDropdown)
+                        searchDropdown.removeAttribute('state-animating')
+                    }, 100)
+                } else if(searchDropdown.getAttribute('state-animating') === null) {
+                    show(searchDropdown);
+                    searchDropdown.setAttribute('state-animating', 'true')
+                    setTimeout(() => {
+                        searchDropdown.removeAttribute('state-animating')
+                    }, 100)
+                    searchDropdown.style.height = `${searchDropdown.scrollHeight + 24}px` 
+                }
+            }
+
+            break
         default:
-            console.log('ran default')
             const allDropdownsDefault = [...document.querySelectorAll('.header__mainNav--dropdownInner'), ...document.querySelectorAll('.header__mainNav--dropdownOuter'), document.querySelector('#findInfoFor')]
-            allDropdownsDefault.map((dropdown) => {
-                hide(dropdown)
-            })
+            if (width >= 768) {
+                allDropdownsDefault.map((dropdown) => {
+                    hide(dropdown)
+                })
+            }
 
             break
     }
@@ -303,7 +336,7 @@ document.querySelectorAll('.accordion__heading--footer>svg.fa-minus').forEach((e
 
 //Reset
 window.addEventListener('resize', () => {
-    var width = document.body.clientWidth;
+    const width = document.body.clientWidth;
 
     const resetLg = [...document.querySelectorAll('.footer__resources--column>h3>button>svg'), ...document.querySelectorAll('.accordion__content--footer'), document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner'), document.querySelector('#findInfoFor')]
 
@@ -340,7 +373,8 @@ const assignListeners = () => {
             e.classList && (
                 (
                     e.classList.contains('header__goldBar--moButton') || 
-                    e.classList.contains('dropdown-button')
+                    e.classList.contains('dropdown-button') ||
+                    e.classList.contains('header__goldBar__search')
                 ) || 
                 e === document.querySelector('.header__goldBar__findInfoFor button')
             )
