@@ -136,7 +136,6 @@ const toggleNew = (e) => {
     let clicked = e
     const width = document.body.clientWidth;
     const checkClassName = (el, term) => {
-        console.log(el.classList)
         return el.classList && [...el.classList].includes(term);
     }
     const checkElement = (el, selector) => {
@@ -273,6 +272,34 @@ const toggleNew = (e) => {
             }
 
             break
+        case checkElement(clicked, '#mainNavMo'): // Main nav mobile
+            const mainNavMenu = document.querySelector('.header__mainNav--main')
+            const mainNavDisplay = getCurrDisplay(mainNavMenu)
+            if( width < 768 ) {
+                if (mainNavDisplay && mainNavDisplay === 'flex' && mainNavMenu.getAttribute('state-animating') === null) {
+                    mainNavMenu.style.height = `${mainNavMenu.scrollHeight}px` 
+                    setTimeout(() => {
+                        mainNavMenu.style.height = 0;
+                    }, 50)
+                    mainNavMenu.setAttribute('state-animating', 'true')
+                    setTimeout(() => {
+                        hide(mainNavMenu)
+                        const moDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownOuter'), ...document.querySelectorAll('.header__mainNav--dropdownInner')]
+                        resetStyles(moDropdowns)
+                        mainNavMenu.removeAttribute('state-animating')
+                    }, 200)
+                } else if(mainNavMenu.getAttribute('state-animating') === null) {
+                    show(mainNavMenu);
+                    mainNavMenu.setAttribute('state-animating', 'true')
+                    setTimeout(() => {
+                        mainNavMenu.removeAttribute('state-animating')
+                        mainNavMenu.style.height = 'auto' 
+                    }, 200)
+                    mainNavMenu.style.height = `${mainNavMenu.scrollHeight}px` 
+                }
+            }
+
+            break
         default:
             const allDropdownsDefault = [...document.querySelectorAll('.header__mainNav--dropdownInner'), ...document.querySelectorAll('.header__mainNav--dropdownOuter'), document.querySelector('#findInfoFor')]
             if (width >= 768) {
@@ -333,14 +360,19 @@ document.querySelectorAll('.accordion__heading--footer>svg.fa-minus').forEach((e
         hide(el)
     }
 });
+[...document.querySelectorAll('.header__mainNav-dropDownInner'), ...document.querySelectorAll('.header__mainNav-dropDownOuter')].forEach((el) => {
+    if (width < 768) {
+        hide(el)
+    }
+});
 
 //Reset
 window.addEventListener('resize', () => {
     const width = document.body.clientWidth;
 
-    const resetLg = [...document.querySelectorAll('.footer__resources--column>h3>button>svg'), ...document.querySelectorAll('.accordion__content--footer'), document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner'), document.querySelector('#findInfoFor')]
+    const resetLg = [...document.querySelectorAll('.footer__resources--column>h3>button>svg'), ...document.querySelectorAll('.accordion__content--footer'), document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner'), document.querySelector('#findInfoFor'), ...document.querySelectorAll('.header__mainNav-dropDownInner'), ...document.querySelectorAll('.header__mainNav-dropDownOuter')]
 
-    const resetSm = [document.querySelector('#findInfoFor')]
+    const resetSm = [document.querySelector('#findInfoFor'), document.querySelector('#searchDropdown'), document.querySelector('.header__mainNav--main'), ...document.querySelectorAll('.header__mainNav-dropDownInner'), ...document.querySelectorAll('.header__mainNav-dropDownOuter')]
 
     if( width >= 768) {
         resetStyles(resetLg)
@@ -376,7 +408,10 @@ const assignListeners = () => {
                     e.classList.contains('dropdown-button') ||
                     e.classList.contains('header__goldBar__search')
                 ) || 
-                e === document.querySelector('.header__goldBar__findInfoFor button')
+                (
+                    e === document.querySelector('.header__goldBar__findInfoFor button') ||
+                    e === document.querySelector('#mainNavMo')
+                )
             )
         ) {
             toggleNew(e)
