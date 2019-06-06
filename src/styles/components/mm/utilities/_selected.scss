@@ -1,0 +1,8 @@
+.selected {
+  &.dropdown-button {
+    color: $color-campusGold;
+    span {
+      color: $color-campusGold;
+    }
+  }
+}

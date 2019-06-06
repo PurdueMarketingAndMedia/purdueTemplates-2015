@@ -144,6 +144,15 @@ const toggleNew = (e) => {
     const getCurrDisplay = (el) => {
         return window.getComputedStyle(el).getPropertyValue('display')
     }
+    const getCurrSelected = () => {
+        // const test = document.querySelector('.header__mainNav--dropdownOuter.show')
+        // console.log(test)
+        const outer = document.querySelector('.header__mainNav--dropdownOuter.show')
+        const inner = document.querySelector('.header__mainNav--dropdownInner.show')
+        const outerSelected = outer ? outer.previousElementSibling : null
+        const innerSelected = inner ? inner.previousElementSibling : null
+        return {outerSelected , innerSelected}
+    }
 
     switch (true) {
         case checkClassName(clicked, 'accordion__heading'): // specifically footer accordion
@@ -215,12 +224,16 @@ const toggleNew = (e) => {
         case checkClassName(clicked, 'dropdown-button'):
             const dropdown = clicked.nextElementSibling
             const findInfoForMenu = document.querySelector('#findInfoFor')
-            hide(findInfoForMenu)
+            const {outerSelected, innerSelected} = getCurrSelected()
+            if (width >= 768) {
+                hide(findInfoForMenu)
+            }
             if(checkClassName(dropdown, 'header__mainNav--dropdownInner')) {
                 const allInnerDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownInner')]
                 allInnerDropdowns.map((innerDropdown) => {
                     if (innerDropdown !== dropdown) {
                         hide(innerDropdown)
+                        deselect(innerSelected)
                     }
                 })
             } else {
@@ -228,13 +241,17 @@ const toggleNew = (e) => {
                 allDropdowns.map((checkDropdown) => {
                     if (checkDropdown !== dropdown) {
                         hide(checkDropdown)
+                        deselect(outerSelected)
+                        deselect(innerSelected)
                     }
                 })
             }
             const dropdownDisplayVal = getCurrDisplay(dropdown)
             if (dropdownDisplayVal !== 'none') {
+                deselect(clicked)
                 hide(dropdown)
             } else {
+                select(clicked)
                 show(dropdown)
             }
             break
@@ -267,7 +284,7 @@ const toggleNew = (e) => {
                     setTimeout(() => {
                         searchDropdown.removeAttribute('state-animating')
                     }, 100)
-                    searchDropdown.style.height = `${searchDropdown.scrollHeight + 24}px` 
+                    searchDropdown.style.height = `${searchDropdown.scrollHeight + 24}px`
                 }
             }
 
@@ -320,6 +337,17 @@ const hide = function (elem) {
 const show = function (elem) {
     elem.classList.add('show');
     elem.classList.remove('hide');
+};
+// add selected class to element
+const select = function (elem) {
+    elem.classList.add('selected');
+};
+// remove selected class to element
+const deselect = function (elem) {
+    
+    if (elem) {
+        elem.classList.remove('selected');
+    }
 };
 //Reset visibility
 const resetStyles = function (elems) {
