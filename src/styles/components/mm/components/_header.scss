@@ -298,9 +298,10 @@
       width: 1140px;
       padding: 0;
       ul {
-        height: 100%;
+        height: auto;
         display: flex;
         list-style: none;
+        padding: 0;
         @include display-sm {
           width: 100%;
           height: auto;
@@ -310,6 +311,7 @@
           flex-direction: column;
           box-sizing: border-box;
           font-size: 1rem;
+          padding: 0.25rem 0.85rem;
         }
         li {
           display: flex;
@@ -419,11 +421,10 @@
             padding-right: 1.3rem;
           }
           &>span {
-            font-size: 0.85rem;
+            font-size: 0.85rem !important;
             pointer-events: none;
             @include display-sm {
               padding-left: 0.5rem;
-              font-size: 0.85rem !important;
             }
           }
         }

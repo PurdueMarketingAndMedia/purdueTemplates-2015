@@ -251,7 +251,9 @@ const toggleNew = (e) => {
                 deselect(clicked)
                 hide(dropdown)
             } else {
-                select(clicked)
+                if (width < 768) {
+                    select(clicked)
+                }
                 show(dropdown)
             }
             break
@@ -353,6 +355,7 @@ const deselect = function (elem) {
 const resetStyles = function (elems) {
     for (const elem of elems) {
         elem.classList.remove('hide', 'show');
+        elem.previousElementSibling.classList.remove('selected')
         elem.removeAttribute('style');
     }
 };
