@@ -269,10 +269,8 @@ window.addEventListener('resize', () => {
     const width = document.body.clientWidth;
 
     const resetLg = [...document.querySelectorAll('.footer__resources--column>h3>button>svg'), ...document.querySelectorAll('.accordion__content--footer'), document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner'), document.querySelector('.header__mainNav--main'), ...document.querySelectorAll('.dropdown-button')]
-    // const resetLg = [...document.querySelectorAll('.footer__resources--column>h3>button>svg'), ...document.querySelectorAll('.accordion__content--footer'), document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner'), document.querySelector('#findInfoFor'), ...document.querySelectorAll('.header__mainNav--dropdownInner'), ...document.querySelectorAll('.header__mainNav--dropdownOuter'), ...document.querySelectorAll('.dropdown-button')]
 
     const resetSm = [document.querySelector('#findInfoFor'), document.querySelector('#searchDropdown')]
-    // const resetSm = [document.querySelector('#findInfoFor'), document.querySelector('#searchDropdown'), document.querySelector('.header__mainNav--main'), ...document.querySelectorAll('.header__mainNav--dropdownInner'), ...document.querySelectorAll('.header__mainNav--dropdownOuter')]
 
     if( width >= 768) {
         resetStyles(resetLg)
