@@ -1,136 +1,4 @@
 
-// //toggle gold bar
-// const toggleMenu = (e, identifier, goldBarMobile) => {
-//     e = e.target
-//     const expanded = e.getAttribute('aria-expanded') === "false" ? true : false
-//     e.setAttribute('aria-expanded', expanded)
-
-//     const el = document.querySelector(identifier)
-//     const currAttr = (window.getComputedStyle ? getComputedStyle(el, null) : el.currentStyle).display
-//     if (currAttr && currAttr === 'flex') {
-//         el.removeAttribute('style')
-//     } else {
-//         el.style.display = 'flex'
-//     }
-
-//     if (goldBarMobile) {
-//         let height = (window.getComputedStyle ? getComputedStyle(el, null) : el.currentStyle).maxHeight
-//         if (height === '48px') {
-//             el.style.maxHeight = '900px'
-//         } else if (height == '900px') {
-//             el.style.maxHeight = height === '48px'
-//         }
-//         setTimeout(() => {
-//             height = (window.getComputedStyle ? getComputedStyle(el, null) : el.currentStyle).maxHeight
-//         }, 1000)
-//     }
-// }
-// document.querySelector(".header__goldBar--inner>button").addEventListener('click', (e) => { toggleMenu(e, `.header__goldBar--inner`, true) })
-// document.querySelector(".header__goldBar__findInfoFor>button").addEventListener('click', (e) => { toggleMenu(e, `#findInfoFor`, true) })
-// //toggle function
-
-// const toggle = (e) => {
-//     let clicked = e.currentTarget
-//     const className = (term) => {
-//         return clicked.classList.contains(term);
-//     }
-//     switch (true) {
-//         case className('dropdown-button'):
-//             const dropTarget = clicked.parentNode.children[1]
-//             if (dropTarget.classList[0] !== 'header__mainNav--dropdownInner') {
-//                 const outerDropdowns = document.querySelectorAll('.header__mainNav--dropdownOuter')
-//                 const innerDropdowns = document.querySelectorAll('.header__mainNav--dropdownInner')
-//                 const dropdowns = [...outerDropdowns, ...innerDropdowns]
-//                 for (const dropdown of dropdowns) {
-//                     if (dropdown !== dropTarget) {
-//                         dropdown.removeAttribute('style')
-//                     }
-//                 }
-//             } else if (dropTarget.classList[0] === 'header__mainNav--dropdownInner') {
-//                 const innerDropdowns = document.querySelectorAll('.header__mainNav--dropdownInner')
-//                 for (const dropdown of innerDropdowns) {
-//                     if (dropdown !== dropTarget) {
-//                         dropdown.removeAttribute('style')
-//                     }
-//                 }
-//             }
-//             let display = (window.getComputedStyle ? getComputedStyle(dropTarget, null) : dropTarget.currentStyle).display
-//             if (display === "flex") {
-//                 dropTarget.removeAttribute('style')
-//             } else {
-//                 dropTarget.style.display = 'flex'
-//             }
-//             break
-
-//         default:
-//             switch (clicked.id) {
-//                 case "mainNavMo":
-//                     console.log('clicked')
-//                     const dropTarget = clicked.parentNode.children[1]
-//                     let height = (window.getComputedStyle ? getComputedStyle(dropTarget, null) : dropTarget.currentStyle).maxHeight
-//                     if (height === '0px') {
-//                         dropTarget.style.maxHeight = '1900px'
-//                     } else if (height !== '0px') {
-//                         dropTarget.style.maxHeight = '0px'
-//                     }
-//                     break
-//                 default:
-//                     break
-//             }
-//             break
-//     }
-//     const dropTarget = e.target.parentNode.children[1]
-// }
-
-// //Toggle drop-downs on the top nav bar
-// const navDropdowns = document.querySelectorAll(`.dropdown-button`)
-
-// for (const dropdown of navDropdowns) {
-//     dropdown.addEventListener('click', (e) => { toggle(e) })
-// }
-
-// document.addEventListener('click', (e) => {
-//     if (e.target.tagName !== "A" && e.target.tagName !== "BUTTON") {
-//         const outerDropdowns = document.querySelectorAll('.header__mainNav--dropdownOuter')
-//         const innerDropdowns = document.querySelectorAll('.header__mainNav--dropdownInner')
-//         const dropdowns = [...outerDropdowns, ...innerDropdowns]
-//         for (const dropTarget of dropdowns) {
-//             dropTarget.removeAttribute('style')
-//         }
-//     }
-// })
-
-// document.querySelector('#mainNavMo').addEventListener('click', (e) => { toggle(e) })
-
-// const reset = (oldWidth) => {
-//     const footerHeadings = document.querySelectorAll(".footer__resources--column>h3>button.accordion__heading--footer");
-//     const width = document.body.clientWidth;
-//     const goldBarDisplay = document.querySelector(".header__goldBar--menus")
-//     const goldBarHeight = document.querySelector(".header__goldBar--inner")
-//     const findInfoFor = document.querySelector("#findInfoFor")
-
-//     if (width > 768) {
-//         goldBarDisplay.removeAttribute('style')
-//         goldBarHeight.removeAttribute('style')
-//         document.querySelector('.header__mainNav--main').removeAttribute('style')
-//     } else {
-//         findInfoFor.removeAttribute('style')
-//     }
-// }
-
-// window.addEventListener('resize', () => {
-//     reset(width);
-//     let timer;
-//     clearInterval(timer);
-//     timer = setTimeout(() => {
-//         width = document.body.clientWidth
-//     }, 250);
-// });
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-//Below are functions used for footer
-
 //toggle function
 const toggleNew = (e) => {
     let clicked = e
@@ -145,8 +13,6 @@ const toggleNew = (e) => {
         return window.getComputedStyle(el).getPropertyValue('display')
     }
     const getCurrSelected = () => {
-        // const test = document.querySelector('.header__mainNav--dropdownOuter.show')
-        // console.log(test)
         const outer = document.querySelector('.header__mainNav--dropdownOuter.show')
         const inner = document.querySelector('.header__mainNav--dropdownInner.show')
         const outerSelected = outer ? outer.previousElementSibling : null
@@ -292,6 +158,8 @@ const toggleNew = (e) => {
 
             break
         case checkElement(clicked, '#mainNavMo'): // Main nav mobile
+            const closeAllDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownInner'), ...document.querySelectorAll('.header__mainNav--dropdownOuter')]
+            resetStyles(closeAllDropdowns)
             const mainNavMenu = document.querySelector('.header__mainNav--main')
             const mainNavDisplay = getCurrDisplay(mainNavMenu)
             if( width < 768 ) {
@@ -354,8 +222,7 @@ const deselect = function (elem) {
 //Reset visibility
 const resetStyles = function (elems) {
     for (const elem of elems) {
-        elem.classList.remove('hide', 'show');
-        elem.previousElementSibling.classList.remove('selected')
+        elem.classList.remove('hide', 'show', 'selected')
         elem.removeAttribute('style');
     }
 };
@@ -401,9 +268,11 @@ document.querySelectorAll('.accordion__heading--footer>svg.fa-minus').forEach((e
 window.addEventListener('resize', () => {
     const width = document.body.clientWidth;
 
-    const resetLg = [...document.querySelectorAll('.footer__resources--column>h3>button>svg'), ...document.querySelectorAll('.accordion__content--footer'), document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner'), document.querySelector('#findInfoFor'), ...document.querySelectorAll('.header__mainNav-dropDownInner'), ...document.querySelectorAll('.header__mainNav-dropDownOuter')]
+    const resetLg = [...document.querySelectorAll('.footer__resources--column>h3>button>svg'), ...document.querySelectorAll('.accordion__content--footer'), document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner'), document.querySelector('.header__mainNav--main'), ...document.querySelectorAll('.dropdown-button')]
+    // const resetLg = [...document.querySelectorAll('.footer__resources--column>h3>button>svg'), ...document.querySelectorAll('.accordion__content--footer'), document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner'), document.querySelector('#findInfoFor'), ...document.querySelectorAll('.header__mainNav--dropdownInner'), ...document.querySelectorAll('.header__mainNav--dropdownOuter'), ...document.querySelectorAll('.dropdown-button')]
 
-    const resetSm = [document.querySelector('#findInfoFor'), document.querySelector('#searchDropdown'), document.querySelector('.header__mainNav--main'), ...document.querySelectorAll('.header__mainNav-dropDownInner'), ...document.querySelectorAll('.header__mainNav-dropDownOuter')]
+    const resetSm = [document.querySelector('#findInfoFor'), document.querySelector('#searchDropdown')]
+    // const resetSm = [document.querySelector('#findInfoFor'), document.querySelector('#searchDropdown'), document.querySelector('.header__mainNav--main'), ...document.querySelectorAll('.header__mainNav--dropdownInner'), ...document.querySelectorAll('.header__mainNav--dropdownOuter')]
 
     if( width >= 768) {
         resetStyles(resetLg)

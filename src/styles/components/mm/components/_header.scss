@@ -76,6 +76,7 @@
         font-size: .875rem;
         span {
           font-size: .675rem;
+          pointer-events: none;
         }
         &:hover {
           cursor: pointer;
@@ -336,6 +337,7 @@
               font-size: 0.5rem;
               color: rgb(153, 153, 153);
               margin-left: 0.35rem;
+              pointer-events: none;
               @include display-sm {
                 color: white;
               }
