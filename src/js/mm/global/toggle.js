@@ -117,7 +117,7 @@ const toggleNew = (e) => {
                 deselect(clicked)
                 hide(dropdown)
             } else {
-                if (width < 768) {
+                if (width < 991) {
                     select(clicked)
                 }
                 show(dropdown)
@@ -162,7 +162,7 @@ const toggleNew = (e) => {
             resetStyles(closeAllDropdowns)
             const mainNavMenu = document.querySelector('.header__mainNav--main')
             const mainNavDisplay = getCurrDisplay(mainNavMenu)
-            if( width < 768 ) {
+            if( width < 991 ) {
                 if (mainNavDisplay && mainNavDisplay === 'flex' && mainNavMenu.getAttribute('state-animating') === null) {
                     mainNavMenu.style.height = `${mainNavMenu.scrollHeight}px` 
                     setTimeout(() => {
@@ -268,11 +268,15 @@ document.querySelectorAll('.accordion__heading--footer>svg.fa-minus').forEach((e
 window.addEventListener('resize', () => {
     const width = document.body.clientWidth;
 
-    const resetLg = [...document.querySelectorAll('.footer__resources--column>h3>button>svg'), ...document.querySelectorAll('.accordion__content--footer'), document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner'), document.querySelector('.header__mainNav--main'), ...document.querySelectorAll('.dropdown-button')]
+    const resetLg = [...document.querySelectorAll('.footer__resources--column>h3>button>svg'), ...document.querySelectorAll('.accordion__content--footer'), document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner')]
+
+    const resetMd = [document.querySelector('.header__mainNav--main'), ...document.querySelectorAll('.dropdown-button')]
 
     const resetSm = [document.querySelector('#findInfoFor'), document.querySelector('#searchDropdown')]
 
-    if( width >= 768) {
+    if (width >= 768 && width >= 991) {
+        resetStyles(resetMd)
+    } else if( width >= 768) {
         resetStyles(resetLg)
     } else if (width < 768) {
         resetStyles(resetSm)

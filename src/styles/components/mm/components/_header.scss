@@ -396,11 +396,17 @@
       &:hover {
         cursor: pointer;
       }
-      @include display-sm {
+      @include display-md {
+        width: 720px;
+        text-align: left;
         display: block;
         order: 1;
-        padding: 0.75rem 0.95rem;
+        padding: 0.75rem 0;
         flex: 0 1 auto;
+      }
+      @include display-sm {
+        padding: 0.75rem 0.95rem;
+        width: auto;
       }
     }
     &--main {
@@ -414,7 +420,7 @@
         display: flex;
         list-style: none;
         padding: 0;
-        @include display-sm {
+        @include display-md {
           width: 100%;
           height: auto;
           position: relative;
@@ -423,6 +429,9 @@
           flex-direction: column;
           box-sizing: border-box;
           font-size: 1rem;
+          padding: 0 0 .5rem 0;
+        }
+        @include display-sm {
           padding: 0.25rem 0.85rem;
         }
         li {
@@ -430,7 +439,7 @@
           align-items: center;
           height: 100%;
           position: relative;
-          @include display-sm {
+          @include display-md {
             height: auto;
             display: block;
           }
@@ -449,44 +458,47 @@
               color: rgb(153, 153, 153);
               margin-left: 0.35rem;
               pointer-events: none;
-              @include display-sm {
+              @include display-md {
                 color: white;
               }
             }
-            @include display-sm {
-              padding: 0.35rem 0.95rem;
+            @include display-md {
+              padding: 0.35rem 0;
               color: white;
               width: auto;
               position: relative;
+            }
+            @include display-sm {
+              padding: 0.35rem 0;
             }
           }
           &:focus {
             background: #373737;
             a {
               color: white;
-              @include display-sm {
+              @include display-md {
                 color: #c28e0e;
               }
               &>span {
                 color: white;
-                @include display-sm {
+                @include display-md {
                   color: #c28e0e;
                 }
               }
             }
-            @include display-sm {
+            @include display-md {
               background: black;
             }
           }
           &:hover {
             &>a {
               color: white;
-              @include display-sm {
+              @include display-md {
                 color: #c28e0e;
               }
               &>span {
                 color: white;
-                @include display-sm {
+                @include display-md {
                   color: #c28e0e;
                 }
               }
@@ -494,7 +506,7 @@
           }
           &:first-child {
             margin-left: -0.95rem;
-            @include display-sm {
+            @include display-md {
               margin-left: 0;
             }
           }
@@ -505,48 +517,49 @@
       }
       @include display-md {
         width: 720px;
-      }
-
-      @include display-sm {
-        display: flex;
-        width: 100%;
         height: 0;
+        display: flex;
         display: none;
         transition: height 0.2s linear;
         overflow: hidden;
       }
+      @include display-sm {
+        width: 100%;
+      }
     }
     &--dropdownOuter {
       display: none !important;
-      padding: 0.25rem 0;
+      padding: 0.20rem 0 !important;
       position: absolute;
       background: black;
       width: auto;
       height: auto;
       flex-direction: column;
       top: 100%;
+      border-bottom-left-radius: 0.2rem;
+      border-bottom-right-radius: 0.2rem;
       li {
         margin: 0 !important;
         &>a {
-          padding: 0.25rem 1.3rem;
-          @include display-sm {
+          padding: 0.1875rem 1.3rem !important;
+          @include display-md {
             padding-left: 1.3rem;
             padding-right: 1.3rem;
           }
           &>span {
             font-size: 0.85rem !important;
             pointer-events: none;
-            @include display-sm {
+            @include display-md {
               padding-left: 0.5rem;
             }
           }
         }
-        @include display-sm {
+        @include display-md {
           flex-direction: column;
           align-items: flex-start;
         }
       }
-      @include display-sm {
+      @include display-md {
         position: relative;
         top: 0;
         padding-left: 1rem;
@@ -559,20 +572,24 @@
       top: 0;
       background: black;
       flex-direction: column;
-      padding: 0.25rem 0;
-      @include display-sm {
+      padding: 0.20rem 1.3rem !important;
+      border-radius: 0.2rem;
+      @include display-md {
         position: relative;
         top: 0;
         left: 0;
         padding-left: 1.5rem;
       }
     }
-    @include display-sm {
-      align-items: flex-start;
+    @include display-md {
+      align-items: center;
       justify-content: flex-start;
       flex-direction: column;
       background: black;
       flex: 1 1 auto;
+    }
+    @include display-sm {
+      align-items: flex-start;
     }
   }
 }

@@ -19,17 +19,21 @@
             justify-content: center;
             max-width: 1140px;
             flex:1 1 auto;
+            padding: 1.5rem 0;
             @include display-lg {
                 max-width: 940px;
             }
             @include display-md {
                 max-width: 750px;
             }
+            @include display-sm {
+                padding: 0;
+            }
         }
         &--column{
             box-sizing:border-box;
             width:20%;
-            padding: 1rem;
+            padding-right: 1rem;
             white-space:nowrap;
             &:first-child {
                 padding-left: 0;
@@ -49,7 +53,7 @@
                 .accordion__heading--footer{
                   width:100%;
                   font-family: $font-champion-welter; 
-                  font-size: 0.875em;
+                  font-size: 1.15rem;
                   font-weight: 300;
                   color:#c28e0e;
                   padding:0;
@@ -59,7 +63,8 @@
                   display: flex;
                   flex-direction: row;
                   justify-content: space-between;
-                  align-items:baseline;                                   
+                  align-items:baseline;         
+                  text-transform: uppercase;                          
                   svg.fa-plus,svg.fa-minus{
                       display:none;
                       pointer-events: none;
