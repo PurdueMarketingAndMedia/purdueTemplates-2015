@@ -6,6 +6,11 @@
   },
   "blank-template": {
     "test": "<p class='test'>Hello World!</p>",
-    "main-js": "../../../js/mm/templates/main.js"
+    "main-js": "../../../js/mm/templates/main.js",
+    "site-name": "Blank Template",
+    "site-tagline": {
+      "title": "Purdue Web Templates",
+      "link": "https://www.purdue.edu/brand/applications/web-templates/index.php"
+    }
   }
 }

@@ -101,7 +101,22 @@
       </section>
     </div>
   </section>
-  <section class="header__signature container"></section>
+  <section class="header__signature container">
+    <section class="header__signature--inner">
+      <article class="header__signature--logo">
+        <h1 class="sr-only">Purdue University</h1>
+        <object data="https://www.purdue.edu/purdue/images/logo.svg" tabindex='-1' type="image/svg+xml"></object>
+      </article>
+      <article class="header__signature--siteName">
+        <a id="siteName" href="#">{{site-name}}</a>
+        {{#site-tagline}}
+        <div id="siteTagline">
+          <a href="{{link}}">{{title}}</a>
+        </div>
+        {{/site-tagline}}
+      </article>
+    </section>
+  </section>
   <nav class="header__mainNav container">
     <button id="mainNavMo" aria-haspopup="true" aria-expanded="false" >
       <i class="fas fa-bars"></i>
