@@ -1,6 +1,7 @@
-
+// //Align input text to the left
+// document.querySelector('.gsc-input').
 //toggle function
-const toggleNew = (e) => {
+const toggle = (e) => {
     let clicked = e
     const width = document.body.clientWidth;
     const checkClassName = (el, term) => {
@@ -126,6 +127,9 @@ const toggleNew = (e) => {
         case checkClassName(clicked, 'header__goldBar__search'): // search bar
             const searchDropdown = document.querySelector('#searchDropdown')
             const searchDisplayVal = getCurrDisplay(searchDropdown)
+
+            const searchBox = document.querySelector('.gsc-input')
+
             if( width >=768 ) {
                 const otherDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownOuter'), ...document.querySelectorAll('.header__mainNav--dropdownInner'), document.querySelector('#findInfoFor')]
                 otherDropdowns.map((checkDropdown) => {
@@ -245,7 +249,6 @@ document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
 document.querySelectorAll('.accordion__content--footer').forEach((el) => {
     if (width < 768) {
         hide(el);
-        el.setAttribute('data-collapsed', true);
     }
 });
 document.querySelectorAll('.accordion__heading--footer>svg.fa-plus').forEach((el) => {
@@ -287,7 +290,7 @@ window.addEventListener('resize', () => {
         const currAttr = window.getComputedStyle(content).getPropertyValue('display');
         if (width >= 768) {
            el.setAttribute('aria-expanded', true);
-        }else if(currAttr === "block"){
+        }else if(currAttr === "flex"){
             el.setAttribute('aria-expanded', true);
         }else{
             el.setAttribute('aria-expanded', false);
@@ -300,8 +303,8 @@ const assignListeners = () => {
         e = e.target
         if (e.classList && e.classList.contains('accordion__heading')) {
             let width = document.body.clientWidth;
-            if (width < 768) {
-                toggleNew(e);
+            if (width <= 768) {
+                toggle(e);
             }
         } else if (
             e.classList && (
@@ -316,11 +319,13 @@ const assignListeners = () => {
                 )
             )
         ) {
-            toggleNew(e)
-        } else {
-            toggleNew(e)
+            toggle(e)
+        }else {
+            toggle(e)
         }
     })
 }
 
 assignListeners()
+
+

@@ -14,6 +14,9 @@
       background: none;
       border: none;
       font-size: 1rem;
+      .fa-bars{
+        pointer-events: none;
+      }
       &:hover {
         cursor: pointer;
       }

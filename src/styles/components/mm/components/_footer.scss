@@ -4,9 +4,7 @@
     flex-direction:column;
     justify-content: center;
     font-family: $font-arial;
-    font-size:0.9em;
-    line-height:23.625px;
-
+    line-height:1.5rem;
     &__resources{
         background-color:#000000;
         display:flex;
@@ -97,14 +95,15 @@
                         display: inline-block;
                         width:100%;
                         height: inherit;
-                        padding: 8px 0 2px;
+                        padding: 0.5rem 0 0.125rem;
                         border-bottom: solid 1px #474747;
-                        font-size: 1em;
+                        font-size: 0.875rem;
                         font-weight:400;
                         color:rgb(173,173,173);
                         @include display-sm {
-                            border:0;
+                            border: 0;
                             padding: 0;
+                            font-size: 0.95rem;
                         }
                     }
                     a:hover{
@@ -116,7 +115,7 @@
                         }
                     }
                     @include display-sm {
-                        padding: 0 1rem 0.5rem;
+                        padding: 0 1rem 0.1rem;                        
                     }
                     
                 }
@@ -127,11 +126,11 @@
                 }
             }
             .vertical{
-                margin-top:25px;
+                margin-top:1.6rem;
                 display:block;
             }
             .horizontal{
-                margin-top:25px;
+                margin-top:1.6rem;
                 display:none;
             }
             @include display-md {
@@ -140,22 +139,22 @@
                 }
                 .horizontal{
                     display:block;
-                    max-width:600px;
+                    max-width:500px;
                     margin: 0 auto;
                 }
             }
             div{
-                margin-top:10px;
-                padding-top:5px;
+                margin-top:0.625rem;
+                padding-top:0.3rem;
                 border-top: solid 1px #474747;
                 display:flex;
                 flex-direction:row;
                 flex-wrap: wrap;
                 justify-content: start;
-                font-size:21.6px;
+                font-size:1.35rem;
 
                 a{
-                    margin: 4px 2.7%;
+                    margin: 0.25rem 2.7%;
                     color: #999;
                     font-weight: 700;
                     text-decoration: none;
@@ -164,22 +163,22 @@
                     color:#ffffff;
                 }
                 @include display-md {
-                    font-size:29.6px;
+                    font-size:1.85rem;
                     justify-content: center;
                     border:none;
                 }
                 @include display-sm {
-                    font-size:22.5px;
+                    font-size:1.4rem;
                 }
             }
             @include display-md {
                 width:50%;
-                padding: 15px;
+                padding: 0.95rem;
                 flex:1 0 auto;
             }
             @include display-sm {
                 width:100%;
-                padding: 15px;
+                padding: 0.95rem;
                 border-bottom: solid 1px #474747;
                 &:nth-child(5){         
                     border: none;
@@ -191,8 +190,8 @@
         background-color:#3b3b3b;
         color:#ccc;
         text-align:center;
-        font-size:10px;
-        padding:10px 15px;
+        font-size:0.625rem;
+        padding:0.625rem 0.9375rem;
         line-height:1.4;
 
         &--list{
@@ -208,6 +207,6 @@
         }
     }
     @include display-sm {
-        line-height:30px;
+        line-height:1.875rem;
   }
 }
