@@ -16,42 +16,58 @@ const toggle = (e) => {
         const inner = document.querySelector('.header__mainNav--dropdownInner.show')
         const outerSelected = outer ? outer.previousElementSibling : null
         const innerSelected = inner ? inner.previousElementSibling : null
-        return {outerSelected , innerSelected}
+        return { outerSelected, innerSelected }
     }
 
     switch (true) {
-        case checkClassName(clicked, 'accordion__heading'): // specifically footer accordion
-            const expanded = clicked.getAttribute('aria-expanded') === "false" ? true : false;
-            clicked.setAttribute('aria-expanded', expanded);
-            const contentId = clicked.getAttribute('aria-controls');
-
-            
-            let icons = clicked.querySelectorAll('svg');
-            const content = document.querySelector('#' + contentId);
-            const currAttr = getCurrDisplay(content)
-            if (currAttr && currAttr === 'flex' && content.getAttribute('state-animating') === null) {
-                icons.forEach((icon) => {
-                    swapIcon(icon)
-                })
-                content.style.height = 0;
-                content.setAttribute('state-animating', 'true')
-                setTimeout(() => {
-                    hide(content)
-                    content.removeAttribute('state-animating')
-                }, 200)
-            } else if(content.getAttribute('state-animating') === null) {
-                icons.forEach((icon) => {
-                    swapIcon(icon)
-                })
-                show(content);
-                content.setAttribute('state-animating', 'true')
-                setTimeout(() => {
-                    content.removeAttribute('state-animating')
-                }, 200)
-                content.style.height = content.scrollHeight+"px";
-            }
+        case checkClassName(clicked, 'accordion__heading--footer'): // specifically footer accordion
+            document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
+                const contentId = el.getAttribute('aria-controls');
+                let icons = el.querySelectorAll('svg');
+                let plusIcon = el.querySelector('.fa-plus');
+                let minusIcon = el.querySelector('.fa-minus');
+                const content = document.querySelector('#' + contentId);
+                const currAttr = getCurrDisplay(content)
+                if (el.getAttribute('aria-expanded') && el !== clicked) {
+                    el.setAttribute('aria-expanded', 'false');
+                    if (content.getAttribute('state-animating') === null) {
+                        hide(minusIcon)
+                        show(plusIcon)
+                         content.style.height = 0;
+                        content.setAttribute('state-animating', 'true')
+                        setTimeout(() => {
+                            hide(content)
+                            content.removeAttribute('state-animating')
+                        }, 200)
+                    }
+                } else if (el === clicked){
+                    const expanded = clicked.getAttribute('aria-expanded') === "false" ? true : false;
+                    clicked.setAttribute('aria-expanded', expanded);
+                    if (currAttr && currAttr === 'flex' && content.getAttribute('state-animating') === null) {
+                        icons.forEach((icon) => {
+                            swapIcon(icon)
+                        })
+                        content.style.height = 0;
+                        content.setAttribute('state-animating', 'true')
+                        setTimeout(() => {
+                            hide(content)
+                            content.removeAttribute('state-animating')
+                        }, 200)
+                    } else if (content.getAttribute('state-animating') === null) {
+                        icons.forEach((icon) => {
+                            swapIcon(icon)
+                        })
+                        show(content);
+                        content.setAttribute('state-animating', 'true')
+                        setTimeout(() => {
+                            content.removeAttribute('state-animating')
+                        }, 200)
+                        content.style.height = content.scrollHeight + "px";
+                    }
+                }
+            })          
             break
-        case  checkClassName(clicked, 'header__goldBar--moButton'): // specifically gold bar mobile menu
+        case checkClassName(clicked, 'header__goldBar--moButton'): // specifically gold bar mobile menu
             const goldBarContent = document.querySelector('.header__goldBar--menus')
             const currGoldBarAttr = getCurrDisplay(goldBarContent)
 
@@ -62,7 +78,7 @@ const toggle = (e) => {
                     hide(goldBarContent)
                     goldBarContent.removeAttribute('state-animating')
                 }, 200)
-            } else if(goldBarContent.getAttribute('state-animating') === null) {
+            } else if (goldBarContent.getAttribute('state-animating') === null) {
                 show(goldBarContent);
                 goldBarContent.setAttribute('state-animating', 'true')
                 setTimeout(() => {
@@ -89,11 +105,11 @@ const toggle = (e) => {
         case checkClassName(clicked, 'dropdown-button'):
             const dropdown = clicked.nextElementSibling
             const findInfoForMenu = document.querySelector('#findInfoFor')
-            const {outerSelected, innerSelected} = getCurrSelected()
+            const { outerSelected, innerSelected } = getCurrSelected()
             if (width >= 768) {
                 hide(findInfoForMenu)
             }
-            if(checkClassName(dropdown, 'header__mainNav--dropdownInner')) {
+            if (checkClassName(dropdown, 'header__mainNav--dropdownInner')) {
                 const allInnerDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownInner')]
                 allInnerDropdowns.map((innerDropdown) => {
                     if (innerDropdown !== dropdown) {
@@ -138,7 +154,7 @@ const toggle = (e) => {
                 } else {
                     show(searchDropdown)
                 }
-            } else if( width < 768 ) {
+            } else if (width < 768) {
                 if (searchDisplayVal && searchDisplayVal === 'flex' && searchDropdown.getAttribute('state-animating') === null) {
                     searchDropdown.style.height = 0;
                     searchDropdown.setAttribute('state-animating', 'true')
@@ -146,7 +162,7 @@ const toggle = (e) => {
                         hide(searchDropdown)
                         searchDropdown.removeAttribute('state-animating')
                     }, 100)
-                } else if(searchDropdown.getAttribute('state-animating') === null) {
+                } else if (searchDropdown.getAttribute('state-animating') === null) {
                     show(searchDropdown);
                     searchDropdown.setAttribute('state-animating', 'true')
                     setTimeout(() => {
@@ -162,9 +178,9 @@ const toggle = (e) => {
             resetStyles(closeAllDropdowns)
             const mainNavMenu = document.querySelector('.header__mainNav--main')
             const mainNavDisplay = getCurrDisplay(mainNavMenu)
-            if( width < 991 ) {
+            if (width < 991) {
                 if (mainNavDisplay && mainNavDisplay === 'flex' && mainNavMenu.getAttribute('state-animating') === null) {
-                    mainNavMenu.style.height = `${mainNavMenu.scrollHeight}px` 
+                    mainNavMenu.style.height = `${mainNavMenu.scrollHeight}px`
                     setTimeout(() => {
                         mainNavMenu.style.height = 0;
                     }, 50)
@@ -175,14 +191,14 @@ const toggle = (e) => {
                         resetStyles(moDropdowns)
                         mainNavMenu.removeAttribute('state-animating')
                     }, 200)
-                } else if(mainNavMenu.getAttribute('state-animating') === null) {
+                } else if (mainNavMenu.getAttribute('state-animating') === null) {
                     show(mainNavMenu);
                     mainNavMenu.setAttribute('state-animating', 'true')
                     setTimeout(() => {
                         mainNavMenu.removeAttribute('state-animating')
-                        mainNavMenu.style.height = 'auto' 
+                        mainNavMenu.style.height = 'auto'
                     }, 200)
-                    mainNavMenu.style.height = `${mainNavMenu.scrollHeight}px` 
+                    mainNavMenu.style.height = `${mainNavMenu.scrollHeight}px`
                 }
             }
 
@@ -214,7 +230,7 @@ const select = function (elem) {
 };
 // remove selected class to element
 const deselect = function (elem) {
-    
+
     if (elem) {
         elem.classList.remove('selected');
     }
@@ -239,7 +255,7 @@ const swapIcon = (el) => {
 const width = document.body.clientWidth;
 document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
     if (width < 768) {
-       el.setAttribute('aria-expanded', false);
+        el.setAttribute('aria-expanded', false);
     }
 });
 document.querySelectorAll('.accordion__content--footer').forEach((el) => {
@@ -275,7 +291,7 @@ window.addEventListener('resize', () => {
 
     if (width >= 768 && width >= 991) {
         resetStyles(resetMd)
-    } else if( width >= 768) {
+    } else if (width >= 768) {
         resetStyles(resetLg)
     } else if (width < 768) {
         resetStyles(resetSm)
@@ -285,10 +301,10 @@ window.addEventListener('resize', () => {
         let content = document.querySelector('#' + el.getAttribute('aria-controls'));
         const currAttr = window.getComputedStyle(content).getPropertyValue('display');
         if (width >= 768) {
-           el.setAttribute('aria-expanded', true);
-        }else if(currAttr === "flex"){
             el.setAttribute('aria-expanded', true);
-        }else{
+        } else if (currAttr === "flex") {
+            el.setAttribute('aria-expanded', true);
+        } else {
             el.setAttribute('aria-expanded', false);
         }
     });
@@ -305,10 +321,10 @@ const assignListeners = () => {
         } else if (
             e.classList && (
                 (
-                    e.classList.contains('header__goldBar--moButton') || 
+                    e.classList.contains('header__goldBar--moButton') ||
                     e.classList.contains('dropdown-button') ||
                     e.classList.contains('header__goldBar__search')
-                ) || 
+                ) ||
                 (
                     e === document.querySelector('.header__goldBar__findInfoFor button') ||
                     e === document.querySelector('#mainNavMo')
@@ -316,7 +332,7 @@ const assignListeners = () => {
             )
         ) {
             toggle(e)
-        }else {
+        } else {
             toggle(e)
         }
     })
