@@ -1,5 +1,3 @@
-// //Align input text to the left
-// document.querySelector('.gsc-input').
 //toggle function
 const toggle = (e) => {
     let clicked = e
@@ -127,8 +125,6 @@ const toggle = (e) => {
         case checkClassName(clicked, 'header__goldBar__search'): // search bar
             const searchDropdown = document.querySelector('#searchDropdown')
             const searchDisplayVal = getCurrDisplay(searchDropdown)
-
-            const searchBox = document.querySelector('.gsc-input')
 
             if( width >=768 ) {
                 const otherDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownOuter'), ...document.querySelectorAll('.header__mainNav--dropdownInner'), document.querySelector('#findInfoFor')]
@@ -324,8 +320,59 @@ const assignListeners = () => {
             toggle(e)
         }
     })
+
+    const innerDropdowns = [...document.querySelectorAll('.dropdown-button--inner')]
+    innerDropdowns.map((element) => {
+        element.addEventListener('mouseenter', (e) => {
+            const innerRelated = e.relatedTarget
+            const attributes = [...innerRelated.attributes]
+
+            let fromInnerMenu = false
+
+            attributes.map((item) => {
+                if (item.localName === 'role' && item.nodeValue === 'menuitem') {
+                    fromInnerMenu = true
+                }
+            })
+
+            e = e.target
+            const parentMenu = innerRelated.parentElement.offsetParent
+
+            if (!fromInnerMenu || (parentMenu && [...parentMenu.classList].includes('header__mainNav--dropdownOuter')) || ( parentMenu !== e.nextElementSibling)) {
+                toggle(e)
+            }
+        })
+        element.addEventListener('mouseleave', (e) => {
+            const relatedTarget = e.relatedTarget;
+            const attributes = [...relatedTarget.attributes]
+
+            let toInnerMenu = false
+
+            attributes.map((item) => {
+                if (item.localName === 'role' && item.nodeValue === 'menuitem') {
+                    toInnerMenu = true
+                }
+            })
+
+            e = e.target
+
+            if (!toInnerMenu || (relatedTarget.offsetParent.offsetParent && [...relatedTarget.offsetParent.offsetParent.classList].includes('header__mainNav--dropdownOuter'))) {
+                toggle(e)
+            } else {
+                const innerDropdownMenu = document.querySelector('.header__mainNav--dropdownInner.show')
+                const leaveHandler = (inner) => {
+
+                    const outerRelated = inner.relatedTarget
+
+                    if (!([...outerRelated.classList].includes('dropdown-button')) || outerRelated !== element) {
+                        toggle(e)
+                    }
+                    innerDropdownMenu.removeEventListener('mouseleave', leaveHandler)
+                }
+                innerDropdownMenu.addEventListener('mouseleave', leaveHandler)
+            }
+        })
+    })
 }
 
 assignListeners()
-
-

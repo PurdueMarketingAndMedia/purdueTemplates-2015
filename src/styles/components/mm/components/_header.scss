@@ -476,23 +476,15 @@
             @include display-sm {
               padding: 0.35rem 0;
             }
-          }
-          &:focus {
-            background: #373737;
-            a {
+            &:focus {
+              background: #373737;
               color: white;
-              @include display-md {
-                color: #c28e0e;
-              }
               &>span {
                 color: white;
-                @include display-md {
-                  color: #c28e0e;
-                }
               }
-            }
-            @include display-md {
-              background: black;
+              @include display-md {
+                background: black;
+              }
             }
           }
           &:hover {
@@ -573,7 +565,7 @@
     &--dropdownInner {
       display: none;
       position: absolute;
-      left: 100%;
+      left: 99.9%;
       top: 0;
       background: black;
       flex-direction: column;
