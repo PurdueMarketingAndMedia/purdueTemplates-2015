@@ -279,36 +279,72 @@ document.querySelectorAll('.accordion__heading--footer>svg.fa-minus').forEach((e
     }
 });
 
-//Reset
-window.addEventListener('resize', () => {
-    const width = document.body.clientWidth;
+// inner dropdown hover handlers
+const enterHandler = (e) => {
+    if(e.target.matches('.dropdown-button--inner')) {
+        const innerRelated = e.relatedTarget
+        const attributes = [...innerRelated.attributes]
 
-    const resetLg = [...document.querySelectorAll('.footer__resources--column>h3>button>svg'), ...document.querySelectorAll('.accordion__content--footer'), document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner')]
+        let fromInnerMenu = false
 
-    const resetMd = [document.querySelector('.header__mainNav--main'), ...document.querySelectorAll('.dropdown-button')]
+        attributes.map((item) => {
+            if (item.localName === 'role' && item.nodeValue === 'menuitem') {
+                fromInnerMenu = true
+            }
+        })
 
-    const resetSm = [document.querySelector('#findInfoFor'), document.querySelector('#searchDropdown')]
+        e = e.target
+        const parentMenu = innerRelated.parentElement.offsetParent
 
-    if (width >= 768 && width >= 991) {
-        resetStyles(resetMd)
-    } else if (width >= 768) {
-        resetStyles(resetLg)
-    } else if (width < 768) {
-        resetStyles(resetSm)
+        if (!fromInnerMenu || (parentMenu && [...parentMenu.classList].includes('header__mainNav--dropdownOuter')) || ( parentMenu !== e.nextElementSibling)) {
+            toggle(e)
+        }
     }
 
-    document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
-        let content = document.querySelector('#' + el.getAttribute('aria-controls'));
-        const currAttr = window.getComputedStyle(content).getPropertyValue('display');
-        if (width >= 768) {
-            el.setAttribute('aria-expanded', true);
-        } else if (currAttr === "flex") {
-            el.setAttribute('aria-expanded', true);
+}
+
+const leaveHandler = (e) => {
+    if(e.target.matches('.dropdown-button--inner')) {
+        const relatedTarget = e.relatedTarget;
+        const attributes = [...relatedTarget.attributes]
+
+        let toInnerMenu = false
+
+        attributes.map((item) => {
+            if (item.localName === 'role' && item.nodeValue === 'menuitem') {
+                toInnerMenu = true
+            }
+        })
+
+        e = e.target
+
+        if (!toInnerMenu || (relatedTarget.offsetParent.offsetParent && [...relatedTarget.offsetParent.offsetParent.classList].includes('header__mainNav--dropdownOuter'))) {
+            toggle(e)
         } else {
-            el.setAttribute('aria-expanded', false);
+            const innerDropdownMenu = document.querySelector('.header__mainNav--dropdownInner.show')
+            const innerLeaveHandler = (inner) => {
+
+                const outerRelated = inner.relatedTarget
+
+                if (!([...outerRelated.classList].includes('dropdown-button')) || outerRelated !== e) {
+                    toggle(e)
+                }
+                innerDropdownMenu.removeEventListener('mouseleave', innerLeaveHandler)
+            }
+            innerDropdownMenu.addEventListener('mouseleave', innerLeaveHandler)
         }
-    });
-});
+    }
+}
+
+const toggleInnerDropdownListeners = (addListeners) => {
+    if(addListeners) {
+        document.addEventListener('mouseover', enterHandler)
+        document.addEventListener('mouseout', leaveHandler)
+    } else if (!addListeners) {
+        document.removeEventListener('mouseover', enterHandler)
+        document.removeEventListener('mouseout', leaveHandler)
+    }
+}
 
 const assignListeners = () => {
     document.addEventListener('click', (e) => {
@@ -337,58 +373,56 @@ const assignListeners = () => {
         }
     })
 
-    const innerDropdowns = [...document.querySelectorAll('.dropdown-button--inner')]
-    innerDropdowns.map((element) => {
-        element.addEventListener('mouseenter', (e) => {
-            const innerRelated = e.relatedTarget
-            const attributes = [...innerRelated.attributes]
-
-            let fromInnerMenu = false
-
-            attributes.map((item) => {
-                if (item.localName === 'role' && item.nodeValue === 'menuitem') {
-                    fromInnerMenu = true
-                }
-            })
-
-            e = e.target
-            const parentMenu = innerRelated.parentElement.offsetParent
-
-            if (!fromInnerMenu || (parentMenu && [...parentMenu.classList].includes('header__mainNav--dropdownOuter')) || ( parentMenu !== e.nextElementSibling)) {
-                toggle(e)
-            }
-        })
-        element.addEventListener('mouseleave', (e) => {
-            const relatedTarget = e.relatedTarget;
-            const attributes = [...relatedTarget.attributes]
-
-            let toInnerMenu = false
-
-            attributes.map((item) => {
-                if (item.localName === 'role' && item.nodeValue === 'menuitem') {
-                    toInnerMenu = true
-                }
-            })
-
-            e = e.target
-
-            if (!toInnerMenu || (relatedTarget.offsetParent.offsetParent && [...relatedTarget.offsetParent.offsetParent.classList].includes('header__mainNav--dropdownOuter'))) {
-                toggle(e)
-            } else {
-                const innerDropdownMenu = document.querySelector('.header__mainNav--dropdownInner.show')
-                const leaveHandler = (inner) => {
-
-                    const outerRelated = inner.relatedTarget
-
-                    if (!([...outerRelated.classList].includes('dropdown-button')) || outerRelated !== element) {
-                        toggle(e)
-                    }
-                    innerDropdownMenu.removeEventListener('mouseleave', leaveHandler)
-                }
-                innerDropdownMenu.addEventListener('mouseleave', leaveHandler)
-            }
-        })
-    })
+    if (width >= 991) {
+        toggleInnerDropdownListeners(true)
+    }
+    
 }
+
+let resizeTimer
+
+
+//Reset
+window.addEventListener('resize', () => {
+    const width = document.body.clientWidth;
+
+    const resetLg = [...document.querySelectorAll('.footer__resources--column>h3>button>svg'), ...document.querySelectorAll('.accordion__content--footer'), document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner')]
+
+    const resetSm = [document.querySelector('#findInfoFor'), document.querySelector('#searchDropdown')]
+    
+    const resetNav = [document.querySelector('.header__mainNav--main'), ...document.querySelectorAll('.dropdown-button')]
+
+
+    if (width >= 768 && width >= 991) {
+        resetStyles(resetNav)
+    } else if (width >= 768) {
+        resetStyles(resetLg)
+    }else if (width < 768) {
+        resetStyles(resetSm)
+    }
+
+    document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
+        let content = document.querySelector('#' + el.getAttribute('aria-controls'));
+        const currAttr = window.getComputedStyle(content).getPropertyValue('display');
+        if (width >= 768) {
+            el.setAttribute('aria-expanded', true);
+        } else if (currAttr === "flex") {
+            el.setAttribute('aria-expanded', true);
+        } else {
+            el.setAttribute('aria-expanded', false);
+        }
+    });
+
+    clearTimeout(resizeTimer)
+    resizeTimer = setTimeout(() => {
+        console.table(width)
+        if ( width >= 991) {
+            toggleInnerDropdownListeners(true)
+        } else if (width < 991) {
+            toggleInnerDropdownListeners(false)
+        }
+    }, 250)
+    
+});
 
 assignListeners()
