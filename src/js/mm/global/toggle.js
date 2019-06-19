@@ -415,7 +415,6 @@ window.addEventListener('resize', () => {
 
     clearTimeout(resizeTimer)
     resizeTimer = setTimeout(() => {
-        console.table(width)
         if ( width >= 991) {
             toggleInnerDropdownListeners(true)
         } else if (width < 991) {
