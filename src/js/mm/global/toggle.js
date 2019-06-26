@@ -256,6 +256,7 @@ const width = document.body.clientWidth;
 document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
     if (width < 768) {
         el.setAttribute('aria-expanded', false);
+        el.setAttribute('aria-disabled', false);
     }
 });
 document.querySelectorAll('.accordion__content--footer').forEach((el) => {
@@ -406,10 +407,13 @@ window.addEventListener('resize', () => {
         const currAttr = window.getComputedStyle(content).getPropertyValue('display');
         if (width >= 768) {
             el.setAttribute('aria-expanded', true);
+            el.setAttribute('aria-disabled', true);
         } else if (currAttr === "flex") {
             el.setAttribute('aria-expanded', true);
+            el.setAttribute('aria-disabled', false);
         } else {
             el.setAttribute('aria-expanded', false);
+            el.setAttribute('aria-disabled', false);
         }
     });
 

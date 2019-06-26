@@ -3,8 +3,8 @@
     <h2 class="sr-only">Resources</h2>
     <article class="footer__resources__columns">
       <div class="footer__resources--column">
-        <h3><button class="accordion__heading accordion__heading--footer" aria-expanded="true" id="accordion1id" aria-controls="sect1">Communication<i aria-hidden="true" class="fa fa-plus"></i><i aria-hidden="true" class="fa fa-minus"></i></button></h3>
-            <ul role="list" class="accordion__content--footer" id="sect1">      
+        <h3><button class="accordion__heading accordion__heading--footer" aria-expanded="true" aria-disabled="true" id="accordion1id" aria-controls="sect1">Communication<i aria-hidden="true" class="fa fa-plus"></i><i aria-hidden="true" class="fa fa-minus"></i></button></h3>
+            <ul role="list" class="accordion__content--footer" id="sect1" aria-labelledby="accordion1id">      
                 <li role="listitem"><a href="https://one.purdue.edu">OneCampus Portal</a></li>   
                 <li role="listitem"><a href="https://mycourses.purdue.edu">Blackboard</a></li>      
                 <li role="listitem"><a href="https://www.purdue.edu/boilerconnect/">BoilerConnect</a></li>              
@@ -12,11 +12,10 @@
                 <li role="listitem"><a href="https://exchange.purdue.edu">Outlook</a></li>          
                 <li role="listitem"><a href="https://mypurdue.purdue.edu">myPurdue</a></li>
             </ul>
-      </div>
-   
+      </div>   
       <div class="footer__resources--column">
-        <h3><button class="accordion__heading accordion__heading--footer" aria-expanded="true" id="accordion2id" aria-controls="sect2">Campus<i aria-hidden="true" class="fa fa-plus"></i><i aria-hidden="true" class="fa fa-minus"></i></button></h3>
-        <ul role="list" class="accordion__content--footer" id="sect2">       
+        <h3><button class="accordion__heading accordion__heading--footer" aria-expanded="true" aria-disabled="true" id="accordion2id" aria-controls="sect2">Campus<i aria-hidden="true" class="fa fa-plus"></i><i aria-hidden="true" class="fa fa-minus"></i></button></h3>
+        <ul role="list" class="accordion__content--footer" id="sect2" aria-labelledby="accordion2id">       
                 <li role="listitem"><a href="http://www.purdue.edu/purdue/faculty_staff/index.php">Faculty and Staff</a></li>       
                 <li role="listitem"><a href="https://www.purdue.edu/hr">Human Resources</a></li> 
                 <li role="listitem"><a href="http://www.purdue.edu/purdue/careers/index.php">Careers</a></li>             
@@ -26,8 +25,8 @@
                 </ul>
       </div>
       <div class="footer__resources--column">
-        <h3><button class="accordion__heading accordion__heading--footer" aria-expanded="true" id="accordion3id" aria-controls="sect3">Information <i aria-hidden="true" class="fa fa-plus"></i><i aria-hidden="true" class="fa fa-minus"></i></button></h3>
-           <ul role="list" class="accordion__content--footer" id="sect3">
+        <h3><button class="accordion__heading accordion__heading--footer" aria-expanded="true" aria-disabled="true" id="accordion3id" aria-controls="sect3">Information <i aria-hidden="true" class="fa fa-plus"></i><i aria-hidden="true" class="fa fa-minus"></i></button></h3>
+           <ul role="list" class="accordion__content--footer" id="sect3" aria-labelledby="accordion3id">
                 <li role="listitem"><a href="http://www.purdue.edu/newsroom/purduetoday/">Purdue Today</a></li>
                 <li role="listitem"><a href="https://calendar.purdue.edu/">Calendar</a></li>
                 <li role="listitem"><a href="https://www.lib.purdue.edu/">Libraries</a></li>
@@ -37,8 +36,8 @@
           </ul>
       </div>
       <div class="footer__resources--column">
-        <h3><button class="accordion__heading accordion__heading--footer" aria-expanded="true" id="accordion4id" aria-controls="sect4">People <i aria-hidden="true" class="fa fa-plus"></i><i aria-hidden="true" class="fa fa-minus"></i></button></h3>
-            <ul role="list" class="accordion__content--footer" id="sect4">
+        <h3><button class="accordion__heading accordion__heading--footer" aria-expanded="true" aria-disabled="true" id="accordion4id" aria-controls="sect4">People <i aria-hidden="true" class="fa fa-plus"></i><i aria-hidden="true" class="fa fa-minus"></i></button></h3>
+            <ul role="list" class="accordion__content--footer" id="sect4" aria-labelledby="accordion4id">
                 <li role="listitem"><a href="https://www.purdue.edu/hotline/">Speak Up</a></li>
                 <li role="listitem"><a href="https://www.purdue.edu/diversity-inclusion/">Diversity and Inclusion</a></li>
                 <li role="listitem"><a href="https://www.purdue.edu/ethics/">Ethics and Compliance</a></li>
@@ -51,14 +50,14 @@
             {{> horizontalTaglineSVG}}
             {{> verticalTaglineSVG}}
           <div>
-             <a href="https://www.facebook.com/PurdueUniversity/" rel="noopener" target="_blank"><span class="sr-only">Facebook</span><i class="fab fa-facebook-f"></i></a>                                     
-            <a href="https://twitter.com/lifeatpurdue" rel="noopener" target="_blank"><span class="sr-only">Twitter</span><i class="fab fa-twitter"></i></a>                                  
-            <a href="https://www.youtube.com/user/PurdueUniversity" rel="noopener" target="_blank"><span class="sr-only">YouTube</span><i class="fab fa-youtube"></i></a>                                    
-            <a href="https://www.instagram.com/lifeatpurdue/" rel="noopener" target="_blank"><span class="sr-only">Instagram</span><i class="fab fa-instagram"></i></a>                                     
-            <a href="https://www.pinterest.com/lifeatpurdue/" rel="noopener" target="_blank"><span class="sr-only">Pinterest</span><i class="fab fa-pinterest"></i></a>                                   
-            <a href="https://www.snapchat.com/add/lifeatpurdue" rel="noopener" target="_blank"><span class="sr-only">Snapchat</span><i class="fab fa-snapchat-ghost"></i></a>                                     
-            <a href="https://www.linkedin.com/edu/purdue-university-18357" rel="noopener" target="_blank"><span class="sr-only">LinkedIn</span><i class="fab fa-linkedin-in"></i></a>                                     
-            <a href="http://purdue.amazon.com/" rel="noopener" target="_blank"><span class="sr-only">Amazon</span><i class="fab fa-amazon"></i></a>
+             <a href="https://www.facebook.com/PurdueUniversity/" rel="noopener" target="_blank"><span class="sr-only">Facebook</span><i aria-hidden="true" class="fab fa-facebook-f"></i></a>                                     
+            <a href="https://twitter.com/lifeatpurdue" rel="noopener" target="_blank"><span class="sr-only">Twitter</span><i aria-hidden="true" class="fab fa-twitter"></i></a>                                  
+            <a href="https://www.youtube.com/user/PurdueUniversity" rel="noopener" target="_blank"><span class="sr-only">YouTube</span><i aria-hidden="true" class="fab fa-youtube"></i></a>                                    
+            <a href="https://www.instagram.com/lifeatpurdue/" rel="noopener" target="_blank"><span class="sr-only">Instagram</span><i aria-hidden="true" class="fab fa-instagram"></i></a>                                     
+            <a href="https://www.pinterest.com/lifeatpurdue/" rel="noopener" target="_blank"><span class="sr-only">Pinterest</span><i aria-hidden="true" class="fab fa-pinterest"></i></a>                                   
+            <a href="https://www.snapchat.com/add/lifeatpurdue" rel="noopener" target="_blank"><span class="sr-only">Snapchat</span><i aria-hidden="true" class="fab fa-snapchat-ghost"></i></a>                                     
+            <a href="https://www.linkedin.com/edu/purdue-university-18357" rel="noopener" target="_blank"><span class="sr-only">LinkedIn</span><i aria-hidden="true" class="fab fa-linkedin-in"></i></a>                                     
+            <a href="http://purdue.amazon.com/" rel="noopener" target="_blank"><span class="sr-only">Amazon</span><i aria-hidden="true" class="fab fa-amazon"></i></a>
           </div>
       </div>
     </article>
@@ -66,8 +65,8 @@
   <section class="footer__contact">
     <article class="footer__contact--list">
       <p>Purdue University, 610 Purdue Mall, West Lafayette, IN, 47907, 765-494-4600</p>
-      <p><a href="http://www.purdue.edu/purdue/disclaimer.html">© 2019 Purdue University</a> | <a href="http://www.purdue.edu/purdue/ea_eou_statement.html">An equal access/equal opportunity university</a> | <a href="http://www.purdue.edu/purdue/about/integrity_statement.html">Integrity Statement</a> | <a href="https://www.purdue.edu/securepurdue/SecurityPrograms/copyright_infringement.php" target="_blank">Copyright Complaints</a> | <a href="http://www.purdue.edu/brand/" target="_blank">Brand Toolkit</a> | <a href="https://www.purdue.edu/marketing/">Maintained by Office of Marketing and Media</a></p>
-      <p>Contact <a href="https://www.purdue.edu" rel="noopener" target="_blank">Secure Purdue</a> for accessibility issues with this page | <a href="https://www.purdue.edu/disabilityresources/">Accessibility Resources</a> | <a href="https://www.purdue.edu/purdue/contact-us">Contact Us</a></p>
+      <p><a href="http://www.purdue.edu/purdue/disclaimer.html" target="_blank" rel="noopener">© 2019 Purdue University</a> | <a href="http://www.purdue.edu/purdue/ea_eou_statement.html" target="_blank" rel="noopener">An equal access/equal opportunity university</a> | <a href="http://www.purdue.edu/purdue/about/integrity_statement.html" target="_blank" rel="noopener">Integrity Statement</a> | <a href="https://www.purdue.edu/securepurdue/security-programs/copyright-policies/reporting-alleged-copyright-infringement.php" target="_blank" rel="noopener">Copyright Complaints</a> | <a href="http://www.purdue.edu/brand/" target="_blank" rel="noopener">Brand Toolkit</a> | <a href="https://www.purdue.edu/marketing/" rel="noopener">Maintained by Office of Marketing and Media</a></p>
+      <p>Contact <a href="https://www.purdue.edu" rel="noopener">Secure Purdue</a> for accessibility issues with this page | <a href="https://www.purdue.edu/disabilityresources/" rel="noopener">Accessibility Resources</a> | <a href="https://www.purdue.edu/purdue/contact-us" target="_blank" rel="noopener">Contact Us</a></p>
     </article>
   </section>
 </footer>
