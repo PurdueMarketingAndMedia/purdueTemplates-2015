@@ -1,8 +1,16 @@
 .selected {
   &.dropdown-button {
-    color: $color-campusGold;
-    span {
+    background: #373737;
+    color: white;
+    &>span {
+      color: white;
+    }
+    @include display-md {
+      background: black;
       color: $color-campusGold;
+      span {
+        color: $color-campusGold;
+      }
     }
   }
 }

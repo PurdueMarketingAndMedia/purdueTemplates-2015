@@ -132,8 +132,12 @@ const toggle = (e) => {
                 deselect(clicked)
                 hide(dropdown)
             } else {
-                if (width < 991) {
+                if(!checkClassName(clicked, 'dropdown-button--inner')){
                     select(clicked)
+                } else {
+                    if (width <= 991) {
+                        select(clicked)
+                    }
                 }
                 show(dropdown)
             }
@@ -174,7 +178,7 @@ const toggle = (e) => {
 
             break
         case checkElement(clicked, '#mainNavMo'): // Main nav mobile
-            const closeAllDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownInner'), ...document.querySelectorAll('.header__mainNav--dropdownOuter')]
+            const closeAllDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownInner'), ...document.querySelectorAll('.header__mainNav--dropdownOuter'), ...document.querySelectorAll('.dropdown-button')]
             resetStyles(closeAllDropdowns)
             const mainNavMenu = document.querySelector('.header__mainNav--main')
             const mainNavDisplay = getCurrDisplay(mainNavMenu)
@@ -216,11 +220,17 @@ const toggle = (e) => {
 }
 // Hide an element
 const hide = function (elem) {
+    const toggler = elem.previousElementSibling
+    if (toggler)
+        toggler.setAttribute('aria-expanded', 'false')
     elem.classList.add('hide');
     elem.classList.remove('show');
 };
 // show an element
 const show = function (elem) {
+    const toggler = elem.previousElementSibling
+    if (toggler)
+        toggler.setAttribute('aria-expanded', 'true')
     elem.classList.add('show');
     elem.classList.remove('hide');
 };
@@ -230,15 +240,19 @@ const select = function (elem) {
 };
 // remove selected class to element
 const deselect = function (elem) {
-
     if (elem) {
         elem.classList.remove('selected');
     }
 };
+
 //Reset visibility
 const resetStyles = function (elems) {
     for (const elem of elems) {
+        elem.setAttribute('aria-expanded', 'false')
         elem.classList.remove('hide', 'show', 'selected')
+        const relatedMenu = elem.nextElementSibling
+        if (relatedMenu)
+            relatedMenu.classList.remove('hide', 'show', 'selected')
         elem.removeAttribute('style');
     }
 };
