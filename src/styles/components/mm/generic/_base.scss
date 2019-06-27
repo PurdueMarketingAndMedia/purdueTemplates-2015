@@ -1,0 +1,81 @@
+@import "../settings/color";
+@import "../settings/font";
+@import "../tools/breakpoints";
+@import "../tools/calculations";
+@import "../tools/math";
+
+html {
+	background-color: #3b3b3b;
+	color: #000;
+	font-size: 16px;
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+  }
+body {
+	font-family: $font-arial;
+}
+
+@media (min-width:768px) {
+	body {
+		font-size: 1em;
+		line-height: calc-toEm(24);
+	}
+}
+@media (max-width:767px) {
+	body {
+		font-size: calc-toEm(18);
+		line-height: calc-toEm(24);
+	}
+}
+
+a:link, a:visited, a:active {
+	color: #000;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ol, ul {
+	padding: 10px 0 10px 35px;
+}
+
+ul {
+	list-style-type: disc;
+}
+
+ul ul {
+	padding-top: 0;
+	padding-bottom: 0;
+	list-style-type: circle;
+}
+
+ul ul ul {
+	list-style-type: square;
+}
+
+b, strong {
+	font-weight: 700;
+}
+
+em, i {
+	font-style: italic;
+}
+
+u {
+	text-decoration: underline;
+}
+
+.transition {
+	-webkit-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-o-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-ms-transition-duration: 0.3s;
+}
