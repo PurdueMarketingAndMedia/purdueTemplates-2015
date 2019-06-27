@@ -248,7 +248,8 @@ const deselect = function (elem) {
 //Reset visibility
 const resetStyles = function (elems) {
     for (const elem of elems) {
-        elem.setAttribute('aria-expanded', 'false')
+        if ([...elem.classList].includes('dropdown-button'))
+            elem.setAttribute('aria-expanded', 'false')
         elem.classList.remove('hide', 'show', 'selected')
         const relatedMenu = elem.nextElementSibling
         if (relatedMenu)
