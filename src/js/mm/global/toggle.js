@@ -22,6 +22,7 @@ const toggle = (e) => {
     switch (true) {
         case checkClassName(clicked, 'accordion__heading--footer'): // specifically footer accordion
             document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
+                console.log(el)
                 const contentId = el.getAttribute('aria-controls');
                 let icons = el.querySelectorAll('svg');
                 let plusIcon = el.querySelector('.fa-plus');
@@ -31,12 +32,12 @@ const toggle = (e) => {
                 if (el.getAttribute('aria-expanded') && el !== clicked) {
                     el.setAttribute('aria-expanded', 'false');
                     if (content.getAttribute('state-animating') === null) {
-                        hide(minusIcon)
-                        show(plusIcon)
-                         content.style.height = 0;
+                        hideFooter(minusIcon)
+                        showFooter(plusIcon)
+                        content.style.height = 0;
                         content.setAttribute('state-animating', 'true')
                         setTimeout(() => {
-                            hide(content)
+                            hideFooter(content)
                             content.removeAttribute('state-animating')
                         }, 200)
                     }
@@ -50,14 +51,14 @@ const toggle = (e) => {
                         content.style.height = 0;
                         content.setAttribute('state-animating', 'true')
                         setTimeout(() => {
-                            hide(content)
+                            hideFooter(content)
                             content.removeAttribute('state-animating')
                         }, 200)
                     } else if (content.getAttribute('state-animating') === null) {
                         icons.forEach((icon) => {
                             swapIcon(icon)
                         })
-                        show(content);
+                        showFooter(content);
                         content.setAttribute('state-animating', 'true')
                         setTimeout(() => {
                             content.removeAttribute('state-animating')
@@ -234,6 +235,16 @@ const show = function (elem) {
     elem.classList.add('show');
     elem.classList.remove('hide');
 };
+// Hide an footer element
+const hideFooter = function (elem) {
+    elem.classList.add('hide');
+    elem.classList.remove('show');
+};
+// show an footer element
+const showFooter = function (elem) {
+    elem.classList.add('show');
+    elem.classList.remove('hide');
+};
 // add selected class to element
 const select = function (elem) {
     elem.classList.add('selected');
@@ -261,9 +272,9 @@ const resetStyles = function (elems) {
 const swapIcon = (el) => {
     const currAttr = window.getComputedStyle(el).getPropertyValue('display');
     if (currAttr && currAttr === 'block') {
-        hide(el);
+        hideFooter(el);
     } else {
-        show(el);
+        showFooter(el);
     }
 }
 //Collapse footer  and show icon at the beginning on small screen
@@ -276,17 +287,17 @@ document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
 });
 document.querySelectorAll('.accordion__content--footer').forEach((el) => {
     if (width < 768) {
-        hide(el);
+        hideFooter(el);
     }
 });
 document.querySelectorAll('.accordion__heading--footer>svg.fa-plus').forEach((el) => {
     if (width < 768) {
-        show(el)
+        showFooter(el)
     }
 });
 document.querySelectorAll('.accordion__heading--footer>svg.fa-minus').forEach((el) => {
     if (width < 768) {
-        hide(el)
+        hideFooter(el)
     }
 });
 [...document.querySelectorAll('.header__mainNav-dropDownInner'), ...document.querySelectorAll('.header__mainNav-dropDownOuter')].forEach((el) => {
@@ -397,7 +408,6 @@ const assignListeners = () => {
 
 let resizeTimer
 
-
 //Reset
 window.addEventListener('resize', () => {
     const width = document.body.clientWidth;
@@ -407,7 +417,6 @@ window.addEventListener('resize', () => {
     const resetSm = [document.querySelector('#findInfoFor'), document.querySelector('#searchDropdown')]
     
     const resetNav = [document.querySelector('.header__mainNav--main'), ...document.querySelectorAll('.dropdown-button')]
-
 
     if (width >= 768 && width >= 991) {
         resetStyles(resetNav)
