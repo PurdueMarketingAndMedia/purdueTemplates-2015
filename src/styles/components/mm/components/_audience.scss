@@ -1,6 +1,5 @@
 .row {
   display: flex;
-  padding: 4rem 0;
   width: 1140px;
   @include display-lg {
     width: 940px;
@@ -14,7 +13,8 @@
   &__feature-links {
     align-items: center;
     justify-content: space-between;
-    @include display-md {
+    padding: 4rem 1rem;
+    @include display-sm {
       flex-direction: column;
     }
     &__button {
@@ -30,7 +30,7 @@
       text-align: center;
       &:not(:last-child) {
         margin-right: 3.5rem;
-        @include display-md {
+        @include display-sm {
           margin-right: 0;
           margin-bottom: 6.5rem;
         }
@@ -193,6 +193,94 @@
         }
         &:after {
           background: $color-pappysPurple;
+        }
+      }
+    }
+  }
+  &__links {
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 1.8rem 0;
+    @include display-md {
+      flex-wrap: wrap;
+      padding: 1.8rem 0;
+    }
+    @include display-sm {
+      padding: 1.8rem 1rem;
+    }
+    &__column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      flex: 1 1 auto;
+      padding: 3rem 1rem;
+      background: #292929;
+      &:not(:last-child) {
+        margin-right: 1.8rem;
+        @include display-md {
+          margin-right: 0;
+        }
+      }
+      @include display-md {
+        flex-basis: 47%;
+        &:nth-child(-n + 2) {
+          margin-bottom: 1.8rem;
+        }
+        &:nth-child(2n - 1) {
+          margin-right: 4%;
+        }
+      }
+      @include display-sm {
+        flex-basis: 100%;
+        &:nth-child(-n + 2) {
+          margin-bottom: 1.85rem;
+        }
+        &:nth-child(2n - 1) {
+          margin-right: 0;
+        }
+        margin-bottom: 1.85rem;
+      }
+      svg {
+        color: $color-gray70;
+        font-size: 3.25rem;
+      }
+      h2 {
+        position: relative;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: .35rem;
+        margin-bottom: 2.35rem;
+        font-size: 1.75rem;
+        text-align: center;
+        &:after {
+          content: "";
+          height: 0.1em;
+          width: 3rem;
+          position: absolute;
+          top: 100%;
+          background: $color-campusGold;
+        }
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+          text-align: center;
+          &:not(:last-child) {
+            margin-bottom: 1.35rem;
+          }
+          a {
+            text-decoration: none !important;
+            color: white !important;
+            font-weight: 400 !important;
+            &:hover {
+              text-decoration: underline !important;
+            }
+          }
         }
       }
     }
