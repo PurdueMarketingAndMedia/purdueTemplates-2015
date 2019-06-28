@@ -1,0 +1,200 @@
+.row {
+  display: flex;
+  padding: 4rem 0;
+  width: 1140px;
+  @include display-lg {
+    width: 940px;
+  }
+  @include display-md {
+    width: 720px;
+  }
+  @include display-sm {
+    width: 100%;
+  }
+  &__feature-links {
+    align-items: center;
+    justify-content: space-between;
+    @include display-md {
+      flex-direction: column;
+    }
+    &__button {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none !important;
+      font-weight: 400 !important;
+      font-size: 1.75rem;
+      font-family: $font-archivo-narrow;
+      padding-bottom: 1.25rem;
+      text-align: center;
+      &:not(:last-child) {
+        margin-right: 3.5rem;
+        @include display-md {
+          margin-right: 0;
+          margin-bottom: 6.5rem;
+        }
+      }
+      svg {
+        font-size: 4.5rem;
+        margin-bottom: 2.5rem;
+        @include display-md {
+          font-size: 3.5rem;
+          margin-bottom: 1rem;
+        }
+      }
+      &:after {
+        content: "";
+        height: 0.45rem;
+        width: 3rem;
+        position: absolute;
+        top: 100%;
+        background: black;
+        transition: all .1s ease;
+      }
+      &:hover {
+        cursor: pointer;
+        &:after {
+          width: 4rem;
+        }
+      }
+      // color settings:
+      &--campusGold{
+        svg {
+          color: $color-campusGold;
+        }
+        &:after {
+          background: $color-campusGold;
+        }
+      }
+      &--headlineGold{
+        svg {
+          color: $color-headlineGold;
+        }
+        &:after {
+          background: $color-headlineGold;
+        }
+      }
+      &--coalGray{
+        svg {
+          color: $color-coalGray;
+        }
+        &:after {
+          background: $color-coalGray;
+        }
+      }
+      &--moonDustGray{
+        svg {
+          color: $color-moonDustGray;
+        }
+        &:after {
+          background:  $color-moonDustGray;
+        }
+      }
+      &--everTrueBlue{
+        svg {
+          color: $color-everTrueBlue;
+        }
+        &:after {
+          background: $color-everTrueBlue;
+        }
+      }
+      &--slayterSkyBlue{
+        svg {
+          color: $color-slayterSkyBlue;
+        }
+        &:after {
+          background: $color-slayterSkyBlue;
+        }
+      }
+      &--ameliaSkyBlue{
+        svg {
+          color: $color-ameliaSkyBlue;
+        }
+        &:after {
+          background: $color-ameliaSkyBlue;
+        }
+      }
+      &--landGrantGreen{
+        svg {
+          color: $color-landGrantGreen;
+        }
+        &:after {
+          background: $color-landGrantGreen;
+        }
+      }
+      &--rossAdeGreen{
+        svg {
+          color: $color-rossAdeGreen;
+        }
+        &:after {
+          background: $color-rossAdeGreen;
+        }
+      }
+      &--celeryBogGreen{
+        svg {
+          color: $color-celeryBogGreen;
+        }
+        &:after {
+          background: $color-celeryBogGreen;
+        }
+      }
+      &--springFestGreen{
+        svg {
+          color: $color-springFestGreen;
+        }
+        &:after {
+          background: $color-springFestGreen;
+        }
+      }
+      &--oakenBucketBrown{
+        svg {
+          color: $color-oakenBucketBrown;
+        }
+        &:after {
+          background: $color-oakenBucketBrown;
+        }
+      }
+      &--bellTowerBrick{
+        svg {
+          color: $color-bellTowerBrick;
+        }
+        &:after {
+          background: $color-bellTowerBrick;
+        }
+      }
+      &--mackeyOrange{
+        svg {
+          color: $color-mackeyOrange;
+        }
+        &:after {
+          background: $color-mackeyOrange;
+        }
+      }
+      &--yellowWalk{
+        svg {
+          color: $color-yellowWalk;
+        }
+        &:after {
+          background: $color-yellowWalk;
+        }
+      }
+      &--fountainRunTeal{
+        svg {
+          color: $color-fountainRunTeal;
+        }
+        &:after {
+          background: $color-fountainRunTeal;
+        }
+      }
+      &--pappysPurple{
+        svg {
+          color: $color-pappysPurple;
+        }
+        &:after {
+          background: $color-pappysPurple;
+        }
+      }
+    }
+  }
+}

@@ -3,4 +3,11 @@
     height: auto;
     display: flex;
     flex-direction: column;
+    &--audience-row {
+      align-items: center;
+      justify-content: center;
+    }
+    &--bg-white {
+      background: white;
+    }
   }
