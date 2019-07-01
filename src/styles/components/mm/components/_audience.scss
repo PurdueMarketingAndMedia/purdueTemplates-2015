@@ -379,7 +379,7 @@
         flex-direction:column;
     }
     @include display-sm{
-        padding:0.9375rem 0;
+        padding:1rem 0;
     }
     &__imgContainer{
         width:58.3%;
@@ -419,6 +419,41 @@
         p{
             margin-bottom:1rem;
         }
+    }
+  }
+  &__tint{
+      padding:4.6875rem 0;
+      display:flex;
+      flex-direction:column;
+      @include display-md{
+        padding:3.125rem 1.875rem;
+    }
+    &__header{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+        @include display-sm{
+            flex-direction:column;
+            justify-content:space-around;
+        }
+        h2{
+            padding:0;
+            margin-top:0;
+            margin-bottom:0.9375rem;  
+            color:#000;
+            font-family:$font-archivo-narrow;
+            font-size:1.96rem;
+            font-weight:700;
+            text-align:center;
+        }
+        a{
+            margin-bottom:0.9375rem;    
+        }
+    }
+    &__photos{
+            padding:0.9375rem 0;
+            margin:-0.375rem;
     }
   }
 }
