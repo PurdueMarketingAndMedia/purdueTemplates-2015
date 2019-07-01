@@ -375,6 +375,7 @@
     padding:4.7rem 0;
     display:flex;
     flex-direction:row;
+    align-items:flex-start;
     @include display-md{
         flex-direction:column;
     }
@@ -418,6 +419,9 @@
         }
         p{
             margin-bottom:1rem;
+        }
+        a{
+            align-self:flex-start;
         }
     }
   }
