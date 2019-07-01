@@ -11,6 +11,57 @@
   @include display-sm {
     width: 100%;
   }
+  &__intro {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color:white;
+    padding: 7.8rem 1rem 1rem;
+      @include display-sm {
+        padding-top:1rem;
+      }
+
+    svg{
+        font-size: 5rem;
+        padding: 1rem 0;
+    }
+    h1{
+        font-family:$font-archivo-black;
+        color:white;
+        font-size: 4.5rem; 
+        text-transform: uppercase;
+        @include display-sm {
+            font-size: 2.5rem;
+        }
+        span{
+            display:block;
+            font-size: 2.25rem;
+            @include display-sm {
+                font-size: 1.25rem;
+            }
+        }
+    }
+    hr{
+        border: 0.35rem solid white;
+        width: 9.3rem;
+        margin:0.6rem 0 1.3rem;
+        @include display-mo {
+            width: 40%;
+        }
+    }
+    p{
+        font-size:1rem;
+        line-height: 1.5;
+        font-weight:700;
+        max-width:600px;
+        margin:0 auto;
+        text-align:center;
+        padding: 1rem 0 1.875rem;
+        @include display-md {
+            padding: 1rem;
+        }
+    }
+  }
   &__feature-links {
     align-items: center;
     justify-content: space-between;
