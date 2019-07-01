@@ -336,4 +336,41 @@
       }
     }
   }
+  &__multiImage {
+      padding-top:1.875rem;
+      padding-bottom:1.875rem;
+      display:flex;
+      flex-direction:row;
+      justify-content: space-between;
+      & :first-child{
+        padding-left:0;
+        }
+        & :last-child{
+            padding-right:0;
+        }
+      @include display-md {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        & :first-child{
+        padding-left:0.93rem;
+        }
+        & :last-child{
+        padding-right:0.93rem;
+        }
+      }
+      @include display-sm {
+        flex-direction:column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      &__imgContainer{
+        padding:0.93rem; 
+
+      img{
+        max-width: 100%;
+        max-height: 150px;        
+      }
+    }
+
+  }
 }
