@@ -373,4 +373,99 @@
     }
 
   }
+  &__events {
+    align-items: center;
+    flex-direction: column;
+    padding: 3.75rem 0;
+    h2 {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: 700;
+      color: white;
+      padding-bottom: 1rem;
+      margin-top: 0;
+      margin-bottom: 3rem;
+      &:after {
+        content: '';
+        position: absolute;
+        background: $color-campusGold;
+        width: 55%;
+        height: 0.2rem;
+        top: 100%;
+      }
+    }
+    &__cards {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 1.5rem;
+      @include display-md {
+        flex-direction: column;
+      }
+      @include display-sm {
+        padding: 0 1rem;
+      }
+    }
+    &__card {
+      flex: 1 1 100%;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas:
+        "event-date event-month"
+        "event-content event-content" ;
+      font-family: $font-archivo-narrow;
+      &:first-child {
+        margin-right: 2rem;
+        @include display-md {
+          margin-right: 0;
+          margin-bottom: 2.5rem;
+        }
+      }
+      .event-date {
+        grid-area: event-date;
+        background: $color-campusGold;
+        color: black;
+        padding: 1.4rem;
+        font-size: 1.875rem;
+      }
+      .event-month {
+        grid-area: event-month;
+        background: black;
+        color: white;
+        padding: 1.4rem;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+      .event-content {
+        grid-area: event-content;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        padding: 1.65rem 1.4rem;
+        align-self: flex-start;
+        justify-content: space-between;
+        text-decoration: none !important;
+        p {
+          font-family: $font-archivo-narrow !important;
+          font-weight: 400 !important;
+          font-size: 1.5rem;
+          color: $color-headlineGold !important;
+          text-decoration: none !important;
+          margin-bottom: 1rem;
+          &:nth-child(2) {
+            color: black !important;
+            font-size: 1.25rem;
+            font-weight: 700 !important;
+            margin-bottom: 0;
+          }
+        }
+        &:hover > p:first-child {
+          text-decoration: underline !important;
+        }
+      }
+    }
+  }
 }
