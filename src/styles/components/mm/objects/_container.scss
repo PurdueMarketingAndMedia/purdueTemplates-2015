@@ -29,8 +29,18 @@
       background-size: cover;
       background-position: center;
     }
-    &__bg-lightGray{
+    &--bg-lightGray{
       background-color: #eee;
+    }
+    &--bg-twitter{
+      background-size: auto 85%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-color: #eee;
+      background-image: url('https://purdue.edu/purdue/images/templateElements/2015/audience-twitterBackground.png');
+      @include display-sm{
+        background-image:none;
+    }
     }
   }
   

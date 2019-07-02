@@ -420,7 +420,7 @@
         p{
             margin-bottom:1rem;
         }
-        a{
+        button{
             align-self:flex-start;
         }
     }
@@ -525,8 +525,11 @@
       display:flex;
       flex-direction:column;
       @include display-md{
-        padding:3.125rem 1.875rem;
-    }
+        padding:3.125rem 0;
+        }
+        @include display-sm{
+            padding:3.125rem 1rem;
+            }
     &__header{
         display:flex;
         flex-direction:row;
@@ -539,10 +542,10 @@
         h2{
             padding:0;
             margin-top:0;
-            margin-bottom:0.9375rem;  
+            margin-bottom:0;  
             color:#000;
             font-family:$font-archivo-narrow;
-            font-size:1.96rem;
+            font-size:1.75rem;
             font-weight:700;
             text-align:center;
         }
@@ -555,4 +558,147 @@
             margin:-0.375rem;
     }
   }
+  &__twitter{
+    padding:6.25rem 0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+        &__contents{
+            display:flex;
+            flex-direction:row;
+            justify-content: space-between;
+            @include display-md{
+                flex-wrap:wrap;
+            }
+        }
+        &__content{
+            display:flex;
+            flex-direction:column;
+            align-items:flex-start;
+            margin-bottom:4.7rem;
+            line-height:1.1;
+            &:first-child{
+                padding-right:2rem;
+            }
+            &:last-child{
+                padding-left:2rem;
+            }
+            @include display-md{
+                align-items:center;
+                &:first-child{
+                    padding-right:0;
+                }
+                &:last-child{
+                    padding-left:0;
+                }
+            }
+            @include display-sm{
+                &:first-child{
+                    padding-left:1rem;
+                    padding-right:1rem;
+                }
+                &:last-child{
+                    padding-left:1rem;
+                    padding-right:1rem;
+                }
+            }
+            .header{
+                display:flex;
+                flex-direction:row;
+                font-family:$font-archivo-narrow;
+                font-size:1.75rem;
+                width:100%;
+                justify-content: space-between;
+                flex-wrap:wrap;
+                .username, .time{
+                    padding-right:1rem;
+                }                
+                span{
+                    font-weight:700;
+                }
+                margin-bottom:0.625rem;
+                @include display-md{
+                    justify-content: center;
+                }
+                @include display-sm{
+                    font-size:1.97rem;
+                }
+            }
+            .retweet{
+                color:#555;
+                font-size:1rem;
+                margin-bottom:0.625rem;
+                @include display-sm{
+                    font-size:1.125rem;
+                }
+            }
+            .text{
+                color:#555;
+                font-size:1.25rem;
+                margin-top:1rem;
+                @include display-md{
+                    text-align:center;
+                }
+                @include display-sm{
+                    font-size:1.41rem;
+                }
+            }
+        }
+    }
+    &__instagram{
+        padding:4.6875rem 0;
+        display:flex;
+        flex-direction:column;
+        @include display-md{
+            padding:3.125rem 0;
+        }
+        @include display-sm{
+            padding:3.125rem 1rem;
+        }
+      &__header{
+          display:flex;
+          flex-direction:row;
+          justify-content:space-between;
+          align-items:center;
+          @include display-sm{
+              flex-direction:column;
+              justify-content:space-around;
+          }
+          h2{
+              padding:0;
+              margin-top:0;
+              margin-bottom:0;  
+              color:#000;
+              font-family:$font-archivo-narrow;
+              font-size:1.75rem;
+              font-weight:700;
+              text-align:center;
+          }
+          a{
+              margin-bottom:0.9375rem;    
+          }
+      }
+      &__photos{
+            margin:0.9375rem -0.47rem;
+            display:flex;
+            flex-wrap:wrap;
+            @include display-md{
+                justify-content: space-between;
+            }
+      }
+      &__photo{
+            width:16.666667%;
+            padding:0.47rem;
+            img{
+                width:100%;
+                height:auto;
+            } 
+            @include display-md{
+                width:33%;
+            }
+            @include display-sm{
+                width:50%;
+            }
+        }
+    }
 }
