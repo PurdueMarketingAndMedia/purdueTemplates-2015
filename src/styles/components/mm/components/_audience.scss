@@ -461,7 +461,7 @@
       }
     }
     &__card {
-      flex: 1 1 100%;
+      flex: 0 1 48%;
       display: grid;
       grid-template-columns: auto 1fr;
       grid-template-rows: auto 1fr;
@@ -470,11 +470,13 @@
         "event-content event-content" ;
       font-family: $font-archivo-narrow;
       &:first-child {
-        margin-right: 2rem;
         @include display-md {
           margin-right: 0;
           margin-bottom: 2.5rem;
         }
+      }
+      @include display-md {
+        flex-basis: auto;
       }
       .event-date {
         grid-area: event-date;
