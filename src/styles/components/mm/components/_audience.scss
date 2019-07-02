@@ -560,4 +560,32 @@
             margin:-0.375rem;
     }
   }
+  &__large-photo {
+    align-items: center;
+    justify-content: center;
+    min-height: 39rem;
+    p {
+      color: white;
+      font-family: $font-archivo-narrow;
+      font-weight: 700;
+      font-size: 4rem;
+      text-transform: uppercase;
+      text-shadow: 0 0 30px #000;
+      text-align: center;
+      margin: 0;
+      @include display-md {
+        font-size: 2.95rem;
+      }
+      @include display-sm {
+        font-size: 1.95rem;
+      }
+    }
+    @include display-md {
+      padding: 0 1rem;
+      min-height: 25rem;
+    }
+    @include display-sm {
+      padding: 0 1rem;
+    }
+  }
 }

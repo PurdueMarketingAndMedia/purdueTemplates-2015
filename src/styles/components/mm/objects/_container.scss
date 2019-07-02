@@ -29,8 +29,13 @@
       background-size: cover;
       background-position: center;
     }
-    &__bg-lightGray{
+    &--bg-lightGray{
       background-color: #eee;
+    }
+    &--bg-large-photo {
+      background-color: black;
+      background-size: cover;
+      background-position: center;
     }
   }
   
