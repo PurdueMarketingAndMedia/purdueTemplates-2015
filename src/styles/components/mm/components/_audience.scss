@@ -64,7 +64,7 @@
   &__feature-links {
     align-items: center;
     justify-content: space-between;
-    padding: 4rem 1rem;
+    padding: 4rem 0;
     @include display-sm {
       flex-direction: column;
     }
@@ -79,8 +79,14 @@
       font-family: $font-archivo-narrow;
       padding-bottom: 1.25rem;
       text-align: center;
+      flex-basis: auto;
+      @include display-lg {
+        flex-basis: 28%;
+      }
+      @include display-md {
+        flex-basis: 27%;
+      }
       &:not(:last-child) {
-        margin-right: 3.5rem;
         @include display-sm {
           margin-right: 0;
           margin-bottom: 6.5rem;
