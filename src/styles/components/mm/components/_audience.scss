@@ -270,31 +270,23 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      flex: 1 1 auto;
+      flex: 0 1 23%;
       padding: 3rem 1rem;
       background: #292929;
-      &:not(:last-child) {
-        margin-right: 1.8rem;
-        @include display-md {
-          margin-right: 0;
-        }
+      margin: 0;
+      @include display-lg {
+        flex-basis: 22.5%;
       }
       @include display-md {
-        flex-basis: 47%;
+        flex-basis: 48%;
         &:nth-child(-n + 2) {
           margin-bottom: 1.8rem;
-        }
-        &:nth-child(2n - 1) {
-          margin-right: 4%;
         }
       }
       @include display-sm {
         flex-basis: 100%;
         &:nth-child(-n + 2) {
           margin-bottom: 1.85rem;
-        }
-        &:nth-child(2n - 1) {
-          margin-right: 0;
         }
         margin-bottom: 1.85rem;
       }
