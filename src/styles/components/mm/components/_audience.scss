@@ -521,6 +521,7 @@
         }
         @include display-sm{
             padding:3.125rem 2rem;
+            width: 100%;
             }
     &__header{
         display:flex;
