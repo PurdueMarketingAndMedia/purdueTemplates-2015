@@ -520,9 +520,10 @@
       flex-direction:column;
       @include display-md{
         padding:3.125rem 0;
+        width: 690px;
         }
         @include display-sm{
-            padding:3.125rem 1rem;
+            padding:3.125rem 2rem;
             }
     &__header{
         display:flex;
