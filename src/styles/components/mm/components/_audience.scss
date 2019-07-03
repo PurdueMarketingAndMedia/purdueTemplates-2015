@@ -348,17 +348,16 @@
         align-items: center;
       }
       img{
-        width:23%;
-        flex-basis:0.23;
+        flex-basis:0.21;
         align-self: center; 
         display:flex;       
         max-height:150px;
         @include display-md {
             margin:1rem;
-            width:35%;
+            flex-basis:0.35;
         }
         @include display-sm {
-            width:auto;
+            flex-basis:auto;
             max-width:80%;
           }
     }
@@ -376,7 +375,6 @@
         padding:1rem 0;
     }
     img{
-        width:56%;
         flex-basis:0.56;
         display:flex;        
         @include display-md{
@@ -387,7 +385,6 @@
     &__content{
         display:flex;
         flex-direction:column;
-        width:40%;
         flex-basis:0.4;
         @include display-md{
             width:100%;
@@ -572,9 +569,9 @@
             flex-direction:column;
             align-items:flex-start;
             line-height:1.1;
-            width:48%;
+            flex-basis:48%;
             @include display-md{
-                width:100%;
+              flex-basis:100%;
                 align-items:center;
                 margin-bottom:4.7rem;
             }
@@ -587,7 +584,7 @@
                 flex-direction:row;
                 font-family:$font-archivo-narrow;
                 font-size:1.75rem;
-                width:100%;
+                flex-basis:100%;
                 justify-content: space-between;
                 flex-wrap:wrap;
                 .username, .time{
@@ -660,26 +657,24 @@
             }
         }
         &__photos{
-            margin:0.9375rem -0.47rem;
+            margin:0.9375rem 0;
             display:flex;
             flex-wrap:wrap;
-            @include display-md{
-                justify-content: space-between;
-            }
-        
+            justify-content: space-between;
+            line-height:1;
+            
         a{
-            width:16.666667%;
-            padding:0.47rem;
-            box-sizing: border-box;
+          flex-basis:15.6%;
             img{
                 width:100%;
                 height:auto;
             } 
             @include display-md{
-                width:33%;
+                flex-basis:32%;
+                margin-bottom:0.7rem;
             }
             @include display-sm{
-                width:50%;
+              flex-basis:48.7%;
             }
         }
       }
