@@ -337,44 +337,39 @@
     }
   }
   &__multiImage {
-      padding:1.875rem 0;
+      padding:2.8rem 0;
       display:flex;
       flex-direction:row;
       justify-content: space-between;
-      & :first-child{
-        padding-left:0;
-        }
-        & :last-child{
-            padding-right:0;
-        }
       @include display-md {
+        padding:1.8rem 0;
         flex-wrap: wrap;
         justify-content: space-around;
-        & :first-child{
-        padding-left:0.93rem;
-        }
-        & :last-child{
-        padding-right:0.93rem;
-        }
       }
       @include display-sm {
-        flex-direction:column;
-        justify-content: space-around;
         align-items: center;
       }
-      &__imgContainer{
-        padding:0.93rem; 
-
       img{
-        max-width: 100%;
-        max-height: 150px;        
-      }
+        width:23%;
+        flex-basis:0.23;
+        align-self: center; 
+        display:flex;       
+        max-height:150px;
+        @include display-md {
+            margin:1rem;
+            width:35%;
+        }
+        @include display-sm {
+            width:auto;
+            max-width:80%;
+          }
     }
   }
   &__story{
     padding:4.7rem 0;
     display:flex;
     flex-direction:row;
+    justify-content: space-between;
     align-items:flex-start;
     @include display-md{
         flex-direction:column;
@@ -382,33 +377,27 @@
     @include display-sm{
         padding:1rem 0;
     }
-    &__imgContainer{
-        width:58.3%;
-        padding:0 0.9375rem 2.1875rem 0;
+    img{
+        width:56%;
+        flex-basis:0.56;
         display:flex;        
         @include display-md{
             width:100%;
-            padding:0 0.9375rem 2.1875rem;
-        }
-        img{
-            width: 100%;
-            height:auto !important;
-            align-self: center;
+            padding:0 1rem 2.1875rem;
         }
     }
     &__content{
         display:flex;
         flex-direction:column;
-        width:41.7%;
-        padding:0 0 0 1.875rem;
+        width:40%;
+        flex-basis:0.4;
         @include display-md{
             width:100%;
-            padding:0 1.875rem;
+            padding:0 1rem;
         }
         h2{
-            margin:0;
+            margin:0 0 1.25rem 0;
             padding-top:0;
-            padding-bottom:1.25rem;
             color:#000;
             font-family:$font-archivo-narrow;
             font-size:1.75rem;
@@ -572,40 +561,26 @@
             display:flex;
             flex-direction:row;
             justify-content: space-between;
+            margin-bottom:4.7rem;
             @include display-md{
                 flex-wrap:wrap;
+                margin-bottom:0;
             }
         }
         &__content{
             display:flex;
             flex-direction:column;
             align-items:flex-start;
-            margin-bottom:4.7rem;
             line-height:1.1;
-            &:first-child{
-                padding-right:2rem;
-            }
-            &:last-child{
-                padding-left:2rem;
-            }
+            width:48%;
             @include display-md{
+                width:100%;
                 align-items:center;
-                &:first-child{
-                    padding-right:0;
-                }
-                &:last-child{
-                    padding-left:0;
-                }
+                margin-bottom:4.7rem;
             }
             @include display-sm{
-                &:first-child{
-                    padding-left:1rem;
-                    padding-right:1rem;
-                }
-                &:last-child{
-                    padding-left:1rem;
-                    padding-right:1rem;
-                }
+                margin-left:1rem;
+                margin-right:1rem;
             }
             .header{
                 display:flex;
@@ -627,6 +602,7 @@
                 }
                 @include display-sm{
                     font-size:1.97rem;
+                    text-align:center;
                 }
             }
             .retweet{
@@ -690,10 +666,11 @@
             @include display-md{
                 justify-content: space-between;
             }
-        }
-        &__photo{
+        
+        a{
             width:16.666667%;
             padding:0.47rem;
+            box-sizing: border-box;
             img{
                 width:100%;
                 height:auto;
@@ -705,6 +682,7 @@
                 width:50%;
             }
         }
+      }
   }
   &__large-photo {
     align-items: center;
