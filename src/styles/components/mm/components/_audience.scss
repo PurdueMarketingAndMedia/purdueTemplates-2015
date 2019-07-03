@@ -64,7 +64,7 @@
   &__feature-links {
     align-items: center;
     justify-content: space-between;
-    padding: 4rem 1rem;
+    padding: 4rem 0;
     @include display-sm {
       flex-direction: column;
     }
@@ -79,8 +79,14 @@
       font-family: $font-archivo-narrow;
       padding-bottom: 1.25rem;
       text-align: center;
+      flex-basis: auto;
+      @include display-lg {
+        flex-basis: 28%;
+      }
+      @include display-md {
+        flex-basis: 27%;
+      }
       &:not(:last-child) {
-        margin-right: 3.5rem;
         @include display-sm {
           margin-right: 0;
           margin-bottom: 6.5rem;
@@ -264,31 +270,23 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      flex: 1 1 auto;
+      flex: 0 1 23%;
       padding: 3rem 1rem;
       background: #292929;
-      &:not(:last-child) {
-        margin-right: 1.8rem;
-        @include display-md {
-          margin-right: 0;
-        }
+      margin: 0;
+      @include display-lg {
+        flex-basis: 22.5%;
       }
       @include display-md {
-        flex-basis: 47%;
+        flex-basis: 48%;
         &:nth-child(-n + 2) {
           margin-bottom: 1.8rem;
-        }
-        &:nth-child(2n - 1) {
-          margin-right: 4%;
         }
       }
       @include display-sm {
         flex-basis: 100%;
         &:nth-child(-n + 2) {
           margin-bottom: 1.85rem;
-        }
-        &:nth-child(2n - 1) {
-          margin-right: 0;
         }
         margin-bottom: 1.85rem;
       }
@@ -450,7 +448,7 @@
       }
     }
     &__card {
-      flex: 1 1 100%;
+      flex: 0 1 48%;
       display: grid;
       grid-template-columns: auto 1fr;
       grid-template-rows: auto 1fr;
@@ -459,11 +457,13 @@
         "event-content event-content" ;
       font-family: $font-archivo-narrow;
       &:first-child {
-        margin-right: 2rem;
         @include display-md {
           margin-right: 0;
           margin-bottom: 2.5rem;
         }
+      }
+      @include display-md {
+        flex-basis: auto;
       }
       .event-date {
         grid-area: event-date;
