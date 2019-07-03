@@ -106,6 +106,7 @@
         width: 3rem;
         position: absolute;
         top: 100%;
+        left: calc(50% - 1.5rem);
         background: black;
         transition: all .1s ease;
       }
@@ -310,6 +311,7 @@
           width: 3rem;
           position: absolute;
           top: 100%;
+          left: calc(50% - 1.5rem);
           background: $color-campusGold;
         }
       }
@@ -427,9 +429,10 @@
         content: '';
         position: absolute;
         background: $color-campusGold;
-        width: 55%;
+        width: 6rem;
         height: 0.2rem;
         top: 100%;
+        left: calc(50% - 3rem);
       }
     }
     &__cards {
