@@ -525,6 +525,7 @@
       top: 100%;
       border-bottom-left-radius: 0.2rem;
       border-bottom-right-radius: 0.2rem;
+      z-index: 2;
       li {
         margin: 0 !important;
         &>a {

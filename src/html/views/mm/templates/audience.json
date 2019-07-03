@@ -4,8 +4,10 @@
     "description": "This is an example of v2.0.0 of the audience page template.",
     "css": "../../../styles/mm/templates/content-audience.css"  
   },
+  "body": {
+    "main-js": "../../../js/mm/templates/main.js"
+  },
   "audience-template": {
-    "main-js": "../../../js/mm/templates/main.js",
     "site-name": "Audience Template",
     "site-tagline": {
       "title": "Purdue Web Templates",

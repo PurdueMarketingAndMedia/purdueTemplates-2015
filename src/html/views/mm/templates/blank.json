@@ -4,9 +4,11 @@
     "description": "This is an example of v2.0.0 of the blank page template.",
     "css": "../../../styles/mm/templates/content-blank.css"  
   },
+  "body": {
+    "main-js": "../../../js/mm/templates/main.js"
+  },
   "blank-template": {
     "test": "<p class='test'>Hello World!</p>",
-    "main-js": "../../../js/mm/templates/main.js",
     "site-name": "Blank Template",
     "site-tagline": {
       "title": "Purdue Web Templates",
