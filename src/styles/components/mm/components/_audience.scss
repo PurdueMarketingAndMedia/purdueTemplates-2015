@@ -350,13 +350,13 @@
         align-items: center;
       }
       img{
-        flex-basis:0.21;
+        flex-basis:21%;
         align-self: center; 
         display:flex;       
         max-height:150px;
         @include display-md {
             margin:1rem;
-            flex-basis:0.35;
+            flex-basis:35%;
         }
         @include display-sm {
             flex-basis:auto;
@@ -377,7 +377,7 @@
         padding:1rem 0;
     }
     img{
-        flex-basis:0.56;
+        flex-basis:56%;
         display:flex;        
         @include display-md{
             width:100%;
@@ -387,7 +387,7 @@
     &__content{
         display:flex;
         flex-direction:column;
-        flex-basis:0.4;
+        flex-basis:40%;
         @include display-md{
             width:100%;
             padding:0 1rem;
