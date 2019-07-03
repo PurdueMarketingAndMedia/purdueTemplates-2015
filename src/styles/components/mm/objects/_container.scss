@@ -3,4 +3,50 @@
     height: auto;
     display: flex;
     flex-direction: column;
+    &--audience-row {
+      align-items: center;
+      justify-content: center;
+    }
+    &--bg-white {
+      background: white;
+    }
+    &--bg-shade {
+      box-shadow: inset 0 0 0 1000px rgba(0,0,0,.65);
+      position: relative;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+    &--bg-darkGray {
+      background: #333;
+    }
+    &--bg-black {
+      background-color: #000;
+    }
+    &--bg-events {
+      background-image: url('https://www.purdue.edu/purdue/images/templateElements/2015/audience-eventsBackground.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    &--bg-lightGray {
+      background-color: #eee;
+    }
+    &--bg-twitter {
+      background-size: auto 85%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-color: #eee;
+      background-image: url('https://purdue.edu/purdue/images/templateElements/2015/audience-twitterBackground.png');
+      @include display-sm {
+        background-image: none;
+      }
+    }
+    &--bg-large-photo {
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+    }
   }
+  
+ 
