@@ -119,7 +119,7 @@ const toggle = (e) => {
                     }
                 })
             } else {
-                const allDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownOuter'), ...document.querySelectorAll('.header__mainNav--dropdownInner'), document.querySelector('#searchDropdown')]
+                const allDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownOuter'), ...document.querySelectorAll('.header__mainNav--dropdownInner'), document.querySelector('#searchDropdown'),...document.querySelectorAll('.dropdown-content')]
                 allDropdowns.map((checkDropdown) => {
                     if (checkDropdown !== dropdown) {
                         hide(checkDropdown)

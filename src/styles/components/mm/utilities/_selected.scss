@@ -12,5 +12,14 @@
         color: $color-campusGold;
       }
     }
+    &.side-nav{
+      background: #fff;
+      color: #000;
+
+    &:hover{
+      text-decoration: none;
+    }
+    }
   }
+
 }
