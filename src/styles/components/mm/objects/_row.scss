@@ -1,0 +1,13 @@
+.row {
+    display: flex;
+    width: 1140px;
+    @include display-lg {
+      width: 940px;
+    }
+    @include display-md {
+      width: 720px;
+    }
+    @include display-sm {
+      width: 100%;
+    }
+}

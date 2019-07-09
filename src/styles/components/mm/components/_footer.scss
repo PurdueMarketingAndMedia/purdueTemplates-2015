@@ -5,6 +5,9 @@
     justify-content: center;
     font-family: $font-arial;
     line-height:1.5rem;
+    p{
+        margin-bottom: 0;
+    }
     &__resources{
         background-color:#000000;
         display:flex;
