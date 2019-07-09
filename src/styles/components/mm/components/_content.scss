@@ -101,7 +101,9 @@ iframe{
                         color: #000;
                         text-decoration: underline;
                     }
-                    &:before{
+                }
+                >a{
+                   &:before{
                         content: "";
                         position: absolute;
                         left: 0px;
@@ -140,8 +142,7 @@ iframe{
                         &:after {
                             text-decoration: none;
                         }
-                    }
-                    
+                    }                    
                 }
 
                 &:first-child{
@@ -158,6 +159,11 @@ iframe{
                        &:hover{
                         text-decoration:underline; 
                        }
+                       &:focus{
+                          &:before{
+                            width: 0;
+                        }
+                    }
                     }
                 }
                 .dropdown-content{

@@ -14,9 +14,11 @@ const toggle = (e) => {
     const getCurrSelected = () => {
         const outer = document.querySelector('.header__mainNav--dropdownOuter.show')
         const inner = document.querySelector('.header__mainNav--dropdownInner.show')
+        const side = document.querySelector('.dropdown-content.show')
         const outerSelected = outer ? outer.previousElementSibling : null
         const innerSelected = inner ? inner.previousElementSibling : null
-        return { outerSelected, innerSelected }
+        const sideSelected = side ? side.previousElementSibling : null
+        return { outerSelected, innerSelected, sideSelected }
     }
 
     switch (true) {
@@ -106,7 +108,7 @@ const toggle = (e) => {
         case checkClassName(clicked, 'dropdown-button'):
             const dropdown = clicked.nextElementSibling
             const findInfoForMenu = document.querySelector('#findInfoFor')
-            const { outerSelected, innerSelected } = getCurrSelected()
+            let { outerSelected, innerSelected, sideSelected } = getCurrSelected()
             if (width >= 768) {
                 hide(findInfoForMenu)
             }
@@ -125,6 +127,7 @@ const toggle = (e) => {
                         hide(checkDropdown)
                         deselect(outerSelected)
                         deselect(innerSelected)
+                        deselect(sideSelected)
                     }
                 })
             }
@@ -209,7 +212,18 @@ const toggle = (e) => {
 
             break
         default:
+            let currSelectedObj = getCurrSelected()
+            const outSelected = currSelectedObj.outerSelected
+            const inSelected = currSelectedObj.innerSelected
+            const siSelected = currSelectedObj.sideSelected
             const allDropdownsDefault = [...document.querySelectorAll('.header__mainNav--dropdownInner'), ...document.querySelectorAll('.header__mainNav--dropdownOuter'), document.querySelector('#findInfoFor')]
+            const sideDropdownsDefault = [...document.querySelectorAll('.dropdown-content')]
+            deselect(outSelected)
+            deselect(inSelected)
+            deselect(siSelected)
+            sideDropdownsDefault.map((dropdown) => {
+                hide(dropdown)
+            })
             if (width >= 768) {
                 allDropdownsDefault.map((dropdown) => {
                     hide(dropdown)
