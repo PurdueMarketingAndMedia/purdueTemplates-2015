@@ -142,7 +142,13 @@ iframe{
                         &:after {
                             text-decoration: none;
                         }
-                    }                    
+                    } 
+                    &:focus{
+                        text-decoration: none !important; 
+                        &:before{
+                            width: 0;
+                        }
+                    }                   
                 }
 
                 &:first-child{

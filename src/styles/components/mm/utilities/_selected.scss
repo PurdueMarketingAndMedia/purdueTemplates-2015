@@ -19,6 +19,12 @@
     &:hover{
       text-decoration: none;
     }
+    &:focus{
+      text-decoration: none !important; 
+      &:before{
+          width: 50%;
+      }
+    }
     }
   }
 
