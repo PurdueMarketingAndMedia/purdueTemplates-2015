@@ -13,6 +13,9 @@
       "title": "Purdue Web Templates",
       "link": "https://www.purdue.edu/brand/applications/web-templates/index.php"
     },
+    "hero-link": {
+      "link": "#"
+    },
     "num-tiles": 2,
     "tiles": [
       {

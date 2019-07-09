@@ -30,10 +30,17 @@
 			}
 		}
     </style>
+    {{#if hero-link}}
+    <a href="{{this.link}}" class="office__hero">
+      <h2>Lorem Ipsum</h2>
+      <p>Dolor sit amet, consectetur adipisicing elit. Officiis nisi iure ipsum inventore doloremque quam blanditiis, et vel dolorum quisquam.</p>
+    </a>
+    {{else}}
     <section class="office__hero">
       <h2>Lorem Ipsum</h2>
       <p>Dolor sit amet, consectetur adipisicing elit. Officiis nisi iure ipsum inventore doloremque quam blanditiis, et vel dolorum quisquam.</p>
     </section>
+    {{/if}}
     <section class="office__tiles office__tiles--{{num-tiles}}">
       {{#each tiles}}
         <a class="office__tile office__tile--{{this.color}}" id="office-tile-{{this.num}}" href="#">
