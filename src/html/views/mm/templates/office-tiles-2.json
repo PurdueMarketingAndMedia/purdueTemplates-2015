@@ -30,6 +30,16 @@
         "text": "Dolor sit",
         "color": "campusGold"
       }
+    ],
+    "buttons": [
+      {
+        "link": "#",
+        "text": "Lorem ipsum"
+      },
+      {
+        "link": "#",
+        "text": "Dolor Sit"
+      }
     ]
   }
 }

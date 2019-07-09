@@ -39,6 +39,24 @@
         "text": "Lipsum sit",
         "color": "yellowWalk"
       }
+    ],
+    "buttons": [
+      {
+        "link": "#",
+        "text": "Lorem ipsum"
+      },
+      {
+        "link": "#",
+        "text": "Dolor Sit"
+      },
+      {
+        "link": "#",
+        "text": "Amet Consectetur"
+      },
+      {
+        "link": "#",
+        "text": "Lipsum Sit"
+      }
     ]
   }
 }

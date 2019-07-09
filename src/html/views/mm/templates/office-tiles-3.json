@@ -33,6 +33,20 @@
         "text": "Consectetur Adipisicing",
         "color": "rossAdeGreen"
       }
+    ],
+    "buttons": [
+      {
+        "link": "#",
+        "text": "Lorem ipsum"
+      },
+      {
+        "link": "#",
+        "text": "Dolor Sit"
+      },
+      {
+        "link": "#",
+        "text": "Amet Consectetur"
+      }
     ]
   }
 }

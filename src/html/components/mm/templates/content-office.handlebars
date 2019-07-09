@@ -50,9 +50,9 @@
       {{/each}}
     </section>
     <section class="office__feature-buttons">
-      <a href="#" class="button button-gray15 button-slim button-wide">Lorem ipsum</a>
-      <a href="#" class="button button-gray15 button-slim button-wide">Dolor Sit</a>
-      <a href="#" class="button button-gray15 button-slim button-wide">Amet Consectetur</a>
+      {{#each buttons}}
+        <a href="{{this.link}}" class="button button-gray15 button-slim button-wide">{{this.text}}</a>
+      {{/each}}
     </section>
     <section class="office__content">
       <h1>Header 1</h1>
