@@ -13,28 +13,10 @@
       "title": "Purdue Web Templates",
       "link": "https://www.purdue.edu/brand/applications/web-templates/index.php"
     },
-    "type": "tiles",
-    "num-tiles": 3,
-    "tiles": [
-      {
-        "num": 1,
-        "icon": "fas fa-info-circle",
-        "text": "Lorem Ipsum",
-        "color": "ameliaSkyBlue"
-      }, 
-      {
-        "num": 2,
-        "icon": "fas fa-newspaper",
-        "text": "Dolor sit",
-        "color": "campusGold"
-      },
-      {
-        "num": 3,
-        "icon": "fas fa-rocket",
-        "text": "Consectetur Adipisicing",
-        "color": "rossAdeGreen"
-      }
-    ],
+    "hero-link": {
+      "link": "#"
+    },
+    "type": "tabs",
     "buttons": [
       {
         "link": "#",
@@ -43,10 +25,6 @@
       {
         "link": "#",
         "text": "Dolor Sit"
-      },
-      {
-        "link": "#",
-        "text": "Amet Consectetur"
       }
     ]
   }

@@ -16,6 +16,7 @@
     "hero-link": {
       "link": "#"
     },
+    "type": "tiles",
     "num-tiles": 2,
     "tiles": [
       {

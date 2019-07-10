@@ -13,6 +13,7 @@
       "title": "Purdue Web Templates",
       "link": "https://www.purdue.edu/brand/applications/web-templates/index.php"
     },
+    "type": "tiles",
     "num-tiles": 4,
     "tiles": [
       {

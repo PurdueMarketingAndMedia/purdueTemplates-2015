@@ -41,14 +41,24 @@
       <p>Dolor sit amet, consectetur adipisicing elit. Officiis nisi iure ipsum inventore doloremque quam blanditiis, et vel dolorum quisquam.</p>
     </section>
     {{/if}}
-    <section class="office__tiles office__tiles--{{num-tiles}}">
-      {{#each tiles}}
+
+    {{#equals type 'tiles'}}
+    <section class="office__tiles office__tiles--{{../num-tiles}}">
+      {{#each ../tiles}}
         <a class="office__tile office__tile--{{this.color}}" id="office-tile-{{this.num}}" href="#">
           <i class="{{this.icon}}"></i>
           {{this.text}}
         </a>
       {{/each}}
     </section>
+    {{/equals}}    
+
+    {{#equals type 'tabs'}}
+      <section class="office__tabs">
+        
+      </section>
+    {{/equals}}
+
     <section class="office__feature-buttons">
       {{#each buttons}}
         <a href="{{this.link}}" class="button button-gray15 button-slim button-wide">{{this.text}}</a>
