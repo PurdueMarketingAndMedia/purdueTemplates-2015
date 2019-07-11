@@ -70,7 +70,19 @@ const registerAllPartials = (filesObj) => {
     handlebars.registerPartial(partialName, partialContent);
   }
 }
-
+const registerAccordionSectionHelper = () => {
+      handlebars.registerHelper('printHeader', (header, striped) =>{
+        const header1 = '<h2>Striped</h2>';
+        const header2 = '<h2>Available Colors</h2>';
+        if (header === "Default"){
+          if(striped){
+            return new handlebars.SafeString(header1);
+          }else{
+            return new handlebars.SafeString(header2);
+          }      
+        }
+      }) 
+}
 const compileViews = (filesObj) => {
   const template = fs.readFileSync('src/html/pageRender.handlebars', 'utf8');
   const compiledTemplate = handlebars.compile(template);
@@ -91,6 +103,6 @@ const filesObjGlobals = recursiveRead('src/html/globals', '.handlebars')
 const filesObjViews = recursiveRead('src/html/views', '.json')
 registerAllPartials(filesObjComponents)
 registerAllPartials(filesObjGlobals)
-
+registerAccordionSectionHelper();
 compileViews(filesObjViews)
 

@@ -1,5 +1,8 @@
 .show{
     display:block !important;
+    &.accordion__content {
+        display: flex !important;
+    }
     &.accordion__content--footer {
         display: flex !important;
     }
