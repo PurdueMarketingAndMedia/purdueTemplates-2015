@@ -33,6 +33,20 @@ const registerAllPartials = (filesObj) => {
   }
 }
 
+const registerAccordionSectionHelper = () => {
+  handlebars.registerHelper('printHeader', (header, striped) =>{
+    const header1 = '<h2>Striped</h2>';
+    const header2 = '<h2>Available Colors</h2>';
+    if (header === "Default"){
+      if(striped){
+        return new handlebars.SafeString(header1);
+      }else{
+        return new handlebars.SafeString(header2);
+      }      
+    }
+  }) 
+}
+
 const registerEqualsHelper = () => {
   handlebars.registerHelper('equals', (left, right, options) => {
     if (arguments.length < 3) 
@@ -66,6 +80,7 @@ const filesObjGlobals = recursiveRead('src/html/globals', '.handlebars')
 const filesObjViews = recursiveRead('src/html/views', '.json')
 registerAllPartials(filesObjComponents)
 registerAllPartials(filesObjGlobals)
+registerAccordionSectionHelper();
 registerEqualsHelper()
 
 compileViews(filesObjViews)

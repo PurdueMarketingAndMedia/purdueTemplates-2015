@@ -24,7 +24,6 @@ const toggle = (e) => {
     switch (true) {
         case checkClassName(clicked, 'accordion__heading--footer'): // specifically footer accordion
             document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
-                console.log(el)
                 const contentId = el.getAttribute('aria-controls');
                 let icons = el.querySelectorAll('svg');
                 let plusIcon = el.querySelector('.fa-plus');
@@ -69,6 +68,36 @@ const toggle = (e) => {
                     }
                 }
             })          
+            break
+            case checkClassName(clicked, 'accordion__heading'): // accordion
+                const contentId = clicked.getAttribute('aria-controls');
+                let icons = clicked.querySelectorAll('svg');
+                const content = document.querySelector('#' + contentId);
+                const currAttr = getCurrDisplay(content)
+                const expanded = clicked.getAttribute('aria-expanded') === "false" ? true : false;
+                clicked.setAttribute('aria-expanded', expanded);
+                if (currAttr && currAttr === 'flex' && content.getAttribute('state-animating') === null) {
+                    icons.forEach((icon) => {
+                        swapIcon(icon)
+                    })
+                    content.style.height = 0;
+                    content.setAttribute('state-animating', 'true')
+                    setTimeout(() => {
+                        hideFooter(content)
+                        content.removeAttribute('state-animating')
+                    }, 200)
+                } else if (content.getAttribute('state-animating') === null) {
+                    icons.forEach((icon) => {
+                        swapIcon(icon)
+                    })
+                    showFooter(content);
+                    content.setAttribute('state-animating', 'true')
+                    setTimeout(() => {
+                        content.removeAttribute('state-animating')
+                        content.style.height = 'auto'
+                    }, 200)
+                    content.style.height = content.scrollHeight + "px";
+                }     
             break
         case checkClassName(clicked, 'header__goldBar--moButton'): // specifically gold bar mobile menu
             const goldBarContent = document.querySelector('.header__goldBar--menus')
@@ -390,11 +419,13 @@ const toggleInnerDropdownListeners = (addListeners) => {
 const assignListeners = () => {
     document.addEventListener('click', (e) => {
         e = e.target
-        if (e.classList && e.classList.contains('accordion__heading')) {
+        if (e.classList && e.classList.contains('accordion__heading--footer')) {
             let width = document.body.clientWidth;
             if (width <= 768) {
                 toggle(e);
             }
+        } else if (e.classList && e.classList.contains('accordion__heading')) {
+            toggle(e);
         } else if (
             e.classList && (
                 (
@@ -439,8 +470,7 @@ window.addEventListener('resize', () => {
     }else if (width < 768) {
         resetStyles(resetSm)
     }
-
-    document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
+     document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
         let content = document.querySelector('#' + el.getAttribute('aria-controls'));
         const currAttr = window.getComputedStyle(content).getPropertyValue('display');
         if (width >= 768) {
