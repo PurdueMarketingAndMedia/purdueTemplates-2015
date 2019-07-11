@@ -94,6 +94,7 @@ const toggle = (e) => {
                     content.setAttribute('state-animating', 'true')
                     setTimeout(() => {
                         content.removeAttribute('state-animating')
+                        content.style.height = 'auto'
                     }, 200)
                     content.style.height = content.scrollHeight + "px";
                 }     
@@ -469,8 +470,7 @@ window.addEventListener('resize', () => {
     }else if (width < 768) {
         resetStyles(resetSm)
     }
-
-    document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
+     document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
         let content = document.querySelector('#' + el.getAttribute('aria-controls'));
         const currAttr = window.getComputedStyle(content).getPropertyValue('display');
         if (width >= 768) {

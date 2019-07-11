@@ -1,8 +1,5 @@
 .accordion{
     width:100%;
-    h4{
-        margin:0;
-    }
     &__heading{
       position: relative;
       display: flex;
@@ -21,14 +18,17 @@
       @include display-lg{
         font-size: 1.14rem;
       }
-      h4:nth-of-type(even) &-striped{
+      @include display-lg{
+        font-size: 1.375rem;
+      }
+      &--striped:nth-of-type(even){
         background-color: #eeaf15;
         }
       &--campusGold{
         outline-color: #000;
         background-color: #c28e0e;
         color: #000;
-        h4:nth-of-type(even) &-striped{
+        &--striped:nth-of-type(even){
             background-color: #eeaf15;
             }
       }
@@ -36,7 +36,7 @@
         outline-color: #000;
         background-color: #000;
         color: #fff;
-        h4:nth-of-type(even) &-striped{      
+        &--striped:nth-of-type(even){      
             background-color: #3b3d3f;
         }
       }
@@ -44,7 +44,7 @@
         outline-color: #dedede;
         background-color: #5b6870;
         color: #fff; 
-        h4:nth-of-type(even) &-striped{      
+        &--striped:nth-of-type(even){      
             background-color: #727a87;
         }      
       }
@@ -52,7 +52,7 @@
         outline-color: #000;
         background-color: #aaa;
         color: #000; 
-        h4:nth-of-type(even) &-striped{      
+        &--striped:nth-of-type(even){      
             background-color: #bfbbbb;
         }      
       }
@@ -60,7 +60,7 @@
         outline-color: #dedede;
         background-color: #707070;
         color: #fff;
-        h4:nth-of-type(even) &-striped{      
+        &--striped:nth-of-type(even){      
             background-color: #7c7e82;
         }
       }
@@ -99,6 +99,9 @@
       flex-direction:column;
       @include display-lg{
         font-size: 0.9375rem; 
+      }
+      @include display-sm{
+        font-size: 1.125rem; 
       }
     }
         
