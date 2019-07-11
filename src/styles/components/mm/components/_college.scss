@@ -1,0 +1,475 @@
+.college {
+  &__main {
+    flex: 0 0 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: $color-gray15;
+    padding: 2rem;
+    overflow-y: auto;
+    height: 34.5rem;
+    @include display-md {
+      height: auto;
+      overflow-y: unset;
+      margin-bottom: 1.25rem;
+      flex: 1 1 auto;
+    }
+    h1 {
+      font-size: 1.75rem;
+      line-height: 1.875rem;
+    }
+    a {
+      margin-top: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__tiles {
+    flex: 0 0 66%;
+    display: grid;
+    grid-template-columns: 1fr 1.25rem 1fr 1.25rem 1fr 1.25rem 1fr;
+    grid-template-rows: 1fr 1.25rem 1fr 1.25rem 1fr 1.25rem 1fr;
+    @include display-md {
+      flex: 1 1 41.25rem;
+    }
+    @include display-sm {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  &__tile {
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    text-decoration: none !important;
+    justify-content: flex-end;
+    font-family: $font-archivo-narrow;
+    position: relative;
+    padding: 1.5rem;
+    @include display-sm {
+      padding: 1.25rem;
+      &:not(:last-child) {
+        margin-bottom: 1.2rem;
+      }
+    }
+    
+    // ---------------------- TILE SIZES ----------------------- //
+    // TILE SIZES LG
+    &.size-lg{
+      &-1x1 {
+        
+      }
+      &-1x2 {
+
+      }
+      &-1x3 {
+
+      }
+      &-1x4 {
+
+      }
+      &-2x1 {
+        
+      }
+      &-2x2 {
+        grid-column-end: span 3;
+        grid-row-end: span 3;
+        z-index: 1;
+        padding: 0;
+        &.college__tile--news {
+          svg {
+            display: none;
+          }
+          color: white !important;
+          font-weight: 400 !important;
+          font-size: 1.625rem;
+          span {
+            padding: 1.5rem;
+            background: rgba($color:#000, $alpha: 0.7);
+          }
+        }
+      }
+      &-2x3 {
+
+      }
+      &-2x4 {
+
+      }
+      &-3x1 {
+        
+      }
+      &-3x2 {
+
+      }
+      &-3x3 {
+
+      }
+      &-3x4 {
+
+      }
+      &-4x1 {
+        
+      }
+      &-4x2 {
+
+      }
+      &-4x3 {
+
+      }
+      &-4x4 {
+
+      }
+    }
+    
+    // TILE SIZES MD
+    &.size-md{
+      @include display-lg {
+        &-1x1 {
+          
+        }
+        &-1x2 {
+  
+        }
+        &-1x3 {
+  
+        }
+        &-1x4 {
+  
+        }
+        &-2x1 {
+          
+        }
+        &-2x2 {
+          &.college__tile--news {
+            font-size: 1.375rem;
+            span {
+              padding: 1.25rem;
+            }
+          }
+        }
+        &-2x3 {
+  
+        }
+        &-2x4 {
+  
+        }
+        &-3x1 {
+          
+        }
+        &-3x2 {
+  
+        }
+        &-3x3 {
+  
+        }
+        &-3x4 {
+  
+        }
+        &-4x1 {
+          
+        }
+        &-4x2 {
+  
+        }
+        &-4x3 {
+  
+        }
+        &-4x4 {
+  
+        }
+      }
+    }
+    
+    // TILE SIZES SM
+    &.size-sm{
+      @include display-md {
+
+        &-1x1 {
+          
+        }
+        &-1x2 {
+  
+        }
+        &-1x3 {
+  
+        }
+        &-1x4 {
+  
+        }
+        &-2x1 {
+          
+        }
+        &-2x2 {
+          &.college__tile--news {
+            font-size: 1.625rem;
+          }
+        }
+        &-2x3 {
+  
+        }
+        &-2x4 {
+  
+        }
+        &-3x1 {
+          
+        }
+        &-3x2 {
+  
+        }
+        &-3x3 {
+  
+        }
+        &-3x4 {
+  
+        }
+        &-4x1 {
+          
+        }
+        &-4x2 {
+  
+        }
+        &-4x3 {
+  
+        }
+        &-4x4 {
+  
+        }
+      }
+    }
+    
+    // TILE SIZES MO
+    &.size-mo{
+      @include display-sm {
+        &-1x1 {
+          
+        }
+        &-1x2 {
+  
+        }
+        &-2x1 {
+          
+        }
+        &-2x2 {
+          height: 15rem;
+          flex: 1 1 100%;
+          &.college__tile--news {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+
+    // ---------------------- TILE LOCATIONS ----------------------- //
+    // TILE LOCATIONS LG
+    &.loc-lg{
+      &-a-1 {
+        grid-column-start: 1;
+        grid-row-start: 1;
+      }
+      &-a-2 {
+        grid-column-start: 1;
+        grid-row-start: 3;
+      }
+      &-a-3 {
+        grid-column-start: 1;
+        grid-row-start: 5;
+      }
+      &-a-4 {
+        grid-column-start: 1;
+        grid-row-start: 7;
+      }
+      &-b-1 {
+        grid-column-start: 3;
+        grid-row-start: 1;
+      }
+      &-b-2 {
+        grid-column-start: 3;
+        grid-row-start: 3;
+      }
+      &-b-3 {
+        grid-column-start: 3;
+        grid-row-start: 5;
+      }
+      &-b-4 {
+        grid-column-start: 3;
+        grid-row-start: 7;
+      }
+      &-c-1 {
+        grid-column-start: 5;
+        grid-row-start: 1;
+      }
+      &-c-2 {
+        grid-column-start: 5;
+        grid-row-start: 3;
+      }
+      &-c-3 {
+        grid-column-start: 5;
+        grid-row-start: 5;
+      }
+      &-c-4 {
+        grid-column-start: 5;
+        grid-row-start: 7;
+      }
+      &-d-1 {
+        grid-column-start: 7;
+        grid-row-start: 1;
+      }
+      &-d-2 {
+        grid-column-start: 7;
+        grid-row-start: 3;
+      }
+      &-d-3 {
+        grid-column-start: 7;
+        grid-row-start: 5;
+      }
+      &-d-4 {
+        grid-column-start: 7;
+        grid-row-start: 7;
+      }
+    }
+    
+    // TILE LOCATIONS MD
+    &.loc-md{
+      @include display-lg {
+        &-a-1 {
+          grid-column-start: 1;
+          grid-row-start: 1;
+        }
+        &-a-2 {
+          grid-column-start: 1;
+          grid-row-start: 3;
+        }
+        &-a-3 {
+          grid-column-start: 1;
+          grid-row-start: 5;
+        }
+        &-a-4 {
+          grid-column-start: 1;
+          grid-row-start: 7;
+        }
+        &-b-1 {
+          grid-column-start: 3;
+          grid-row-start: 1;
+        }
+        &-b-2 {
+          grid-column-start: 3;
+          grid-row-start: 3;
+        }
+        &-b-3 {
+          grid-column-start: 3;
+          grid-row-start: 5;
+        }
+        &-b-4 {
+          grid-column-start: 3;
+          grid-row-start: 7;
+        }
+        &-c-1 {
+          grid-column-start: 5;
+          grid-row-start: 1;
+        }
+        &-c-2 {
+          grid-column-start: 5;
+          grid-row-start: 3;
+        }
+        &-c-3 {
+          grid-column-start: 5;
+          grid-row-start: 5;
+        }
+        &-c-4 {
+          grid-column-start: 5;
+          grid-row-start: 7;
+        }
+        &-d-1 {
+          grid-column-start: 7;
+          grid-row-start: 1;
+        }
+        &-d-2 {
+          grid-column-start: 7;
+          grid-row-start: 3;
+        }
+        &-d-3 {
+          grid-column-start: 7;
+          grid-row-start: 5;
+        }
+        &-d-4 {
+          grid-column-start: 7;
+          grid-row-start: 7;
+        }
+      }
+    }
+    
+    // TILE LOCATIONS SM
+    &.loc-sm{
+      @include display-md {
+        &-a-1 {
+          grid-column-start: 1;
+          grid-row-start: 1;
+        }
+        &-a-2 {
+          grid-column-start: 1;
+          grid-row-start: 3;
+        }
+        &-a-3 {
+          grid-column-start: 1;
+          grid-row-start: 5;
+        }
+        &-a-4 {
+          grid-column-start: 1;
+          grid-row-start: 7;
+        }
+        &-b-1 {
+          grid-column-start: 3;
+          grid-row-start: 1;
+        }
+        &-b-2 {
+          grid-column-start: 3;
+          grid-row-start: 3;
+        }
+        &-b-3 {
+          grid-column-start: 3;
+          grid-row-start: 5;
+        }
+        &-b-4 {
+          grid-column-start: 3;
+          grid-row-start: 7;
+        }
+        &-c-1 {
+          grid-column-start: 5;
+          grid-row-start: 1;
+        }
+        &-c-2 {
+          grid-column-start: 5;
+          grid-row-start: 3;
+        }
+        &-c-3 {
+          grid-column-start: 5;
+          grid-row-start: 5;
+        }
+        &-c-4 {
+          grid-column-start: 5;
+          grid-row-start: 7;
+        }
+        &-d-1 {
+          grid-column-start: 7;
+          grid-row-start: 1;
+        }
+        &-d-2 {
+          grid-column-start: 7;
+          grid-row-start: 3;
+        }
+        &-d-3 {
+          grid-column-start: 7;
+          grid-row-start: 5;
+        }
+        &-d-4 {
+          grid-column-start: 7;
+          grid-row-start: 7;
+        }
+      }
+    }
+  }
+}

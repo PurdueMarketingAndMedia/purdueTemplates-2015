@@ -1,0 +1,44 @@
+{
+  "head": {
+    "title": "College Homepage Template",
+    "description": "This is an example of v2.0.0 of the college homepage page template.",
+    "css": "../../../styles/mm/templates/content-college.css"  
+  },
+  "body": {
+    "main-js": "../../../js/mm/templates/main.js"
+  },
+  "college-template": {
+    "site-name": "College Template",
+    "site-tagline": {
+      "title": "Purdue Web Templates",
+      "link": "https://www.purdue.edu/brand/applications/web-templates/index.php"
+    },
+    "feature-links": [
+      {
+        "text": "Lorem Ipsum"
+      },
+      {
+        "text": "Dolor Sit"
+      },
+      {
+        "text": "Amet Consectetur"
+      }
+    ],
+    "tiles": [
+      {
+        "type": "news",
+        "text": "2x2 News Tile",
+        "bg-image": {
+          "link": "https://www.purdue.edu/brand/images/web-templates/placeholders/college_tile-news-2x2.jpg"
+        },
+        "lg-size": "2x2",
+        "lg-loc": "a-1",
+        "md-size": "2x2",
+        "md-loc": "a-1",
+        "sm-size": "2x2",
+        "sm-loc": "a-1",
+        "mo-size": "2x2"
+      }
+    ]
+  }
+}
