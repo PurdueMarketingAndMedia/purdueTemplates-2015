@@ -3,44 +3,6 @@ const fs = require('fs');
 const path = require('path')
 const pretty = require('pretty');
 
-// const template = fs.readFileSync('src/html/pageRender.handlebars', 'utf8');
-// const compiledTemplate = handlebars.compile(template);
-
-// fs.readdir('src/html/views', 'utf8', (err, files) => {
-//   if (err) throw err;
-//   const views = files;
-//   const components = fs.readdirSync('src/html/components', 'utf8');
-//   const globals = fs.readdirSync('src/html/globals', 'utf8');
-
-//   handlebars.registerHelper(
-//     'addClass',
-//     (value, compare, className) => (!handlebars.Utils.isEmpty(value) && value === compare ? ` ${className}` : ''),
-//   );
-//   components.forEach((partial) => {
-//     const partialName = `${partial.replace(/\.[^./]+$/, '')}`;
-//     const partialContent = fs.readFileSync(`src/html/partials/${partial}`, 'utf8');
-//     handlebars.registerPartial(partialName, partialContent);
-//   });
-//   globals.forEach((partial) => {
-//     const partialName = `${partial.replace(/\.[^./]+$/, '')}`;
-//     const partialContent = fs.readFileSync(`src/html/globals/${partial}`, 'utf8');
-//     handlebars.registerPartial(partialName, partialContent);
-//   });
-//   svgPartials.forEach((partial) => {
-//     const partialName = `${partial.replace(/\.[^./]+$/, '')}`;
-//     const partialContent = fs.readFileSync(`src/html/svg_partials/${partial}`, 'utf8');
-//     handlebars.registerPartial(partialName, partialContent);
-//   });
-
-//   views.forEach((view) => {
-//     const outputFileName = `${view.replace(/\.[^./]+$/, '')}.html`;
-//     const viewJSON = JSON.parse(fs.readFileSync(`src/html/views/${view}`, 'utf8'));
-//     const compiled = compiledTemplate(viewJSON);
-//     const finalOut = pretty(compiled, { ocd: true });
-//     fs.writeFileSync(`new_builds/html/${outputFileName}`, finalOut);
-//   });
-// });
-
 const recursiveRead = (dir, ext) => {
   let results = {}
 
@@ -70,19 +32,34 @@ const registerAllPartials = (filesObj) => {
     handlebars.registerPartial(partialName, partialContent);
   }
 }
+
 const registerAccordionSectionHelper = () => {
-      handlebars.registerHelper('printHeader', (header, striped) =>{
-        const header1 = '<h2>Striped</h2>';
-        const header2 = '<h2>Available Colors</h2>';
-        if (header === "Default"){
-          if(striped){
-            return new handlebars.SafeString(header1);
-          }else{
-            return new handlebars.SafeString(header2);
-          }      
-        }
-      }) 
+  handlebars.registerHelper('printHeader', (header, striped) =>{
+    const header1 = '<h2>Striped</h2>';
+    const header2 = '<h2>Available Colors</h2>';
+    if (header === "Default"){
+      if(striped){
+        return new handlebars.SafeString(header1);
+      }else{
+        return new handlebars.SafeString(header2);
+      }      
+    }
+  }) 
 }
+
+const registerEqualsHelper = () => {
+  handlebars.registerHelper('equals', (left, right, options) => {
+    if (arguments.length < 3) 
+      throw new Error("Equals helper requires 2 parameters.")
+
+    if (left != right) {
+      return options.inverse(this)
+    } else {
+      return options.fn(this)
+    }
+  })
+}
+
 const compileViews = (filesObj) => {
   const template = fs.readFileSync('src/html/pageRender.handlebars', 'utf8');
   const compiledTemplate = handlebars.compile(template);
@@ -104,5 +81,7 @@ const filesObjViews = recursiveRead('src/html/views', '.json')
 registerAllPartials(filesObjComponents)
 registerAllPartials(filesObjGlobals)
 registerAccordionSectionHelper();
+registerEqualsHelper()
+
 compileViews(filesObjViews)
 

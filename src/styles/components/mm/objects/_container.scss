@@ -7,6 +7,14 @@
       align-items: center;
       justify-content: center;
     }
+    &--office {
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 0;
+      @include display-sm {
+        padding: 1rem 0 2rem 0;
+      }
+    }
     &--bg-white {
       background: white;
     }

@@ -1,0 +1,67 @@
+{{> header}}
+<main id='deptOfficeTemplate' class="container container--office container--bg-white">
+  <div class="office__grid">
+    <style type="text/css">
+		.office__hero{
+			background-image:url("https://www.purdue.edu/brand/images/web-templates/placeholders/deptOffice_hero-lg.jpg");
+		}
+		@media (min-width:992px) and (max-width:1199px)
+		{
+			.office__hero{
+				background-image:url("https://www.purdue.edu/brand/images/web-templates/placeholders/deptOffice_hero-md.jpg");
+			}
+		}
+		@media (min-width:768px) and (max-width:991px)
+		{
+			.office__hero{
+				background-image:url("https://www.purdue.edu/brand/images/web-templates/placeholders/deptOffice_hero-sm.jpg");
+			}
+		}
+		@media (min-width:481px) and (max-width:767px)
+		{
+			.office__hero{
+				background-image:url("https://www.purdue.edu/brand/images/web-templates/placeholders/deptOffice_hero-lg.jpg");
+			}
+		}
+		@media (max-width:480px)
+		{
+			.office__hero{
+				background-image:url("https://www.purdue.edu/brand/images/web-templates/placeholders/deptOffice_hero-xs.jpg");
+			}
+		}
+    </style>
+    {{#if hero-link}}
+    <a href="{{this.link}}" class="office__hero">
+      <h2>Lorem Ipsum</h2>
+      <p>Dolor sit amet, consectetur adipisicing elit. Officiis nisi iure ipsum inventore doloremque quam blanditiis, et vel dolorum quisquam.</p>
+    </a>
+    {{else}}
+    <section class="office__hero">
+      <h2>Lorem Ipsum</h2>
+      <p>Dolor sit amet, consectetur adipisicing elit. Officiis nisi iure ipsum inventore doloremque quam blanditiis, et vel dolorum quisquam.</p>
+    </section>
+    {{/if}}
+
+    {{#equals type 'tiles'}}
+    <section class="office__tiles office__tiles--{{../num-tiles}}">
+      {{#each ../tiles}}
+        <a class="office__tile office__tile--{{this.color}}" id="office-tile-{{this.num}}" href="#">
+          <i class="{{this.icon}}"></i>
+          {{this.text}}
+        </a>
+      {{/each}}
+    </section>
+    {{/equals}}    
+
+    <section class="office__feature-buttons">
+      {{#each buttons}}
+        <a href="{{this.link}}" class="button button-gray15 button-slim button-wide">{{this.text}}</a>
+      {{/each}}
+    </section>
+    <section class="office__content">
+      <h1>Header 1</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum arcu tincidunt aliquam auctor. In suscipit, mauris eu venenatis facilisis, arcu eros ornare dui, eu elementum magna lorem sagittis nisi. Etiam molestie, mi vel porta mattis, urna ipsum facilisis sapien, id pellentesque sapien sapien id metus.</p>
+    </section>
+  </div>
+</main>
+{{> footer}}
