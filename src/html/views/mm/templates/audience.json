@@ -12,14 +12,6 @@
     "site-tagline": {
       "title": "Purdue Web Templates",
       "link": "https://www.purdue.edu/brand/applications/web-templates/index.php"
-    },
-    "rows": [
-      {
-        "row-name": "intro",
-        "row-content": {
-          
-        }
-      }
-    ]
+    }
   }
 }
