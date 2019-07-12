@@ -1,5 +1,8 @@
 
 .header {
+  @media only print {
+      display: none;
+  }
   font-family:$font-arial;
   &__goldBar {
     background: #c28e0e;

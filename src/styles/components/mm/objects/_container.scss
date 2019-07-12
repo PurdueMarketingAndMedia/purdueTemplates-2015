@@ -55,6 +55,9 @@
       background-size: cover;
       background-position: center;
     }
+    @media only print {
+        display: block;
+    }
 }
   
  
