@@ -10,6 +10,9 @@
     @include display-sm {
       width: 100%;
     }
+    @media only print {
+        display: block;
+    }
     &--college {
       justify-content: space-between;
       @include display-md {
