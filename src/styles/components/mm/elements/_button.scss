@@ -6,6 +6,7 @@ $block:button;
 	flex-wrap:nowrap;
 	justify-content:center;
 	align-items:stretch;
+	line-height:1.5;
 	&::before,&::after{
 		content:'';
 		display:block;
@@ -324,6 +325,9 @@ $block:button;
 		& > *, &.fa::before{
 			transition:color, transform 0.1s;
 		}
+		&.svg-inline--fa{
+			font-size: 2.5rem;
+		}
 	}
 	@media (min-width:1200px){
 		padding:calc-toRem(10) 2px;
@@ -368,6 +372,9 @@ $block:button;
 		&__icon{
 			margin:calc-toRem(-10) 0;
 			padding:0 calc-toRem(10);
+			&.svg-inline--fa{
+				font-size: 3rem;
+			}
 		}
 	}
 	@media (min-width:768px) and (max-width:991px){
@@ -409,6 +416,9 @@ $block:button;
 		&__icon{
 			margin:calc-toRem(-10) 0;
 			padding:0 calc-toRem(10);
+			&.svg-inline--fa{
+				font-size: 3rem;
+			}
 		}
 	}
 	@media (max-width:767px){
@@ -428,6 +438,7 @@ $block:button;
 			&::before,&::after{
 				width:calc-toRem(38);
 			}
+
 		}
 		&-wide{
 			&::before,&::after{
@@ -456,6 +467,48 @@ $block:button;
 		&__icon{
 			margin:calc-toRem(-10) 0;
 			padding:0 calc-toRem(10);
+			&.svg-inline--fa{
+				font-size: 3rem;
+			}
 		}
 	}
 }
+.buttons{
+	width:100%;
+	line-height: 1.5;
+}
+.button-group{
+	width: 100%;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+.border{
+	border: 1px solid black;
+	overflow: auto;
+}
+.col-25{
+display: flex;
+flex-basis:25%;
+padding:0.6rem;
+@include display-md{
+	flex-basis:50%;
+}
+@include display-sm{
+	flex-basis:100%;
+}
+}
+.col-50{
+display: flex;
+flex-basis:50%;
+padding: 0.6rem;
+@include display-sm{
+	flex-basis:100%;
+}
+}
+.col-100{
+display: flex;
+flex-basis:100%;
+padding: 0.6rem;
+}
+
