@@ -73,6 +73,44 @@
         "sm-size": "1x2",
         "sm-loc": "a-3",
         "mo-size": "1x2"
+      },
+      {
+        "type": "audience",
+        "color": {"color": "ameliaSkyBlue"},
+        "text": "1x1 Audience Tile",
+        "lg-size": "1x1",
+        "lg-loc": "b-3",
+        "md-size": "1x1",
+        "md-loc": "b-3",
+        "sm-size": "1x1",
+        "sm-loc": "b-3",
+        "mo-size": "1x1"
+      },
+      {
+        "type": "audience",
+        "color": {"color": "rossAdeGreen"},
+        "text": "1x1 Audience Tile",
+        "lg-size": "1x1",
+        "lg-loc": "b-4",
+        "md-size": "1x1",
+        "md-loc": "b-4",
+        "sm-size": "1x1",
+        "sm-loc": "b-4",
+        "mo-size": "1x1"
+      },
+      {
+        "type": "audience",
+        "bg-image": {
+          "link": "https://www.purdue.edu/brand/images/web-templates/placeholders/college_tile-audience-2x2.jpg"
+        },
+        "text": "2x2 Audience Tile",
+        "lg-size": "2x2",
+        "lg-loc": "c-3",
+        "md-size": "2x2",
+        "md-loc": "c-3",
+        "sm-size": "2x2",
+        "sm-loc": "c-3",
+        "mo-size": "2x2"
       }
     ]
   }

@@ -17,6 +17,10 @@ html {
   }
 body {
 	font-family: $font-arial;
+	overflow-x: hidden;
+}
+
+main {
 }
 
 @media (min-width:768px) {
