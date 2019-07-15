@@ -1,6 +1,6 @@
 <section class="college__tiles">
   {{#each tiles}}
-    <a href="#" class="college__tile college__tile--{{this.type}} size-lg-{{this.lg-size}} loc-lg-{{this.lg-loc}} size-md-{{this.md-size}} loc-md-{{this.md-loc}} size-sm-{{this.sm-size}} loc-sm-{{this.sm-loc}} size-mo-{{this.mo-size}}" {{#this.bg-image}}style="background-image:url({{link}})"{{/this.bg-image}}>
+    <a href="#" class="college__tile college__tile--{{this.type}} {{#this.color}}college__tile--{{../type}}--{{color}}{{/this.color}} size-lg-{{this.lg-size}} loc-lg-{{this.lg-loc}} size-md-{{this.md-size}} loc-md-{{this.md-loc}} size-sm-{{this.sm-size}} loc-sm-{{this.sm-loc}} size-mo-{{this.mo-size}}" {{#this.bg-image}}style="background-image:url({{link}})"{{/this.bg-image}}>
       <i class="far fa-newspaper" aria-hidden="true"></i>
       <span>
       {{this.text}}

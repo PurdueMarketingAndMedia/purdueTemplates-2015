@@ -38,6 +38,41 @@
         "sm-size": "2x2",
         "sm-loc": "a-1",
         "mo-size": "2x2"
+      },
+      {
+        "type": "news",
+        "text": "2x1 News Tile",
+        "lg-size": "2x1",
+        "lg-loc": "c-1",
+        "md-size": "2x1",
+        "md-loc": "c-1",
+        "sm-size": "2x1",
+        "sm-loc": "c-1",
+        "mo-size": "2x1"
+      },
+      {
+        "type": "audience",
+        "color": {"color": "campusGold"},
+        "text": "2x1 Audience Tile",
+        "lg-size": "2x1",
+        "lg-loc": "c-2",
+        "md-size": "2x1",
+        "md-loc": "c-2",
+        "sm-size": "2x1",
+        "sm-loc": "c-2",
+        "mo-size": "2x1"
+      },
+      {
+        "type": "audience",
+        "color": {"color": "yellowWalk"},
+        "text": "1x2 Audience Tile",
+        "lg-size": "1x2",
+        "lg-loc": "a-3",
+        "md-size": "1x2",
+        "md-loc": "a-3",
+        "sm-size": "1x2",
+        "sm-loc": "a-3",
+        "mo-size": "1x2"
       }
     ]
   }
