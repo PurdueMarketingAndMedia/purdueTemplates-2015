@@ -67,7 +67,7 @@ $block:button;
 		padding-right:0;
 		outline-style:none;
 		&::before,&::after{
-			width:calc-toRem(calc-ratioLgMd(38));
+			width:calc-toRem(calc-ratioLgMd(41.5));
 		}
 		&:link,&:visited{
 			outline-style:none;
@@ -326,7 +326,7 @@ $block:button;
 			transition:color, transform 0.1s;
 		}
 		&.svg-inline--fa{
-			font-size: 2.5rem;
+			font-size: 2.54rem;
 		}
 	}
 	@media (min-width:1200px){
@@ -344,7 +344,7 @@ $block:button;
 		&-icon{
 			padding-right:0;
 			&::before,&::after{
-				width:calc-toRem(40);
+				width:calc-toRem(42.5);
 			}
 		}
 		&-wide{
@@ -373,7 +373,7 @@ $block:button;
 			margin:calc-toRem(-10) 0;
 			padding:0 calc-toRem(10);
 			&.svg-inline--fa{
-				font-size: 3rem;
+				font-size: 2.94rem;
 			}
 		}
 	}
@@ -386,7 +386,7 @@ $block:button;
 		&-icon{
 			padding-right:0;
 			&::before,&::after{
-				width:calc-toRem(43);
+				width:calc-toRem(45.5);
 			}
 		}
 		&-wide{
@@ -417,7 +417,7 @@ $block:button;
 			margin:calc-toRem(-10) 0;
 			padding:0 calc-toRem(10);
 			&.svg-inline--fa{
-				font-size: 3rem;
+				font-size: 2.94rem;
 			}
 		}
 	}
@@ -436,7 +436,7 @@ $block:button;
 		&-icon{
 			padding-right:0;
 			&::before,&::after{
-				width:calc-toRem(38);
+				width:calc-toRem(40.5);
 			}
 
 		}
@@ -468,7 +468,7 @@ $block:button;
 			margin:calc-toRem(-10) 0;
 			padding:0 calc-toRem(10);
 			&.svg-inline--fa{
-				font-size: 3rem;
+				font-size: 2.94rem;
 			}
 		}
 	}
@@ -482,6 +482,7 @@ $block:button;
 	display:flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
+	align-items: flex-start;
 }
 .border{
 	border: 1px solid black;
