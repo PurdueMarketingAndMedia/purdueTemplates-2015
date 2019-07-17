@@ -1,3 +1,9 @@
+@mixin display-mo-xs {
+    @media (max-width: 329px) {
+      @content;
+    }
+}
+
 @mixin display-mo {
     @media (max-width: 374px) {
       @content;
