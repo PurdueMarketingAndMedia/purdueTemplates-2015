@@ -234,6 +234,10 @@
         }
       }
     }
+    &--news {
+      background-repeat: repeat;
+      background-image: url("https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png"); 
+    }
     
     // ---------------------- TILE SIZES ----------------------- //
     // TILE SIZES LG
@@ -244,9 +248,16 @@
         z-index: 1;
         color: white;
         font-size: 1.375rem;
-        justify-content: space-between;
+        justify-content: flex-end;
         svg {
           font-size: 1.75rem;
+          margin-bottom: 0.5rem;
+        }
+        &.college__tile--news {
+          color: white;
+          svg {
+            color: $color-campusGold;
+          }
         }
       }
       &-1x2 {
@@ -270,9 +281,50 @@
         &.college__tile--audience {
           color: white;
         }
+        &.college__tile--news {
+          color: white;
+          span {
+            &:before {
+              background: $color-campusGold;
+            }
+          }
+          svg {
+            color: $color-campusGold;
+          }
+        }
       }
       &-1x3 {
-
+        grid-column-end: span 1;
+        grid-row-end: span 5;
+        z-index: 1;
+        span {
+          position: relative;
+          &:before {
+            content: "";
+            height: .4rem;
+            width: 3.125rem;
+            position: absolute;
+            top: -1rem;
+          }
+        }
+        svg {
+          font-size: 2.375rem;
+          margin-bottom: 2.25rem;
+        }
+        &.college__tile--audience {
+          color: white;
+        }
+        &.college__tile--news {
+          color: white;
+          span {
+            &:before {
+              background: $color-campusGold;
+            }
+          }
+          svg {
+            color: $color-campusGold;
+          }
+        }
       }
       &-1x4 {
 
@@ -294,6 +346,7 @@
         &.college__tile--news {
           color: black !important;
           background-color: $color-campusGold; 
+          background-image: none;
           svg {
             display: none;
           }
@@ -349,13 +402,76 @@
         }
       }
       &-2x3 {
-
+        grid-column-end: span 3;
+        grid-row-end: span 5;
+        z-index: 1;
+        padding: 0;
+        background-position: center;
+        background-size: cover;
+        &.college__tile--news {
+          svg {
+            display: none;
+          }
+          color: white !important;
+          font-size: 1.625rem;
+          span {
+            padding: 1.5rem 1.25rem;
+            background: rgba($color:#000, $alpha: 0.7);
+          }
+        }
+        &.college__tile--audience {
+          color: white;
+          padding: 1.25rem;
+          font-size: 2.375rem;
+          svg {
+            display: none;
+          }
+          span {
+            position: relative;
+            &:before {
+              content: "";
+              background: white;
+              height: .4rem;
+              width: 3.125rem;
+              position: absolute;
+              top: -1rem;
+            }
+          }
+        }
       }
       &-2x4 {
 
       }
       &-3x1 {
-        
+        grid-column-end: span 5;
+        grid-row-end: span 1;
+        background-image: none;
+        background-color: $color-campusGold;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        &.college__tile--news {
+          svg {
+            color: rgba($color:#000, $alpha: 0.3);
+            order: 2;
+            font-size: 4.7rem;
+          }
+          color: black !important;
+          font-size: 1.75rem;
+          span {
+            order: 1;
+            align-self: flex-end;
+            position: relative;
+            &:before {
+              content: "";
+              background: black;
+              height: .4rem;
+              width: 3.125rem;
+              position: absolute;
+              top: -1rem;
+            }
+          }
+        }
       }
       &-3x2 {
 
@@ -367,7 +483,35 @@
 
       }
       &-4x1 {
-        
+        grid-column-end: span 7;
+        grid-row-end: span 1;
+        background-image: none;
+        background-color: $color-campusGold;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        &.college__tile--news {
+          svg {
+            color: rgba($color:#000, $alpha: 0.3);
+            order: 2;
+            font-size: 4.7rem;
+          }
+          color: black !important;
+          font-size: 1.75rem;
+          span {
+            order: 1;
+            align-self: flex-end;
+            position: relative;
+            &:before {
+              content: "";
+              background: black;
+              height: .4rem;
+              width: 3.125rem;
+              position: absolute;
+              top: -1rem;
+            }
+          }
+        }
       }
       &-4x2 {
 
@@ -400,7 +544,17 @@
           }
         }
         &-1x3 {
-  
+          font-size: 1.5rem;
+          svg {
+            font-size: 2.125rem;
+            margin-bottom: 1.7rem;
+          }
+          span {
+            &:before {
+              top: -1rem;
+              width: 2.75rem;
+            }
+          }
         }
         &-1x4 {
   
@@ -426,13 +580,26 @@
           }
         }
         &-2x3 {
-  
+          &.college__tile--news {
+            font-size: 1.375rem;
+            span {
+              padding: 1.25rem;
+            }
+          }
+          &.college__tile--audience {
+            font-size: 2.125rem;
+          }
         }
         &-2x4 {
   
         }
         &-3x1 {
-          
+          span {
+            &:before {
+              top: -1rem;
+              width: 2.75rem;
+            }
+          }
         }
         &-3x2 {
   
@@ -444,7 +611,12 @@
   
         }
         &-4x1 {
-          
+          span {
+            &:before {
+              top: -1rem;
+              width: 2.75rem;
+            }
+          }
         }
         &-4x2 {
   
@@ -481,7 +653,17 @@
           }
         }
         &-1x3 {
-  
+          font-size: 1.75rem;
+          svg {
+            font-size: 2.375rem;
+            margin-bottom: 2.25rem;
+          }
+          span {
+            &:before {
+              width: 3.125rem;
+              top: -1rem;
+            }
+          }
         }
         &-1x4 {
   
@@ -504,7 +686,12 @@
           }
         }
         &-2x3 {
-  
+          &.college__tile--news {
+            font-size: 1.625rem;
+          }
+          &.college__tile--audience {
+            font-size: 2.375rem;
+          }
         }
         &-2x4 {
   
@@ -756,12 +943,6 @@
           grid-column: span 1;
           grid-row: span 1;
           margin-right: 1.25rem;
-          @include display-mo-xs {
-            font-size: 1.125rem;
-            svg {
-              font-size: 1.75rem;
-            }
-          }
         }
         &-1x2 {
           height: 15rem;
@@ -793,6 +974,12 @@
               top: -1rem;
             }
           }
+          &.college__tile--news {
+            font-size: 1.4rem;
+            svg {
+              display: none;
+            }
+          }
         }
         &-2x2 {
           height: 15rem;
@@ -804,6 +991,14 @@
             font-size: 1.5rem;
           }
           &.college__tile--audience {
+            font-size: 1.75rem;
+          }
+        }
+      }
+      @include display-mo {
+        &-1x1 {
+          font-size: 1.125rem;
+          svg {
             font-size: 1.75rem;
           }
         }
