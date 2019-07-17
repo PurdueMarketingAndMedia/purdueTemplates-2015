@@ -2,7 +2,7 @@
   "head": {
     "title": "Department/Office Homepage Template",
     "description": "This is an example of v2.0.0 of the department/office homepage page template.",
-    "css": "../../../styles/mm/templates/content-office.css"  
+    "css": "../../../../styles/mm/templates/content-office.css"  
   },
   "body": {
     "main-js": "../../../js/mm/templates/main.js"
@@ -13,8 +13,11 @@
       "title": "Purdue Web Templates",
       "link": "https://www.purdue.edu/brand/applications/web-templates/index.php"
     },
+    "hero-link": {
+      "link": "#"
+    },
     "type": "tiles",
-    "num-tiles": 4,
+    "num-tiles": 2,
     "tiles": [
       {
         "num": 1,
@@ -27,18 +30,6 @@
         "icon": "fas fa-newspaper",
         "text": "Dolor sit",
         "color": "campusGold"
-      },
-      {
-        "num": 3,
-        "icon": "fas fa-rocket",
-        "text": "Consectetur Adipisicing",
-        "color": "rossAdeGreen"
-      },
-      {
-        "num": 4,
-        "icon": "fas fa-user",
-        "text": "Lipsum sit",
-        "color": "yellowWalk"
       }
     ],
     "buttons": [
@@ -49,14 +40,6 @@
       {
         "link": "#",
         "text": "Dolor Sit"
-      },
-      {
-        "link": "#",
-        "text": "Amet Consectetur"
-      },
-      {
-        "link": "#",
-        "text": "Lipsum Sit"
       }
     ]
   }
