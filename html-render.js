@@ -57,56 +57,52 @@ const registerButtonSectionHelper = () => {
                       '<p>Modifying the button with "light" will ensure that the chosen button works on a black or darker-colored background, if applicable.</p>' +
                       '<h3>Light, Solid</h3><h4>Button Elements</h4>' +
                       '<div class="button-group">';
-    const headerH31 = '</div><h3>Button Elements</h3><div class="button-group">';
-    const headerH32 = '</div><h3>Anchor Elements</h3><div class="button-group">';
-    const headerH322 = '</div><h3>Anchor Elements</h3><div class="button-group" style="background-image:url(\'https://placeimg.com/767/300/nature\'); background-size:cover; background-position:top center;">';
-    const headerH33 = '</div><h3>Light, Solid</h3><h4>Button Elements</h4><div class="button-group">';
-    const headerH34 = '</div><h3>Light, Hollow</h3><h4>Button Elements</h4><div class="button-group">';
-    const headerH35 = '</div><h3>Light, Bar</h3><h4>Button Elements</h4><div class="button-group">';
-    const headerH36 = '</div><h3>Light, Opaque</h3><h4>Button Element</h4><div class="button-group" style="background-image:url(\'https://placeimg.com/767/300/nature\'); background-size:cover; background-position:top center;">';
-    const headerH37 = '</div><h3>Default</h3><div class="button-group">'
-    const headerH41 = '</div><h4>Button Elements</h4><div class="button-group">';
-    const headerH42 = '</div><h4>Anchor Elements</h4><div class="button-group">';
-    const headerH422 = '</div><h4>Anchor Element</h4><div class="button-group" style="background-image:url(\'https://placeimg.com/767/300/nature\'); background-size:cover; background-position:top center;">';
+    const headerH31 = '</div><h3>Anchor Elements</h3><div class="button-group">';
+    const headerH312 = '</div><h3>Anchor Elements</h3><div class="button-group" style="background-image:url(\'https://placeimg.com/767/300/nature\'); background-size:cover; background-position:top center;">';
+    const headerH32 = '</div><h3>Light, Hollow</h3><h4>Button Elements</h4><div class="button-group">';
+    const headerH33 = '</div><h3>Light, Bar</h3><h4>Button Elements</h4><div class="button-group">';
+    const headerH34 = '</div><h3>Light, Opaque</h3><h4>Button Element</h4><div class="button-group" style="background-image:url(\'https://placeimg.com/767/300/nature\'); background-size:cover; background-position:top center;">';
+    const headerH41 = '</div><h4>Anchor Elements</h4><div class="button-group">';
+    const headerH412 = '</div><h4>Anchor Element</h4><div class="button-group" style="background-image:url(\'https://placeimg.com/767/300/nature\'); background-size:cover; background-position:top center;">';
     if(!light && !wide && !slim){
       if (type === "default" && element === "button" && color ===""){
         return new handlebars.SafeString(headerH21);
       } else if (type === "default" && element === "anchor" && color ===""){
-        return new handlebars.SafeString(headerH32);
+        return new handlebars.SafeString(headerH31);
       } else if (type === "hollow" && element === "button" && color ===""){
         return new handlebars.SafeString(headerH22);
       } else if (type === "hollow" && element === "anchor" && color ===""){
-        return new handlebars.SafeString(headerH32);
+        return new handlebars.SafeString(headerH31);
       } else if (type === "bar" && element === "button" && color ===""){
         return new handlebars.SafeString(headerH23);
       } else if (type === "bar" && element === "anchor" && color ===""){
-        return new handlebars.SafeString(headerH32);
+        return new handlebars.SafeString(headerH31);
       } else if (type === "icon" && element === "button" && color ===""){
         return new handlebars.SafeString(headerH24);
       } else if (type === "icon" && element === "anchor" && color ===""){
-        return new handlebars.SafeString(headerH32);
+        return new handlebars.SafeString(headerH31);
       } else if (type === "opaque" && element === "button" && color ===""){
         return new handlebars.SafeString(headerH25);
       } else if (type === "opaque" && element === "anchor" && color ===""){
-        return new handlebars.SafeString(headerH322);
+        return new handlebars.SafeString(headerH312);
       }
     }else if(light && !wide && !slim){
       if (type === "default" && element === "button" && color ===""){
         return new handlebars.SafeString(headerH26);
       } else if (type === "default" && element === "anchor" && color ===""){
-        return new handlebars.SafeString(headerH42);
+        return new handlebars.SafeString(headerH41);
       } else if (type === "hollow" && element === "button" && color ===""){
-        return new handlebars.SafeString(headerH34);
+        return new handlebars.SafeString(headerH32);
       } else if (type === "hollow" && element === "anchor" && color ===""){
-        return new handlebars.SafeString(headerH42);
+        return new handlebars.SafeString(headerH41);
       } else if (type === "bar" && element === "button" && color ===""){
-        return new handlebars.SafeString(headerH35);
+        return new handlebars.SafeString(headerH33);
       } else if (type === "bar" && element === "anchor" && color ===""){
-        return new handlebars.SafeString(headerH42);
+        return new handlebars.SafeString(headerH41);
       } else if (type === "opaque" && element === "button" && color ===""){
-      return new handlebars.SafeString(headerH36);
+      return new handlebars.SafeString(headerH34);
     } else if (type === "opaque" && element === "anchor" && color ===""){
-      return new handlebars.SafeString(headerH422);
+      return new handlebars.SafeString(headerH412);
     } 
     }
   }) 
@@ -119,29 +115,29 @@ const registerButtonLayoutClassHelper = () => {
     '<p>Resize the width of the container below to view how a button acts with different container sizes.</p>' +
     '<h4>Button Elements</h4>' +
     '<div class="button-group border">';
-    const headerH38 = '</div><h3>Wide</h3>'+ 
+    const headerH35 = '</div><h3>Wide</h3>'+ 
                       '<p>You can also implement the "wide" modifier to ensure that the button uses the full width of its container.</p>' +
                       '<p>Resize the width of the container below to view how a wide button acts with different container sizes.</p>' +
                       '<h4>Button Element</h4><div class="button-group border">';
-    const headerH39 = '</div><h3>Slim</h3>' + 
+    const headerH36 = '</div><h3>Slim</h3>' + 
     '<p>You can also implement the "slim" modifier to decrease the overall size of the button.</p>' +
     '<h4>Button Elements</h4><div class="button-group">';
-    const headerH423 = '</div><h4>Anchor Elements</h4><div class="button-group border">';
-    const headerH424 = '</div><h4>Anchor Elements</h4><div class="button-group">';
+    const headerH413 = '</div><h4>Anchor Elements</h4><div class="button-group border">';
+    const headerH414 = '</div><h4>Anchor Elements</h4><div class="button-group">';
 
 
     if(!light && !wide && !slim &&!icon && type === "default" && element === "button" && color ===""){
       return new handlebars.SafeString(headerH27);
     }else if (!light && !wide && !slim &&!icon && type === "default" && element === "anchor" && color ===""){
-      return new handlebars.SafeString(headerH423);
+      return new handlebars.SafeString(headerH413);
     }else if(!light && wide && !slim &&!icon && type === "default" && element === "button" && color ===""){
-      return new handlebars.SafeString(headerH38);
+      return new handlebars.SafeString(headerH35);
     }else if(!light && wide && !slim &&!icon && type === "default" && element === "anchor" && color ===""){
-      return new handlebars.SafeString(headerH423);
+      return new handlebars.SafeString(headerH413);
     }else if(!light && !wide && slim &&!icon && type === "default" && element === "button" && color ===""){
-      return new handlebars.SafeString(headerH39);
+      return new handlebars.SafeString(headerH36);
     }else if(!light && !wide && slim &&!icon && type === "default" && element === "anchor" && color ===""){
-      return new handlebars.SafeString(headerH424);
+      return new handlebars.SafeString(headerH414);
     }
 
     }) 
