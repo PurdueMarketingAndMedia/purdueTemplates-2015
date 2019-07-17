@@ -327,7 +327,37 @@
         }
       }
       &-1x4 {
-
+        grid-column-end: span 1;
+        grid-row-end: span 7;
+        z-index: 1;
+        span {
+          position: relative;
+          &:before {
+            content: "";
+            height: .4rem;
+            width: 3.125rem;
+            position: absolute;
+            top: -1rem;
+          }
+        }
+        svg {
+          font-size: 2.375rem;
+          margin-bottom: 2.25rem;
+        }
+        &.college__tile--audience {
+          color: white;
+        }
+        &.college__tile--news {
+          color: white;
+          span {
+            &:before {
+              background: $color-campusGold;
+            }
+          }
+          svg {
+            color: $color-campusGold;
+          }
+        }
       }
       &-2x1 {
         grid-column-end: span 3;
@@ -440,7 +470,42 @@
         }
       }
       &-2x4 {
-
+        grid-column-end: span 3;
+        grid-row-end: span 7;
+        z-index: 1;
+        padding: 0;
+        background-position: center;
+        background-size: cover;
+        &.college__tile--news {
+          svg {
+            display: none;
+          }
+          color: white !important;
+          font-size: 1.625rem;
+          span {
+            padding: 1.5rem 1.25rem;
+            background: rgba($color:#000, $alpha: 0.7);
+          }
+        }
+        &.college__tile--audience {
+          color: white;
+          padding: 1.25rem;
+          font-size: 2.375rem;
+          svg {
+            display: none;
+          }
+          span {
+            position: relative;
+            &:before {
+              content: "";
+              background: white;
+              height: .4rem;
+              width: 3.125rem;
+              position: absolute;
+              top: -1rem;
+            }
+          }
+        }
       }
       &-3x1 {
         grid-column-end: span 5;
@@ -483,7 +548,42 @@
         }
       }
       &-3x2 {
-
+        grid-column-end: span 5;
+        grid-row-end: span 3;
+        z-index: 1;
+        padding: 0;
+        background-position: center;
+        background-size: cover;
+        &.college__tile--news {
+          svg {
+            display: none;
+          }
+          color: white !important;
+          font-size: 1.625rem;
+          span {
+            padding: 1.5rem 1.25rem;
+            background: rgba($color:#000, $alpha: 0.7);
+          }
+        }
+        &.college__tile--audience {
+          color: white;
+          padding: 1.25rem;
+          font-size: 2.375rem;
+          svg {
+            display: none;
+          }
+          span {
+            position: relative;
+            &:before {
+              content: "";
+              background: white;
+              height: .4rem;
+              width: 3.125rem;
+              position: absolute;
+              top: -1rem;
+            }
+          }
+        }
       }
       &-3x3 {
 
@@ -995,9 +1095,6 @@
           svg {
             display: none;
           }
-          // &.college__tile--news {
-          //   font-size: 1.4rem;
-          // }
         }
         &-2x2 {
           height: 15rem;
