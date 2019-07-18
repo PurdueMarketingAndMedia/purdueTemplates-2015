@@ -26,18 +26,15 @@
     ],
     "tiles": [
       {
-        "type": "news",
-        "text": "3x2 News Tile",
-        "bg-image": {
-          "link": "https://www.purdue.edu/brand/images/web-templates/placeholders/college_tile-audience-2x3.jpg"
-        },
-        "lg-size": "3x2",
+        "type": "audience",
+        "text": "4x4 Tile",
+        "lg-size": "4x4",
         "lg-loc": "a-1",
-        "md-size": "3x2",
+        "md-size": "4x4",
         "md-loc": "a-1",
-        "sm-size": "3x2",
+        "sm-size": "4x4",
         "sm-loc": "a-1",
-        "mo-size": "2x2"
+        "mo-size": "4x4"
       }
     ]
   }
