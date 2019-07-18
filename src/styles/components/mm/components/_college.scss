@@ -5,9 +5,15 @@
     flex-direction: column;
     justify-content: flex-start;
     background: $color-gray15;
-    padding: 2rem;
+    padding: 2rem 2rem 0;
     overflow-y: auto;
+    overflow-x: hidden;
     height: 34.5rem;
+    position: relative;
+    &:after {
+      content: "";
+      flex: 0 0 2rem;
+    }
     @include display-md {
       height: auto;
       overflow-y: unset;
