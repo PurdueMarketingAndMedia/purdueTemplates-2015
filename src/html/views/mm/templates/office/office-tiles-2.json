@@ -5,7 +5,7 @@
     "css": "../../../../styles/mm/templates/content-office.css"  
   },
   "body": {
-    "main-js": "../../../js/mm/templates/main.js"
+    "main-js": "../../../../js/mm/templates/main.js"
   },
   "office-template": {
     "site-name": "Department/Office Template",
