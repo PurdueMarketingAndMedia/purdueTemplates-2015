@@ -16,6 +16,9 @@ iframe{
 }
 .content{
     &__breadcrumb{
+        @media only print {
+            display: none;
+        }
         background-color: #f5f5f5;
         width:100%;
         padding:0.625rem 1rem;
@@ -49,6 +52,9 @@ iframe{
     }
 
     &__content{
+        @media only print {
+            display: block;
+        }
         display: flex;
         flex-direction:row;
         justify-content:center;
@@ -63,6 +69,9 @@ iframe{
         }
     }
     &__aside{
+        @media only print {
+            display: none;
+        }
         // width:23.5%;
         flex-basis: 23.5%;
         display:flex;
@@ -199,6 +208,10 @@ iframe{
         }
     }
     &__main{
+        @media only print {
+            display: block;
+            width: auto;
+        }
         // width:73.5%;
         flex-basis: 73.5%;
         @include display-md{
