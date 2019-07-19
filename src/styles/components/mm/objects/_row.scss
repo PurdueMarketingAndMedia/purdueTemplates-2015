@@ -13,4 +13,13 @@
     @media only print {
         display: block;
     }
+    &--college {
+      justify-content: space-between;
+      @include display-md {
+        flex-direction: column;
+      }
+      @include display-sm {
+        padding: 0 1rem;
+      }
+    }
 }
