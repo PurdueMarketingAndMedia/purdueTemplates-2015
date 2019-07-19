@@ -483,11 +483,17 @@ $block:button;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: flex-start;
+	&.button-group--background{
+		background-image:url('https://placeimg.com/767/300/nature'); 
+		background-size:cover; 
+		background-position:top center;
+	}
+	&.button-group--border{
+		border: 1px solid black;
+		overflow: auto;
+	}
 }
-.border{
-	border: 1px solid black;
-	overflow: auto;
-}
+
 .col-25{
 display: flex;
 flex-basis:25%;
