@@ -458,7 +458,7 @@ let resizeTimer
 window.addEventListener('resize', () => {
     const width = document.body.clientWidth;
 
-    const resetLg = [...document.querySelectorAll('.footer__resources--column>h3>button>svg'), ...document.querySelectorAll('.accordion__content--footer'), document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner')]
+    const resetLg = [document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner')]
 
     const resetSm = [document.querySelector('#findInfoFor'), document.querySelector('#searchDropdown')]
     
@@ -473,10 +473,17 @@ window.addEventListener('resize', () => {
     }
      document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
         let content = document.querySelector('#' + el.getAttribute('aria-controls'));
+        let icons = el.querySelectorAll('svg');
         const currAttr = window.getComputedStyle(content).getPropertyValue('display');
         if (width >= 768) {
             el.setAttribute('aria-expanded', true);
             el.setAttribute('aria-disabled', true);
+            icons.forEach((el) => {
+                el.classList.remove('hide', 'show', 'selected')
+                el.removeAttribute('style');             
+            });
+            content.classList.remove('hide', 'show', 'selected')
+            content.removeAttribute('style');
         } else if (currAttr === "flex") {
             el.setAttribute('aria-expanded', true);
             el.setAttribute('aria-disabled', false);
