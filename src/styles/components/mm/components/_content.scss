@@ -64,7 +64,7 @@ iframe{
             flex-direction:row;
             justify-content:space-between;            
             @include display-sm{
-                flex-direction:column;
+                flex-direction:column-reverse;
             }
         }
     }
@@ -72,17 +72,17 @@ iframe{
         @media only print {
             display: none;
         }
-        // width:23.5%;
+        width:23.5%;
         flex-basis: 23.5%;
         display:flex;
         flex-direction:column;
         @include display-md{
+            width:21%;
             flex-basis: 21%;
         }  
         @include display-sm{
-            // flex-basis: 100%;
+            flex:1 1 auto;
             width:100%;
-            order:2;
         }        
     }
     &__side-nav{
@@ -212,13 +212,14 @@ iframe{
             display: block;
             width: auto;
         }
-        // width:73.5%;
+        width:73.5%;
         flex-basis: 73.5%;
         @include display-md{
+            width:71%;
             flex-basis: 71%;
         }    
         @include display-sm{
-            // flex-basis: 100%;
+            flex:1 1 auto;
             width: 100%;
         }      
     }
@@ -256,6 +257,8 @@ iframe{
         }
         img{
             width:100%;
+            display:flex;
+            flex-shrink:0;
         }
         figcaption{
             display: flex;
