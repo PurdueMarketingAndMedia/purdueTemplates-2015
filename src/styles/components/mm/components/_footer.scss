@@ -21,20 +21,26 @@
             flex-wrap: wrap;
             flex-direction: row;
             justify-content: center;
-            max-width: 1140px;
+            max-width:1140px;
+            width: 1140px;
             flex:1 1 auto;
             padding: 1.5rem 0;
             @include display-lg {
-                max-width: 940px;
+                max-width:940px;
+                width: 940px;
             }
             @include display-md {
-                max-width: 750px;
+                max-width:750px;
+                width: 750px;
             }
             @include display-sm {
+                width: 100%;
                 padding: 0;
             }
         }
         &--column{
+            display:flex;
+            flex-direction:column;
             box-sizing:border-box;
             width:20%;
             padding-right: 1rem;
@@ -47,6 +53,7 @@
             }
             &:last-of-type {
                 padding-right: 0;
+                justify-content: center;
                 @include display-sm {
                     padding-right: 1rem;
                 }
@@ -133,7 +140,7 @@
             }
             .vertical{
                 margin-top:1.6rem;
-                display:block;
+                display:flex;
             }
             .horizontal{
                 margin-top:1.6rem;
@@ -144,9 +151,10 @@
                     display:none;
                 }
                 .horizontal{
-                    display:block;
+                    display:flex;
                     max-width:500px;
                     margin: 0 auto;
+                    width:100%;
                 }
             }
             div{
@@ -201,14 +209,26 @@
         line-height:1.4;
 
         &--list{
-            max-width:1200px;
+            max-width:1140px;
             margin:0 auto;
-
+            padding:0 0.9rem;
             a{
                 color:#ccc; 
             }
             a:hover{
                 text-decoration:none;
+            }
+            @include display-lg {
+                max-width:940px;
+                width: 940px;
+            }
+            @include display-md {
+                max-width:750px;
+                width: 750px;
+            }
+            @include display-sm {
+                width: 100%;
+                padding: 0;
             }
         }
     }

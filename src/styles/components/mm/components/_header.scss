@@ -270,11 +270,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height:1px;
     &--inner {
       padding: 1.55rem 0;
       width: 1140px;
       display: flex;
       justify-content: flex-start;
+      height:94.3333px;
+      min-height:1px;
       @include display-lg {
         width: 940px;
       }
@@ -286,6 +289,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        height:auto;
         flex: 1 1 auto;
       }
     }
@@ -307,6 +311,7 @@
         width: 0.1rem;
         position: absolute;
         left: 115%;
+        top:0;
         @include display-lg {
           left: 110%;
           height: 112%;
