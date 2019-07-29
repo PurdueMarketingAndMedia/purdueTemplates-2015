@@ -77,11 +77,13 @@
         display: block;
         position: absolute;
         right: 1rem;
+        top: calc(50% - 0.6875rem);
       }
       svg.fa-minus-square{
         display:none;
         position: absolute;
         right: 1rem;
+        top: calc(50% - 0.6875rem);
       }
       &--footer{
         width:100%;
