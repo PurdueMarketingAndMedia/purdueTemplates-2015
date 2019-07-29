@@ -16,6 +16,7 @@
         "watch:js": "onchange 'src/**/*.js' -- npm run js:dev",
         "watch:json": "onchange 'src/**/*.json' -- npm run html",
         "watch:handlebars": "onchange 'src/**/*.handlebars' -- npm run html",
+        "dev:noserve": "run-p scss:dev js:dev html",
         "dev": "run-p serve watch",
         "prod": ""
     },
