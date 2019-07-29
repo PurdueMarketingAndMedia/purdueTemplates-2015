@@ -103,8 +103,9 @@
         svg.fa-plus,svg.fa-minus{
           display:none;
           pointer-events: none;
-        }                    
+        }            
         @include display-sm {
+          padding: 1rem;
           &:hover{
               cursor:pointer;
           }
@@ -155,6 +156,7 @@
                 font-size: 0.875rem;
                 font-weight:400;
                 color:rgb(173,173,173);
+                height: 100%;
                 @include display-sm {
                     border: 0;
                     padding: 0;
@@ -164,13 +166,11 @@
             a:hover{
                 color:#ffffff;
             }
-            &:first-child {
-                @include display-sm {
-                    margin-top: 0.5rem;
-                }
-            }
             @include display-sm {
-                padding: 0 1rem 0.1rem;                        
+                padding: 0 1rem;
+                &:last-child {
+                  padding-bottom: 1rem;
+                }
             }
             
         }

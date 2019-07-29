@@ -47,16 +47,10 @@
             white-space:nowrap;
             &:first-child {
                 padding-left: 0;
-                @include display-md {
-                    padding-left: 1rem;
-                }
             }
             &:last-of-type {
                 padding-right: 0;
                 justify-content: center;
-                @include display-sm {
-                    padding-right: 1rem;
-                }
             }
             h3{
                 padding: 0px;
@@ -111,15 +105,21 @@
             }
             @include display-md {
                 width:50%;
-                padding: 0.95rem;
+                padding: 1rem;
                 flex:1 0 auto;
+                &:first-child {
+                    padding-left: 1rem;
+                }
             }
             @include display-sm {
                 width:100%;
-                padding: 0.95rem;
+                padding: 0;
                 border-bottom: solid 1px #474747;
                 &:nth-child(5){         
                     border: none;
+                }
+                &:first-child {
+                    padding-left: 0;
                 }
             }
         }
