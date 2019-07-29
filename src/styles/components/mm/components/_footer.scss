@@ -1,4 +1,4 @@
-
+@import "../elements/accordion";
 .footer{
     @media only print {
         display: none;
@@ -61,82 +61,6 @@
             h3{
                 padding: 0px;
                 margin:0;
-                .accordion__heading--footer{
-                  width:100%;
-                  font-family: $font-champion-welter; 
-                  font-size: 1.15rem;
-                  font-weight: 300;
-                  color:#c28e0e;
-                  padding:0;
-                  margin:0;
-                  border:0;
-                  background-color:#000000;
-                  display: flex;
-                  flex-direction: row;
-                  justify-content: space-between;
-                  align-items:baseline;         
-                  text-transform: uppercase;                          
-                  svg.fa-plus,svg.fa-minus{
-                      display:none;
-                      pointer-events: none;
-                  }                    
-                  @include display-sm {
-                    &:hover{
-                        cursor:pointer;
-                    }
-                    svg.fa-plus{
-                        display:block;
-                    }
-                    svg.fa-minus{
-                        display:none;
-                    }
-                }
-                }
-
-            }
-            .accordion__content--footer{
-                height:auto;
-                overflow:hidden;
-                margin:0;
-                padding:0;
-                display: flex;
-                flex-direction: column;
-                li{
-                    a{
-                        color:#ccc;
-                        text-decoration:none;
-                        display: inline-block;
-                        width:100%;
-                        height: inherit;
-                        padding: 0.5rem 0 0.125rem;
-                        border-bottom: solid 1px #474747;
-                        font-size: 0.875rem;
-                        font-weight:400;
-                        color:rgb(173,173,173);
-                        @include display-sm {
-                            border: 0;
-                            padding: 0;
-                            font-size: 0.95rem;
-                        }
-                    }
-                    a:hover{
-                        color:#ffffff;
-                    }
-                    &:first-child {
-                        @include display-sm {
-                            margin-top: 0.5rem;
-                        }
-                    }
-                    @include display-sm {
-                        padding: 0 1rem 0.1rem;                        
-                    }
-                    
-                }
-                @include display-sm {
-                    display:none;
-                    height:0;
-                    transition: height 0.2s ease;
-                }
             }
             .vertical{
                 margin-top:1.6rem;
