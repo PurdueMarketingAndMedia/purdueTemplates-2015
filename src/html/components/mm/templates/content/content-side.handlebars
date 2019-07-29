@@ -1,4 +1,14 @@
 <aside class="content__aside">
+    {{#equals side-nav.type 'components'}}
+    <nav class="content__side-nav">
+        <ul role='menu' aria-label="Side Navigation">
+            <li role="none">Web Components</li>
+            <li role="none"><a role='menuitem' href="./accordion.html">Accordions</a></li>
+            <li role="none"><a role='menuitem' href="./button.html">Buttons</a></li>
+            <li role="none"><a role='menuitem' href="./typography.html">Typography</a></li>
+        </ul>
+    </nav>
+    {{else}}
     <nav class="content__side-nav">
         <ul role='menu' aria-label="Side Navigation">
             <li role="none"><a role='menuitem' href="#">Content Example</a></li>
@@ -28,4 +38,5 @@
         </article>
         <button class="button">Call to action</button>
     </section>
+    {{/equals}}
 </aside>
