@@ -39,6 +39,7 @@
     grid-template-rows: 1fr 1.25rem 1fr 1.25rem 1fr 1.25rem 1fr;
     @include display-md {
       flex: 1 1 40rem;
+      height: 40rem;
     }
     @include display-sm {
       grid-template-columns: 1fr 1fr;
