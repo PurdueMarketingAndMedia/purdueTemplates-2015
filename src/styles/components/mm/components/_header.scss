@@ -418,7 +418,7 @@
         flex: 0 1 auto;
       }
       @include display-sm {
-        padding: 0.75rem 0.95rem;
+        padding: 0.75rem 1rem;
         width: auto;
       }
     }
@@ -446,7 +446,7 @@
           padding: 0 0 .5rem 0;
         }
         @include display-sm {
-          padding: 0.25rem 0.85rem;
+          padding: 0.25rem 1rem;
         }
         li {
           display: flex;
