@@ -2,10 +2,10 @@
   "head": {
     "title": "Button examples",
     "description": "This is an example of v2.0.0 of the buttons.",
-    "css": "../../../styles/mm/templates/content-button.css"  
+    "css": "../../../../styles/mm/templates/content-button.css"  
   },
   "body": {
-    "main-js": "../../../js/mm/templates/main.js"
+    "main-js": "../../../../js/mm/templates/main.js"
   },
   "content-button": {
     "site-name": "Button examples",
