@@ -99,13 +99,15 @@
         flex-direction: row;
         justify-content: space-between;
         align-items:baseline;         
-        text-transform: uppercase;                          
+        text-transform: uppercase;
+        pointer-events: none;
         svg.fa-plus,svg.fa-minus{
           display:none;
           pointer-events: none;
         }            
         @include display-sm {
           padding: 1rem;
+          pointer-events: all;
           &:hover{
               cursor:pointer;
           }
