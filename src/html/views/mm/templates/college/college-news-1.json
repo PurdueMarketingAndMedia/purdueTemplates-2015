@@ -67,6 +67,7 @@
       {
         "type": "news",
         "text": "1x2 News Tile",
+        "icon": "far fa-newspaper",
         "lg-size": "1x2",
         "lg-loc": "c-3",
         "md-size": "1x2",
@@ -78,6 +79,7 @@
       {
         "type": "news",
         "text": "1x1 News Tile",
+        "icon": "far fa-newspaper",
         "lg-size": "1x1",
         "lg-loc": "d-3",
         "md-size": "1x1",
@@ -89,6 +91,7 @@
       {
         "type": "news",
         "text": "1x1 News Tile",
+        "icon": "far fa-newspaper",
         "lg-size": "1x1",
         "lg-loc": "d-4",
         "md-size": "1x1",

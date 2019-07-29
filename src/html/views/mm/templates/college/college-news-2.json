@@ -28,6 +28,7 @@
       {
         "type": "news",
         "text": "4x1 News Tile",
+        "icon": "far fa-newspaper",
         "lg-size": "4x1",
         "lg-loc": "a-1",
         "md-size": "4x1",
@@ -39,6 +40,7 @@
       {
         "type": "news",
         "text": "3x1 News Tile",
+        "icon": "far fa-newspaper",
         "lg-size": "3x1",
         "lg-loc": "a-2",
         "md-size": "3x1",
@@ -64,6 +66,7 @@
       {
         "type": "news",
         "text": "1x2 News Tile",
+        "icon": "far fa-newspaper",
         "lg-size": "1x2",
         "lg-loc": "c-3",
         "md-size": "1x2",
@@ -75,6 +78,7 @@
       {
         "type": "news",
         "text": "1x3 News Tile",
+        "icon": "far fa-newspaper",
         "lg-size": "1x3",
         "lg-loc": "d-2",
         "md-size": "1x3",

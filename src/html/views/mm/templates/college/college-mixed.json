@@ -65,6 +65,7 @@
       {
         "type": "audience",
         "color": {"color": "yellowWalk"},
+        "icon": "far fa-newspaper",
         "text": "1x2 Audience Tile",
         "lg-size": "1x2",
         "lg-loc": "a-3",
@@ -77,6 +78,7 @@
       {
         "type": "audience",
         "color": {"color": "ameliaSkyBlue"},
+        "icon": "far fa-newspaper",
         "text": "1x1 Audience Tile",
         "lg-size": "1x1",
         "lg-loc": "b-3",
@@ -89,6 +91,7 @@
       {
         "type": "audience",
         "color": {"color": "rossAdeGreen"},
+        "icon": "far fa-newspaper",
         "text": "1x1 Audience Tile",
         "lg-size": "1x1",
         "lg-loc": "b-4",
