@@ -85,6 +85,9 @@
         right: 1rem;
         top: calc(50% - 0.6875rem);
       }
+      svg.fa-plus-square,svg.fa-minus-square{
+        pointer-events: none;
+      } 
       &--footer{
         width:100%;
         font-family: $font-champion-welter; 
