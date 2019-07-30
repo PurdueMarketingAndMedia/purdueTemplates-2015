@@ -387,16 +387,16 @@
         flex-direction:column;
     }
     @include display-sm{
-        padding:1rem 0;
+        padding: 1rem;
     }
     img{
       width:56%;
-        flex-basis:56%;
-        display:flex;        
-        @include display-md{
-            width:100%;
-            padding:0 1rem 2.1875rem;
-        }
+      flex-basis:56%;
+      display:flex;        
+      @include display-md{
+          width:100%;
+          margin-bottom: 2.25rem;
+      }
     }
     &__content{
         display:flex;
@@ -405,7 +405,6 @@
         width:40%;
         @include display-md{
             width:100%;
-            padding:0 1rem;
         }
         h2{
             margin:0 0 1.25rem 0;
