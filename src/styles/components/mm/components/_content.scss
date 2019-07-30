@@ -125,12 +125,6 @@ iframe{
                         height: 2px;
                         background-color: #c28e0e;
                     }
-                    &:focus{
-                        text-decoration: none !important; 
-                        &:before{
-                            width: 50%;
-                        }
-                    }
                 }
                 .side-nav{
                     text-decoration:none;
@@ -152,12 +146,6 @@ iframe{
                         text-decoration: underline;
                         &:after {
                             text-decoration: none;
-                        }
-                    } 
-                    &:focus{
-                        text-decoration: none !important; 
-                        &:before{
-                            width: 0;
                         }
                     }                   
                 }
