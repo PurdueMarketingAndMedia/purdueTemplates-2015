@@ -2,6 +2,7 @@ const sass = require('node-sass')
 const fs = require('fs');
 const path = require('path')
 const autoprefixer = require('autoprefixer')
+const prefixer = autoprefixer({grid: true})
 const postcss = require('postcss')
 
 const recursiveRead = (dir) => {
@@ -34,7 +35,7 @@ const compileSass = (filesObj) => {
       outFile: out,
       sourceMap: isDev
     })
-    postcss([autoprefixer]).process(result.css, {from: undefined}).then(result => {
+    postcss([prefixer]).process(result.css, {from: undefined}).then(result => {
       fs.mkdirSync(path.dirname(out), {recursive: true})
       fs.writeFileSync(out, result.css, {flag: 'w'})
     })
