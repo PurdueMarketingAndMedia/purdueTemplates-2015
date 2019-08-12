@@ -53,7 +53,7 @@
     }
   }
   &__feature-links {
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 4rem 0;
     @include display-sm {
