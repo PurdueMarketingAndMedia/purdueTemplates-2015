@@ -72,7 +72,6 @@
       padding-bottom: 1.25rem;
       text-align: center;
       flex-basis: 30%;
-      min-height:119px;
       @include display-lg {
         flex-basis: 28%;
       }
@@ -81,7 +80,7 @@
       }
       @include display-sm {
         width:100%;
-        flex-basis: 100%;
+        flex-basis: auto;
       }
       &:not(:last-child) {
         @include display-sm {
@@ -97,8 +96,9 @@
           margin-bottom: 1rem;
         }
       }
-      span{
+      p{
         width:100%;
+        margin: 0;
       }
       &:after {
         content: "";
