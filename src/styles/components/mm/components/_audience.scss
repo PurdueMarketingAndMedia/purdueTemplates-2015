@@ -275,6 +275,7 @@
       justify-content: flex-start;
       flex: 0 1 23%;
       width: 23%;
+      max-width: 23%;
       padding: 3rem 1rem;
       background: #292929;
       margin: 0;
@@ -285,6 +286,7 @@
       }
       @include display-md {
         width:48%;
+        max-width:48%;
         flex-basis: 48%;
         &:nth-child(-n + 2) {
           margin-bottom: 1.8rem;
@@ -292,6 +294,7 @@
       }
       @include display-sm {
         flex-basis: 100%;
+        max-width: 100%;
         &:nth-child(-n + 2) {
           margin-bottom: 1.85rem;
         }
