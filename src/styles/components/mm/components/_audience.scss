@@ -391,8 +391,10 @@
     }
     img{
       width:56%;
-      flex-basis:56%;
-      display:flex;        
+      display:flex; 
+      height:auto;
+      min-height: 1px;
+      flex: 0 1 auto;       
       @include display-md{
           width:100%;
           margin-bottom: 2.25rem;
@@ -401,7 +403,7 @@
     &__content{
         display:flex;
         flex-direction:column;
-        flex-basis:40%;
+        flex: 0 1 auto; 
         width:40%;
         @include display-md{
             width:100%;
@@ -628,7 +630,7 @@
             .retweet{
                 color:#555;
                 font-size:1rem;
-                margin-bottom:0.625rem;
+                margin-bottom:0.625rem;              
                 @include display-sm{
                     font-size:1.125rem;
                 }
