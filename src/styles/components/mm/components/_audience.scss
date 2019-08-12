@@ -613,7 +613,7 @@
                 flex-direction:row;
                 font-family:$font-archivo-narrow;
                 font-size:1.75rem;
-                flex-basis:100%;
+                flex-basis: auto;
                 justify-content: space-between;
                 flex-wrap:wrap;               
                 span{
@@ -633,6 +633,7 @@
                 color:#555;
                 font-size:1rem;
                 margin-bottom:1.625rem;
+                flex-basis: auto;
                 @include display-sm{
                     font-size:1.125rem;
                     text-align:center;
@@ -642,6 +643,7 @@
                 color:#555;
                 font-size:1.25rem;
                 margin-bottom: 0;
+                width: 100%;
                 @include display-md{
                     text-align:center;
                 }
