@@ -581,6 +581,12 @@
     display:flex;
     flex-direction:column;
     align-items:center;
+    @include display-md{
+      padding:3.125rem 0;
+  }
+    @include display-sm{
+        padding:3.125rem 1rem;
+    }
         &__contents{
             display:flex;
             flex-direction:row;
@@ -599,12 +605,8 @@
             flex-basis:48%;
             @include display-md{
               flex-basis:100%;
-                align-items:center;
-                margin-bottom:4.7rem;
-            }
-            @include display-sm{
-                margin-left:1rem;
-                margin-right:1rem;
+              align-items:center;
+              margin-bottom:4.7rem;
             }
             .header{
                 display:flex;
@@ -613,12 +615,10 @@
                 font-size:1.75rem;
                 flex-basis:100%;
                 justify-content: space-between;
-                flex-wrap:wrap;
-                .username, .time{
-                    padding-right:1rem;
-                }                
+                flex-wrap:wrap;               
                 span{
                     font-weight:700;
+                    padding: 0 2rem 0 1rem;
                 }
                 margin-bottom:0.625rem;
                 @include display-md{
@@ -632,15 +632,16 @@
             .retweet{
                 color:#555;
                 font-size:1rem;
-                margin-bottom:0.625rem;
+                margin-bottom:1.625rem;
                 @include display-sm{
                     font-size:1.125rem;
+                    text-align:center;
                 }
             }
             .text{
                 color:#555;
                 font-size:1.25rem;
-                margin-top:1rem;
+                margin-bottom: 0;
                 @include display-md{
                     text-align:center;
                 }
