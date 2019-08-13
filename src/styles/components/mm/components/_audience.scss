@@ -401,6 +401,7 @@
       @include display-md{
           width:100%;
           margin-bottom: 2.25rem;
+          flex: 1 1 auto;
       }
     }
     &__content{
@@ -410,6 +411,7 @@
         width:40%;
         @include display-md{
             width:100%;
+            flex: 1 1 auto;
         }
         h2{
             margin:0 0 1.25rem 0;
