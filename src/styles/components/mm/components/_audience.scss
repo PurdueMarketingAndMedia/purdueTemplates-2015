@@ -557,11 +557,13 @@
         flex-direction:row;
         justify-content:space-between;
         align-items:center;
+        
         @include display-sm{
             flex-direction:column;
             justify-content:space-around;
         }
         h2{
+            width:100%;
             padding:0;
             margin-top:0;
             margin-bottom:0;  
@@ -619,7 +621,8 @@
                 font-size:1.75rem;
                 flex-basis: auto;
                 justify-content: space-between;
-                flex-wrap:wrap;               
+                flex-wrap:wrap; 
+                width:100%;              
                 span{
                     font-weight:700;
                     padding: 0 2rem 0 1rem;
@@ -661,6 +664,7 @@
         padding:4.6875rem 0;
         display:flex;
         flex-direction:column;
+        min-height: 1px;
         @include display-md{
             padding:3.125rem 0;
         }
@@ -685,6 +689,7 @@
                 font-size:1.75rem;
                 font-weight:700;
                 text-align:center;
+                width:100%;
             }
             a{
                 margin-bottom:0.9375rem;    
@@ -696,19 +701,23 @@
             flex-wrap:wrap;
             justify-content: space-between;
             line-height:1;
-            
+            flex: 0 1 auto;
+            min-height: 1px;
         a{
-          flex-basis:15.6%;
+          width:15.6%;
+          height:auto;
+          display:flex;
             img{
                 width:100%;
                 height:auto;
+                display:flex;
             } 
             @include display-md{
-                flex-basis:32%;
+                width:32%;
                 margin-bottom:0.7rem;
             }
             @include display-sm{
-              flex-basis:48.7%;
+              width:48.7%;
             }
         }
       }
