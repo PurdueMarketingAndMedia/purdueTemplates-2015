@@ -571,7 +571,10 @@
             font-family:$font-archivo-narrow;
             font-size:1.75rem;
             font-weight:700;
-            text-align:center;
+            @include display-sm{
+              text-align:center;
+              width: 100%;
+              }            
         }
         a{
             margin-bottom:1rem;    
@@ -688,8 +691,10 @@
                 font-family:$font-archivo-narrow;
                 font-size:1.75rem;
                 font-weight:700;
-                text-align:center;
-                width:100%;
+                @include display-sm{
+                  text-align:center;
+                  width:100%;
+              }               
             }
             a{
                 margin-bottom:0.9375rem;    
@@ -701,7 +706,7 @@
             flex-wrap:wrap;
             justify-content: space-between;
             line-height:1;
-            flex: 0 1 auto;
+            flex: 0 0 auto;
             min-height: 1px;
         a{
           width:15.6%;
