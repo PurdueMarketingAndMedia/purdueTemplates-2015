@@ -591,10 +591,10 @@
     flex-direction:column;
     align-items:center;
     @include display-md{
-      padding:3.125rem 0;
+      padding:4rem 0;
   }
     @include display-sm{
-        padding:3.125rem 1rem;
+        padding:4rem 1rem;
     }
         &__contents{
             display:flex;
@@ -625,6 +625,7 @@
                 flex-basis: auto;
                 justify-content: space-between;
                 flex-wrap:wrap; 
+                justify-content: flex-start;
                 width:100%;              
                 span{
                     font-weight:700;
