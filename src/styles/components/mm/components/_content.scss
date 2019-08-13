@@ -77,8 +77,8 @@ iframe{
         display:flex;
         flex-direction:column;
         @include display-md{
-            width:21%;
-            flex-basis: 21%;
+            width:23%;
+            flex-basis: 23%;
         }  
         @include display-sm{
             flex:1 1 auto;
@@ -203,8 +203,8 @@ iframe{
         width:73.5%;
         flex-basis: 73.5%;
         @include display-md{
-            width:71%;
-            flex-basis: 71%;
+            width:73%;
+            flex-basis: 73%;
         }    
         @include display-sm{
             flex:1 1 auto;
