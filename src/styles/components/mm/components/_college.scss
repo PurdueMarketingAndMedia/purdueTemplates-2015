@@ -1,6 +1,7 @@
 .college {
   &__main {
-    flex: 0 0 32%;
+    flex: 0 0 auto;
+    width: 32%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -42,12 +43,11 @@
       height: 40rem;
     }
     @include display-sm {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(32, minmax(0rem, auto));
-      margin-right: -1.25rem;
-      margin-bottom: -1.25rem;
+      grid-template-columns: 1fr 1.25rem 1fr;
+      grid-template-rows: 1fr;
       height: auto;
       flex: 1 1 auto;
+      margin-bottom: -1.25rem;
     }
   }
   &__tile {
@@ -65,9 +65,6 @@
     overflow: hidden;
     @include display-sm {
       padding: 1.25rem;
-      &:not(:last-child) {
-        margin-bottom: 1.2rem;
-      }
     }
     &--audience {
       background-repeat: repeat;
@@ -1322,25 +1319,156 @@
       }
     }
 
+    &.loc-mo {
+      @include display-sm {
+        &-a-1 {
+          grid-column-start: 1;
+          grid-row-start: 1;
+        }
+        &-a-2 {
+          grid-column-start: 1;
+          grid-row-start: 3;
+        }
+        &-a-3 {
+          grid-column-start: 1;
+          grid-row-start: 5;
+        }
+        &-a-4 {
+          grid-column-start: 1;
+          grid-row-start: 7;
+        }
+        &-a-5 {
+          grid-column-start: 1;
+          grid-row-start: 9;
+        }
+        &-a-6 {
+          grid-column-start: 1;
+          grid-row-start: 11;
+        }
+        &-a-7 {
+          grid-column-start: 1;
+          grid-row-start: 13;
+        }
+        &-a-8 {
+          grid-column-start: 1;
+          grid-row-start: 15;
+        }
+        &-a-9 {
+          grid-column-start: 1;
+          grid-row-start: 17;
+        }
+        &-a-10 {
+          grid-column-start: 1;
+          grid-row-start: 19;
+        }
+        &-a-11 {
+          grid-column-start: 1;
+          grid-row-start: 21;
+        }
+        &-a-12 {
+          grid-column-start: 1;
+          grid-row-start: 23;
+        }
+        &-a-13 {
+          grid-column-start: 1;
+          grid-row-start: 25;
+        }
+        &-a-14 {
+          grid-column-start: 1;
+          grid-row-start: 27;
+        }
+        &-a-15 {
+          grid-column-start: 1;
+          grid-row-start: 29;
+        }
+        &-a-16 {
+          grid-column-start: 1;
+          grid-row-start: 31;
+        }
+        &-b-1 {
+          grid-column-start: 3;
+          grid-row-start: 1;
+        }
+        &-b-2 {
+          grid-column-start: 3;
+          grid-row-start: 3;
+        }
+        &-b-3 {
+          grid-column-start: 3;
+          grid-row-start: 5;
+        }
+        &-b-4 {
+          grid-column-start: 3;
+          grid-row-start: 7;
+        }
+        &-b-5 {
+          grid-column-start: 3;
+          grid-row-start: 9;
+        }
+        &-b-6 {
+          grid-column-start: 3;
+          grid-row-start: 11;
+        }
+        &-b-7 {
+          grid-column-start: 3;
+          grid-row-start: 13;
+        }
+        &-b-8 {
+          grid-column-start: 3;
+          grid-row-start: 15;
+        }
+        &-b-9 {
+          grid-column-start: 3;
+          grid-row-start: 17;
+        }
+        &-b-10 {
+          grid-column-start: 3;
+          grid-row-start: 19;
+        }
+        &-b-11 {
+          grid-column-start: 3;
+          grid-row-start: 21;
+        }
+        &-b-12 {
+          grid-column-start: 3;
+          grid-row-start: 23;
+        }
+        &-b-13 {
+          grid-column-start: 3;
+          grid-row-start: 25;
+        }
+        &-b-14 {
+          grid-column-start: 3;
+          grid-row-start: 27;
+        }
+        &-b-15 {
+          grid-column-start: 3;
+          grid-row-start: 29;
+        }
+        &-b-16 {
+          grid-column-start: 3;
+          grid-row-start: 31;
+        }
+      }
+    }
+
     
     // TILE SIZES MO
     &.size-mo{
       @include display-sm {
         &-1x1 {
-          height: 6.875rem;
+          grid-column-end: span 1;
+          grid-row-end: span 1;
           font-size: 1.25rem;
+          height: 6.875rem;
           margin-bottom: 1.25rem;
-          grid-column: span 1;
-          grid-row: span 1;
-          margin-right: 1.25rem;
         }
         &-1x2 {
-          height: 15rem;
+          grid-column-end: span 1;
+          grid-row-end: span 3;
           font-size: 1.75rem;
+          height: 15rem;
           margin-bottom: 1.25rem;
-          grid-column: span 1;
-          grid-row: span 2;
-          margin-right: 1.25rem;
           span {
             &:before {
               top: -1rem;
@@ -1353,12 +1481,11 @@
           }
         }
         &-2x1 {
-          height: 6.875rem;
           font-size: 1.4rem;
-          grid-column: 1/3;
-          grid-row: span 1;
+          grid-column-end: span 3;
+          grid-row-end: span 1;
+          height: 6.875rem;
           margin-bottom: 1.25rem;
-          margin-right: 1.25rem;
           span {
             &:before {
               top: -1rem;
@@ -1369,11 +1496,10 @@
           }
         }
         &-2x2 {
+          grid-column-end: span 3;
+          grid-row-end: span 3;
           height: 15rem;
-          grid-column: 1/3;
-          grid-row: span 2;
           margin-bottom: 1.25rem;
-          margin-right: 1.25rem;
           &.college__tile--news {
             font-size: 1.5rem;
           }

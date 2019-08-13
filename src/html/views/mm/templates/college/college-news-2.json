@@ -35,7 +35,8 @@
         "md-loc": "a-1",
         "sm-size": "4x1",
         "sm-loc": "a-1",
-        "mo-size": "2x1"
+        "mo-size": "2x1",
+        "mo-loc": "a-1"
       },
       {
         "type": "news",
@@ -47,7 +48,8 @@
         "md-loc": "a-2",
         "sm-size": "3x1",
         "sm-loc": "a-2",
-        "mo-size": "2x1"
+        "mo-size": "2x1",
+        "mo-loc": "a-2"
       },
       {
         "type": "news",
@@ -61,7 +63,8 @@
         "md-loc": "a-3",
         "sm-size": "2x2",
         "sm-loc": "a-3",
-        "mo-size": "2x2"
+        "mo-size": "2x2",
+        "mo-loc": "a-3"
       },
       {
         "type": "news",
@@ -73,7 +76,8 @@
         "md-loc": "c-3",
         "sm-size": "1x2",
         "sm-loc": "c-3",
-        "mo-size": "1x2"
+        "mo-size": "1x2",
+        "mo-loc": "a-5"
       },
       {
         "type": "news",
@@ -85,7 +89,8 @@
         "md-loc": "d-2",
         "sm-size": "1x3",
         "sm-loc": "d-2",
-        "mo-size": "1x2"
+        "mo-size": "1x2",
+        "mo-loc": "b-5"
       }
     ]
   }
