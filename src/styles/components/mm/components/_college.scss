@@ -1,6 +1,7 @@
 .college {
   &__main {
-    flex: 0 0 32%;
+    flex: 0 0 auto;
+    width: 32%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
