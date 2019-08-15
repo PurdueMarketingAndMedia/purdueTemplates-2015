@@ -2,10 +2,10 @@
   "head": {
     "title": "Accordion examples",
     "description": "This is an example of v2.0.0 of the accordion.",
-    "css": "../../../styles/mm/templates/content-accordion.css"  
+    "css": "../../../../styles/mm/templates/content-accordion.css"  
   },
   "body": {
-    "main-js": "../../../js/mm/templates/main.js"
+    "main-js": "../../../../js/mm/templates/main.js"
   },
   "content-accordion": {
     "site-name": "Accordion examples",
@@ -13,6 +13,9 @@
       "title": "Purdue Web Templates",
       "link": "https://www.purdue.edu/brand/applications/web-templates/index.php"
     },  
+    "side-nav": {
+      "type": "components"
+    },
     "accordions":[
       {
       "id": "1",

@@ -64,7 +64,7 @@ iframe{
             flex-direction:row;
             justify-content:space-between;            
             @include display-sm{
-                flex-direction:column;
+                flex-direction:column-reverse;
             }
         }
     }
@@ -72,17 +72,17 @@ iframe{
         @media only print {
             display: none;
         }
-        // width:23.5%;
-        flex-basis: 23.5%;
+        width:23.5%;
+        flex-basis: auto;
         display:flex;
         flex-direction:column;
         @include display-md{
-            flex-basis: 21%;
+            width:23%;
+            flex-basis: auto;
         }  
         @include display-sm{
-            // flex-basis: 100%;
+            flex:1 1 auto;
             width:100%;
-            order:2;
         }        
     }
     &__side-nav{
@@ -125,12 +125,6 @@ iframe{
                         height: 2px;
                         background-color: #c28e0e;
                     }
-                    &:focus{
-                        text-decoration: none !important; 
-                        &:before{
-                            width: 50%;
-                        }
-                    }
                 }
                 .side-nav{
                     text-decoration:none;
@@ -152,12 +146,6 @@ iframe{
                         text-decoration: underline;
                         &:after {
                             text-decoration: none;
-                        }
-                    } 
-                    &:focus{
-                        text-decoration: none !important; 
-                        &:before{
-                            width: 0;
                         }
                     }                   
                 }
@@ -186,7 +174,7 @@ iframe{
                 .dropdown-content{
                     list-style-type: none; 
                     display:none;
-                    padding: 0 0 0.625rem 1.25rem;
+                    padding: 0.625rem 0 0.625rem 1.25rem;
                     margin-top: -0.625rem;
                     li{
                         a{
@@ -212,13 +200,14 @@ iframe{
             display: block;
             width: auto;
         }
-        // width:73.5%;
-        flex-basis: 73.5%;
+        width:73.5%;
+        flex-basis: auto;
         @include display-md{
-            flex-basis: 71%;
+            width:73%;
+            flex-basis: auto;
         }    
         @include display-sm{
-            // flex-basis: 100%;
+            flex:1 1 auto;
             width: 100%;
         }      
     }
@@ -256,6 +245,8 @@ iframe{
         }
         img{
             width:100%;
+            display:flex;
+            flex-shrink:0;
         }
         figcaption{
             display: flex;

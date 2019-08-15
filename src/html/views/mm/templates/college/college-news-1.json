@@ -37,7 +37,8 @@
         "md-loc": "c-1",
         "sm-size": "2x2",
         "sm-loc": "c-1",
-        "mo-size": "2x2"
+        "mo-size": "2x2",
+        "mo-loc": "a-1"
       },
       {
         "type": "news",
@@ -48,7 +49,8 @@
         "md-loc": "a-1",
         "sm-size": "2x1",
         "sm-loc": "a-1",
-        "mo-size": "2x1"
+        "mo-size": "2x1",
+        "mo-loc": "a-3"
       },
       {
         "type": "news",
@@ -62,40 +64,47 @@
         "md-loc": "a-2",
         "sm-size": "2x3",
         "sm-loc": "a-2",
-        "mo-size": "2x2"
+        "mo-size": "2x2",
+        "mo-loc": "a-4"
       },
       {
         "type": "news",
         "text": "1x2 News Tile",
+        "icon": "far fa-newspaper",
         "lg-size": "1x2",
         "lg-loc": "c-3",
         "md-size": "1x2",
         "md-loc": "c-3",
         "sm-size": "1x2",
         "sm-loc": "c-3",
-        "mo-size": "1x2"
+        "mo-size": "1x2",
+        "mo-loc": "a-6"
       },
       {
         "type": "news",
         "text": "1x1 News Tile",
+        "icon": "far fa-newspaper",
         "lg-size": "1x1",
         "lg-loc": "d-3",
         "md-size": "1x1",
         "md-loc": "d-3",
         "sm-size": "1x1",
         "sm-loc": "d-3",
-        "mo-size": "1x1"
+        "mo-size": "1x1",
+        "mo-loc": "b-6"
       },
       {
         "type": "news",
         "text": "1x1 News Tile",
+        "icon": "far fa-newspaper",
         "lg-size": "1x1",
         "lg-loc": "d-4",
         "md-size": "1x1",
         "md-loc": "d-4",
         "sm-size": "1x1",
         "sm-loc": "d-4",
-        "mo-size": "1x1"
+        "mo-size": "1x1",
+        "mo-loc": "b-7"
       }
     ]
   }

@@ -33,6 +33,7 @@
         border: 0.35rem solid white;
         width: 9.3rem;
         margin:0.6rem 0 1.3rem;
+        background-color: white;
         @include display-mo {
             width: 40%;
         }
@@ -42,6 +43,7 @@
         line-height: 1.5;
         font-weight:700;
         max-width:600px;
+        width:100%;
         margin:0 auto;
         text-align:center;
         padding: 1rem 0 1.875rem;
@@ -51,11 +53,12 @@
     }
   }
   &__feature-links {
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 4rem 0;
     @include display-sm {
       flex-direction: column;
+      padding: 4rem 1rem;
     }
     &__button {
       position: relative;
@@ -68,12 +71,16 @@
       font-family: $font-archivo-narrow;
       padding-bottom: 1.25rem;
       text-align: center;
-      flex-basis: auto;
+      flex-basis: 30%;
       @include display-lg {
         flex-basis: 28%;
       }
       @include display-md {
-        flex-basis: 27%;
+        flex-basis: 26%;
+      }
+      @include display-sm {
+        width:100%;
+        flex-basis: auto;
       }
       &:not(:last-child) {
         @include display-sm {
@@ -89,6 +96,10 @@
           margin-bottom: 1rem;
         }
       }
+      p{
+        width:100%;
+        margin: 0;
+      }
       &:after {
         content: "";
         height: 0.45rem;
@@ -103,6 +114,7 @@
         cursor: pointer;
         &:after {
           width: 4rem;
+          left: calc(50% - 2rem);
         }
       }
       // color settings:
@@ -248,6 +260,7 @@
     align-items: stretch;
     justify-content: space-between;
     padding: 1.8rem 0;
+    flex-direction:row;
     @include display-md {
       flex-wrap: wrap;
       padding: 1.8rem 0;
@@ -261,13 +274,19 @@
       align-items: center;
       justify-content: flex-start;
       flex: 0 1 23%;
+      width: 23%;
+      max-width: 23%;
       padding: 3rem 1rem;
       background: #292929;
       margin: 0;
+      
       @include display-lg {
         flex-basis: 22.5%;
+        width:22.5%;
       }
       @include display-md {
+        width:48%;
+        max-width:48%;
         flex-basis: 48%;
         &:nth-child(-n + 2) {
           margin-bottom: 1.8rem;
@@ -275,6 +294,7 @@
       }
       @include display-sm {
         flex-basis: 100%;
+        max-width: 100%;
         &:nth-child(-n + 2) {
           margin-bottom: 1.85rem;
         }
@@ -294,6 +314,7 @@
         margin-bottom: 2.35rem;
         font-size: 1.75rem;
         text-align: center;
+        width:100%;
         &:after {
           content: "";
           height: 0.1em;
@@ -308,6 +329,7 @@
         list-style: none;
         padding: 0;
         margin: 0;
+        width:100%;
         li {
           text-align: center;
           &:not(:last-child) {
@@ -368,25 +390,28 @@
         flex-direction:column;
     }
     @include display-sm{
-        padding:1rem 0;
+        padding: 1rem;
     }
     img{
       width:56%;
-        flex-basis:56%;
-        display:flex;        
-        @include display-md{
-            width:100%;
-            padding:0 1rem 2.1875rem;
-        }
+      display:flex; 
+      height:auto;
+      min-height: 1px;
+      flex: 0 1 auto;       
+      @include display-md{
+          width:100%;
+          margin-bottom: 2.25rem;
+          flex: 1 1 auto;
+      }
     }
     &__content{
         display:flex;
         flex-direction:column;
-        flex-basis:40%;
+        flex: 0 1 auto; 
         width:40%;
         @include display-md{
             width:100%;
-            padding:0 1rem;
+            flex: 1 1 auto;
         }
         h2{
             margin:0 0 1.25rem 0;
@@ -434,6 +459,7 @@
     &__cards {
       display: flex;
       justify-content: space-between;
+      align-items:flex-start;
       width: 100%;
       margin-bottom: 1.5rem;
       @include display-md {
@@ -452,6 +478,7 @@
         "event-date event-month"
         "event-content event-content" ;
       font-family: $font-archivo-narrow;
+      width: 100%;
       p{
         margin-bottom:0;
       }
@@ -530,11 +557,13 @@
         flex-direction:row;
         justify-content:space-between;
         align-items:center;
+        
         @include display-sm{
             flex-direction:column;
             justify-content:space-around;
         }
         h2{
+            width:100%;
             padding:0;
             margin-top:0;
             margin-bottom:0;  
@@ -542,7 +571,10 @@
             font-family:$font-archivo-narrow;
             font-size:1.75rem;
             font-weight:700;
-            text-align:center;
+            @include display-sm{
+              text-align:center;
+              width: 100%;
+              }            
         }
         a{
             margin-bottom:1rem;    
@@ -558,6 +590,12 @@
     display:flex;
     flex-direction:column;
     align-items:center;
+    @include display-md{
+      padding:4rem 0;
+  }
+    @include display-sm{
+        padding:4rem 1rem;
+    }
         &__contents{
             display:flex;
             flex-direction:row;
@@ -576,26 +614,22 @@
             flex-basis:48%;
             @include display-md{
               flex-basis:100%;
-                align-items:center;
-                margin-bottom:4.7rem;
-            }
-            @include display-sm{
-                margin-left:1rem;
-                margin-right:1rem;
+              align-items:center;
+              margin-bottom:4.7rem;
             }
             .header{
                 display:flex;
                 flex-direction:row;
                 font-family:$font-archivo-narrow;
                 font-size:1.75rem;
-                flex-basis:100%;
+                flex-basis: auto;
                 justify-content: space-between;
-                flex-wrap:wrap;
-                .username, .time{
-                    padding-right:1rem;
-                }                
+                flex-wrap:wrap; 
+                justify-content: flex-start;
+                width:100%;              
                 span{
                     font-weight:700;
+                    padding: 0 2rem 0 1rem;
                 }
                 margin-bottom:0.625rem;
                 @include display-md{
@@ -609,15 +643,18 @@
             .retweet{
                 color:#555;
                 font-size:1rem;
-                margin-bottom:0.625rem;
+                margin-bottom:1.625rem;
+                flex-basis: auto;
                 @include display-sm{
                     font-size:1.125rem;
+                    text-align:center;
                 }
             }
             .text{
                 color:#555;
                 font-size:1.25rem;
-                margin-top:1rem;
+                margin-bottom: 0;
+                width: 100%;
                 @include display-md{
                     text-align:center;
                 }
@@ -631,6 +668,7 @@
         padding:4.6875rem 0;
         display:flex;
         flex-direction:column;
+        min-height: 1px;
         @include display-md{
             padding:3.125rem 0;
         }
@@ -654,7 +692,10 @@
                 font-family:$font-archivo-narrow;
                 font-size:1.75rem;
                 font-weight:700;
-                text-align:center;
+                @include display-sm{
+                  text-align:center;
+                  width:100%;
+              }               
             }
             a{
                 margin-bottom:0.9375rem;    
@@ -664,21 +705,27 @@
             margin:0.9375rem 0;
             display:flex;
             flex-wrap:wrap;
+            align-items: flex-start;
             justify-content: space-between;
             line-height:1;
-            
+            flex: 0 0 auto;
+            min-height: 1px;
         a{
-          flex-basis:15.6%;
+          width:15.6%;
+          height:auto;
+          display:flex;
+          align-items: flex-start;
             img{
                 width:100%;
                 height:auto;
+                display:flex;
             } 
             @include display-md{
-                flex-basis:32%;
+                width:32%;
                 margin-bottom:0.7rem;
             }
             @include display-sm{
-              flex-basis:48.7%;
+              width:48.7%;
             }
         }
       }
@@ -687,6 +734,7 @@
     align-items: center;
     justify-content: center;
     min-height: 39rem;
+    height: 10rem;
     p {
       color: white;
       font-family: $font-archivo-narrow;

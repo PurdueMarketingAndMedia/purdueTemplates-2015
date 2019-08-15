@@ -40,6 +40,7 @@ const toggle = (e) => {
                         setTimeout(() => {
                             hideFooter(content)
                             content.removeAttribute('state-animating')
+                            
                         }, 200)
                     }
                 } else if (el === clicked){
@@ -280,13 +281,33 @@ const show = function (elem) {
 };
 // Hide an footer element
 const hideFooter = function (elem) {
-    elem.classList.add('hide');
-    elem.classList.remove('show');
+    if(elem.classList){
+        elem.classList.add('hide');
+        elem.classList.remove('show');
+    }else if(elem.nodeName === "svg"){
+        if(elem.getAttribute('class').indexOf('hide') <= -1){
+            elem.setAttribute('class', elem.getAttribute('class') + ' hide');
+        }
+        if(elem.getAttribute('class').indexOf('show') > -1){
+            elem.setAttribute('class', elem.getAttribute('class').replace('show', ''));
+        }        
+    }
+
 };
 // show an footer element
 const showFooter = function (elem) {
-    elem.classList.add('show');
-    elem.classList.remove('hide');
+    if(elem.classList){
+        elem.classList.add('show');
+        elem.classList.remove('hide');
+    }else if(elem.nodeName === "svg"){
+        if(elem.getAttribute('class').indexOf('show') <= -1){
+            elem.setAttribute('class', elem.getAttribute('class') + ' show');
+        }
+        if(elem.getAttribute('class').indexOf('hide') > -1){
+            elem.setAttribute('class', elem.getAttribute('class').replace('hide', ''));
+        }        
+    }
+
 };
 // add selected class to element
 const select = function (elem) {
@@ -479,10 +500,14 @@ window.addEventListener('resize', () => {
             el.setAttribute('aria-expanded', true);
             el.setAttribute('aria-disabled', true);
             icons.forEach((el) => {
-                el.classList.remove('hide', 'show', 'selected')
-                el.removeAttribute('style');             
+                if(el.getAttribute('class').indexOf('hide') > -1){
+                    el.setAttribute('class', el.getAttribute('class').replace('hide', ''));
+                }   
+                if(el.getAttribute('class').indexOf('show') > -1){
+                    el.setAttribute('class', el.getAttribute('class').replace('show', ''));
+                }             
             });
-            content.classList.remove('hide', 'show', 'selected')
+            content.classList.remove('hide', 'show')
             content.removeAttribute('style');
         } else if (currAttr === "flex") {
             el.setAttribute('aria-expanded', true);

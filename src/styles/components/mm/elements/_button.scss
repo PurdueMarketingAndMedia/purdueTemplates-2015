@@ -1,7 +1,7 @@
 $block:button;
 .#{$block}{
-	display:inline-block;
-	display:inline-flex;
+	// display:inline-block;
+	display:flex;
 	flex-direction:row;
 	flex-wrap:nowrap;
 	justify-content:center;
@@ -9,11 +9,15 @@ $block:button;
 	line-height:1.5;
 	&::before,&::after{
 		content:'';
-		display:block;
-		flex-grow:1;
-		flex-shrink:1;
-		flex-basis:10px;
+		display:flex;
+		flex: 1;
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			flex-grow: 1;
+			flex-shrink: 1;
+			flex-basis: auto;
+		}
 		width:calc-toRem(calc-ratioLgMd(62));
+	
 	}
 	&::before{
 		order:0;
