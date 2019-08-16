@@ -364,6 +364,7 @@
         }
         @include display-sm {
           font-size: 1.5rem;
+          text-align: center;
         }
       }
       #siteTagline {
@@ -376,6 +377,7 @@
         }
         @include display-sm {
           font-size: 0.95rem;
+          text-align: center;
         }
         a {
           display: block;
@@ -386,7 +388,7 @@
         }
       }
       @include display-sm {
-        margin: 1.5rem 0 0 0;
+        margin: 1.5rem 1rem 0 1rem;
         align-items: center;
       }
     }
