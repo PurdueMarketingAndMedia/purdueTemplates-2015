@@ -258,7 +258,7 @@ const compileViews = (filesObj) => {
   const isDev = process.env.NODE_ENV === 'development'
   for (file in filesObj) {
     console.log(file)
-    const outName = isDev ? `new_builds${file.replace('src', '').replace('.json', '.html').replace('/views', '')}` : `new_builds/production${file.replace('src', '').replace('.json', '.html').replace('/views', '')}`
+    const outName = isDev ? `builds${file.replace('src', '').replace('.json', '.html').replace('/views', '')}` : `builds/production${file.replace('src', '').replace('.json', '.html').replace('/views', '')}`
     const viewJSON = JSON.parse(fs.readFileSync(file, 'utf8'));
     const compiled = compiledTemplate(viewJSON);
     const finalOut = pretty(compiled, { ocd: true });

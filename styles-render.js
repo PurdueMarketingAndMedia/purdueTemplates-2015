@@ -28,7 +28,7 @@ const recursiveRead = (dir) => {
 const compileSass = (filesObj) => {
   const isDev = process.env.NODE_ENV === 'development'
   for (file in filesObj) {
-    const out = isDev ? `new_builds${file.replace('src', '').replace('.scss', '.css').replace('/finals', '')}` :  `new_builds/production${file.replace('src', '').replace('.scss', '.css').replace('/finals', '')}`
+    const out = isDev ? `builds${file.replace('src', '').replace('.scss', '.css').replace('/finals', '')}` :  `builds/production${file.replace('src', '').replace('.scss', '.css').replace('/finals', '')}`
     const result = sass.renderSync({
       file: file,
       outputStyle: 'compressed',
