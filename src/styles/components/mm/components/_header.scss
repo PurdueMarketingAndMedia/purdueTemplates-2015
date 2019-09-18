@@ -208,7 +208,7 @@
     &__search {
       background-color:#c28e0e;
       border:none;
-      svg {
+      svg,i {
         pointer-events: none;
       }
       &--container {
@@ -411,9 +411,10 @@
       font-size: 1rem;
       color: white;
       position: relative;
-      svg {
+      svg,i {
         pointer-events: none;
       }
+     
       &:hover {
         cursor: pointer;
       }

@@ -71,7 +71,7 @@
       background-repeat: repeat;
       background-image: url("https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png");  
       &--campusGold{
-        svg {
+        svg,i {
           color: $color-campusGold;
         }
         span {
@@ -81,7 +81,7 @@
         }
       }
       &--headlineGold{
-        svg {
+        svg,i {
           color: $color-headlineGold;
         }
         span {
@@ -91,7 +91,7 @@
         }
       }
       &--coalGray{
-        svg {
+        svg,i {
           color: $color-coalGray;
         }
         span {
@@ -101,7 +101,7 @@
         }
       }
       &--moonDustGray{
-        svg {
+        svg,i {
           color: $color-moonDustGray;
         }
         span {
@@ -111,7 +111,7 @@
         }
       }
       &--everTrueBlue{
-        svg {
+        svg,i {
           color: $color-everTrueBlue;
         }
         span {
@@ -121,7 +121,7 @@
         }
       }
       &--slayterSkyBlue{
-        svg {
+        svg,i {
           color: $color-slayterSkyBlue;
         }
         span {
@@ -131,7 +131,7 @@
         }
       }
       &--ameliaSkyBlue{
-        svg {
+        svg,i {
           color: $color-ameliaSkyBlue;
         }
         span {
@@ -141,7 +141,7 @@
         }
       }
       &--landGrantGreen{
-        svg {
+        svg,i {
           color: $color-landGrantGreen;
         }
         span {
@@ -151,7 +151,7 @@
         }
       }
       &--rossAdeGreen{
-        svg {
+        svg,i {
           color: $color-rossAdeGreen;
         }
         span {
@@ -161,7 +161,7 @@
         }
       }
       &--celeryBogGreen{
-        svg {
+        svg,i {
           color: $color-celeryBogGreen;
         }
         span {
@@ -171,7 +171,7 @@
         }
       }
       &--springFestGreen{
-        svg {
+        svg,i {
           color: $color-springFestGreen;
         }
         span {
@@ -181,7 +181,7 @@
         }
       }
       &--oakenBucketBrown{
-        svg {
+        svg,i {
           color: $color-oakenBucketBrown;
         }
         span {
@@ -191,7 +191,7 @@
         }
       }
       &--bellTowerBrick{
-        svg {
+        svg,i {
           color: $color-bellTowerBrick;
         }
         span {
@@ -201,7 +201,7 @@
         }
       }
       &--mackeyOrange{
-        svg {
+        svg,i {
           color: $color-mackeyOrange;
         }
         span {
@@ -211,7 +211,7 @@
         }
       }
       &--yellowWalk{
-        svg {
+        svg,i {
           color: $color-yellowWalk;
         }
         span {
@@ -221,7 +221,7 @@
         }
       }
       &--fountainRunTeal{
-        svg {
+        svg,i {
           color: $color-fountainRunTeal;
         }
         span {
@@ -231,7 +231,7 @@
         }
       }
       &--pappysPurple{
-        svg {
+        svg,i {
           color: $color-pappysPurple;
         }
         span {
@@ -255,7 +255,7 @@
         color: white;
         font-size: 1.375rem;
         justify-content: flex-end;
-        svg {
+        svg,i {
           font-size: 1.75rem;
           margin-bottom: 0.5rem;
         }
@@ -263,7 +263,7 @@
           color: white;
           background-repeat: repeat;
           background-image: url("https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png"); 
-          svg {
+          svg,i {
             color: $color-campusGold;
           }
         }
@@ -282,7 +282,7 @@
             top: -1rem;
           }
         }
-        svg {
+        svg,i {
           font-size: 2.375rem;
           margin-bottom: 2.25rem;
         }
@@ -298,7 +298,7 @@
               background: $color-campusGold;
             }
           }
-          svg {
+          svg,i {
             color: $color-campusGold;
           }
         }
@@ -317,7 +317,7 @@
             top: -1rem;
           }
         }
-        svg {
+        svg,i {
           font-size: 2.375rem;
           margin-bottom: 2.25rem;
         }
@@ -333,7 +333,7 @@
               background: $color-campusGold;
             }
           }
-          svg {
+          svg,i {
             color: $color-campusGold;
           }
         }
@@ -352,7 +352,7 @@
             top: -1rem;
           }
         }
-        svg {
+        svg,i {
           font-size: 2.375rem;
           margin-bottom: 2.25rem;
         }
@@ -368,7 +368,7 @@
               background: $color-campusGold;
             }
           }
-          svg {
+          svg,i {
             color: $color-campusGold;
           }
         }
@@ -389,7 +389,7 @@
         }
         &.college__tile--news {
           color: black !important;
-          svg {
+          svg,i {
             display: none;
           }
           span {
@@ -400,7 +400,7 @@
         }
         &.college__tile--audience {
           color: white;
-          svg {
+          svg,i {
             display: none;
           }
         }
@@ -411,7 +411,7 @@
         z-index: 1;
         padding: 0;
         &.college__tile--news {
-          svg {
+          svg,i {
             display: none;
           }
           color: white !important;
@@ -425,7 +425,7 @@
           color: white;
           padding: 1.25rem;
           font-size: 2.375rem;
-          svg {
+          svg,i {
             display: none;
           }
           span {
@@ -447,7 +447,7 @@
         z-index: 1;
         padding: 0;
         &.college__tile--news {
-          svg {
+          svg,i {
             display: none;
           }
           color: white !important;
@@ -461,7 +461,7 @@
           color: white;
           padding: 1.25rem;
           font-size: 2.375rem;
-          svg {
+          svg,i {
             display: none;
           }
           span {
@@ -483,7 +483,7 @@
         z-index: 1;
         padding: 0;
         &.college__tile--news {
-          svg {
+          svg,i {
             display: none;
           }
           color: white !important;
@@ -497,7 +497,7 @@
           color: white;
           padding: 1.25rem;
           font-size: 2.375rem;
-          svg {
+          svg,i {
             display: none;
           }
           span {
@@ -520,7 +520,7 @@
         align-items: center;
         justify-content: space-between;
         font-size: 1.75rem;
-        svg {
+        svg,i {
           order: 2;
           font-size: 4.7rem;
         }
@@ -537,7 +537,7 @@
           }
         }
         &.college__tile--news {
-          svg {
+          svg,i {
             color: rgba($color:#000, $alpha: 0.3);
           }
           color: black !important;
@@ -557,7 +557,7 @@
         z-index: 1;
         padding: 0;
         &.college__tile--news {
-          svg {
+          svg,i {
             display: none;
           }
           color: white !important;
@@ -571,7 +571,7 @@
           color: white;
           padding: 1.25rem;
           font-size: 2.375rem;
-          svg {
+          svg,i {
             display: none;
           }
           span {
@@ -593,7 +593,7 @@
         z-index: 1;
         padding: 0;
         &.college__tile--news {
-          svg {
+          svg,i {
             display: none;
           }
           color: white !important;
@@ -607,7 +607,7 @@
           color: white;
           padding: 1.25rem;
           font-size: 2.375rem;
-          svg {
+          svg,i {
             display: none;
           }
           span {
@@ -629,7 +629,7 @@
         z-index: 1;
         padding: 0;
         &.college__tile--news {
-          svg {
+          svg,i {
             display: none;
           }
           color: white !important;
@@ -643,7 +643,7 @@
           color: white;
           padding: 1.25rem;
           font-size: 2.375rem;
-          svg {
+          svg,i {
             display: none;
           }
           span {
@@ -666,7 +666,7 @@
         align-items: center;
         justify-content: space-between;
         font-size: 1.75rem;
-        svg {
+        svg,i {
           order: 2;
           font-size: 4.7rem;
         }
@@ -683,7 +683,7 @@
           }
         }
         &.college__tile--news {
-          svg {
+          svg,i {
             color: rgba($color:#000, $alpha: 0.3);
           }
           color: black !important;
@@ -703,7 +703,7 @@
         z-index: 1;
         padding: 0;
         &.college__tile--news {
-          svg {
+          svg,i {
             display: none;
           }
           color: white !important;
@@ -717,7 +717,7 @@
           color: white;
           padding: 1.25rem;
           font-size: 2.375rem;
-          svg {
+          svg,i {
             display: none;
           }
           span {
@@ -739,7 +739,7 @@
         z-index: 1;
         padding: 0;
         &.college__tile--news {
-          svg {
+          svg,i {
             display: none;
           }
           color: white !important;
@@ -753,7 +753,7 @@
           color: white;
           padding: 1.25rem;
           font-size: 2.375rem;
-          svg {
+          svg,i {
             display: none;
           }
           span {
@@ -775,7 +775,7 @@
         z-index: 1;
         padding: 0;
         &.college__tile--news {
-          svg {
+          svg,i {
             display: none;
           }
           color: white !important;
@@ -789,7 +789,7 @@
           color: white;
           padding: 1.25rem;
           font-size: 2.375rem;
-          svg {
+          svg,i {
             display: none;
           }
           span {
@@ -815,7 +815,7 @@
         }
         &-1x2 {
           font-size: 1.5rem;
-          svg {
+          svg,i {
             font-size: 2.125rem;
             margin-bottom: 1.7rem;
           }
@@ -828,7 +828,7 @@
         }
         &-1x3 {
           font-size: 1.5rem;
-          svg {
+          svg,i {
             font-size: 2.125rem;
             margin-bottom: 1.7rem;
           }
@@ -841,7 +841,7 @@
         }
         &-1x4 {
           font-size: 1.5rem;
-          svg {
+          svg,i {
             font-size: 2.125rem;
             margin-bottom: 1.7rem;
           }
@@ -984,13 +984,13 @@
       @include display-md {
         &-1x1 {
           font-size: 1.375rem;
-          svg {
+          svg,i {
             font-size: 2rem;
           }
         }
         &-1x2 {
           font-size: 1.75rem;
-          svg {
+          svg,i {
             font-size: 2.375rem;
             margin-bottom: 2.25rem;
           }
@@ -1003,7 +1003,7 @@
         }
         &-1x3 {
           font-size: 1.75rem;
-          svg {
+          svg,i {
             font-size: 2.375rem;
             margin-bottom: 2.25rem;
           }
@@ -1016,7 +1016,7 @@
         }
         &-1x4 {
           font-size: 1.75rem;
-          svg {
+          svg,i {
             font-size: 2.375rem;
             margin-bottom: 2.25rem;
           }
@@ -1476,7 +1476,7 @@
               width: 2.75rem;
             }
           }
-          svg {
+          svg,i {
             font-size: 2.125rem;
             margin-bottom: 1.7rem;
           }
@@ -1492,7 +1492,7 @@
               top: -1rem;
             }
           }
-          svg {
+          svg,i {
             display: none;
           }
         }
@@ -1512,7 +1512,7 @@
       @include display-mo {
         &-1x1 {
           font-size: 1.125rem;
-          svg {
+          svg,i {
             font-size: 1.75rem;
           }
         }

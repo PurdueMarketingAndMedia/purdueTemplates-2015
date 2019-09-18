@@ -329,7 +329,7 @@ $block:button;
 		& > *, &.fa::before{
 			transition:color, transform 0.1s;
 		}
-		&.svg-inline--fa{
+		&.svg,&.i{
 			font-size: 2.54rem;
 		}
 	}
@@ -376,7 +376,7 @@ $block:button;
 		&__icon{
 			margin:calc-toRem(-10) 0;
 			padding:0 calc-toRem(10);
-			&.svg-inline--fa{
+			&.svg,&.i{
 				font-size: 2.94rem;
 			}
 		}
@@ -420,7 +420,7 @@ $block:button;
 		&__icon{
 			margin:calc-toRem(-10) 0;
 			padding:0 calc-toRem(10);
-			&.svg-inline--fa{
+			&.svg,&.i{
 				font-size: 2.94rem;
 			}
 		}
@@ -471,7 +471,7 @@ $block:button;
 		&__icon{
 			margin:calc-toRem(-10) 0;
 			padding:0 calc-toRem(10);
-			&.svg-inline--fa{
+			&.svg,&.i{
 				font-size: 2.94rem;
 			}
 		}

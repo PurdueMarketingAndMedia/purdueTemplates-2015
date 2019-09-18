@@ -25,9 +25,9 @@ const toggle = (e) => {
         case checkClassName(clicked, 'accordion__heading--footer'): // specifically footer accordion
             document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
                 const contentId = el.getAttribute('aria-controls');
-                let icons = el.querySelectorAll('svg');
-                let plusIcon = el.querySelector('.fa-plus');
-                let minusIcon = el.querySelector('.fa-minus');
+                let icons = el.querySelectorAll('.accordion__icon');
+                let plusIcon = el.querySelector('.accordion__icon__plus');
+                let minusIcon = el.querySelector('.accordion__icon__minus');
                 const content = document.querySelector('#' + contentId);
                 const currAttr = getCurrDisplay(content)
                 if (el.getAttribute('aria-expanded') && el !== clicked) {
@@ -72,7 +72,7 @@ const toggle = (e) => {
             break
             case checkClassName(clicked, 'accordion__heading'): // accordion
                 const contentId = clicked.getAttribute('aria-controls');
-                let icons = clicked.querySelectorAll('svg');
+                let icons = clicked.querySelectorAll('.accordion__icon');
                 const content = document.querySelector('#' + contentId);
                 const currAttr = getCurrDisplay(content)
                 const expanded = clicked.getAttribute('aria-expanded') === "false" ? true : false;
@@ -354,12 +354,12 @@ document.querySelectorAll('.accordion__content--footer').forEach((el) => {
         hideFooter(el);
     }
 });
-document.querySelectorAll('.accordion__heading--footer>svg.fa-plus').forEach((el) => {
+document.querySelectorAll('.accordion__heading--footer>.accordion__icon__plus').forEach((el) => {
     if (width < 768) {
         showFooter(el)
     }
 });
-document.querySelectorAll('.accordion__heading--footer>svg.fa-minus').forEach((el) => {
+document.querySelectorAll('.accordion__heading--footer>.accordion__icon__minus').forEach((el) => {
     if (width < 768) {
         hideFooter(el)
     }
@@ -494,7 +494,7 @@ window.addEventListener('resize', () => {
     }
      document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
         let content = document.querySelector('#' + el.getAttribute('aria-controls'));
-        let icons = el.querySelectorAll('svg');
+        let icons = el.querySelectorAll('.accordion__icon');
         const currAttr = window.getComputedStyle(content).getPropertyValue('display');
         if (width >= 768) {
             el.setAttribute('aria-expanded', true);
