@@ -1,27 +1,23 @@
 {
     "name": "purduetemplates2015",
-    "version": "1.6.7",
+    "version": "2.0.0",
     "description": "The Purdue University templates created in 2015 by Purdue Marketing and Media.",
-    "main": "gulpfile.js",
     "scripts": {
         "html:dev": "NODE_ENV=development node html-render.js",
         "html:prod": "NODE_ENV=production node html-render.js",
         "scss:dev": "NODE_ENV=development node styles-render.js",
         "scss:prod": "NODE_ENV=production node styles-render.js",
-        "js:dev": "run-p js:dev:*",
-        "js:prod": "run-p js:prod:*",
-        "js:dev:templates": "rm -rf builds/js/mm/templates && mkdir -p builds/js/mm/templates && webpack src/js/mm/main.js -o builds/js/mm/templates/main.js && browser-sync reload",
-        "js:prod:templates": "rm -rf builds/production/js/mm/templates && mkdir -p builds/production/js/mm/templates && webpack -p src/js/mm/main.js -o builds/production/js/mm/templates/main.js",
+        "js": "npx webpack",
         "serve": "browser-sync builds --directory -w -b Firefox",
-        "preserve": "run-p html:dev scss:dev js:dev",
+        "preserve": "run-p html:dev scss:dev js",
         "watch": "run-p watch:*",
         "watch:scss": "onchange 'src/**/*.scss' -- npm run scss:dev",
-        "watch:js": "onchange 'src/**/*.js' -- npm run js:dev",
+        "watch:js": "onchange 'src/**/*.js' -- npm run js",
         "watch:json": "onchange 'src/**/*.json' -- npm run html:dev",
         "watch:handlebars": "onchange 'src/**/*.handlebars' -- npm run html:dev",
-        "dev:noserve": "run-p scss:dev js:dev html:dev",
+        "dev:noserve": "run-p scss:dev js html:dev",
         "dev": "run-p serve watch",
-        "prod": "run-p html:prod scss:prod js:prod"
+        "prod": "run-p html:prod scss:prod js"
     },
     "repository": {
         "type": "git",
