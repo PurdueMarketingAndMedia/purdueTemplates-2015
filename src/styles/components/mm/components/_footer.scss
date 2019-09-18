@@ -74,7 +74,10 @@
                     width:100%;
                 }
             }
-            div{
+            &__motto{
+                display:flex;
+            }
+            &__social{
                 margin-top:0.625rem;
                 padding-top:0.3rem;
                 border-top: solid 1px #474747;
@@ -99,7 +102,11 @@
                     border:none;
                 }
                 @include display-sm {
+                    margin-top:0;
                     font-size:1.4rem;
+                }
+                @include display-mo {
+                    padding-top:0;
                 }
             }
             @include display-md {
