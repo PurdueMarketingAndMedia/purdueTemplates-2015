@@ -309,32 +309,75 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      flex: 0 1 23%;
-      width: 23%;
-      max-width: 23%;
       padding: 3rem 1rem;
       background: #292929;
       margin: 0;
-      
-      @include display-lg {
-        flex-basis: 22.5%;
-        width:22.5%;
+      &--two-column{
+        flex: 0 1 48.5%;
+        width: 48.5%;
+        max-width: 48.5%;
+        @include display-md {
+          flex: 0 1 48%;
+          width: 48%;
+          max-width: 48%;
+        }
+        @include display-sm {
+          width:100%;
+          max-width: 100%;
+          flex-basis: auto;
+          &:not(:last-child) {
+            margin-bottom: 1.8rem;
+        }
+        }      
       }
-      @include display-md {
-        width:48%;
-        max-width:48%;
-        flex-basis: 48%;
-        &:nth-child(-n + 2) {
-          margin-bottom: 1.8rem;
+      &--three-column{
+        flex: 0 1 31.5%;
+        width: 31.5%;
+        max-width: 31.5%;
+        @include display-lg {
+          flex: 0 1 31.2%;
+          width: 31.2%;
+          max-width: 31.2%;
+        }
+        @include display-md {
+          flex: 0 1 30.5%;
+          width: 30.5%;
+          max-width: 30.5%;
+        }
+        @include display-sm {
+          width:100%;
+          max-width: 100%;
+          flex-basis: auto;
+          &:not(:last-child) {
+            margin-bottom: 1.8rem;
+        }
+        }      
+      }
+      &--four-column{
+        flex: 0 1 23%;
+        width: 23%;
+        max-width: 23%;
+        @include display-lg {
+          flex-basis: 22.5%;
+          width:22.5%;
+        }
+        @include display-md {
+          width:48%;
+          max-width:48%;
+          flex-basis: 48%;
+          &:nth-child(-n + 2) {
+            margin-bottom: 1.8rem;
+          }
+        }
+        @include display-sm {
+          flex-basis: 100%;
+          max-width: 100%;
+          &:not(:last-child) {
+            margin-bottom: 1.8rem;
         }
       }
-      @include display-sm {
-        flex-basis: 100%;
-        max-width: 100%;
-        &:not(:last-child) {
-          margin-bottom: 1.8rem;
       }
-    }
+      
       svg {
         color: $color-gray70;
         font-size: 3.25rem;
