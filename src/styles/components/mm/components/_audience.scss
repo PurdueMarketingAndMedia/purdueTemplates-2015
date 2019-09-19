@@ -56,8 +56,9 @@
     align-items: flex-start;
     justify-content: space-between;
     padding: 4rem 0;
+    flex-wrap:wrap;
+
     @include display-sm {
-      flex-direction: column;
       padding: 4rem 1rem;
     }
     &__button {
@@ -71,23 +72,58 @@
       font-family: $font-archivo-narrow;
       padding-bottom: 1.25rem;
       text-align: center;
-      flex-basis: 30%;
-      @include display-lg {
-        flex-basis: 28%;
-      }
-      @include display-md {
-        flex-basis: 26%;
-      }
-      @include display-sm {
-        width:100%;
-        flex-basis: auto;
-      }
-      &:not(:last-child) {
+      &--two-column{
+        flex-basis: 45%;
         @include display-sm {
-          margin-right: 0;
-          margin-bottom: 6.5rem;
+          width:100%;
+          flex-basis: auto;
+          &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 6.5rem;
+        }
         }
       }
+      &--three-column{
+        flex-basis: 30%;
+        @include display-lg {
+          flex-basis: 28%;
+        }
+        @include display-md {
+          flex-basis: 26%;
+        }
+        @include display-sm {
+          width:100%;
+          flex-basis: auto;
+          &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 6.5rem;
+        }
+        }      
+      }
+      &--four-column{
+        flex-basis: 23%;
+        @include display-lg {
+          flex-basis: 22.5%;
+        }
+        @include display-md {
+          width:48%;
+          max-width:48%;
+          flex-basis: 48%;
+          &:nth-child(-n + 2) {
+            margin-bottom: 6.5rem;
+          }
+        }
+        @include display-sm {
+          width:100%;
+          max-width:100%;
+          flex-basis: 100%;
+          &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 6.5rem;
+        }
+      }
+    }
+      
       svg {
         font-size: 4.5rem;
         margin-bottom: 2.5rem;
@@ -295,11 +331,10 @@
       @include display-sm {
         flex-basis: 100%;
         max-width: 100%;
-        &:nth-child(-n + 2) {
-          margin-bottom: 1.85rem;
-        }
-        margin-bottom: 1.85rem;
+        &:not(:last-child) {
+          margin-bottom: 1.8rem;
       }
+    }
       svg {
         color: $color-gray70;
         font-size: 3.25rem;
