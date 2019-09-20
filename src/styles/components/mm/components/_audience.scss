@@ -430,6 +430,7 @@
       display:flex;
       flex-direction:row;
       justify-content: space-between;
+      min-height: 1px;
       @include display-md {
         padding:1.8rem 0;
         flex-wrap: wrap;
@@ -439,13 +440,14 @@
         flex-direction:column;
         align-items: center;
       }
-      img{
+      picture{
         width:21%;
         flex-basis:21%;
         align-self: center; 
         display:flex;       
         max-height:150px;
         flex-shrink:1;
+        min-height: 1px;
         @include display-md {
             margin:1rem;
             width: 35%;
@@ -456,7 +458,10 @@
             flex-basis:auto;
             max-width:80%;
           }
-    }
+      }
+      img{
+        display: flex;
+      }
   }
   &__story{
     padding:4.7rem 0;
