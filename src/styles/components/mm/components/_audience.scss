@@ -8,7 +8,9 @@
       @include display-sm {
         padding-top:1rem;
       }
-
+    img{
+      height:70px;
+    }
     svg{
         font-size: 5rem;
         padding: 1rem 0;
@@ -124,7 +126,13 @@
         }
       }
     }
-      
+            
+    img {
+      height:72px;
+      @include display-md {
+        height:56px;
+      }
+    }
       svg {
         font-size: 4.5rem;
         margin-bottom: 2.5rem;
@@ -156,7 +164,7 @@
       }
       // color settings:
       &--campusGold{
-        svg {
+        svg,img {
           color: $color-campusGold;
         }
         &:after {
@@ -164,7 +172,7 @@
         }
       }
       &--headlineGold{
-        svg {
+        svg,img {
           color: $color-headlineGold;
         }
         &:after {
@@ -172,7 +180,7 @@
         }
       }
       &--coalGray{
-        svg {
+        svg,img {
           color: $color-coalGray;
         }
         &:after {
@@ -180,7 +188,7 @@
         }
       }
       &--moonDustGray{
-        svg {
+        svg,img {
           color: $color-moonDustGray;
         }
         &:after {
@@ -188,7 +196,7 @@
         }
       }
       &--everTrueBlue{
-        svg {
+        svg,img {
           color: $color-everTrueBlue;
         }
         &:after {
@@ -196,7 +204,7 @@
         }
       }
       &--slayterSkyBlue{
-        svg {
+        svg,img {
           color: $color-slayterSkyBlue;
         }
         &:after {
@@ -204,7 +212,7 @@
         }
       }
       &--ameliaSkyBlue{
-        svg {
+        svg,img {
           color: $color-ameliaSkyBlue;
         }
         &:after {
@@ -212,7 +220,7 @@
         }
       }
       &--landGrantGreen{
-        svg {
+        svg,img {
           color: $color-landGrantGreen;
         }
         &:after {
@@ -220,7 +228,7 @@
         }
       }
       &--rossAdeGreen{
-        svg {
+        svg,img{
           color: $color-rossAdeGreen;
         }
         &:after {
@@ -228,7 +236,7 @@
         }
       }
       &--celeryBogGreen{
-        svg {
+        svg,img {
           color: $color-celeryBogGreen;
         }
         &:after {
@@ -236,7 +244,7 @@
         }
       }
       &--springFestGreen{
-        svg {
+        svg,img {
           color: $color-springFestGreen;
         }
         &:after {
@@ -244,7 +252,7 @@
         }
       }
       &--oakenBucketBrown{
-        svg {
+        svg,img {
           color: $color-oakenBucketBrown;
         }
         &:after {
@@ -252,7 +260,7 @@
         }
       }
       &--bellTowerBrick{
-        svg {
+        svg,img {
           color: $color-bellTowerBrick;
         }
         &:after {
@@ -260,7 +268,7 @@
         }
       }
       &--mackeyOrange{
-        svg {
+        svg,img {
           color: $color-mackeyOrange;
         }
         &:after {
@@ -268,7 +276,7 @@
         }
       }
       &--yellowWalk{
-        svg {
+        svg,img {
           color: $color-yellowWalk;
         }
         &:after {
@@ -276,7 +284,7 @@
         }
       }
       &--fountainRunTeal{
-        svg {
+        svg,img {
           color: $color-fountainRunTeal;
         }
         &:after {
@@ -284,7 +292,7 @@
         }
       }
       &--pappysPurple{
-        svg {
+        svg,img {
           color: $color-pappysPurple;
         }
         &:after {
@@ -382,6 +390,10 @@
       svg {
         color: $color-gray70;
         font-size: 3.25rem;
+      }
+      img{
+        color: $color-gray70;
+        height:52px;
       }
       h2 {
         position: relative;
