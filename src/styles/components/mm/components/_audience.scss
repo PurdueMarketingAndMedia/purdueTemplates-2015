@@ -129,8 +129,10 @@
             
     img {
       height:72px;
+      margin-bottom: 2.5rem;
       @include display-md {
         height:56px;
+        margin-bottom: 1rem;
       }
     }
       svg {
