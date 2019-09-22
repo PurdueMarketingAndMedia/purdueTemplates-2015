@@ -210,7 +210,7 @@ iframe{
     }
     &__side-content{
         margin: 0.625rem 0 1.5625rem 0;
-        button{
+        .button{
             width:100%;
             @include display-sm{
                 width: auto;
