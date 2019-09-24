@@ -2,7 +2,7 @@
   <section class="header__goldBar container">
     <div class="header__goldBar--inner">
       <button aria-haspopup="true" class="header__goldBar--moButton" aria-expanded="false" >
-        <i class="fas fa-bars"></i>&nbsp;
+        <i class="fas fa-bars" aria-hidden="true"></i>&nbsp;
         Quick Links
       </button>
       <section class="header__goldBar--menus">
@@ -38,7 +38,8 @@
         </ul>
       </nav>
       </section>
-      <a class="header__goldBar__search" aria-haspopup="true" aria-expanded="false"><i class="fas fa-search"></i></a>
+      <button class="header__goldBar__search" aria-haspopup="true" aria-expanded="false"><i class="fas fa-search" aria-hidden="true"></i></button>
+      <span class="sr-only">Search</span>
       <section id="searchDropdown" class='header__goldBar__search--dropdown'>
         <div class='header__goldBar__search--container'>
           <div class="form-group">
@@ -103,8 +104,10 @@
   </section>
   <section class="header__signature container">
     <section class="header__signature--inner">
-      <a class="header__signature--logo" id="purdueLogo" href="#" aria-label="Purdue Logo">
-        <object data="https://www.purdue.edu/purdue/images/logo.svg" tabindex='-1' type="image/svg+xml" aria-labelledby="purdueLogo"></object>
+      <a class="header__signature--logo" id="purdueLogo" href="https://www.purdue.edu" aria-label="Purdue Logo">
+        <div>
+          <object data="https://www.purdue.edu/purdue/images/logo.svg" tabindex='-1' type="image/svg+xml" aria-labelledby="purdueLogo"></object>
+        </div>
       </a>
       <article class="header__signature--siteName">
         <a id="siteName" href="#">{{site-name}}</a>
@@ -118,55 +121,46 @@
   </section>
   <nav class="header__mainNav container">
     <button id="mainNavMo" aria-haspopup="true" aria-expanded="false" >
-      <i class="fas fa-bars"></i>
+      <i class="fas fa-bars" aria-hidden="true"></i>
       Menu
     </button>
     <section class="header__mainNav--main">
       <ul role='menubar' aria-label="Main Navigation">
         <li role="none"><a role='menuitem' href="#">Home</a></li>
-        <li role="none"><a role="menuitem" aria-haspopup="true" aria-expanded="false" class="dropdown-button" href="#">About Us <span>&#9660;</span></a>
+        <li role="none"><a role="menuitem" aria-haspopup="true" aria-expanded="false" class="dropdown-button" href="/html/mm/templates/college/college-mixed.html">College<span>&#9660;</span></a>
           <ul role='menu' class="header__mainNav--dropdownOuter">
-            <li role="none"><a role='menuitem' href="#">Services</a></li>
-            <li role="none"><a role='menuitem' href="#">Portfolio</a></li>
+            <li role="none"><a role='menuitem' href="/html/mm/templates/college/college-mixed.html">Mixed Tiles Example</a></li>
+            <li role="none"><a role='menuitem' href="/html/mm/templates/college/college-test.html">Big tile Example</a></li>
             <li role="none">
-              <a role="menuitem" aria-haspopup="true" aria-expanded="false" class="dropdown-button--inner dropdown-button" href="#">Resources test long title <span>&#9656;</span></a>
+              <a role="menuitem" aria-haspopup="true" aria-expanded="false" class="dropdown-button--inner dropdown-button" href="/html/mm/templates/college/college-audience-1.html">Audience Tiles<span>&#9656;</span></a>
               <ul role='menu' class="header__mainNav--dropdownInner">
-                <li role="none"><a role='menuitem' href="#">Services</a></li>
-                <li role="none"><a role='menuitem' href="#">Portfolio</a></li>
-                <li role="none"><a role='menuitem' href="#">Resources</a></li>
+                <li role="none"><a role='menuitem' href="/html/mm/templates/college/college-audience-1.html">Audience Tiles Example 1</a></li>
+                <li role="none"><a role='menuitem' href="/html/mm/templates/college/college-audience-2.html">Audience Tiles Example 2</a></li>
               </ul>
             </li>
-            <li role="none"><a role="menuitem" aria-haspopup="true" aria-expanded="false" class="dropdown-button--inner dropdown-button" href="#">Contact <span>&#9656;</span></a>
+            <li role="none"><a role="menuitem" aria-haspopup="true" aria-expanded="false" class="dropdown-button--inner dropdown-button" href="/html/mm/templates/college/college-news-1.html">News Tiles<span>&#9656;</span></a>
               <ul role='menu' class="header__mainNav--dropdownInner">
-                <li role="none"><a role='menuitem' href="#">Services</a></li>
-                <li role="none"><a role='menuitem' href="#">Portfolio</a></li>
-                <li role="none"><a role='menuitem' href="#">Resources</a></li>
+                <li role="none"><a role='menuitem' href="/html/mm/templates/college/college-news-1.html">News Tiles Example 1</a></li>
+                <li role="none"><a role='menuitem' href="/html/mm/templates/college/college-news-2.html">News Tiles Example 2</a></li>
               </ul>
             </li>
           </ul>
         </li>
-        <li role="none"><a role="menuitem" aria-haspopup="true" aria-expanded="false" class="dropdown-button" href="#">Services <span>&#9660;</span></a>
+        <li role="none"><a role="menuitem" aria-haspopup="true" aria-expanded="false" class="dropdown-button" href="/html/mm/templates/office/office-tiles-2.html">Department/Office<span>&#9660;</span></a>
           <ul role='menu' class="header__mainNav--dropdownOuter">
-            <li role="none"><a role='menuitem' href="#">Services</a></li>
-            <li role="none"><a role='menuitem' href="#">Portfolio</a></li>
-            <li role="none"><a role='menuitem' href="#">Resources test long title</a></li>
-            <li role="none">
-              <a role="menuitem" aria-haspopup="true" aria-expanded="false" class="dropdown-button--inner dropdown-button" href="#">Contact 2 <span>&#9656;</span></a>
-              <ul role='menu' class="header__mainNav--dropdownInner">
-                <li role="none"><a role='menuitem' href="#">Services</a></li>
-                <li role="none"><a role='menuitem' href="#">Portfolio</a></li>
-                <li role="none"><a role='menuitem' href="#">Resources</a></li>
-              </ul>
-            </li>
+            <li role="none"><a role='menuitem' href="/html/mm/templates/office/office-tiles-2.html">Department/Office 2 tiles</a></li>
+            <li role="none"><a role='menuitem' href="/html/mm/templates/office/office-tiles-3.html">Department/Office 3 tiles</a></li>
+            <li role="none"><a role='menuitem' href="/html/mm/templates/office/office-tiles-4.html">Department/Office 4 tiles</a></li>
           </ul>
         </li>
-        <li role="none"><a role='menuitem' href="#">Portfolio</a></li>
-        <li role="none"><a role='menuitem' href="#">Resources</a></li>
-        <li role="none"><a role="menuitem" aria-haspopup="true" aria-expanded="false" class="dropdown-button" href="#">Contact <span>&#9660;</span></a>
+        <li role="none"><a role='menuitem' href="/html/mm/templates/audience.html">Audience</a></li>
+        <li role="none"><a role='menuitem' href="/html/mm/templates/content.html">Content</a></li>
+        <li role="none"><a role='menuitem' href="/html/mm/templates/blank.html">Blank</a></li>
+        <li role="none"><a role="menuitem" aria-haspopup="true" aria-expanded="false" class="dropdown-button" href="/html/mm/templates/accordion.html">Web Components<span>&#9660;</span></a>
           <ul role='menu' class="header__mainNav--dropdownOuter">
-            <li role="none"><a role='menuitem' href="#">Services</a></li>
-            <li role="none"><a role='menuitem' href="#">Portfolio</a></li>
-            <li role="none"><a role='menuitem' href="#">Resources</a></li>
+            <li role="none"><a role='menuitem' href="/html/mm/templates/components/accordion.html">Accordion</a></li>
+            <li role="none"><a role='menuitem' href="/html/mm/templates/components/button.html">Button</a></li>
+            <li role="none"><a role='menuitem' href="/html/mm/templates/components/typography.html">Typography</a></li>
           </ul>
         </li>
       </ul>

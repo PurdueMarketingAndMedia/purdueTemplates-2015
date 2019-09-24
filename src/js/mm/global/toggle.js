@@ -24,11 +24,10 @@ const toggle = (e) => {
     switch (true) {
         case checkClassName(clicked, 'accordion__heading--footer'): // specifically footer accordion
             document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
-                console.log(el)
                 const contentId = el.getAttribute('aria-controls');
-                let icons = el.querySelectorAll('svg');
-                let plusIcon = el.querySelector('.fa-plus');
-                let minusIcon = el.querySelector('.fa-minus');
+                let icons = el.querySelectorAll('.accordion__icon');
+                let plusIcon = el.querySelector('.accordion__icon__plus');
+                let minusIcon = el.querySelector('.accordion__icon__minus');
                 const content = document.querySelector('#' + contentId);
                 const currAttr = getCurrDisplay(content)
                 if (el.getAttribute('aria-expanded') && el !== clicked) {
@@ -41,6 +40,7 @@ const toggle = (e) => {
                         setTimeout(() => {
                             hideFooter(content)
                             content.removeAttribute('state-animating')
+                            
                         }, 200)
                     }
                 } else if (el === clicked){
@@ -69,6 +69,36 @@ const toggle = (e) => {
                     }
                 }
             })          
+            break
+            case checkClassName(clicked, 'accordion__heading'): // accordion
+                const contentId = clicked.getAttribute('aria-controls');
+                let icons = clicked.querySelectorAll('.accordion__icon');
+                const content = document.querySelector('#' + contentId);
+                const currAttr = getCurrDisplay(content)
+                const expanded = clicked.getAttribute('aria-expanded') === "false" ? true : false;
+                clicked.setAttribute('aria-expanded', expanded);
+                if (currAttr && currAttr === 'flex' && content.getAttribute('state-animating') === null) {
+                    icons.forEach((icon) => {
+                        swapIcon(icon)
+                    })
+                    content.style.height = 0;
+                    content.setAttribute('state-animating', 'true')
+                    setTimeout(() => {
+                        hideFooter(content)
+                        content.removeAttribute('state-animating')
+                    }, 200)
+                } else if (content.getAttribute('state-animating') === null) {
+                    icons.forEach((icon) => {
+                        swapIcon(icon)
+                    })
+                    showFooter(content);
+                    content.setAttribute('state-animating', 'true')
+                    setTimeout(() => {
+                        content.removeAttribute('state-animating')
+                        content.style.height = 'auto'
+                    }, 200)
+                    content.style.height = content.scrollHeight + "px";
+                }     
             break
         case checkClassName(clicked, 'header__goldBar--moButton'): // specifically gold bar mobile menu
             const goldBarContent = document.querySelector('.header__goldBar--menus')
@@ -251,13 +281,33 @@ const show = function (elem) {
 };
 // Hide an footer element
 const hideFooter = function (elem) {
-    elem.classList.add('hide');
-    elem.classList.remove('show');
+    if(elem.classList){
+        elem.classList.add('hide');
+        elem.classList.remove('show');
+    }else if(elem.nodeName === "svg"){
+        if(elem.getAttribute('class').indexOf('hide') <= -1){
+            elem.setAttribute('class', elem.getAttribute('class') + ' hide');
+        }
+        if(elem.getAttribute('class').indexOf('show') > -1){
+            elem.setAttribute('class', elem.getAttribute('class').replace('show', ''));
+        }        
+    }
+
 };
 // show an footer element
 const showFooter = function (elem) {
-    elem.classList.add('show');
-    elem.classList.remove('hide');
+    if(elem.classList){
+        elem.classList.add('show');
+        elem.classList.remove('hide');
+    }else if(elem.nodeName === "svg"){
+        if(elem.getAttribute('class').indexOf('show') <= -1){
+            elem.setAttribute('class', elem.getAttribute('class') + ' show');
+        }
+        if(elem.getAttribute('class').indexOf('hide') > -1){
+            elem.setAttribute('class', elem.getAttribute('class').replace('hide', ''));
+        }        
+    }
+
 };
 // add selected class to element
 const select = function (elem) {
@@ -304,12 +354,12 @@ document.querySelectorAll('.accordion__content--footer').forEach((el) => {
         hideFooter(el);
     }
 });
-document.querySelectorAll('.accordion__heading--footer>svg.fa-plus').forEach((el) => {
+document.querySelectorAll('.accordion__heading--footer>.accordion__icon__plus').forEach((el) => {
     if (width < 768) {
         showFooter(el)
     }
 });
-document.querySelectorAll('.accordion__heading--footer>svg.fa-minus').forEach((el) => {
+document.querySelectorAll('.accordion__heading--footer>.accordion__icon__minus').forEach((el) => {
     if (width < 768) {
         hideFooter(el)
     }
@@ -388,13 +438,15 @@ const toggleInnerDropdownListeners = (addListeners) => {
 }
 
 const assignListeners = () => {
-    document.addEventListener('click', (e) => {
-        e = e.target
-        if (e.classList && e.classList.contains('accordion__heading')) {
+    document.addEventListener('click', (event) => {
+        e = event.target
+        if (e.classList && e.classList.contains('accordion__heading--footer')) {
             let width = document.body.clientWidth;
             if (width <= 768) {
                 toggle(e);
             }
+        } else if (e.classList && e.classList.contains('accordion__heading')) {
+            toggle(e);
         } else if (
             e.classList && (
                 (
@@ -408,6 +460,7 @@ const assignListeners = () => {
                 )
             )
         ) {
+            event.preventDefault()
             toggle(e)
         } else {
             toggle(e)
@@ -426,7 +479,7 @@ let resizeTimer
 window.addEventListener('resize', () => {
     const width = document.body.clientWidth;
 
-    const resetLg = [...document.querySelectorAll('.footer__resources--column>h3>button>svg'), ...document.querySelectorAll('.accordion__content--footer'), document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner')]
+    const resetLg = [document.querySelector('.header__goldBar--menus'), document.querySelector('.header__goldBar--inner')]
 
     const resetSm = [document.querySelector('#findInfoFor'), document.querySelector('#searchDropdown')]
     
@@ -439,13 +492,23 @@ window.addEventListener('resize', () => {
     }else if (width < 768) {
         resetStyles(resetSm)
     }
-
-    document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
+     document.querySelectorAll('.accordion__heading--footer').forEach((el) => {
         let content = document.querySelector('#' + el.getAttribute('aria-controls'));
+        let icons = el.querySelectorAll('.accordion__icon');
         const currAttr = window.getComputedStyle(content).getPropertyValue('display');
         if (width >= 768) {
             el.setAttribute('aria-expanded', true);
             el.setAttribute('aria-disabled', true);
+            icons.forEach((el) => {
+                if(el.getAttribute('class').indexOf('hide') > -1){
+                    el.setAttribute('class', el.getAttribute('class').replace('hide', ''));
+                }   
+                if(el.getAttribute('class').indexOf('show') > -1){
+                    el.setAttribute('class', el.getAttribute('class').replace('show', ''));
+                }             
+            });
+            content.classList.remove('hide', 'show')
+            content.removeAttribute('style');
         } else if (currAttr === "flex") {
             el.setAttribute('aria-expanded', true);
             el.setAttribute('aria-disabled', false);

@@ -1,0 +1,10 @@
+<section class="college__tiles">
+  {{#each tiles}}
+    <a href="#" class="college__tile college__tile--{{this.type}} {{#this.color}}college__tile--{{../type}}--{{color}}{{/this.color}} size-lg-{{this.lg-size}} loc-lg-{{this.lg-loc}} size-md-{{this.md-size}} loc-md-{{this.md-loc}} size-sm-{{this.sm-size}} loc-sm-{{this.sm-loc}} size-mo-{{this.mo-size}} loc-mo-{{this.mo-loc}}" {{#this.bg-image}}style="background-image:url({{link}}); background-position: center; background-size: cover;"{{/this.bg-image}}>
+      {{#this.icon}}<i class="{{../this.icon}}" aria-hidden="true"></i>{{/this.icon}}
+      <span>
+      {{this.text}}
+      </span>
+    </a>
+  {{/each}}
+</section>

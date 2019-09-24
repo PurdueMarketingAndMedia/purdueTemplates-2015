@@ -1,5 +1,7 @@
+var path = require('path')
+
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   module: {
     rules: [
       {
@@ -13,5 +15,12 @@ module.exports = {
         }
       }
     ]
+  },
+  entry: {
+    'mm/templates/main': './src/js/mm/main.js'
+  },
+  output: {
+    path: path.resolve(__dirname, 'builds/js'),
+    filename: '[name].js'
   }
 }

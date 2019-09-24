@@ -1,18 +1,23 @@
 $block:button;
 .#{$block}{
-	display:inline-block;
-	display:inline-flex;
+	// display:inline-block;
+	display:flex;
 	flex-direction:row;
 	flex-wrap:nowrap;
 	justify-content:center;
 	align-items:stretch;
+	line-height:1.5;
 	&::before,&::after{
 		content:'';
-		display:block;
-		flex-grow:1;
-		flex-shrink:1;
-		flex-basis:10px;
+		display:flex;
+		flex: 1;
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			flex-grow: 1;
+			flex-shrink: 1;
+			flex-basis: auto;
+		}
 		width:calc-toRem(calc-ratioLgMd(62));
+	
 	}
 	&::before{
 		order:0;
@@ -66,7 +71,7 @@ $block:button;
 		padding-right:0;
 		outline-style:none;
 		&::before,&::after{
-			width:calc-toRem(calc-ratioLgMd(38));
+			width:calc-toRem(calc-ratioLgMd(41.5));
 		}
 		&:link,&:visited{
 			outline-style:none;
@@ -324,6 +329,9 @@ $block:button;
 		& > *, &.fa::before{
 			transition:color, transform 0.1s;
 		}
+		&.svg,&.i{
+			font-size: 2.54rem;
+		}
 	}
 	@media (min-width:1200px){
 		padding:calc-toRem(10) 2px;
@@ -340,7 +348,7 @@ $block:button;
 		&-icon{
 			padding-right:0;
 			&::before,&::after{
-				width:calc-toRem(40);
+				width:calc-toRem(42.5);
 			}
 		}
 		&-wide{
@@ -368,6 +376,9 @@ $block:button;
 		&__icon{
 			margin:calc-toRem(-10) 0;
 			padding:0 calc-toRem(10);
+			&.svg,&.i{
+				font-size: 2.94rem;
+			}
 		}
 	}
 	@media (min-width:768px) and (max-width:991px){
@@ -379,7 +390,7 @@ $block:button;
 		&-icon{
 			padding-right:0;
 			&::before,&::after{
-				width:calc-toRem(43);
+				width:calc-toRem(45.5);
 			}
 		}
 		&-wide{
@@ -409,6 +420,9 @@ $block:button;
 		&__icon{
 			margin:calc-toRem(-10) 0;
 			padding:0 calc-toRem(10);
+			&.svg,&.i{
+				font-size: 2.94rem;
+			}
 		}
 	}
 	@media (max-width:767px){
@@ -426,8 +440,9 @@ $block:button;
 		&-icon{
 			padding-right:0;
 			&::before,&::after{
-				width:calc-toRem(38);
+				width:calc-toRem(40.5);
 			}
+
 		}
 		&-wide{
 			&::before,&::after{
@@ -456,6 +471,55 @@ $block:button;
 		&__icon{
 			margin:calc-toRem(-10) 0;
 			padding:0 calc-toRem(10);
+			&.svg,&.i{
+				font-size: 2.94rem;
+			}
 		}
 	}
 }
+.buttons{
+	width:100%;
+	line-height: 1.5;
+}
+.button-group{
+	width: 100%;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	&.button-group--background{
+		background-image:url('https://placeimg.com/767/300/nature'); 
+		background-size:cover; 
+		background-position:top center;
+	}
+	&.button-group--border{
+		border: 1px solid black;
+		overflow: auto;
+	}
+}
+
+.col-25{
+display: flex;
+flex-basis:25%;
+padding:0.6rem;
+@include display-md{
+	flex-basis:50%;
+}
+@include display-sm{
+	flex-basis:100%;
+}
+}
+.col-50{
+display: flex;
+flex-basis:50%;
+padding: 0.6rem;
+@include display-sm{
+	flex-basis:100%;
+}
+}
+.col-100{
+display: flex;
+flex-basis:100%;
+padding: 0.6rem;
+}
+
