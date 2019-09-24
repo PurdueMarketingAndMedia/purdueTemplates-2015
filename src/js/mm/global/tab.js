@@ -12,7 +12,7 @@ const tab = (e) => {
         bu.classList.remove('active');
     })
     e.classList.add('active');
-    activeContent.classList.add('fadeIn');
+    activeContent.classList.add('fadeIn');    
 }
 //find closest parent
 let getClosest = function (e, selector) {
@@ -23,8 +23,9 @@ let getClosest = function (e, selector) {
 };
 
 document.addEventListener('click', (e) => {
+    e.preventDefault();
     e = e.target;
-    if (e.classList && e.classList.contains('tabs__button')){
+    if (e.classList && e.classList.contains('tabs__button')){        
         tab(e);
     }
 }

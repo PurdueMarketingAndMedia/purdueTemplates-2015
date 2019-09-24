@@ -64,6 +64,10 @@
     height:100%;
     display:flex;
     flex-direction:column;
+    @include display-sm {
+      grid-row: 3/4;
+      grid-column: 1/2;
+    }
     &__header{
       list-style-type: none;
       display:flex;
