@@ -207,7 +207,7 @@
           flex-direction: row;
           justify-content: flex-start;
           align-items: flex-end;
-          svg {
+          svg,img {
             margin: 0 0.5rem 0 0;
           }
         }
@@ -217,7 +217,7 @@
           flex-direction: column;
           justify-content: flex-end;
           align-items: flex-start;
-          svg {
+          svg,img {
             margin: 0 0 0.5rem 0;
           }
         }
@@ -231,7 +231,7 @@
           flex-direction: row;
           justify-content: flex-start;
           align-items: flex-end;
-          svg {
+          svg,img {
             margin: 0 0.5rem 0 0;
           }
         }
@@ -241,7 +241,7 @@
           flex-direction: column;
           justify-content: flex-end;
           align-items: flex-start;
-          svg {
+          svg,img {
             margin: 0 0 0.5rem 0;
           }
         }
@@ -255,7 +255,7 @@
           flex-direction: row;
           justify-content: flex-start;
           align-items: flex-end;
-          svg {
+          svg,img {
             margin: 0 0.5rem 0 0;
           }
         }
@@ -265,7 +265,7 @@
           flex-direction: column;
           justify-content: flex-end;
           align-items: flex-start;
-          svg {
+          svg,img {
             margin: 0 0 0.5rem 0;
           }
         }
@@ -279,7 +279,7 @@
           flex-direction: row;
           justify-content: flex-start;
           align-items: flex-end;
-          svg {
+          svg,img {
             margin: 0 0.5rem 0 0;
           }
         }
@@ -289,7 +289,7 @@
           flex-direction: column;
           justify-content: flex-end;
           align-items: flex-start;
-          svg {
+          svg,img {
             margin: 0 0 0.5rem 0;
           }
         }
@@ -313,88 +313,93 @@
       margin-bottom: 0.5rem;
       font-size: 2rem;
     }
+    img{
+      margin-bottom: 0.5rem;
+      height: 32px;
+      align-self:flex-start;
+    }
     &--campusGold{
-      svg {
+      svg,img {
         color: $color-campusGold;
       }
     }
     &--headlineGold{
-      svg {
+      svg,img {
         color: $color-headlineGold;
       }
     }
     &--coalGray{
-      svg {
+      svg,img {
         color: $color-coalGray;
       }
     }
     &--moonDustGray{
-      svg {
+      svg,img {
         color: $color-moonDustGray;
       }
     }
     &--everTrueBlue{
-      svg {
+      svg,img {
         color: $color-everTrueBlue;
       }
     }
     &--slayterSkyBlue{
-      svg {
+      svg,img {
         color: $color-slayterSkyBlue;
       }
     }
     &--ameliaSkyBlue{
-      svg {
+      svg,img {
         color: $color-ameliaSkyBlue;
       }
     }
     &--landGrantGreen{
-      svg {
+      svg,img {
         color: $color-landGrantGreen;
       }
     }
     &--rossAdeGreen{
-      svg {
+      svg,img {
         color: $color-rossAdeGreen;
       }
     }
     &--celeryBogGreen{
-      svg {
+      svg,img {
         color: $color-celeryBogGreen;
       }
     }
     &--springFestGreen{
-      svg {
+      svg,img {
         color: $color-springFestGreen;
       }
     }
     &--oakenBucketBrown{
-      svg {
+      svg,img {
         color: $color-oakenBucketBrown;
       }
     }
     &--bellTowerBrick{
-      svg {
+      svg,img {
         color: $color-bellTowerBrick;
       }
     }
     &--mackeyOrange{
-      svg {
+      svg,img {
         color: $color-mackeyOrange;
       }
     }
     &--yellowWalk{
-      svg {
+      svg,img {
         color: $color-yellowWalk;
       }
     }
     &--fountainRunTeal{
-      svg {
+      svg,img {
         color: $color-fountainRunTeal;
       }
     }
     &--pappysPurple{
-      svg {
+      svg,img {
         color: $color-pappysPurple;
       }
     }

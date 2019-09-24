@@ -1,7 +1,6 @@
 const tab = (e) => {
     let clicked = e;
     let parent = getClosest(clicked, "tabs")   
-    console.log(parent)    
     let contents = parent.querySelectorAll(".tabs__content");
     let buttons = parent.querySelectorAll(".tabs__button");
     let activeId = clicked.href.split("#").pop();
