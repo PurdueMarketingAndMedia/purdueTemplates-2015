@@ -52,7 +52,69 @@
       {{/each}}
     </section>
     {{/equals}}    
+    {{#equals type 'tabs'}}
 
+    <section class="tabs office__tabs">
+      <ul class="office__tabs__header">
+        <li>
+          <a href="#tab1" class="tabs__button active">Lorem</a>
+        </li>
+          <li>
+          <a href="#tab2" class="tabs__button">Ipsum</a>
+        </li>
+          <li>
+          <a href="#tab3" class="tabs__button">Dolor</a>
+        </li>
+      </ul>
+       <section class="tabs__content fadeIn office__tabs__content" id="tab1">
+            <h2 class="heading-3">Lorem</h2>
+            <p>Dolor sit amet, consectetur adipisicing elit. Earum saepe natus aliquid iusto nisi nam molestias qui numquam ipsum quam suscipit aut</p>
+            <ul>
+                <li>Lorem ipsum dolor sit.</li>
+                <li>Et assumenda optio adipisci.</li>
+                <li>Asperiores enim magni, aut!</li>
+                <li>Ipsa sit quisquam, ipsam.</li>
+            </ul>
+            <p>Minus alias non recusandae facere nemo repellendus eum quae! Porro, laboriosam enim nulla nihil harum similique recusandae, assumenda, dolorem delectus eligendi nesciunt asperiores, quis quos quisquam! Quam, modi</p>
+        </section>
+        <section class="tabs__content office__tabs__content" id="tab2">
+            <h2 class="heading-3">Ipsum</h2>
+           <ol>
+                <li>Lorem ipsum dolor sit amet, consectetur.</li>
+                <li>Culpa hic cupiditate voluptatem quibusdam, ratione.</li>
+                <li>Temporibus minus provident accusantium quaerat molestiae.</li>
+                <li>Dicta illo voluptatem aliquid, fugiat earum!</li>
+                <li>Expedita sapiente delectus natus necessitatibus sint.</li>
+            </ol>
+        </section>
+        <section class="tabs__content office__tabs__content" id="tab3">
+            <h2 class="heading-3">Dolor</h2>
+           <ul>
+                <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing.</a>
+                </li>
+                <li><a href="#">Odio quaerat numquam tempore, debitis atque aspernatur.</a>
+                </li>
+                <li><a href="#">Tempore voluptates, laborum possimus maxime, ducimus eveniet!</a>
+                </li>
+                <li><a href="#">Facere delectus perspiciatis exercitationem molestiae. Voluptatum, quod.</a>
+                </li>
+                <li><a href="#">Accusamus, voluptatibus beatae nesciunt accusantium. Nobis, iste.</a>
+                </li>
+                <li><a href="#">Aliquam pariatur, voluptate, deleniti alias culpa dicta.</a>
+                </li>
+                <li><a href="#">Accusamus nam architecto vel repellat accusantium magnam.</a>
+                </li>
+                <li><a href="#">Non atque tenetur facilis beatae pariatur, tempora.</a>
+                </li>
+                <li><a href="#">Corrupti, nihil, sunt saepe hic ab totam?</a>
+                </li>
+                <li><a href="#">Voluptate nostrum animi, ab culpa dicta reiciendis.</a>
+                </li>
+            </ul>
+       </section>
+    </section>
+
+    {{/equals}} 
     <section class="office__feature-buttons">
       {{#each buttons}}
         <a href="{{this.link}}" class="button button-gray15 button-slim button-wide">{{this.text}}</a>
