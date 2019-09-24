@@ -101,7 +101,7 @@
       opacity:0;
       background-color:#eee;
       transition: opacity 0.2s ease;
-      .heading-3{
+      h2:first-child,h3:first-child,h4:first-child,h5:first-child,h6:first-child{
         margin-top:0;
       }
     }
