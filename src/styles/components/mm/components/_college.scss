@@ -69,7 +69,7 @@
     }
     &--audience {
       background-repeat: repeat;
-      background-image: url("https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png");  
+      background-image: url("https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png");
       &--campusGold{
         svg {
           color: $color-campusGold;
@@ -259,6 +259,11 @@
           font-size: 1.75rem;
           margin-bottom: 0.5rem;
         }
+        .img-icon {
+          width: 1.75rem;
+          height: auto;
+          margin-bottom: 0.5rem;
+        }
         &.college__tile--news {
           color: white;
           background-repeat: repeat;
@@ -284,6 +289,11 @@
         }
         svg {
           font-size: 2.375rem;
+          margin-bottom: 2.25rem;
+        }
+        .img-icon {
+          width: 2.375rem;
+          height: auto;
           margin-bottom: 2.25rem;
         }
         &.college__tile--audience {
@@ -321,6 +331,11 @@
           font-size: 2.375rem;
           margin-bottom: 2.25rem;
         }
+        .img-icon {
+          width: 2.375rem;
+          height: auto;
+          margin-bottom: 2.25rem;
+        }
         &.college__tile--audience {
           color: white;
         }
@@ -356,6 +371,11 @@
           font-size: 2.375rem;
           margin-bottom: 2.25rem;
         }
+        .img-icon {
+          width: 2.375rem;
+          height: auto;
+          margin-bottom: 2.25rem;
+        }
         &.college__tile--audience {
           color: white;
         }
@@ -387,6 +407,9 @@
             top: -1rem;
           }
         }
+        .img-icon {
+          display: none;
+        }
         &.college__tile--news {
           color: black !important;
           svg {
@@ -410,6 +433,9 @@
         grid-row-end: span 3;
         z-index: 1;
         padding: 0;
+        .img-icon {
+          display: none;
+        }
         &.college__tile--news {
           svg {
             display: none;
@@ -446,6 +472,9 @@
         grid-row-end: span 5;
         z-index: 1;
         padding: 0;
+        .img-icon {
+          display: none;
+        }
         &.college__tile--news {
           svg {
             display: none;
@@ -482,6 +511,7 @@
         grid-row-end: span 7;
         z-index: 1;
         padding: 0;
+        display: none;
         &.college__tile--news {
           svg {
             display: none;
@@ -524,6 +554,11 @@
           order: 2;
           font-size: 4.7rem;
         }
+        .img-icon {
+          width: 4.7rem;
+          height: auto;
+          order: 2;
+        }
         span {
           order: 1;
           align-self: flex-end;
@@ -556,6 +591,9 @@
         grid-row-end: span 3;
         z-index: 1;
         padding: 0;
+        .img-icon {
+          display: none;
+        }
         &.college__tile--news {
           svg {
             display: none;
@@ -592,6 +630,9 @@
         grid-row-end: span 5;
         z-index: 1;
         padding: 0;
+        .img-icon {
+          display: none;
+        }
         &.college__tile--news {
           svg {
             display: none;
@@ -628,6 +669,9 @@
         grid-row-end: span 7;
         z-index: 1;
         padding: 0;
+        .img-icon {
+          display: none;
+        }
         &.college__tile--news {
           svg {
             display: none;
@@ -670,6 +714,11 @@
           order: 2;
           font-size: 4.7rem;
         }
+        .img-icon {
+          width: 4.7rem;
+          height: auto;
+          order: 2;
+        }
         span {
           order: 1;
           align-self: flex-end;
@@ -702,6 +751,9 @@
         grid-row-end: span 3;
         z-index: 1;
         padding: 0;
+        .img-icon {
+          display: none;
+        }
         &.college__tile--news {
           svg {
             display: none;
@@ -738,6 +790,9 @@
         grid-row-end: span 5;
         z-index: 1;
         padding: 0;
+        .img-icon {
+          display: none;
+        }
         &.college__tile--news {
           svg {
             display: none;
@@ -774,6 +829,9 @@
         grid-row-end: span 7;
         z-index: 1;
         padding: 0;
+        .img-icon {
+          display: none;
+        }
         &.college__tile--news {
           svg {
             display: none;
@@ -819,6 +877,11 @@
             font-size: 2.125rem;
             margin-bottom: 1.7rem;
           }
+          .img-icon {
+            width: 2.125rem;
+            height: auto;
+            margin-bottom: 1.7rem;
+          }
           span {
             &:before {
               top: -1rem;
@@ -832,6 +895,11 @@
             font-size: 2.125rem;
             margin-bottom: 1.7rem;
           }
+          .img-icon {
+            width: 2.125rem;
+            height: auto;
+            margin-bottom: 1.7rem;
+          }
           span {
             &:before {
               top: -1rem;
@@ -843,6 +911,11 @@
           font-size: 1.5rem;
           svg {
             font-size: 2.125rem;
+            margin-bottom: 1.7rem;
+          }
+          .img-icon {
+            width: 2.125rem;
+            height: auto;
             margin-bottom: 1.7rem;
           }
           span {
@@ -987,11 +1060,20 @@
           svg {
             font-size: 2rem;
           }
+          .img-icon {
+            width: 2rem;
+            height: auto;
+          }
         }
         &-1x2 {
           font-size: 1.75rem;
           svg {
             font-size: 2.375rem;
+            margin-bottom: 2.25rem;
+          }
+          .img-icon {
+            width: 2.375rem;
+            height: auto;
             margin-bottom: 2.25rem;
           }
           span {
@@ -1007,6 +1089,11 @@
             font-size: 2.375rem;
             margin-bottom: 2.25rem;
           }
+          .img-icon {
+            width: 2.375rem;
+            height: auto;
+            margin-bottom: 2.25rem;
+          }
           span {
             &:before {
               width: 3.125rem;
@@ -1018,6 +1105,11 @@
           font-size: 1.75rem;
           svg {
             font-size: 2.375rem;
+            margin-bottom: 2.25rem;
+          }
+          .img-icon {
+            width: 2.375rem;
+            height: auto;
             margin-bottom: 2.25rem;
           }
           span {
