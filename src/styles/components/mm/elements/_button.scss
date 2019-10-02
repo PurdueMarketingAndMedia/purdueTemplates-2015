@@ -1,7 +1,6 @@
 $block:button;
 .#{$block}{
-	// display:inline-block;
-	display:flex;
+	display:inline-flex;
 	flex-direction:row;
 	flex-wrap:nowrap;
 	justify-content:center;
