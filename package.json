@@ -7,17 +7,18 @@
         "html:prod": "NODE_ENV=production node html-render.js",
         "scss:dev": "NODE_ENV=development node styles-render.js",
         "scss:prod": "NODE_ENV=production node styles-render.js",
-        "js": "npx webpack",
+        "js:dev": "npx webpack --env.prod=false",
+        "js:prod": "npx webpack --env.prod",
         "serve": "browser-sync builds --directory -w -b Firefox",
-        "preserve": "run-p html:dev scss:dev js",
+        "preserve": "run-p html:dev scss:dev js:dev",
         "watch": "run-p watch:*",
         "watch:scss": "onchange 'src/**/*.scss' -- npm run scss:dev",
-        "watch:js": "onchange 'src/**/*.js' -- npm run js",
+        "watch:js": "onchange 'src/**/*.js' -- npm run js:dev",
         "watch:json": "onchange 'src/**/*.json' -- npm run html:dev",
         "watch:handlebars": "onchange 'src/**/*.handlebars' -- npm run html:dev",
-        "dev:noserve": "run-p scss:dev js html:dev",
+        "dev:noserve": "run-p scss:dev js:dev html:dev",
         "dev": "run-p serve watch",
-        "prod": "run-p html:prod scss:prod js"
+        "prod": "run-p html:prod scss:prod js:prod"
     },
     "repository": {
         "type": "git",
