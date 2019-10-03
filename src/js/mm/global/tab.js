@@ -22,11 +22,11 @@ let getClosest = function (e, selector) {
 	return null;
 };
 
-document.addEventListener('click', (e) => {
-    e.preventDefault();
-    e = e.target;
-    if (e.classList && e.classList.contains('tabs__button')){        
+let tabButton = [...document.querySelectorAll('.tabs__button')]
+tabButton.forEach((bu) => {
+    bu.addEventListener('click', (e) =>{
+        e.preventDefault();
+        e = e.target;
         tab(e);
-    }
-}
-)
+    })
+})
