@@ -5,5 +5,4 @@ node_modules
 builds/html
 builds/styles
 builds/js
-builds/production
 new_builds
