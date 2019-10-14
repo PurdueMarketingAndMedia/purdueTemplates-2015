@@ -51,7 +51,7 @@ module.exports = env => {
     }
   }
 
-  console.log(env.prod ? 'Running production js build 🚀' : 'Running development js build 🛠')
+  console.log(env.prod === true ? 'Running production js build 🚀' : 'Running development js build 🛠')
 
-  return env.prod ? prodConfig : devConfig
+  return env.prod === true ? prodConfig : devConfig
 }
