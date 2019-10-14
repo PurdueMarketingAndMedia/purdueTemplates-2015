@@ -1,22 +1,15 @@
-//components
-@import "../../../components/mm/settings/color";
-@import "../../../components/mm/settings/font";
-@import "../../../components/mm/tools/breakpoints";
-@import "../../../components/mm/tools/calculations";
-@import "../../../components/mm/tools/math";
-@import "../../../components/mm/tools/maxin-headings";
-@import "../../../components/mm/generic/normalize";
-@import "../../../components/mm/generic/base";
-@import "../../../components/mm/generic/skipto";
-@import "../../../components/mm/elements/headings";
-@import "../../../components/mm/elements/button";
-@import "../../../components/mm/elements/quotes";
-@import "../../../components/mm/objects/container";
-@import "../../../components/mm/objects/row";
+@import "../../../components/mm/settings/all";
+
+@import "../../../components/mm/tools/all";
+
+@import "../../../components/mm/generic/all";
+
+@import "../../../components/mm/elements/all";
+
+@import "../../../components/mm/objects/all";
+
 @import "../../../components/mm/components/header";
 @import "../../../components/mm/components/footer";
 @import "../../../components/mm/components/audience";
-@import "../../../components/mm/utilities/hide";
-@import "../../../components/mm/utilities/show";
-@import "../../../components/mm/utilities/selected";
-@import "../../../components/mm/utilities/sr-only";
+
+@import "../../../components/mm/utilities/all";
