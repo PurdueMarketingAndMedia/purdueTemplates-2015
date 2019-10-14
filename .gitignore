@@ -2,5 +2,8 @@
 .vscode
 node_modules
 .tmp
-builds
+builds/html
+builds/styles
+builds/js
+builds/production
 new_builds
