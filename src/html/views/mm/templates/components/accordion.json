@@ -2,7 +2,7 @@
   "head": {
     "title": "Accordion examples",
     "description": "This is an example of v2.0.0 of the accordion.",
-    "css": "../../../../styles/mm/templates/content-accordion.css"  
+    "css": "../../../../styles/mm/templates/content-content.css"  
   },
   "body": {
     "main-js": "../../../../js/mm/templates/main.js"
