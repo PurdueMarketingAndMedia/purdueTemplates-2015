@@ -1,4 +1,5 @@
 var path = require('path')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = env => {
   const devConfig = {
@@ -23,7 +24,10 @@ module.exports = env => {
     output: {
       path: path.resolve(__dirname, 'builds/js'),
       filename: '[name].js'
-    }
+    },
+    // plugins: [
+    //   new BundleAnalyzerPlugin()
+    // ]
   }
 
   const prodConfig = {
@@ -48,7 +52,10 @@ module.exports = env => {
     output: {
       path: path.resolve(__dirname, 'builds/production/js'),
       filename: '[name].js'
-    }
+    },
+    // plugins: [
+    //   new BundleAnalyzerPlugin()
+    // ]
   }
 
   console.log(env.prod === true ? 'Running production js build 🚀' : 'Running development js build 🛠')
