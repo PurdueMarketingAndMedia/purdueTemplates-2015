@@ -1,0 +1,24 @@
+.show{
+    display:block !important;
+    &.accordion__content {
+        display: flex !important;
+    }
+    &.accordion__content--footer {
+        display: flex !important;
+    }
+    &.header__goldBar--menus {
+        display: flex !important;
+    }
+    &.header__mainNav--dropdownOuter {
+        display: flex !important;
+    }
+    &.header__mainNav--dropdownInner {
+        display: flex !important;
+    }
+    &.header__goldBar__search--dropdown {
+        display: flex !important;
+    }
+    &.header__mainNav--main {
+        display: flex !important;
+    }
+}

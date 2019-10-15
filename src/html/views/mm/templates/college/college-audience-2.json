@@ -1,0 +1,101 @@
+{
+  "head": {
+    "title": "College Homepage Template",
+    "description": "This is an example of v2.0.0 of the college homepage page template.",
+    "css": "../../../../styles/mm/templates/content-college.css"  
+  },
+  "body": {
+    "main-js": "../../../../js/mm/templates/main.js"
+  },
+  "college-template": {
+    "site-name": "College Template",
+    "site-tagline": {
+      "title": "Purdue Web Templates",
+      "link": "https://www.purdue.edu/brand/applications/web-templates/index.php"
+    },
+    "feature-links": [
+      {
+        "text": "Lorem Ipsum"
+      },
+      {
+        "text": "Dolor Sit"
+      },
+      {
+        "text": "Amet Consectetur"
+      }
+    ],
+    "tiles": [
+      {
+        "type": "audience",
+        "text": "4x1 Audience Tile",
+        "color": {"color": "ameliaSkyBlue"},
+        "icon": "far fa-newspaper",
+        "lg-size": "4x1",
+        "lg-loc": "a-1",
+        "md-size": "4x1",
+        "md-loc": "a-1",
+        "sm-size": "4x1",
+        "sm-loc": "a-1",
+        "mo-size": "2x1",
+        "mo-loc": "a-1"
+      },
+      {
+        "type": "audience",
+        "text": "3x1 Audience Tile",
+        "color": {"color": "ameliaSkyBlue"},
+        "icon": "far fa-newspaper",
+        "lg-size": "3x1",
+        "lg-loc": "a-2",
+        "md-size": "3x1",
+        "md-loc": "a-2",
+        "sm-size": "3x1",
+        "sm-loc": "a-2",
+        "mo-size": "2x1",
+        "mo-loc": "a-2"
+      },
+      {
+        "type": "audience",
+        "text": "2x2 Audience Tile",
+        "bg-image": {
+          "link": "https://www.purdue.edu/brand/images/web-templates/placeholders/college_tile-audience-2x2.jpg"
+        },
+        "lg-size": "2x2",
+        "lg-loc": "a-3",
+        "md-size": "2x2",
+        "md-loc": "a-3",
+        "sm-size": "2x2",
+        "sm-loc": "a-3",
+        "mo-size": "2x2",
+        "mo-loc": "a-3"
+      },
+      {
+        "type": "audience",
+        "text": "1x2 Audience Tile",
+        "color": {"color": "ameliaSkyBlue"},
+        "icon": "far fa-newspaper",
+        "lg-size": "1x2",
+        "lg-loc": "c-3",
+        "md-size": "1x2",
+        "md-loc": "c-3",
+        "sm-size": "1x2",
+        "sm-loc": "c-3",
+        "mo-size": "1x2",
+        "mo-loc": "a-5"
+      },
+      {
+        "type": "audience",
+        "text": "1x3 Audience Tile",
+        "color": {"color": "ameliaSkyBlue"},
+        "icon": "far fa-newspaper",
+        "lg-size": "1x3",
+        "lg-loc": "d-2",
+        "md-size": "1x3",
+        "md-loc": "d-2",
+        "sm-size": "1x3",
+        "sm-loc": "d-2",
+        "mo-size": "1x2",
+        "mo-loc": "b-5"
+      }
+    ]
+  }
+}

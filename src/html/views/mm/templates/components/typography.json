@@ -1,0 +1,20 @@
+{
+  "head": {
+    "title": "Typography examples",
+    "description": "This is an example of v2.0.0 of the typography.",
+    "css": "../../../../styles/mm/templates/content-content.css"  
+  },
+  "body": {
+    "main-js": "../../../../js/mm/templates/main.js"
+  },
+  "content-typography": {
+    "site-name": "Typography examples",
+    "site-tagline": {
+      "title": "Purdue Web Templates",
+      "link": "https://www.purdue.edu/brand/applications/web-templates/index.php"
+    },
+    "side-nav": {
+      "type": "components"
+    }
+  }
+}

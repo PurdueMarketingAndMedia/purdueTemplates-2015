@@ -1,0 +1,18 @@
+.nav{
+	&-skipto{
+		position:absolute;
+		bottom:100%;
+		display:inline-block;
+		padding:10px 20px;
+		z-index:2;
+		background-color:#000;
+		border:solid 1px $color-campusGold;
+		&:link,&:visited,&:hover,&:active{
+			color:#fff;
+		}
+		&:focus{
+			bottom:initial;
+			top:0;
+		}
+	}
+}

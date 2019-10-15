@@ -1,0 +1,179 @@
+.footer{
+    @media only print {
+        display: none;
+    }
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    font-family: $font-arial;
+    line-height:1.5rem;
+    p{
+        margin-bottom: 0;
+    }
+    &__resources{
+        background-color:#000000;
+        display:flex;
+        flex:1 1 auto;
+        justify-content: center;
+        &__columns{
+            display:flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            max-width:1140px;
+            width: 1140px;
+            flex:1 1 auto;
+            padding: 1.5rem 0;
+            @include display-lg {
+                max-width:940px;
+                width: 940px;
+            }
+            @include display-md {
+                max-width:750px;
+                width: 750px;
+            }
+            @include display-sm {
+                width: 100%;
+                padding: 0;
+            }
+        }
+        &__column{
+            display:flex;
+            flex-direction:column;
+            box-sizing:border-box;
+            width:20%;
+            padding-right: 1rem;
+            white-space:nowrap;
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-of-type {
+                padding-right: 0;
+            }
+            h3{
+                padding: 0px;
+                margin:0;
+            }
+            .vertical{
+                margin-top:1.6rem;
+                display:flex;
+                width:100%;
+            }
+            .horizontal{
+                margin-top:1.6rem;
+                display:none;
+            }
+            @include display-md {
+                .vertical{
+                    display:none;
+                }
+                .horizontal{
+                    display:flex;
+                    max-width:550px;
+                    margin: 0 auto;
+                    width:100%;
+                }
+            }
+            &__motto{
+                display:flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                @include display-md{
+                    justify-content:center;
+                }
+                a{
+                    width:70%;
+                }
+            }
+            &__social{
+                margin-top:0.625rem;
+                padding-top:0.3rem;
+                border-top: solid 1px #474747;
+                display:flex;
+                flex-direction:row;
+                flex-wrap: wrap;
+                justify-content: start;
+                font-size:1.35rem;
+
+                a{
+                    margin: 0.25rem 2.7%;
+                    color: #999;
+                    font-weight: 700;
+                    text-decoration: none;
+                }
+                a:hover{
+                    color:#ffffff;
+                }
+                @include display-md {
+                    font-size:1.85rem;
+                    justify-content: center;
+                    border:none;
+                }
+                @include display-sm {
+                    margin-top:0;
+                    font-size:1.4rem;
+                }
+                @include display-mo {
+                    padding-top:0;
+                }
+            }
+            @include display-md {
+                width:50%;
+                padding: 1rem;
+                flex:1 0 auto;
+                &:first-child {
+                    padding-left: 1rem;
+                }
+            }
+            @include display-sm {
+                width:100%;
+                padding: 0;
+                border-bottom: solid 1px #474747;
+                &:nth-child(5){         
+                    border: none;
+                }
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:last-child {
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+    &__contact{
+        background-color:#3b3b3b;
+        color:#ccc;
+        text-align:center;
+        font-size:0.625rem;
+        padding:0.625rem 0.9375rem;
+        line-height:1.4;
+
+        &--list{
+            max-width:1140px;
+            margin:0 auto;
+            padding:0 0.9rem;
+            a{
+                color:#ccc; 
+            }
+            a:hover{
+                text-decoration:none;
+            }
+            @include display-lg {
+                max-width:940px;
+                width: 940px;
+            }
+            @include display-md {
+                max-width:750px;
+                width: 750px;
+            }
+            @include display-sm {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+    @include display-sm {
+        line-height:1.875rem;
+  }
+}

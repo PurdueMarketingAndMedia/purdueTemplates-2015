@@ -1,0 +1,20 @@
+{
+  "presets": [
+      [
+          "@babel/preset-env",
+          {
+              "targets": {
+                  "browsers": [
+                      "last 2 versions",
+                      "> 1%"
+                  ]
+              }
+          }
+      ]
+  ],
+  "env": {
+    "production": {
+      "presets": ["minify"]
+    }
+  }
+}

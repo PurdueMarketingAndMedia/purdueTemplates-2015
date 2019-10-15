@@ -1,0 +1,35 @@
+<head>
+    <!-- general meta data Here -->
+  <title>{{head.title}}</title>
+  <meta content="{{head.description}}" name="description"/>
+  <meta content="Marketing and Media" name="author"/>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <link href="https://www.purdue.edu/purdue/images/favicon.ico" rel="shortcut icon" />
+  <link href="https://www.purdue.edu/purdue/images/icon-iphone.png" rel="apple-touch-icon" sizes="76x76" />
+  <link href="https://www.purdue.edu/purdue/images/icon-ipad.png" rel="apple-touch-icon" sizes="76x76" />
+  <link href="https://www.purdue.edu/purdue/images/icon-iphone-retina.png" rel="apple-touch-icon" sizes="120x120" />
+  <link href="https://www.purdue.edu/purdue/images/icon-ipad-retina.png" rel="apple-touch-icon" sizes="152x152" />
+
+  {{!-- fonts --}}
+  <link rel="stylesheet" type="text/css" href="https://www.purdue.edu/purdue/fonts/champion-all.css" />
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700|Archivo+Black" rel="stylesheet"/>
+
+  {{!-- Specific stylesheet --}}
+  <link rel="stylesheet" type="text/css" href="{{head.css}}" />
+
+  {{!-- Other JS --}}
+  {{#head.other-js}}
+    <script src="{{head.other-js}}"></script>
+  {{/head.other-js}}
+
+  {{!-- Font Awesome --}}
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/v4-shims.js" crossorigin="anonymous"></script>
+  <no-script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" crossorigin="anonymous">
+  </no-script>
+</head>

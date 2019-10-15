@@ -1,10 +1,24 @@
 {
     "name": "purduetemplates2015",
-    "version": "1.6.7",
+    "version": "2.0.0",
     "description": "The Purdue University templates created in 2015 by Purdue Marketing and Media.",
-    "main": "gulpfile.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "html:dev": "NODE_ENV=development node html-render.js",
+        "html:prod": "NODE_ENV=production node html-render.js",
+        "scss:dev": "NODE_ENV=development node styles-render.js",
+        "scss:prod": "NODE_ENV=production node styles-render.js",
+        "js:dev": "npx webpack --env.prod=false",
+        "js:prod": "npx webpack --env.prod",
+        "serve": "browser-sync builds --directory -w -b Firefox",
+        "preserve": "run-p html:dev scss:dev js:dev",
+        "watch": "run-p watch:*",
+        "watch:scss": "onchange 'src/**/*.scss' -- npm run scss:dev",
+        "watch:js": "onchange 'src/**/*.js' -- npm run js:dev",
+        "watch:json": "onchange 'src/**/*.json' -- npm run html:dev",
+        "watch:handlebars": "onchange 'src/**/*.handlebars' -- npm run html:dev",
+        "dev:noserve": "run-p scss:dev js:dev html:dev",
+        "dev": "run-p serve watch",
+        "prod": "run-p html:prod scss:prod js:prod"
     },
     "repository": {
         "type": "git",
@@ -17,16 +31,29 @@
     },
     "homepage": "https://github.com/PurdueMarketingAndMedia/purdueTemplates-2015#readme",
     "devDependencies": {
-        "async": "^2.1.5",
+        "@babel/core": "^7.4.3",
+        "@babel/preset-env": "^7.4.3",
         "autoprefixer": "^9.4.7",
-        "gulp": "^3.9.1",
-        "gulp-connect": "^5.7.0",
-        "gulp-file-include": "^2.0.1",
-        "gulp-html-prettify": "0.0.1",
-        "gulp-postcss": "^7.0.1",
-        "gulp-sass": "^4.0.2",
-        "gulp-sourcemaps": "^2.4.0",
-        "postcss-pseudoelements": "^5.0.0"
+        "babel-loader": "^8.0.5",
+        "babel-preset-minify": "^0.5.0",
+        "browser-sync": "^2.26.7",
+        "npm-run-all": "^4.1.5",
+        "onchange": "^5.2.0",
+        "postcss": "^7.0.14",
+        "postcss-pseudoelements": "^5.0.0",
+        "webpack": "^4.30.0",
+        "webpack-bundle-analyzer": "^3.5.2",
+        "webpack-cli": "^3.3.0"
     },
-    "browserslist": "> 5% in my stats"
+    "browserslist": [
+        "last 2 versions",
+        "> 2%"
+    ],
+    "dependencies": {
+        "@babel/polyfill": "^7.4.4",
+        "core-js": "^3.1.4",
+        "handlebars": "^4.1.2",
+        "node-sass": "^4.11.0",
+        "pretty": "^2.0.0"
+    }
 }

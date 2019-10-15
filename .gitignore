@@ -1,3 +1,8 @@
 .DS_Store
+.vscode
 node_modules
 .tmp
+builds/html
+builds/styles
+builds/js
+new_builds

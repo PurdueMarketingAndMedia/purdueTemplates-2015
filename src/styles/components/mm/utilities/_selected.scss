@@ -1,0 +1,30 @@
+.selected {
+  &.dropdown-button {
+    background: #373737;
+    color: white;
+    &>span {
+      color: white;
+    }
+    @include display-md {
+      background: black;
+      color: $color-campusGold;
+      span {
+        color: $color-campusGold;
+      }
+    }
+    &.side-nav{
+      background: #fff;
+      color: #000;
+      &:hover{
+        text-decoration: none;
+      }
+      &:focus{
+        text-decoration: none !important; 
+      }
+      &:before{
+          width: 50%;
+      }
+    }
+  }
+
+}
