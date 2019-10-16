@@ -20,26 +20,6 @@
   {{!-- Specific stylesheet --}}
   <link rel="stylesheet" type="text/css" href="{{head.css}}" />
 
-  {{!-- IE Check to load core-js --}}
-  <script>
-    function isIE() {
-      ua = navigator.userAgent;
-      return ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1; 
-    }
-    function loadCoreJs() {
-      var head = document.getElementsByTagName('head')[0];
-      var js = document.createElement("script");
-
-      js.type = "text/javascript";
-      js.src = "https://cdnjs.cloudflare.com/ajax/libs/core-js/2.6.9/core.min.js";
-
-      head.appendChild(js);
-    }
-    if (isIE()){
-      loadCoreJs()
-    }
-  </script>
-
   {{!-- Other JS --}}
   {{#head.other-js}}
     <script src="{{head.other-js}}"></script>
