@@ -2,25 +2,37 @@
   &__main {
     flex: 0 0 auto;
     width: 32%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     background: $color-gray15;
     padding: 2rem 2rem 0;
     overflow-y: auto;
     overflow-x: hidden;
     height: 34.5rem;
     position: relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display:block;
+    }
     &:after {
       content: "";
       flex: 0 0 2rem;
+      position:relative;
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        position:absolute;
+      }
+      height: 2rem;
     }
     @include display-md {
+      display: flex;
       height: auto;
       overflow-y: unset;
       margin-bottom: 1.25rem;
       width: 100%;
       flex: 1 1 auto;
+      &:after {
+        position:relative;
+      }
     }
     h1 {
       font-size: 1.75rem;
