@@ -14,11 +14,21 @@
 		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       display:block;
     }
+    @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+    { 
+      display:block;
+      padding: 2rem;
+    }
+
     &:after {
       content: "";
       flex: 0 0 2rem;
       position:relative;
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        position:absolute;
+      }
+      @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+      { 
         position:absolute;
       }
       height: 2rem;
