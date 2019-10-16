@@ -459,6 +459,7 @@
           box-sizing: border-box;
           font-size: 1rem;
           padding: 0 0 .5rem 0;
+          flex-wrap: nowrap;
         }
         @include display-sm {
           padding: 0.25rem 1rem;
