@@ -485,6 +485,7 @@
     flex-direction:row;
     justify-content: space-between;
     align-items:flex-start;
+    min-height: 1px;
     @include display-md{
         flex-direction:column;
     }
