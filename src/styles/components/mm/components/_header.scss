@@ -252,7 +252,6 @@
           justify-content: stretch;
           overflow: hidden;
           flex: 1 1 auto;
-          margin-left:auto;
         }
       }
       &:hover {
@@ -260,6 +259,7 @@
       }
       @include display-sm {
         order: 2;
+        margin-left:auto;
       }
     }
     @include display-sm {
