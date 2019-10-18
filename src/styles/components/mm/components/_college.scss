@@ -14,12 +14,11 @@
 		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       display:block;
     }
-    @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+    @media not all and (min-resolution:.001dpcm)
     { 
       display:block;
       padding: 2rem;
     }
-
     &:after {
       content: "";
       flex: 0 0 2rem;
@@ -27,7 +26,7 @@
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
         position:absolute;
       }
-      @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+      @media not all and (min-resolution:.001dpcm)
       { 
         position:absolute;
       }
@@ -40,7 +39,7 @@
       margin-bottom: 1.25rem;
       width: 100%;
       flex: 1 1 auto;
-      @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+      @media not all and (min-resolution:.001dpcm)
       { 
         padding-bottom: 0;
       }
