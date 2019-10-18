@@ -219,6 +219,9 @@ iframe{
                 width: auto;
             }   
         }
+        .imageContainer{
+            min-height:1px;
+        }
     }
     &__main{
         @media only print {
