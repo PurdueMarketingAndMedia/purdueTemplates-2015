@@ -6,7 +6,7 @@
       justify-content: center;
       width: 100%;
       border-top: solid 1px #fff;
-      padding: 0.625rem 1rem;
+      padding: 0.625rem 2.5rem 0.625rem 1rem;
       font-family: $font-archivo-narrow;
       font-size: 1.375rem;
       line-height: 1.1;
@@ -18,7 +18,7 @@
       @include display-lg{
         font-size: 1.14rem;
       }
-      @include display-lg{
+      @include display-sm{
         font-size: 1.375rem;
       }
       &--striped:nth-of-type(even){
