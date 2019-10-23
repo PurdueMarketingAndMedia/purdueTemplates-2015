@@ -9,7 +9,7 @@
         "scss:prod": "NODE_ENV=production node styles-render.js",
         "js:dev": "npx webpack --env.prod=false",
         "js:prod": "npx webpack --env.prod",
-        "serve": "browser-sync builds --directory -w -b Firefox",
+        "serve": "browser-sync builds --directory -w",
         "preserve": "run-p html:dev scss:dev js:dev",
         "watch": "run-p watch:*",
         "watch:scss": "onchange 'src/**/*.scss' -- npm run scss:dev",
@@ -43,7 +43,8 @@
         "postcss-pseudoelements": "^5.0.0",
         "webpack": "^4.30.0",
         "webpack-bundle-analyzer": "^3.5.2",
-        "webpack-cli": "^3.3.0"
+        "webpack-cli": "^3.3.0",
+        "win-node-env": "^0.4.0"
     },
     "browserslist": [
         "last 2 versions",
