@@ -6,7 +6,7 @@
       justify-content: center;
       width: 100%;
       border-top: solid 1px #fff;
-      padding: 0.625rem 1rem;
+      padding: 0.625rem 2.5rem 0.625rem 1rem;
       font-family: $font-archivo-narrow;
       font-size: 1.375rem;
       line-height: 1.1;
@@ -18,51 +18,34 @@
       @include display-lg{
         font-size: 1.14rem;
       }
-      @include display-lg{
+      @include display-sm{
         font-size: 1.375rem;
       }
-      &--striped:nth-of-type(even){
-        background-color: #eeaf15;
-        }
-      &--campusGold{
+      &-campusGold{
         outline-color: #000;
         background-color: #c28e0e;
         color: #000;
-        &--striped:nth-of-type(even){
-            background-color: #eeaf15;
-            }
       }
-      &--black{
+      &-black{
         outline-color: #000;
         background-color: #000;
         color: #fff;
-        &--striped:nth-of-type(even){      
-            background-color: #3b3d3f;
-        }
       }
-      &--everTrueBlue{
+      &-everTrueBlue{
         outline-color: #dedede;
         background-color: #5b6870;
         color: #fff; 
-        &--striped:nth-of-type(even){      
-            background-color: #727a87;
-        }      
+     
       }
-      &--gray40{
+      &-gray40{
         outline-color: #000;
         background-color: #aaa;
-        color: #000; 
-        &--striped:nth-of-type(even){      
-            background-color: #bfbbbb;
-        }      
+        color: #000;      
       }
-      &--gray70{
+      &-gray70{
         outline-color: #dedede;
         background-color: #707070;
         color: #fff;
-        &--striped:nth-of-type(even){      
-            background-color: #7c7e82;
-        }
       }
 
       &:first-child{
@@ -124,7 +107,29 @@
       }
 
     }               
- 
+    &-striped{
+      .accordion__heading{
+        &:nth-of-type(even){
+          background-color: #eeaf15;
+        }
+       
+        &-campusGold:nth-of-type(even){
+            background-color: #eeaf15;
+        }
+        &-black:nth-of-type(even){
+            background-color: #3b3d3f;
+        }
+        &-everTrueBlue:nth-of-type(even){
+          background-color: #727a87;
+        }
+        &-gray40:nth-of-type(even){
+          background-color: #bfbbbb;
+        }          
+        &-gray70:nth-of-type(even){
+          background-color: #7c7e82;
+        }
+      }            
+    }
     &__content{
       overflow: hidden;
       margin: 0;

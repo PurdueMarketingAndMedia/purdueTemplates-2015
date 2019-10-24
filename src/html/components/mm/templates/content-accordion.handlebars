@@ -1,65 +1,146 @@
 {{> header}}
-<main id='accordionTemplate'> 
+<main id='accordionTemplate'>
     <nav class="content__breadcrumb">
         <ul class="row">
             <li><a href="#">Templates</a></li>
             <li><a href="#">Accordion examples</a></li>
         </ul>
-    </nav>    
+    </nav>
     <section class="container container--bg-white content__content">
-        <article  class="row">
-            {{> content-side}} 
+        <article class="row">
+            {{> content-side}}
             <article class="content__main">
                 <h1>Accordion</h1>
-                <section class="accordion">
-                    {{#each accordions}}
-                        {{#if this.striped}}
-                            {{printHeader this.header this.striped}}
-                            <h3>{{this.header}}</h3>
-                            {{#if this.color}}
-                                <button class="accordion__heading accordion__heading--{{this.color}} accordion__heading--{{this.color}}--striped" aria-expanded="false" id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-1">Unordered list<i aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true" class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
-                                {{> unordered-list}}
-                                <button class="accordion__heading accordion__heading--{{this.color}} accordion__heading--{{this.color}}--striped" aria-expanded="false" id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-2">Ordered list<i aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true" class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
-                                {{> ordered-list}}
-                                <button class="accordion__heading accordion__heading--{{this.color}} accordion__heading--{{this.color}}--striped" aria-expanded="false" id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-3">Single Group<i aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true" class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
-                                {{> single-group}}
-                                <button class="accordion__heading accordion__heading--{{this.color}} accordion__heading--{{this.color}}--striped" aria-expanded="false" id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-4">Multiple Group<i aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true" class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
-                                {{> multiple-group}}                      
-                            {{else}}
-                                <button class="accordion__heading accordion__heading--striped" aria-expanded="false" id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-1">Unordered list<i aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true" class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
-                                {{> unordered-list}}
-                                <button class="accordion__heading accordion__heading--striped" aria-expanded="false" id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-2">Ordered list<i aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true" class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
-                                {{> ordered-list}}
-                                <button class="accordion__heading accordion__heading--striped" aria-expanded="false" id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-3">Single Group<i aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true" class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
-                                {{> single-group}}
-                                <button class="accordion__heading accordion__heading--striped" aria-expanded="false" id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-4">Multiple Group<i aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true" class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
-                                {{> multiple-group}}
-                            {{/if}}
-                        {{else}}
-                        {{printHeader this.header this.striped}}
-                        <h3>{{this.header}}</h3>
-                        {{#if this.color}}
-                                <button class="accordion__heading accordion__heading--{{this.color}}" aria-expanded="false" id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-1">Unordered list<i aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true" class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
-                                {{> unordered-list}}
-                                <button class="accordion__heading accordion__heading--{{this.color}}" aria-expanded="false" id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-2">Ordered list<i aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true" class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
-                                {{> ordered-list}}
-                                <button class="accordion__heading accordion__heading--{{this.color}}" aria-expanded="false" id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-3">Single Group<i aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true" class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
-                                {{> single-group}}
-                                <button class="accordion__heading accordion__heading--{{this.color}}" aria-expanded="false" id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-4">Multiple Group<i aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true" class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
-                                {{> multiple-group}}                        
-                            {{else}}
-                                <button class="accordion__heading" aria-expanded="false" id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-1">Unordered list<i aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true" class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
-                                {{> unordered-list}}
-                                <button class="accordion__heading" aria-expanded="false" id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-2">Ordered list<i aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true" class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
-                                {{> ordered-list}}
-                                <button class="accordion__heading" aria-expanded="false" id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-3">Single Group<i aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true" class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
-                                {{> single-group}}
-                                <button class="accordion__heading" aria-expanded="false" id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-4">Multiple Group<i aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true" class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
-                                {{> multiple-group}}
-                            {{/if}}
-                        {{/if}}
-                    {{/each}}
+                {{#each accordions}}
+                {{#if this.striped}}
+                {{printHeader this.header this.striped}}
+                <h3>{{this.header}}</h3>
+                {{#if this.color}}
+                <section class="accordion accordion-striped">
+                    <button
+                        class="accordion__heading accordion__heading-{{this.color}}"
+                        aria-expanded="false" id="accordion{{this.id}}id"
+                        aria-controls="content-{{this.id}}-1">Unordered list<i aria-hidden="true"
+                            class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true"
+                            class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
+                    {{> unordered-list}}
+                    <button
+                        class="accordion__heading accordion__heading-{{this.color}}"
+                        aria-expanded="false" id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-2">Ordered
+                        list<i aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i
+                            aria-hidden="true"
+                            class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
+                    {{> ordered-list}}
+
+                    <button
+                        class="accordion__heading accordion__heading-{{this.color}}"
+                        aria-expanded="false" id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-3">Single
+                        Group<i aria-hidden="true"
+                            class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true"
+                            class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
+                    {{> single-group}}
+
+                    <button
+                        class="accordion__heading accordion__heading-{{this.color}}"
+                        aria-expanded="false" id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-4">Multiple
+                        Group<i aria-hidden="true"
+                            class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true"
+                            class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
+                    {{> multiple-group}}
                 </section>
+                {{else}}
+                <section class="accordion accordion-striped">
+                    <button class="accordion__heading" aria-expanded="false"
+                        id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-1">Unordered list<i
+                            aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i
+                            aria-hidden="true"
+                            class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
+                    {{> unordered-list}}
+
+                    <button class="accordion__heading" aria-expanded="false"
+                        id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-2">Ordered list<i
+                            aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i
+                            aria-hidden="true"
+                            class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
+                    {{> ordered-list}}
+
+                    <button class="accordion__heading" aria-expanded="false"
+                        id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-3">Single Group<i
+                            aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i
+                            aria-hidden="true"
+                            class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
+                    {{> single-group}}
+                    <button class="accordion__heading" aria-expanded="false"
+                        id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-4">Multiple Group<i
+                            aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i
+                            aria-hidden="true"
+                            class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
+                    {{> multiple-group}}
+                </section>
+                {{/if}}
+                {{else}}
+                {{printHeader this.header this.striped}}
+                <h3>{{this.header}}</h3>
+
+                {{#if this.color}}
+                <section class="accordion">
+                    <button class="accordion__heading accordion__heading-{{this.color}}" aria-expanded="false"
+                        id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-1">Unordered list<i
+                            aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i
+                            aria-hidden="true"
+                            class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
+                    {{> unordered-list}}
+
+                    <button class="accordion__heading accordion__heading-{{this.color}}" aria-expanded="false"
+                        id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-2">Ordered list<i
+                            aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i
+                            aria-hidden="true"
+                            class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
+                    {{> ordered-list}}
+
+                    <button class="accordion__heading accordion__heading-{{this.color}}" aria-expanded="false"
+                        id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-3">Single Group<i
+                            aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i
+                            aria-hidden="true"
+                            class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
+                    {{> single-group}}
+
+                    <button class="accordion__heading accordion__heading-{{this.color}}" aria-expanded="false"
+                        id="accordion{{this.id}}id" aria-controls="content-{{this.id}}-4">Multiple Group<i
+                            aria-hidden="true" class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i
+                            aria-hidden="true"
+                            class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
+                    {{> multiple-group}}
+                </section>
+                {{else}}
+                <section class="accordion">
+                    <button class="accordion__heading" aria-expanded="false" id="accordion{{this.id}}id"
+                        aria-controls="content-{{this.id}}-1">Unordered list<i aria-hidden="true"
+                            class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true"
+                            class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
+                    {{> unordered-list}}
+
+                    <button class="accordion__heading" aria-expanded="false" id="accordion{{this.id}}id"
+                        aria-controls="content-{{this.id}}-2">Ordered list<i aria-hidden="true"
+                            class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true"
+                            class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
+                    {{> ordered-list}}
+
+                    <button class="accordion__heading" aria-expanded="false" id="accordion{{this.id}}id"
+                        aria-controls="content-{{this.id}}-3">Single Group<i aria-hidden="true"
+                            class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true"
+                            class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
+                    {{> single-group}}
+
+                    <button class="accordion__heading" aria-expanded="false" id="accordion{{this.id}}id"
+                        aria-controls="content-{{this.id}}-4">Multiple Group<i aria-hidden="true"
+                            class="fa fa-plus-square accordion__icon accordion__icon__plus"></i><i aria-hidden="true"
+                            class="fa fa-minus-square accordion__icon accordion__icon__minus"></i></button>
+                    {{> multiple-group}}
+                </section>
+                {{/if}}
+                {{/if}}
+                {{/each}}
             </article>
         </article>
     </section>
