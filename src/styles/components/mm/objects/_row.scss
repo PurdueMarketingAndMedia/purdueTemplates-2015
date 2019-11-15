@@ -14,9 +14,11 @@
         display: block;
     }
     &--college {
-      justify-content: space-between;
+      justify-content: space-between;      
+      height: 34.5rem;      
       @include display-md {
         flex-direction: column;
+        height: auto; 
       }
       @include display-sm {
         padding: 0 1rem;

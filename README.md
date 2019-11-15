@@ -29,7 +29,15 @@ We use:
 - [Webpack](https://webpack.js.org/) as our main build tool.
 
 ### Setup
-This project uses npm scripts for development workflow and for production builds. To get started, you'll just need to install [Node.js](https://nodejs.org/en/download/) to your machine, then follow steps outlined in the Development and Production Build sections below.
+This project uses npm scripts for development workflow and for production builds. To get started, you'll just need to install [Node.js](https://nodejs.org/en/download/) to your machine.
+
+Once Node is installed and after you have cloned or downloaded the repo to your machine, you'll need to install all the required npm packages by navigating to the directory where you cloned or downloaded the repo in your terminal and run:
+
+```
+npm i
+```
+
+Once all required packages are finished installing, you should be ready to follow steps outlined in the Development and Production Build sections below.
 
 ### Branches
 

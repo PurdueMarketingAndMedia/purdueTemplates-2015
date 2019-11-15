@@ -485,6 +485,7 @@
     flex-direction:row;
     justify-content: space-between;
     align-items:flex-start;
+    min-height: 1px;
     @include display-md{
         flex-direction:column;
     }
@@ -493,7 +494,7 @@
     }
     picture{
       width:56%;
-      display:flex; 
+      display:block; 
       height:auto;
       min-height: 1px;
       flex: 0 1 auto;       

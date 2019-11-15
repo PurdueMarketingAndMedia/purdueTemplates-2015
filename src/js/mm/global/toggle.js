@@ -439,7 +439,7 @@ const toggleInnerDropdownListeners = (addListeners) => {
 
 const assignListeners = () => {
     document.addEventListener('click', (event) => {
-        e = event.target
+        const e = event.target
         if (e.classList && e.classList.contains('accordion__heading--footer')) {
             let width = document.body.clientWidth;
             if (width <= 768) {
