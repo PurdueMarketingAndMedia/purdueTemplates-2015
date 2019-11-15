@@ -126,6 +126,7 @@ h1, h2,h3,h4,h5,h6{
         flex-basis: auto;
         display:flex;
         flex-direction:column;
+        min-height:1px;
         @include display-md{
             width:23%;
             flex-basis: auto;
@@ -258,6 +259,7 @@ h1, h2,h3,h4,h5,h6{
         }
         width:73.5%;
         flex-basis: auto;
+        min-height:1px;
         @include display-md{
             width:73%;
             flex-basis: auto;
