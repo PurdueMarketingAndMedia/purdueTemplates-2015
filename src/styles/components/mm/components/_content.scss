@@ -1,27 +1,26 @@
 h1, h2,h3,h4,h5,h6{
     clear:both;
 }
-
 //image style
 .imageContainer{
     margin: 0.5rem 0; 
     display:flex;  
     flex-direction:column; 
     max-width:100%;
+    img{
+        width:100%;
+        display:flex;
+        flex-shrink:0;
+    }
+    figcaption{
+        display: flex;
+        padding: 0.625rem 0;
+        color: #595959;
+        font-size: 0.875rem;
+        font-style: italic;
+        line-height: 1.5rem;
+    }
 } 
-img{
-    width:100%;
-    display:flex;
-    flex-shrink:0;
-}
-figcaption{
-    display: flex;
-    padding: 0.625rem 0;
-    color: #595959;
-    font-size: 0.875rem;
-    font-style: italic;
-    line-height: 1.5rem;
-}
 
 //video style
 .video{
@@ -34,14 +33,15 @@ figcaption{
     padding-bottom: 56.25%;
     padding-top: 1.5625rem;
     height: 0;
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:100%;
+        height:100%;
+    }
 }
-iframe{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width:100%;
-    height:100%;
-}
+
 //image/video float 
 .left{
     float: left;
@@ -126,6 +126,7 @@ iframe{
         flex-basis: auto;
         display:flex;
         flex-direction:column;
+        min-height:1px;
         @include display-md{
             width:23%;
             flex-basis: auto;
@@ -258,6 +259,7 @@ iframe{
         }
         width:73.5%;
         flex-basis: auto;
+        min-height:1px;
         @include display-md{
             width:73%;
             flex-basis: auto;
@@ -271,5 +273,6 @@ iframe{
         width: 100%;
         margin-bottom: 1.25rem;
     }
+
 
 }
