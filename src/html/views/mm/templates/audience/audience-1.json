@@ -1,0 +1,49 @@
+{
+  "head": {
+    "title": "Audience Page Template",
+    "description": "This is an example of v2.0.0 of the audience page template.",
+    "css": "../../../../styles/mm/templates/content-audience.css"  
+  },
+  "body": {
+    "main-js": "../../../../js/mm/templates/main.js"
+  },
+  "audience-template": {
+    "site-name": "Audience Template",
+    "site-tagline": {
+      "title": "Purdue Web Templates",
+      "link": "https://www.purdue.edu/brand/applications/web-templates/index.php"
+    },
+    "nav": {
+      "depth": "../"
+    },
+    "rows": [
+      {
+        "type": "row-intro"
+      },
+      {
+        "type": "row-featureLinks-two"
+      },
+      {
+        "type": "row-links-three"
+      },
+      {
+        "type": "row-largePhoto"
+      },
+      {
+        "type": "row-multipleImages"
+      },
+      {
+        "type": "row-story"
+      },
+      {
+        "type": "row-events"
+      },
+      {
+        "type": "row-tint"
+      },
+      {
+        "type": "row-twitter"
+      }
+    ]
+  }
+}
