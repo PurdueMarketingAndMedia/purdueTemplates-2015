@@ -3,8 +3,8 @@
   <head>
 
     <!-- general meta data Here -->
-    <title>College Homepage Template</title>
-    <meta content="This is an example of v2.0.0 of the college homepage page template." name="description" />
+    <title>Audience Page Template</title>
+    <meta content="This is an example of v2.0.0 of the audience page template." name="description" />
     <meta content="Marketing and Media" name="author" />
     <meta charset="utf-8" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
@@ -16,7 +16,7 @@
     <link href="https://www.purdue.edu/purdue/images/icon-ipad-retina.png" rel="apple-touch-icon" sizes="152x152" />
     <link rel="stylesheet" type="text/css" href="https://www.purdue.edu/purdue/fonts/champion-all.css" />
     <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700|Archivo+Black" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="../../../../styles/mm/templates/content-college.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../styles/mm/templates/content-audience.css" />
     <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/v4-shims.js" crossorigin="anonymous"></script>
     <no-script>
@@ -136,7 +136,7 @@
             </div>
           </a>
           <article class="header__signature--siteName">
-            <a id="siteName" href="#">College Template</a>
+            <a id="siteName" href="#">Audience Template</a>
             <div id="siteTagline">
               <a href="https://www.purdue.edu/brand/applications/web-templates/index.php">Purdue Web Templates</a>
             </div>
@@ -199,56 +199,234 @@
         </section>
       </nav>
     </header>
-    <main id='collegeTemplate' class="container container--college container--bg-white">
-      <article class="row row--college">
-        <section class="college__main">
-          <h1>College Homepage Example</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus consequat tortor, venenatis fringilla justo feugiat ut. Sed maximus consequat tortor, venenatis fringilla justo feugiat ut. Sed maximus consequat tortor, venenatis fringilla justo feugiat ut. Quisque cursus at lectus id ultrices. Suspendisse mattis fringilla mattis. Morbi tincidunt dictum dolor sit amet cursus. Nullam ultricies purus nec eleifend facilisis. Proin varius id erat a porta.</p>
-          <a href="#" class="button button-hollow button-gray40 button-slim button-wide">Lorem Ipsum</a>
-          <a href="#" class="button button-hollow button-gray40 button-slim button-wide">Dolor Sit</a>
-          <a href="#" class="button button-hollow button-gray40 button-slim button-wide">Amet Consectetur</a>
-        </section>
-        <section class="college__tiles">
-          <a href="#" class="college__tile college__tile--news  size-lg-2x2 loc-lg-a-1 size-md-2x2 loc-md-a-1 size-sm-2x2 loc-sm-a-1 size-mo-2x2 loc-mo-a-1" style="background-image:url(https://www.purdue.edu/brand/images/web-templates/placeholders/college_tile-news-2x2.jpg); background-position: center; background-size: cover;">
-            <span>
-              2x2 News Tile
-              </span>
+    <main id='audienceTemplate'>
+      <style type="text/css">
+        @media (min-width:1200px) {
+          .container--bg-shade {
+            background-image: url("https://www.purdue.edu/brand/images/web-templates/placeholders/audience_intro-lg.jpg");
+          }
+        }
+        @media (min-width:992px) and (max-width:1199px) {
+          .container--bg-shade {
+            background-image: url("https://www.purdue.edu/brand/images/web-templates/placeholders/audience_intro-md.jpg");
+          }
+        }
+        @media (min-width:768px) and (max-width:991px) {
+          .container--bg-shade {
+            background-image: url("https://www.purdue.edu/brand/images/web-templates/placeholders/audience_intro-sm.jpg");
+          }
+        }
+        @media (max-width:767px) {
+          .container--bg-shade {
+            background-image: url("https://www.purdue.edu/brand/images/web-templates/placeholders/audience_intro-xs.jpg");
+          }
+        }
+      </style>
+      <section aria-labelledby="Intro" class="container container--audience-row container--bg-shade">
+        <article class="row row__intro">
+          <i class="fas fa-laptop" aria-hidden="true"></i>
+          <h1>72 ARCHIVO BLACK<span>36 ARCHIVO BLACK</span></h1>
+          <hr>
+          <p>16pt Arial bold with line height of 24pt. This is what the intro paragraph to the section looks
+            like. It can be 2 lines, 3 lines and maybe up to four if really needed. Character count (w/ spaces).
+            Recommended: 150. Max: 300</p>
+        </article>
+      </section>
+      <section aria-labelledby="Featured Links" class="container container--audience-row container--bg-white">
+        <article class="row row__feature-links">
+          <a href="#" class="row__feature-links__button row__feature-links__button--three-column row__feature-links__button--mackeyOrange">
+            <i class="fa fa-flask" aria-hidden="true"></i>
+            <p>28 Pt Narrow Bold and 28 Line height</p>
           </a>
-          <a href="#" class="college__tile college__tile--news  size-lg-2x1 loc-lg-c-1 size-md-2x1 loc-md-c-1 size-sm-2x1 loc-sm-c-1 size-mo-2x1 loc-mo-a-3">
-            <span>
-              2x1 News Tile
-              </span>
+          <a href="#" class="row__feature-links__button row__feature-links__button--three-column row__feature-links__button--pappysPurple">
+            <i aria-hidden="true" class="fas fa-chart-bar"></i>
+            <p>28 Pt Narrow Bold and 28 Line height</p>
           </a>
-          <a href="#" class="college__tile college__tile--audience college__tile--audience--campusGold size-lg-2x1 loc-lg-c-2 size-md-2x1 loc-md-c-2 size-sm-2x1 loc-sm-c-2 size-mo-2x1 loc-mo-a-4">
-            <span>
-              2x1 Audience Tile
-              </span>
+          <a href="#" class="row__feature-links__button row__feature-links__button--three-column row__feature-links__button--rossAdeGreen">
+            <i aria-hidden="true" class="fas fa-calculator"></i>
+            <p>28 Pt Narrow Bold and 28 Line height</p>
           </a>
-          <a href="#" class="college__tile college__tile--audience college__tile--audience--yellowWalk size-lg-1x2 loc-lg-a-3 size-md-1x2 loc-md-a-3 size-sm-1x2 loc-sm-a-3 size-mo-1x2 loc-mo-a-7">
-            <i class="far fa-newspaper" aria-hidden="true"></i>
-            <span>
-              1x2 Audience Tile
-              </span>
-          </a>
-          <a href="#" class="college__tile college__tile--audience college__tile--audience--ameliaSkyBlue size-lg-1x1 loc-lg-b-3 size-md-1x1 loc-md-b-3 size-sm-1x1 loc-sm-b-3 size-mo-1x1 loc-mo-b-7">
-            <i class="far fa-newspaper" aria-hidden="true"></i>
-            <span>
-              1x1 Audience Tile
-              </span>
-          </a>
-          <a href="#" class="college__tile college__tile--audience college__tile--audience--rossAdeGreen size-lg-1x1 loc-lg-b-4 size-md-1x1 loc-md-b-4 size-sm-1x1 loc-sm-b-4 size-mo-1x1 loc-mo-b-8">
-            <i class="far fa-newspaper" aria-hidden="true"></i>
-            <span>
-              1x1 Audience Tile
-              </span>
-          </a>
-          <a href="#" class="college__tile college__tile--audience  size-lg-2x2 loc-lg-c-3 size-md-2x2 loc-md-c-3 size-sm-2x2 loc-sm-c-3 size-mo-2x2 loc-mo-a-5" style="background-image:url(https://www.purdue.edu/brand/images/web-templates/placeholders/college_tile-audience-2x2.jpg); background-position: center; background-size: cover;">
-            <span>
-              2x2 Audience Tile
-              </span>
-          </a>
-        </section>
-      </article>
+        </article>
+      </section>
+      <section aria-labelledby="Links" class="container container--audience-row container--bg-darkGray">
+        <article class="row row__links">
+          <section class="row__links__column row__links__column--four-column">
+            <i aria-hidden="true" class="fas fa-globe-americas"></i>
+            <h2>28 pt Narrow</h2>
+            <ul role="list">
+              <li role="listitem"><a href="#">Arial 16 pt regular</a></li>
+              <li role="listitem"><a href="#">Arial 16 pt regular</a></li>
+              <li role="listitem"><a href="#">Arial 16 pt regular</a></li>
+              <li role="listitem"><a href="#">Arial 16 pt regular</a></li>
+            </ul>
+          </section>
+          <section class="row__links__column row__links__column--four-column">
+            <i aria-hidden="true" class="fas fa-book"></i>
+            <h2>28 pt Narrow</h2>
+            <ul role="list">
+              <li role="listitem"><a href="#">Arial 16 pt regular</a></li>
+              <li role="listitem"><a href="#">Arial 16 pt regular</a></li>
+              <li role="listitem"><a href="#">Arial 16 pt regular</a></li>
+              <li role="listitem"><a href="#">Arial 16 pt regular</a></li>
+            </ul>
+          </section>
+          <section class="row__links__column row__links__column--four-column">
+            <i aria-hidden="true" class="fas fa-gift"></i>
+            <h2>28 pt Narrow</h2>
+            <ul role="list">
+              <li role="listitem"><a href="#">Arial 16 pt regular</a></li>
+              <li role="listitem"><a href="#">Arial 16 pt regular</a></li>
+              <li role="listitem"><a href="#">Arial 16 pt regular</a></li>
+              <li role="listitem"><a href="#">Arial 16 pt regular</a></li>
+            </ul>
+          </section>
+          <section class="row__links__column row__links__column--four-column">
+            <i aria-hidden="true" class="fas fa-briefcase"></i>
+            <h2>28 pt Narrow</h2>
+            <ul role="list">
+              <li role="listitem"><a href="#">Arial 16 pt regular</a></li>
+              <li role="listitem"><a href="#">Arial 16 pt regular</a></li>
+              <li role="listitem"><a href="#">Arial 16 pt regular</a></li>
+              <li role="listitem"><a href="#">Arial 16 pt regular</a></li>
+            </ul>
+          </section>
+        </article>
+      </section>
+      <section aria-labelledby="Story" class="container container--audience-row container--bg-white">
+        <article class="row row__story">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="https://www.purdue.edu/purdue/images/audience/diversity/diversity-650x360.jpg">
+            <source media="(min-width: 992px)" srcset="https://www.purdue.edu/purdue/images/audience/diversity/diversity-535x296.jpg">
+            <source media="(min-width: 767px)" srcset="https://www.purdue.edu/purdue/images/audience/diversity/diversity-720x398.jpg">
+            <source media="(min-width: 481px)" srcset="https://www.purdue.edu/purdue/images/audience/diversity/diversity.jpg">
+            <source srcset="https://www.purdue.edu/purdue/images/audience/diversity/diversity.jpg">
+            <img alt="Group of students wearing paint" src="https://www.purdue.edu/purdue/images/audience/diversity/diversity.jpg">
+          </picture>
+          <section class="row row__story__content">
+            <h2>28 Pt. Archivo Narriow Bold</h2>
+            <p>Arial 16 pt with 24 pt line height. Sit necessitatibus voluptas explicabo sed, at impedit? Repudiandae recusandae veritatis id quam consectetur, vel natus aperiam quibusdam obcaecati qui pariatur illo, et sunt quaerat. Ex eius deserunt distinctio fuga itaque!</p>
+            <p>Sit necessitatibus voluptas explicabo sed, at impedit? Repudiandae recusandae veritatis id quam consectetur, vel natus aperiam quibusdam obcaecati qui pariatur illo, et sunt quaerat. Ex eius deserunt distinctio fuga itaque!</p>
+            <button href="#" class="button button-hollow" target="_blank">Button</button>
+          </section>
+        </article>
+      </section>
+      <section aria-labelledby="MultiImage" class="container container--audience-row container--bg-black">
+        <article class="row row__multiImage">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="https://www.purdue.edu/purdue/images/audience/academics/multipleImagesRow_09-12-2016/academics-image1.png">
+            <source media="(min-width: 992px)" srcset="https://www.purdue.edu/purdue/images/audience/academics/multipleImagesRow_09-12-2016/academics-image1-210x119.png">
+            <source srcset="https://www.purdue.edu/purdue/images/audience/academics/multipleImagesRow_09-12-2016/academics-image1.png">
+            <img alt="students collaborating with faculty member" src="https://www.purdue.edu/purdue/images/audience/academics/multipleImagesRow_09-12-2016/academics-image1.png">
+          </picture>
+          <picture>
+            <source media="(min-width: 1200px)" srcset="https://www.purdue.edu/purdue/images/audience/academics/multipleImagesRow_09-12-2016/academics-image2.jpg">
+            <source media="(min-width: 992px)" srcset="https://www.purdue.edu/purdue/images/audience/academics/multipleImagesRow_09-12-2016/academics-image2-210x119.jpg">
+            <source srcset="https://www.purdue.edu/purdue/images/audience/academics/multipleImagesRow_09-12-2016/academics-image2.jpg">
+            <img alt="students collaborating with faculty member" src="https://www.purdue.edu/purdue/images/audience/academics/multipleImagesRow_09-12-2016/academics-image2.jpg">
+          </picture>
+          <picture>
+            <source media="(min-width: 1200px)" srcset="https://www.purdue.edu/purdue/images/audience/academics/multipleImagesRow_09-12-2016/academics-image3.png">
+            <source media="(min-width: 992px)" srcset="https://www.purdue.edu/purdue/images/audience/academics/multipleImagesRow_09-12-2016/academics-image3-210x119.png">
+            <source srcset="https://www.purdue.edu/purdue/images/audience/academics/multipleImagesRow_09-12-2016/academics-image3.png">
+            <img alt="students collaborating with faculty member" src="https://www.purdue.edu/purdue/images/audience/academics/multipleImagesRow_09-12-2016/academics-image3.png">
+          </picture>
+          <picture>
+            <source media="(min-width: 1200px)" srcset="https://www.purdue.edu/purdue/images/audience/academics/multipleImagesRow_09-12-2016/academics-image4.jpg">
+            <source media="(min-width: 992px)" srcset="https://www.purdue.edu/purdue/images/audience/academics/multipleImagesRow_09-12-2016/academics-image4-210x119.jpg">
+            <source srcset="https://www.purdue.edu/purdue/images/audience/academics/multipleImagesRow_09-12-2016/academics-image4.jpg">
+            <img alt="students collaborating with faculty member" src="https://www.purdue.edu/purdue/images/audience/academics/multipleImagesRow_09-12-2016/academics-image4.jpg">
+          </picture>
+        </article>
+      </section>
+      <style type="text/css">
+        @media (min-width:1200px) {
+          .container--bg-large-photo {
+            background-image: url("https://www.purdue.edu/brand/images/web-templates/placeholders/audience_large-photo-lg.jpg");
+          }
+        }
+        @media (min-width:992px) and (max-width:1199px) {
+          .container--bg-large-photo {
+            background-image: url("https://www.purdue.edu/brand/images/web-templates/placeholders/audience_large-photo-md.jpg");
+          }
+        }
+        @media (min-width:767px) and (max-width:991px) {
+          .container--bg-large-photo {
+            background-image: url("https://www.purdue.edu/brand/images/web-templates/placeholders/audience_large-photo-sm.jpg");
+          }
+        }
+        @media (max-width:768px) {
+          .container--bg-large-photo {
+            background-image: url("https://www.purdue.edu/brand/images/web-templates/placeholders/audience_large-photo-xs.jpg");
+          }
+        }
+      </style>
+      <section aria-labelledby="Large Photo" class="container container--audience-row container--bg-large-photo">
+        <article class="row row__large-photo">
+          <p>24 PT Arial Black</p>
+        </article>
+      </section>
+      <section aria-labelledby="Events" class="container container--audience-row container--bg-events">
+        <article class="row row__events">
+          <h2>Upcoming Events</h2>
+          <section class="row__events__cards">
+            <div class="row__events__card">
+              <p class="event-date">01</p>
+              <p class="event-month">July</p>
+              <a href="#" class="event-content">
+                <p>Building Purdue: 150 Years of the West Lafayette Campus</p>
+                <p>10:00 A.M. - 4:30 P.M. | ASC</p>
+              </a>
+            </div>
+            <div class="row__events__card">
+              <p class="event-date">02</p>
+              <p class="event-month">July</p>
+              <a href="#" class="event-content">
+                <p>HTM Colloquium on Tourism, Health, and the Quality of Life</p>
+                <p>3:00 P.M. - 5:00 P.M. | MARRIOT HALL, ROOM 237</p>
+              </a>
+            </div>
+          </section>
+          <button class="button button-opaque button-light">See All Events</button>
+        </article>
+      </section>
+      <section aria-labelledby="Tint" class="container container--audience-row container--bg-lightGray">
+        <article class="row row__tint">
+          <div class="row__tint__header">
+            <h2>@LifeAtPurdue on Instagram (Tint Feed)</h2>
+            <button class="button" href="https://instagram.com/lifeatpurdue/" target="_blank" rel="noopener">Follow</button>
+          </div>
+          <div class="row__tint__photos">
+            <script async src="https://cdn.hypemarks.com/pages/a5b5e5.js"></script>
+            <div class="tintup" data-id="mm_purdue" data-columns="" data-expand="true" data-count="6" data-paginate="true" data-personalization-id="882168" style="height:500px;width:100%;"></div>
+          </div>
+        </article>
+      </section>
+      <section aria-labelledby="Twitter" class="container container--audience-row container--bg-twitter">
+        <article class="row row__twitter">
+          <section class="row row__twitter__contents">
+            <div class="row row__twitter__content">
+              <p class="header">
+                Purdue University <span>@LifeAtPurdue</span> 21h
+              </p>
+              <p class="retweet">
+                <i class="fas fa-retweet"></i> Retweeted from <a href="https://twitter.com/PurdueToday" target="_blank" rel="noopener">@PurdueToday</a>
+              </p>
+              <p class="text">
+                High school students can earn college credit in one week through a new summer program. <a href="https://t.co/C51EBp7t4L">https://t.co/C51EBp7t4L</a>
+              </p>
+            </div>
+            <div class="row row__twitter__content">
+              <p class="header">
+                Purdue University <span>@LifeAtPurdue</span> 20m
+              </p>
+              <p class="text">
+                Study hard, Boilers! Finals are just around the corner, but we know you've got this.
+              </p>
+            </div>
+          </section>
+          <button class="button" target="_blank" rel="noopener">Follow @LIFEATPURDUE on Twitter</button>
+        </article>
+      </section>
     </main>
     <footer class="footer">
       <section class="footer__resources">

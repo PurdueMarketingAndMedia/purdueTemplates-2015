@@ -1,16 +1,54 @@
 {{> header}}
 <main id='audienceTemplate'>
-    {{> row-intro}} 
-    {{> row-featureLinks}}
-    {{> row-links}}
-    {{> row-largePhoto}}
-    {{> row-multipleImages}}
-    {{> row-story}}
-    {{> row-video}}
-    {{> row-events}}
-    {{> row-news}}
-    {{> row-tint}}
-    {{> row-twitter}}
-    {{> row-instagram}}
+{{#each rows}}
+    {{#equals type "row-intro"}}
+        {{> row-intro}} 
+    {{/equals}}
+    {{#equals type "row-featureLinks-two"}}
+        {{> row-featureLinks-two}}
+    {{/equals}}
+    {{#equals type "row-featureLinks-three"}}
+        {{> row-featureLinks-three}}
+    {{/equals}}
+    {{#equals type "row-featureLinks-four"}}
+        {{> row-featureLinks-four}}
+    {{/equals}}
+    {{#equals type "row-links-two"}}
+        {{> row-links-two}}
+    {{/equals}}
+    {{#equals type "row-links-three"}}
+        {{> row-links-three}}
+    {{/equals}}
+    {{#equals type "row-links-four"}}
+        {{> row-links-four}}
+    {{/equals}}
+    {{#equals type "row-largePhoto"}}
+        {{> row-largePhoto}}
+    {{/equals}}
+    {{#equals type "row-multipleImages"}}
+        {{> row-multipleImages}}
+    {{/equals}}
+    {{#equals type "row-story"}}
+        {{> row-story}}
+    {{/equals}}
+    {{#equals type "row-video"}}
+        {{> row-video}}
+    {{/equals}}
+    {{#equals type "row-events"}}
+        {{> row-events}}
+    {{/equals}}
+    {{#equals type "row-news"}}
+        {{> row-news}}
+    {{/equals}}
+    {{#equals type "row-tint"}}
+        {{> row-tint}}
+    {{/equals}}
+    {{#equals type "row-twitter"}}
+        {{> row-twitter}}
+    {{/equals}}
+    {{#equals type "row-instagram"}}
+        {{> row-instagram}}
+    {{/equals}}
+{{/each}}
 </main>
 {{> footer}}
