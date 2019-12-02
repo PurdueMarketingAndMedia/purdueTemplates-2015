@@ -123,10 +123,17 @@ const toggle = (e) => {
         case checkElement(clicked, '.header__goldBar__findInfoFor button'): // specifically find info for button
             const menu = document.querySelector('#findInfoFor')
             const currDisplayVal = getCurrDisplay(menu)
-            const allDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownOuter'), ...document.querySelectorAll('.header__mainNav--dropdownInner'), document.querySelector('#searchDropdown')]
+            let findInfoSelectedObj = getCurrSelected()
+            let findInfoOutSelectedObj = findInfoSelectedObj.outerSelected
+            let findInfoInSelectedObj = findInfoSelectedObj.innerSelected
+            let findInfoSiSelectedObj = findInfoSelectedObj.sideSelected
+            const allDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownOuter'), ...document.querySelectorAll('.header__mainNav--dropdownInner'), document.querySelector('#searchDropdown'),...document.querySelectorAll('.dropdown-content')]
             allDropdowns.map((checkDropdown) => {
-                if (checkDropdown !== dropdown) {
+                if (checkDropdown !== menu) {
                     hide(checkDropdown)
+                    deselect(findInfoOutSelectedObj)
+                    deselect(findInfoInSelectedObj)
+                    deselect(findInfoSiSelectedObj)
                 }
             })
             if (currDisplayVal !== 'none') {
@@ -179,12 +186,18 @@ const toggle = (e) => {
         case checkClassName(clicked, 'header__goldBar__search'): // search bar
             const searchDropdown = document.querySelector('#searchDropdown')
             const searchDisplayVal = getCurrDisplay(searchDropdown)
-
+            let searchSelectedObj = getCurrSelected()
+            let searchOutSelectedObj = searchSelectedObj.outerSelected
+            let searchInSelectedObj = searchSelectedObj.innerSelected
+            let searchSiSelectedObj = searchSelectedObj.sideSelected
             if( width >=768 ) {
-                const otherDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownOuter'), ...document.querySelectorAll('.header__mainNav--dropdownInner'), document.querySelector('#findInfoFor')]
+                const otherDropdowns = [...document.querySelectorAll('.header__mainNav--dropdownOuter'), ...document.querySelectorAll('.header__mainNav--dropdownInner'), document.querySelector('#findInfoFor'),...document.querySelectorAll('.dropdown-content')]
                 otherDropdowns.map((checkDropdown) => {
                     if (checkDropdown !== dropdown) {
                         hide(checkDropdown)
+                        deselect(searchOutSelectedObj)
+                        deselect(searchInSelectedObj)
+                        deselect(searchSiSelectedObj)
                     }
                 })
                 if (searchDisplayVal !== 'none') {
@@ -243,9 +256,9 @@ const toggle = (e) => {
             break
         default:
             let currSelectedObj = getCurrSelected()
-            const outSelected = currSelectedObj.outerSelected
-            const inSelected = currSelectedObj.innerSelected
-            const siSelected = currSelectedObj.sideSelected
+            let outSelected = currSelectedObj.outerSelected
+            let inSelected = currSelectedObj.innerSelected
+            let siSelected = currSelectedObj.sideSelected
             const allDropdownsDefault = [...document.querySelectorAll('.header__mainNav--dropdownInner'), ...document.querySelectorAll('.header__mainNav--dropdownOuter'), document.querySelector('#findInfoFor')]
             const sideDropdownsDefault = [...document.querySelectorAll('.dropdown-content')]
             deselect(outSelected)
