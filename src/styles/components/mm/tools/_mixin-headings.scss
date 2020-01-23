@@ -7,6 +7,9 @@
 	color: black;
 	font-size: calc-toRem(37);
 	font-weight: 700;
+	@include display-mo-plus {
+		font-size: calc-toRem(30);
+	}
 }
 
 @mixin h2 {
@@ -16,6 +19,9 @@
 	color: $aged-gold;
 	font-size: calc-toRem(32);
 	font-weight: 600;
+	@include display-mo-plus {
+		font-size: calc-toRem(27);
+	}
 }
 
 @mixin h3 {
@@ -25,6 +31,9 @@
 	font-weight: 600;
 	color: black;
 	font-size: calc-toRem(25);
+	@include display-mo-plus {
+		font-size: calc-toRem(22);
+	}
 }
 
 @mixin h4 {
@@ -35,6 +44,9 @@
 	font-weight: 500;
 	color: $steel-gray;
 	font-size: calc-toRem(22);
+	@include display-mo-plus {
+		font-size: calc-toRem(22);
+	}
 }
 
 @mixin h5 {
@@ -45,6 +57,9 @@
 	font-weight: 700;
 	color: $aged-gold;
 	font-size: calc-toEm(22);
+	@include display-mo-plus {
+		font-size: calc-toRem(20);
+	}
 }
 
 @mixin h6 {
