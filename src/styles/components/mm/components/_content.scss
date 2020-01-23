@@ -3,7 +3,7 @@ h1, h2,h3,h4,h5,h6{
 }
 //image style
 .imageContainer{
-    margin: 0.5rem 0; 
+    margin: 0.5rem 0 1.5rem; 
     display:flex;  
     flex-direction:column; 
     max-width:100%;
@@ -15,9 +15,8 @@ h1, h2,h3,h4,h5,h6{
     figcaption{
         display: flex;
         padding: 0.625rem 0;
-        color: #595959;
-        font-size: 0.875rem;
-        font-style: italic;
+        color: black;
+        font-size: calc-toRem(16);
         line-height: 1.5rem;
     }
 } 
@@ -25,8 +24,7 @@ h1, h2,h3,h4,h5,h6{
 //video style
 .video{
     width:100%;
-    margin-top: 0.5rem;
-    margin-bottom: 0.625rem;;
+    margin: 0.5rem 0 1.5rem;
 }
 .videoContainer{
     position: relative;
@@ -272,6 +270,14 @@ h1, h2,h3,h4,h5,h6{
     &__banner{
         width: 100%;
         margin-bottom: 1.25rem;
+    }
+    &__group {
+        p, ul, ol {
+            font-size: calc-toRem(19);
+        }
+        li {
+            padding: 0.35rem 0;
+        }
     }
 
 
