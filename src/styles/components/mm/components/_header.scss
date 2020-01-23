@@ -1,11 +1,12 @@
+$thetransition: all .25s cubic-bezier(1,.25,0,.75) 0s;
 
 .header {
   @media only print {
       display: none;
   }
-  font-family:$font-arial;
+  font-family:$acumin-pro;
   &__goldBar {
-    background: #c28e0e;
+    background: $boiler-gold;
     height: auto;
     display: flex;
     align-items: center;
@@ -60,7 +61,7 @@
       height: auto;
       display: flex;
       align-items: baseline;
-      background: #c28e0e;
+      background: $boiler-gold;
       @include display-sm {
         position: relative;
         left: 0;
@@ -106,7 +107,7 @@
         left: 0;
         width: auto;
         height: auto;
-        background: #c28e0e;
+        background: $boiler-gold;
         display: none;
         flex-direction : column;
         list-style: none;
@@ -206,7 +207,7 @@
       }
     }
     &__search {
-      background-color:#c28e0e;
+      background-color:$boiler-gold;
       border:none;
       svg {
         pointer-events: none;
@@ -218,7 +219,7 @@
       &--dropdown {
         position: absolute;
         right: 0;
-        background: #c28e0e;
+        background: $boiler-gold;
         top: 100%;
         padding: 0.35rem 0.5rem;
         display: none;
@@ -298,15 +299,15 @@
     }
     &--logo {
       position: relative;
-      flex: 0 1 13.5%;
+      flex: 0 1 21.5%;
       display: flex;
-      align-items: center;
       justify-content: flex-start;
       cursor: pointer;
       div {
         width: 100%;
         object {
           width: 100%;
+          height:100%;
           pointer-events: none;
         }
       }
@@ -316,14 +317,14 @@
         height: 125%;
         width: 0.1rem;
         position: absolute;
-        left: 115%;
+        left: 109%;
         top: -10%;
         @include display-lg {
           left: 110%;
           height: 112%;
         }
         @include display-md {
-          left: 115%;
+          left: 113%;
           height: 125%;
           width: 0.15rem;
         }
@@ -333,15 +334,18 @@
         }
       }
       @include display-lg {
-        flex-basis: 21.5%;
+        flex-basis: 26%;
       }
       @include display-md {
-        flex-basis: 20.75%;
+        flex-basis: 27%;
       }
       @include display-sm {
         flex: 1 1 auto;
         height: 100%;
         width: 38%;
+      }
+      @include display-mo-plus {
+        width: 50%;
       }
     }
     &--siteName {
@@ -351,7 +355,6 @@
       justify-content: center;
       flex: 1 1 auto;
       margin-left: 3rem;
-      font-family: $font-archivo-narrow;
       letter-spacing: 0.5px;
       a {
         color: white;
@@ -360,6 +363,8 @@
       #siteName {
         font-size: 1.45rem;
         flex: 0 1 auto;
+        font-family:$acumin-pro-condensed;
+        font-weight:700;
         @include display-md {
           font-size: 1.25rem;
         }
@@ -377,6 +382,7 @@
         font-weight: 100;
         line-height: 1rem;
         color:white;
+        font-family: $acumin-pro-semicondensed;
         @include display-md {
           font-size: 0.75rem;
         }
@@ -400,12 +406,15 @@
     }
   }
   &__mainNav {
-    background-color: #000;
+    background-color: #fff;
     height: auto;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     position: relative;
+    font-family:$acumin-pro-semicondensed;
+    box-shadow: 0px 3px 6px #00000029;
+    text-transform:uppercase;
     button {
       margin: 0;
       padding: 0;
@@ -415,7 +424,7 @@
       background: none;
       border: none;
       font-size: 1rem;
-      color: white;
+      color: #fff;
       position: relative;
       svg {
         pointer-events: none;
@@ -423,6 +432,7 @@
      
       &:hover {
         cursor: pointer;
+        color:$boiler-gold;
       }
       @include display-md {
         width: 720px;
@@ -442,7 +452,39 @@
       position: relative;
       order: 2;
       width: 1140px;
-      padding: 0;
+      padding: 0;  
+      &>ul>li{
+          &>a{
+              &:after{
+                content: "";
+                height: 2px;
+                width: calc(100% - 30.4px);
+                position: absolute;
+                bottom:12px;
+                left: 0.95rem;
+                visibility: hidden;
+                background: $aged-gold;
+                -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+                -webkit-transition: $thetransition;
+                transition: $thetransition;
+              }
+              @include display-md{
+                &:after{
+                  height:0;
+                }
+              }
+          }
+          &:hover{
+            &>a {
+              &:after{
+                visibility: visible;
+                -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+              }
+            }
+          }
+      }
       ul {
         height: auto;
         display: flex;
@@ -480,13 +522,15 @@
             padding: 0.75rem 0.95rem;
             width: 100%;
             height: auto;
-            color: rgb(153, 153, 153);
+            color: #000;
             text-decoration: none;
             font-weight: 400;
             white-space: nowrap;
+            position:relative;
+
             span {
               font-size: 0.5rem;
-              color: rgb(153, 153, 153);
+              color: #000;;
               margin-left: 0.35rem;
               pointer-events: none;
               @include display-md {
@@ -505,14 +549,12 @@
           }
           &:hover {
             &>a {
-              color: white;
               @include display-md {
-                color: #c28e0e;
+                color: $boiler-gold;
               }
               &>span {
-                color: white;
                 @include display-md {
-                  color: #c28e0e;
+                  color: $boiler-gold;
                 }
               }
             }
@@ -542,9 +584,8 @@
     }
     &--dropdownOuter {
       display: none !important;
-      padding: 0.20rem 0 !important;
       position: absolute;
-      background: black;
+      background: #fff;
       width: auto;
       height: auto;
       flex-direction: column;
@@ -552,14 +593,19 @@
       left: 0;
       border-bottom-left-radius: 0.2rem;
       border-bottom-right-radius: 0.2rem;
-      z-index: 2;
+      box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+      text-transform:none;
+      z-index:10;
       li {
         margin: 0 !important;
+        border-top: 2px solid #dbdbdb;
         &>a {
-          padding: 0.1875rem 1.3rem !important;
+          padding: 0.3rem 1.3rem !important;
+          color:$steel-gray !important;
           @include display-md {
             padding-left: 1.3rem;
             padding-right: 1.3rem;
+            color:#fff !important;
           }
           &>span {
             font-size: 0.85rem !important;
@@ -569,9 +615,20 @@
             }
           }
         }
+        &:hover{
+          &>a{
+            background-color: $steam-gray;
+            color:#000 !important;
+            @include display-md {
+              background-color:inherit;
+              color:$boiler-gold !important;
+            }
+          }
+        }
         @include display-md {
           flex-direction: column;
           align-items: flex-start;
+          border-top: none;
         }
       }
       @include display-md {
@@ -585,7 +642,7 @@
       position: absolute;
       left: 99.9%;
       top: 0;
-      background: black;
+      background: #fff;
       flex-direction: column;
       border-radius: 0.2rem;
       @include display-md {
@@ -594,12 +651,16 @@
         left: 0;
         padding: 0.20rem 1.3rem !important;
       }
+      li:first-child {
+        border-top: none;
+      }
     }
     @include display-md {
       align-items: center;
       justify-content: flex-start;
       flex-direction: column;
       background: black;
+      opacity:0.9;
       flex: 1 1 auto;
     }
     @include display-sm {

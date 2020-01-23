@@ -16,17 +16,22 @@
         padding: 1rem 0;
     }
     h1{
-        font-family:$font-archivo-black;
+        font-family:$acumin-pro-semicondensed;
         color:white;
         font-size: 4.5rem; 
         text-transform: uppercase;
         text-align:center;
+        font-weight:700;
+        font-style:italic;
         @include display-sm {
             font-size: 2.5rem;
         }
         span{
             display:block;
             font-size: 2.25rem;
+            font-family:$acumin-pro;
+            font-style:initial;
+            padding-top:0.3rem;
             @include display-sm {
                 font-size: 1.25rem;
             }
@@ -43,6 +48,7 @@
     }
     p{
         font-size:1rem;
+        font-family:$acumin-pro;
         line-height: 1.5;
         font-weight:700;
         max-width:600px;
@@ -72,7 +78,7 @@
       text-decoration: none !important;
       font-weight: 400 !important;
       font-size: 1.75rem;
-      font-family: $font-archivo-narrow;
+      font-family: $acumin-pro-condensed;
       padding-bottom: 1.25rem;
       text-align: center;
       &--two-column{
@@ -163,143 +169,6 @@
         &:after {
           width: 4rem;
           left: calc(50% - 2rem);
-        }
-      }
-      // color settings:
-      &--campusGold{
-        svg,img {
-          color: $color-campusGold;
-        }
-        &:after {
-          background: $color-campusGold;
-        }
-      }
-      &--headlineGold{
-        svg,img {
-          color: $color-headlineGold;
-        }
-        &:after {
-          background: $color-headlineGold;
-        }
-      }
-      &--coalGray{
-        svg,img {
-          color: $color-coalGray;
-        }
-        &:after {
-          background: $color-coalGray;
-        }
-      }
-      &--moonDustGray{
-        svg,img {
-          color: $color-moonDustGray;
-        }
-        &:after {
-          background:  $color-moonDustGray;
-        }
-      }
-      &--everTrueBlue{
-        svg,img {
-          color: $color-everTrueBlue;
-        }
-        &:after {
-          background: $color-everTrueBlue;
-        }
-      }
-      &--slayterSkyBlue{
-        svg,img {
-          color: $color-slayterSkyBlue;
-        }
-        &:after {
-          background: $color-slayterSkyBlue;
-        }
-      }
-      &--ameliaSkyBlue{
-        svg,img {
-          color: $color-ameliaSkyBlue;
-        }
-        &:after {
-          background: $color-ameliaSkyBlue;
-        }
-      }
-      &--landGrantGreen{
-        svg,img {
-          color: $color-landGrantGreen;
-        }
-        &:after {
-          background: $color-landGrantGreen;
-        }
-      }
-      &--rossAdeGreen{
-        svg,img{
-          color: $color-rossAdeGreen;
-        }
-        &:after {
-          background: $color-rossAdeGreen;
-        }
-      }
-      &--celeryBogGreen{
-        svg,img {
-          color: $color-celeryBogGreen;
-        }
-        &:after {
-          background: $color-celeryBogGreen;
-        }
-      }
-      &--springFestGreen{
-        svg,img {
-          color: $color-springFestGreen;
-        }
-        &:after {
-          background: $color-springFestGreen;
-        }
-      }
-      &--oakenBucketBrown{
-        svg,img {
-          color: $color-oakenBucketBrown;
-        }
-        &:after {
-          background: $color-oakenBucketBrown;
-        }
-      }
-      &--bellTowerBrick{
-        svg,img {
-          color: $color-bellTowerBrick;
-        }
-        &:after {
-          background: $color-bellTowerBrick;
-        }
-      }
-      &--mackeyOrange{
-        svg,img {
-          color: $color-mackeyOrange;
-        }
-        &:after {
-          background: $color-mackeyOrange;
-        }
-      }
-      &--yellowWalk{
-        svg,img {
-          color: $color-yellowWalk;
-        }
-        &:after {
-          background: $color-yellowWalk;
-        }
-      }
-      &--fountainRunTeal{
-        svg,img {
-          color: $color-fountainRunTeal;
-        }
-        &:after {
-          background: $color-fountainRunTeal;
-        }
-      }
-      &--pappysPurple{
-        svg,img {
-          color: $color-pappysPurple;
-        }
-        &:after {
-          background: $color-pappysPurple;
         }
       }
     }
@@ -409,6 +278,7 @@
         font-size: 1.75rem;
         text-align: center;
         width:100%;
+        font-family:$acumin-pro-condensed;
         &:after {
           content: "";
           height: 0.1em;
@@ -433,6 +303,7 @@
             text-decoration: none !important;
             color: white !important;
             font-weight: 400 !important;
+            font-family:$acumin-pro;
             &:hover {
               text-decoration: underline !important;
             }
@@ -547,7 +418,7 @@
             margin:0 0 1.25rem 0;
             padding-top:0;
             color:#000;
-            font-family:$font-archivo-narrow;
+            font-family:$acumin-pro-semicondensed;
             font-size:1.75rem;
             font-weight:700;
             @include display-sm{
@@ -576,10 +447,11 @@
       padding-bottom: 1rem;
       margin-top: 0;
       margin-bottom: 3rem;
+      font-family: $acumin-pro-semicondensed;
       &:after {
         content: '';
         position: absolute;
-        background: $color-campusGold;
+        background: #fff;
         width: 6rem;
         height: 0.2rem;
         top: 100%;
@@ -623,7 +495,7 @@
       }
       .event-date {
         grid-area: event-date;
-        background: $color-campusGold;
+        background: $boiler-gold;
         color: black;
         padding: 1.4rem;
         font-size: 1.875rem;
@@ -867,11 +739,11 @@
     height: 10rem;
     p {
       color: white;
-      font-family: $font-archivo-narrow;
+      font-family: $united-sans;
       font-weight: 700;
       font-size: 4rem;
       text-transform: uppercase;
-      text-shadow: 0 0 30px #000;
+      text-shadow: 0px 3px 6px #00000064;
       text-align: center;
       margin: 0;
       @include display-md {
