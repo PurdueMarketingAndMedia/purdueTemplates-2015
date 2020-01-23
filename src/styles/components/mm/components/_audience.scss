@@ -498,6 +498,7 @@
         background: $boiler-gold;
         color: black;
         padding: 1.4rem;
+        font-family: $font-archivo-narrow;
         font-size: 1.875rem;
       }
       .event-month {
@@ -507,6 +508,7 @@
         padding: 1.4rem;
         font-size: 1.5rem;
         text-transform: uppercase;
+        font-family:$united-sans;
       }
       .event-content {
         grid-area: event-content;
