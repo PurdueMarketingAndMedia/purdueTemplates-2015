@@ -80,16 +80,19 @@ h1, h2,h3,h4,h5,h6{
         li{
             font-size:0.75rem;
             font-weight:300;
-            @include display-sm{
+            @include display-sm {
                 font-size:0.85rem;
             }
-            &:not(:first-child)::before{
-                content:"/";
-            display: inline-block;
-            margin:0 0.625rem 0 0.3125rem;
-            @include display-sm{
-                height: 1.6875rem;
+            &:not(:last-child):after {
+                content:" > ";
+                display: inline-block;
+                margin:0 0.625rem 0 0.625rem;
+                @include display-sm{
+                    height: 1.6875rem;
+                }
             }
+            &:last-child {
+                font-weight: 700;
             }
             a{
                 text-decoration:none;
@@ -151,9 +154,10 @@ h1, h2,h3,h4,h5,h6{
                 position:relative;
                 a{
                     text-decoration:none;
+                    font-family: $acumin-pro-semicondensed;
                     font-size:inherit;
-                    font-weight:700;
-                    color:#555;
+                    font-weight: 600;
+                    color:$steel-gray;
                     display:flex;
                     justify-content: space-between;
                     padding: 0.75rem 0;
@@ -163,16 +167,22 @@ h1, h2,h3,h4,h5,h6{
                     }
                 }
                 >a{
-                   &:before{
-                        content: "";
-                        position: absolute;
-                        left: 0px;
-                        bottom: 10px;
-                        display: block;
-                        width: 0;
-                        transition: width 0.15s ease-in;
-                        height: 2px;
-                        background-color: #c28e0e;
+                    &:after {
+                      content: "";
+                      height: 2px;
+                      width: calc(100% - 30.4px);
+                      position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      visibility: hidden;
+                      background: $aged-gold;
+                      transform: scaleX(0);
+                      transition: transform .25s cubic-bezier(1,.25,0,.75) 0s;
+                    }
+                    @include display-md{
+                      &:after{
+                        height:0;
+                      }
                     }
                 }
                 .side-nav{
@@ -180,7 +190,7 @@ h1, h2,h3,h4,h5,h6{
                     padding-right:1.5rem;
                     display:block;
                     position:relative;
-                    &:after{
+                    &:before{
                         content:" \25BC";
                         font-size: 0.5rem;
                         pointer-events: none; 
@@ -193,7 +203,7 @@ h1, h2,h3,h4,h5,h6{
                     }
                     &:hover{
                         text-decoration: underline;
-                        &:after {
+                        &:before {
                             text-decoration: none;
                         }
                     }                   
@@ -201,7 +211,7 @@ h1, h2,h3,h4,h5,h6{
 
                 &:first-child{
                     text-align:center;
-                    background-color:#444;
+                    background-color:$steel-gray;
                     color:#fff;
                     text-transform:uppercase;
                     padding:0.625rem;
@@ -269,7 +279,7 @@ h1, h2,h3,h4,h5,h6{
     }
     &__banner{
         width: 100%;
-        margin-bottom: 1.25rem;
+        margin-bottom: 2rem;
     }
     &__group {
         p, ul, ol {

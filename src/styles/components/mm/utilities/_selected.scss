@@ -6,7 +6,6 @@
       width: calc(100% - 30.4px);
       position: absolute;
       visibility:visible;
-      -webkit-transform: scaleX(1);
       transform: scaleX(1);
       bottom:12px;
       left: 0.95rem;
@@ -31,8 +30,9 @@
       &:focus{
         text-decoration: none !important; 
       }
-      &:before{
-          width: 50%;
+      &:after {
+        left: 0;
+        transform-origin: left;
       }
     }
   }
