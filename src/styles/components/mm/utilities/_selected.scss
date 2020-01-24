@@ -1,4 +1,4 @@
-.selected {
+.selected {  
   &.dropdown-button {
     &:after{
       content: "";
@@ -36,5 +36,29 @@
       }
     }
   }
-
+}
+.header__mainNav--main{
+  &>ul{
+    &>li{
+      &>a.is-active-page{
+        &:after{
+          content: "";
+          height: 2px;
+          width: calc(100% - 30.4px);
+          position: absolute;
+          visibility:visible;
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+          bottom:12px;
+          left: 0.95rem;
+          background: $aged-gold;
+        }
+        @include display-md {
+          &:after{
+            height: 0;
+          }
+        }
+      }
+    } 
+  }
 }
