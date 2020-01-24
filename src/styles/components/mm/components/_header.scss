@@ -412,7 +412,7 @@ $thetransition: all .25s cubic-bezier(1,.25,0,.75) 0s;
     justify-content: center;
     position: relative;
     font-family:$acumin-pro-semicondensed;
-    box-shadow: 0px 3px 6px #00000029;
+    box-shadow: $material-2;
     text-transform:uppercase;
     button {
       margin: 0;
@@ -592,15 +592,15 @@ $thetransition: all .25s cubic-bezier(1,.25,0,.75) 0s;
       left: 0;
       border-bottom-left-radius: 0.2rem;
       border-bottom-right-radius: 0.2rem;
-      box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: $material-2;
       text-transform:none;
       z-index:10;
       li {
         margin: 0 !important;
-        border-top: 2px solid #dbdbdb;
+        border-top: 2px solid $steam-gray;
         &>a {
           padding: 0.3rem 1.3rem !important;
-          color:$steel-gray !important;
+          color: $steel-gray !important;
           @include display-md {
             padding-left: 1.3rem;
             padding-right: 1.3rem;
@@ -639,11 +639,13 @@ $thetransition: all .25s cubic-bezier(1,.25,0,.75) 0s;
     &--dropdownInner {
       display: none;
       position: absolute;
-      left: 99.9%;
+      left: 100%;
       top: 0;
       background: #fff;
       flex-direction: column;
-      border-radius: 0.2rem;
+      border-top-right-radius: 0.2rem;
+      border-bottom-right-radius: 0.2rem;
+      box-shadow: $material-2;
       @include display-md {
         position: relative;
         top: 0;
