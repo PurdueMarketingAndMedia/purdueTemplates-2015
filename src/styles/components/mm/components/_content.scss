@@ -152,9 +152,10 @@ h1, h2,h3,h4,h5,h6{
                 border-bottom: solid 1px #ccc;
                 padding: 0;
                 position:relative;
+                font-family: $acumin-pro-semicondensed;
                 a{
                     text-decoration:none;
-                    font-family: $acumin-pro-semicondensed;
+                    font-family: inherit;
                     font-size:inherit;
                     font-weight: 600;
                     color:$steel-gray;
