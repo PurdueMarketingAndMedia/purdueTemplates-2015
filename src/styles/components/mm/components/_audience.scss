@@ -32,6 +32,7 @@
             font-family:$acumin-pro;
             font-style:initial;
             padding-top:0.3rem;
+            text-transform: none;
             @include display-sm {
                 font-size: 1.25rem;
             }
@@ -499,6 +500,7 @@
         padding: 1.4rem;
         font-family: $united-sans;
         font-size: 1.875rem;
+        letter-spacing: 2.4px;
       }
       .event-month {
         grid-area: event-month;
@@ -508,6 +510,7 @@
         font-size: 1.5rem;
         text-transform: uppercase;
         font-family:$united-sans;
+        letter-spacing: 2.4px;
       }
       .event-content {
         grid-area: event-content;
@@ -521,7 +524,7 @@
         p {
           font-family: $acumin-pro-semicondensed !important;
           font-weight: 400 !important;
-          font-size: 1.5rem;
+          font-size: 1.375rem;
           text-decoration: none !important;
           margin-bottom: 1rem;
           line-height: 1.3;

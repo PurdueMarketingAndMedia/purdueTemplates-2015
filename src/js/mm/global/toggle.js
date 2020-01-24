@@ -552,7 +552,7 @@ const $navbar_items=Array.prototype.slice.call($topnav.querySelectorAll('a'), 0)
 if ($navbar_items.length > 0) {
     $navbar_items.forEach((el)=>{
         const $href=el.getAttribute('href');
-        if($currentpage.includes($href)||$currentpage.includes($href.substring(2))){
+        if(($currentpage.includes($href)||$currentpage.includes($href.substring(2)))){
             if(el.parentElement.parentElement.parentElement.classList.contains('header__mainNav--main')){
                 el.classList.add('is-active-page');
             }else if(el.parentElement.parentElement.classList.contains('header__mainNav--dropdownOuter')){
