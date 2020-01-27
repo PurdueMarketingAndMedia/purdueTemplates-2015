@@ -193,8 +193,9 @@ h1, h2,h3,h4,h5,h6{
                     display:block;
                     position:relative;
                     &:before{
-                        content:" \25BC";
-                        font-size: 0.5rem;
+                        font-family: "Font Awesome 5 Free";
+                        content:"\f078";
+                        font-size: 0.75rem;
                         pointer-events: none; 
                         display:block;
                         float:right;
