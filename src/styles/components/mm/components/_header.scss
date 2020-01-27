@@ -84,6 +84,7 @@ $thetransition: all .25s cubic-bezier(1,.25,0,.75) 0s;
         span {
           font-size: .675rem;
           pointer-events: none;
+          margin-left: 0.25rem;
         }
         &:hover {
           cursor: pointer;
@@ -528,8 +529,8 @@ $thetransition: all .25s cubic-bezier(1,.25,0,.75) 0s;
             position:relative;
 
             span {
-              font-size: 0.5rem;
-              color: #000;;
+              font-size: 0.75rem;
+              color: #000;
               margin-left: 0.35rem;
               pointer-events: none;
               @include display-md {
@@ -607,7 +608,7 @@ $thetransition: all .25s cubic-bezier(1,.25,0,.75) 0s;
             color:#fff !important;
           }
           &>span {
-            font-size: 0.85rem !important;
+            font-size: 0.65rem !important;
             pointer-events: none;
             @include display-md {
               padding-left: 0.5rem;
