@@ -412,8 +412,8 @@ $thetransition: all .25s cubic-bezier(1,.25,0,.75) 0s;
     align-items: center;
     justify-content: center;
     position: relative;
-    font-family:$acumin-pro-semicondensed;
-    box-shadow: $material-2;
+    font-family: $acumin-pro-semicondensed;
+    box-shadow: $material-3;
     text-transform:uppercase;
     button {
       margin: 0;
@@ -593,14 +593,17 @@ $thetransition: all .25s cubic-bezier(1,.25,0,.75) 0s;
       left: 0;
       border-bottom-left-radius: 0.2rem;
       border-bottom-right-radius: 0.2rem;
-      box-shadow: $material-2;
+      box-shadow: $material-3;
       text-transform:none;
       z-index:10;
+      font-family: $acumin-pro;
       li {
         margin: 0 !important;
-        border-top: 2px solid $steam-gray;
+        &:not(:first-child) {
+          border-top: 1px solid $steam-gray;
+        }
         &>a {
-          padding: 0.3rem 1.3rem !important;
+          padding: 0.6rem 1.3rem !important;
           color: $steel-gray !important;
           @include display-md {
             padding-left: 1.3rem;
@@ -617,7 +620,7 @@ $thetransition: all .25s cubic-bezier(1,.25,0,.75) 0s;
         }
         &:hover{
           &>a{
-            background-color: $steam-gray;
+            background-color: #dedede;
             color:#000 !important;
             @include display-md {
               background-color:inherit;
@@ -646,7 +649,7 @@ $thetransition: all .25s cubic-bezier(1,.25,0,.75) 0s;
       flex-direction: column;
       border-top-right-radius: 0.2rem;
       border-bottom-right-radius: 0.2rem;
-      box-shadow: $material-2;
+      box-shadow: $material-3;
       @include display-md {
         position: relative;
         top: 0;
