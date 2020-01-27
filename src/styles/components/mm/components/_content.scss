@@ -15,9 +15,10 @@ h1, h2,h3,h4,h5,h6{
     figcaption{
         display: flex;
         padding: 0.625rem 0;
-        color: black;
+        color: $steel-gray; 
         font-size: calc-toRem(16);
         line-height: 1.5rem;
+        font-style: italic;
     }
 } 
 
@@ -285,6 +286,7 @@ h1, h2,h3,h4,h5,h6{
     &__group {
         p, ul, ol {
             font-size: calc-toRem(19);
+            line-height: 30px;
         }
         li {
             padding: 0.35rem 0;
