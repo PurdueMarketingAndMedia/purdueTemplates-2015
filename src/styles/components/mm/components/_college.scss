@@ -2,7 +2,7 @@
   &__main {
     flex: 0 0 auto;
     width: 32%;
-    background: $color-gray15;
+    background: white;
     padding: 2rem 2rem 0;
     overflow-y: auto;
     overflow-x: hidden;
@@ -48,6 +48,7 @@
       }
     }
     h1 {
+      font-family: $acumin-pro-condensed;
       font-size: 1.75rem;
       line-height: 1.875rem;
     }
