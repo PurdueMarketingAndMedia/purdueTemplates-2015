@@ -245,6 +245,22 @@ $block:button;
 				}
 			}
 		}
+		&-campusGold-inverse {
+			outline-color: $aged-gold;
+			&.button-hollow {
+				&:hover {
+					outline-color: $aged-gold;
+				}
+			}
+			&.button-bar {
+				outline-style: solid;
+				border-bottom-color: $aged-gold;
+				outline-color: $aged-gold;
+				&:hover,&:active,&:focus{
+					outline-color: $aged-gold;
+				}
+			}
+		}
 	}
 	&-light{
 		&:hover,&:active,&:focus{
