@@ -256,9 +256,12 @@ $block:button;
 				outline-style: solid;
 				border-bottom-color: $aged-gold;
 				outline-color: $aged-gold;
-				&:hover,&:active,&:focus{
+				&:hover,&:active,&:focus,&:link{
 					outline-color: $aged-gold;
 				}
+			}
+			&:hover,&:active,&:focus,&:link{
+				outline-color: $aged-gold;
 			}
 		}
 	}
