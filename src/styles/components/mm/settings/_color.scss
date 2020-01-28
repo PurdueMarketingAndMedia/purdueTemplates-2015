@@ -68,14 +68,13 @@ $colorPairs-button:(
 		[hover/focus text color],
 		[icon background color],
 		[at rest icon color],
-		[hover/focus icon color]
+		[hover/focus icon color],
 	)*/
-	campusGold:($color-campusGold,#000,$color-campusGold,#000,#000,#fff,$color-campusGold),
-	campusGold-inverse:(#000,$color-campusGold,#000,$color-headlineGold),
-	black:(#000,#fff,#000,$color-headlineGold,$color-campusGold,#000,#fff),
-	gray15:($color-gray15,#000,$color-gray15,#000),
-	gray40:($color-gray40,#000,$color-gray40,#000),
-	gray70:($color-gray70,#fff,$color-gray70,#000)
+	gray70:(#000,#fff,#000,$aged-gold, $boiler-gold, #000, #000),
+	campusGold:($aged-gold,#fff,$aged-gold,#000,#000,#fff,$aged-gold),
+	campusGold-inverse:($boiler-gold,#000,$aged-gold,#000),
+	black:(#000,$boiler-gold,#000,$aged-gold,$boiler-gold,#000,#000),
+	gray40:($cool-gray,#fff,$cool-gray,#000)
 );
 
 //functions defined by WCAG: https://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef

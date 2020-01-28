@@ -36,9 +36,10 @@ $block:button;
 	outline-offset:-2px;
 	padding:calc-toRem(calc-ratioLgMd(10)) 2px;
 	transition:background-color, outline-color, outline-style, color 0.1s;
-	font-family:$font-archivo-narrow;
+	font-family:$united-sans;
 	font-size:calc-toRem(calc-ratioLgMd(18));
 	font-weight:700;
+	letter-spacing: 1.8px;
 	text-align:center;
 	text-transform:uppercase;
 	&:link,&:visited{
@@ -122,7 +123,7 @@ $block:button;
 			}
 			&-hollow{
 				background-color:transparent;
-				color:nth($pair,2);
+				color:nth($pair,4);
 				&:link,&:visited{
 					background-color:transparent;
 					color:nth($pair,2);
