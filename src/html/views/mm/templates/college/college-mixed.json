@@ -57,7 +57,7 @@
       },
       {
         "type": "audience",
-        "color": {"color": "campusGold"},
+        "color": {"color": "ameliaSkyBlue"},
         "text": "2x1 Audience Tile",
         "lg-size": "2x1",
         "lg-loc": "c-2",
@@ -70,7 +70,7 @@
       },
       {
         "type": "audience",
-        "color": {"color": "yellowWalk"},
+        "color": {"color": "campusGold"},
         "icon": "far fa-newspaper",
         "text": "1x2 Audience Tile",
         "lg-size": "1x2",
@@ -98,7 +98,7 @@
       },
       {
         "type": "audience",
-        "color": {"color": "rossAdeGreen"},
+        "color": {"color": "coalGray"},
         "icon": "far fa-newspaper",
         "text": "1x1 Audience Tile",
         "lg-size": "1x1",

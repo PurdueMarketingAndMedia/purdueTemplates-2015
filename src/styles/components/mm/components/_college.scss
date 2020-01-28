@@ -1,5 +1,6 @@
 .college {
   &__main {
+    box-shadow: $material-2;
     flex: 0 0 auto;
     width: 32%;
     background: white;
@@ -83,7 +84,7 @@
     flex-direction: column;
     text-decoration: none !important;
     justify-content: flex-end;
-    font-family: $font-archivo-narrow;
+    font-family: $acumin-pro-condensed;
     position: relative;
     padding: 1.25rem;
     font-size: 1.75rem;
@@ -94,8 +95,15 @@
       padding: 1.25rem;
     }
     &--audience {
-      background-repeat: repeat;
-      background-image: url("https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png");
+      background: black;
+      svg {
+        color: white;
+      }
+      span {
+        &:before {
+          background-color: white;
+        }
+      }
       &--white{
         svg {
           color: white;
@@ -108,177 +116,177 @@
       }
       &--campusGold{
         svg {
-          color: $color-campusGold;
+          color: $boiler-gold;
         }
         span {
           &:before {
-            background-color: $color-campusGold;
+            background-color: $boiler-gold;
           }
         }
       }
-      &--headlineGold{
-        svg {
-          color: $color-headlineGold;
-        }
-        span {
-          &:before {
-            background-color: $color-headlineGold;
-          }
-        }
-      }
+      // &--headlineGold{
+      //   svg {
+      //     color: $aged-gold;
+      //   }
+      //   span {
+      //     &:before {
+      //       background-color: $aged-gold;
+      //     }
+      //   }
+      // }
       &--coalGray{
         svg {
-          color: $color-coalGray;
+          color: $rush-gold;
         }
         span {
           &:before {
-            background-color: $color-coalGray;
+            background-color: $rush-gold;
           }
         }
       }
       &--moonDustGray{
         svg {
-          color: $color-moonDustGray;
+          color: $field-gold;
         }
         span {
           &:before {
-            background-color: $color-moonDustGray;
+            background-color: $field-gold;
           }
         }
       }
       &--everTrueBlue{
         svg {
-          color: $color-everTrueBlue;
+          color: $dust-gold;
         }
         span {
           &:before {
-            background-color: $color-everTrueBlue;
+            background-color: $dust-gold;
           }
         }
       }
-      &--slayterSkyBlue{
-        svg {
-          color: $color-slayterSkyBlue;
-        }
-        span {
-          &:before {
-            background-color: $color-slayterSkyBlue;
-          }
-        }
-      }
+      // &--slayterSkyBlue{
+      //   svg {
+      //     color: $steel-gray;
+      //   }
+      //   span {
+      //     &:before {
+      //       background-color: $steel-gray;
+      //     }
+      //   }
+      // }
       &--ameliaSkyBlue{
         svg {
-          color: $color-ameliaSkyBlue;
+          color: $cool-gray;
         }
         span {
           &:before {
-            background-color: $color-ameliaSkyBlue;
+            background-color: $cool-gray;
           }
         }
       }
       &--landGrantGreen{
         svg {
-          color: $color-landGrantGreen;
+          color: $railway-gray;
         }
         span {
           &:before {
-            background-color: $color-landGrantGreen;
+            background-color: $railway-gray;
           }
         }
       }
       &--rossAdeGreen{
         svg {
-          color: $color-rossAdeGreen;
+          color: $steam-gray;
         }
         span {
           &:before {
-            background-color: $color-rossAdeGreen;
+            background-color: $steam-gray;
           }
         }
       }
-      &--celeryBogGreen{
-        svg {
-          color: $color-celeryBogGreen;
-        }
-        span {
-          &:before {
-            background-color: $color-celeryBogGreen;
-          }
-        }
-      }
-      &--springFestGreen{
-        svg {
-          color: $color-springFestGreen;
-        }
-        span {
-          &:before {
-            background-color: $color-springFestGreen;
-          }
-        }
-      }
-      &--oakenBucketBrown{
-        svg {
-          color: $color-oakenBucketBrown;
-        }
-        span {
-          &:before {
-            background-color: $color-oakenBucketBrown;
-          }
-        }
-      }
-      &--bellTowerBrick{
-        svg {
-          color: $color-bellTowerBrick;
-        }
-        span {
-          &:before {
-            background-color: $color-bellTowerBrick;
-          }
-        }
-      }
-      &--mackeyOrange{
-        svg {
-          color: $color-mackeyOrange;
-        }
-        span {
-          &:before {
-            background-color: $color-mackeyOrange;
-          }
-        }
-      }
-      &--yellowWalk{
-        svg {
-          color: $color-yellowWalk;
-        }
-        span {
-          &:before {
-            background-color: $color-yellowWalk;
-          }
-        }
-      }
-      &--fountainRunTeal{
-        svg {
-          color: $color-fountainRunTeal;
-        }
-        span {
-          &:before {
-            background-color: $color-fountainRunTeal;
-          }
-        }
-      }
-      &--pappysPurple{
-        svg {
-          color: $color-pappysPurple;
-        }
-        span {
-          &:before {
-            background-color: $color-pappysPurple;
-          }
-        }
-      }
+      // &--celeryBogGreen{
+      //   svg {
+      //     color: $color-celeryBogGreen;
+      //   }
+      //   span {
+      //     &:before {
+      //       background-color: $color-celeryBogGreen;
+      //     }
+      //   }
+      // }
+      // &--springFestGreen{
+      //   svg {
+      //     color: $color-springFestGreen;
+      //   }
+      //   span {
+      //     &:before {
+      //       background-color: $color-springFestGreen;
+      //     }
+      //   }
+      // }
+      // &--oakenBucketBrown{
+      //   svg {
+      //     color: $color-oakenBucketBrown;
+      //   }
+      //   span {
+      //     &:before {
+      //       background-color: $color-oakenBucketBrown;
+      //     }
+      //   }
+      // }
+      // &--bellTowerBrick{
+      //   svg {
+      //     color: $color-bellTowerBrick;
+      //   }
+      //   span {
+      //     &:before {
+      //       background-color: $color-bellTowerBrick;
+      //     }
+      //   }
+      // }
+      // &--mackeyOrange{
+      //   svg {
+      //     color: $color-mackeyOrange;
+      //   }
+      //   span {
+      //     &:before {
+      //       background-color: $color-mackeyOrange;
+      //     }
+      //   }
+      // }
+      // &--yellowWalk{
+      //   svg {
+      //     color: $color-yellowWalk;
+      //   }
+      //   span {
+      //     &:before {
+      //       background-color: $color-yellowWalk;
+      //     }
+      //   }
+      // }
+      // &--fountainRunTeal{
+      //   svg {
+      //     color: $color-fountainRunTeal;
+      //   }
+      //   span {
+      //     &:before {
+      //       background-color: $color-fountainRunTeal;
+      //     }
+      //   }
+      // }
+      // &--pappysPurple{
+      //   svg {
+      //     color: $color-pappysPurple;
+      //   }
+      //   span {
+      //     &:before {
+      //       background-color: $color-pappysPurple;
+      //     }
+      //   }
+      // }
     }
     &--news {
-      background-color: $color-campusGold;
+      background-color: black;
     }
     
     // ---------------------- TILE SIZES ----------------------- //
@@ -302,10 +310,9 @@
         }
         &.college__tile--news {
           color: white;
-          background-repeat: repeat;
-          background-image: url("https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png"); 
+          background: black;
           svg {
-            color: $color-campusGold;
+            color: $boiler-gold;
           }
         }
       }
@@ -337,15 +344,14 @@
         }
         &.college__tile--news {
           color: white;
-          background-repeat: repeat;
-          background-image: url("https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png"); 
+          background: black;
           span {
             &:before {
-              background: $color-campusGold;
+              background: $boiler-gold;
             }
           }
           svg {
-            color: $color-campusGold;
+            color: $boiler-gold;
           }
         }
       }
@@ -377,15 +383,14 @@
         }
         &.college__tile--news {
           color: white;
-          background-repeat: repeat;
-          background-image: url("https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png"); 
+          background: black;
           span {
             &:before {
-              background: $color-campusGold;
+              background: $boiler-gold;
             }
           }
           svg {
-            color: $color-campusGold;
+            color: $boiler-gold;
           }
         }
       }
@@ -417,15 +422,14 @@
         }
         &.college__tile--news {
           color: white;
-          background-repeat: repeat;
-          background-image: url("https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png"); 
+          background: black;
           span {
             &:before {
-              background: $color-campusGold;
+              background: $boiler-gold;
             }
           }
           svg {
-            color: $color-campusGold;
+            color: $boiler-gold;
           }
         }
       }
@@ -447,13 +451,13 @@
           display: none;
         }
         &.college__tile--news {
-          color: black !important;
+          color: white !important;
           svg {
             display: none;
           }
           span {
             &:before {
-              background: black;
+              background: $boiler-gold;
             }
           }
         }
@@ -609,12 +613,12 @@
         }
         &.college__tile--news {
           svg {
-            color: rgba($color:#000, $alpha: 0.3);
+            color: $boiler-gold;
           }
-          color: black !important;
+          color: white !important;
           span {
             &:before {
-              background: black;
+              background: $boiler-gold;
             }
           }
         }
@@ -769,12 +773,12 @@
         }
         &.college__tile--news {
           svg {
-            color: rgba($color:#000, $alpha: 0.3);
+            color: $boiler-gold;
           }
-          color: black !important;
+          color: white !important;
           span {
             &:before {
-              background: black;
+              background: $boiler-gold;
             }
           }
         }
