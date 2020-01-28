@@ -47,8 +47,8 @@
       font-size: 1.625rem;
     }
     p {
-      color: black;
-      background: $color-campusGold;
+      color: white;
+      background: $aged-gold;
       padding: 0.6rem;
       margin: 0;
       line-height: 1.125;
@@ -86,7 +86,7 @@
           display:block;
           width:100%;   
           padding: 0.625rem 0;
-          background-color:#555;
+          background-color:$steel-gray;
           color:#fff;
           &:hover{
             background-color:#000;
@@ -314,10 +314,9 @@
     overflow: hidden;
     padding: 1.25rem;
     background-color: black;
-    background-image: url("https://purdue.edu/purdue/images/templateElements/2015/stripes-tile.png");
     color: white !important;
     text-decoration: none !important;
-    font-family: $font-archivo-narrow;
+    font-family: $acumin-pro-condensed;
     font-weight: 400 !important;
     font-size: 1.35rem;
     svg {
@@ -331,89 +330,89 @@
     }
     &--campusGold{
       svg,img {
-        color: $color-campusGold;
+        color: $boiler-gold;
       }
     }
-    &--headlineGold{
-      svg,img {
-        color: $color-headlineGold;
-      }
-    }
+    // &--headlineGold{
+    //   svg,img {
+    //     color: $color-headlineGold;
+    //   }
+    // }
     &--coalGray{
       svg,img {
-        color: $color-coalGray;
+        color: $rush-gold;
       }
     }
     &--moonDustGray{
       svg,img {
-        color: $color-moonDustGray;
+        color: $field-gold;
       }
     }
     &--everTrueBlue{
       svg,img {
-        color: $color-everTrueBlue;
+        color: $dust-gold;
       }
     }
-    &--slayterSkyBlue{
-      svg,img {
-        color: $color-slayterSkyBlue;
-      }
-    }
+    // &--slayterSkyBlue{
+    //   svg,img {
+    //     color: $color-slayterSkyBlue;
+    //   }
+    // }
     &--ameliaSkyBlue{
       svg,img {
-        color: $color-ameliaSkyBlue;
+        color: $cool-gray;
       }
     }
     &--landGrantGreen{
       svg,img {
-        color: $color-landGrantGreen;
+        color: $railway-gray;
       }
     }
     &--rossAdeGreen{
       svg,img {
-        color: $color-rossAdeGreen;
+        color: $steam-gray;
       }
     }
-    &--celeryBogGreen{
-      svg,img {
-        color: $color-celeryBogGreen;
-      }
-    }
-    &--springFestGreen{
-      svg,img {
-        color: $color-springFestGreen;
-      }
-    }
-    &--oakenBucketBrown{
-      svg,img {
-        color: $color-oakenBucketBrown;
-      }
-    }
-    &--bellTowerBrick{
-      svg,img {
-        color: $color-bellTowerBrick;
-      }
-    }
-    &--mackeyOrange{
-      svg,img {
-        color: $color-mackeyOrange;
-      }
-    }
-    &--yellowWalk{
-      svg,img {
-        color: $color-yellowWalk;
-      }
-    }
-    &--fountainRunTeal{
-      svg,img {
-        color: $color-fountainRunTeal;
-      }
-    }
-    &--pappysPurple{
-      svg,img {
-        color: $color-pappysPurple;
-      }
-    }
+    // &--celeryBogGreen{
+    //   svg,img {
+    //     color: $color-celeryBogGreen;
+    //   }
+    // }
+    // &--springFestGreen{
+    //   svg,img {
+    //     color: $color-springFestGreen;
+    //   }
+    // }
+    // &--oakenBucketBrown{
+    //   svg,img {
+    //     color: $color-oakenBucketBrown;
+    //   }
+    // }
+    // &--bellTowerBrick{
+    //   svg,img {
+    //     color: $color-bellTowerBrick;
+    //   }
+    // }
+    // &--mackeyOrange{
+    //   svg,img {
+    //     color: $color-mackeyOrange;
+    //   }
+    // }
+    // &--yellowWalk{
+    //   svg,img {
+    //     color: $color-yellowWalk;
+    //   }
+    // }
+    // &--fountainRunTeal{
+    //   svg,img {
+    //     color: $color-fountainRunTeal;
+    //   }
+    // }
+    // &--pappysPurple{
+    //   svg,img {
+    //     color: $color-pappysPurple;
+    //   }
+    // }
   }
   &__feature-buttons {
     grid-row: 3/4;
@@ -437,7 +436,8 @@
     grid-row: 3/4;
     grid-column: 3/6;
     h1 {
-      margin: 0;
+      margin: 0 0 1rem;
+      font-family: $acumin-pro-condensed;
     }
     @include display-sm {
       grid-row: 5/6;
