@@ -23,15 +23,18 @@
         text-align:center;
         font-weight:700;
         font-style:italic;
+        margin-top:2rem;
+        line-height:1.1;
         @include display-sm {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+            margin:1rem 0;
         }
         span{
             display:block;
             font-size: 2.25rem;
             font-family:$acumin-pro;
             font-style:initial;
-            padding-top:0.3rem;
+            padding-top:1rem;
             text-transform: none;
             @include display-sm {
                 font-size: 1.25rem;

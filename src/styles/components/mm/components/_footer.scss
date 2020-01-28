@@ -155,7 +155,7 @@
         color:#ccc;
         text-align:center;
         font-size:0.875rem;
-        padding:0.625rem 0.9375rem;
+        padding:1rem 1rem 0.5rem;
         line-height:1.5;
         font-family:$acumin-pro-semicondensed;
         &--list{
@@ -163,6 +163,7 @@
             margin:0 auto;
             padding:0 0.9rem;
             p{
+                padding-bottom:0.5rem;
                 a{
                     color:#ccc; 
                     font-family:$acumin-pro-semicondensed !important;
