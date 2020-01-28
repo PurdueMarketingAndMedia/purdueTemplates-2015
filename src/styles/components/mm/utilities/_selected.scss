@@ -13,7 +13,7 @@
     }
     @include display-md {
       background: black;
-      color: $boiler-gold;
+      color: $boiler-gold !important;
       span {
         color: $boiler-gold;
       }
