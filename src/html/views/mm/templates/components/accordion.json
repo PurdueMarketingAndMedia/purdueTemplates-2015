@@ -22,75 +22,15 @@
     "accordions":[
       {
       "id": "1",
-      "header": "Default",
+      "header": "Black (Default)",
       "color": false,
       "striped": false
       },
       {
       "id": "2",
-      "header": "Campus Gold",
+      "header": "Aged Gold",
       "color": "campusGold",
       "striped": false
-      },
-      {
-      "id": "3",
-      "header": "Black",
-      "color": "black",
-      "striped": false
-      },
-      {
-      "id": "4",
-      "header": "Ever True Blue",
-      "color": "everTrueBlue",
-      "striped": false
-      },
-      {
-      "id": "5",
-      "header": "40% Gray",
-      "color": "gray40",
-      "striped": false
-      },
-      {
-      "id": "6",
-      "header": "70% Gray",
-      "color": "gray70",
-      "striped": false
-      },
-      {
-      "id": "7",
-      "header": "Default",
-      "color": "",
-      "striped": true
-      },
-      {
-      "id": "8",
-      "header": "Campus Gold",
-      "color": "campusGold",
-      "striped": true
-      },
-      {
-      "id": "9",
-      "header": "Black",
-      "color": "black",
-      "striped": true
-      },
-      {
-      "id": "10",
-      "header": "Ever True Blue",
-      "color": "everTrueBlue",
-      "striped": true
-      },
-      {
-      "id": "11",
-      "header": "40% Gray",
-      "color": "gray40",
-      "striped": true
-      },
-      {
-      "id": "12",
-      "header": "70% Gray",
-      "color": "gray70",
-      "striped": true
       }
     ]
   }
