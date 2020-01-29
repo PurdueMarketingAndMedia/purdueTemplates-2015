@@ -11,7 +11,7 @@
     "site-name": "College Template",
     "site-tagline": {
       "title": "Purdue Web Templates",
-      "link": "https://www.purdue.edu/brand/applications/web-templates/index.php"
+      "link": "https://www.purdue.edu/purdue/applications/web-templates/index.php"
     },
     "nav": {
       "depth": "../"
@@ -32,7 +32,7 @@
         "type": "news",
         "text": "2x2 News Tile",
         "bg-image": {
-          "link": "https://www.purdue.edu/brand/images/web-templates/placeholders/college_tile-news-2x2.jpg"
+          "link": "https://www.purdue.edu/purdue/images/web-templates/placeholders/college_tile-news-2x2.jpg"
         },
         "lg-size": "2x2",
         "lg-loc": "a-1",
@@ -113,7 +113,7 @@
       {
         "type": "audience",
         "bg-image": {
-          "link": "https://www.purdue.edu/brand/images/web-templates/placeholders/college_tile-audience-2x2.jpg"
+          "link": "https://www.purdue.edu/purdue/images/web-templates/placeholders/college_tile-audience-2x2.jpg"
         },
         "text": "2x2 Audience Tile",
         "lg-size": "2x2",
