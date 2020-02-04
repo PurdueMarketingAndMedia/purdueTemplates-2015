@@ -538,8 +538,11 @@
             font-family:$united-sans-condensed !important;
             margin-bottom: 0;
             line-height: 1.5;
+            letter-spacing:1px;
             &.event-content--news {
-              font-weight: 400 !important;
+              font-family: $acumin-pro !important;
+              font-weight:500 !important;
+              letter-spacing: 0;
             }
           }
         }
