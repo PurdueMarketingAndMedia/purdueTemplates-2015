@@ -1,6 +1,6 @@
 @mixin h1 {
 	margin: 0 0 2rem;
-	// line-height: 1.2;
+	line-height: 1.22;
 	// text-transform: uppercase;
 	font-family: $acumin-pro;
 	color: black;
@@ -8,13 +8,14 @@
 	font-weight: 700;
 	@include display-mo-plus {
 		font-size: calc-toRem(30);
+		line-height: 1.17;
 	}
 }
 
 @mixin h2 {
 	font-family: $acumin-pro-condensed;
 	margin: 2rem 0 1.5rem;
-	// line-height: 1.2;
+	line-height: 1.2;
 	color: $aged-gold;
 	font-size: calc-toRem(32);
 	font-weight: 600;
@@ -26,7 +27,7 @@
 @mixin h3 {
 	font-family: $acumin-pro-semicondensed;
 	margin: 1.75rem 0 1.5rem;
-	// line-height: 1.2;
+	line-height: 1.2;
 	font-weight: 600;
 	color: black;
 	font-size: calc-toRem(25);
@@ -38,7 +39,7 @@
 @mixin h4 {
 	font-family: $acumin-pro-semicondensed;
 	margin: 1.5rem 0 1.5rem;
-	// line-height: 1.2;
+	line-height: 1.2;
 	text-transform: uppercase;
 	font-weight: 500;
 	color: $steel-gray;
@@ -51,7 +52,7 @@
 @mixin h5 {
 	font-family: $acumin-pro;
 	margin: 1.5rem 0 1.5rem;
-	// line-height: 1.2;
+	line-height: 1.2;
 	// text-transform: uppercase;
 	font-weight: 700;
 	color: $aged-gold;
@@ -64,7 +65,7 @@
 @mixin h6 {
 	font-family: $acumin-pro-semicondensed;
 	margin: 1.5rem 0 1.5rem;
-	// line-height: 1.2;
+	line-height: 1.2;
 	text-transform: uppercase;
 	font-weight: 600;
 	color: black;
