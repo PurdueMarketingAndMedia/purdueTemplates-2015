@@ -1,81 +1,81 @@
 {{> header}}
-<main id='buttonTemplate'> 
+<main id='buttonTemplate'>
     <nav class="content__breadcrumb">
         <ul class="row">
             <li><a href="#">Templates</a></li>
-            <li><a href="#">Button examples</a></li>
+            <li><a href="#">Button Examples</a></li>
         </ul>
-    </nav>    
+    </nav>
     <section class="container container--bg-white content__content">
-        <article  class="row">
-            {{> content-side}} 
+        <article class="row">
+            {{> content-side}}
             <article class="content__main">
                 <h1>Buttons</h1>
                 <section class="buttons">
                     {{#each buttons}}
                     {{printButtonHeader this.element this.type this.light this.color this.wide this.slim}}
-                          {{#if wide}}
-                        <div class="col-100" style="background:{{background}};">
+                    {{#if wide}}
+                    <div class="col-100" style="background:{{background}};">
+                        {{else}}
+                        {{#if icon}}
+                        <div class="col-50" style="background:{{background}};">
                             {{else}}
+                            <div class="col-25" style="background:{{background}};">
+                                {{/if}}
+                                {{/if}}
+                                {{#equals element "button"}}
+                                <button class="{{buttonClass ../type ../color ../light ../wide ../slim}}">
+                                    {{../text}}
+                                    {{#if ../icon}}
+                                    <span class="button__icon"><i class="{{../icon}}"></i></span>
+                                    {{/if}}
+                                </button>
+                                {{/equals}}
+                                {{#equals element "anchor"}}
+                                <a class="{{buttonClass ../type ../color ../light ../wide ../slim}}"">
+                                    {{../text}}
+                                    {{#if ../icon}}
+                                        <span class=" button__icon"><i class="{{../icon}}"></i></span>
+                                    {{/if}}
+                                </a>
+                                {{/equals}}
+
+                            </div>
+                            {{/each}}
+                            {{#each layout}}
+                            {{printButtonLayoutHeader this.element this.type this.light this.color this.wide this.slim this.icon}}
+                            {{#if wide}}
+                            <div class="col-100" style="background:{{background}};">
+                                {{else}}
+                                {{#if slim}}
                                 {{#if icon}}
                                 <div class="col-50" style="background:{{background}};">
-                                {{else}}
-                                <div class="col-25" style="background:{{background}};">
-                                {{/if}}
-                        {{/if}}
-                            {{#equals element "button"}}
-                            <button class="{{buttonClass ../type ../color ../light ../wide ../slim}}">
-                                    {{../text}}
-                                    {{#if ../icon}}
-                                        <span class="button__icon"><i class="{{../icon}}"></i></span>
-                                    {{/if}}
-                            </button>
-                            {{/equals}}
-                            {{#equals element "anchor"}}
-                            <a class="{{buttonClass ../type ../color ../light ../wide ../slim}}"">
-                                    {{../text}}
-                                    {{#if ../icon}}
-                                        <span class="button__icon"><i class="{{../icon}}"></i></span>
-                                    {{/if}}
-                            </a>
-                            {{/equals}}
-                            
-                        </div>
-                    {{/each}}
-                    {{#each layout}}
-                        {{printButtonLayoutHeader this.element this.type this.light this.color this.wide this.slim this.icon}}
-                          {{#if wide}}
-                            <div class="col-100" style="background:{{background}};">  
-                            {{else}}
-                                {{#if slim}}
-                                    {{#if icon}}
-                                    <div class="col-50" style="background:{{background}};">
                                     {{else}}
                                     <div class="col-25" style="background:{{background}};">
-                                    {{/if}}
-                                {{else}}                                    
-                                <div class="col-100" style="background:{{background}};">                                        
-                                {{/if}}
-                            {{/if}}
-                            {{#equals element "button"}}
-                            <button class="{{buttonClass ../type ../color ../light ../wide ../slim}}">
+                                        {{/if}}
+                                        {{else}}
+                                        <div class="col-100" style="background:{{background}};">
+                                            {{/if}}
+                                            {{/if}}
+                                            {{#equals element "button"}}
+                                            <button class="{{buttonClass ../type ../color ../light ../wide ../slim}}">
+                                                {{../text}}
+                                                {{#if ../icon}}
+                                                <span class="button__icon"><i class="{{../icon}}"></i></span>
+                                                {{/if}}
+                                            </button>
+                                            {{/equals}}
+                                            {{#equals element "anchor"}}
+                                            <a class="{{buttonClass ../type ../color ../light ../wide ../slim}}"">
                                     {{../text}}
                                     {{#if ../icon}}
-                                        <span class="button__icon"><i class="{{../icon}}"></i></span>
-                                    {{/if}}
-                            </button>
-                            {{/equals}}
-                            {{#equals element "anchor"}}
-                            <a class="{{buttonClass ../type ../color ../light ../wide ../slim}}"">
-                                    {{../text}}
-                                    {{#if ../icon}}
-                                        <span class="button__icon"><i class="{{../icon}}"></i></span>
-                                    {{/if}}
-                            </a>
-                            {{/equals}}
-                        </div>
-                    {{/each}}
-                    </div>
+                                        <span class=" button__icon"><i class="{{../icon}}"></i></span>
+                                                {{/if}}
+                                            </a>
+                                            {{/equals}}
+                                        </div>
+                                        {{/each}}
+                                    </div>
                 </section>
             </article>
         </article>
