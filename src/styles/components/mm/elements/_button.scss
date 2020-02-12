@@ -344,10 +344,10 @@ $block:button;
 		}
 
 		&-campusGold-inverse {
-			outline-color: $aged-gold;
-			outline-style: solid;
-			outline-width: 2px;
-			outline-offset: -2px;
+			outline-color: $aged-gold !important;
+			outline-style: solid !important;
+			outline-width: 2px !important;
+			outline-offset: -2px !important;
 
 			&.button-hollow {
 				&:hover {
