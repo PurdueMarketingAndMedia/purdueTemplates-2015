@@ -490,7 +490,7 @@ $thetransition: all .25s cubic-bezier(1, .25, 0, .75) 0s;
     justify-content: center;
     position: relative;
     font-family: $acumin-pro-semicondensed;
-    box-shadow: $material-3;
+    box-shadow: $material-2;
     text-transform: uppercase;
 
     button {
@@ -695,7 +695,7 @@ $thetransition: all .25s cubic-bezier(1, .25, 0, .75) 0s;
       left: 0;
       border-bottom-left-radius: 0.2rem;
       border-bottom-right-radius: 0.2rem;
-      box-shadow: $material-3;
+      box-shadow: $material-2;
       text-transform: none;
       z-index: 10;
       font-family: $acumin-pro;
@@ -766,7 +766,7 @@ $thetransition: all .25s cubic-bezier(1, .25, 0, .75) 0s;
       flex-direction: column;
       border-top-right-radius: 0.2rem;
       border-bottom-right-radius: 0.2rem;
-      box-shadow: $material-3;
+      box-shadow: $material-2;
 
       @include display-md {
         position: relative;
