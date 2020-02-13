@@ -1,58 +1,73 @@
 @mixin h1 {
-	margin: 0 0 1rem;
-	line-height: 1.2;
-	text-transform: uppercase;
-	margin-top: 0;
-	font-family: $font-champion-welter;
-	color: $color-headlineGold;
-	font-size: calc-toEm(36);
-	font-weight: 400;
+	margin: 0 0 2rem;
+	line-height: 1.22;
+	// text-transform: uppercase;
+	font-family: $acumin-pro;
+	color: black;
+	font-size: calc-toRem(37);
+	font-weight: 700;
+	@include display-mo-plus {
+		font-size: calc-toRem(30);
+		line-height: 1.17;
+	}
 }
 
 @mixin h2 {
-	font-family: $font-archivo-narrow;
-	margin: 2rem 0 0.75rem;
+	font-family: $acumin-pro-condensed;
+	margin: 2rem 0 1.5rem;
 	line-height: 1.2;
-	color: $color-headlineGold;
-	font-size: calc-toEm(32);
-	font-weight: 400;
+	color: $aged-gold;
+	font-size: calc-toRem(32);
+	font-weight: 600;
+	@include display-mo-plus {
+		font-size: calc-toRem(27);
+	}
 }
 
 @mixin h3 {
-	font-family: $font-archivo-narrow;
-	margin: 1.75rem 0 0.7rem;
+	font-family: $acumin-pro-semicondensed;
+	margin: 1.75rem 0 1.5rem;
 	line-height: 1.2;
-	font-weight: 700;
-	color: $color-gray70;
-	font-size: calc-toEm(28);
+	font-weight: 600;
+	color: black;
+	font-size: calc-toRem(25);
+	@include display-mo-plus {
+		font-size: calc-toRem(22);
+	}
 }
 
 @mixin h4 {
-	font-family: $font-archivo-narrow;
-	margin: 1.5rem 0 0.65rem;
+	font-family: $acumin-pro-semicondensed;
+	margin: 1.5rem 0 1.5rem;
 	line-height: 1.2;
 	text-transform: uppercase;
-	font-weight: 700;
-	color: $color-headlineGold;
-	font-size: calc-toEm(24);
+	font-weight: 500;
+	color: $steel-gray;
+	font-size: calc-toRem(22);
+	@include display-mo-plus {
+		font-size: calc-toRem(22);
+	}
 }
 
 @mixin h5 {
-	font-family: $font-archivo-narrow;
-	margin: 1.5rem 0 0.6rem;
+	font-family: $acumin-pro;
+	margin: 1.5rem 0 1.5rem;
 	line-height: 1.2;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	font-weight: 700;
-	color: $color-gray90;
+	color: $aged-gold;
 	font-size: calc-toEm(22);
+	@include display-mo-plus {
+		font-size: calc-toRem(20);
+	}
 }
 
 @mixin h6 {
-	font-family: $font-archivo-narrow;
-	margin: 1.5rem 0 0.5rem;
+	font-family: $acumin-pro-semicondensed;
+	margin: 1.5rem 0 1.5rem;
 	line-height: 1.2;
 	text-transform: uppercase;
-	font-weight: 700;
-	color: $color-gray90;
-	font-size: calc-toEm(18);
+	font-weight: 600;
+	color: black;
+	font-size: calc-toRem(19);
 }

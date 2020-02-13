@@ -18,7 +18,7 @@ blockquote, .quote {
         height: 100%;
         left: 0;
         top: 0;
-        background: $color-campusGold;
+        background: $aged-gold;
     }
 }
 
@@ -33,7 +33,7 @@ blockquote, .quote {
             display: block;
             width: 3rem;
             height: 3rem;
-            background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D'1.1'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20x%3D'0px'%20y%3D'0px'%20viewBox%3D'0%200%2050%2050'%20xml%3Aspace%3D'preserve'%3E%3Cpath%20style%3D'fill%3A%23c28e0e%3Bstroke%3Argba(0%2C0%2C0%2C0)%3B'%20d%3D'M14.8604%2C26.5957h7.6001v20.5205h-19V28.3057l9.1201-25.27h9.8799L14.8604%2C26.5957z%20M38.9912%2C26.5957h7.6006v20.5205h-19.001V28.3057l9.1201-25.27h9.8809L38.9912%2C26.5957z'%2F%3E%3C%2Fsvg%3E");
+            background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D'1.1'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20x%3D'0px'%20y%3D'0px'%20viewBox%3D'0%200%2050%2050'%20xml%3Aspace%3D'preserve'%3E%3Cpath%20style%3D'fill%3A%238e6f3e%3Bstroke%3Argba(0%2C0%2C0%2C0)%3B'%20d%3D'M14.8604%2C26.5957h7.6001v20.5205h-19V28.3057l9.1201-25.27h9.8799L14.8604%2C26.5957z%20M38.9912%2C26.5957h7.6006v20.5205h-19.001V28.3057l9.1201-25.27h9.8809L38.9912%2C26.5957z'%2F%3E%3C%2Fsvg%3E");
             background-size: cover;
         }
     }
@@ -42,10 +42,10 @@ blockquote, .quote {
         display: block;
         padding: 0;
         margin: 0;
-        font-family: $font-archivo-narrow;
+        font-family: $acumin-pro-semicondensed;
         font-weight: bold;
         font-size: calc-toRem(24);
-        color: $color-gray90;
+        color: black;
         line-height: 1.25;
     }
 
@@ -53,10 +53,10 @@ blockquote, .quote {
         display: block;
         padding: 0;
         padding-top: .5rem;
-        font-family: $font-archivo-narrow;
+        font-family: $acumin-pro-semicondensed;
         font-weight: bold;
         font-size: calc-toRem(18);
-        color: $color-headlineGold;
+        color: $aged-gold;
     }
 }
 @media ( min-width: 37.5em ) {

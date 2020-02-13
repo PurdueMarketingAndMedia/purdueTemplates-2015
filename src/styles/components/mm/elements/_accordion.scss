@@ -5,15 +5,16 @@
       display: flex;
       justify-content: center;
       width: 100%;
+      border: none;
       border-top: solid 1px #fff;
       padding: 0.625rem 2.5rem 0.625rem 1rem;
-      font-family: $font-archivo-narrow;
+      font-family: $united-sans;
       font-size: 1.375rem;
       line-height: 1.1;
-      font-weight: 400;
-      text-transform: uppercase;
-      background-color: #c28e0e;
-      color: #000;
+      font-weight: 700;
+      text-transform: none;
+      background-color: black;
+      color: $boiler-gold;
       cursor: pointer;
       @include display-lg{
         font-size: 1.14rem;
@@ -23,30 +24,30 @@
       }
       &-campusGold{
         outline-color: #000;
-        background-color: #c28e0e;
-        color: #000;
+        background-color: $aged-gold;
+        color: #fff;
       }
       &-black{
         outline-color: #000;
         background-color: #000;
-        color: #fff;
+        color: $boiler-gold;
       }
-      &-everTrueBlue{
-        outline-color: #dedede;
-        background-color: #5b6870;
-        color: #fff; 
+      // &-everTrueBlue{
+      //   outline-color: #dedede;
+      //   background-color: #5b6870;
+      //   color: #fff; 
      
-      }
-      &-gray40{
-        outline-color: #000;
-        background-color: #aaa;
-        color: #000;      
-      }
-      &-gray70{
-        outline-color: #dedede;
-        background-color: #707070;
-        color: #fff;
-      }
+      // }
+      // &-gray40{
+      //   outline-color: #000;
+      //   background-color: #aaa;
+      //   color: #000;      
+      // }
+      // &-gray70{
+      //   outline-color: #dedede;
+      //   background-color: #707070;
+      //   color: #fff;
+      // }
 
       &:first-child{
         border-top:0;
@@ -73,11 +74,11 @@
       } 
       &--footer{
         width:100%;
-        font-family: $font-champion-welter; 
+        font-family: $acumin-pro-semicondensed; 
         font-size: 1.15rem;
-        font-weight: 300;
-        color:#c28e0e;
-        padding:0;
+        font-weight: 700;
+        color:$boiler-gold;
+        padding:0 0 1rem 0;
         margin:0;
         border:0;
         background-color:#000000;
@@ -87,6 +88,7 @@
         align-items:baseline;         
         text-transform: uppercase;
         pointer-events: none;
+        text-align:left;
         .fa-plus,.fa-minus{
           display:none;
           pointer-events: none;
@@ -107,34 +109,34 @@
       }
 
     }               
-    &-striped{
-      .accordion__heading{
-        &:nth-of-type(even){
-          background-color: #eeaf15;
-        }
+    // &-striped{
+    //   .accordion__heading{
+    //     &:nth-of-type(even){
+    //       background-color: #eeaf15;
+    //     }
        
-        &-campusGold:nth-of-type(even){
-            background-color: #eeaf15;
-        }
-        &-black:nth-of-type(even){
-            background-color: #3b3d3f;
-        }
-        &-everTrueBlue:nth-of-type(even){
-          background-color: #727a87;
-        }
-        &-gray40:nth-of-type(even){
-          background-color: #bfbbbb;
-        }          
-        &-gray70:nth-of-type(even){
-          background-color: #7c7e82;
-        }
-      }            
-    }
+    //     &-campusGold:nth-of-type(even){
+    //         background-color: #eeaf15;
+    //     }
+    //     &-black:nth-of-type(even){
+    //         background-color: #3b3d3f;
+    //     }
+    //     &-everTrueBlue:nth-of-type(even){
+    //       background-color: #727a87;
+    //     }
+    //     &-gray40:nth-of-type(even){
+    //       background-color: #bfbbbb;
+    //     }          
+    //     &-gray70:nth-of-type(even){
+    //       background-color: #7c7e82;
+    //     }
+    //   }            
+    // }
     &__content{
       overflow: hidden;
       margin: 0;
-      padding: 0 1rem;
-      font-family: "Archivo Narrow","Arial Narrow","Arial",sans-serif;
+      padding: 0 1.625rem;
+      font-family: $acumin-pro-semicondensed;
       font-size: 1.125rem;
       background-color: #dedede; 
       display:none;
@@ -162,9 +164,9 @@
                 width:100%;
                 height: inherit;
                 padding: 0.5rem 0 0.125rem;
-                border-bottom: solid 1px #474747;
-                font-size: 0.875rem;
+                font-size: 0.9375rem;
                 font-weight:400;
+                font-family:$acumin-pro;
                 color:rgb(173,173,173);
                 height: 100%;
                 @include display-sm {
@@ -202,8 +204,8 @@
     }
 
     &__item{
-      padding: 0.8rem 0;
-      border-top:solid 1px #000;
+      padding: 1.25rem 0;
+      border-top:solid 1px $steel-gray;
       line-height: 1.3;
       &:first-child{
         border-top: none;

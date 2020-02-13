@@ -1,15 +1,24 @@
-.selected {
+.selected {  
   &.dropdown-button {
-    background: #373737;
-    color: white;
-    &>span {
-      color: white;
+    &:after{
+      content: "";
+      height: 2px;
+      width: calc(100% - 30.4px);
+      position: absolute;
+      visibility:visible;
+      transform: scaleX(1);
+      bottom:12px;
+      left: 0.95rem;
+      background: $aged-gold;
     }
     @include display-md {
       background: black;
-      color: $color-campusGold;
+      color: $boiler-gold !important;
       span {
-        color: $color-campusGold;
+        color: $boiler-gold;
+      }
+      &:after{
+        height: 0;
       }
     }
     &.side-nav{
@@ -21,10 +30,35 @@
       &:focus{
         text-decoration: none !important; 
       }
-      &:before{
-          width: 50%;
+      &:after {
+        left: 0;
+        transform-origin: left;
       }
     }
   }
-
+}
+.header__mainNav--main{
+  &>ul{
+    &>li{
+      &>a.is-active-page{
+        &:after{
+          content: "";
+          height: 2px;
+          width: calc(100% - 30.4px);
+          position: absolute;
+          visibility:visible;
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+          bottom:12px;
+          left: 0.95rem;
+          background: $aged-gold;
+        }
+        @include display-md {
+          &:after{
+            height: 0;
+          }
+        }
+      }
+    } 
+  }
 }

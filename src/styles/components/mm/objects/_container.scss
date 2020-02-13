@@ -19,6 +19,7 @@
       align-items: center;
       justify-content: center;
       padding: 1.25rem 0;
+      background: #ededed !important;
     }
     &--bg-white {
       background: white;
@@ -32,7 +33,7 @@
       overflow: hidden;
     }
     &--bg-darkGray {
-      background: #333;
+      background: rgba(0,0,0,.85);
     }
     &--bg-black {
       background-color: #000;

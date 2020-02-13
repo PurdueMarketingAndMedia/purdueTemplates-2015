@@ -1,6 +1,6 @@
 {
     "name": "purduetemplates2015",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "description": "The Purdue University templates created in 2015 by Purdue Marketing and Media.",
     "scripts": {
         "html:dev": "NODE_ENV=development node html-render.js",
@@ -43,8 +43,7 @@
         "postcss-pseudoelements": "^5.0.0",
         "webpack": "^4.30.0",
         "webpack-bundle-analyzer": "^3.5.2",
-        "webpack-cli": "^3.3.0",
-        "win-node-env": "^0.4.0"
+        "webpack-cli": "^3.3.0"
     },
     "browserslist": [
         "last 2 versions",

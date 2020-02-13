@@ -23,7 +23,7 @@
             max-width:1140px;
             width: 1140px;
             flex:1 1 auto;
-            padding: 1.5rem 0;
+            padding: 3.125rem 0;
             @include display-lg {
                 max-width:940px;
                 width: 940px;
@@ -42,8 +42,7 @@
             flex-direction:column;
             box-sizing:border-box;
             width:20%;
-            padding-right: 1rem;
-            white-space:nowrap;
+            padding-right: 2rem;
             &:first-child {
                 padding-left: 0;
             }
@@ -55,14 +54,17 @@
                 margin:0;
             }
             .vertical{
-                margin-top:1.6rem;
                 display:flex;
-                width:100%;
-                max-height: 80px;
+                height: 114px;
             }
             .horizontal{
                 margin-top:1.6rem;
                 display:none;
+            }
+            @include display-lg{
+                .vertical{
+                    max-height: 100px;
+                }
             }
             @include display-md {
                 .vertical{
@@ -70,16 +72,16 @@
                 }
                 .horizontal{
                     display:flex;
-                    max-width:550px;
+                    max-width:400px;
                     margin: 0;
                     width:100%;
-                    max-height: 80px;
+                    max-height: 45.3px;
                 }
             }
             &__motto{
                 display:flex;
                 flex-direction: row;
-                justify-content: flex-start;
+                justify-content: flex-end;
                 @include display-md{
                     justify-content:center;
                 }
@@ -88,14 +90,12 @@
                 }
             }
             &__social{
-                margin-top:0.625rem;
-                padding-top:0.3rem;
-                border-top: solid 1px #474747;
+                padding:3.125rem 0 0 3.25rem;
                 display:flex;
                 flex-direction:row;
                 flex-wrap: wrap;
                 justify-content: start;
-                font-size:1.35rem;
+                font-size:1.1rem;
 
                 a{
                     margin: 0.25rem 2.7%;
@@ -106,18 +106,23 @@
                 a:hover{
                     color:#ffffff;
                 }
+                @include display-lg{
+                    padding-left:2.09rem;
+                }
                 @include display-md {
                     font-size:1.85rem;
                     justify-content: center;
                     border:none;
+                    padding-top:3rem;
+                    padding-left:0;
                 }
                 @include display-sm {
                     margin-top:0;
                     font-size:1.4rem;
                 }
-                @include display-mo {
-                    padding-top:0;
-                }
+                // @include display-mo {
+                //     padding-top:0;
+                // }
             }
             @include display-md {
                 width:50%;
@@ -126,6 +131,9 @@
                 &:first-child {
                     padding-left: 1rem;
                 }
+                &:last-child {
+                    padding: 2rem 1rem 0;
+                }
             }
             @include display-sm {
                 width:100%;
@@ -133,34 +141,39 @@
                 border-bottom: solid 1px #474747;
                 &:nth-child(5){         
                     border: none;
+                    padding: 3rem 1rem 2rem;
                 }
                 &:first-child {
                     padding-left: 0;
                 }
-                &:last-child {
-                    padding: 1rem;
-                }
+
             }
         }
     }
     &__contact{
-        background-color:#3b3b3b;
+        background-color:rgba(0, 0, 0, 0.85);
         color:#ccc;
         text-align:center;
-        font-size:0.625rem;
-        padding:0.625rem 0.9375rem;
-        line-height:1.4;
-
+        font-size:0.875rem;
+        padding:1rem 1rem 0.5rem;
+        line-height:1.5;
+        font-family:$acumin-pro-semicondensed;
         &--list{
             max-width:1140px;
             margin:0 auto;
             padding:0 0.9rem;
-            a{
-                color:#ccc; 
+            p{
+                padding-bottom:0.5rem;
+                a{
+                    color:#ccc; 
+                    font-family:$acumin-pro-semicondensed !important;
+                    font-weight:400;
+                }
+                a:hover{
+                    text-decoration:none;
+                }
             }
-            a:hover{
-                text-decoration:none;
-            }
+ 
             @include display-lg {
                 max-width:940px;
                 width: 940px;

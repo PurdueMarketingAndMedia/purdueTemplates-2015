@@ -1,31 +1,40 @@
 $block:button;
-.#{$block}{
-	display:inline-flex;
-	flex-direction:row;
-	flex-wrap:nowrap;
-	justify-content:center;
-	align-items:stretch;
-	line-height:1.5;
-	&::before,&::after{
-		content:'';
-		display:flex;
+
+.#{$block} {
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	line-height: 1.5;
+
+	&::before,
+	&::after {
+		content: '';
+		display: flex;
 		flex: 1;
-		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+		@media all and (-ms-high-contrast: none),
+		(-ms-high-contrast: active) {
 			flex-grow: 1;
 			flex-shrink: 1;
 			flex-basis: auto;
 		}
+
 		width:calc-toRem(calc-ratioLgMd(62));
-	
+
 	}
-	&::before{
-		order:0;
-		float:left;
+
+	&::before {
+		order: 0;
+		float: left;
 	}
-	&::after{
-		order:2;
-		float:right;
+
+	&::after {
+		order: 2;
+		float: right;
 	}
+
 	max-width:100%;
 	margin-top:calc-toRem(15);
 	margin-bottom:calc-toRem(15);
@@ -35,490 +44,723 @@ $block:button;
 	outline-width:2px;
 	outline-offset:-2px;
 	padding:calc-toRem(calc-ratioLgMd(10)) 2px;
-	transition:background-color, outline-color, outline-style, color 0.1s;
-	font-family:$font-archivo-narrow;
+	transition:background-color,
+	outline-color,
+	outline-style,
+	color 0.1s;
+	font-family:$united-sans;
 	font-size:calc-toRem(calc-ratioLgMd(18));
 	font-weight:700;
+	letter-spacing: 1.8px;
 	text-align:center;
 	text-transform:uppercase;
-	&:link,&:visited{
-		text-decoration:none;
-		outline-style:solid;
-		outline-width:2px;
-		outline-offset:-2px;
+
+	&:link,
+	&:visited {
+		text-decoration: none;
+		outline-style: solid;
+		outline-width: 2px;
+		outline-offset: -2px;
 	}
-	&:hover,&:active,&:focus{
-		outline-style:solid;
-		outline-width:2px;
-		outline-offset:-2px;
-		text-decoration:none;
-		cursor:pointer;
+
+	&:hover,
+	&:active,
+	&:focus {
+		outline-style: solid;
+		outline-width: 2px;
+		outline-offset: -2px;
+		text-decoration: none;
+		cursor: pointer;
 	}
-	&-bar{
-		position:relative;
-		outline-style:none;
-		border-bottom-style:solid;
-		border-bottom-width:5px;
-		&:link,&:visited{
-			outline-style:none;
+
+	&-bar {
+		position: relative;
+		outline-style: none;
+		border-bottom-style: solid;
+		border-bottom-width: 5px;
+
+		&:link,
+		&:visited {
+			outline-style: none;
 		}
-		&:hover,&:active,&:focus{
-			outline-style:solid;
-		}
-	}
-	&-icon{
-		padding-right:0;
-		outline-style:none;
-		&::before,&::after{
-			width:calc-toRem(calc-ratioLgMd(41.5));
-		}
-		&:link,&:visited{
-			outline-style:none;
-		}
-		&:hover,&:visited,&:focus{
-			outline-style:solid;
+
+		&:hover,
+		&:active,
+		&:focus {
+			outline-style: solid;
 		}
 	}
-	@mixin button-slim{
-		display:inline-flex;
-		font-weight:400;
-		text-transform:none;
-		font-size:calc-toRem(16);
-		&:link,&:visited,&:hover,&:active{
-			font-weight:400;
+
+	&-icon {
+		padding-right: 0;
+		outline-style: none;
+
+		&::before,
+		&::after {
+			width: calc-toRem(calc-ratioLgMd(41.5));
+		}
+
+		&:link,
+		&:visited {
+			outline-style: none;
+		}
+
+		&:hover,
+		&:visited,
+		&:focus {
+			outline-style: solid;
 		}
 	}
-	&-slim{
+
+	@mixin button-slim {
+		display: inline-flex;
+		font-weight: 400;
+		text-transform: none;
+		font-size: calc-toRem(16);
+
+		&:link,
+		&:visited,
+		&:hover,
+		&:active {
+			font-weight: 400;
+		}
+	}
+
+	&-slim {
 		@include button-slim;
-		&-slim{
-			&::before,&::after{
-				width:calc-toRem(calc-ratioLgMd(18));
+
+		&-slim {
+
+			&::before,
+			&::after {
+				width: calc-toRem(calc-ratioLgMd(18));
 			}
-			&-md{
+
+			&-md {
 				@include button-slim;
-				&::before,&::after{
-					width:calc-toRem(calc-ratioLgMd(18));
+
+				&::before,
+				&::after {
+					width: calc-toRem(calc-ratioLgMd(18));
 				}
 			}
 		}
 	}
+
 	$i: 0;
-	@each $color,$pair in $colorPairs-button
-	{
+
+	@each $color,
+	$pair in $colorPairs-button {
 		$i: $i + 1;
-		@if $i == 1{
+
+		@if $i==1 {
 			//default colors for a regular button
-			outline-color:nth($pair,1);
-			background-color:nth($pair,1);
-			color:nth($pair,2);
-			&:link,&:visited{
-				outline-color:nth($pair,1);
-				background-color:nth($pair,1);
-				color:nth($pair,2);
+			outline-color: nth($pair, 1);
+			background-color: nth($pair, 1);
+			color: nth($pair, 2);
+
+			&:link,
+			&:visited {
+				outline-color: nth($pair, 1);
+				background-color: nth($pair, 1);
+				color: nth($pair, 2);
 			}
-			&:hover,&:active,&:focus{
-				background-color:transparent;
-				color:nth($pair,4);
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: transparent;
+				color: nth($pair, 4);
 			}
-			&-hollow{
-				background-color:transparent;
-				color:nth($pair,2);
-				&:link,&:visited{
-					background-color:transparent;
-					color:nth($pair,2);
+
+			&-hollow {
+				background-color: transparent;
+				color: nth($pair, 4);
+
+				&:link,
+				&:visited {
+					background-color: transparent;
+					color: nth($pair, 2);
 				}
-				&:hover,&:active,&:focus{
-					background-color:nth($pair,1);
-					color:nth($pair,2);
+
+				&:hover,
+				&:active,
+				&:focus {
+					background-color: nth($pair, 1);
+					color: nth($pair, 2);
 				}
 			}
-			&-bar{
-				$color-button-bar:lighten(nth($pair,1),15);
-				@if (lightness(nth($pair,1)) <= 15)
-				{
-					$color-button-bar:lighten(nth($pair,1),45);
+
+			&-bar {
+				$color-button-bar: lighten(nth($pair, 1), 15);
+
+				@if (lightness(nth($pair, 1)) <=15) {
+					$color-button-bar: lighten(nth($pair, 1), 45);
 				}
-				@if (lightness(nth($pair,1)) > 15)
-				{
-					$color-button-bar:darken(nth($pair,1),15);
+
+				@if (lightness(nth($pair, 1)) > 15) {
+					$color-button-bar: darken(nth($pair, 1), 15);
 				}
+
 				border-bottom-color:$color-button-bar;
-				&:hover,&:active,&:focus{
-					outline-color:$color-button-bar;
+
+				&:hover,
+				&:active,
+				&:focus {
+					outline-color: $color-button-bar;
 				}
 			}
-			&-icon{
-				& .#{$block}__icon{
-					background-color:nth($pair,5);
-					color:nth($pair,6);
+
+			&-icon {
+				& .#{$block}__icon {
+					background-color: nth($pair, 5);
+					color: nth($pair, 6);
 				}
-				&:hover,&:active,&:focus{
-					outline-color:nth($pair,5);
-					background-color:nth($pair,1);
-					color:nth($pair,2);
-					& .#{$block}__icon{
-						color:nth($pair,7);
+
+				&:hover,
+				&:active,
+				&:focus {
+					outline-color: nth($pair, 5);
+					background-color: nth($pair, 1);
+					color: nth($pair, 2);
+
+					& .#{$block}__icon {
+						color: nth($pair, 7);
 					}
 				}
 			}
-			&-opaque{
-				outline-color:#000;
-				background-color:#000;
-				background-color:rgba(0,0,0,0.5);
-				color:#fff;
-				&:link,&:visited{
-					outline-color:#000;
-					background-color:#000;
-					background-color:rgba(0,0,0,0.5);
-					color:#fff;
+
+			&-opaque {
+				outline-color: #fff;
+				background-color: rgba(255, 255, 255, 0.5);
+				color: #000;
+
+				&:link,
+				&:visited {
+					outline-color: #fff;
+					background-color: rgba(255, 255, 255, 0.5);
+					color: #000;
 				}
-				&:hover,&:active,&:focus{
-					outline-color:#000;
-					background-color:#000;
-					color:#fff;
+
+				&:hover,
+				&:active,
+				&:focus {
+					outline-color: #fff;
+					background-color: rgba(255, 255, 255, 1);
+					color: #000;
 				}
 			}
 		}
-		&-#{$color}{
-			outline-color:nth($pair,1);
-			background-color:nth($pair,1);
-			color:nth($pair,2);
-			&:link,&:visited{
-				outline-color:nth($pair,1);
-				background-color:nth($pair,1);
-				color:nth($pair,2);
+
+		&-#{$color} {
+			outline-color: nth($pair, 1);
+			background-color: nth($pair, 1);
+			color: nth($pair, 2);
+
+			&:link,
+			&:visited {
+				outline-color: nth($pair, 1);
+				background-color: nth($pair, 1);
+				color: nth($pair, 2);
 			}
-			&:hover,&:active,&:focus{
-				outline-color:nth($pair,3);
-				background-color:transparent;
-				color:nth($pair,4);
+
+			&:hover,
+			&:active,
+			&:focus {
+				outline-color: nth($pair, 3);
+				background-color: transparent;
+				color: nth($pair, 4);
 			}
-			&.#{$block}-hollow{
-				outline-color:nth($pair,3);
-				background-color:transparent;
-				color:nth($pair,4);
-				&:link,&:visited{
-					outline-color:nth($pair,3);
-					background-color:transparent;
-					color:nth($pair,4);
+
+			&.#{$block}-hollow {
+				outline-color: nth($pair, 3);
+				background-color: transparent;
+				color: nth($pair, 4);
+
+				&:link,
+				&:visited {
+					outline-color: nth($pair, 3);
+					background-color: transparent;
+					color: nth($pair, 4);
 				}
-				&:hover,&:active,&:focus{
-					outline-color:nth($pair,1);
-					background-color:nth($pair,1);
-					color:nth($pair,2);
+
+				&:hover,
+				&:active,
+				&:focus {
+					outline-color: nth($pair, 1);
+					background-color: nth($pair, 1);
+					color: nth($pair, 2);
 				}
 			}
-			&.#{$block}-bar{
-				$color-button-bar:darken(nth($pair,1),15);
-				@if (lightness(nth($pair,1)) <= 15)
-				{
-					$color-button-bar:lighten(nth($pair,1),45);
+
+			&.#{$block}-bar {
+				$color-button-bar: darken(nth($pair, 1), 15);
+
+				@if (lightness(nth($pair, 1)) <=15) {
+					$color-button-bar: lighten(nth($pair, 1), 45);
 				}
-				@if (lightness(nth($pair,1)) > 15)
-				{
-					$color-button-bar:darken(nth($pair,1),15);
+
+				@if (lightness(nth($pair, 1)) > 15) {
+					$color-button-bar: darken(nth($pair, 1), 15);
 				}
+
 				border-bottom-color:$color-button-bar;
-				&:link,&:visited{
-					border-bottom-color:$color-button-bar;
-					color:nth($pair,2);
+
+				&:link,
+				&:visited {
+					border-bottom-color: $color-button-bar;
+					color: nth($pair, 2);
 				}
-				&:hover,&:active,&:focus{
-					background-color:transparent;
-					outline-color:$color-button-bar;
-					color:nth($pair,4);
+
+				&:hover,
+				&:active,
+				&:focus {
+					background-color: transparent;
+					outline-color: $color-button-bar;
+					color: nth($pair, 4);
 				}
 			}
-			@if length($pair) == 7{
-				&.#{$block}-icon{
-					& .#{$block}__icon{
-						background-color:nth($pair,5);
-						color:nth($pair,6);
+
+			@if length($pair)==7 {
+				&.#{$block}-icon {
+					& .#{$block}__icon {
+						background-color: nth($pair, 5);
+						color: nth($pair, 6);
 					}
-					&:hover,&:active,&:focus{
-						outline-color:nth($pair,5);
-						background-color:nth($pair,1);
-						color:nth($pair,2);
-						& .#{$block}__icon{
-							color:nth($pair,7);
+
+					&:hover,
+					&:active,
+					&:focus {
+						outline-color: nth($pair, 5);
+						background-color: nth($pair, 1);
+						color: nth($pair, 2);
+
+						& .#{$block}__icon {
+							color: nth($pair, 7);
 						}
 					}
 				}
 			}
 		}
-	}
-	&-light{
-		&:hover,&:active,&:focus{
-			color:#fff;
-		}
-		&.#{$block}-bar{
-			&:hover,&:active,&:focus{
-				color:#fff;
+
+		&-campusGold-inverse {
+			outline-color: $aged-gold !important;
+			outline-style: solid !important;
+			outline-width: 2px !important;
+			outline-offset: -2px !important;
+
+			&.button-hollow {
+				&:hover {
+					outline-color: $aged-gold;
+				}
+			}
+
+			&.button-bar {
+				outline-style: solid;
+				border-bottom-color: $aged-gold;
+				outline-color: $aged-gold;
+
+				&:hover,
+				&:active,
+				&:focus,
+				&:link {
+					outline-color: $aged-gold;
+				}
+			}
+
+			&:hover,
+			&:active,
+			&:focus,
+			&:link {
+				outline-color: $aged-gold;
 			}
 		}
-		&.#{$block}-hollow{
+	}
+
+	&-light {
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: #fff;
+		}
+
+		&.#{$block}-bar {
+
+			&:hover,
+			&:active,
+			&:focus {
+				color: #fff;
+			}
+		}
+
+		&.#{$block}-hollow {
 			$i: 0;
-			@each $color,$pair in $colorPairs-button{
+
+			@each $color,
+			$pair in $colorPairs-button {
 				$i: $i + 1;
-				@if $i == 1{
-					color:#fff;
-					&:link,&:visited{
-						color:#fff;
+
+				@if $i==1 {
+					color: #fff;
+
+					&:link,
+					&:visited {
+						color: #fff;
 					}
-					&:hover,&:active,&:focus{
-						color:nth($pair,2);
+
+					&:hover,
+					&:active,
+					&:focus {
+						color: nth($pair, 2);
 					}
 				}
-				&.#{$block}-#{$color}{
-					color:#fff;
-					&:link,&:visited{
-						color:#fff;
+
+				&.#{$block}-#{$color} {
+					color: #fff;
+
+					&:link,
+					&:visited {
+						color: #fff;
 					}
-					&:hover,&:active,&:focus{
-						color:nth($pair,2);
+
+					&:hover,
+					&:active,
+					&:focus {
+						color: nth($pair, 2);
 					}
 				}
 			}
 		}
-		&.#{$block}-opaque{
-			outline-color:#fff;
-			background-color:#000;
-			background-color:rgba(250,250,250,0.5);
-			color:#000;
-			&:link,&:visited{
-				outline-color:#fff;
-				background-color:#000;
-				background-color:rgba(250,250,250,0.5);
-				color:#000;
+
+		&.#{$block}-opaque {
+			outline-color: #fff;
+			background-color: #000;
+			background-color: rgba(250, 250, 250, 0.5);
+			color: #000;
+
+			&:link,
+			&:visited {
+				outline-color: #fff;
+				background-color: #000;
+				background-color: rgba(250, 250, 250, 0.5);
+				color: #000;
 			}
-			&:hover,&:active,&:focus{
-				outline-color:#fff;
-				background-color:#fff;
-				color:#000;
+
+			&:hover,
+			&:active,
+			&:focus {
+				outline-color: #fff;
+				background-color: #fff;
+				color: #000;
 			}
 		}
 	}
-	@mixin button-wide{
-		display:block;
-		display:flex;
-		width:100%;
-		min-width:auto;
-		&::before,&::after{
-			width:auto;
+
+	@mixin button-wide {
+		display: block;
+		display: flex;
+		width: 100%;
+		min-width: auto;
+
+		&::before,
+		&::after {
+			width: auto;
 		}
 	}
-	&-wide{
+
+	&-wide {
 		@include button-wide;
 	}
-	&__icon{
-		transition:color, transform 0.1s;
-		flex-grow:0;
-		flex-shrink:0;
-		flex-basis:auto;
-		display:inline-flex;
-		flex-direction:row;
-		flex-wrap:nowrap;
-		justify-content:center;
-		align-items:center;
-		margin:calc-toRem(calc-ratioLgMd(-10)) 0;
-		padding:0 calc-toRem(calc-ratioLgMd(10));
-		order:3;
-		font-size:calc-toRem(26);
-		text-align:center;
-		& > *, &.fa::before{
-			transition:color, transform 0.1s;
+
+	&__icon {
+		transition: color, transform 0.1s;
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: auto;
+		display: inline-flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+		margin: calc-toRem(calc-ratioLgMd(-10)) 0;
+		padding: 0 calc-toRem(calc-ratioLgMd(10));
+		order: 3;
+		font-size: calc-toRem(26);
+		text-align: center;
+
+		&>*,
+		&.fa::before {
+			transition: color, transform 0.1s;
 		}
-		&.svg,&.i{
+
+		&.svg,
+		&.i {
 			font-size: 2.54rem;
 		}
 	}
-	@media (min-width:1200px){
-		padding:calc-toRem(10) 2px;
-		font-size:calc-toRem(18);
-		&::before,&::after{
-			width:calc-toRem(62);
+
+	@media (min-width:1200px) {
+		padding: calc-toRem(10) 2px;
+		font-size: calc-toRem(18);
+
+		&::before,
+		&::after {
+			width: calc-toRem(62);
 		}
-		&-bar{
-			position:relative;
-			&::after{
-				height:calc-toRem(5);
+
+		&-bar {
+			position: relative;
+
+			&::after {
+				height: calc-toRem(5);
 			}
 		}
-		&-icon{
-			padding-right:0;
-			&::before,&::after{
-				width:calc-toRem(42.5);
+
+		&-icon {
+			padding-right: 0;
+
+			&::before,
+			&::after {
+				width: calc-toRem(42.5);
 			}
 		}
-		&-wide{
-			&::before,&::after{
-				width:auto;
+
+		&-wide {
+
+			&::before,
+			&::after {
+				width: auto;
 			}
-			&-lg{
+
+			&-lg {
 				@include button-wide;
-				&::before,&::after{
-					width:auto;
+
+				&::before,
+				&::after {
+					width: auto;
 				}
 			}
 		}
-		&-slim{
-			&::before,&::after{
-				width:calc-toRem(20);
+
+		&-slim {
+
+			&::before,
+			&::after {
+				width: calc-toRem(20);
 			}
-			&-lg{
+
+			&-lg {
 				@include button-slim;
-				&::before,&::after{
-					width:calc-toRem(20);
+
+				&::before,
+				&::after {
+					width: calc-toRem(20);
 				}
 			}
 		}
-		&__icon{
-			margin:calc-toRem(-10) 0;
-			padding:0 calc-toRem(10);
-			&.svg,&.i{
+
+		&__icon {
+			margin: calc-toRem(-10) 0;
+			padding: 0 calc-toRem(10);
+
+			&.svg,
+			&.i {
 				font-size: 2.94rem;
 			}
 		}
 	}
-	@media (min-width:768px) and (max-width:991px){
-		padding:calc-toRem(10) 2px;
-		font-size:calc-toRem(calc-ratioLgMd(20));
-		&::before,&::after{
-			width:calc-toRem(65);
+
+	@media (min-width:768px) and (max-width:991px) {
+		padding: calc-toRem(10) 2px;
+		font-size: calc-toRem(calc-ratioLgMd(20));
+
+		&::before,
+		&::after {
+			width: calc-toRem(65);
 		}
-		&-icon{
-			padding-right:0;
-			&::before,&::after{
-				width:calc-toRem(45.5);
+
+		&-icon {
+			padding-right: 0;
+
+			&::before,
+			&::after {
+				width: calc-toRem(45.5);
 			}
 		}
-		&-wide{
-			&::before,&::after{
-				width:auto;
+
+		&-wide {
+
+			&::before,
+			&::after {
+				width: auto;
 			}
-			&-sm{
+
+			&-sm {
 				@include button-wide;
-				&::before,&::after{
-					width:auto;
+
+				&::before,
+				&::after {
+					width: auto;
 				}
 			}
 		}
-		&-slim{
-			&::before,&::after{
-				width:calc-toRem(calc-ratioLgMd(20));
-				flex-basis:auto;
+
+		&-slim {
+
+			&::before,
+			&::after {
+				width: calc-toRem(calc-ratioLgMd(20));
+				flex-basis: auto;
 			}
-			&-sm{
+
+			&-sm {
 				@include button-slim;
-				&::before,&::after{
-					width:calc-toRem(calc-ratioLgMd(20));
-					flex-basis:auto;
+
+				&::before,
+				&::after {
+					width: calc-toRem(calc-ratioLgMd(20));
+					flex-basis: auto;
 				}
 			}
 		}
-		&__icon{
-			margin:calc-toRem(-10) 0;
-			padding:0 calc-toRem(10);
-			&.svg,&.i{
+
+		&__icon {
+			margin: calc-toRem(-10) 0;
+			padding: 0 calc-toRem(10);
+
+			&.svg,
+			&.i {
 				font-size: 2.94rem;
 			}
 		}
 	}
-	@media (max-width:767px){
-		padding:calc-toRem(10) 2px;
-		font-size:calc-toRem(18);
-		&::before,&::after{
-			width:calc-toRem(60);
+
+	@media (max-width:767px) {
+		padding: calc-toRem(10) 2px;
+		font-size: calc-toRem(18);
+
+		&::before,
+		&::after {
+			width: calc-toRem(60);
 		}
-		&-bar{
-			position:relative;
-			&::after{
-				height:calc-toRem(5);
+
+		&-bar {
+			position: relative;
+
+			&::after {
+				height: calc-toRem(5);
 			}
 		}
-		&-icon{
-			padding-right:0;
-			&::before,&::after{
-				width:calc-toRem(40.5);
+
+		&-icon {
+			padding-right: 0;
+
+			&::before,
+			&::after {
+				width: calc-toRem(40.5);
 			}
 
 		}
-		&-wide{
-			&::before,&::after{
-				width:auto;
+
+		&-wide {
+
+			&::before,
+			&::after {
+				width: auto;
 			}
-			&-xs{
+
+			&-xs {
 				@include button-wide;
-				&::before,&::after{
-					width:auto;
+
+				&::before,
+				&::after {
+					width: auto;
 				}
 			}
 		}
-		&-slim{
-			&::before,&::after{
-				width:calc-toRem(calc-ratioLgMd(20));
-				flex-basis:auto;
+
+		&-slim {
+
+			&::before,
+			&::after {
+				width: calc-toRem(calc-ratioLgMd(20));
+				flex-basis: auto;
 			}
-			&-xs{
+
+			&-xs {
 				@include button-slim;
-				&::before,&::after{
-					width:calc-toRem(calc-ratioLgMd(20));
-					flex-basis:auto;
+
+				&::before,
+				&::after {
+					width: calc-toRem(calc-ratioLgMd(20));
+					flex-basis: auto;
 				}
 			}
 		}
-		&__icon{
-			margin:calc-toRem(-10) 0;
-			padding:0 calc-toRem(10);
-			&.svg,&.i{
+
+		&__icon {
+			margin: calc-toRem(-10) 0;
+			padding: 0 calc-toRem(10);
+
+			&.svg,
+			&.i {
 				font-size: 2.94rem;
 			}
 		}
 	}
 }
-.buttons{
-	width:100%;
+
+.buttons {
+	width: 100%;
 	line-height: 1.5;
 }
-.button-group{
+
+.button-group {
 	width: 100%;
-	display:flex;
+	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: flex-start;
-	&.button-group--background{
-		background-image:url('https://placeimg.com/767/300/nature'); 
-		background-size:cover; 
-		background-position:top center;
+
+	&.button-group--background {
+		background-image: url('https://placeimg.com/767/300/nature');
+		background-size: cover;
+		background-position: top center;
 	}
-	&.button-group--border{
+
+	&.button-group--border {
 		border: 1px solid black;
 		overflow: auto;
 	}
 }
 
-.col-25{
-display: flex;
-flex-basis:25%;
-padding:0.6rem;
-@include display-md{
-	flex-basis:50%;
-}
-@include display-sm{
-	flex-basis:100%;
-}
-}
-.col-50{
-display: flex;
-flex-basis:50%;
-padding: 0.6rem;
-@include display-sm{
-	flex-basis:100%;
-}
-}
-.col-100{
-display: flex;
-flex-basis:100%;
-padding: 0.6rem;
+.col-25 {
+	display: flex;
+	flex-basis: 25%;
+	padding: 0.6rem;
+
+	@include display-md {
+		flex-basis: 50%;
+	}
+
+	@include display-sm {
+		flex-basis: 100%;
+	}
 }
 
+.col-50 {
+	display: flex;
+	flex-basis: 50%;
+	padding: 0.6rem;
+
+	@include display-sm {
+		flex-basis: 100%;
+	}
+}
+
+.col-100 {
+	display: flex;
+	flex-basis: 100%;
+	padding: 0.6rem;
+}
