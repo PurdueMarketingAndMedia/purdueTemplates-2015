@@ -1,12 +1,12 @@
 # Purdue University Templates - 2015
-*[Github pages](https://purduemarketingandmedia.github.io/purdueTemplates-2015/builds/production/html/mm/templates/audience.html)* 
+*[Github pages](https://purduemarketingandmedia.github.io/purdueTemplates-2015/builds/production/html/mm/templates/office/office-tiles-4.html)* 
 
 Contained in this project are the main templates created and maintained by Purdue Marketing and Media (PMM).
 
-If you have problems or trouble following any directions below, please contact us at [online@purdue.edu](mailto:online@purdue.edu).
+If you have problems or trouble following any directions below, please contact us at our [Digital Marketing Email](mailto:digital-marketing@groups.purdue.edu).
 
 ## Suggestions and Contributing
-We're open to any suggestions or contributions. If you wish to make a suggestion or have a contribution idea, feel free to [open an issue](https://github.com/PurdueMarketingAndMedia/purdueTemplates-2015/issues/new) or email us at [online@purdue.edu](mailto:online@purdue.edu) to let us know.
+We're open to any suggestions or contributions. If you wish to make a suggestion or have a contribution idea, feel free to [open an issue](https://github.com/PurdueMarketingAndMedia/purdueTemplates-2015/issues/new) or email us at our[Digital Marketing Email](mailto:digital-marketing@groups.purdue.edu) to let us know.
 
 You can also feel free to fork this repository and make any changes. Once you have completed your changes, make a pull request so that we can consider merging them.
 
@@ -45,7 +45,7 @@ Before making any changes, please review this repository's [branching model](htt
 
 If you're making a small fix/update that needs to be applied to the master branch in a timely manner, use a [maintenance branch](https://github.com/PurdueMarketingAndMedia/purdueTemplates-2015/wiki/Maintenance-Branches) (hotfix). If this is a larger update that can/will be shipped with other features, use a [feature branch](https://github.com/PurdueMarketingAndMedia/purdueTemplates-2015/wiki/Feature-Branches).
 
-If you're unsure, contact the team by creating an [issue](https://github.com/PurdueMarketingAndMedia/purdueTemplates-2015/issues) with the "Question" label or email [online@purdue.edu](mailto:online@purdue.edu).
+If you're unsure, contact the team by creating an [issue](https://github.com/PurdueMarketingAndMedia/purdueTemplates-2015/issues) with the "Question" label or email [Digital Marketing Email](mailto:digital-marketing@groups.purdue.edu).
 
 ## Development
 
