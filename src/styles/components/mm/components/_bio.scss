@@ -12,9 +12,11 @@
         &__image{
             display:block;
             padding-right:1.8rem;
+
             img{
                 display:block;
-                width:auto;
+                width:150px;
+                max-width:100%;
             }
             @include display-sm{
                 padding-right:0;
@@ -22,16 +24,22 @@
             }
         }
         &__content{
+            flex-basis:78%;
             h2,h3,h4,h5,h6,p{
                 margin:0;
             }
             h3,h4,h5,h6{
                 padding:0.8rem 0;
             }
+            p{
+                line-height:2;
+            }
             .padding-top{
                 padding-top:2rem;
             }
-
+            a{
+                word-break: break-word;
+            }
         }
     }
 }
