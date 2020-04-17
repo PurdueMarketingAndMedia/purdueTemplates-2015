@@ -26,7 +26,10 @@
         }
         &__content{
             flex-basis:78%;
-            h2,h3,h4,h5,h6,p{
+            @include display-sm{
+                flex-basis:auto;
+            }
+            h2,h3,h4,h5,h6,p,ul{
                 margin:0;
             }
             h3,h4,h5,h6{
