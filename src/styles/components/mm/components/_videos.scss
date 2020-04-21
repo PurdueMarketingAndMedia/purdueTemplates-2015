@@ -210,7 +210,59 @@ h1, h2,h3,h4,h5,h6{
                 p{
                     color:$steel-gray;
                     font-style: italic;
+                    margin:0.5rem 0 1rem;
                 }
+            }
+        }
+        .award-container{
+            margin-top:4.5rem;
+            hr{
+                margin: 1.75rem 0 0 0;
+                width:50%;
+                background-color: #b5b5b5;
+                border: 0.5px solid #b5b5b5;
+                @include display-md{
+                    width:100%;
+                }
+            }
+            h3{
+                margin-top:0;
+                margin-bottom:1rem;
+                padding-top:1.75rem;
+            }
+
+            h4.award__subheader{
+                font-family: $acumin-pro-semicondensed;
+                font-size:1.5rem;
+                text-transform: none;
+                color:#000;
+                font-style: italic;
+                margin-top:1rem;
+            }
+            .left,.right{
+                max-width:20%;
+                @include display-md{
+                    max-width:30%;
+                }
+                @include display-mo-plus{
+                    max-width:50%;
+                }
+            }
+            .left{
+                @include display-mo-plus{
+                    float:left;
+                    margin-right: 1.5rem;
+                }
+            }
+            .right{
+                @include display-mo-plus{
+                    float:right;
+                    margin-left: 1.5rem;
+                }
+            }
+            p{
+                font-size:1.125rem;
+                line-height:1.7rem;
             }
         }
     }
