@@ -186,16 +186,50 @@ h1, h2,h3,h4,h5,h6{
         }
         h1{
             margin-bottom: 1.5rem;
+            @include display-sm{
+                font-size:1.875rem;
+            }
         }   
         h2{
             margin-top:1.5rem;
             margin-bottom:0;
-        }   
+            @include display-sm{
+                font-size:1.75rem;
+            }
+        } 
+        h3{
+            @include display-sm{
+                font-size:1.375rem;
+            }
+        } 
+        h4{
+            @include display-sm{
+                font-size:1.25rem;
+            }
+        }
+        .description{
+            font-size:1.25rem !important;
+            font-weight:600;
+            margin-top:1rem;
+            @include display-sm{
+                font-size:1.15rem !important;
+            }
+        } 
+        hr{
+            width:50%;
+            background-color: #b5b5b5;
+            border: 0.5px solid #b5b5b5;
+            margin-bottom: 0;
+            @include display-md{
+                width:100%;
+            }
+        } 
         .videos-container{
             display:flex;
             flex-direction:row;
             flex-wrap:wrap;
             justify-content:space-between;
+            margin-bottom:2rem;
             .commenceVideo{
                 flex-basis:48.5%;
                 margin-top:2rem;
@@ -219,12 +253,6 @@ h1, h2,h3,h4,h5,h6{
             padding-bottom:1rem;
             hr{
                 margin: 1.75rem 0 0 0;
-                width:50%;
-                background-color: #b5b5b5;
-                border: 0.5px solid #b5b5b5;
-                @include display-md{
-                    width:100%;
-                }
             }
             h3{
                 margin-top:0;
@@ -262,7 +290,7 @@ h1, h2,h3,h4,h5,h6{
                     margin-left: 1.5rem;
                 }
             }
-            p{
+            p,ul{
                 font-size:1.125rem;
                 line-height:1.7rem;
             }
