@@ -1,0 +1,52 @@
+.content__bio{
+    display:flex;
+    flex-direction:row;
+    margin-top:3rem;
+    padding-bottom:3rem;
+    @include display-sm{
+        flex-direction:column;
+    }
+    &:not(:last-child){
+        border-bottom:solid 1px $railway-gray;
+    }
+    .bio{
+        &__image{
+            display:block;
+            padding-right:1.8rem;
+
+            img{
+                display:block;
+                width:150px;
+                max-width:100%;
+            }
+            @include display-sm{
+                padding-right:0;
+                margin:0 0 1.5rem;
+            }
+        }
+        &__content{
+            flex-basis:78%;
+            @include display-sm{
+                flex-basis:auto;
+            }
+            h2{
+                margin:0 0 0.8rem;
+            }
+            h3,h4,h5,h6{
+                margin:0.8rem 0;
+                padding:0;
+            }
+            p,ul{
+                font-size: calc-toRem(19);
+                line-height: 30px;
+                margin:0;
+            }
+            .padding-top{
+                margin-top:2rem;
+            }
+            a{
+                word-break: break-word;
+            }
+        }
+    }
+}

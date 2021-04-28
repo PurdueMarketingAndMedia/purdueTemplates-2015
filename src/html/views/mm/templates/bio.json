@@ -1,0 +1,20 @@
+{
+  "head": {
+    "title": "Bio Page Template",
+    "description": "This is an example of v2.0.0 of the bio page template.",
+    "css": "../../../styles/mm/templates/content-bio.css"  
+  },
+  "body": {
+    "main-js": "../../../js/mm/templates/main.js"
+  },
+  "bio-template": {
+    "site-name": "Bio Page Template",
+    "site-tagline": {
+      "title": "Purdue Web Templates",
+      "link": "https://www.purdue.edu/purdue/applications/web-templates/index.php"
+    },
+    "nav": {
+      "depth": ""
+    }
+  }
+}
