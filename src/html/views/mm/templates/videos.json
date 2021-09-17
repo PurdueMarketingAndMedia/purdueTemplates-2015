@@ -1,0 +1,20 @@
+{
+  "head": {
+    "title": "Commencement Video Page Template",
+    "description": "This is an example of v2.0.0 of the content page template.",
+    "css": "../../../styles/mm/templates/content-videos.css"  
+  },
+  "body": {
+    "main-js": "../../../js/mm/templates/main.js"
+  },
+  "content-videos": {
+    "site-name": "Commencement Video Page Template",
+    "site-tagline": {
+      "title": "Purdue Web Templates",
+      "link": "https://www.purdue.edu/purdue/applications/web-templates/index.php"
+    },
+    "nav": {
+      "depth": ""
+    }
+  }
+}
