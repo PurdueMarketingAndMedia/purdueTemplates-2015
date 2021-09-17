@@ -406,12 +406,8 @@ $thetransition: all .25s cubic-bezier(1, .25, 0, .75) 0s;
 
       @include display-sm {
         flex: 1 0 auto;
-        // height: 100%;
-        // width: 241.5px;
-      }
-
-      @include display-mo-plus {
-        // width: 50%;
+        width: 100%;
+        justify-content: center;
       }
     }
 
