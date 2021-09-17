@@ -1,6 +1,6 @@
 {
     "name": "purduetemplates2015",
-    "version": "2.1.0",
+    "version": "2.1.2",
     "description": "The Purdue University templates created in 2015 by Purdue Marketing and Media.",
     "scripts": {
         "html:dev": "NODE_ENV=development node html-render.js",
