@@ -21,6 +21,7 @@ $thetransition: all .25s cubic-bezier(1, .25, 0, .75) 0s;
       background: none;
       border: none;
       font-size: 1rem;
+      color: #000;
 
       .fa-bars {
         pointer-events: none;
@@ -248,6 +249,7 @@ $thetransition: all .25s cubic-bezier(1, .25, 0, .75) 0s;
 
     &__search {
       background-color: $boiler-gold;
+      color: #000;
       border: none;
 
       svg {
