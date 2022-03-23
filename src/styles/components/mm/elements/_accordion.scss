@@ -177,6 +177,7 @@
             }
             a:hover{
                 color:#ffffff;
+                text-decoration: underline;
             }
             @include display-sm {
                 padding: 0 1rem;
