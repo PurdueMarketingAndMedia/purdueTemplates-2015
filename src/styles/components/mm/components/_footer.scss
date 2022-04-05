@@ -168,9 +168,11 @@
                     color:#ccc; 
                     font-family:$acumin-pro-semicondensed !important;
                     font-weight:400;
+                    text-decoration:underline;
                 }
                 a:hover{
-                    text-decoration:none;
+                    text-decoration:underline;
+                    color:#ffffff;
                 }
             }
  
