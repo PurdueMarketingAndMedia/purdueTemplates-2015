@@ -8,7 +8,9 @@
                       "last 2 versions",
                       "> 1%"
                   ]
-              }
+              },
+              "useBuiltIns": "usage",
+              "corejs": 3
           }
       ]
   ],

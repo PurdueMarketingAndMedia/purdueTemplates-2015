@@ -33,25 +33,24 @@
     "devDependencies": {
         "@babel/core": "^7.4.3",
         "@babel/preset-env": "^7.4.3",
-        "autoprefixer": "^9.4.7",
+        "autoprefixer": "^10.4.16",
         "babel-loader": "^8.0.5",
         "babel-preset-minify": "^0.5.0",
         "browser-sync": "^2.26.7",
         "npm-run-all": "^4.1.5",
         "onchange": "^7.0.2",
-        "postcss": "^7.0.14",
-        "postcss-pseudoelements": "^5.0.0",
-        "webpack": "^4.30.0",
-        "webpack-bundle-analyzer": "^3.5.2",
-        "webpack-cli": "^3.3.0",
-        "socket.io-parser": ">=4.2.1"
+        "postcss": "^8.4.31",
+        "postcss-pseudoelements": "^2.1.1",
+        "socket.io-parser": ">=4.2.1",
+        "webpack": "^5.88.2",
+        "webpack-bundle-analyzer": "^4.9.1",
+        "webpack-cli": "^3.3.0"
     },
     "browserslist": [
         "last 2 versions",
         "> 2%"
     ],
     "dependencies": {
-        "@babel/polyfill": "^7.4.4",
         "core-js": "^3.1.4",
         "handlebars": "^4.7.6",
         "pretty": "^2.0.0",
