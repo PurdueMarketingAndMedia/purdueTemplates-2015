@@ -18,7 +18,7 @@
     h1{
         font-family:$acumin-pro-semicondensed;
         color:white;
-        font-size: 4.5rem; 
+        font-size: 4.5rem;
         text-transform: uppercase;
         text-align:center;
         font-weight:700;
@@ -111,7 +111,7 @@
             margin-right: 0;
             margin-bottom: 6.5rem;
         }
-        }      
+        }
       }
       &--four-column{
         flex-basis: 23%;
@@ -136,7 +136,7 @@
         }
       }
     }
-            
+
     img {
       height:72px;
       margin-bottom: 2.5rem;
@@ -213,7 +213,7 @@
           &:not(:last-child) {
             margin-bottom: 1.8rem;
         }
-        }      
+        }
       }
       &--three-column{
         flex: 0 1 31.5%;
@@ -236,7 +236,7 @@
           &:not(:last-child) {
             margin-bottom: 1.8rem;
         }
-        }      
+        }
       }
       &--four-column{
         flex: 0 1 23%;
@@ -262,7 +262,7 @@
         }
       }
       }
-      
+
       svg {
         color: $boiler-gold;
         font-size: 3.25rem;
@@ -332,8 +332,8 @@
       picture{
         width:21%;
         flex-basis:21%;
-        align-self: center; 
-        display:flex;       
+        align-self: center;
+        display:flex;
         max-height:150px;
         flex-shrink:1;
         min-height: 1px;
@@ -368,10 +368,10 @@
     }
     picture{
       width:56%;
-      display:block; 
+      display:block;
       height:auto;
       min-height: 1px;
-      flex: 0 1 auto;       
+      flex: 0 1 auto;
       @include display-md{
           width:100%;
           margin-bottom: 2.25rem;
@@ -383,10 +383,10 @@
     }
     &__videoContainer{
       width:56%;
-      display:block; 
+      display:block;
       height:auto;
       min-height: 1px;
-      flex: 0 1 auto;       
+      flex: 0 1 auto;
       @include display-md{
           width:100%;
           margin-bottom: 2.25rem;
@@ -410,7 +410,7 @@
     &__content{
         display:flex;
         flex-direction:column;
-        flex: 0 1 auto; 
+        flex: 0 1 auto;
         width:40%;
         @include display-md{
             width:100%;
@@ -567,7 +567,7 @@
         flex-direction:row;
         justify-content:space-between;
         align-items:center;
-        
+
         @include display-sm{
             flex-direction:column;
             justify-content:space-around;
@@ -576,7 +576,7 @@
             width:100%;
             padding:0;
             margin-top:0;
-            margin-bottom:0;  
+            margin-bottom:0;
             color:#000;
             font-family:$acumin-pro-semicondensed;
             font-size:1.75rem;
@@ -584,10 +584,10 @@
             @include display-sm{
               text-align:center;
               width: 100%;
-              }            
+              }
         }
         a{
-            margin-bottom:1rem;    
+            margin-bottom:1rem;
         }
     }
     &__photos{
@@ -634,9 +634,9 @@
                 font-size:1.75rem;
                 flex-basis: auto;
                 justify-content: space-between;
-                flex-wrap:wrap; 
+                flex-wrap:wrap;
                 justify-content: flex-start;
-                width:100%;              
+                width:100%;
                 span{
                     font-weight:700;
                     padding: 0 2rem 0 1rem;
@@ -699,7 +699,7 @@
             h2{
                 padding:0;
                 margin-top:0;
-                margin-bottom:0;  
+                margin-bottom:0;
                 color:#000;
                 font-family:$acumin-pro-semicondensed;
                 font-size:1.75rem;
@@ -707,10 +707,10 @@
                 @include display-sm{
                   text-align:center;
                   width:100%;
-              }               
+              }
             }
             a{
-                margin-bottom:0.9375rem;    
+                margin-bottom:0.9375rem;
             }
         }
         &__photos{
@@ -731,7 +731,7 @@
                 width:100%;
                 height:auto;
                 display:flex;
-            } 
+            }
             @include display-md{
                 width:32%;
                 margin-bottom:0.7rem;
@@ -753,7 +753,7 @@
       font-weight: 700;
       font-size: 4rem;
       text-transform: uppercase;
-      text-shadow: 0px 3px 6px #00000064;
+      text-shadow: 0 3px 6px #00000064;
       text-align: center;
       margin: 0;
       @include display-md {

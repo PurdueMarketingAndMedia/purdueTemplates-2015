@@ -90,3 +90,9 @@ u {
 p{
 	margin-bottom: 1rem;
 }
+
+:focus-visible {
+	outline: 3px solid $field;
+	outline-offset: 2px;
+	z-index: 1;
+}

@@ -43,6 +43,10 @@
             box-sizing:border-box;
             width:20%;
             padding-right: 2rem;
+
+            [role='listitem'] a:focus-visible {
+                outline-offset: -3px;
+            }
             &:first-child {
                 padding-left: 0;
             }
@@ -50,7 +54,7 @@
                 padding-right: 0;
             }
             h3{
-                padding: 0px;
+                padding: 0;
                 margin:0;
             }
             .vertical{
@@ -139,7 +143,7 @@
                 width:100%;
                 padding: 0;
                 border-bottom: solid 1px #474747;
-                &:nth-child(5){         
+                &:nth-child(5){
                     border: none;
                     padding: 3rem 1rem 2rem;
                 }
@@ -165,7 +169,7 @@
             p{
                 padding-bottom:0.5rem;
                 a{
-                    color:#ccc; 
+                    color:#ccc;
                     font-family:$acumin-pro-semicondensed !important;
                     font-weight:400;
                     text-decoration:underline;
@@ -175,7 +179,7 @@
                     color:#ffffff;
                 }
             }
- 
+
             @include display-lg {
                 max-width:940px;
                 width: 940px;

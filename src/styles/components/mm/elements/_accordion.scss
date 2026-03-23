@@ -23,12 +23,10 @@
         font-size: 1.375rem;
       }
       &-campusGold{
-        outline-color: #000;
         background-color: $aged-gold;
         color: #fff;
       }
       &-black{
-        outline-color: #000;
         background-color: #000;
         color: $boiler-gold;
       }
@@ -52,11 +50,6 @@
       &:first-child{
         border-top:0;
       }
-      &:focus{
-        outline-style: solid;
-        outline-width: 2px;
-        outline-offset: -2px;
-      }
       .fa-plus-square{
         display: block;
         position: absolute;
@@ -74,7 +67,7 @@
       } 
       &--footer{
         width:100%;
-        font-family: $acumin-pro-semicondensed; 
+        font-family: $acumin-pro-semicondensed;
         font-size: 1.15rem;
         font-weight: 700;
         color:$boiler-gold;
@@ -85,10 +78,14 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items:baseline;         
+        align-items:baseline;
         text-transform: uppercase;
         pointer-events: none;
         text-align:left;
+
+        &:focus-visible {
+          outline: none;
+        }
         .fa-plus,.fa-minus{
           display:none;
           pointer-events: none;
@@ -98,6 +95,10 @@
           pointer-events: all;
           &:hover{
               cursor:pointer;
+          }
+          &:focus-visible {
+              outline: 3px solid $field;
+              outline-offset: -3px;
           }
           .fa-plus{
               display:block;

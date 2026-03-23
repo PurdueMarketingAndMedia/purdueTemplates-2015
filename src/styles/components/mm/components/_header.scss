@@ -14,6 +14,10 @@ $thetransition: all .25s cubic-bezier(1, .25, 0, .75) 0s;
     align-items: center;
     justify-content: center;
 
+    :focus-visible {
+      outline-color: #000;
+    }
+
     &--moButton {
       display: none;
       align-items: flex-start;
@@ -162,6 +166,7 @@ $thetransition: all .25s cubic-bezier(1, .25, 0, .75) 0s;
 
             @include display-sm {
               white-space: normal;
+              outline-offset: -3px;
             }
           }
         }
