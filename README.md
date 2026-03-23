@@ -1,7 +1,7 @@
 # Purdue University Templates - 2015
 *[Github pages](https://purduemarketingandmedia.github.io/purdueTemplates-2015/builds/production/html/mm/templates/office/office-tiles-4.html)* 
 
-Contained in this project are the main templates created and maintained by Purdue Marketing and Media (PMM).
+Contained in this project are the main templates created and maintained by Purdue Brand Studio (PBS).
 
 If you have problems or trouble following any directions below, please contact us at our [Digital Marketing Email](mailto:digital-marketing@groups.purdue.edu).
 
@@ -10,7 +10,7 @@ We're open to any suggestions or contributions. If you wish to make a suggestion
 
 You can also feel free to fork this repository and make any changes. Once you have completed your changes, make a pull request so that we can consider merging them.
 
-**Please keep in mind that PMM is under no obligation to accept pull requests.**
+**Please keep in mind that PBS is under no obligation to accept pull requests.**
 
 ## Getting Started
 
@@ -24,7 +24,7 @@ We use:
 
 - [Handlebars](https://handlebarsjs.com/) for HTML templating, 
 - [Scss (Sass)](https://sass-lang.com/) for writing our styles, 
-- [Babel](https://babeljs.io/) for compiling modern Javascript to browser-compatible Javascript, 
+- [Babel](https://babeljs.io/) for compiling modern JavaScript to browser-compatible JavaScript, 
 - [Browsers List](https://github.com/browserslist/browserslist) to codify current browser support,
 - [Webpack](https://webpack.js.org/) as our main build tool.
 
@@ -59,13 +59,30 @@ This will compile HTML, CSS and JS files into the `/builds` directory then launc
 
 ## Production Build
 
-To build the production files of the templates, which includes minified javascript and css, run:
+To build the production files of the templates, which includes minified JavaScript and CSS, run:
 
 ```
 npm run prod
 ```
 
 This compiles all files into the `/builds/production` directory.
+
+### Deployment
+
+The compiled CSS files in `builds/production/styles/mm/templates/` are deployed to PBS's production server (ldvwebapa02.www.purdue.edu) at `/var/www/html/root/www.purdue.edu/purdue/css/pu/` (served as `https://www.purdue.edu/purdue/css/pu/`). Each local CSS file maps to a subdirectory and versioned filename on the server:
+
+| Local build file | Server path |
+|---|---|
+| `content-audience.css` | `audience/audience-2.0-2020.css` |
+| `content-bio.css` | `bio/content-bio.css` |
+| `content-blank.css` | `blank/blank-2.0-2020.css` |
+| `content-college.css` | `college/college-2.0-2020.css` |
+| `content-content.css` | `content/content-2.0-2020.css` |
+| `content-events.css` | `events/events-2.0-2020.css` |
+| `content-office.css` | `deptOffice/deptOffice-2.0-2020.css` |
+| `content-videos.css` | _no known server mapping_ |
+
+The server directories also contain older versioned files (e.g., `*-1.6.css`, `*-1.6-2020.css`) that are still referenced by existing pages.
 
 ### Directory Structure
 
@@ -121,7 +138,7 @@ This compiles all files into the `/builds/production` directory.
 		
 		- **/pageRender.handlebars**: the highest level handlebars partial that every view uses to render html files
 
-	- **/js/mm**: the javascript files used globally in our templates
+	- **/js/mm**: the JavaScript files used globally in our templates
 		
 		- **/global**: individual js files for different functions
 		- **/main.js**: the final js build file. This is where to include global js files
